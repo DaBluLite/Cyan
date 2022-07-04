@@ -1,3 +1,17 @@
+/**
+ * @name Nexus
+ * @description A cleaner, darker interface for Discord
+ * @author DaBluLite
+ * @version 3.0.0
+ */
+ 
+@import url("https://raw.githubusercontent.com/DaBluLite/Nexus/master/import.css");
+:root {
+	--background-primary-nexus: var(--background-primary);
+	--background-secondary-nexus: var(--background-secondary);
+	--background-tretiary-nexus: var(--background-tretiary);
+	--background-floating-nexus: var(--background-floating);
+}
 .panels-3wFtMD {
     border-radius: 25px;
     background-color: var(--background-floating-nexus);
