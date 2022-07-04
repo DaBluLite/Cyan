@@ -2,10 +2,10 @@
  * @name Nexus
  * @description A cleaner, darker interface for Discord
  * @author DaBluLite
- * @version 3.0.0
+ * @version 4.0.0
  */
  
-@import url("https://raw.githubusercontent.com/DaBluLite/Nexus/master/import.css");
+@import url("https://cdn.jsdelivr.net/gh/DaBluLite/Nexus/import.theme.css");
 :root {
 	--background-primary-nexus: var(--background-primary);
 	--background-secondary-nexus: var(--background-secondary);
