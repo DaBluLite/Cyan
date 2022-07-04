@@ -124,7 +124,7 @@
 .privateChannels-oVe7HL, .scroller-WSmht3 {
 	background-color: var(--background-floating-nexus);
 }
-.form-3gdLxP:before {
+.form-3gdLxP {
 	background-color: var(--background-secondary-nexus) !important;
 }
 .chat-2ZfjoI, .searchBar-3TnChZ .searchBarComponent-3N7dCG, .header-3OsQeK, .scroller-1ox3I2 {
@@ -293,11 +293,7 @@
 	margin-top: 0;
 }
 .mentioned-Tre-dv:before {
-    height: calc(100% - 12px);
-    top: 6px;
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
-    transform: translateX(1px);
+    display: none;
 }
 .libraryHeader-2loraV {
 	background: var(--background-floating-nexus) !important;
