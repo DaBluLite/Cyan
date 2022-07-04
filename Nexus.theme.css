@@ -9,6 +9,6 @@
 :root {
 	--background-primary-nexus: var(--background-primary);
 	--background-secondary-nexus: var(--background-secondary);
-	--background-tretiary-nexus: var(--background-tretiary);
+	--background-tertiary-nexus: var(--background-tertiary);
 	--background-floating-nexus: var(--background-floating);
 }
