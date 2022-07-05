@@ -7,11 +7,20 @@
   left: 50%;
   width: fit-content;
   height: fit-content;
-  box-shadow: 0 0 0 1px rgb(32 34 37 / 60%), 0 2px 10px 0 rgb(0 0 0 / 20%);
+  box-shadow: var(--nexus-elevation-shadow);
   transform: translateX(-50%);
   transition: width 0.3s !important;
   overflow: hidden;
   max-width: calc(240px - 54px);
+}
+.toolbar-37BrJ5 {
+  background-color: var(--nexus-background-elevated);
+  border-radius: 25px;
+  box-shadow: var(--nexus-elevation-shadow);
+}
+.toolbar-37BrJ5
+> .lookFilled-yCfaCM {
+  background-color: var(--nexus-background-elevated);
 }
 .separator-1So4YB {
   display: none;
@@ -29,7 +38,7 @@
 }
 .menu-1QACrS {
   border-radius: 20px;
-  box-shadow: 0 0 0 1px rgb(32 34 37 / 60%), 0 2px 10px 0 rgb(0 0 0 / 20%);
+  box-shadow: var(--nexus-elevation-shadow);
 }
 .scroller-1bVxF5::-webkit-scrollbar {
   width: 0;
@@ -90,7 +99,7 @@
 }
 .tooltip-14MtrL {
   border-radius: 25px;
-  box-shadow: 0 0 0 1px rgb(32 34 37 / 60%), 0 2px 10px 0 rgb(0 0 0 / 20%) !important;
+  box-shadow: var(--nexus-elevation-shadow) !important;
 }
 .tooltipPointer-3L49xb {
   display: none;
@@ -216,33 +225,33 @@
 .buttons-3dF5Kd > div {
   border-radius: 25px !important;
   background-color: var(--nexus-background-secondary);
-  box-shadow: 0 0 0 1px rgb(32 34 37 / 60%), 0 2px 10px 0 rgb(0 0 0 / 20%);
+  box-shadow: var(--nexus-elevation-shadow);
   border: none;
 }
 .userPopout-2j1gM4 {
   border-radius: 25px !important;
   background-color: var(--nexus-background-secondary);
-  box-shadow: 0 0 0 1px rgb(32 34 37 / 60%), 0 2px 10px 0 rgb(0 0 0 / 20%);
+  box-shadow: var(--nexus-elevation-shadow);
 }
 .avatar-2Vndt_ {
-  box-shadow: 0 0 0 1px rgb(32 34 37 / 60%), 0 2px 10px 0 rgb(0 0 0 / 20%);
+  box-shadow: var(--nexus-elevation-shadow);
 }
 .profileBadges-2pItdR {
   border-radius: 25px !important;
   background-color: var(--nexus-background-secondary);
-  box-shadow: 0 0 0 1px rgb(32 34 37 / 60%), 0 2px 10px 0 rgb(0 0 0 / 20%);
+  box-shadow: var(--nexus-elevation-shadow);
   padding-top: 3px;
   padding-left: 3px;
 }
 .upload-vLbqu- {
   border-radius: 25px !important;
   background-color: var(--nexus-background-primary) !important;
-  box-shadow: 0 0 0 1px rgb(32 34 37 / 60%), 0 2px 10px 0 rgb(0 0 0 / 20%);
+  box-shadow: var(--nexus-elevation-shadow);
 }
 .wrapper-2vIMkT {
   border-radius: 25px !important;
   background-color: var(--nexus-background-secondary);
-  box-shadow: 0 0 0 1px rgb(32 34 37 / 60%), 0 2px 10px 0 rgb(0 0 0 / 20%);
+  box-shadow: var(--nexus-elevation-shadow);
 }
 .button-3bklZh:hover {
   background-color: var(--nexus-background-secondary);
@@ -274,7 +283,7 @@
   z-index: 2;
   border-radius: 25px !important;
   background-color: var(--nexus-background-elevated);
-  box-shadow: 0 0 0 1px rgb(32 34 37 / 60%), 0 2px 10px 0 rgb(0 0 0 / 20%);
+  box-shadow: var(--nexus-elevation-shadow);
   padding: 5px 0;
 }
 .base-2jDfDU {
