@@ -6,7 +6,7 @@
     bottom: 15px;
     left: 50%;
     width: fit-content;
-	height: fit-content;
+    height: fit-content;
     box-shadow: 0 0 0 1px rgb(32 34 37 / 60%), 0 2px 10px 0 rgb(0 0 0 / 20%);
     transform: translateX(-50%);
     transition: width .3s !important;
@@ -14,7 +14,15 @@
 	max-width: calc(240px - 54px);
 }
 .scroller-1bVxF5 {
-    padding: 6px 0;
+    padding: 0 !important;
+    margin: 10px 0;
+    border-radius: 25px;
+}
+.menu-1QACrS {
+    border-radius: 25px;
+}
+.scroller-1bVxF5::-webkit-scrollbar {
+    width: 0;
 }
 .panels-3wFtMD > div > div > div > div > button[aria-label="Noise Suppression powered by Krisp"] {
 	opacity: 0;
