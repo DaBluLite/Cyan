@@ -22,7 +22,8 @@
     border-radius: 0;
 }
 .menu-1QACrS {
-    border-radius: 25px;
+    border-radius: 20px;
+    box-shadow: 0 0 0 1px rgb(32 34 37 / 60%), 0 2px 10px 0 rgb(0 0 0 / 20%);
 }
 .scroller-1bVxF5::-webkit-scrollbar {
     width: 0;
