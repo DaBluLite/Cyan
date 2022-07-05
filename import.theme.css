@@ -13,6 +13,9 @@
     overflow: hidden;
 	max-width: calc(240px - 54px);
 }
+.scroller-1bVxF5 {
+    padding: 6px 0;
+}
 .panels-3wFtMD > div > div > div > div > button[aria-label="Noise Suppression powered by Krisp"] {
 	opacity: 0;
 }
