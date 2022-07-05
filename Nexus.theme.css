@@ -7,8 +7,8 @@
  
 @import url(https://dablulite.github.io/Nexus/import.theme.css);
 :root {
-	--background-primary-nexus: var(--background-primary);
-	--background-secondary-nexus: var(--background-secondary);
-	--background-tertiary-nexus: var(--background-tertiary);
-	--background-floating-nexus: var(--background-floating);
+	--nexus-background-primary: var(--background-tertiary);
+	--nexus-background-secondary: var(--background-floating);
+	--nexus-background-tertiary: var(--background-primary);
+	--nexus-background-elevated: var(--background-floating);
 }
