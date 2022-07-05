@@ -12,5 +12,5 @@ Nexus is a simple theme that uses a material-ish design and reuses the Discord b
 
 # Special thanks to:
 * carrot#8812
-* Disease#3749
-* lucism#3987
+* [@maenDisease](https://github.com/maenDisease)/Disease#3749 
+* [@lucism](https://github.com/Iucism)/lucism#3987
