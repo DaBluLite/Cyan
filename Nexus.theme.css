@@ -5,7 +5,7 @@
  * @version 7.0.0
  */
  
-@import url(https://dablulite.github.io/Nexus/import.theme.css);
+@import url(https://dablulite.github.io/Nexus/import.css);
 :root {
 	--nexus-background-primary: var(--background-tertiary);
 	--nexus-background-secondary: var(--background-floating);
