@@ -300,12 +300,6 @@
   padding-left: 15px;
   padding-top: 5px;
 }
-.embedSpotify-1rDvOE,
-.embedMedia-1mdWSP,
-.video-2HW4jD,
-.wrapper-1FP9YQ {
-  border-radius: 25px;
-}
 .videoControls-2NzHnF div {
   margin: 0 3px;
 }
@@ -488,4 +482,79 @@
 }
 .divider-IqmEqJ {
   margin: 0;
+}
+
+.container-1NXEtd + .panels-3wFtMD:hover{
+   box-shadow: 0 0 0 2px hsla(0, 0%, 15%, 0.69), 0 3px 16px hsla(0, 0%, 25%, 0.678);
+   border-radius: 10px;
+}
+.container-1NXEtd + .panels-3wFtMD{
+   transition: 0.5s ease !important;
+}
+.container-1NXEtd + .panels-3wFtMD > .container-YkUktl .avatarWrapper-1B9FTW ~ .flex-2S1XBF{
+   margin-left: 35px;
+}
+.button-12Fmur:hover .contents-3ca1mk {animation: UserModalButtons 0.5s normal ease;}
+.button-12Fmur {transition: 0.2s;}
+.button-12Fmur:hover {padding-bottom: 0px;transition: 0.2;}
+@keyframes UserModalButtons {
+   0% {
+       transform: translateY(0px);
+   }
+   50% {
+       transform: translateY(-5px);
+   }
+   100% {
+       transform: translateY(0px);
+   }
+}
+.panels-3wFtMD > .container-YkUktl .flex-2S1XBF > :not(:last-child) {
+   transition: all 0.2s ease-in-out;
+}
+.panels-3wFtMD > .container-YkUktl .flex-2S1XBF > :last-child {
+   transition: all 0.2s ease-in-out;
+}
+.panels-3wFtMD > .container-YkUktl:hover .flex-2S1XBF > :not(:last-child) {
+   opacity: 100% !important;
+   margin: unset;
+   padding: unset;
+   width: 32px;
+}
+
+
+#app-mount .panels-3wFtMD > .container-YkUktl > .withTagAsButton-OsgQ9L > .nameTag-sc-gpq {
+display: none;
+}
+.withTagAsButton-OsgQ9L, .withTagless-10ooWt {
+  min-width: unset;
+}
+.withTagAsButton-OsgQ9L:hover, .withTagless-10ooWt:hover {
+  background: transparent;
+}
+:is(.withTagAsButton-OsgQ9L, .withTagless-10ooWt):hover .avatar-1EWyVD {
+  opacity: .8;
+  -webkit-filter: drop-shadow(var(--elevation-medium));
+  filter: drop-shadow(var(--elevation-medium));
+}
+:is(.withTagAsButton-OsgQ9L, .withTagless-10ooWt) .avatar-1EWyVD {
+  transition: opacity .2s ease, filter .2s ease, -webkit-filter .2s ease;
+}
+.popoutBanner-3cqRD9 {
+    width: 100%;
+}
+.profileBody-3QbfPe {
+   padding: 20px;
+}
+.scroller-3iiyhZ {
+   background-color: var(--nexus-background-primary)
+}
+.channelName-3w2Y3c {
+   background-color: var(--nexus-background-primary)
+}
+.menu-1QACrS#account > .scroller-1bVxF5 {
+margin-top: 0;
+}
+.menu-1QACrS#account > .scroller-1bVxF5 .pencilContainer-18TrEJ {
+   margin-top: 3px;
+   margin-right: 3px;
 }
