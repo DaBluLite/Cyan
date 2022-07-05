@@ -22,6 +22,9 @@
 > .lookFilled-yCfaCM {
   background-color: var(--nexus-background-elevated);
 }
+.footer-3naVBw, .bodyInnerWrapper-2bQs1k, .userPopout-2j1gM4 {
+  background-color: var(--nexus-background-elevated);
+}
 .separator-1So4YB {
   display: none;
 }
@@ -230,7 +233,6 @@
 }
 .userPopout-2j1gM4 {
   border-radius: 25px !important;
-  background-color: var(--nexus-background-secondary);
   box-shadow: var(--nexus-elevation-shadow);
 }
 .avatar-2Vndt_ {
@@ -238,7 +240,7 @@
 }
 .profileBadges-2pItdR {
   border-radius: 25px !important;
-  background-color: var(--nexus-background-secondary);
+  background-color: var(--nexus-background-elevated);
   box-shadow: var(--nexus-elevation-shadow);
   padding-top: 3px;
   padding-left: 3px;
