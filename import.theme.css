@@ -136,8 +136,11 @@
 	padding: 5px 8px;
 	margin-left: 5px;
 }
-.app-2CXKsg, .bg-1QIAus, .wrapper-1_HaEi, .scroller-3X7KbA, #app-mount {
+.app-2CXKsg, .bg-1QIAus, .wrapper-1_HaEi, #app-mount {
 	background-color: var(--nexus-background-secondary);
+}
+.scroller-3X7KbA {
+        background-color: var(--nexus-background-elevated);
 }
 .header-3OsQeK:hover, .header-3OsQeK:active {
 	background-color: var(--nexus-background-secondary);
