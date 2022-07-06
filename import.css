@@ -3,7 +3,7 @@
   background-color: var(--nexus-background-elevated);
   margin-top: 0;
   position: absolute;
-  bottom: 15px;
+  bottom: 10px;
   left: 50%;
   width: fit-content;
   height: fit-content;
@@ -11,7 +11,7 @@
   transform: translateX(-50%);
   transition: width 0.3s !important;
   overflow: hidden;
-  max-width: calc(240px - 54px);
+  max-width: calc(240px - 20px);
 }
 .root-g14mjS, .footer-31IekZ {
   background-color: var(--nexus-background-elevated);
