@@ -4,7 +4,7 @@
   margin-top: 0;
   position: absolute;
   bottom: 10px;
-  left: 50%;
+  left: calc(50% - 5px);
   width: fit-content;
   height: fit-content;
   box-shadow: var(--nexus-elevation-shadow);
@@ -32,9 +32,6 @@
 }
 .footer-3naVBw, .bodyInnerWrapper-2bQs1k, .userPopout-2j1gM4 {
   background-color: var(--nexus-background-elevated);
-}
-.separator-1So4YB {
-  display: none;
 }
 .scroller-1bVxF5 {
   padding: 0 !important;
@@ -98,9 +95,6 @@
 }
 .sidebar-1tnWFu {
   position: relative;
-}
-.nameTag-sc-gpq {
-  display: none;
 }
 .animatedContainer-2laTjx {
   z-index: 2;
