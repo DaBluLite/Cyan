@@ -13,6 +13,17 @@
   overflow: hidden;
   max-width: calc(240px - 20px);
 }
+.menu-1QACrS > .scroller-1bVxF5 > :first-child {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.menu-1QACrS > .scroller-1bVxF5 > :last-child {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.menu-1QACrS > .scroller-1bVxF5 > .item-1OdjEX {
+    padding: 10px;
+}
 .containerDefault-YUSmu3 > .modeUnread-3Cxepe > .unread-36eUEm {
     position: absolute;
     height: 5px;
@@ -45,7 +56,7 @@
 }
 .scroller-1bVxF5 {
   padding: 0 !important;
-  margin: 10px 0;
+  margin: 0;
 }
 .item-1OdjEX {
   margin: 0;
