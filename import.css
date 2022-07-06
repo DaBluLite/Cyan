@@ -502,11 +502,6 @@
 .divider-IqmEqJ {
   margin: 0;
 }
-
-.container-1NXEtd + .panels-3wFtMD:hover{
-   box-shadow: 0 0 0 2px hsla(0, 0%, 15%, 0.69), 0 3px 16px hsla(0, 0%, 25%, 0.678);
-   border-radius: 10px;
-}
 .container-1NXEtd + .panels-3wFtMD{
    transition: 0.5s ease !important;
 }
