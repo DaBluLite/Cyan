@@ -1,5 +1,5 @@
 .panels-3wFtMD {
-  border-radius: 15px;
+  border-radius: 10px;
   background-color: var(--nexus-background-elevated);
   margin-top: 0;
   position: absolute;
@@ -15,7 +15,7 @@
 }
 .root-g14mjS, .footer-31IekZ {
   background-color: var(--nexus-background-elevated);
-  border-radius: 15px;
+  border-radius: 10px;
 }
 .footer-31IekZ {
   border-top-left-radius: 0;
@@ -23,7 +23,7 @@
 }
 .toolbar-37BrJ5 {
   background-color: var(--nexus-background-elevated);
-  border-radius: 15px;
+  border-radius: 10px;
   box-shadow: var(--nexus-elevation-shadow);
 }
 .toolbar-37BrJ5
@@ -35,7 +35,7 @@
 }
 .scroller-1bVxF5 {
   padding: 0 !important;
-  margin: 20px 0;
+  margin: 10px 0;
 }
 .item-1OdjEX {
   margin: 0;
@@ -45,7 +45,7 @@
   padding-bottom: 57px;
 }
 .menu-1QACrS {
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow: var(--nexus-elevation-shadow);
 }
 .scroller-1bVxF5::-webkit-scrollbar {
@@ -103,7 +103,7 @@
   border-radius: 0px !important;
 }
 .tooltip-14MtrL {
-  border-radius: 15px;
+  border-radius: 10px;
   box-shadow: var(--nexus-elevation-shadow) !important;
 }
 .tooltipPointer-3L49xb {
@@ -128,7 +128,7 @@
 .layout-1qmrhw,
 .interactive-iyXY_x,
 .tooltip-14MtrL {
-  border-radius: 15px;
+  border-radius: 10px;
 }
 .tooltipPointer-3L49xb {
   display: none;
@@ -168,7 +168,7 @@
 }
 .lookFilled-yCfaCM,
 .lookOutlined-3yKVGo {
-  border-radius: 15px;
+  border-radius: 10px;
   background-color: var(--nexus-background-primary) !important;
 }
 .colorRed-rQXKgM:hover {
@@ -211,7 +211,7 @@
   background-color: var(--nexus-background-primary) !important;
 }
 .scrollableContainer-15eg7h {
-  border-radius: 15px !important;
+  border-radius: 10px !important;
   background-color: var(--nexus-background-secondary);
 }
 .wrapper-1gVUIN ~ .content-1jQy2l {
@@ -228,32 +228,32 @@
   display: none;
 }
 .buttons-3dF5Kd > div {
-  border-radius: 15px !important;
+  border-radius: 10px !important;
   background-color: var(--nexus-background-secondary);
   box-shadow: var(--nexus-elevation-shadow);
   border: none;
 }
 .userPopout-2j1gM4 {
-  border-radius: 15px !important;
+  border-radius: 10px !important;
   box-shadow: var(--nexus-elevation-shadow);
 }
 .avatar-2Vndt_ {
   box-shadow: var(--nexus-elevation-shadow);
 }
 .profileBadges-2pItdR {
-  border-radius: 15px !important;
+  border-radius: 10px !important;
   background-color: var(--nexus-background-elevated);
   box-shadow: var(--nexus-elevation-shadow);
   padding-top: 3px;
   padding-left: 3px;
 }
 .upload-vLbqu- {
-  border-radius: 15px !important;
+  border-radius: 10px !important;
   background-color: var(--nexus-background-primary) !important;
   box-shadow: var(--nexus-elevation-shadow);
 }
 .wrapper-2vIMkT {
-  border-radius: 15px !important;
+  border-radius: 10px !important;
   background-color: var(--nexus-background-secondary);
   box-shadow: var(--nexus-elevation-shadow);
 }
@@ -285,7 +285,7 @@
   margin: 10px;
   height: calc(100% - 30px);
   z-index: 2;
-  border-radius: 15px !important;
+  border-radius: 10px !important;
   background-color: var(--nexus-background-elevated);
   box-shadow: var(--nexus-elevation-shadow);
   padding: 5px 0;
@@ -295,7 +295,7 @@
 }
 .embed-hKpSrO {
   background-color: var(--nexus-background-secondary);
-  border-radius: 15px;
+  border-radius: 10px;
   border: none;
 }
 .altText-sAs-Ao {
@@ -356,10 +356,10 @@
   background-color: var(--nexus-background-secondary) !important;
 }
 .input-2g-os5 {
-  border-radius: 15px !important;
+  border-radius: 10px !important;
 }
 .buttons-3dF5Kd {
-  border-radius: 15px !important;
+  border-radius: 10px !important;
 }
 .buttons-3dF5Kd > div > *:hover,
 .buttons-3dF5Kd > div > *:active {
@@ -368,7 +368,7 @@
 }
 
 .autocompleteRow-14iwvH div {
-  border-radius: 15px;
+  border-radius: 10px;
 }
 .autocompleteRow-14iwvH div:hover {
   background-color: var(--nexus-background-primary) !important;
@@ -396,12 +396,12 @@
   background: var(--nexus-background-secondary) !important;
 }
 .buttons-3dF5Kd > div > *:first-child {
-  border-top-left-radius: 15px !important;
-  border-bottom-left-radius: 15px !important;
+  border-top-left-radius: 10px !important;
+  border-bottom-left-radius: 10px !important;
 }
 .buttons-3dF5Kd > div > *:last-child {
-  border-top-right-radius: 15px !important;
-  border-bottom-right-radius: 15px !important;
+  border-top-right-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
 }
 .wordmark-2u86JB {
   height: 32px;
@@ -428,18 +428,18 @@
 }
 .scroller-kQBbkU::-webkit-scrollbar-thumb {
   background-color: var(--nexus-background-secondary);
-  border-radius: 15px;
+  border-radius: 10px;
 }
 .searchBar-3TnChZ,
 .header-3OsQeK {
   box-shadow: none;
 }
 .channelTextArea-1VQBuV {
-  border-radius: 15px;
+  border-radius: 10px;
   background-color: var(--nexus-background-secondary);
 }
 .scroller-18M1mG {
-  border-radius: 15px;
+  border-radius: 10px;
   background-color: var(--nexus-background-secondary);
 }
 .defaultColor-24IHKz {
@@ -447,24 +447,24 @@
 }
 .autocomplete-3NRXG8,
 .autocompleteInner-y1mjDl {
-  border-radius: 15px;
+  border-radius: 10px;
   background-color: var(--nexus-background-secondary);
 }
 .attachedBars-2BCP3l div .clipContainer-31nYlH {
   border-bottom: 1px solid var(--nexus-background-tertiary);
   background-color: var(--nexus-background-secondary);
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 .attachedBars-2BCP3l div div .replyBar-1oi75v {
   background-color: var(--nexus-background-secondary);
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 .attachedBars-2BCP3l {
   background-color: var(--nexus-background-secondary);
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 .container-2o3qEW {
   background-color: var(--nexus-background-primary);
@@ -480,7 +480,7 @@
   margin: 0 15px;
 }
 .message-2CShn3 {
-  border-radius: 15px;
+  border-radius: 10px;
 }
 .divider-IqmEqJ {
   margin: 0;
