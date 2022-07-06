@@ -1,17 +1,8 @@
 .panels-3wFtMD {
-  border-radius: 10px;
   background-color: var(--nexus-background-elevated);
-  margin-top: 0;
-  position: absolute;
-  bottom: 10px;
-  left: calc(50% - 5px);
-  width: fit-content;
-  height: fit-content;
   box-shadow: var(--nexus-elevation-shadow);
-  transform: translateX(-50%);
   transition: width 0.3s !important;
-  overflow: hidden;
-  max-width: calc(240px - 20px);
+  max-width: calc(240px);
 }
 .item-1OdjEX.labelContainer-2vJzYL {
   padding: 10px;
