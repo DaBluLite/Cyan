@@ -294,15 +294,20 @@
   margin: 10px;
   height: calc(100% - 20px);
   z-index: 2;
-  border-radius: 10px !important;
+  left: -81px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transition: .3s;
   background-color: var(--nexus-background-elevated);
   box-shadow: var(--nexus-elevation-shadow);
 }
+.guilds-2JjMmN:hover {
+    left: -10px;
+}
 .scroller-3X7KbA {
   padding: 8px 0;
-}
-.base-2jDfDU {
-  margin-left: 92px;
 }
 .embed-hKpSrO {
   background-color: var(--nexus-background-secondary);
