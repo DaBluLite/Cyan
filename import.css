@@ -325,7 +325,9 @@
   border-radius: 10px !important;
   background-color: var(--nexus-background-elevated);
   box-shadow: var(--nexus-elevation-shadow);
-  padding: 5px 0;
+}
+.scroller-3X7KbA {
+  padding: 8px 0;
 }
 .base-2jDfDU {
   margin-left: 92px;
