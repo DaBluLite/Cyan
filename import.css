@@ -4,6 +4,11 @@
   transition: width 0.3s !important;
   max-width: calc(240px);
 }
+.unreadBar-elBRZx {
+  background-color: var(--nexus-background-elevated);
+  border: 1px solid var(--brand-experiment);
+  border-radius: 8px;
+}
 .item-1OdjEX.labelContainer-2vJzYL {
   padding: 10px;
   margin: 5px;
@@ -150,7 +155,7 @@
 }
 .closeButton-PCZcma {
   border: none;
-  background-color: var(--background-secondary-nexus);
+  background-color: var(--nexus-background-secondary);
 }
 .modeSelected-3DmyhH .content-1gYQeQ,
 .side-2ur1Qk .themed-2-lozF.selected-g-kMVV.item-3XjbnG,
