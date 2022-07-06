@@ -558,7 +558,9 @@
   transition: opacity .2s ease, filter .2s ease, -webkit-filter .2s ease;
 }
 .popoutBanner-3cqRD9 {
-    width: 100%;
+    width: calc(100% + 4px);
+    left: -2px;
+    top: -2px;
 }
 .profileBody-3QbfPe {
    padding: 20px;
