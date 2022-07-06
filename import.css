@@ -4,6 +4,9 @@
   transition: width 0.3s !important;
   max-width: calc(240px);
 }
+.closeButton-30b1gR {
+  margin-right: 150px;
+}
 .unreadBar-elBRZx {
   background-color: var(--nexus-background-elevated);
   border: 1px solid var(--brand-experiment);
@@ -506,7 +509,7 @@
    transition: 0.5s ease !important;
 }
 .container-1NXEtd + .panels-3wFtMD > .container-YkUktl .avatarWrapper-1B9FTW ~ .flex-2S1XBF{
-   margin-left: 35px;
+   margin-left: auto;
 }
 .button-12Fmur:hover .contents-3ca1mk {animation: UserModalButtons 0.5s normal ease;}
 .button-12Fmur {transition: 0.2s;}
