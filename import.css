@@ -294,17 +294,13 @@
   margin: 10px;
   height: calc(100% - 20px);
   z-index: 2;
-  left: -81px;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-radius: 12px;
   transition: .3s;
   background-color: var(--nexus-background-elevated);
   box-shadow: var(--nexus-elevation-shadow);
 }
-.guilds-2JjMmN:hover {
-    left: -10px;
+.base-2jDfDU {
+  margin-left: 92px;
 }
 .scroller-3X7KbA {
   padding: 8px 0;
