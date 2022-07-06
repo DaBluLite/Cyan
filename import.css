@@ -13,6 +13,14 @@
   overflow: hidden;
   max-width: calc(240px - 54px);
 }
+.root-g14mjS, .footer-31IekZ {
+  background-color: var(--nexus-background-elevated);
+  border-radius: 25px;
+}
+.footer-31IekZ {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
 .toolbar-37BrJ5 {
   background-color: var(--nexus-background-elevated);
   border-radius: 25px;
