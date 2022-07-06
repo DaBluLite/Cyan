@@ -52,10 +52,6 @@
   padding: 0 !important;
   margin: 0;
 }
-.item-1OdjEX {
-  margin: 0;
-  border-radius: 0;
-}
 .scroller-1ox3I2 {
   padding-bottom: 57px;
 }
@@ -298,7 +294,7 @@
 .guilds-2JjMmN {
   position: absolute;
   margin: 10px;
-  height: calc(100% - 30px);
+  height: calc(100% - 20px);
   z-index: 2;
   border-radius: 10px !important;
   background-color: var(--nexus-background-elevated);
