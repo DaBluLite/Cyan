@@ -13,10 +13,14 @@
   overflow: hidden;
   max-width: calc(240px - 20px);
 }
-.item-1OdjEX.labelContainer-2vJzYL, .statusItem-38ArJn {
+.item-1OdjEX.labelContainer-2vJzYL {
   padding: 10px;
   margin: 5px;
-  border-radius: 10px;
+  border-radius: 8px;
+}
+.statusItem-38ArJn {
+  padding: 10px;
+  border-radius: 8px;
 }
 .submenu-1apzyU {
   left: -10px;
