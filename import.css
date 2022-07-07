@@ -27,6 +27,16 @@ html, body {
 .tutorialContainer-1pL9QS > .listItem-3SmSlK > .listItemWrapper-3d87LP > .wrapper-28eC3z > svg > foreignObject > .wrapper-3kah-n > .childWrapper-1j_1ub:hover {
   background-color: var(--brand-experiment);
 }
+
+
+.tutorialContainer-1pL9QS > .listItem-3SmSlK > .listItemWrapper-3d87LP > .wrapper-28eC3z > svg > foreignObject > .wrapper-3kah-n > .childWrapper-1j_1ub > svg {
+  fill: var(--header-primary);
+}
+.tutorialContainer-1pL9QS > .listItem-3SmSlK > .listItemWrapper-3d87LP > .wrapper-28eC3z > svg > foreignObject > .wrapper-3kah-n > .childWrapper-1j_1ub:hover > svg {
+  fill: var(--header-primary);
+}
+
+
 .menu-2-eHMB {
   background-color: var(--nexus-background-elevated);
 }
@@ -213,6 +223,9 @@ html, body {
 .lookOutlined-3yKVGo {
   border-radius: 10px;
   background-color: var(--nexus-background-primary) !important;
+}
+.lookFilled-yCfaCM > div,
+.lookOutlined-3yKVGo > div {
   color: var(--header-primary) !important;
 }
 .colorRed-rQXKgM:hover {
