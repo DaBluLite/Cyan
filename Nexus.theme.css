@@ -6,6 +6,7 @@
  */
  
 @import url(https://dablulite.github.io/Nexus/import.css);
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 :root {
 	--nexus-background-primary: var(--background-tertiary);
 	--nexus-background-secondary: var(--background-floating);
@@ -13,4 +14,5 @@
 	--nexus-background-elevated: var(--background-floating);
 	--nexus-background-floating: var(--background-floating);
 	--nexus-elevation-shadow: 0 0 0 1px rgb(32 34 37 / 60%), 0 2px 10px 0 rgb(0 0 0 / 20%);
+	--nexus-font: 'Open Sans';
 }
