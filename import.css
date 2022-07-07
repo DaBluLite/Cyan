@@ -337,7 +337,8 @@ html, body {
 .embed-hKpSrO {
   background-color: var(--nexus-background-secondary);
   border-radius: 10px;
-  border: none;
+  border-width: 10px;
+  box-shadow: var(--nexus-elevation-shadow);
 }
 .altText-sAs-Ao {
   padding-left: 15px;
