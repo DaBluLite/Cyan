@@ -121,19 +121,6 @@ html, body {
   > button[aria-label="Noise Suppression powered by Krisp"] {
   opacity: 1;
 }
-@supports selector(:has()) {
-  .panels-3wFtMD:hover {
-    width: 152px;
-  }
-  .panels-3wFtMD:has(> div
-      > div
-      > .button-12Fmur[aria-label="Disable Game Activity"]),
-  .panels-3wFtMD:has(> div
-      > div
-      > .button-12Fmur[aria-label="Enable Game Activity"]) {
-    width: calc(240px - 54px) !important;
-  }
-}
 .scroller-3j5xK2,
 .scroller-RfJjkV {
   background-color: var(--nexus-background-secondary);
