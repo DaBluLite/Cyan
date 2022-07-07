@@ -9,6 +9,16 @@
 .closeButton-30b1gR {
   margin-right: 150px;
 }
+.tutorialContainer-1pL9QS > .listItem-3SmSlK > .listItemWrapper-3d87LP > .wrapper-28eC3z > svg > foreignObject > .wrapper-3kah-n > .childWrapper-1j_1ub {
+  background-color: var(--nexus-background-elevated);
+  border: 2px solid var(--brand-experiment);
+  width: 43px;
+  height: 43px;
+  border-radius: 50px;
+}
+.tutorialContainer-1pL9QS > .listItem-3SmSlK > .listItemWrapper-3d87LP > .wrapper-28eC3z > svg > foreignObject > .wrapper-3kah-n > .childWrapper-1j_1ub:hover {
+  background-color: var(--brand-experiment);
+}
 .menu-2-eHMB {
   background-color: var(--nexus-background-elevated);
 }
