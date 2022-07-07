@@ -29,11 +29,11 @@ html, body {
 }
 
 
-.tutorialContainer-1pL9QS > .listItem-3SmSlK > .listItemWrapper-3d87LP > .wrapper-28eC3z > svg > foreignObject > .wrapper-3kah-n > .childWrapper-1j_1ub > svg {
+.tutorialContainer-1pL9QS > .listItem-3SmSlK > .listItemWrapper-3d87LP > .wrapper-28eC3z > svg > foreignObject > .wrapper-3kah-n > .childWrapper-1j_1ub > svg > path {
   fill: var(--header-primary);
 }
-.tutorialContainer-1pL9QS > .listItem-3SmSlK > .listItemWrapper-3d87LP > .wrapper-28eC3z > svg > foreignObject > .wrapper-3kah-n > .childWrapper-1j_1ub:hover > svg {
-  fill: var(--header-primary);
+.tutorialContainer-1pL9QS > .listItem-3SmSlK > .listItemWrapper-3d87LP > .wrapper-28eC3z > svg > foreignObject > .wrapper-3kah-n > .childWrapper-1j_1ub:hover > svg > path {
+  fill: #fff;
 }
 
 
