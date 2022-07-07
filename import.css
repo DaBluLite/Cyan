@@ -12,6 +12,11 @@ html, body {
 .closeButton-30b1gR {
   margin-right: 150px;
 }
+.newMessagesBar-1hF-9G {
+    background-color: var(--nexus-background-secondary);
+    border: 1px solid var(--brand-experiment);
+    border-top: none;
+}
 .tutorialContainer-1pL9QS > .listItem-3SmSlK > .listItemWrapper-3d87LP > .wrapper-28eC3z > svg > foreignObject > .wrapper-3kah-n > .childWrapper-1j_1ub {
   background-color: var(--nexus-background-elevated);
   border: 2px solid var(--brand-experiment);
