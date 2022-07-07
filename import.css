@@ -3,6 +3,8 @@
   box-shadow: var(--nexus-elevation-shadow);
   transition: width 0.3s !important;
   max-width: calc(240px);
+  margin: 0 10px 10px 10px;
+  border-radius: 8px;
 }
 .closeButton-30b1gR {
   margin-right: 150px;
