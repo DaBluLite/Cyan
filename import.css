@@ -213,6 +213,7 @@ html, body {
 .lookOutlined-3yKVGo {
   border-radius: 10px;
   background-color: var(--nexus-background-primary) !important;
+  color: var(--header-primary) !important;
 }
 .colorRed-rQXKgM:hover {
   background-color: var(--button-outline-danger-border) !important;
