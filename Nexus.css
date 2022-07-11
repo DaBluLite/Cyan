@@ -207,9 +207,6 @@ html, body {
   background-color: var(--nexus-background-primary) !important;
   opacity: 0.8;
 }
-.scroller-WSmht3.scrollerBase-_bVAAt {
-  padding-bottom: 72px;
-}
 .container-YkUktl {
   height: 47px;
 }
@@ -338,7 +335,6 @@ html, body {
   background: var(--nexus-background-primary) !important;
 }
 .guilds-2JjMmN {
-  position: absolute;
   margin: 10px;
   height: calc(100% - 20px);
   z-index: 2;
