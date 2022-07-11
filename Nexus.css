@@ -14,16 +14,15 @@ html, body {
   background-color: var(--nexus-background-elevated);
   box-shadow: var(--nexus-elevation-shadow);
   transition: width 0.3s !important;
-  max-width: calc(240px);
   margin: 0 10px 10px 10px;
   border-radius: 8px;
+}
+.message-2CShn3 {
+  padding-right: 0 !important;
 }
 .panels-3wFtMD > .maximized-vv2Wr0 > div > .coverWrapper-YAplwJ {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
-}
-.closeButton-30b1gR {
-  margin-right: 150px;
 }
 .newMessagesBar-1hF-9G {
     background-color: var(--nexus-background-secondary);
@@ -318,7 +317,6 @@ html, body {
   background-color: var(--nexus-background-primary) !important;
   box-shadow: none;
   border-top-left-radius: 0px;
-  padding-right: 150px;
 }
 .tabBody-2dgbAs:before {
   display: none;
@@ -377,10 +375,6 @@ html, body {
 .hljs:not([class$="hljs"]) {
   padding: 16px !important;
   background-color: var(--nexus-background-secondary) !important;
-}
-.title-31SJ6t,
-.title-31SJ6t {
-  padding-right: 150px;
 }
 .withFrame-2dL45i {
   height: 0 !important;
