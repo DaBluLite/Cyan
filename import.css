@@ -78,8 +78,14 @@ html, body {
 .jumpToPresentBar-1cEnH0 > .barButtonMain-2GIx4o {
   border-right: 1px solid var(--brand-experiment);
 }
+.platform-osx .closeButton-30b1gR {
+  margin-right: 0 !important;
+}
 .closeButton-30b1gR {
   margin-right: 150px;
+}
+.platform-osx .closeButton-30b1gR {
+  margin-right: 0 !important;
 }
 .newMessagesBar-1hF-9G > .barButtonAlt-TQoCdZ {
   font-size: 0 !important;
@@ -389,11 +395,17 @@ html, body {
 .button-3bklZh:hover {
   background-color: var(--nexus-background-secondary);
 }
+.platform-osx .container-ZMc96U {
+  padding-right: 0 !important;
+}
 .container-ZMc96U {
   background-color: var(--nexus-background-primary) !important;
   box-shadow: none;
   border-top-left-radius: 0px;
   padding-right: 150px;
+}
+.platform-osx .container-ZMc96U {
+  padding-right: 0 !important;
 }
 .tabBody-2dgbAs:before {
   display: none;
@@ -409,6 +421,9 @@ html, body {
   background-color: var(--nexus-background-primary) !important;
   background: var(--nexus-background-primary) !important;
 }
+.platform-osx .guilds-2JjMmN {
+    height: calc(100% - 42px) !important;
+}
 .guilds-2JjMmN {
   position: absolute;
   margin: 10px;
@@ -418,6 +433,9 @@ html, body {
   transition: .3s;
   background-color: var(--nexus-background-elevated);
   box-shadow: var(--nexus-elevation-shadow);
+}
+.platform-osx .guilds-2JjMmN {
+    height: calc(100% - 42px) !important;
 }
 .base-2jDfDU {
   margin-left: 92px;
@@ -454,9 +472,14 @@ html, body {
   padding: 16px !important;
   background-color: var(--nexus-background-secondary) !important;
 }
-.title-31SJ6t,
+.platform-osx .title-31SJ6t {
+    padding-right: 0 !important;
+}
 .title-31SJ6t {
   padding-right: 150px;
+}
+.platform-osx .title-31SJ6t {
+    padding-right: 0 !important;
 }
 .withFrame-2dL45i {
   height: 0 !important;
