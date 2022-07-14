@@ -10,6 +10,9 @@
 html, body {
   font-family: var(--nexus-font) !important;
 }
+.barButtonAlt-TQoCdZ {
+  font-size: 0 !important;
+}
 .panels-3wFtMD {
   background-color: var(--nexus-background-elevated);
   box-shadow: var(--nexus-elevation-shadow);
