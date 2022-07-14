@@ -10,9 +10,6 @@
 html, body {
   font-family: var(--nexus-font) !important;
 }
-.barButtonAlt-TQoCdZ {
-  font-size: 0 !important;
-}
 .panels-3wFtMD {
   background-color: var(--nexus-background-elevated);
   box-shadow: var(--nexus-elevation-shadow);
@@ -27,15 +24,22 @@ html, body {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
+.newMessagesBar-1hF-9G > .barButtonAlt-TQoCdZ {
+  font-size: 0 !important;
+}
+.newMessagesBar-1hF-9G > .barButtonMain-2GIx4o {
+  border-right: 1px solid var(--brand-experiment);
+}
 .newMessagesBar-1hF-9G {
-    width: fit-content !important;
-    top: 10px !important;
-    border: 1px solid var(--brand-experiment) !important;
-    border-top: 1px solid var(--brand-experiment) !important;
-    border-radius: 20px !important;
-    height: 40px !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
+  background-color: var(--nexus-background-floating);
+  width: fit-content !important;
+  top: 10px !important;
+  border: 1px solid var(--brand-experiment) !important;
+  border-top: 1px solid var(--brand-experiment) !important;
+  border-radius: 20px !important;
+  height: 40px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
 }
 .tutorialContainer-1pL9QS > .listItem-3SmSlK > .listItemWrapper-3d87LP > .wrapper-28eC3z > svg > foreignObject > .wrapper-3kah-n > .childWrapper-1j_1ub {
   background-color: var(--nexus-background-elevated);
