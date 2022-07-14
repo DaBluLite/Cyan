@@ -18,6 +18,12 @@ html, body {
 .content-1SgpWY > .container-2cd8Mz {
   background-color: var(--nexus-background-primary);
 }
+.homeWrapper-L4ors0 {
+  background-color: var(--nexus-background-primary);
+}
+.homeWrapper-L4ors0 > .scroller-29cQFV {
+  background-color: var(--nexus-background-primary);
+}
 .topic-11NuQZ {
   -webkit-box-flex: unset;
   -ms-flex: unset;
