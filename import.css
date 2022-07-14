@@ -63,11 +63,14 @@ html, body {
   color: var(--background-primary) !important;
 }
 .jumpToPresentBar-1cEnH0 {
-  border-radius: 8px !important;
+  border-radius: 50px !important;
   margin-bottom: 16px;
   padding: 10px;
   background-color: var(--nexus-background-floating);
   border: 1px solid var(--brand-experiment);
+  width: fit-content !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
 }
 .submenuPaddingContainer-_k62dJ {
   padding: 0 !important;
@@ -77,6 +80,9 @@ html, body {
 }
 .jumpToPresentBar-1cEnH0 > .barButtonMain-2GIx4o {
   border-right: 1px solid var(--brand-experiment);
+}
+.jumpToPresentBar-1cEnH0 .barButtonAlt-TQoCdZ {
+  font-size: 0;
 }
 .platform-osx .closeButton-30b1gR {
   margin-right: 0 !important;
