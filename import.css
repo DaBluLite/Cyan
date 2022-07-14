@@ -95,10 +95,6 @@ html, body {
     margin-top: -2px;
     z-index: 4;
 }
-.root-g14mjS, .footer-31IekZ {
-  background-color: var(--nexus-background-elevated);
-  border-radius: 10px;
-}
 .footer-31IekZ {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
