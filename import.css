@@ -13,6 +13,16 @@ html, body {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
+.jumpToPresentBar-1cEnH0 {
+  border-radius: 8px !important;
+  margin-bottom: 16px;
+  padding: 10px;
+  background-color: var(--nexus-background-floating);
+  border: 1px solid var(--brand-experiment);
+}
+.jumpToPresentBar-1cEnH0 > .barButtonMain-2GIx4o {
+  border-right: 1px solid var(--brand-experiment);
+}
 .closeButton-30b1gR {
   margin-right: 150px;
 }
