@@ -20,6 +20,12 @@ html, body {
   background-color: var(--nexus-background-floating);
   border: 1px solid var(--brand-experiment);
 }
+.submenuPaddingContainer-_k62dJ {
+  padding: 0 !important;
+}
+.submenuPaddingContainer-_k62dJ > .submenu-1apzyU {
+  left: 0 !important;
+}
 .jumpToPresentBar-1cEnH0 > .barButtonMain-2GIx4o {
   border-right: 1px solid var(--brand-experiment);
 }
@@ -84,6 +90,9 @@ html, body {
 }
 .submenu-1apzyU {
   left: -10px;
+}
+.submenuPaddingContainer-_k62dJ > .submenu-1apzyU {
+  left: 0 !important;
 }
 .containerDefault-YUSmu3 > .modeUnread-3Cxepe > .unread-36eUEm {
     position: absolute;
