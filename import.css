@@ -9,6 +9,11 @@ html, body {
   margin: 0 10px 10px 10px;
   border-radius: 8px;
 }
+.mention-3XBnnZ {
+    border: 2px solid var(--status-danger);
+    background-color: var(--nexus-background-floating);
+    border-radius: 25px;
+}
 .panels-3wFtMD > .maximized-vv2Wr0 > div > .coverWrapper-YAplwJ {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
@@ -16,8 +21,12 @@ html, body {
 .container-1Lk8p7 * {
   color: var(--background-primary);
 }
+.container-1Lk8p7 > div > div > .content-2hZxGK {
+  background-color: var(--nexus-background-floating);
+}
 .container-1Lk8p7 > div, .container-1Lk8p7 > div > div > .flex-2S1XBF {
   background-color: var(--nexus-background-floating);
+  box-shadow: none !important;
 }
 .container-1Lk8p7 > div > div > .flex-2S1XBF > button > .contents-3ca1mk{
   color: var(--background-primary);
