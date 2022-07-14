@@ -119,8 +119,11 @@ html, body {
   padding: 0 !important;
   margin: 0;
 }
-.scroller-1ox3I2 {
-  padding-bottom: 57px;
+.text-2bYgPB {
+  display: none !important;
+}
+.container-2RRFHK {
+  background-color: var(--nexus-background-secondary);
 }
 .menu-1QACrS {
   border-radius: 10px;
