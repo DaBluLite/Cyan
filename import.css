@@ -9,11 +9,23 @@ html, body {
   margin: 0 10px 10px 10px;
   border-radius: 8px;
 }
+.listItems-6eZzQ1 > .categorySection-3hl0bM > .categoryHeader-OpJ1Ly {
+  background-color: var(--nexus-background-floating);
+}
+.listItems-6eZzQ1 > .categorySection-3hl0bM > .clickable-2V8YKY[aria-selected="true"] {
+  background-color: var(--nexus-background-primary);
+}
+.scroller-2MALzE {
+  background-color: var(--nexus-background-floating);
+}
 .mention-3XBnnZ {
   border: 2px solid var(--status-danger);
   background-color: var(--nexus-background-floating);
   border-radius: 25px;
   color: var(--header-primary);
+}
+.emojiPickerInExpressionPicker-2nOwH8 .header-1ULbqO, .emojiPickerInExpressionPicker-2nOwH8 .categoryList-2qRrlj, .emojiPickerInExpressionPicker-2nOwH8, .emojiPickerInExpressionPicker-2nOwH8 .inspector-DFKXwB {
+  background-color: var(--nexus-background-floating) !important;
 }
 .modal-3Hrb0S {
   background-color: var(--nexus-background-floating);
