@@ -103,7 +103,10 @@ html, body {
   margin-right: 0 !important;
 }
 .platform-win .closeButton-30b1gR {
-  margin-right: 150px;
+  width: calc(100% - 150px);
+}
+.chat-2ZfjoI {
+    background-color: var(--nexus-background-primary);
 }
 .platform-osx .closeButton-30b1gR {
   margin-right: 0 !important;
@@ -354,7 +357,6 @@ html, body {
 .form-3gdLxP {
   background-color: var(--nexus-background-primary) !important;
 }
-.chat-2ZfjoI,
 .searchBar-3TnChZ .searchBarComponent-3N7dCG,
 .header-3OsQeK,
 .scroller-1ox3I2 {
@@ -425,7 +427,7 @@ html, body {
   border-top-left-radius: 0px;
 }
 .platform-win .container-ZMc96U {
-  padding-right: 150px;
+  width: calc(100% - 150px);
 }
 .platform-osx .container-ZMc96U {
   padding-right: 0;
@@ -499,7 +501,7 @@ html, body {
     padding-right: 0 !important;
 }
 .platform-win .title-31SJ6t {
-  padding-right: 150px;
+  width: calc(100% - 150px);
 }
 .platform-osx .title-31SJ6t {
     padding-right: 0 !important;
