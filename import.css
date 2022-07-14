@@ -20,8 +20,8 @@ html, body {
   border-radius: 20px;
 }
 .root-g14mjS.small-23Atuv.fullscreenOnMobile-ixj0e3 {
-    background-color: var(--nexus-background-floating);
-    border-radius: 20px;
+  background-color: var(--nexus-background-floating);
+  border-radius: 20px;
 }
 .root-g14mjS.small-23Atuv.fullscreenOnMobile-ixj0e3 > .flex-2S1XBF.flex-3BkGQD.horizontalReverse-60Katr.horizontalReverse-2QssvL.flex-3BkGQD.directionRowReverse-HZatnx.justifyStart-2Mwniq.alignStretch-Uwowzr.noWrap-hBpHBz.footer-31IekZ.footerSeparator-VzAYwb {
   background-color: var(--nexus-background-floating);
@@ -43,7 +43,7 @@ html, body {
   background-color: var(--nexus-background-floating);
 }
 .title-31SJ6t {
-  -webkit-app-region: drag;
+  -webkit-app-region: drag !important;
 }
 .panels-3wFtMD > .maximized-vv2Wr0 > div > .coverWrapper-YAplwJ {
   border-top-left-radius: 8px;
