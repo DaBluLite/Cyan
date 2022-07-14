@@ -436,7 +436,7 @@ html, body {
   border-radius: 10px !important;
 }
 .buttons-3dF5Kd > div > *:hover,
-.buttons-3dF5Kd > div > *:active {
+.buttons-3dF5Kd > div > .selected-69H4ua {
   background-color: var(--nexus-background-secondary);
   opacity: 4;
 }
