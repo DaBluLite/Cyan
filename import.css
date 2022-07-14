@@ -87,7 +87,7 @@ html, body {
 .platform-osx .closeButton-30b1gR {
   margin-right: 0 !important;
 }
-.closeButton-30b1gR {
+.platform-win .closeButton-30b1gR {
   margin-right: 150px;
 }
 .platform-osx .closeButton-30b1gR {
@@ -408,10 +408,12 @@ html, body {
   background-color: var(--nexus-background-primary) !important;
   box-shadow: none;
   border-top-left-radius: 0px;
+}
+.platform-win .container-ZMc96U {
   padding-right: 150px;
 }
 .platform-osx .container-ZMc96U {
-  padding-right: 0 !important;
+  padding-right: 0;
 }
 .tabBody-2dgbAs:before {
   display: none;
@@ -481,7 +483,7 @@ html, body {
 .platform-osx .title-31SJ6t {
     padding-right: 0 !important;
 }
-.title-31SJ6t {
+.platform-win .title-31SJ6t {
   padding-right: 150px;
 }
 .platform-osx .title-31SJ6t {
