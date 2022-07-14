@@ -22,7 +22,7 @@ html, body {
 .container-1Lk8p7 * {
   color: var(--background-primary);
 }
-.container-1Lk8p7 > div > div > .content-2hZxGK {
+.container-1Lk8p7 > div > div > .content-2hZxGK, .container-1Lk8p7 > div > div > .content-2hZxGK > button {
   background-color: var(--nexus-background-floating);
 }
 .container-1Lk8p7 > div, .container-1Lk8p7 > div > div > .flex-2S1XBF {
@@ -30,7 +30,7 @@ html, body {
   box-shadow: none !important;
 }
 .container-1Lk8p7 > div > div > .flex-2S1XBF > button > .contents-3ca1mk{
-  color: var(--background-primary);
+  color: var(--background-primary) !important;
 }
 .jumpToPresentBar-1cEnH0 {
   border-radius: 8px !important;
