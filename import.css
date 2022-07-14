@@ -13,6 +13,15 @@ html, body {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
+.container-1Lk8p7 * {
+  color: var(--background-primary);
+}
+.container-1Lk8p7 > div, .container-1Lk8p7 > div > div > .flex-2S1XBF {
+  background-color: var(--nexus-background-floating);
+}
+.container-1Lk8p7 > div > div > .flex-2S1XBF > button > .contents-3ca1mk{
+  color: var(--background-primary);
+}
 .jumpToPresentBar-1cEnH0 {
   border-radius: 8px !important;
   margin-bottom: 16px;
