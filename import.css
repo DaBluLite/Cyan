@@ -41,9 +41,10 @@ html, body {
     box-shadow: var(--elevation-stroke), var(--elevation-medium);
 }
 .mention-3XBnnZ {
-    border: 2px solid var(--status-danger);
-    background-color: var(--nexus-background-floating);
-    border-radius: 25px;
+  border: 2px solid var(--status-danger);
+  background-color: var(--nexus-background-floating);
+  border-radius: 25px;
+  color: var(--header-primary);
 }
 .panels-3wFtMD > .maximized-vv2Wr0 > div > .coverWrapper-YAplwJ {
   border-top-left-radius: 8px;
