@@ -20,7 +20,7 @@ html, body {
   border-top-right-radius: 8px;
 }
 .container-1Lk8p7 * {
-  color: var(--background-primary);
+  color: var(--background-primary) !important;
 }
 .container-1Lk8p7 > div > div > .content-2hZxGK, .container-1Lk8p7 > div > div > .content-2hZxGK > button {
   background-color: var(--nexus-background-floating);
