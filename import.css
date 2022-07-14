@@ -15,6 +15,9 @@ html, body {
   border-radius: 25px;
   color: var(--header-primary);
 }
+.title-31SJ6t {
+  -webkit-app-regin: drag;
+}
 .panels-3wFtMD > .maximized-vv2Wr0 > div > .coverWrapper-YAplwJ {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
