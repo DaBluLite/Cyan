@@ -12,6 +12,13 @@ html, body {
 .listItems-6eZzQ1 > .categorySection-3hl0bM > .categoryHeader-OpJ1Ly {
   background-color: var(--nexus-background-floating);
 }
+.newMessagesPillContainer-1EFmTu {
+  border: 1px solid var(--brand-experiment);
+  width: fit-content;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50px;
+}
 .listItems-6eZzQ1 > .categorySection-3hl0bM > .clickable-2V8YKY[aria-selected="true"] {
   background-color: var(--nexus-background-primary);
 }
