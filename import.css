@@ -12,6 +12,9 @@ html, body {
 .listItems-6eZzQ1 > .categorySection-3hl0bM > .categoryHeader-OpJ1Ly {
   background-color: var(--nexus-background-floating);
 }
+.item-1OdjEX::before {
+  display: none !important;
+}
 .bannerNormal-2jf-df {
     background-color: rgb(212, 185, 181);
     margin: 10px;
