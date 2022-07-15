@@ -206,10 +206,6 @@ html, body {
 .listItem-3SmSlK > .listItemWrapper-3d87LP > .iconButton-2z1iK7.selected-1WnveH {
   box-shadow: 0 0 0 1.5px var(--brand-experiment), 0 2px 10px 0 rgb(0 0 0 / 20%);
 }
-.listItem-3SmSlK > .listItemWrapper-3d87LP > .iconButton-2z1iK7 {
-  box-shadow: 0 0 0 1.5px var(--brand-experiment), 0 2px 10px 0 rgb(0 0 0 / 20%);
-}
-
 .listItem-3SmSlK > .listItemWrapper-3d87LP > .iconButton-2z1iK7 > svg > path {
   fill: var(--header-primary);
 }
