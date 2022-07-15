@@ -17,6 +17,10 @@ html, body {
     margin: 5px;
     border-radius: 8px;
 }
+.profileGroup-1yKk23 > #account-avatar {
+  margin: 10px;
+  top: 10px;
+}
 .jumpToPresentButton-1bFSxT {
   border: 1px solid var(--brand-experiment);
 }
