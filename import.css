@@ -12,27 +12,7 @@ html, body {
 .listItems-6eZzQ1 > .categorySection-3hl0bM > .categoryHeader-OpJ1Ly {
   background-color: var(--nexus-background-floating);
 }
-#status-picker-online {
-    padding: 2px;
-    margin: 5px;
-    border-radius: 8px;
-}
-#status-picker-idle {
-    padding: 2px;
-    margin: 5px;
-    border-radius: 8px;
-}
-#status-picker-dnd {
-    padding: 2px;
-    margin: 5px;
-    border-radius: 8px;
-}
-#status-picker-invisible {
-    padding: 2px;
-    margin: 5px;
-    border-radius: 8px;
-}
-#status-picker-custom-status {
+#status-picker-online, #status-picker-idle, #status-picker-dnd, #status-picker-invisible, #status-picker-custom-status, #account-status-picker--idle, #account-status-picker--online, #account-status-picker--dnd, #account-status-picker--invisible {
     padding: 2px;
     margin: 5px;
     border-radius: 8px;
