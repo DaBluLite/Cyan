@@ -12,6 +12,9 @@ html, body {
 .listItems-6eZzQ1 > .categorySection-3hl0bM > .categoryHeader-OpJ1Ly {
   background-color: var(--nexus-background-floating);
 }
+.jumpToPresentButton-1bFSxT {
+  border: 1px solid var(--brand-experiment);
+}
 .newMessagesPillContainer-1EFmTu {
   border: 1px solid var(--brand-experiment);
   width: fit-content;
