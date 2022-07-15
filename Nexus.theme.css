@@ -2,12 +2,33 @@
  * @name Nexus
  * @description A cleaner, darker interface for Discord
  * @author DaBluLite
- * @version 14.0.1
+ * @version 15.0.0
  */
  
 @import url(https://dablulite.github.io/Nexus/import.css);
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
+
+/* Addons by Lavender-Discord*/
+@import url("https://lavender-discord.github.io/Lavender/modules/addons/colored-svgs.css");
+/* Colors all the page svgs of discord */
+
+@import url("https://lavender-discord.github.io/Lavender/modules/addons/context-icons.css");
+/* Adds Context Icons with Iconsax Icons */
+
+@import url("https://lavender-discord.github.io/Lavender/modules/addons/emoji-replace.css");
+/* Replaces discords emojis with windows 11's */
+
+@import url("https://lavender-discord.github.io/Lavender/modules/addons/friends-grid.css");
+/* Adds a grid view to friends list */
+
+@import url("https://lavender-discord.github.io/Lavender/modules/addons/iconpack.css");
+/* Changes all discord default icons to iconsax icons */
+
+@import url("https://lavender-discord.github.io/Lavender/modules/addons/mention-links.css");
+/* Turns some common links to buttons/mentions, kind of helps you figure out phishing sites  */
+
+@import url("https://lavender-discord.github.io/Lavender/modules/addons/settings-icons.css");
 :root {
 	--nexus-background-primary: var(--background-tertiary);
 	--nexus-background-secondary: var(--background-floating);
