@@ -437,11 +437,8 @@ html, body {
   border-radius: 10px !important;
   box-shadow: var(--nexus-elevation-shadow);
 }
-.avatar-2Vndt_ {
-  box-shadow: var(--nexus-elevation-shadow);
-}
 .profileBadges-2pItdR {
-  border-radius: 10px !important;
+  border-radius: 25px !important;
   background-color: var(--nexus-background-elevated);
   box-shadow: var(--nexus-elevation-shadow);
   padding-top: 3px;
@@ -742,10 +739,11 @@ html, body {
 :is(.withTagAsButton-OsgQ9L, .withTagless-10ooWt) .avatar-1EWyVD {
   transition: opacity .2s ease, filter .2s ease, -webkit-filter .2s ease;
 }
-.popoutBanner-3cqRD9 {
-    width: calc(100% + 4px);
-    left: -2px;
-    top: -2px;
+.popoutBanner-3cqRD9, .banner-1YaD3N {
+  margin: 10px;
+  width: calc(100% - 18px);
+  border-radius: 8px;
+  box-shadow: var(--nexus-elevation-shadow);
 }
 .profileBody-3QbfPe {
    padding: 20px;
