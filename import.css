@@ -9,6 +9,20 @@ html, body {
   margin: 0 10px 10px 10px;
   border-radius: 8px;
 }
+.hasBanner-2IrYih {
+  margin: 10px;
+  border-radius: 8px;
+}
+.hasBanner-2IrYih > .animatedContainer-2laTjx {
+  border-radius: 8px;
+  box-shadow: var(--nexus-elevation-shadow);
+}
+.container-1NXEtd {
+  background-color: var(--nexus-background-secondary);
+}
+.hasBanner-2IrYih > .animatedContainer-2laTjx > div > img {
+  width: calc(100% - 20px);
+}
 .listItems-6eZzQ1 > .categorySection-3hl0bM > .categoryHeader-OpJ1Ly {
   background-color: var(--nexus-background-floating);
 }
@@ -17,16 +31,16 @@ html, body {
   display: none !important;
 }
 .bannerNormal-2jf-df {
-    background-color: rgb(212, 185, 181);
-    margin: 10px;
-    border-radius: 8px;
-    width: calc(100% - 20px);
-    box-shadow: var(--nexus-elevation-shadow);
+  background-color: rgb(212, 185, 181);
+  margin: 10px;
+  border-radius: 8px;
+  width: calc(100% - 20px);
+  box-shadow: var(--nexus-elevation-shadow);
 }
 #status-picker-online, #status-picker-idle, #status-picker-dnd, #status-picker-invisible, #status-picker-custom-status, #account-status-picker--idle, #account-status-picker--online, #account-status-picker--dnd, #account-status-picker--invisible {
-    padding: 2px;
-    margin: 5px;
-    border-radius: 8px;
+  padding: 2px;
+  margin: 5px;
+  border-radius: 8px;
 }
 .form-3gdLxP {
   padding-top: 5px;
