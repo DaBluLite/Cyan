@@ -28,6 +28,10 @@ html, body {
     margin: 5px;
     border-radius: 8px;
 }
+.form-3gdLxP {
+  padding-top: 5px;
+  border-top: 1px solid var(--nexus-background-elevated);
+}
 .profileGroup-1yKk23 > #account-avatar {
   margin: 10px;
   top: 10px;
