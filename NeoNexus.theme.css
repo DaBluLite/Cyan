@@ -1,0 +1,36 @@
+/**
+ * @name NeoNexus
+ * @description A sleek, Ultra-Dark variant of Nexus with a few special touches
+ * @author DaBluLite
+ * @version 1.0.0
+ */
+ 
+@import url(https://dablulite.github.io/Nexus/import.css);
+@import url(https://dablulite.github.io/Nexus/Addons/macos-buttons.theme.css);
+@import url(https://dablulite.github.io/Nexus/Addons/DarkNexus.theme.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
+
+/* Addons by Lavender-Discord/Obscure-Git*/
+@import url("https://lavender-discord.github.io/Lavender/modules/addons/colored-svgs.css");
+/* Colors all the page svgs of discord */
+
+@import url("https://lavender-discord.github.io/Lavender/modules/addons/context-icons.css");
+/* Adds Context Icons with Iconsax Icons */
+
+@import url("https://lavender-discord.github.io/Lavender/modules/addons/iconpack.css");
+/* Changes all discord default icons to iconsax icons */
+
+@import url("https://lavender-discord.github.io/Lavender/modules/addons/mention-links.css");
+/* Turns some common links to buttons/mentions, kind of helps you figure out phishing sites  */
+
+@import url("https://lavender-discord.github.io/Lavender/modules/addons/settings-icons.css");
+:root {
+	--nexus-background-primary: var(--background-tertiary);
+	--nexus-background-secondary: var(--background-floating);
+	--nexus-background-tertiary: var(--background-primary);
+	--nexus-background-elevated: var(--background-floating);
+	--nexus-background-floating: var(--background-floating);
+	--nexus-elevation-shadow: 0 0 0 1px var(--background-tertiary), 0 2px 10px 0 rgb(0 0 0 / 60%);
+	--nexus-font: 'Open Sans';
+}
