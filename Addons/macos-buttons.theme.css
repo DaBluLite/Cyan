@@ -1,0 +1,67 @@
+/**
+ * @name macOS Buttons (for Nexus only)
+ * @description macOS Titlebar Buttons (Nexus Version)
+ * @author DaBluLite
+ * @version 1.0.0
+ */
+ 
+.winButtonClose-3Q8ZH5 {
+	order: 3;
+	margin-top: 10px;
+	margin-left: 5px;
+}
+.winButtonMinMax-3RsPUg[aria-label="Maximize"] {
+	order: 2;
+	margin-top: 10px;
+}
+.winButtonMinMax-3RsPUg[aria-label="Minimize"] {
+	margin-top: 10px;
+}
+.winButtonClose-3Q8ZH5 > svg {
+	background-image: url(https://github.com/AI-ien/macos-titlebar/raw/main/assets/titlebutton-close%402.png) !important;
+	background-size: contain !important;
+}
+.winButtonClose-3Q8ZH5 > svg > polygon {
+	display: none !important;
+	fill: transparent !important;
+}
+.winButtonMinMax-3RsPUg[aria-label="Maximize"] > svg {
+	background-image: url(https://github.com/AI-ien/macos-titlebar/raw/main/assets/titlebutton-maximize%402.png) !important;
+	background-size: contain !important;
+}
+.winButtonMinMax-3RsPUg[aria-label="Minimize"] > svg {
+	background-image: url(https://github.com/AI-ien/macos-titlebar/raw/main/assets/titlebutton-minimize%402.png) !important;
+	background-size: contain !important;
+}
+.winButtonMinMax-3RsPUg > svg > rect {
+	display: none !important;
+	fill: transparent !important;
+}
+.winButton-3UMjdg:hover {
+	background-color: transparent;
+}
+.winButton-3UMjdg {
+    width: 20px !important;
+    height: 20px !important;
+}
+.guilds-2JjMmN {
+    height: calc(100% - 42px) !important;
+	margin-top: 32px;
+}
+.typeWindows-2-g3UY {
+	-webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+.platform-win .closeButton-30b1gR {
+  width: 100% !important;
+}
+.platform-win .container-ZMc96U {
+  width: 100% !important;
+}
+.platform-win .title-31SJ6t {
+  width: 100% !important;
+}
+.wordmark-2u86JB {
+	display: none;
+}
