@@ -12,6 +12,7 @@ html, body {
 .listItems-6eZzQ1 > .categorySection-3hl0bM > .categoryHeader-OpJ1Ly {
   background-color: var(--nexus-background-floating);
 }
+.withTagAsButton-OsgQ9L, .withTagless-10ooWt { min-width: 100px !important; }
 .item-1OdjEX::before {
   display: none !important;
 }
