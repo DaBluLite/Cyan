@@ -1,0 +1,27 @@
+/**
+ * @name DarkNexus
+ * @description Addon theme for Nexus: Darker Color Scheme
+ * @author DaBluLite
+ * @version 1.0.0
+ */
+
+/*Original code by maenDisease*/
+:root {
+    --background-lightness: -0.4;
+}
+
+.theme-dark {
+    --background-primary: hsl(220, 8%, calc(23% * (1 + var(--background-lightness))));
+    --background-secondary: hsl(223, 7%, calc(20% * (1 + var(--background-lightness))));
+    --background-secondary-alt: hsl(220, 7%, calc(17% * (1 + var(--background-lightness))));
+    --background-tertiary: hsl(216, 7%, calc(14% * (1 + var(--background-lightness))));
+    --background-accent: hsl(217, 8%, calc(34% * (1 + var(--background-lightness))));
+    --background-floating: hsl(225, 8%, calc(10% * (1 + var(--background-lightness))));
+    --background-nested-floating: hsl(223, 7%, calc(20% * (1 + var(--background-lightness))));
+    --background-mobile-primary: hsl(220, 8%, calc(23% * (1 + var(--background-lightness))));
+    --background-mobile-secondary: hsl(223, 7%, calc(20% * (1 + var(--background-lightness))));
+    --chat-background: hsl(220, 8%, calc(23% * (1 + var(--background-lightness))));
+    --chat-border: hsl(216, 7%, calc(14% * (1 + var(--background-lightness))));
+    --chat-input-container-background: hsl(220, 8%, calc(23% * (1 + var(--background-lightness))));
+    --channeltextarea-background: hsl(218, 8%, calc(27% * (1 + var(--background-lightness))));
+}
