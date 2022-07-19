@@ -6,16 +6,16 @@
  */
  
 .winButtonClose-3Q8ZH5 {
-  order: 3;
-  margin-top: 10px;
-  margin-left: 5px;
+  order: 3 !important;
+  margin-top: 10px !important;
+  margin-left: 5px !important;
 }
 .winButtonMinMax-3RsPUg[aria-label="Maximize"] {
-  order: 2;
-  margin-top: 10px;
+  order: 2 !important;
+  margin-top: 10px !important;
 }
 .winButtonMinMax-3RsPUg[aria-label="Minimize"] {
-  margin-top: 10px;
+  margin-top: 10px !important;
 }
 .winButtonClose-3Q8ZH5 > svg {
   background-image: url(https://github.com/AI-ien/macos-titlebar/raw/main/assets/titlebutton-close%402.png) !important;
@@ -38,7 +38,7 @@
   fill: transparent !important;
 }
 .winButton-3UMjdg:hover {
-  background-color: transparent;
+  background-color: transparent !important;
 }
 .winButton-3UMjdg {
   width: 20px !important;
@@ -49,9 +49,9 @@
   margin-top: 32px !important;
 }
 .typeWindows-2-g3UY {
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+  -webkit-box-pack: end !important;
+  -ms-flex-pack: end !important;
+  justify-content: flex-end !important;
 }
 .platform-win .closeButton-30b1gR {
   width: 100% !important;
@@ -63,5 +63,5 @@
   width: 100% !important;
 }
 .wordmark-2u86JB {
-  display: none;
+  display: none !important;
 }
