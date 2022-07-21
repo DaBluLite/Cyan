@@ -189,7 +189,10 @@ html, body {
   width: calc(100% - 150px);
 }
 .chat-2ZfjoI {
-    background-color: var(--nexus-background-primary);
+  background-color: var(--nexus-background-primary);
+  margin: var(--window-margin);
+  border-radius: var(--window-border-radius-calc);
+  box-shadow: var(--nexus-elevation-shadow);
 }
 .platform-osx .closeButton-30b1gR {
   margin-right: 0 !important;
@@ -320,8 +323,7 @@ html, body {
   > button[aria-label="Noise Suppression powered by Krisp"] {
   opacity: 0;
 }
-.container-1-ERn5,
-.sidebar-1tnWFu {
+.container-1-ERn5 {
   background-color: var(--nexus-background-secondary);
 }
 .panels-3wFtMD:hover
@@ -346,12 +348,15 @@ html, body {
 }
 .sidebar-1tnWFu {
   position: relative;
+  margin: 10px;
+  background-color: var(--nexus-background-secondary);
+  box-shadow: var(--nexus-elevation-shadow);
+  margin-left: 0;
+  border-radius: 0 12px 12px 0 !important;
+  margin-top: 32px;
 }
 .animatedContainer-2laTjx {
   z-index: 2;
-}
-.sidebar-1tnWFu {
-  border-radius: 0px !important;
 }
 .tooltip-14MtrL {
   border-radius: 10px;
@@ -539,18 +544,24 @@ html, body {
 .guilds-2JjMmN {
   position: absolute;
   margin: 10px;
-  height: calc(100% - 20px);
   z-index: 2;
-  border-radius: 12px;
+  border-radius: 12px 0 0 12px;
   transition: .3s;
   background-color: var(--nexus-background-elevated);
   box-shadow: var(--nexus-elevation-shadow);
+  height: calc(100% - 42px) !important;
+  margin-top: 32px !important;
+  margin-right: 0 !important;
 }
 .platform-osx .guilds-2JjMmN {
     height: calc(100% - 42px) !important;
 }
 .base-2jDfDU {
   margin-left: 92px;
+  background-color: transparent;
+}
+.container-1eFtFS {
+  background-color: transparent;
 }
 .scroller-3X7KbA {
   padding: 8px 0;
@@ -591,7 +602,8 @@ html, body {
   width: calc(100% - 170px);
 }
 .withFrame-2dL45i {
-  height: 0 !important;
+  position: absolute !important;
+  width: 100% !important;
 }
 .footer-GXWBBp {
   border-radius: 0 0 25px 25px;
@@ -644,9 +656,11 @@ html, body {
 }
 .buttons-3dF5Kd > div > *,
 .container-3u6dG-,
-.stickyHeader-fX4ei6,
-.withFrame-2dL45i {
+.stickyHeader-fX4ei6 {
   background-color: var(--nexus-background-secondary);
+}
+.withFrame-2dL45i {
+  background-color: transparent;
 }
 .withFrame-2dL45i {
   margin-top: 0;
