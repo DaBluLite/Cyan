@@ -1,14 +1,12 @@
-# Nexus
-A Cleaner, Darker Discord interface.
+# Monasti
+Sleek and Ultra performant BetterDiscord Theme
 
 
-Nexus is a simple theme that uses a material-ish design and reuses the Discord background color variables, not the colors:
+Monasti is a simple theme that uses a material-ish design and reuses the Discord background color variables, not the colors:
 `--background-primary`
 `--background-secondary`
 `--background-tertiary`
 `--background-floating`
-
-* Addons for the theme coming soon...
 
 # Special thanks to:
 * [@ObjectiveSlayer](https://github.com/ObjectiveSlayer)/carrot#8812
