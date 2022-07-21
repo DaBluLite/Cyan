@@ -1,6 +1,6 @@
 /**
- * @name NeoNexus
- * @description A sleek, Ultra-Dark variant of Nexus with a few special touches
+ * @name Monasti
+ * @description Sleek and Ultra performant
  * @author DaBluLite
  * @version 1.0.0
  */
@@ -33,4 +33,7 @@
 	--nexus-background-floating: var(--background-floating);
 	--nexus-elevation-shadow: 0 0 0 1px var(--background-tertiary), 0 2px 10px 0 rgb(0 0 0 / 60%);
 	--nexus-font: 'Open Sans';
+	--window-margin: 10px;
+	--window-border-radius: 8px;
+        --window-border-radius-calc: calc(min(1, var(--window-margin)) * var(--window-border-radius));
 }
