@@ -190,7 +190,7 @@ html, body {
 }
 .chat-2ZfjoI {
   background-color: var(--nexus-background-primary);
-  margin: var(--window-margin);
+  margin: calc(var(--window-margin) * 1px);
   border-radius: var(--window-border-radius-calc);
   box-shadow: var(--nexus-elevation-shadow);
 }
@@ -557,7 +557,7 @@ html, body {
     height: calc(100% - 42px) !important;
 }
 .base-2jDfDU {
-  margin-left: 92px;
+  margin-left: 82px;
   background-color: transparent;
 }
 .container-1eFtFS {
