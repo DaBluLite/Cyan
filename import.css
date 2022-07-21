@@ -121,6 +121,12 @@ html, body {
 }
 .title-31SJ6t {
   -webkit-app-region: drag !important;
+  margin: 10px;
+  box-shadow: var(--nexus-elevation-shadow);
+  border-radius: 8px;
+  background-color: var(--nexus-background-elevated) !important;
+  margin-bottom: 0;
+  width: calc(100% - 20px);
 }
 .panels-3wFtMD > .maximized-vv2Wr0 > div > .coverWrapper-YAplwJ {
   border-top-left-radius: 8px;
@@ -570,13 +576,10 @@ html, body {
   background-color: var(--nexus-background-secondary) !important;
 }
 .platform-osx .title-31SJ6t {
-    padding-right: 0 !important;
+  padding-right: 0 !important;
 }
 .platform-win .title-31SJ6t {
-  width: calc(100% - 150px);
-}
-.platform-osx .title-31SJ6t {
-    padding-right: 0 !important;
+  width: calc(100% - 170px);
 }
 .withFrame-2dL45i {
   height: 0 !important;
