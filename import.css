@@ -26,6 +26,9 @@ html, body {
 .listItems-6eZzQ1 > .categorySection-3hl0bM > .categoryHeader-OpJ1Ly {
   background-color: var(--nexus-background-floating);
 }
+.clickable-28SzVr.container-1oeRFJ:hover, .clickable-28SzVr.container-1oeRFJ:hover .muted-14PyqW {
+  background-color: var(--nexus-background-elevated);
+}
 .withTagAsButton-OsgQ9L, .withTagless-10ooWt { min-width: 100px !important; }
 .item-1OdjEX::before {
   display: none !important;
