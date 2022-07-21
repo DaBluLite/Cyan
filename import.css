@@ -756,20 +756,6 @@ html, body {
 .container-1NXEtd + .panels-3wFtMD > .container-YkUktl .avatarWrapper-1B9FTW ~ .flex-2S1XBF{
    margin-left: auto;
 }
-.button-12Fmur:hover .contents-3ca1mk {animation: UserModalButtons 0.5s normal ease;}
-.button-12Fmur {transition: 0.2s;}
-.button-12Fmur:hover {padding-bottom: 0px;transition: 0.2;}
-@keyframes UserModalButtons {
-   0% {
-       transform: translateY(0px);
-   }
-   50% {
-       transform: translateY(-5px);
-   }
-   100% {
-       transform: translateY(0px);
-   }
-}
 .panels-3wFtMD > .container-YkUktl .flex-2S1XBF > :not(:last-child) {
    transition: all 0.2s ease-in-out;
 }
