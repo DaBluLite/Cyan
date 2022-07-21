@@ -9,12 +9,21 @@ html, body {
   margin: 0 10px 10px 10px;
   border-radius: 8px;
 }
+.sidebarRegion-1VBisG {
+  justify-content: end;
+}
 .hasBanner-2IrYih {
   margin: 10px;
   border-radius: 8px;
 }
+.contentRegionScroller-2_GT_N.contentRegionShownSidebar-fHXkEg.auto-2K3UW5.scrollerBase-_bVAAt {
+  justify-content: center;
+}
 .sidebarRegionScroller-FXiQOh {
-    flex: none;
+  flex: none;
+}
+.contentRegion-3HkfJJ {
+  flex: 1 1 100%;
 }
 .hasBanner-2IrYih > .animatedContainer-2laTjx {
   border-radius: 8px;
