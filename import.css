@@ -446,7 +446,6 @@ html, body {
 .scroller-1ox3I2 {
   background-color: var(--nexus-background-secondary);
 }
-.title-31SJ6t,
 .members-3WRCEx,
 .members-3WRCEx,
 .members-3WRCEx > div {
@@ -501,11 +500,6 @@ html, body {
 }
 .platform-osx .container-ZMc96U {
   padding-right: 0 !important;
-}
-.container-ZMc96U {
-  background-color: var(--nexus-background-primary) !important;
-  box-shadow: none;
-  border-top-left-radius: 0px;
 }
 .platform-win .container-ZMc96U {
   width: calc(100% - 150px);
