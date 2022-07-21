@@ -19,6 +19,9 @@ html, body {
 .contentRegionScroller-2_GT_N.contentRegionShownSidebar-fHXkEg.auto-2K3UW5.scrollerBase-_bVAAt {
   justify-content: center;
 }
+.container-1eFtFS {
+  background-image: var(--nexus-background-img);
+}
 .sidebarRegionScroller-FXiQOh {
   flex: none;
 }
