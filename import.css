@@ -1,5 +1,84 @@
+:root {
+    --background-lightness: -0.4;
+}
+
+.theme-dark {
+    --background-primary: hsl(220, 8%, calc(23% * (1 + var(--background-lightness))));
+    --background-secondary: hsl(223, 7%, calc(20% * (1 + var(--background-lightness))));
+    --background-secondary-alt: hsl(220, 7%, calc(17% * (1 + var(--background-lightness))));
+    --background-tertiary: hsl(216, 7%, calc(14% * (1 + var(--background-lightness))));
+    --background-accent: hsl(217, 8%, calc(34% * (1 + var(--background-lightness))));
+    --background-floating: hsl(225, 8%, calc(10% * (1 + var(--background-lightness))));
+    --background-nested-floating: hsl(223, 7%, calc(20% * (1 + var(--background-lightness))));
+    --background-mobile-primary: hsl(220, 8%, calc(23% * (1 + var(--background-lightness))));
+    --background-mobile-secondary: hsl(223, 7%, calc(20% * (1 + var(--background-lightness))));
+    --chat-background: hsl(220, 8%, calc(23% * (1 + var(--background-lightness))));
+    --chat-border: hsl(216, 7%, calc(14% * (1 + var(--background-lightness))));
+    --chat-input-container-background: hsl(220, 8%, calc(23% * (1 + var(--background-lightness))));
+    --channeltextarea-background: hsl(218, 8%, calc(27% * (1 + var(--background-lightness))));
+}
 html, body {
   font-family: var(--nexus-font) !important;
+}
+.winButtonClose-3Q8ZH5 {
+  order: 3 !important;
+  margin-top: 10px !important;
+  margin-left: 17px !important;
+}
+.winButtonMinMax-3RsPUg[aria-label="Maximize"] {
+  order: 2 !important;
+  margin-top: 10px !important;
+}
+.winButtonMinMax-3RsPUg[aria-label="Minimize"] {
+  margin-top: 10px !important;
+}
+.winButtonClose-3Q8ZH5 > svg {
+  background-image: url(https://github.com/AI-ien/macos-titlebar/raw/main/assets/titlebutton-close%402.png) !important;
+  background-size: contain !important;
+}
+.winButtonClose-3Q8ZH5 > svg > polygon {
+  display: none !important;
+  fill: transparent !important;
+}
+.winButtonMinMax-3RsPUg[aria-label="Maximize"] > svg {
+  background-image: url(https://github.com/AI-ien/macos-titlebar/raw/main/assets/titlebutton-maximize%402.png) !important;
+  background-size: contain !important;
+}
+.winButtonMinMax-3RsPUg[aria-label="Minimize"] > svg {
+  background-image: url(https://github.com/AI-ien/macos-titlebar/raw/main/assets/titlebutton-minimize%402.png) !important;
+  background-size: contain !important;
+}
+.winButtonMinMax-3RsPUg > svg > rect {
+  display: none !important;
+  fill: transparent !important;
+}
+.winButton-3UMjdg:hover {
+  background-color: transparent !important;
+}
+.winButton-3UMjdg {
+  width: 20px !important;
+  height: 20px !important;
+}
+.guilds-2JjMmN {
+  height: calc(100% - 42px) !important;
+  margin-top: 32px !important;
+}
+.typeWindows-2-g3UY {
+  -webkit-box-pack: end !important;
+  -ms-flex-pack: end !important;
+  justify-content: flex-end !important;
+}
+.platform-win .closeButton-30b1gR {
+  margin-right: 0 !important;
+}
+.platform-win .container-ZMc96U {
+  width:calc(100% - 20px) !important;
+}
+.platform-win .title-31SJ6t {
+  width: calc(100% - 20px) !important;
+}
+.wordmark-2u86JB {
+  display: none !important;
 }
 .panels-3wFtMD {
   background-color: var(--nexus-background-elevated);
