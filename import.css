@@ -13,6 +13,9 @@ html, body {
   margin: 10px;
   border-radius: 8px;
 }
+.sidebarRegionScroller-FXiQOh {
+    flex: none;
+}
 .hasBanner-2IrYih > .animatedContainer-2laTjx {
   border-radius: 8px;
   box-shadow: var(--nexus-elevation-shadow);
