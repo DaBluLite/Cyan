@@ -1,13 +1,8 @@
-# Monasti
+# Cyan
 Sleek and Ultra performant BetterDiscord Theme
 
 
-Monasti is a simple theme that uses a material-ish design and reuses the Discord background color variables, not the colors:
-`--background-primary`
-`--background-secondary`
-`--background-tertiary`
-`--background-floating`
-
+Cyan is a sleek theme that aims to be performant, customizable and nice to the eyes.
 # Special thanks to:
 * [@ObjectiveSlayer](https://github.com/ObjectiveSlayer)/carrot#8812
 * [@maenDisease](https://github.com/maenDisease)/Disease#3749 
