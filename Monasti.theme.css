@@ -24,7 +24,7 @@
 
 @import url("https://lavender-discord.github.io/Lavender/modules/addons/settings-icons.css");
 :root {
-	--nexus-background-primary: var(--background-tertiary);
+	--nexus-background-primary: rgba(10,110,110,.3);
 	--nexus-background-secondary: var(--background-floating);
 	--nexus-background-tertiary: var(--background-primary);
 	--nexus-background-elevated: var(--background-floating);
