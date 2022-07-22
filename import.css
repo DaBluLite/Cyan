@@ -538,7 +538,7 @@ html, body {
   background-color: var(--nexus-background-secondary);
 }
 .form-3gdLxP {
-  background-color: var(--nexus-background-primary) !important;
+  background-color: transparent !important;
 }
 .searchBar-3TnChZ .searchBarComponent-3N7dCG,
 .header-3OsQeK,
@@ -546,9 +546,8 @@ html, body {
   background-color: var(--nexus-background-secondary);
 }
 .members-3WRCEx,
-.members-3WRCEx,
 .members-3WRCEx > div {
-  background-color: var(--nexus-background-primary) !important;
+  background-color: transparent !important;
 }
 .scrollableContainer-15eg7h {
   border-radius: 10px !important;
@@ -556,6 +555,7 @@ html, body {
 }
 .wrapper-1gVUIN ~ .content-1jQy2l {
   border-top-left-radius: 0px;
+    background-color: transparent !important;
 }
 .content-1jQy2l,
 #MemberCount,
@@ -622,6 +622,12 @@ html, body {
 }
 .platform-osx .guilds-2JjMmN {
     height: calc(100% - 42px) !important;
+}
+.scroller-kQBbkU {
+  background: transparent !important;
+}
+.content-2a4AW9, .content-2a4AW9 > ol {
+  background: transparent !important;
 }
 .guilds-2JjMmN {
   position: absolute;
