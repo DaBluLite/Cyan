@@ -430,7 +430,7 @@ html, body {
 .sidebar-1tnWFu {
   position: relative;
   margin: 10px;
-  background-color: var(--nexus-background-secondary);
+  background-color: var(--nexus-background-primary);
   box-shadow: var(--nexus-elevation-shadow);
   margin-left: 0;
   border-radius: 0 12px 12px 0 !important;
@@ -535,7 +535,7 @@ html, body {
 }
 .privateChannels-oVe7HL,
 .scroller-WSmht3 {
-  background-color: var(--nexus-background-primary);
+  background-color: transparent;
 }
 .form-3gdLxP {
   background-color: transparent !important;
