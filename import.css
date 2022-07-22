@@ -20,13 +20,28 @@
 html, body {
   font-family: var(--nexus-font) !important;
 }
+.header-JUTO-g, .titleContainer-3fPic2 {
+  background-color: transparent !important;
+}
+.divider-IqmEqJ {
+  border-width: 2px !important;
+}
+.divider-IqmEqJ .content-3spvdd {
+  padding: 10px !important;
+}
 .chatContent-3KubbW, .content-1jQy2l, .container-2o3qEW {
   background-color: transparent !important;
+}
+.contentColumn-1C7as6, .customColumn-2n-oKU {
+  max-width: 100% !important;
 }
 .winButtonClose-3Q8ZH5 {
   order: 3 !important;
   margin-top: 10px !important;
   margin-left: 17px !important;
+}
+.item-1OdjEX.labelContainer-2vJzYL .iconContainer-1-SsTR {
+  display: block;
 }
 .winButtonMinMax-3RsPUg[aria-label="Maximize"] {
   order: 2 !important;
