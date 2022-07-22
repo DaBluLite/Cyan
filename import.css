@@ -20,6 +20,9 @@
 html, body {
   font-family: var(--nexus-font) !important;
 }
+.chatContent-3KubbW, .content-1jQy2l, .container-2o3qEW {
+  background-color: transparent !important;
+}
 .winButtonClose-3Q8ZH5 {
   order: 3 !important;
   margin-top: 10px !important;
