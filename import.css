@@ -436,8 +436,10 @@ html, body {
   box-shadow: var(--nexus-elevation-shadow);
   margin-left: 0;
   border-radius: 0 12px 12px 0 !important;
-  margin-top: 32px;
   backdrop-filter: blur(6px);
+}
+.platform-win .sidebar-1tnWFu, .platform-osx .sidebar-1tnWFu {
+  margin-top: 32px;
 }
 .animatedContainer-2laTjx {
   z-index: 2;
@@ -633,9 +635,6 @@ html, body {
   background-color: var(--nexus-background-primary) !important;
   background: var(--nexus-background-primary) !important;
 }
-.platform-osx .guilds-2JjMmN {
-    height: calc(100% - 42px) !important;
-}
 .scroller-kQBbkU {
   background: transparent !important;
 }
@@ -650,12 +649,12 @@ html, body {
   transition: .3s;
   background-color: var(--nexus-background-primary);
   box-shadow: var(--nexus-elevation-shadow);
-  height: calc(100% - 42px) !important;
-  margin-top: 32px !important;
+  height: calc(100% - 20px) !important;
   margin-right: 0 !important;
 }
-.platform-osx .guilds-2JjMmN {
-    height: calc(100% - 42px) !important;
+.platform-win .guilds-2JjMmN, .platform-osx .guilds-2JjMmN {
+  margin-top: 32px !important;
+  height: calc(100% - 42px) !important;
 }
 .base-2jDfDU {
   margin-left: 82px;
