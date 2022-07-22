@@ -103,6 +103,7 @@ html, body {
 }
 .container-1eFtFS {
   background-image: var(--nexus-background-img);
+  background-size: cover;
 }
 .sidebarRegionScroller-FXiQOh {
   flex: none;
