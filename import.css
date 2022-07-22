@@ -115,7 +115,7 @@ html, body {
   box-shadow: var(--nexus-elevation-shadow);
 }
 .container-1NXEtd {
-  background-color: var(--nexus-background-secondary);
+  background-color: transparent;
 }
 .hasBanner-2IrYih > .animatedContainer-2laTjx > div > img {
   width: calc(100% - 20px);
@@ -270,10 +270,11 @@ html, body {
   width: calc(100% - 150px);
 }
 .chat-2ZfjoI {
-  background-color: var(--nexus-background-secondary);
+  background-color: var(--nexus-background-primary);
   margin: calc(var(--window-margin) * 1px);
   border-radius: var(--window-border-radius-calc);
   box-shadow: var(--nexus-elevation-shadow);
+  backdrop-filter: blur(6px);
 }
 .platform-osx .closeButton-30b1gR {
   margin-right: 0 !important;
@@ -435,6 +436,7 @@ html, body {
   margin-left: 0;
   border-radius: 0 12px 12px 0 !important;
   margin-top: 32px;
+  backdrop-filter: blur(6px);
 }
 .animatedContainer-2laTjx {
   z-index: 2;
@@ -543,11 +545,15 @@ html, body {
 .searchBar-3TnChZ .searchBarComponent-3N7dCG,
 .header-3OsQeK,
 .scroller-1ox3I2 {
-  background-color: var(--nexus-background-secondary);
+  background-color: transparent;
+}
+#channels * {
+    color: white !important;
 }
 .members-3WRCEx,
 .members-3WRCEx > div {
   background-color: transparent !important;
+  color: white !important;
 }
 .scrollableContainer-15eg7h {
   border-radius: 10px !important;
@@ -557,10 +563,16 @@ html, body {
   border-top-left-radius: 0px;
     background-color: transparent !important;
 }
-.content-1jQy2l,
 #MemberCount,
 #MemberCount * {
-  background-color: var(--nexus-background-primary) !important;
+  background-color: transparent !important;
+  border: none !important;
+}
+.privateChannels-oVe7HL * {
+  color: white !important;
+}
+.content-1jQy2l {
+  background-color: transparent !important;
   border: none !important;
 }
 .wordmark-2u86JB svg {
