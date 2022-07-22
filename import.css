@@ -142,10 +142,6 @@ html, body {
   margin: 5px;
   border-radius: 8px;
 }
-.form-3gdLxP {
-  padding-top: 5px;
-  border-top: 1px solid var(--nexus-background-elevated);
-}
 .profileGroup-1yKk23 > #account-avatar {
   margin: 10px;
   top: 10px;
@@ -214,7 +210,7 @@ html, body {
   background-color: var(--nexus-background-floating);
 }
 .channelHeader-DFRX8q {
-  background-color: var(--nexus-background-floating);
+  background-color: var(--nexus-background-primary);
 }
 .messagesPopout-eVzQcI {
   background-color: var(--nexus-background-floating);
@@ -274,7 +270,7 @@ html, body {
   width: calc(100% - 150px);
 }
 .chat-2ZfjoI {
-  background-color: var(--nexus-background-primary);
+  background-color: var(--nexus-background-secondary);
   margin: calc(var(--window-margin) * 1px);
   border-radius: var(--window-border-radius-calc);
   box-shadow: var(--nexus-elevation-shadow);
@@ -530,7 +526,8 @@ html, body {
   background-color: var(--nexus-background-secondary);
 }
 .scroller-3X7KbA {
-  background-color: var(--nexus-background-elevated);
+  background-color: transparent;
+  backdrop-filter: blur(6px);
 }
 .header-3OsQeK:hover,
 .header-3OsQeK:active {
@@ -538,7 +535,7 @@ html, body {
 }
 .privateChannels-oVe7HL,
 .scroller-WSmht3 {
-  background-color: var(--nexus-background-secondary);
+  background-color: var(--nexus-background-primary);
 }
 .form-3gdLxP {
   background-color: transparent !important;
@@ -638,7 +635,7 @@ html, body {
   z-index: 2;
   border-radius: 12px 0 0 12px;
   transition: .3s;
-  background-color: var(--nexus-background-elevated);
+  background-color: var(--nexus-background-primary);
   box-shadow: var(--nexus-elevation-shadow);
   height: calc(100% - 42px) !important;
   margin-top: 32px !important;
