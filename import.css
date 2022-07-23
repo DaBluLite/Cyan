@@ -23,6 +23,15 @@ html, body {
 .header-JUTO-g, .titleContainer-3fPic2 {
   background-color: transparent !important;
 }
+.wrapper-1gVUIN {
+  background-color: transparent;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: var(--nexus-elevation-shadow);
+}
+.wrapper-1gVUIN > .callContainer-HtHELf {
+  border-radius: 8px;
+}
 .notice-2HEN-u {
   width: calc(100% - 322px);
   position: absolute;
