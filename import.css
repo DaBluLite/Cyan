@@ -41,7 +41,7 @@ html, body {
   margin-left: 17px !important;
 }
 .item-1OdjEX.labelContainer-2vJzYL .iconContainer-1-SsTR {
-  display: block;
+  display: block !important;
 }
 .winButtonMinMax-3RsPUg[aria-label="Maximize"] {
   order: 2 !important;
@@ -415,6 +415,13 @@ html, body {
 .menu-1QACrS {
   border-radius: 10px;
   box-shadow: var(--nexus-elevation-shadow);
+  backdrop-filter: blur(6px);
+}
+.theme-dark ~ .menu-1QACrS {
+  background: rgba(0,0,0,.8) !important;
+}
+.theme-light ~ .menu-1QACrS {
+  background: rgba(255,255,255,.8) !important;
 }
 .scroller-1bVxF5::-webkit-scrollbar {
   width: 0;
