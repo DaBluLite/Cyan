@@ -1,8 +1,8 @@
 # Cyan
-Sleek and Ultra performant BetterDiscord Theme
+Sleek and clean BetterDiscord theme, with custom background support
 
+Cyan is a sleek theme that aims to be clean, customizable and nice to the eyes.
 
-Cyan is a sleek theme that aims to be performant, customizable and nice to the eyes.
 # Special thanks to:
 * [@ObjectiveSlayer](https://github.com/ObjectiveSlayer)/carrot#8812
 * [@maenDisease](https://github.com/maenDisease)/Disease#3749 
