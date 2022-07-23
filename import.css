@@ -89,10 +89,13 @@ html, body {
 .platform-win .closeButton-30b1gR {
   margin-right: 0 !important;
 }
-.platform-win .container-ZMc96U {
-  width:calc(100% - 20px) !important;
+.container-ZMc96U {
+  width: calc(100% - 20px) !important;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: var(--nexus-elevation-shadow);
 }
-.platform-win .title-31SJ6t {
+.title-31SJ6t {
   width: calc(100% - 20px) !important;
 }
 .wordmark-2u86JB {
@@ -633,25 +636,14 @@ html, body {
 .platform-osx .container-ZMc96U {
   padding-right: 0 !important;
 }
-.platform-win .container-ZMc96U {
-  width: calc(100% - 150px);
-}
 .platform-osx .container-ZMc96U {
   padding-right: 0;
 }
 .tabBody-2dgbAs:before {
   display: none;
 }
-.tabBody-2dgbAs,
-.nowPlayingColumn-1eCBCN,
-.container-1oAagU,
-.wrapper-3HVHpV,
-.scrollerInner-2PPAp2,
-.scrollerContent-2SW0kQ,
-.scroller-kQBbkU,
-.cozy-3hKWhq {
-  background-color: var(--nexus-background-primary) !important;
-  background: var(--nexus-background-primary) !important;
+.nowPlayingColumn-1eCBCN, .nowPlayingColumn-1eCBCN > .container-1oAagU {
+  background: transparent !important;
 }
 .scroller-kQBbkU {
   background: transparent !important;
