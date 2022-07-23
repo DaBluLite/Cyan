@@ -177,6 +177,9 @@ html, body {
 }
 .content-1SgpWY > .container-2cd8Mz {
   background-color: var(--nexus-background-primary);
+  margin: calc(var(--window-margin) * 1px);
+  border-radius: var(--window-border-radius-calc);
+  box-shadow: var(--nexus-elevation-shadow);
 }
 .homeWrapper-L4ors0 {
   background-color: var(--nexus-background-primary);
@@ -743,9 +746,6 @@ html, body {
 .scroller-hE2gWq {
   border: none !important;
   box-shadow: none !important;
-}
-.container-2cd8Mz {
-  background-color: var(--nexus-background-secondary) !important;
 }
 .input-2g-os5 {
   border-radius: 10px !important;
