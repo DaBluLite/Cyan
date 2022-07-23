@@ -23,6 +23,14 @@ html, body {
 .header-JUTO-g, .titleContainer-3fPic2 {
   background-color: transparent !important;
 }
+.notice-2HEN-u {
+  width: calc(100% - 322px);
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  border-radius: 8px;
+  box-shadow: var(--nexus-elevation-shadow);
+}
 .divider-IqmEqJ {
   border-width: 2px !important;
 }
