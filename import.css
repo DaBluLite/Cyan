@@ -1,7 +1,6 @@
 :root {
     --background-lightness: -0.4;
 }
-
 .theme-dark {
     --background-primary: hsl(220, 8%, calc(23% * (1 + var(--background-lightness))));
     --background-secondary: hsl(223, 7%, calc(20% * (1 + var(--background-lightness))));
@@ -457,7 +456,7 @@ html, body {
   opacity: 0;
 }
 .container-1-ERn5 {
-  background-color: var(--nexus-background-secondary);
+  background-color: transparent;
 }
 .panels-3wFtMD:hover
   > div
