@@ -458,7 +458,15 @@ html, body {
 .menu-1QACrS {
   border-radius: 10px;
   box-shadow: var(--nexus-elevation-shadow);
+}
+.menu-1QACrS::before {
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: transparent;
   backdrop-filter: blur(6px);
+  border-radius: 8px;
 }
 .theme-dark .menu-1QACrS {
   background: rgba(0,0,0,.8) !important;
