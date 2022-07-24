@@ -25,6 +25,11 @@ html, body {
 .categoryItem-Kc_HK_ {
   color: var(--header-primary);
 }
+.searchHeader-1r_ZSh {
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: var(--nexus-elevation-shadow);
+}
 .wrapper-1gVUIN {
   background-color: transparent;
   margin: 10px;
@@ -966,11 +971,14 @@ html, body {
 .profileBody-3QbfPe {
    padding: 20px;
 }
+.searchResultsWrap-5RVOkx {
+   background-color: transparent !important;
+}
 .scroller-3iiyhZ {
-   background-color: var(--nexus-background-primary)
+   background-color: transparent;
 }
 .channelName-3w2Y3c {
-   background-color: var(--nexus-background-primary)
+   background-color: transparent;
 }
 .menu-1QACrS#account > .scroller-1bVxF5 {
 margin-top: 0;
