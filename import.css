@@ -22,6 +22,9 @@ html, body {
 .header-JUTO-g, .titleContainer-3fPic2 {
   background-color: transparent !important;
 }
+.categoryItem-Kc_HK_ {
+  color: var(--header-primary);
+}
 .wrapper-1gVUIN {
   background-color: transparent;
   margin: 10px;
@@ -201,10 +204,22 @@ html, body {
   box-shadow: var(--nexus-elevation-shadow);
 }
 .homeWrapper-L4ors0 {
-  background-color: var(--nexus-background-primary);
+  background-color: transparent;
 }
 .homeWrapper-L4ors0 > .scroller-29cQFV {
+  background-color: transparent;
+}
+.container-36u7Lw {
   background-color: var(--nexus-background-primary);
+  margin: calc(var(--window-margin) * 1px);
+  border-radius: var(--window-border-radius-calc);
+  box-shadow: var(--nexus-elevation-shadow);
+}
+.applicationStore-2nk7Lo {
+  background-color: var(--nexus-background-primary) !important;
+  margin: calc(var(--window-margin) * 1px) !important;
+  border-radius: var(--window-border-radius-calc) !important;
+  box-shadow: var(--nexus-elevation-shadow) !important;
 }
 .topic-11NuQZ {
   -webkit-box-flex: unset;
@@ -796,7 +811,7 @@ html, body {
 .buttons-3dF5Kd > div > *,
 .container-3u6dG-,
 .stickyHeader-fX4ei6 {
-  background-color: var(--nexus-background-secondary);
+  background-color: transparent;
 }
 .withFrame-2dL45i {
   background-color: transparent;
