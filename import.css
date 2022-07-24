@@ -430,9 +430,12 @@ html, body {
 > .lookFilled-yCfaCM {
   background-color: var(--nexus-background-elevated);
 }
-.footer-3naVBw, .userPopout-2j1gM4 {
+.userPopout-2j1gM4 {
   background-color: var(--nexus-background-primary);
   backdrop-filter: blur(6px);
+}
+.footer-3naVBw {
+  background-color: transparent;
 }
 .bodyInnerWrapper-2bQs1k {
   background-color: transparent;
