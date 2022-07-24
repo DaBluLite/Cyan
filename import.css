@@ -468,15 +468,19 @@ html, body {
 }
 .scroller-3j5xK2,
 .scroller-RfJjkV {
-  background-color: var(--nexus-background-secondary);
-  margin-top: 41px;
+  background-color: transparent;
 }
 .channelNotice-7cg_jN {
-  background-color: var(--nexus-background-secondary);
+  background-color: var(--nexus-background-primary);
 }
-.pageWrapper-2PwDoS,
+.pageWrapper-2PwDoS {
+  background-color: var(--nexus-background-primary) !important;
+  margin: calc(var(--window-margin) * 1px);
+  border-radius: var(--window-border-radius-calc);
+  box-shadow: var(--nexus-elevation-shadow);
+}
 .dragRegion-147xxt {
-  background-color: var(--nexus-background-secondary);
+  display: none !important;
 }
 .sidebar-1tnWFu {
   position: relative;
