@@ -101,7 +101,7 @@ html, body {
   width: 20px !important;
   height: 20px !important;
 }
-.guilds-2JjMmN {
+.platform-win .guilds-2JjMmN, .platform-osx .guilds-2JjMmN {
   height: calc(100% - 42px) !important;
   margin-top: 32px !important;
 }
