@@ -896,15 +896,19 @@ html, body {
   box-shadow: var(--nexus-elevation-shadow);
 }
 .containerDefault-3TQ5YN {
-    border-bottom: 1px solid var(--nexus-background-tertiary);
-    padding-top: 0px;
-    margin-top: 15px;
+  border-bottom: 1px solid var(--nexus-background-tertiary);
+  padding-top: 0px;
+  margin-top: 15px;
 }
 .membersGroup-2eiWxl {
-    border-bottom: 1px solid var(--nexus-background-tertiary);
-    margin-bottom: 10px;
-    padding-bottom: 5px !important;
-    line-height: 0px;
+  border-bottom: 1px solid var(--nexus-background-tertiary);
+  margin-bottom: 10px;
+  padding-bottom: 5px !important;
+  line-height: 0px;
+  color: white;
+}
+.subText-OGOWMj > div {
+  color: white;
 }
 .scroller-18M1mG {
   border-radius: 10px;
