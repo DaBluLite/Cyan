@@ -25,6 +25,15 @@ html, body {
 .categoryItem-Kc_HK_ {
   color: var(--header-primary);
 }
+.container-3wLKDe {
+  background-color: transparent !important;
+}
+.container-3XgAHv {
+  background-color: var(--nexus-background-primary);
+  margin: calc(var(--window-margin) * 1px);
+  border-radius: var(--window-border-radius-calc);
+  box-shadow: var(--nexus-elevation-shadow);
+}
 .searchHeader-1r_ZSh {
   margin: 10px;
   border-radius: 8px;
