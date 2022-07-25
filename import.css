@@ -67,11 +67,11 @@ html, body {
 .item-1OdjEX.labelContainer-2vJzYL .iconContainer-1-SsTR {
   display: block !important;
 }
-.winButtonMinMax-3RsPUg[aria-label="Maximize"] {
+.winButtonMinMax-3RsPUg {
   order: 2 !important;
   margin-top: 10px !important;
 }
-.winButtonMinMax-3RsPUg[aria-label="Minimize"] {
+.winButtonMinMax-3RsPUg:last-child {
   margin-top: 10px !important;
 }
 .winButtonClose-3Q8ZH5 > svg {
@@ -82,11 +82,11 @@ html, body {
   display: none !important;
   fill: transparent !important;
 }
-.winButtonMinMax-3RsPUg[aria-label="Maximize"] > svg {
+.winButtonMinMax-3RsPUg > svg {
   background-image: url(https://github.com/AI-ien/macos-titlebar/raw/main/assets/titlebutton-maximize%402.png) !important;
   background-size: contain !important;
 }
-.winButtonMinMax-3RsPUg[aria-label="Minimize"] > svg {
+.winButtonMinMax-3RsPUg:last-child > svg {
   background-image: url(https://github.com/AI-ien/macos-titlebar/raw/main/assets/titlebutton-minimize%402.png) !important;
   background-size: contain !important;
 }
