@@ -26,7 +26,7 @@ html, body {
   color: var(--header-primary);
 }
 .authBox-1HR6Ha {
-  background: var(--nexus-background-primary);
+  background: var(--nexus-background-primary) !important;
   border-radius: 8px;
   box-shadow: var(--nexus-elevation-shadow);
   backdrop-filter: blur(6px);
