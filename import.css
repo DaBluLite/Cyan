@@ -22,6 +22,13 @@ html, body {
 .header-JUTO-g, .titleContainer-3fPic2 {
   background-color: transparent !important;
 }
+.artwork-L5TAwQ {
+  background-image: var(--nexus-background-img) !important;
+  background-size: cover !important;
+}
+.artwork-L5TAwQ * {
+  opacity: 0 !important;
+}
 .categoryItem-Kc_HK_ {
   color: var(--header-primary);
 }
