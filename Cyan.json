@@ -2,7 +2,8 @@
     "manifest": {
         "name": "Cyan",
         "author": "DaBluLite#7409",
-        "version": "1.0.0"
+        "version": "1.0.0",
+        "updater": "https:\/\/raw.githubusercontent.com\/DaBluLite\/Cyan\/master\/Cyan.json"
     },
     "background": {
         "url": "https:\/\/media.discordapp.net\/attachments\/819632343148003338\/1001413953521451028\/background-dark.jpg"
