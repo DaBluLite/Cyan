@@ -25,6 +25,12 @@ html, body {
 .categoryItem-Kc_HK_ {
   color: var(--header-primary);
 }
+.authBox-1HR6Ha {
+  background: var(--nexus-background-primary);
+  border-radius: 8px;
+  box-shadow: var(--nexus-elevation-shadow);
+  backdrop-filter: blur(6px);
+}
 .container-3wLKDe {
   background-color: transparent !important;
 }
