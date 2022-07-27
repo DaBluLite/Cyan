@@ -43,8 +43,12 @@
     --channeltextarea-background: hsl(218, 8%, calc(27% * (1 + var(--background-lightness))));
 }
 .mention {
-    background: var(--brand-experiment);
-    color: white;
+  background: var(--brand-experiment) !important;
+  color: white !important;
+  opacity: .5;
+}
+.mention:hover {
+  opacity: 1 !important;
 }
 html, body {
   font-family: var(--cyan-font) !important;
