@@ -1,5 +1,31 @@
 :root {
     --background-lightness: -0.4;
+    --brand-experiment-100: var(--cyan-accent-color);
+    --brand-experiment-130: var(--cyan-accent-color);
+    --brand-experiment-160: var(--cyan-accent-color);
+    --brand-experiment-200: var(--cyan-accent-color);
+    --brand-experiment-230: var(--cyan-accent-color);
+    --brand-experiment-260: var(--cyan-accent-color);
+    --brand-experiment-300: var(--cyan-accent-color);
+    --brand-experiment-330: var(--cyan-accent-color);
+    --brand-experiment-360: var(--cyan-accent-color);
+    --brand-experiment-400: var(--cyan-accent-color);
+    --brand-experiment-430: var(--cyan-accent-color);
+    --brand-experiment-460: var(--cyan-accent-color);
+    --brand-experiment: var(--cyan-accent-color);
+    --brand-experiment-500: var(--cyan-accent-color);
+    --brand-experiment-530: var(--cyan-accent-color);
+    --brand-experiment-560: var(--cyan-accent-color);
+    --brand-experiment-600: var(--cyan-accent-color);
+    --brand-experiment-630: var(--cyan-accent-color);
+    --brand-experiment-660: var(--cyan-accent-color);
+    --brand-experiment-700: var(--cyan-accent-color);
+    --brand-experiment-730: var(--cyan-accent-color);
+    --brand-experiment-760: var(--cyan-accent-color);
+    --brand-experiment-800: var(--cyan-accent-color);
+    --brand-experiment-830: var(--cyan-accent-color);
+    --brand-experiment-860: var(--cyan-accent-color);
+    --brand-experiment-900: var(--cyan-accent-color);
 }
 .theme-dark {
     --background-primary: hsl(220, 8%, calc(23% * (1 + var(--background-lightness))));
