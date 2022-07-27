@@ -974,12 +974,14 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
   border-bottom: 1px solid var(--cyan-background-tertiary);
   padding-top: 0px;
   margin-top: 15px;
+  margin-bottom: 5px !important;
+  margin-left: 10px;
+  margin-right: 5px;
 }
 .membersGroup-2eiWxl {
   border-bottom: 1px solid var(--cyan-background-tertiary);
   margin-bottom: 10px;
-  padding-bottom: 5px !important;
-  line-height: 0px;
+  padding-bottom: 25px !important;
   color: white;
 }
 .subText-OGOWMj > div {
