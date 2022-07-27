@@ -3,7 +3,7 @@
  * @description Sleek and clean, with custom background support
  * @author DaBluLite#7409
  * @authorId 582170007505731594
- * @version 3.2.0
+ * @version 4.0.0
  * @updateUrl https://dablulite.github.io/Cyan/Cyan.theme.css
  * @source https://github.com/DaBluLite/Cyan
  */
@@ -27,7 +27,7 @@
 	--window-margin: 10;
 	--window-border-radius: 8px;
     	--window-border-radius-calc: calc(min(1, var(--window-margin)) * var(--window-border-radius));
-	--brand-experiment: #009f88;
+	--cyan-accent-color: #009f88;
 }
 .theme-light {
 	--cyan-background-primary: rgba(180,180,180,.4);
@@ -41,5 +41,5 @@
 	--window-margin: 10;
 	--window-border-radius: 8px;
     	--window-border-radius-calc: calc(min(1, var(--window-margin)) * var(--window-border-radius));
-	--brand-experiment: #009f88;
+	--cyan-accent-color: #009f88;
 }
