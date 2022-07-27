@@ -47,6 +47,15 @@
   color: white !important;
   opacity: .5;
 }
+.folder-241Joy {
+  background-color: transparent !important;
+}
+.expandedFolderBackground-1kSAf6 {
+  background-color: var(--cyan-background-primary) !important;
+  border-radius: 8px !important;
+  padding: 5px !important;
+  left: 7px !important;
+}
 .mention:hover {
   opacity: 1 !important;
 }
