@@ -22,6 +22,22 @@ html, body {
 .header-JUTO-g, .titleContainer-3fPic2 {
   background-color: transparent !important;
 }
+.container-2nx-BQ.checked-25WXMf {
+  background-color: var(--brand-experiment) !important;
+}
+.container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12px;"] {
+  left: 12px !important;
+}
+.slider-32CRPX > svg {
+  display: none !important;
+}
+.slider-32CRPX > rect {
+  transform: scale(.9) !important;
+}
+.container-2nx-BQ {
+  width: 40px !important;
+  border-radius: 50px !important;
+}
 .artwork-L5TAwQ {
   background-image: var(--cyan-background-img) !important;
   background-size: cover !important;
