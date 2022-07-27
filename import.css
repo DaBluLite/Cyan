@@ -238,8 +238,11 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
 .listItems-6eZzQ1 > .categorySection-3hl0bM > .categoryHeader-OpJ1Ly {
   background-color: var(--cyan-background-floating);
 }
+.clickable-28SzVr:hover .layout-1qmrhw {
+  background-color: transparent !important;
+}
 .clickable-28SzVr.container-1oeRFJ:hover, .clickable-28SzVr.container-1oeRFJ:hover .muted-14PyqW {
-  background-color: var(--cyan-background-elevated);
+  background-color: transparent;
 }
 .withTagAsButton-OsgQ9L, .withTagless-10ooWt { min-width: 100px !important; }
 .item-1OdjEX::before {
