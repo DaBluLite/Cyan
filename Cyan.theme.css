@@ -3,7 +3,7 @@
  * @description Sleek and clean, with custom background support
  * @author DaBluLite#7409
  * @authorId 582170007505731594
- * @version 3.1.0
+ * @version 3.2.0
  * @updateUrl https://dablulite.github.io/Cyan/Cyan.theme.css
  * @source https://github.com/DaBluLite/Cyan
  */
@@ -14,6 +14,7 @@
 @import url("https://lavender-discord.github.io/Lavender/modules/addons/context-icons.css");
 @import url("https://lavender-discord.github.io/Lavender/modules/addons/mention-links.css");
 @import url("https://lavender-discord.github.io/Lavender/modules/addons/settings-icons.css");
+@import url("https://lavender-discord.github.io/IconsaxDiscord/theme.css");
 .theme-dark {
 	--cyan-background-primary: rgba(40,40,40,.4);
 	--cyan-background-secondary: var(--background-floating);
