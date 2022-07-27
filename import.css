@@ -59,7 +59,7 @@ html, body {
 .container-2nx-BQ.checked-25WXMf {
   background-color: var(--brand-experiment) !important;
 }
-.container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12px;"] {
+html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12px;"] {
   left: 12px !important;
 }
 .slider-32CRPX > svg {
