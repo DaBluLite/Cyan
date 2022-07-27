@@ -837,13 +837,6 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
   padding-left: 15px;
   padding-top: 5px;
 }
-.videoControls-2NzHnF div {
-  margin: 0 3px;
-}
-.videoButton-3NM9Tc,
-.horizontal-2HFjqv {
-  margin-left: 6px !important;
-}
 .textContainer-36wgKK {
   border-radius: 25px 25px 0 0;
   background-color: var(--cyan-background-secondary);
@@ -874,17 +867,6 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
 .textContainer-36wgKK {
   border-bottom: none;
   background-color: var(--cyan-background-secondary);
-}
-.videoButton-3NM9Tc {
-  margin-right: 8px !important;
-}
-.volumeButtonSlider-2OrZ9e,
-.vertical-3GO7H5,
-.mediaBarInteractionVolume-zGrOSh,
-.mediaBarInteractionVolume-zGrOSh *,
-.mediaBarInteraction-tUE5dq,
-.mediaBarInteraction-tUE5dq * {
-  margin: 0 !important;
 }
 .scroller-hE2gWq {
   border: none !important;
