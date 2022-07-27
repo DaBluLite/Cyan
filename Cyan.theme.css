@@ -3,28 +3,16 @@
  * @description Sleek and clean, with custom background support
  * @author DaBluLite#7409
  * @authorId 582170007505731594
- * @version 3.0.0
+ * @version 3.1.0
  * @updateUrl https://dablulite.github.io/Cyan/Cyan.theme.css
  * @source https://github.com/DaBluLite/Cyan
  */
  
 @import url(https://dablulite.github.io/Cyan/import.css);
-
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
-
-/* Addons by Lavender-Discord/Obscure-Git*/
 @import url("https://lavender-discord.github.io/Lavender/modules/addons/colored-svgs.css");
-/* Colors all the page svgs of discord */
-
 @import url("https://lavender-discord.github.io/Lavender/modules/addons/context-icons.css");
-/* Adds Context Icons with Iconsax Icons */
-
-@import url("https://lavender-discord.github.io/Lavender/modules/addons/iconpack.css");
-/* Changes all discord default icons to iconsax icons */
-
 @import url("https://lavender-discord.github.io/Lavender/modules/addons/mention-links.css");
-/* Turns some common links to buttons/mentions, kind of helps you figure out phishing sites  */
-
 @import url("https://lavender-discord.github.io/Lavender/modules/addons/settings-icons.css");
 .theme-dark {
 	--cyan-background-primary: rgba(40,40,40,.4);
