@@ -1,3 +1,7 @@
+<div align='center'>
+<img src="https://github.com/DaBluLite/Cyan/blob/master/cyan-addon-banner.png?raw=true"/>
+</div>
+
 # Cyan
 Sleek and clean BetterDiscord theme, with custom background support
 
