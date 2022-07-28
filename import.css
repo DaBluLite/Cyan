@@ -349,12 +349,29 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
 .root-g14mjS.small-23Atuv.fullscreenOnMobile-ixj0e3 > .flex-2S1XBF.flex-3BkGQD.horizontalReverse-60Katr.horizontalReverse-2QssvL.flex-3BkGQD.directionRowReverse-HZatnx.justifyStart-2Mwniq.alignStretch-Uwowzr.noWrap-hBpHBz.footer-31IekZ.footerSeparator-VzAYwb {
   background-color: var(--cyan-background-floating);
   border-radius: 20px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 .header-145e10 {
   background-color: var(--cyan-background-floating);
 }
 .messageContainer-3VTXBC {
   background-color: var(--cyan-background-primary);
+}
+.paymentModalContent {
+  background-color: var(--cyan-background-floating);
+}
+.flex-2S1XBF.flex-3BkGQD.horizontalReverse-60Katr.horizontalReverse-2QssvL.flex-3BkGQD.directionRowReverse-HZatnx.justifyBetween-wAERV6.alignCenter-14kD11.noWrap-hBpHBz.footer-31IekZ.footerSeparator-VzAYwb {
+  background-color: var(--cyan-background-floating);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.modalHeader-gQTY3L {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.modalHeader-gQTY3L > div > .headerAnimation-3DVb6i {
+  background-color: var(--cyan-background-floating);
 }
 .scroller-145h9c {
   background-color: var(--cyan-background-floating);
