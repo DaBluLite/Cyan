@@ -50,6 +50,19 @@
 .folder-241Joy {
   background-color: transparent !important;
 }
+.tabBarItem-30Te4-:first-child:nth-last-child(3), .tabBarItem-30Te4-:first-child:nth-last-child(3) ~ div {
+  width: 33.3333%;
+}
+.tabBarItem-30Te4-:first-child:nth-last-child(2), .tabBarItem-30Te4-:first-child:nth-last-child(2) ~ div {
+  width: 50%;
+}
+.tabBarItem-30Te4- {
+  margin: 0;
+  display: inline-block;
+  text-align: center;
+  height: 30px;
+  margin-top: auto;
+}
 .item-1OdjEX {
   margin: 5px;
   border-radius: 8px;
