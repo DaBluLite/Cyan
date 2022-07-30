@@ -56,6 +56,24 @@
 .tabBarItem-30Te4-:first-child:nth-last-child(2), .tabBarItem-30Te4-:first-child:nth-last-child(2) ~ div {
   width: 50%;
 }
+.quickswitcher-pKcM9U > .input-3r5zZY {
+  height: 50px;
+  background-color: var(--cyan-background-primary);
+  border-radius: 10px;
+}
+.quickswitcher-pKcM9U > .scroller-2qwVWY {
+  background-color: var(--cyan-background-secondary);
+}
+.quickswitcher-pKcM9U > .scroller-2qwVWY > div > .result-u66Ywh {
+  border-radius: 10px;
+}
+.quickswitcher-pKcM9U > .scroller-2qwVWY > div > .result-u66Ywh[aria-selected="true"] {
+  background-color: var(--cyan-background-primary);
+}
+.quickswitcher-pKcM9U {
+  border-radius: 10px;
+  background-color: var(--cyan-background-secondary);
+}
 .perksModalContentWrapper-3RHugb {
   background-color: var(--cyan-background-secondary);
 }
