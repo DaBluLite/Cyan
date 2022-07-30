@@ -56,6 +56,12 @@
 .tabBarItem-30Te4-:first-child:nth-last-child(2), .tabBarItem-30Te4-:first-child:nth-last-child(2) ~ div {
   width: 50%;
 }
+.grabber-2GQyvM {
+  width: 20px;
+  transform: translate(-5px, 3px);
+  height: 20px;
+  border-radius: 50%;
+}
 .tabBarItem-30Te4- {
   margin: 0;
   display: inline-block;
@@ -66,6 +72,20 @@
 .item-1OdjEX {
   margin: 5px;
   border-radius: 8px;
+}
+.preview-QJ3OG3, .radioBar-3w9XY-, .item-2idW98 {
+  border-radius: 8px;
+}
+.radioBar-3w9XY- > div > svg > .radioIconForeground-2BMavi {
+  cx: 6;
+  cy: 6;
+  transform: scale(2);
+  fill: var(--cyan-accent-color);
+}
+.radioBar-3w9XY- > div > svg > path {
+  d: path("m 32 2 c -16.568 0 -30 13.432 -30 30 s 13.432 30 30 30 s 30 -13.432 30 -30 s -13.432 -30 -30 -30");
+  transform: scale(0.35);
+  fill: #515151;
 }
 .expandedFolderBackground-1kSAf6 {
   background-color: var(--cyan-background-primary);
