@@ -56,6 +56,9 @@
 .tabBarItem-30Te4-:first-child:nth-last-child(2), .tabBarItem-30Te4-:first-child:nth-last-child(2) ~ div {
   width: 50%;
 }
+.wrapper-3HVHpV, .wrapper-3HVHpV > div {
+  background-color: transparent;
+}
 .grabber-2GQyvM {
   width: 20px;
   transform: translate(-5px, 3px);
