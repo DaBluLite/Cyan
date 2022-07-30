@@ -56,6 +56,27 @@
 .tabBarItem-30Te4-:first-child:nth-last-child(2), .tabBarItem-30Te4-:first-child:nth-last-child(2) ~ div {
   width: 50%;
 }
+.perksModalContentWrapper-3RHugb {
+  background-color: var(--cyan-background-secondary);
+}
+.shine-ZNDEKg {
+  background-color: var(--cyan-accent-color);
+  opacity: .3;
+}
+.ctaBar-Nhk8yY {
+  border-radius: 10px;
+}
+.tier-lFqDUs {
+  border-radius: 10px;
+}
+.tier-lFqDUs > .tierHeader-wgo0w_ {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.tier-lFqDUs > .tierBody-3ju-rc {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
 .wrapper-3HVHpV, .wrapper-3HVHpV > div {
   background-color: transparent;
 }
