@@ -47,6 +47,13 @@
   color: white !important;
   opacity: .5;
 }
+.hero-1aNo0v {
+  margin: 0 !important;
+  width: 100% !important;
+  max-width: unset !important;
+  background-image: var(--cyan-background-img) !important;
+  border-radius: 10px !important;
+}
 .folder-241Joy {
   background-color: transparent !important;
 }
