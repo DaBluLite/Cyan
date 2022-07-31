@@ -49,6 +49,15 @@
   border-radius: 10px;
   border: 1px solid var(--cyan-accent-color);
 }
+.appDevToolsWrapper-1QxdQf {
+  background-color: transparent;
+}
+.notDevTools-1zkgfK {
+  background-color: transparent;
+}
+.app-3xd6d0 {
+  background-color: transparent;
+}
 .mention {
   background: var(--brand-experiment) !important;
   color: white !important;
@@ -834,7 +843,7 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
 .bg-1QIAus,
 .wrapper-1_HaEi,
 #app-mount {
-  background-color: var(--cyan-background-secondary);
+  background-color: transparent;
 }
 .scroller-3X7KbA {
   background-color: transparent;
