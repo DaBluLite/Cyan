@@ -184,6 +184,7 @@
 }
 html, body {
   font-family: var(--cyan-font) !important;
+  background-color: transparent;
 }
 .header-JUTO-g, .titleContainer-3fPic2 {
   background-color: transparent !important;
