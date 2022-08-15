@@ -151,7 +151,7 @@
   margin-top: auto;
 }
 .item-1OdjEX {
-  margin: 5px;
+  margin: 0;
   border-radius: 8px;
 }
 .preview-QJ3OG3, .radioBar-3w9XY-, .item-2idW98 {
@@ -390,7 +390,7 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
 }
 #status-picker-online, #status-picker-idle, #status-picker-dnd, #status-picker-invisible, #status-picker-custom-status, #account-status-picker--idle, #account-status-picker--online, #account-status-picker--dnd, #account-status-picker--invisible {
   padding: 2px;
-  margin: 5px;
+  margin: 0;
   border-radius: 8px;
 }
 .profileGroup-1yKk23 > #account-avatar {
@@ -627,7 +627,7 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
 }
 .item-1OdjEX.labelContainer-2vJzYL {
   padding: 10px;
-  margin: 5px;
+  margin: 0;
   border-radius: 8px;
 }
 .statusItem-38ArJn {
@@ -674,7 +674,7 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
   background-color: transparent;
 }
 .scroller-1bVxF5 {
-  padding: 0 !important;
+  padding: 5px !important;
   margin: 0;
 }
 .text-2bYgPB {
