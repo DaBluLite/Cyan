@@ -515,7 +515,7 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
   color: var(--background-primary) !important;
 }
 .container-1Lk8p7 > div > div > .content-2hZxGK, .container-1Lk8p7 > div > div > .content-2hZxGK > button {
-  background-color: var(--cyan-background-floating);
+  background-color: transparent;
 }
 .container-1Lk8p7 > div, .container-1Lk8p7 > div > div > .flex-2S1XBF {
   background-color: transparent;
