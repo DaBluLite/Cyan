@@ -651,8 +651,12 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
     z-index: 4;
 }
 .footer-31IekZ {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+  border-radius: 0 0 20px 20px;
+  background-color: transparent;
+  border: none !important;
+}
+.footer-31IekZ .lookFilled-yCfaCM {
+  color: white;
 }
 .toolbar-37BrJ5 {
   background-color: var(--cyan-background-elevated);
