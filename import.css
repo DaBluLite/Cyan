@@ -45,6 +45,18 @@
 .heroButtons-357iJy > .button-1U79Hu:hover {
   color: white;
 }
+.authorize-2xTTr- > .thin-31rlnD::-webkit-scrollbar {
+  width: 0;
+}
+.authorize-2xTTr-, .authorize-2xTTr- > .thin-31rlnD {
+  border-radius: 16px;
+}
+.authorize-2xTTr- > .thin-31rlnD > .scrollContent-_1I-44 {
+  padding: 0 16px 0 16px !important;
+}
+.authorize-2xTTr- > .thin-31rlnD > .footer-3Gu_Tl {
+  background-color: var(--cyan-background-floating);
+}
 .heroButtons-357iJy > .button-1U79Hu {
   border-radius: 10px;
   border: 1px solid var(--cyan-accent-color);
