@@ -286,12 +286,17 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
   border-radius: 8px;
 }
 .notice-2HEN-u {
-  width: calc(100% - 322px);
+  width: fit-content;
   position: absolute;
-  right: 20px;
-  top: 20px;
-  border-radius: 8px;
+  left: 50%;
+  top: 23px;
+  border-radius: 8px !important;
   box-shadow: var(--cyan-elevation-shadow);
+  transform: translateX(-50%);
+  padding: 3px 50px 3px 15px;
+}
+.notice-2HEN-u > .closeButton-30b1gR {
+  margin-top: 3px;
 }
 .divider-IqmEqJ {
   border-width: 2px !important;
@@ -355,9 +360,6 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
   -webkit-box-pack: end !important;
   -ms-flex-pack: end !important;
   justify-content: flex-end !important;
-}
-.platform-win .closeButton-30b1gR {
-  margin-right: 0 !important;
 }
 .container-ZMc96U {
   width: calc(100% - 20px) !important;
