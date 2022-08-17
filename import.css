@@ -70,6 +70,21 @@
 .app-3xd6d0 {
   background-color: transparent;
 }
+.paymentPane-ut5qKZ > .verticalFit-21XL0v, .paymentPane-ut5qKZ > .verticalFit-21XL0v > .bottomDivider-ZmTm-j > .paymentRow-1HKOLu {
+  background-color: var(--cyan-background-secondary) !important;
+  border: none !important;
+}
+.codeRedemptionRedirect-2hYMSQ {
+  background-color: var(--cyan-background-secondary) !important;
+  border-radius: 16px;
+}
+aside.sidebarScrollable-2mW9Ls > div {
+  background-color: transparent;
+}
+.colorPickerCustom-1swUKF {
+  background-color: var(--cyan-background-secondary) !important;
+  border-radius: 16px !important;
+}
 #app-mount .profileBadges-2pItdR:empty {
   background-color: transparent;
   box-shadow: none;
