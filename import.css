@@ -58,6 +58,10 @@
 .app-3xd6d0 {
   background-color: transparent;
 }
+#app-mount .profileBadges-2pItdR:empty {
+  background-color: transparent;
+  box-shadow: none;
+}
 .mention {
   background: var(--brand-experiment) !important;
   color: white !important;
@@ -94,6 +98,9 @@
 }
 .tabBarItem-30Te4-:first-child:nth-last-child(3), .tabBarItem-30Te4-:first-child:nth-last-child(3) ~ div {
   width: 33.3333%;
+}
+.tabBarItem-30Te4-:first-child:nth-last-child(4), .tabBarItem-30Te4-:first-child:nth-last-child(4) ~ div {
+  width: 25%;
 }
 .keyboardShortcutsModal-2CRmCm {
   background-color: var(--cyan-background-secondary) !important;
@@ -468,6 +475,7 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
 .root-g14mjS.small-23Atuv.fullscreenOnMobile-ixj0e3 {
   background-color: var(--cyan-background-primary);
   border-radius: 20px;
+  backdrop-filter: blur(6px);
 }
 .root-g14mjS.small-23Atuv.fullscreenOnMobile-ixj0e3 > .flex-2S1XBF.flex-3BkGQD.horizontalReverse-60Katr.horizontalReverse-2QssvL.flex-3BkGQD.directionRowReverse-HZatnx.justifyStart-2Mwniq.alignStretch-Uwowzr.noWrap-hBpHBz.footer-31IekZ.footerSeparator-VzAYwb {
   background-color: transparent;
