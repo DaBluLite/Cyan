@@ -48,6 +48,11 @@
 .authorize-2xTTr- > .thin-31rlnD::-webkit-scrollbar {
   width: 0;
 }
+.inlineMediaEmbed-1m3ApS {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border-radius: 4px !important;
+}
 .authorize-2xTTr-, .authorize-2xTTr- > .thin-31rlnD {
   border-radius: 16px;
 }
