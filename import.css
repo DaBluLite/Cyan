@@ -1024,6 +1024,7 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
   border-radius: 7px;
   border-width: 7px;
   box-shadow: var(--cyan-elevation-shadow);
+  width: fit-content !important;
 }
 .altText-sAs-Ao {
   padding-left: 15px;
