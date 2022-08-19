@@ -5,6 +5,9 @@
 # Cyan
 Sleek and clean BetterDiscord theme, with custom background support
 
+[Get it on BetterDiscord](https://betterdiscord.app/theme/Cyan) </br>
+Also available through ThemeRepo
+
 Cyan is a sleek theme that aims to be clean, customizable and nice to the eyes.
 
 # Special thanks to:
