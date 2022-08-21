@@ -291,17 +291,7 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
   border-radius: 8px;
 }
 .notice-2HEN-u {
-  width: fit-content;
-  position: absolute;
-  left: 50%;
-  top: 23px;
-  border-radius: 8px !important;
-  box-shadow: var(--cyan-elevation-shadow);
-  transform: translateX(-50%);
-  padding: 3px 50px 3px 15px;
-}
-.notice-2HEN-u > .closeButton-30b1gR {
-  margin-top: 3px;
+  margin-top: 34px !important;
 }
 .divider-IqmEqJ {
   border-width: 2px !important;
