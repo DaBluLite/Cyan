@@ -51,6 +51,14 @@
 .authorize-2xTTr- > .thin-31rlnD::-webkit-scrollbar {
   width: 0;
 }
+.header-1RJoTb {
+  border-radius: 8px;
+  width: calc(100% - 50px);
+  box-shadow: var(--cyan-elevation-shadow);
+  margin-left: 10px;
+  top: 10px;
+  background-color: var(--cyan-background-elevated);
+}
 .chatHeaderBar-qygUNT {
   border-radius: 8px;
   width: calc(100% - 60px);
