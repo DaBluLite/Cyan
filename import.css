@@ -51,6 +51,14 @@
 .authorize-2xTTr- > .thin-31rlnD::-webkit-scrollbar {
   width: 0;
 }
+.chatHeaderBar-qygUNT {
+  border-radius: 8px;
+  width: calc(100% - 60px);
+  box-shadow: var(--cyan-elevation-shadow);
+  margin-left: 10px;
+  margin-top: 10px;
+  background-color: var(--cyan-background-elevated);
+}
 .contentRegion-3HkfJJ {
   background-color: var(--cyan-background-secondary);
 }
