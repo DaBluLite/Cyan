@@ -51,6 +51,9 @@
 .authorize-2xTTr- > .thin-31rlnD::-webkit-scrollbar {
   width: 0;
 }
+.contentRegion-3HkfJJ {
+  background-color: var(--cyan-background-secondary);
+}
 .root-g14mjS.small-23Atuv.fullscreenOnMobile-ixj0e3 .inputDefault-3FGxgL, .root-g14mjS.small-23Atuv.fullscreenOnMobile-ixj0e3 .input-m1-Y7Q {
   background: var(--header-primary) !important;
   border-radius: 16px !important;
