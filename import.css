@@ -618,21 +618,12 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
 .jumpToPresentBar-1cEnH0 .barButtonAlt-TQoCdZ {
   font-size: 0;
 }
-.platform-osx .closeButton-30b1gR {
-  margin-right: 0 !important;
-}
-.platform-win .closeButton-30b1gR {
-  width: calc(100% - 150px);
-}
 .chat-2ZfjoI {
   background-color: var(--cyan-background-primary);
   margin: calc(var(--window-margin) * 1px);
   border-radius: var(--window-border-radius-calc);
   box-shadow: var(--cyan-elevation-shadow);
   backdrop-filter: blur(6px);
-}
-.platform-osx .closeButton-30b1gR {
-  margin-right: 0 !important;
 }
 .newMessagesBar-1hF-9G > .barButtonAlt-TQoCdZ {
   font-size: 0 !important;
