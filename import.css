@@ -48,6 +48,12 @@
 .heroButtons-357iJy > .button-1U79Hu:hover {
   color: white;
 }
+.bd-notice {
+  border-radius: 0 !important;
+}
+#bd-notices {
+  margin-top: 32px;
+}
 .authorize-2xTTr- > .thin-31rlnD::-webkit-scrollbar {
   width: 0;
 }
