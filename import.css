@@ -78,6 +78,15 @@
   background: var(--header-primary) !important;
   border-radius: 16px !important;
 }
+#discordRadioBtn {
+  background-color: var(--cyan-background-secondary) !important;
+  box-shadow: 0 0 0 1.5px var(--cyan-background-primary), 0 2px 10px 0 rgb(0 0 0 / 20%);
+}
+#discordRadioBtn:hover {
+  border-radius: 50% !important;
+  background-color: var(--cyan-background-secondary) !important;
+  box-shadow: 0 0 0 1.5px var(--cyan-accent-color), 0 2px 10px 0 rgb(0 0 0 / 20%);
+}
 .inlineMediaEmbed-1m3ApS {
   background-color: transparent !important;
   box-shadow: none !important;
