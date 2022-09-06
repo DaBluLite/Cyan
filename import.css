@@ -26,6 +26,7 @@
     --brand-experiment-830: var(--cyan-accent-color);
     --brand-experiment-860: var(--cyan-accent-color);
     --brand-experiment-900: var(--cyan-accent-color);
+	--cyan-blur-radius: 6px;
 }
 .theme-amoled {
   --background-lightness: -10 !important;
@@ -304,7 +305,7 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
   background: var(--cyan-background-primary) !important;
   border-radius: 8px;
   box-shadow: var(--cyan-elevation-shadow);
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(var(--cyan-blur-radius));
 }
 .container-3wLKDe {
   background-color: transparent !important;
@@ -538,7 +539,7 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
 .root-g14mjS.small-23Atuv.fullscreenOnMobile-ixj0e3 {
   background-color: var(--cyan-background-primary);
   border-radius: 20px;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(var(--cyan-blur-radius));
 }
 .root-g14mjS.small-23Atuv.fullscreenOnMobile-ixj0e3 > .flex-2S1XBF.flex-3BkGQD.horizontalReverse-60Katr.horizontalReverse-2QssvL.flex-3BkGQD.directionRowReverse-HZatnx.justifyStart-2Mwniq.alignStretch-Uwowzr.noWrap-hBpHBz.footer-31IekZ.footerSeparator-VzAYwb {
   background-color: transparent;
@@ -632,7 +633,7 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
   margin: calc(var(--window-margin) * 1px);
   border-radius: var(--window-border-radius-calc);
   box-shadow: var(--cyan-elevation-shadow);
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(var(--cyan-blur-radius));
 }
 .newMessagesBar-1hF-9G > .barButtonAlt-TQoCdZ {
   font-size: 0 !important;
@@ -778,7 +779,7 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
 }
 .userPopout-2j1gM4 {
   background-color: var(--cyan-background-primary);
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(var(--cyan-blur-radius));
 }
 .footer-3naVBw {
   background-color: transparent;
@@ -806,7 +807,7 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
   width: 100%;
   position: absolute;
   background-color: transparent;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(var(--cyan-blur-radius));
   border-radius: 8px;
 }
 .theme-dark .menu-1QACrS {
@@ -865,7 +866,7 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
   box-shadow: var(--cyan-elevation-shadow);
   margin-left: 0;
   border-radius: 0 12px 12px 0 !important;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(var(--cyan-blur-radius));
 }
 .platform-win .sidebar-1tnWFu, .platform-osx .sidebar-1tnWFu {
   margin-top: 32px;
@@ -961,7 +962,7 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
 }
 .scroller-3X7KbA {
   background-color: transparent;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(var(--cyan-blur-radius));
 }
 .header-3OsQeK:hover,
 .header-3OsQeK:active {
