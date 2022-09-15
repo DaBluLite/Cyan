@@ -1146,8 +1146,25 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
 .autocompleteRow-14iwvH div {
   border-radius: 10px;
 }
-.autocompleteRow-14iwvH div:hover {
+.clickable-2V8YKY[aria-disabled=false]>.base-2v-uc0:hover, .clickable-2V8YKY[aria-selected=true]>.base-2v-uc0 {
   background-color: var(--cyan-background-primary) !important;
+}
+.reactionSelected-1aMb2K {
+  border-radius: 8px;
+  box-shadow: var(--cyan-elevation-shadow);
+  margin-right: 5px;
+  background-color: var(--cyan-background-secondary) !important;
+}
+.optionals-2w-NPQ, .optionals-2w-NPQ * {
+  background-color: var(--cyan-background-secondary) !important;
+  border: none !important;
+  padding-right: 7px;
+}
+.scroller-2GkvCq {
+  background-color: var(--cyan-background-secondary) !important;
+}
+.reactors-1VXca7 {
+  background-color: var(--cyan-background-secondary) !important;
 }
 .autocompleteRow-14iwvH div:active,
 .autocompleteRow-14iwvH div:focus {
