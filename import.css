@@ -167,8 +167,19 @@
   background-color: var(--cyan-background-secondary);
 }
 .root-g14mjS.small-23Atuv.fullscreenOnMobile-ixj0e3 .inputDefault-3FGxgL, .root-g14mjS.small-23Atuv.fullscreenOnMobile-ixj0e3 .input-m1-Y7Q {
-  background: var(--header-primary) !important;
-  border-radius: 16px !important;
+  background: transparent !important;
+  border-radius: 8px !important;
+  border: 1px solid var(--background-modifier-accent);
+  padding: 7px !important;
+  width: calc(100% - 20px);
+  margin-left: 10px;
+}
+.body-1Ukv50 {
+  background-color: var(--background-secondary);
+  margin: 15px;
+  width: calc(100% - 30px);
+  border-radius: 8px;
+  border: none;
 }
 #discordRadioBtn {
   background-color: var(--cyan-background-secondary) !important;
@@ -183,6 +194,12 @@
   background-color: transparent !important;
   box-shadow: none !important;
   border-radius: 4px !important;
+}
+.connectedAccountsColumn-2LgTkZ {
+  width: calc((100%/2) - 20px);
+}
+.connectedAccountContainer-SlCC-S {
+  width: 100%;
 }
 .authorize-2xTTr-, .authorize-2xTTr- > .thin-31rlnD {
   border-radius: 16px;
@@ -634,9 +651,8 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
   border-radius: 20px;
 }
 .root-g14mjS.small-23Atuv.fullscreenOnMobile-ixj0e3 {
-  background-color: var(--cyan-background-primary);
+  background-color: var(--cyan-background-secondary);
   border-radius: 20px;
-  backdrop-filter: blur(var(--cyan-blur-radius));
 }
 .root-g14mjS.small-23Atuv.fullscreenOnMobile-ixj0e3 > .flex-2S1XBF.flex-3BkGQD.horizontalReverse-60Katr.horizontalReverse-2QssvL.flex-3BkGQD.directionRowReverse-HZatnx.justifyStart-2Mwniq.alignStretch-Uwowzr.noWrap-hBpHBz.footer-31IekZ.footerSeparator-VzAYwb {
   background-color: transparent;
