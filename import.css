@@ -57,6 +57,20 @@
 .userPopoutInnerWithoutTheme-23vLID {
   background-color: var(--background-secondary-alt) !important;
 }
+.avatar-2OC07D::before {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background-color: var(--profile-body-background-color);
+  display: inline-block;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+}
+.avatar-2OC07D.wrapper-1VLyxH {
+  border-color: var(--profile-body-background-color);
+}
 .banner-2boKnS {
   margin: 10px;
   width: calc(100% - 20px);
