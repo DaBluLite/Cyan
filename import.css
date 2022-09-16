@@ -144,9 +144,10 @@
   margin-right: 10px;
   margin-top: 0 !important;
   position: relative;
+  overflow-y: scroll;
 }
-.field-21XZwa:nth-child(2), .field-21XZwa:nth-child(3) {
-  top: 6px !important;
+.field-21XZwa::-webkit-scrollbar {
+  width: 0;
 }
 .contentRegion-3HkfJJ {
   background-color: var(--cyan-background-secondary);
