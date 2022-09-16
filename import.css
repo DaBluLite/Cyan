@@ -51,12 +51,19 @@
 .userPopoutInnerWithoutTheme-23vLID {
   background-color: var(--background-secondary-alt) !important;
 }
-.banner-2boKnS.popoutBanner-16rVDY {
+.banner-2boKnS {
   margin: 10px;
   width: calc(100% - 20px);
   border-radius: 8px;
   box-shadow: var(--cyan-elevation-shadow);
 }
+.userPopoutInner-PA9zkU {
+  border-radius: 8px !important;
+}
+.overlayBackground-arbZMT {
+  border-radius: 8px;
+}
+
 .embedFull-1HGV2S:not(#a)::after,
 .embedFull-1HGV2S:not(#a)::before{
   content: none;
