@@ -63,6 +63,9 @@
   border-radius: 8px;
   box-shadow: var(--cyan-elevation-shadow);
 }
+.theme-dark .theme-light {
+  --cyan-background-secondary: #0E0F11;
+}
 .userPopoutInner-PA9zkU {
   border-radius: 8px !important;
 }
