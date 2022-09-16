@@ -63,7 +63,15 @@
 .overlayBackground-arbZMT {
   border-radius: 8px;
 }
-
+.clickable-1knRMS {
+  margin: 0;
+}
+.container-1gYwHN {
+  border-radius: 8px;
+  background-color: var(--background-primary);
+  padding: 5px;
+  width: fit-content;
+}
 .embedFull-1HGV2S:not(#a)::after,
 .embedFull-1HGV2S:not(#a)::before{
   content: none;
