@@ -5,10 +5,13 @@
 # Cyan
 Sleek and clean BetterDiscord theme, with custom background support
 
-[Get it on BetterDiscord](https://betterdiscord.app/theme/Cyan) </br>
-Also available through ThemeRepo
+[Get it on BetterDiscord](https://betterdiscord.app/theme/Cyan)
+
+Also available through the ThemeRepo plugin by DevilBro
 
 Cyan is a sleek theme that aims to be clean, customizable and nice to the eyes.
+
+[Addon themes for Cyan are available here](https://github.com/DaBluLite/Cyan/tree/master/Addons)
 
 # Special thanks to:
 * [@ObjectiveSlayer](https://github.com/ObjectiveSlayer)/carrot#8812
@@ -18,8 +21,8 @@ Cyan is a sleek theme that aims to be clean, customizable and nice to the eyes.
 
 # Screenshots
 <div align='center'>
-<img src="https://github.com/DaBluLite/Cyan/blob/master/screenshots/Screenshot%20(240).png?raw=true"/>
+<img src="https://github.com/DaBluLite/Cyan/blob/master/screenshots/Screenshot from 2022-09-17 12-03-41.png?raw=true"/>
 </div>
 <div align='center'>
-<img src="https://github.com/DaBluLite/Cyan/blob/master/screenshots/Screenshot%20(239).png?raw=true"/>
+<img src="https://github.com/DaBluLite/Cyan/blob/master/screenshots/Screenshot from 2022-09-17 12-03-58.png?raw=true"/>
 </div>
