@@ -1003,15 +1003,15 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
 }
 .sidebar-1tnWFu {
   position: relative;
-  margin: 10px;
-  background-color: var(--cyan-background-primary);
-  box-shadow: var(--cyan-elevation-shadow);
-  margin-left: 0;
-  border-radius: 0 12px 12px 0 !important;
-  backdrop-filter: blur(var(--cyan-blur-radius));
+  margin: calc(var(--window-margin) * 1px);
+  background-color: var( --cyan-background-primary);
+  box-shadow: var( --cyan-elevation-shadow);
+  border-radius: 0 var(--window-border-radius-calc) var(--window-border-radius-calc) 0 !important;
+  backdrop-filter: blur(var( --cyan-blur-radius));
+  margin-left: 0 !important;
 }
 .platform-win .sidebar-1tnWFu, .platform-osx .sidebar-1tnWFu {
-  margin-top: 32px;
+  margin-top: 32px !important;
 }
 .animatedContainer-2laTjx {
   z-index: 2;
