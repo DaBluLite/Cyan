@@ -54,6 +54,9 @@
 .heroButtons-357iJy > .button-1U79Hu:hover {
   color: white;
 }
+.tree-3agP2X {
+  padding-left: calc(5px - (var(--window-margin) * 1px));
+}
 .userPopoutInnerWithoutTheme-23vLID {
   background-color: var(--background-secondary-alt) !important;
 }
