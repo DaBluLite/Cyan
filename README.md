@@ -21,8 +21,8 @@ Cyan is a sleek theme that aims to be clean, customizable and nice to the eyes.
 
 # Screenshots
 <div align='center'>
-<img src="https://github.com/DaBluLite/Cyan/blob/master/screenshots/Screenshot from 2022-09-17 12-03-41.png?raw=true"/>
+<img src="https://github.com/DaBluLite/Cyan/blob/master/screenshots/cyan-screenshot-1.png?raw=true"/>
 </div>
 <div align='center'>
-<img src="https://github.com/DaBluLite/Cyan/blob/master/screenshots/Screenshot from 2022-09-17 12-03-58.png?raw=true"/>
+<img src="https://github.com/DaBluLite/Cyan/blob/master/screenshots/cyan-screenshot-2.png?raw=true"/>
 </div>
