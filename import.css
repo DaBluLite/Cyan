@@ -174,11 +174,11 @@
 .fieldList-in8WkP {
   background-color: transparent;
 }
-.field-21XZwa:first-child {
-  margin-left: 10px;
+.field-21XZwa:last-child {
+  margin-right: 0 !important;
 }
 .field-21XZwa {
-  width: calc((100%/3) - 16px);
+  width: calc((100%/3) - ((20/3) * 1px));
   border-radius: 8px;
   background-color: var(--background-primary);
   height: 108px;
@@ -190,9 +190,32 @@
   margin-top: 0 !important;
   position: relative;
   overflow-y: scroll;
+  height: 125px;
 }
 .field-21XZwa::-webkit-scrollbar {
   width: 0;
+}
+.field-21XZwa .fieldButton-14lHvK {
+  background-color: var(--background-secondary) !important;
+  border-radius: 8px;
+  transition: .3s;
+}
+.field-21XZwa .fieldButton-14lHvK:hover {
+  background-color: var(--background-secondary-alt) !important;
+}
+.field-21XZwa .fieldButton-14lHvK:hover > div {
+  background-image: none !important;
+}
+.field-21XZwa .fieldButton-14lHvK:nth-child(1) {
+  right: 5px;
+}
+.field-21XZwa .fieldButton-14lHvK {
+  bottom: 10px;
+  position: absolute;
+}
+.avatar-3mTjvZ ~ button {
+  margin-right: 15px;
+  border-radius: 8px;
 }
 .contentRegion-3HkfJJ {
   background-color: var(--cyan-background-secondary);
