@@ -558,10 +558,6 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
   width: 20px !important;
   height: 20px !important;
 }
-.platform-win .guilds-2JjMmN, .platform-osx .guilds-2JjMmN {
-  height: calc(100% - 42px) !important;
-  margin-top: 32px !important;
-}
 .typeWindows-2-g3UY {
   -webkit-box-pack: end !important;
   -ms-flex-pack: end !important;
@@ -1261,7 +1257,7 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
 }
 .platform-win .guilds-2JjMmN, .platform-osx .guilds-2JjMmN {
   margin-top: 32px !important;
-  height: calc((100% - ((var(--window-margin) * 1px)) * 2) - 32px) !important;
+  height: calc((100% - ((var(--window-margin) * 1px)) * 2) - 22px) !important;
 }
 .base-2jDfDU {
   margin-left: 82px;
