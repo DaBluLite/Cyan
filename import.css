@@ -57,6 +57,9 @@
 .userPopoutInnerWithoutTheme-23vLID {
   background-color: var(--background-secondary-alt) !important;
 }
+.guilds-2JjMmN.hidden-10MsGQ ~ .base-2jDfDU {
+  margin-left: 0 !important;
+}
 .nav-1zWVQw {
   position: absolute;
   bottom: 10px;
