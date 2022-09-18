@@ -1116,6 +1116,8 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
 }
 .form-3gdLxP {
   background-color: transparent !important;
+  padding: 0 calc(var( --window-margin) * 1px) 0 calc(var( --window-margin) * 1px) !important;
+  width: calc(100% - ((var(--window-margin) * 1px) * 2)) !important;
 }
 .searchBar-3TnChZ .searchBarComponent-3N7dCG,
 .header-3OsQeK,
@@ -1204,18 +1206,19 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
 }
 .guilds-2JjMmN {
   position: absolute;
-  margin: 10px;
+  margin: calc(var(--window-margin) * 1px);
   z-index: 2;
-  border-radius: 12px 0 0 12px;
+  border-radius: var(--window-border-radius-calc) 0 0 var(--window-border-radius-calc);
   transition: .3s;
   background-color: var(--cyan-background-primary);
   box-shadow: var(--cyan-elevation-shadow);
-  height: calc(100% - 20px) !important;
+  height: calc(100% - ((var(--window-margin) * 1px)) * 2) !important;
   margin-right: 0 !important;
+  width: calc(82px - (var(--window-margin) * 1px));
 }
 .platform-win .guilds-2JjMmN, .platform-osx .guilds-2JjMmN {
   margin-top: 32px !important;
-  height: calc(100% - 42px) !important;
+  height: calc((100% - ((var(--window-margin) * 1px)) * 2) - 32px) !important;
 }
 .base-2jDfDU {
   margin-left: 82px;
@@ -1366,9 +1369,10 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
   box-shadow: none;
 }
 .channelTextArea-1VQBuV {
-  border-radius: 10px;
+  border-radius: var(--window-border-radius-calc);
   background-color: var(--cyan-background-secondary);
   box-shadow: var(--cyan-elevation-shadow);
+  margin-bottom: calc(var( --window-margin) * 1px);
 }
 .containerDefault-3TQ5YN {
   border-bottom: 1px solid var(--cyan-background-tertiary);
