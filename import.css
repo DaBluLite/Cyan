@@ -491,12 +491,13 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
 }
 .wrapper-1gVUIN {
   background-color: transparent;
-  margin: 10px;
-  border-radius: 8px;
-  box-shadow: var(--cyan-elevation-shadow);
+  margin: calc(var(--window-margin) * 1px);
+  border-radius: var(--window-border-radius-calc);
+  box-shadow: var( --cyan-elevation-shadow);
+  margin-bottom: 0 !important;
 }
 .wrapper-1gVUIN > .callContainer-HtHELf {
-  border-radius: 8px;
+  border-radius: var(--window-border-radius-calc);
 }
 .notice-2HEN-u {
   margin-top: 34px !important;
