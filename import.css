@@ -54,6 +54,31 @@
 .tree-3agP2X {
   padding-left: calc(5px - (var(--window-margin) * 1px));
 }
+.bettersyntax-buttons {
+  height: 27.5px;
+  box-shadow: var(--cyan-elevation-shadow);
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.code-button:last-child {
+  border-radius: 0 8px 8px 0;
+}
+.code-button:first-child {
+  border-radius: 8px 0 0 8px;
+}
+.code-button {
+  border-radius: 0;
+  margin: 0 !important;
+  padding: 5px;
+  background-color: var(--cyan-background-secondary);
+}
+.code-button > svg > * {
+  fill: var(--header-primary);
+}
+.bettersyntax-pre > code {
+  border-radius: 16px !important;
+  box-shadow: var(--cyan-elevation-shadow);
+}
 .userPopoutInnerWithoutTheme-23vLID {
   background-color: var(--background-secondary-alt) !important;
 }
@@ -580,8 +605,8 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
   box-shadow: var(--cyan-elevation-shadow);
   transition: width 0.3s !important;
   max-width: calc(240px);
-  margin: 0 10px 10px 10px;
-  border-radius: 8px;
+  margin: 0 calc(var(--window-margin) * 1px) calc(var(--window-margin) * 1px) calc(var(--window-margin) * 1px);
+  border-radius: var(--window-border-radius-calc);
 }
 .sidebarRegion-1VBisG {
   justify-content: end;
