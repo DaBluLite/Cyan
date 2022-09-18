@@ -3,10 +3,26 @@
  * @description Sleek and clean, with custom background support
  * @author DaBluLite#7409
  * @authorId 582170007505731594
- * @version 5.0.0-pre1
+ * @version 5.0.0-pre2
  * @updateUrl https://dablulite.github.io/Cyan/Cyan.theme.css
  * @source https://github.com/DaBluLite/Cyan
  */
+
+/*
+Huge thanks to all the contributors of this project!
+
+		    Contributors
+====================================================
+=						   =
+=						   =
+=  Custom Icons: Obscure-Git and Lavender-Discord  =
+=        Darkened color scheme: maenDisease        =
+=               Code cleanup: lucism               =
+=        Additional code and help by carrot        =
+=						   =
+=						   =
+====================================================
+*/
  
 @import url(https://dablulite.github.io/Cyan/import.css);
 .theme-dark {
