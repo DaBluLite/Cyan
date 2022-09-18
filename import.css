@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
-@import url("https://lavender-discord.github.io/Lavender/modules/addons/colored-svgs.css");
 @import url("https://lavender-discord.github.io/Lavender/modules/addons/context-icons.css");
-@import url("https://lavender-discord.github.io/Lavender/modules/addons/mention-links.css");
-@import url("https://lavender-discord.github.io/Lavender/modules/addons/settings-icons.css");
 @import url("https://lavender-discord.github.io/IconsaxDiscord/theme.css");
 :root {
     --background-lightness: -0.4;
