@@ -1269,7 +1269,7 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
   background: transparent !important;
 }
 .guilds-2JjMmN {
-  position: absolute;
+  position: relative;
   margin: calc(var(--window-margin) * 1px);
   z-index: 2;
   border-radius: var(--window-border-radius-calc) 0 0 var(--window-border-radius-calc);
@@ -1280,12 +1280,24 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
   margin-right: 0 !important;
   width: calc(82px - (var(--window-margin) * 1px));
 }
+.guilds-2JjMmN.content-Pph8t6 {
+  margin-left: 0;
+  border-radius: 0;
+}
+.typing-2J1mQU {
+  position: initial;
+  margin-bottom: calc(var(--window-margin) * 1px);
+  background-color: var( --cyan-background-secondary);
+  width: fit-content !important;
+  border-radius: var(--window-border-radius-calc);
+  box-shadow: var( --cyan-elevation-shadow) !important;
+  padding-right: 7px;
+}
 .platform-win .guilds-2JjMmN, .platform-osx .guilds-2JjMmN {
   margin-top: 32px !important;
   height: calc((100% - ((var(--window-margin) * 1px)) * 2) - 22px) !important;
 }
 .base-2jDfDU {
-  margin-left: 82px;
   background-color: transparent;
 }
 .container-1eFtFS {
