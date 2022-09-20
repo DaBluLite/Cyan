@@ -2,6 +2,7 @@
 @import url("https://lavender-discord.github.io/Lavender/modules/addons/context-icons.css");
 @import url("https://lavender-discord.github.io/IconsaxDiscord/theme.css");
 :root {
+    --cyan-background-primary-alt: var(--cyan-background-primary);
     --cyan-background-secondary: var(--background-floating);
     --cyan-background-tertiary: var(--background-primary);
     --cyan-background-elevated: var(--background-floating);
@@ -1058,7 +1059,7 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
 .sidebar-1tnWFu {
   position: relative;
   margin: calc(var(--window-margin) * 1px);
-  background-color: var( --cyan-background-primary);
+  background-color: var( --cyan-background-primary-alt);
   box-shadow: var( --cyan-elevation-shadow);
   border-radius: 0 var(--window-border-radius-calc) var(--window-border-radius-calc) 0 !important;
   backdrop-filter: blur(var( --cyan-blur-radius));
@@ -1279,7 +1280,7 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
   z-index: 2;
   border-radius: var(--window-border-radius-calc) 0 0 var(--window-border-radius-calc);
   transition: .3s;
-  background-color: var(--cyan-background-primary);
+  background-color: var(--cyan-background-primary-alt);
   box-shadow: var(--cyan-elevation-shadow);
   height: calc(100% - ((var(--window-margin) * 1px)) * 2) !important;
   margin-right: 0 !important;
