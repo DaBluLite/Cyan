@@ -120,11 +120,16 @@
 .avatar-2OC07D.wrapper-1VLyxH {
   border-color: var(--profile-body-background-color);
 }
-.banner-2boKnS {
+.bannerSVGWrapper-qc0szY {
+  background-color: transparent;
   margin: 10px;
   width: calc(100% - 20px);
-  border-radius: 8px;
+  min-width: unset !important;
+  border-radius: var(--window-border-radius-calc);
   box-shadow: var(--cyan-elevation-shadow);
+}
+.bannerSVGWrapper-qc0szY mask{
+  display: none;
 }
 .theme-dark .theme-light {
   --cyan-background-secondary: #0E0F11;
