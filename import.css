@@ -2,6 +2,11 @@
 @import url("https://lavender-discord.github.io/Lavender/modules/addons/context-icons.css");
 @import url("https://lavender-discord.github.io/IconsaxDiscord/theme.css");
 :root {
+    --cyan-background-secondary: var(--background-floating);
+    --cyan-background-tertiary: var(--background-primary);
+    --cyan-background-elevated: var(--background-floating);
+    --cyan-background-floating: var(--background-floating);
+    --window-border-radius-calc: calc(min(1, var(--window-margin)) * var(--window-border-radius));
     --background-lightness: -0.4;
     --brand-experiment-100: var(--cyan-accent-color);
     --brand-experiment-130: var(--cyan-accent-color);
