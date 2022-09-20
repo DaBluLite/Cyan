@@ -183,6 +183,7 @@
   background-size: cover;
   opacity: .3;
   filter: blur(var(--cyan-blur-radius));
+  pointer-events: none;
 }
 .contentRegionScroller-2_GT_N {
   background-color: transparent;
