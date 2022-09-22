@@ -72,6 +72,48 @@
 .code-button:first-child {
   border-radius: 8px 0 0 8px;
 }
+.avatar-3QF_VA {
+  border: 6px solid var(--background-primary);
+  background-color: var(--background-primary);
+}
+.avatar-3QF_VA::before {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: var(--background-primary);
+  height: 40px;
+}
+.avatarHint-2g3Mcd {
+  margin-top: 6px;
+  margin-left: 6px;
+}
+.avatarHoverTarget-l77PhT::before {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background-color: var(--profile-body-background-color);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.bannerSVGWrapper-qc0szY foreignObject {
+  height: calc(100% + 8px);
+  y: -4;
+}
+.popoutBannerPremium-2RvDNZ {
+  height: 128px;
+}
+.popoutBanner-16rVDY {
+  height: 68px;
+}
+.vatarHoverTarget-l77PhT {
+  border: 6px solid var(--profile-body-background-color);
+  background-color: var(--profile-body-background-color);
+}
 .code-button {
   border-radius: 0;
   margin: 0 !important;
