@@ -86,6 +86,10 @@
   background-color: var(--background-primary);
   height: 40px;
 }
+.avatarHoverTarget-l77PhT {
+  border: 6px solid var(--profile-body-background-color);
+  background-color: var(--profile-body-background-color);
+}
 .avatarHint-2g3Mcd {
   margin-top: 6px;
   margin-left: 6px;
