@@ -1,0 +1,18 @@
+[aria-label="DaBluLite"] .userPopout-29jUdN > div {
+    background-image: var(--cyan-background-img);
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(var(--cyan-blur-radius));
+}
+[aria-label="5-Volt"] .userPopout-29jUdN > div {
+    background-image: var(--cyan-background-img);
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(var(--cyan-blur-radius));
+}
+[aria-label="minexaris"] .userPopout-29jUdN > div {
+    background-image: var(--cyan-background-img);
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(var(--cyan-blur-radius));
+}
