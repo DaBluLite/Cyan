@@ -5,17 +5,17 @@
     background-image: var(--cyan-background-img);
     background-size: cover;
     background-position: center;
-    backdrop-filter: blur(var(--cyan-blur-radius));
+    filter: blur(var(--cyan-blur-radius));
 }
 [aria-label="5-Volt"] .userPopout-29jUdN > div::before {
     background-image: var(--cyan-background-img);
     background-size: cover;
     background-position: center;
-    backdrop-filter: blur(var(--cyan-blur-radius));
+    filter: blur(var(--cyan-blur-radius));
 }
 [aria-label="minexaris"] .userPopout-29jUdN > div::before {
     background-image: var(--cyan-background-img);
     background-size: cover;
     background-position: center;
-    backdrop-filter: blur(var(--cyan-blur-radius));
+    filter: blur(var(--cyan-blur-radius));
 }
