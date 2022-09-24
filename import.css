@@ -59,6 +59,12 @@
 .theme-light {
     --cyan-background-lightness: 71%;
 }
+.actionButton-2ae9DJ svg path {
+  fill: var(--header-primary) !important;
+}
+.message-2CShn3 * {
+  color: #fff !important;
+}
 .heroButtons-357iJy > .button-1U79Hu:hover {
   color: white;
 }
