@@ -7,6 +7,7 @@
     --cyan-background-tertiary: var(--background-primary);
     --cyan-background-elevated: var(--background-floating);
     --cyan-background-floating: var(--background-floating);
+    --cyan-status-mask-background: var(--profile-body-background-color);
     --window-border-radius-calc: calc(min(1, var(--window-margin)) * var(--window-border-radius));
     --background-lightness: -0.4;
     --brand-experiment-100: var(--cyan-accent-color);
@@ -60,6 +61,18 @@
 .tree-3agP2X {
   padding-left: calc(5px - (var(--window-margin) * 1px));
 }
+.userPopout-29jUdN #account {
+  margin: 10px;
+}
+.profileBanner-2zIsK7 {
+  height: 114px;
+}
+.profileBannerPremium-3xIFwS {
+  height: 220px;
+}
+.rolePill-2IJ1vo {
+  border: none;
+}
 .bettersyntax-buttons {
   height: 27.5px;
   box-shadow: var(--cyan-elevation-shadow);
@@ -99,7 +112,7 @@
   position: absolute;
   bottom: 5px;
   right: 5px;
-  background-color: var(--profile-body-background-color);
+  background-color: var(--cyan-status-mask-background);
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -157,7 +170,7 @@
   position: absolute;
   width: 26px;
   height: 26px;
-  background-color: var(--profile-body-background-color);
+  background-color: var(--cyan-status-mask-background);
   display: inline-block;
   bottom: 0;
   right: 0;
