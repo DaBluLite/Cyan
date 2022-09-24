@@ -59,6 +59,15 @@
 .theme-light {
     --cyan-background-lightness: 71%;
 }
+.container-3YcgdM {
+  background-color: var(--cyan-background-secondary);
+  margin: 10px;
+  border-radius: var(--window-border-radius-calc);
+  border-width: 0;
+  box-shadow: var(--cyan-elevation-shadow);
+  position: sticky !important;
+  top: 10px;
+}
 .actionButton-2ae9DJ svg path {
   fill: var(--header-primary) !important;
 }
