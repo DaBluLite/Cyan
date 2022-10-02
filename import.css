@@ -1666,3 +1666,44 @@ margin-top: 0;
    margin-top: 3px;
    margin-right: 3px;
 }
+#linuxCustomTitlebar {
+    position: absolute;
+    width: 100%;
+    background-color: transparent;
+    z-index: 9999;
+    padding-left: 12px;
+    height: 32px;
+}
+.linuxCustomTitlebarButton {
+    float: unset;
+    width: 15px;
+    height: 15px;
+    border-radius: 20px;
+    color: transparent;
+    margin-top: 8px;
+    margin-left: 5px;
+    opacity: 1;
+    cursor: pointer;
+    position: absolute;
+}
+.linuxCustomTitlebarButton_close {
+    background-image: url(https://github.com/AI-ien/macos-titlebar/raw/main/assets/titlebutton-close%402.png);
+    background-size: cover;
+}
+.linuxCustomTitlebarButton_max {
+    background-image: url(https://github.com/AI-ien/macos-titlebar/raw/main/assets/titlebutton-maximize%402.png);
+    background-size: cover;
+    margin-left: 45px;
+}
+.linuxCustomTitlebarButton_min {
+    background-image: url(https://github.com/AI-ien/macos-titlebar/raw/main/assets/titlebutton-minimize%402.png);
+    background-size: cover;
+    margin-left: 25px;
+}
+.platform-linux-frameless .guilds-2JjMmN {
+  margin-top: 32px !important;
+  height: calc((100% - ((var(--window-margin) * 1px)) * 2) - 22px) !important;
+}
+.platform-linux-frameless .sidebar-1tnWFu {
+  margin-top: 32px !important;
+}
