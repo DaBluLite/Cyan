@@ -1700,10 +1700,13 @@ margin-top: 0;
     background-size: cover;
     margin-left: 25px;
 }
-.platform-linux-frameless .guilds-2JjMmN {
+#app-mount > #linuxCustomTitlebar ~ div[class] .guilds-2JjMmN {
   margin-top: 32px !important;
   height: calc((100% - ((var(--window-margin) * 1px)) * 2) - 22px) !important;
 }
-.platform-linux-frameless .sidebar-1tnWFu {
+#app-mount > #linuxCustomTitlebar ~ div[class] .sidebar-1tnWFu {
   margin-top: 32px !important;
+}
+#linuxCustomTitlebarWordmark {
+  display: none !important;
 }
