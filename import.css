@@ -173,19 +173,8 @@
   margin-left: 0 !important;
   --window-margin: 0 !important;
 }
-.nav-1zWVQw {
-  position: absolute;
-  bottom: 10px;
-  width: calc(100% - 32px);
-}
 .navList-YSb9UB {
   justify-content: center;
-}
-.wrapper-1NB3WY, .container-3u7RcY, .wrapper-3u51GQ {
-  position: absolute;
-  bottom: 44px;
-  height: calc(100% - 54px);
-  width: 100%;
 }
 .avatar-2OC07D::before {
   content: "";
