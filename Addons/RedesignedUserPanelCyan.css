@@ -1,0 +1,66 @@
+.panels-3wFtMD {
+    order: -1;
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: 0;
+    margin: 0;
+    padding: calc(var(--window-margin) * 1px);
+}
+.searchBar-3TnChZ {
+    background-color: transparent;
+    box-shadow: none;
+}
+.searchBar-3TnChZ ~ div::-webkit-scrollbar {
+    width: 0;
+}
+.searchBar-3TnChZ ~ div > ul > div:first-child {
+    display: none;
+}
+.searchBar-3TnChZ ~ div > ul > li[aria-setsize="151"]:nth-child(2),
+.searchBar-3TnChZ ~ div > ul > li[aria-setsize="151"]:nth-child(3) {
+    margin: 0;
+    width: calc(100%/2);
+    padding: 7px;
+    float: left;
+    text-align: center;
+    justify-content: center;
+    background-color: transparent;
+    border-radius: 0;
+}
+.searchBar-3TnChZ ~ div > ul > li[aria-setsize="151"]:nth-child(2) *,
+.searchBar-3TnChZ ~ div > ul > li[aria-setsize="151"]:nth-child(3) * {
+    width: 100%;
+    text-align: center;
+}
+.searchBar-3TnChZ ~ div > ul > li[aria-setsize="151"]:nth-child(2) > div,
+.searchBar-3TnChZ ~ div > ul > li[aria-setsize="151"]:nth-child(3) > div {
+    padding-right: 0;
+    border-radius: 8px;
+}
+.searchBar-3TnChZ ~ div > ul > li[aria-setsize="152"]:nth-child(2),
+.searchBar-3TnChZ ~ div > ul > li[aria-setsize="152"]:nth-child(3),
+.searchBar-3TnChZ ~ div > ul > li[aria-setsize="152"]:nth-child(4) {
+    margin: 0;
+    width: calc(100%/3);
+    padding: 7px;
+    float: left;
+    text-align: center;
+    justify-content: center;
+    background-color: transparent;
+    border-radius: 0;
+}
+.searchBar-3TnChZ ~ div > ul > li[aria-setsize="152"]:nth-child(2) *,
+.searchBar-3TnChZ ~ div > ul > li[aria-setsize="152"]:nth-child(3) *,
+.searchBar-3TnChZ ~ div > ul > li[aria-setsize="152"]:nth-child(4) * {
+    width: 100%;
+    text-align: center;
+}
+.searchBar-3TnChZ ~ div > ul > li[aria-setsize="152"]:nth-child(2) > div,
+.searchBar-3TnChZ ~ div > ul > li[aria-setsize="152"]:nth-child(3) > div,
+.searchBar-3TnChZ ~ div > ul > li[aria-setsize="152"]:nth-child(4) > div {
+    padding-right: 0;
+    border-radius: 8px;
+}
+.avatarWithText-1tTt2S .content-66wMin {
+    display: none;
+}
