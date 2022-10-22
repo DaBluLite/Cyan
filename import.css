@@ -877,6 +877,19 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
 .tabBarContainer-sCZC4w {
   padding: 0;
 }
+.contentRegion-3HkfJJ::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: var(--cyan-background-img);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  opacity: .3;
+  filter: blur(var(--cyan-blur-radius));
+  pointer-events: none;
+}
 .container-1Lk8p7 > div > div > .flex-2S1XBF > button > .contents-3ca1mk{
   color: var(--background-primary) !important;
 }
