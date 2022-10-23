@@ -111,11 +111,11 @@
   border: 6px solid var(--background-primary);
   background-color: var(--background-primary);
 }
-.member-48YF_l, .members-3WRCEx {
+.member-48YF_l {
   background-color: transparent;
   border-radius: var(--window-border-radius-calc);
 }
-.member-48YF_l:hover, .members-3WRCEx:hover {
+.member-48YF_l:hover {
   background-color: var(--cyan-background-primary) !important;
 }
 .avatar-3QF_VA::before {
