@@ -41,7 +41,7 @@
   --background-lightness: -10 !important;
 }
 #discordRadioSidebar {
-  background-color: var(--cyan-background-primary);
+  background-color: var(--cyan-background-primary) !important;
   backdrop-filter: blur(var(--cyan-blur-radius));
 }
 .theme-dark {
