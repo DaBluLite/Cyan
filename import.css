@@ -1624,11 +1624,36 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
 .panels-3wFtMD > .container-YkUktl .flex-2S1XBF > :last-child {
    transition: all 0.2s ease-in-out;
 }
-.panels-3wFtMD > .container-YkUktl:hover .flex-2S1XBF > :not(:last-child) {
-   opacity: 100% !important;
-   margin: unset;
-   padding: unset;
-   width: 32px;
+section.panels-3wFtMD .container-YkUktl .button-12Fmur {
+    width: calc(224px/3);
+    border-radius: 50px !important;
+}
+section.panels-3wFtMD .container-YkUktl .flex-2S1XBF {
+    width: 100% !important;
+    float: left !important;
+    height: 32px !important;
+    max-width: unset !important;
+    justify-content: stretch !important;
+    margin: 10px 0 !important;
+    flex: 0 1 auto !important;
+}
+section.panels-3wFtMD .avatarWrapper-1B9FTW {
+    width: calc(100% - 10px);
+    max-width: unset;
+    float: left;
+    padding: 7px;
+    border-radius: 8px !important;
+    transition: .1s;
+}
+section.panels-3wFtMD .avatarWrapper-1B9FTW:hover {
+    background-color: var(--background-modifier-selected);
+}
+section.panels-3wFtMD .container-YkUktl {
+    display: block;
+    padding-top: 5px;
+}
+section.panels-3wFtMD {
+    display: inline-block;
 }
 .withTagAsButton-OsgQ9L, .withTagless-10ooWt {
   min-width: unset;
