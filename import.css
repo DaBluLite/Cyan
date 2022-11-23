@@ -84,6 +84,49 @@
 .heroButtons-357iJy > .button-1U79Hu:hover {
   color: white;
 }
+
+/*Bigger Channel Bar*/
+.content-1jQy2l::before {
+  content: none;
+}
+.title-31SJ6t {
+  margin: 8px;
+  width: calc(100% - 16px);
+}
+/*Expandable search bar*/
+.searchBar-jGtisZ {
+  padding: 8px;
+  height: fit-content;
+  background-color: transparent;
+  transition: .3s !important;
+  width: 40px;
+}
+.focused-1xh-wG .searchBar-jGtisZ, .open-1F8u2c .searchBar-jGtisZ, .searchBar-jGtisZ:hover {
+  width: 224px;
+  margin: 0 10px;
+  background-color: var(--background-secondary);
+  border-radius: 8px;
+  box-shadow: var(--cyan-elevation-shadow);
+}
+.search-39IXmY {
+  margin: 0;
+}
+.searchBar-jGtisZ .iconContainer-1RqWJj {
+  width: 24px;
+  height: 24px;
+  transition: .3s;
+}
+.focused-1xh-wG .searchBar-jGtisZ .iconContainer-1RqWJj, .open-1F8u2c .searchBar-jGtisZ .iconContainer-1RqWJj, .searchBar-jGtisZ:hover .iconContainer-1RqWJj {
+  width: 18px;
+  height: 18px;
+}
+.searchBar-jGtisZ .iconContainer-1RqWJj>svg {
+  color: var(--interactive-normal);
+}
+.search-39IXmY {
+  order: -1;
+}
+
 .tree-3agP2X {
   padding-left: calc(5px - (var(--window-margin) * 1px));
 }
