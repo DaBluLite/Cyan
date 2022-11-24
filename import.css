@@ -1256,7 +1256,7 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
   background-color: var(--cyan-background-primary) !important;
   opacity: .9 !important;
 }
-.tabBar-ra-EuL .item-3mHhwr:hover, .tabBar-ra-EuL .item-3mHhwr.selected-g-kMVV {
+.tabBar-ra-EuL .item-3mHhwr:hover:not(.addFriend-emTWY1), .tabBar-ra-EuL .item-3mHhwr.selected-g-kMVV:not(.addFriend-emTWY1) {
   background-color: var(--background-secondary-alt);
   opacity: 1;
 }
