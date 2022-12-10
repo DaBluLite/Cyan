@@ -1905,13 +1905,36 @@ margin-top: 0;
 .expandedFolderBackground-1kSAf6:not(.collapsed-uGXEbi) ~ ul {
     padding-bottom: 5px;
 }
-.interactiveSelected-29CP8y::before {
+.bd-addon-card {
+    background: var(--background-tertiary) !important;
+    border-radius: 16px !important;
+}
+.bd-addon-header {
+    background: var(--background-tertiary) !important;
+    border-radius: 16px 16px 0 0 !important;
+    border-bottom: 1px solid var(--primary-dark-500);
+}
+.bd-button {
+    background-color: var(--cyan-accent-color) !important;
+    padding: 6px 8px;
+    border-radius: 8px;
+}
+.bd-button:hover {
+    filter: contrast(.5);
+}
+.bd-search-wrapper {
+    padding: 8px;
+    width: 100%;
+    margin-bottom: 5px;
+    border-radius: 8px;
+}
+.interactiveSelected-29CP8y::before, .selected-2TbFuo .content-1gYQeQ::before {
     content: "";
     position: absolute;
-    top: 16%;
-    left: 0;
+    top: 21%;
+    left: -2px;
     background-color: var(--header-primary);
-    height: 70%;
+    height: 60%;
     width: 4px;
     border-radius: 50px;
 }
