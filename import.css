@@ -1279,10 +1279,6 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
 .searchBar-2aylmZ .iconLayout-3Bjizv {
     margin-right: 10px;
 }
-.container-ZMc96U {
-    margin: 8px;
-    width: calc(100% - 16px);
-}
 .tabBody-2dgbAs::before, .container-ZMc96U::before {
     content: none;
 }
