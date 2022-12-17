@@ -2026,3 +2026,96 @@ div:not([class="tutorialContainer-1pL9QS"]) .wrapper-3kah-n .childWrapper-1j_1ub
 .bd-controls>.bd-addon-button:first-of-type {
     border-radius: 8px 0 0 8px;
 }
+/*New BD Addon Cards*/
+:root {
+  --cyan-x: "M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z";
+  --cyan-check: "M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z";
+}
+.bd-addon-card {
+  border-radius: 16px !important;
+  border: 1px solid rgb(200,200,200,.2);
+  background: var(--background-secondary-alt) !important;
+}
+.bd-search-wrapper {
+  background: var(--background-secondary-alt);
+  border-radius: 16px !important;
+  border: 1px solid rgb(200,200,200,.2);
+  padding: 10px;
+}
+.bd-controls-advanced {
+  border-bottom: 1px solid rgb(200,200,200,.2);
+  padding-bottom: 10px;
+}
+.bd-controls>.bd-addon-button {
+  padding: 5px;
+}
+.bd-button.bd-addon-button:not(.bd-button-danger) {
+  background-color: var(--brand-experiment);
+}
+.bd-controls>.bd-addon-button:first-of-type {
+  border-radius: 8px 0 0 8px;
+  border-right: none;
+}
+.bd-controls>.bd-addon-button:last-of-type {
+  border-radius: 0 8px 8px 0;
+  border-left: none;
+}
+.bd-switch input+.bd-switch-body .bd-switch-slider {
+  left: -2px !important;
+  top: 2px;
+}
+.bd-switch-body {
+  width: 28px;
+  height: 28px;
+}
+.bd-switch-slider rect {
+  display: none;
+}
+.bd-switch-body {
+  --symbol2path: path(var(--cyan-x));
+}
+.bd-switch .bd-switch-symbol path:first-child {
+  display: none;
+}
+.bd-switch input:checked+.bd-switch-body {
+  --symbol1path: path();
+  --symbol2path: path(var(--cyan-check));
+}
+.bd-switch input:checked+.bd-switch-body .bd-switch-symbol > path:last-child {
+  fill: #fff !important;
+  transform: scale(1.4);
+  transform-origin: 3px -2px;
+}
+.bd-switch .bd-switch-symbol path {
+  fill: #fff !important;
+  transform: scale(1.2);
+  transform-origin: -4px -2px;
+}
+.full-motion .bd-switch input:active+.bd-switch-body, .full-motion .bd-switch input:checked:active+.bd-switch-body {
+  --symbol2path: path();
+}
+.bd-addon-list.bd-grid-view .bd-addon-card {
+  width: calc(100%);
+}
+.bd-addon-list.bd-grid-view {
+  grid-template-columns: calc(50% - 5px) auto;
+}
+
+
+/*GIF selector*/
+.categoryFade-3RRG67, .categoryFadeBlurple-1l49_Q, .result-pzZrwj, .gif-2kTiNB {
+  border-radius: 8px !important;
+}
+
+/*"Unsaved Changes" Bar*/
+.actions-2Iq6nn .button-1sjQOW {
+  border: 1px solid var(--cyan-accent-color);
+  border-radius: 8px;
+  text-decoration: none !important;
+}
+.actions-2Iq6nn .button-1sjQOW span {
+  text-decoration: none !important;
+}
+.container-20TyK0 {
+  border-radius: 16px;
+}
