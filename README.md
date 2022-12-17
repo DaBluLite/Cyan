@@ -3,7 +3,10 @@
 </div>
 
 # Cyan
-Sleek and clean BetterDiscord theme, with custom background support
+
+**IMPORTANT: Please make sure to save your Cyan configuration (Either in a separate file or in CustomCSS), as Cyan will be soon bumping the version, meaning all configrurations made inside the theme will be reset!**
+
+A sleek and clean BetterDiscord theme, with custom background support
 
 [Get it on BetterDiscord](https://betterdiscord.app/theme/Cyan)
 
@@ -11,7 +14,7 @@ Also available through the ThemeRepo plugin by DevilBro
 
 Cyan is a sleek theme that aims to be clean, customizable and nice to the eyes.
 
-[Addon themes for Cyan are available here](https://github.com/DaBluLite/Cyan/tree/master/Addons)
+[Addons for Cyan are available here](https://github.com/DaBluLite/Cyan/tree/master/Addons)
 
 # Special thanks to:
 * [@ObjectiveSlayer](https://github.com/ObjectiveSlayer)/carrot#8812
