@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url(//dablulite.github.io/CyanBootstrapIcons/import.css);
 :root {
     --cyan-background-primary-alt: var(--cyan-background-primary);
@@ -384,6 +385,12 @@
 .contentRegion-3HkfJJ {
   background-color: var(--cyan-background-secondary);
 }
+.bd-toast {
+  border-radius: 25px;
+  padding: 14px 24px;
+  box-shadow: var(--cyan-elevation-shadow);
+  background-color: var( --background-floating);
+}
 .root-g14mjS.small-23Atuv.fullscreenOnMobile-ixj0e3 .inputDefault-3FGxgL, .root-g14mjS.small-23Atuv.fullscreenOnMobile-ixj0e3 .input-m1-Y7Q {
   background: transparent !important;
   border-radius: 8px !important;
@@ -601,6 +608,7 @@ aside.sidebarScrollable-2mW9Ls > div {
 }
 html, body {
   font-family: var(--cyan-font) !important;
+  font-variant: no-common-ligatures;
   background-color: transparent;
 }
 .header-JUTO-g, .titleContainer-3fPic2 {
