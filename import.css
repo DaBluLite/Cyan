@@ -2119,3 +2119,62 @@ div:not([class="tutorialContainer-1pL9QS"]) .wrapper-3kah-n .childWrapper-1j_1ub
 .container-20TyK0 {
   border-radius: 16px;
 }
+
+/*BUG FIX: Unstyled Areas*/
+#app-mount .background-fkKrXt {
+    background-color: var(--cyan-background-primary);
+}
+#app-mount .card-3x20HF, #app-mount .container-xwOzwi, #app-mount .container-2Hi7Km {
+    background-color: var(--cyan-background-primary);
+    border: none;
+    box-shadow: var(--cyan-elevation-shadow);
+}
+#app-mount .card-3x20HF > .feedItemHeader-txJq98 {
+    border-bottom: none;
+}
+#app-mount .headerIcon-3Q7cOC {
+    border-radius: 50%;
+    border-color: var(--cyan-background-floating);
+}
+.userProfileOuterUnthemed-2b2rsv {
+    background: transparent;
+    margin: calc(var(--window-margin) * 1px);
+    border-radius: var(--window-border-radius-calc);
+    box-shadow: var(--cyan-elevation-shadow);
+    height: calc(100% - (var(--window-margin) * 2px));
+}
+#app-mount .userProfileOuterUnthemed-2b2rsv .userPanelInner-1UAR7g {
+    background: var(--cyan-background-primary);
+}
+
+#app-mount .noChat-2UYgeE {
+    height: calc(100% - (var(--window-margin) * 2px));
+}
+.chatIcon-R5MUNn {
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+.sidebarRegion-1VBisG {
+    box-shadow: var(--cyan-elevation-shadow);
+}
+#customcss-tab {
+    padding: 0;
+    overflow-y: hidden;
+    padding-right: 20px;
+}
+#customcss-tab > #bd-editor-panel > #bd-editor-controls {
+    padding-top: 32px;
+    box-shadow: var(--cyan-elevation-shadow);
+    background-color: var(--cyan-background-secondary);
+}
+#customcss-tab > #bd-editor-panel > .editor-wrapper > #bd-customcss-editor {
+    height: calc(100vh - 63px);
+    max-height: unset;
+}
+#customcss-tab > .bd-settings-title {
+    display: none;
+}
+.closeButton-PCZcma ~ .keybind-13vtq8 {
+    display: none;
+}
