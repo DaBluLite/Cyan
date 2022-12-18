@@ -1298,22 +1298,6 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
 .divider-q3P9HC {
     display: none;
 }
-.textBadge-1fdDPJ {
-  width: calc(100% + 10px);
-  height: 100%;
-  max-height: none;
-  position: absolute;
-  left: -10px;
-  padding-top: 9px;
-  text-align: right;
-  padding-right: 15px;
-  backdrop-filter: opacity(0.5);
-  z-index: -1;
-  background-color: transparent !important;
-}
-.item-3XjbnG.selected-g-kMVV .textBadge-1fdDPJ {
-  background-color: var(--cyan-accent-color) !important;
-}
 .wrapper-NhbLHG:hover .content-1gYQeQ,
 .side-2ur1Qk .themed-2-lozF.item-3XjbnG:hover,
 .topPill-3DJJNV .themed-2-lozF.item-3XjbnG:hover,
