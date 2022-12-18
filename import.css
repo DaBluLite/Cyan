@@ -1691,7 +1691,7 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
 }
 section.panels-3wFtMD .container-YkUktl .button-12Fmur {
     width: calc(224px/3);
-    border-radius: 50px !important;
+    border-radius: var(--window-border-radius) !important;
 }
 section.panels-3wFtMD .container-YkUktl .flex-2S1XBF {
     width: 100% !important;
@@ -1707,7 +1707,7 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
     max-width: unset;
     float: left;
     padding: 7px;
-    border-radius: 8px !important;
+    border-radius: var(--window-border-radius) !important;
     transition: .1s;
 }
 section.panels-3wFtMD .avatarWrapper-1B9FTW:hover {
