@@ -396,8 +396,8 @@
   border-radius: 8px !important;
   border: 1px solid var(--background-modifier-accent);
   padding: 7px !important;
-  width: calc(100% - 20px);
-  margin-left: 10px;
+  width: 100%;
+  padding-left: 30px !important;
 }
 .body-1Ukv50 {
   background-color: var(--background-secondary);
@@ -622,9 +622,6 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
 }
 .slider-32CRPX > svg {
   display: none !important;
-}
-.slider-32CRPX > rect {
-  transform: scale(.9) !important;
 }
 .container-2nx-BQ {
   width: 40px !important;
