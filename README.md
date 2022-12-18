@@ -4,8 +4,6 @@
 
 # Cyan
 
-**IMPORTANT: Please make sure to save your Cyan configuration (Either in a separate file or in CustomCSS), as Cyan will be soon bumping the version, meaning all configrurations made inside the theme will be reset!**
-
 A sleek and clean BetterDiscord theme, with custom background support
 
 [Get it on BetterDiscord](https://betterdiscord.app/theme/Cyan)
