@@ -2175,3 +2175,15 @@ div:not([class="tutorialContainer-1pL9QS"]) .wrapper-3kah-n .childWrapper-1j_1ub
 .closeButton-PCZcma ~ .keybind-13vtq8 {
     display: none;
 }
+
+.modalHeader-3X0A4K {
+    background-color: var(--cyan-background-floating);
+    border-radius: 16px 16px 0 0;
+    border-bottom: none;
+}
+.scrollBackgroundContainer-1gy1Hx div {
+    background-color: var(--cyan-background-floating);
+}
+.modalDivider-MtZbPb {
+    display: none;
+}
