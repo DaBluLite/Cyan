@@ -1699,7 +1699,7 @@ section.panels-3wFtMD .container-YkUktl .flex-2S1XBF {
     height: 32px !important;
     max-width: unset !important;
     justify-content: stretch !important;
-    margin: 10px 0 !important;
+    margin: calc(min(1px, var(--window-border-radius)) * 10) 0 !important;
     flex: 0 1 auto !important;
 }
 section.panels-3wFtMD .avatarWrapper-1B9FTW {
@@ -1715,7 +1715,8 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW:hover {
 }
 section.panels-3wFtMD .container-YkUktl {
     display: block;
-    padding-top: 5px;
+    padding: 0 calc(min(1px, var(--window-border-radius)) * 8);
+    padding-top: calc(min(1px, var(--window-border-radius)) * 5);
 }
 section.panels-3wFtMD {
     display: inline-block;
