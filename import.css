@@ -2169,3 +2169,33 @@ div:not([class="tutorialContainer-1pL9QS"]) .wrapper-3kah-n .childWrapper-1j_1ub
 .modalDivider-MtZbPb {
     display: none;
 }
+.backgroundFlash-1X5jVs:not([style="background-color: rgba(148, 156, 247, 0);"]) {
+    position: relative;
+    background-color: transparent !important;
+    transition: .2s;
+}
+.backgroundFlash-1X5jVs:not([style="background-color: rgba(148, 156, 247, 0);"])::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--cyan-accent-color) !important;
+    filter: opacity(.4);
+    transition: .2s;
+}
+.row-2mBMW2 {
+    column-gap: 11px !important;
+}
+#app-mount .inspector-DFKXwB {
+    background-color: var(--cyan-background-primary) !important;
+}
+.searchBar-2M9mRP, .wrapper-n2dlvs, .searchBar-3aIzc- {
+    border-radius: 8px;
+    box-shadow: var(--cyan-elevation-shadow);
+    margin-top: 3px;
+}
+.wrapper-n2dlvs > div {
+    border-radius: 8px;
+}
