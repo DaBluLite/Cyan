@@ -2256,3 +2256,31 @@ div:not([class="tutorialContainer-1pL9QS"]) .wrapper-3kah-n .childWrapper-1j_1ub
 .floating-window-buttons .button {
     padding: 0 7px;
 }
+.userProfileInner-3F03PX:before {
+    border-radius: 16px !important;
+}
+.userPopoutOuter-3AVBmJ {
+    border-radius: 16px;
+    box-shadow: var(--cyan-elevation-shadow);
+}
+.root-g14mjS {
+    box-shadow: var(--cyan-elevation-shadow) !important;
+}
+.userProfileModalOuter-1FYL8T {
+    box-shadow: none;
+}
+.userProfileOuterUnthemed-2b2rsv {
+    border-radius: 16px;
+}
+.avatar-1YsFQ1 {
+    border: 8px solid var(--cyan-background-floating);
+}
+.avatar-1YsFQ1 > svg > foreignObject ~ circle[fill="black"] {
+    opacity: 1 !important;
+    fill: var(--cyan-background-floating) !important;
+}
+.avatarDecorationHint-GIo7Yh {
+    left: -2px;
+    top: -2px;
+    border-radius: 50%;
+}
