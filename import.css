@@ -774,7 +774,7 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
   box-shadow: var(--cyan-elevation-shadow);
 }
 .container-1NXEtd {
-  background-color: transparent;
+  background: transparent !important;
 }
 .hasBanner-2IrYih > .animatedContainer-2laTjx > div > img {
   width: calc(100% - 20px);
