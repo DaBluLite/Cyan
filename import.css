@@ -1822,11 +1822,11 @@ margin-top: 0;
 #linuxCustomTitlebarWordmark {
   display: none !important;
 }
-.tutorialContainer-1pL9QS .listItem-3SmSlK .listItemWrapper-3d87LP {
+/*.tutorialContainer-1pL9QS .listItem-3SmSlK .listItemWrapper-3d87LP {
     transform: rotate(-90deg);
     margin-top: 90px;
 }
-/*.tutorialContainer-1pL9QS .listItem-3SmSlK .listItemWrapper-3d87LP.selected-3a1QGn .wrapper-3kah-n::before, .tutorialContainer-1pL9QS .listItem-3SmSlK .listItemWrapper-3d87LP:hover .wrapper-3kah-n::before {
+.tutorialContainer-1pL9QS .listItem-3SmSlK .listItemWrapper-3d87LP.selected-3a1QGn .wrapper-3kah-n::before, .tutorialContainer-1pL9QS .listItem-3SmSlK .listItemWrapper-3d87LP:hover .wrapper-3kah-n::before {
     background-color: var(--background-tertiary);
 }
 .tutorialContainer-1pL9QS .listItem-3SmSlK .listItemWrapper-3d87LP.selected-3a1QGn .wrapper-3kah-n::after, .tutorialContainer-1pL9QS .listItem-3SmSlK .listItemWrapper-3d87LP:hover .wrapper-3kah-n::after {
