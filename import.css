@@ -1371,7 +1371,7 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
 }
 .scrollableContainer-15eg7h {
   border-radius: 10px !important;
-  background-color: var(--cyan-background-secondary);
+  background: var(--cyan-background-secondary) !important;
 }
 .wrapper-1gVUIN ~ .content-1jQy2l {
   border-top-left-radius: 0px;
@@ -2354,4 +2354,21 @@ div:not([class="tutorialContainer-1pL9QS"]) .wrapper-3kah-n .childWrapper-1j_1ub
   border-radius: 8px;
   background-color: var(--cyan-background-secondary);
   border: 1px solid var(--radio-bar-accent-color) !important;
+}
+.top-K_jibn .brand-3g5E0C.item-3XjbnG:active, .top-K_jibn .brand-3g5E0C.selected-g-kMVV.item-3XjbnG {
+    border-bottom: 2px solid var(--cyan-accent-color) !important;
+}
+.swatch-efj8wq {
+    border-radius: 8px;
+}
+.lookFilled-1H2Jvj.colorGreen-jIPCAS, .inputDefault-Ciwd-S {
+    background-color: var(--cyan-background-secondary);
+    border: 1px solid var(--cyan-accent-color);
+    border-radius: 8px;
+}
+.lookFilled-1H2Jvj.colorGreen-jIPCAS:hover {
+    background-color: var(--cyan-accent-color);
+}
+.container-20TyK0 {
+    background-color: var(--cyan-background-secondary) !important;
 }
