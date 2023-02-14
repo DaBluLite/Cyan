@@ -2379,3 +2379,57 @@ div:not([class="tutorialContainer-1pL9QS"]) .wrapper-3kah-n .childWrapper-1j_1ub
   -webkit-box-shadow: inset 0 0 0 2px var(--cyan-accent-color),inset 0 0 0 3px var(--background-floating);
   box-shadow: inset 0 0 0 2px var(--cyan-accent-color),inset 0 0 0 3px var(--background-floating);
 }
+.theme-dark .panel-2ZFCRb {
+    background: transparent;
+}
+#floating-editor-window {
+    max-width: unset !important;
+    max-height: unset !important;
+    background: var(--cyan-background-secondary) !important;
+}
+#bd-editor-controls {
+    background: var(--cyan-background-secondary) !important;
+    box-shadow: var(--cyan-elevation-shadow) !important;
+}
+.floating-window-titlebar > .title {
+    margin: 10px;
+    margin-bottom: 5px;
+    line-height: 27px;
+}
+.floating-window-titlebar {
+    background: var(--cyan-background-secondary) !important;
+    height: 40px;
+}
+.floating-window-buttons {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.checkboxElement-1qV33p {
+    margin: 0;
+}
+.controls-section {
+    margin: 10px;
+    margin-top: 0;
+}
+.monaco-editor .margin, .monaco-editor, .monaco-editor-background, .monaco-editor .inputarea.ime-input {
+    background: var(--cyan-background-secondary) !important;
+}
+/*account area "hover to reveal"*/
+section.panels-3wFtMD .container-YkUktl .flex-2S1XBF {
+    height: 0 !important;
+    transition: .2s;
+    opacity: 0;
+    margin: 0 !important;
+}
+#app-mount section.panels-3wFtMD:hover .container-YkUktl .flex-2S1XBF {
+    height: 32px !important;
+    transition: .2s;
+    opacity: 1;
+    margin: calc(min(1px, var(--window-border-radius)) * 10) 0 !important;
+}
+section.panels-3wFtMD .avatarWrapper-1B9FTW {
+    margin-bottom: 5px;
+    position: relative;
+    transition: .2s;
+}
