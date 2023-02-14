@@ -2350,3 +2350,8 @@ div:not([class="tutorialContainer-1pL9QS"]) .wrapper-3kah-n .childWrapper-1j_1ub
   background-color: transparent !important;
   border: 1px solid var(--cyan-accent-color);
 }
+.radioBar-1XgZqD {
+  border-radius: 8px;
+  background-color: var(--cyan-background-secondary);
+  border: 1px solid var(--radio-bar-accent-color) !important;
+}
