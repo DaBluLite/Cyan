@@ -2307,35 +2307,38 @@ div:not([class="tutorialContainer-1pL9QS"]) .wrapper-3kah-n .childWrapper-1j_1ub
   height: 100%;
 }
 .preview-QJ3OG3 {
-    background: linear-gradient(var(--cyan-background-secondary),var(--cyan-background-secondary)) padding-box,linear-gradient(45deg, rgba(0,159,136,1), var(--cyan-accent-color)) border-box;
-    border: 2px solid transparent;
+  background: linear-gradient(var(--cyan-background-secondary),var(--cyan-background-secondary)) padding-box,linear-gradient(45deg, rgba(0,159,136,1), var(--cyan-accent-color)) border-box;
+  border: 2px solid transparent;
 }
 .darkIcon-e6uv7V {
-    background: var(--cyan-background-secondary);
+  background: var(--cyan-background-secondary);
 }
 .premiumFeatureBorder-1i95si {
-    background: linear-gradient(var(--cyan-background-secondary),var(--cyan-background-secondary)) padding-box,linear-gradient(45deg, rgba(0,159,136,1), var(--cyan-accent-color)) border-box;
+  background: linear-gradient(var(--cyan-background-secondary),var(--cyan-background-secondary)) padding-box,linear-gradient(45deg, rgba(0,159,136,1), var(--cyan-accent-color)) border-box;
 }
 .wrapper-SdcMKg {
-    border-width: 4px;
-    border-radius: 12px !important;
+  border-width: 4px;
+  border-radius: 12px !important;
 }
-.theme-dark .scroller-WSmht3, .theme-dark .scroller-3X7KbA, .theme-dark .container-YkUktl, .theme-dark .themed-Hp1KC_ {
-    background: transparent !important;
+.theme-dark .scroller-WSmht3, .theme-dark .scroller-3X7KbA, .theme-dark .container-YkUktl {
+  background: transparent !important;
 }
 .userInfo-regn9W {
-    padding: 16px 16px 0 30px;
+  padding: 16px 16px 0 30px;
 }
 .avatar-3mTjvZ {
-    left: 50%;
-    transform: translateX(-50%);
-    top: 55px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 55px;
 }
 .bannerSVGWrapper-qc0szY {
-    min-height: 170px !important;
-    max-height: 170px !important;
-    background-color: var(--cyan-accent-color);
+  min-height: 170px !important;
+  max-height: 170px !important;
+  background-color: var(--cyan-accent-color);
 }
 .bannerSVGWrapper-qc0szY * {
-    opacity: 0 !important;
+  opacity: 0 !important;
+}
+.theme-dark .themed-Hp1KC_ {
+  background: var(--cyan-background-secondary) !important;
 }
