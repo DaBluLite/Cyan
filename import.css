@@ -2335,6 +2335,9 @@ div:not([class="tutorialContainer-1pL9QS"]) .wrapper-3kah-n .childWrapper-1j_1ub
   min-height: 170px !important;
   max-height: 170px !important;
   background-color: var(--cyan-accent-color);
+  background-image: var(--cyan-background-img);
+  background-position: center;
+  background-size: cover;
 }
 #my-account-tab .bannerSVGWrapper-qc0szY * {
   opacity: 0 !important;
@@ -2417,19 +2420,42 @@ div:not([class="tutorialContainer-1pL9QS"]) .wrapper-3kah-n .childWrapper-1j_1ub
 }
 /*account area "hover to reveal"*/
 section.panels-3wFtMD .container-YkUktl .flex-2S1XBF {
-    height: 0 !important;
-    transition: .2s;
-    opacity: 0;
-    margin: 0 !important;
+  height: 0 !important;
+  transition: .2s;
+  opacity: 0;
+  margin: 0 !important;
 }
 #app-mount section.panels-3wFtMD:hover .container-YkUktl .flex-2S1XBF {
-    height: 32px !important;
-    transition: .2s;
-    opacity: 1;
-    margin: calc(min(1px, var(--window-border-radius)) * 10) 0 !important;
+  height: 32px !important;
+  transition: .2s;
+  opacity: 1;
+  margin: calc(min(1px, var(--window-border-radius)) * 10) 0 !important;
 }
 section.panels-3wFtMD .avatarWrapper-1B9FTW {
-    margin-bottom: 5px;
-    position: relative;
-    transition: .2s;
+  margin-bottom: 5px;
+  position: relative;
+  transition: .2s;
+}
+.mini-2qY9iv .grabber-2GQyvM {
+  top: 7px;
+}
+.itemFilled-2Fo7lr {
+  border-radius: 9px;
+}
+.theme-dark .feature-2IUcBI, .card-2xlCYc {
+  background-color: var(--cyan-background-secondary);
+  border-radius: 16px !important;
+  box-shadow: var(--cyan-elevation-shadow);
+}
+.lookFilled-1H2Jvj.colorPrimary-2-Lusz {
+  background-color: var(--cyan-background-secondary);
+  border-radius: 8px !important;
+  border: 1px solid var(--cyan-accent-color);
+}
+.cardWrapper-1bSePP {
+  border-radius: 16px;
+}
+.border-2Vy6FN.speaking-7QZEkv {
+  -webkit-box-shadow: inset 0 0 0 3px var(--cyan-accent-color),inset 0 0 0 4px var(--black-500);
+  box-shadow: inset 0 0 0 3px var(--cyan-accent-color),inset 0 0 0 4px var(--black-500);
 }
