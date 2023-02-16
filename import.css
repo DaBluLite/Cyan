@@ -2489,3 +2489,11 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
 .platform-win .container-1eFtFS::before, .platform-osx .container-1eFtFS::before {
   height: calc((100% - ((var(--window-margin) * 1px)) * 2) - 22px);
 }
+#discordRadioList .radioStation:hover, #searchResultsPanel .radioStation:hover {
+  border-color: transparent !important;
+  box-shadow: var(--cyan-elevation-shadow) !important;
+  background-color: var(--cyan-background-secondary) !important;
+}
+#discordRadioList .radioStation, #searchResultsPanel .radioStation {
+  border-radius: 16px !important;
+}
