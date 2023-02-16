@@ -2459,3 +2459,20 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
   -webkit-box-shadow: inset 0 0 0 3px var(--cyan-accent-color),inset 0 0 0 4px var(--black-500);
   box-shadow: inset 0 0 0 3px var(--cyan-accent-color),inset 0 0 0 4px var(--black-500);
 }
+.card-2TuZPZ {
+  border-radius: 16px;
+  background-color: var(--cyan-background-secondary);
+  box-shadow: var(--cyan-elevation-shadow);
+}
+#slycraftPlayer {
+  border-radius: 16px !important;
+  background-color: var(--cyan-background-secondary) !important;
+  box-shadow: var(--cyan-elevation-shadow) !important;
+}
+#discordRadioSidebar {
+  border-radius: 16px !important;
+  box-shadow: var(--cyan-elevation-shadow) !important;
+}
+#discRadHeader {
+  border-radius: 16px 16px 0 0 !important;
+}
