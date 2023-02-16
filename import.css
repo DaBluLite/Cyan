@@ -2496,3 +2496,14 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
 #discordRadioList .radioStation, #searchResultsPanel .radioStation {
   border-radius: 16px !important;
 }
+#discRadHeader {
+  background: none !important;
+  padding-left: 30px !important;
+  width: calc(100% - 45px) !important;
+}
+#discordRadioMiniSidebar {
+  border-radius: 16px !important;
+  box-shadow: var(--cyan-elevation-shadow) !important;
+  background-color: var(--cyan-background-primary) !important;
+  backdrop-filter: blur(var(--cyan-blur-radius)) !important;
+}
