@@ -2420,13 +2420,12 @@ div:not([class="tutorialContainer-1pL9QS"]) .wrapper-3kah-n .childWrapper-1j_1ub
 section.panels-3wFtMD .container-YkUktl .flex-2S1XBF {
   height: 0 !important;
   transition: .2s;
-  opacity: 0;
+  overflow: hidden;
   margin: 0 !important;
 }
 #app-mount section.panels-3wFtMD:hover .container-YkUktl .flex-2S1XBF {
   height: 32px !important;
   transition: .2s;
-  opacity: 1;
   margin: calc(min(1px, var(--window-border-radius)) * 10) 0 !important;
 }
 section.panels-3wFtMD .avatarWrapper-1B9FTW {
