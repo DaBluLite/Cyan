@@ -2466,11 +2466,11 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
   background-color: var(--cyan-background-secondary) !important;
   box-shadow: var(--cyan-elevation-shadow) !important;
 }
-#discordRadioSidebar {
+#discordRadioSidebar, #cyanToolboxViewSidebar {
   border-radius: 16px !important;
   box-shadow: var(--cyan-elevation-shadow) !important;
 }
-#discRadHeader {
+#discRadHeader, #cyanToolboxMainHeader {
   border-radius: 16px 16px 0 0 !important;
 }
 .container-1eFtFS::before {
@@ -2496,12 +2496,12 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
 #discordRadioList .radioStation, #searchResultsPanel .radioStation {
   border-radius: 16px !important;
 }
-#discRadHeader {
+#discRadHeader, #cyanToolboxMainHeader {
   background: none !important;
   padding-left: 30px !important;
   width: calc(100% - 45px) !important;
 }
-#discordRadioMiniSidebar {
+#discordRadioMiniSidebar, #cyanToolboxToolbar {
   border-radius: 16px !important;
   box-shadow: var(--cyan-elevation-shadow) !important;
   background-color: var(--cyan-background-primary) !important;
