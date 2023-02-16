@@ -1206,10 +1206,9 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
 .sidebar-1tnWFu {
   position: relative;
   margin: calc(var(--window-margin) * 1px);
-  background-color: var( --cyan-background-primary-alt);
-  box-shadow: var( --cyan-elevation-shadow);
+  background-color: transparent;
+  box-shadow: none;
   border-radius: 0 var(--window-border-radius-calc) var(--window-border-radius-calc) 0 !important;
-  backdrop-filter: blur(var( --cyan-blur-radius));
   margin-left: 0 !important;
 }
 .platform-win .sidebar-1tnWFu, .platform-osx .sidebar-1tnWFu {
@@ -1341,7 +1340,6 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
 }
 .scroller-3X7KbA {
   background-color: transparent;
-  backdrop-filter: blur(var(--cyan-blur-radius));
 }
 .header-3OsQeK:hover,
 .header-3OsQeK:active {
@@ -1445,8 +1443,8 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
   z-index: 2;
   border-radius: var(--window-border-radius-calc) 0 0 var(--window-border-radius-calc);
   transition: .3s;
-  background-color: var(--cyan-background-primary-alt);
-  box-shadow: var(--cyan-elevation-shadow);
+  background-color: transparent;
+  box-shadow: none;
   height: calc(100% - ((var(--window-margin) * 1px)) * 2) !important;
   margin-right: 0 !important;
   width: calc(82px - (var(--window-margin) * 1px));
@@ -2475,4 +2473,19 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
 }
 #discRadHeader {
   border-radius: 16px 16px 0 0 !important;
+}
+.container-1eFtFS::before {
+  content: "";
+  background-color: var(--cyan-background-primary);
+  width: calc(240px + (calc(82px - (var(--window-margin) * 1px))));
+  border-radius: var(--window-border-radius-calc);
+  box-shadow: var(--cyan-elevation-shadow);
+  height: calc(100% - ((var(--window-margin) * 1px)) * 2);
+  position: absolute;
+  left: calc(var(--window-margin) * 1px);
+  bottom: calc(var(--window-margin) * 1px);
+  backdrop-filter: blur(var(--cyan-blur-radius));
+}
+.platform-win .container-1eFtFS::before, .platform-osx .container-1eFtFS::before {
+  height: calc((100% - ((var(--window-margin) * 1px)) * 2) - 22px);
 }
