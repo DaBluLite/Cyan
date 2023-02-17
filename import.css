@@ -2381,7 +2381,7 @@ div:not([class="tutorialContainer-1pL9QS"]) .wrapper-3kah-n .childWrapper-1j_1ub
   box-shadow: inset 0 0 0 2px var(--cyan-accent-color),inset 0 0 0 3px var(--background-floating);
 }
 .panel-2ZFCRb {
-    background: transparent;
+    background: transparent !important;
 }
 #floating-editor-window {
     max-width: unset !important;
