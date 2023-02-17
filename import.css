@@ -2318,7 +2318,7 @@ div:not([class="tutorialContainer-1pL9QS"]) .wrapper-3kah-n .childWrapper-1j_1ub
   border-width: 4px;
   border-radius: 12px !important;
 }
-.theme-dark .scroller-WSmht3, .theme-dark .scroller-3X7KbA, .theme-dark .container-YkUktl {
+.scroller-WSmht3, .scroller-3X7KbA, .container-YkUktl {
   background: transparent !important;
 }
 .userInfo-regn9W {
@@ -2340,7 +2340,7 @@ div:not([class="tutorialContainer-1pL9QS"]) .wrapper-3kah-n .childWrapper-1j_1ub
 #my-account-tab .bannerSVGWrapper-qc0szY * {
   opacity: 0 !important;
 }
-.theme-dark .themed-Hp1KC_, .container-1zzFcN {
+.themed-Hp1KC_, .container-1zzFcN {
   background: var(--cyan-background-secondary) !important;
 }
 .container-1zzFcN {
@@ -2380,7 +2380,7 @@ div:not([class="tutorialContainer-1pL9QS"]) .wrapper-3kah-n .childWrapper-1j_1ub
   -webkit-box-shadow: inset 0 0 0 2px var(--cyan-accent-color),inset 0 0 0 3px var(--background-floating);
   box-shadow: inset 0 0 0 2px var(--cyan-accent-color),inset 0 0 0 3px var(--background-floating);
 }
-.theme-dark .panel-2ZFCRb {
+.panel-2ZFCRb {
     background: transparent;
 }
 #floating-editor-window {
@@ -2439,7 +2439,7 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
 .itemFilled-2Fo7lr {
   border-radius: 9px;
 }
-.theme-dark .feature-2IUcBI, .card-2xlCYc {
+.feature-2IUcBI, .card-2xlCYc {
   background-color: var(--cyan-background-secondary);
   border-radius: 16px !important;
   box-shadow: var(--cyan-elevation-shadow);
@@ -2550,4 +2550,7 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
 }
 .controlButton-2PMNom:hover {
   box-shadow: 0 0 0 1.5px var(--cyan-accent-color), 0 2px 10px 0 rgb(0 0 0 / 20%);
+}
+.colorable-3rVGna.white-11auuQ, .colorable-3rVGna.white-11auuQ .centerIcon-JYpTUi {
+  color: var(--primary-300) !important;
 }
