@@ -2507,3 +2507,47 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
   background-color: var(--cyan-background-primary) !important;
   backdrop-filter: blur(var(--cyan-blur-radius)) !important;
 }
+.controlButton-2PMNom > svg > foreignObject {
+  mask: none !important;
+}
+.contextMenuNub-NuTZ_U {
+  border-radius: 0 56px 56px 0;
+  height: 56px;
+  width: 42px;
+  padding: 0;
+  background: transparent !important;
+  cursor: pointer;
+}
+#app-mount .contextMenuNub-NuTZ_U:hover {
+  background: var(--cyan-background-primary) !important;
+}
+.contextMenuContainer-1RO4DQ .centerButton-1IShs7 {
+  border-radius: 56px 0 0 56px;
+  height: 56px;
+  width: 28px;
+  padding: 16px 21px;
+  background-color: transparent;
+}
+.centerButton-1IShs7 {
+  background-color: transparent !important;
+  background: transparent !important;
+}
+#app-mount .centerButton-1IShs7:hover {
+  background: var(--cyan-background-primary) !important;
+}
+.contextMenuContainer-1RO4DQ {
+  width: calc(56px + 28px);
+}
+.contextMenuContainer-1RO4DQ .centerButton-1IShs7 .controlIcon-10O-4h {
+  width: 19px;
+  height: 19px;
+}
+.controlButton-2PMNom {
+  background-color: var(--cyan-background-secondary) !important;
+  border-radius: 56px;
+  box-shadow: 0 0 0 1.5px var(--cyan-background-primary), 0 2px 10px 0 rgb(0 0 0 / 20%);
+  transition: .15s;
+}
+.controlButton-2PMNom:hover {
+  box-shadow: 0 0 0 1.5px var(--cyan-accent-color), 0 2px 10px 0 rgb(0 0 0 / 20%);
+}
