@@ -1675,48 +1675,49 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
   margin: 0;
 }
 .container-1NXEtd + .panels-3wFtMD{
-   transition: 0.5s ease !important;
+  transition: 0.5s ease !important;
 }
 .container-1NXEtd + .panels-3wFtMD > .container-YkUktl .avatarWrapper-1B9FTW ~ .flex-2S1XBF{
-   margin-left: auto;
+  margin-left: auto;
 }
 .panels-3wFtMD > .container-YkUktl .flex-2S1XBF > :not(:last-child) {
-   transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .panels-3wFtMD > .container-YkUktl .flex-2S1XBF > :last-child {
-   transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 section.panels-3wFtMD .container-YkUktl .button-12Fmur {
-    width: calc(224px/3);
-    border-radius: var(--window-border-radius) !important;
+  width: calc((240px/3) - (var(--window-margin)*1px));
+  border-radius: var(--window-border-radius) !important;
+  margin: 0 calc((var(--window-margin)*1px)/2);
 }
 section.panels-3wFtMD .container-YkUktl .flex-2S1XBF {
-    width: 100% !important;
-    float: left !important;
-    height: 32px !important;
-    max-width: unset !important;
-    justify-content: stretch !important;
-    margin: calc(min(1px, var(--window-border-radius)) * 10) 0 !important;
-    flex: 0 1 auto !important;
+  width: 100% !important;
+  float: left !important;
+  height: 32px !important;
+  max-width: unset !important;
+  justify-content: stretch !important;
+  margin: calc(min(1px, var(--window-border-radius)) * 10) 0 !important;
+  flex: 0 1 auto !important;
 }
 section.panels-3wFtMD .avatarWrapper-1B9FTW {
-    width: calc(100% - 10px);
-    max-width: unset;
-    float: left;
-    padding: 7px;
-    border-radius: var(--window-border-radius) !important;
-    transition: .1s;
+  width: calc(100% - 10px);
+  max-width: unset;
+  float: left;
+  padding: 7px;
+  border-radius: var(--window-border-radius) !important;
+  transition: .1s;
 }
 section.panels-3wFtMD .avatarWrapper-1B9FTW:hover {
-    background-color: var(--background-modifier-selected);
+  background-color: var(--background-modifier-selected);
 }
 section.panels-3wFtMD .container-YkUktl {
-    display: block;
-    padding: 0 calc(min(1px, var(--window-border-radius)) * 8);
-    padding-top: calc(min(1px, var(--window-border-radius)) * 5);
+  display: block;
+  padding: 0 calc(min(1px, var(--window-border-radius)) * 8);
+  padding-top: calc(min(1px, var(--window-border-radius)) * 5);
 }
 section.panels-3wFtMD {
-    display: inline-block;
+  display: inline-block;
 }
 .withTagAsButton-OsgQ9L, .withTagless-10ooWt {
   min-width: unset;
