@@ -36,6 +36,37 @@
     --brand-experiment-830: var(--cyan-accent-color);
     --brand-experiment-860: var(--cyan-accent-color);
     --brand-experiment-900: var(--cyan-accent-color);
+    --brand-100: var(--cyan-accent-color);
+    --brand-130: var(--cyan-accent-color);
+    --brand-160: var(--cyan-accent-color);
+    --brand-200: var(--cyan-accent-color);
+    --brand-230: var(--cyan-accent-color);
+    --brand-260: var(--cyan-accent-color);
+    --brand-300: var(--cyan-accent-color);
+    --brand-330: var(--cyan-accent-color);
+    --brand-360: var(--cyan-accent-color);
+    --brand-400: var(--cyan-accent-color);
+    --brand-430: var(--cyan-accent-color);
+    --brand-460: var(--cyan-accent-color);
+    --brand: var(--cyan-accent-color);
+    --brand-500: var(--cyan-accent-color);
+    --brand-530: var(--cyan-accent-color);
+    --brand-560: var(--cyan-accent-color);
+    --brand-600: var(--cyan-accent-color);
+    --brand-630: var(--cyan-accent-color);
+    --brand-660: var(--cyan-accent-color);
+    --brand-700: var(--cyan-accent-color);
+    --brand-730: var(--cyan-accent-color);
+    --brand-760: var(--cyan-accent-color);
+    --brand-800: var(--cyan-accent-color);
+    --brand-830: var(--cyan-accent-color);
+    --brand-860: var(--cyan-accent-color);
+    --brand-900: var(--cyan-accent-color);
+    --text-brand: var(--cyan-accent-color);
+    --control-brand-foreground: var(--cyan-accent-color);
+}
+::selection {
+  background: var(--cyan-accent-color);
 }
 .theme-amoled {
   --background-lightness: -10 !important;
@@ -2561,4 +2592,63 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
   border-radius: 8px !important;
   margin-left: 7px;
   border: 1px solid var(--cyan-accent-color);
+}
+.buttons-uaqb-5 > button:hover, .buttons-uaqb-5>div:hover, .buttons-uaqb-5 > button:active, .buttons-uaqb-5>div:active {
+    background-color: var(--cyan-background-primary);
+    box-shadow: var(--cyan-elevation-shadow);
+}
+.scrollableContainer-15eg7h::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+.webkit-QgSAqd .buttons-uaqb-5 {
+    margin-right: 2px !important;
+}
+.buttons-uaqb-5 > button, .buttons-uaqb-5>div {
+    width: 34px;
+    justify-content: center;
+    border-radius: 8px;
+    margin: 0 3px;
+    transition: .2s;
+}
+.buttons-uaqb-5 {
+    height: 34px;
+    margin-top: 5px;
+}
+.invite-3uuHYQ {
+    box-shadow: var(--cyan-elevation-shadow);
+    border-radius: 16px;
+    background-color: var(--cyan-background-secondary) !important;
+}
+.lookInverted-2GrLaB.colorBrand-2M3O3N:hover {
+    background-color: var(--white-500);
+}
+.mention {
+    background-color: var(--background-secondary);
+}
+.newBadge-1LcB6t {
+    color: var(--white-500);
+}
+.guilds-2JjMmN.hidden-10MsGQ {
+    margin: 0 !important;
+}
+.wrapper-1gVUIN.fullScreen-KhZZcz, .wrapper-1gVUIN.fullScreen-KhZZcz > .callContainer-HtHELf {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+.container-1Lk8p7 {
+    background-color: var(--cyan-background-secondary);
+    border-radius: 16px;
+    box-shadow: var(--cyan-elevation-shadow);
+}
+.theme-light .rootWithShadow-2hdL2J {
+    background-color: transparent;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+.container-x8Y1ix {
+    background-color: var(--cyan-background-secondary);
+}
+.theme-light .footerSeparator-3U8YsT {
+    background: transparent;
 }
