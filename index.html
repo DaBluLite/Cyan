@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyan by DaBluLite</title>
+    <link rel="shortcut icon" href="https://dablulite.github.io/Cyan/cyan-waves-modified.png" type="image/x-icon">
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById("storyTellBtn").addEventListener("click", () => {
+                if(document.getElementById("historyText").innerHTML == "It All Starts With This") {
+                    document.getElementById("historyText").innerHTML = "Then we add a bit of that";
+                    document.getElementById("pseudoSidebar").setAttribute("style", "height: calc(100% - 30px); top: 15px; left: 15px; border-radius: 10px;");
+                    document.getElementById("pseudoChat").setAttribute("style", "height: calc(100% - 30px); top: 15px; right: 15px; width: calc(100% - 82px - 240px - 45px); border-radius: 10px;");
+                    return;
+                }
+                if(document.getElementById("historyText").innerHTML == "Then we add a bit of that") {
+                    document.getElementById("historyText").innerHTML = "We trim this a bit";
+                    document.getElementById("pseudoSidebar").setAttribute("style", "height: calc(100% - 30px - 22px); top: 37px; left: 15px; border-radius: 10px;");
+                    return;
+                }
+                if(document.getElementById("historyText").innerHTML == "We trim this a bit") {
+                    document.getElementById("historyText").innerHTML = "Then come the traffic lights";
+                    document.querySelectorAll(".trafficLight").forEach(el => {
+                        el.setAttribute("style", "transform: scale(1);");
+                    })
+                    return;
+                }
+                if(document.getElementById("historyText").innerHTML == "Then come the traffic lights") {
+                    document.getElementById("historyText").innerHTML = "Lastly the content";
+                    document.querySelectorAll(".guildBtn").forEach(el => {
+                        el.setAttribute("style", "transform: scale(1) rotate(0deg);");
+                    });
+                    document.querySelectorAll(".pseudoChannelWrapper").forEach(el => {
+                        el.setAttribute("style", "opacity: 1;");
+                    });
+                    document.getElementById("searchBoxWrapper").setAttribute("style", "opacity: 1;");
+                    document.getElementById("guildSeparator").setAttribute("style", "transform: scale(1);");
+                    document.getElementById("pseudoUserArea").setAttribute("style", "opacity: 1;");
+                    return;
+                }
+                if(document.getElementById("historyText").innerHTML == "Lastly the content") {
+                    document.getElementById("historyText").innerHTML = "And we are done, simple as that";
+                    document.getElementById("storyTellBtn").setAttribute("style", "transform: scale(0);");
+                    setTimeout(() => {
+                        document.getElementById("historyText").setAttribute("style", "opacity: 0;");
+                        setTimeout(() => {
+                            document.getElementById("cyanCustomizer").setAttribute("style", "");
+                        }, 500);
+                        setTimeout(() => {
+                            document.getElementById("historyText").setAttribute("style", "display: none;");
+                            document.getElementById("storyTellBtn").setAttribute("style", "display: none;");
+                            document.getElementById("cyanCustomizer").setAttribute("style", "opacity: 1;");
+                        }, 1000);
+                    }, 3000);
+                    return;
+                }
+            })
+            document.getElementById("cyanColorPicker").addEventListener("input", () => {
+                document.getElementById("cyanAccentColorStyle").innerHTML = `:root {--cyan-accent-color: ${document.getElementById("cyanColorPicker").value} !important;}`;
+                document.getElementById("cyanAccentColorDisplay").innerText = document.getElementById("cyanColorPicker").value;
+                document.getElementById("colorPickerBtn").setAttribute("style", `background-color: ${document.getElementById("cyanColorPicker").value};`);
+                document.getElementById("accentColorCodeblock").innerText = `--cyan-accent-color: ${document.getElementById("cyanColorPicker").value};`
+            });
+            document.getElementById("cyanBackImgInput").addEventListener("input", () => {
+                document.getElementById("cyanBackImgStyle").innerHTML = `:root {--cyan-background-img: url(${document.getElementById("cyanBackImgInput").value}) !important;}`;
+                document.getElementById("backImgCodeblock").innerText = `--cyan-background-img: url(${document.getElementById("cyanBackImgInput").value});`
+            });
+            document.getElementById("cyanAccentedBordersRadio").addEventListener("change", () => {
+                if(document.getElementById("cyanAccentedBordersRadio").checked == true) {
+                    document.getElementById("cyanAccentedBorderStyle").innerHTML = `:root {--cyan-elevation-shadow: 0 0 0 1.5px var(--cyan-accent-color), 0 2px 10px 0 rgb(0 0 0 / 60%) !important;}`;
+                    document.getElementById("boxShadowCodeblock").innerText = `--cyan-elevation-shadow: 0 0 0 1.5px var(--cyan-accent-color), 0 2px 10px 0 rgb(0 0 0 / 60%);`
+                } else {
+                    document.getElementById("cyanAccentedBorderStyle").innerHTML = `:root {--cyan-elevation-shadow: 0 0 0 1.5px rgba(180,180,180,.4), 0 2px 10px 0 rgb(0 0 0 / 60%) !important;}`;
+                    document.getElementById("boxShadowCodeblock").innerText = `--cyan-elevation-shadow: 0 0 0 1.5px rgba(180,180,180,.4), 0 2px 10px 0 rgb(0 0 0 / 60%);`
+                }
+            });
+            function triggerEvent(element, eventName) {
+                var event = document.createEvent("HTMLEvents");
+                event.initEvent(eventName, false, true);
+                element.dispatchEvent(event);
+            }
+            window.changeBoxShadow = () => {
+                document.getElementById("cyanAccentedBordersRadio").checked = !document.getElementById("cyanAccentedBordersRadio").checked;
+                triggerEvent(document.getElementById("cyanAccentedBordersRadio"), 'change');
+                if(document.getElementById("cyanAccentedBordersRadio").checked == true) {
+                    document.getElementById("boxShadowToggle").innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#43b581" class="bi bi-toggle-on" viewBox="0 0 16 16">
+                        <path d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/>
+                    </svg>
+                    `;
+                } else {
+                    document.getElementById("boxShadowToggle").innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#f04747" class="bi bi-toggle-off" viewBox="0 0 16 16">
+                        <path d="M 11,13 A 5,5 0 0 0 11,3 H 5 A 5,5 0 0 0 5,13 Z M 5,4 a 4,4 0 1 1 0,8 4,4 0 0 1 0,-8 z"></path>
+                    </svg>
+                    `;
+                }
+            }
+            window.download = (filename, text) => {
+                var element = document.createElement('a');
+                element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+                element.setAttribute('download', filename);
+
+                element.style.display = 'none';
+                document.body.appendChild(element);
+
+                element.click();
+
+                document.body.removeChild(element);
+            }
+            window.downloadCyan = () => {
+                download("Cyan.theme.css", `/**
+ * @name Cyan
+ * @description Sleek and clean, with custom background support
+ * @author DaBluLite#7409
+ * @authorId 582170007505731594
+ * @version 5.0.0
+ * @updateUrl https://dablulite.github.io/Cyan/Cyan.theme.css
+ * @source https://github.com/DaBluLite/Cyan
+ * @invite ZfPH6SDkMW
+ */
+
+/*
+Huge thanks to all the contributors of this project!
+    		       Contributors
+====================================================
+=					                           	   =
+=						                           =
+=           Custom Icons: Bootstrap Icons          =
+=          (Licensed Under the MIT Lisence)        =
+=        Darkened color scheme: maenDisease        =
+=               Code cleanup: lucism               =
+=        Additional code and help by carrot        =
+=						                           =
+=						                           =
+====================================================
+*/
+
+@import url(https://dablulite.github.io/Cyan/import.css);
+:root {
+	--cyan-background-primary: hsla(0deg 0% var(--cyan-background-lightness) / 40%);
+	${document.getElementById("boxShadowCodeblock").innerText}
+	--cyan-font: 'Montserrat', 'Open Sans';
+	${document.getElementById("backImgCodeblock").innerText}
+	--window-margin: 10;
+	--window-border-radius: 8px;
+	${document.getElementById("accentColorCodeblock").innerText}
+	--cyan-blur-radius: 10px;
+	--cyan-status-mask-background: var(--profile-body-background-color);
+}`);
+            }
+        })
+    </script>
+    <style id="cyanAccentColorStyle"></style>
+    <style id="cyanBackImgStyle"></style>
+    <style id="cyanAccentedBorderStyle"></style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+        :root {
+            --cyan-accent-color: #009f88;
+            --cyan-background-img: url(https://dablulite.github.io/Cyan/cyan-waves-4k.png);
+            --cyan-elevation-shadow: 0 0 0 1.5px rgba(180,180,180,.4), 0 2px 10px 0 rgb(0 0 0 / 60%);
+        }
+        * {
+            font-family: 'Montserrat', sans-serif;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .pageSect {
+            background-image: var(--cyan-background-img);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+        #pseudoWindow {
+            top: 80px;
+            left: 80px;
+            width: calc(100vw - 160px);
+            height: calc(100vh - 160px);
+            background-color: hsla(0deg 0% 16% / 40%);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            position: absolute;
+            display: flex;
+            box-shadow: var(--cyan-elevation-shadow);
+            flex-direction: column;
+            justify-content: center;
+        }
+        #mainThemeTitle {
+            text-align: center;
+            color: #fff;
+            font-size: 120px;
+            font-weight: lighter;
+            margin: 0;
+            margin-bottom: 40px;
+        }
+        #mainThemeSubtitle {
+            text-align: center;
+            color: #fff;
+            font-size: 40px;
+            font-weight: lighter;
+            margin: 0;
+        }
+        #pseudoSidebar {
+            height: 100%;
+            width: calc(82px + 240px);
+            background-color: hsla(0deg 0% 16% / 40%);
+            backdrop-filter: blur(10px);
+            position: absolute;
+            top: 0;
+            left: 0;
+            box-shadow: var(--cyan-elevation-shadow);
+            transition: .5s cubic-bezier(.17,.76,.58,.99);
+        }
+        #pseudoChat {
+            height: 100%;
+            width: calc(100% - 82px - 240px);
+            background-color: hsla(0deg 0% 16% / 40%);
+            backdrop-filter: blur(10px);
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-shadow: var(--cyan-elevation-shadow);
+            transition: .5s cubic-bezier(.17,.76,.58,.99);
+        }
+        #historyText {
+            text-align: center;
+            color: #fff;
+            font-size: 40px;
+            font-weight: lighter;
+            margin: 0;
+            transition: .5s cubic-bezier(.17,.76,.58,.99);
+        }
+        .trafficLight {
+            width: 14px;
+            height: 14px;
+            position: absolute;
+            top: 10px;
+            left: 17px;
+            background-size: cover;
+            background-position: center;
+            transition: .5s cubic-bezier(.17,.76,.58,.99);
+            transform: scale(0);
+            cursor: pointer;
+        }
+        #closeTraffic {
+            background-image: url(https://github.com/AI-ien/macos-titlebar/raw/main/assets/titlebutton-close%402.png);
+        }
+        #minimizeTraffic {
+            background-image: url(https://github.com/AI-ien/macos-titlebar/raw/main/assets/titlebutton-minimize%402.png);
+            left: 41px;
+        }
+        #maximizeTraffic {
+            background-image: url(https://github.com/AI-ien/macos-titlebar/raw/main/assets/titlebutton-maximize%402.png);
+            left: 65px;
+        }
+        #storyTellBtn {
+            width: fit-content;
+            text-align: center;
+            align-self: center;
+            padding: 8px 17px;
+            background: hsl(225, 8%, calc(10% * 0.6));
+            border: 1px solid var(--cyan-accent-color);
+            border-radius: 8px;
+            color: #fff;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: .5s cubic-bezier(.17,.76,.58,.99);
+        }
+        #downloadCyanBtn {
+            width: fit-content;
+            text-align: center;
+            align-self: center;
+            padding: 8px 17px;
+            background: hsl(225, 8%, calc(10% * 0.6));
+            border: 1px solid var(--cyan-accent-color);
+            border-radius: 8px;
+            color: #fff;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: .5s cubic-bezier(.17,.76,.58,.99);
+        }
+        #pseudoGuildBar {
+            height: 100%;
+            width: 72px;
+            float: left;
+        }
+        #pseudoChannelBar {
+            height: 100%;
+            width: 240px;
+            float: right;
+            display: flex;
+            flex-direction: column;
+        }
+        .guildBtn {
+            background-color: hsl(225, 8%, calc(10% * 0.6));
+            width: 48px;
+            height: 48px;
+            margin-top: 12px;
+            margin-left: 12px;
+            margin-right: 0;
+            box-shadow: var(--cyan-elevation-shadow);
+            border-radius: 50%;
+            transform: scale(0) rotate(-365deg);
+            transition: .5s cubic-bezier(.17,.76,.58,.99);
+            cursor: pointer;
+            overflow: hidden;
+        }
+        #bdServerBtn {
+            background-image: url(https://betterdiscord.app/resources/favicon/apple-icon-57x57.png);
+            background-size: cover;
+            background-position: center;
+        }
+        #cyanServerBtn {
+            background-image: url(https://dablulite.github.io/Cyan/cyan-waves.png);
+            background-size: cover;
+            background-position: center;
+        }
+        #searchBoxWrapper {
+            width: 220px;
+            height: 48px;
+            padding: 0 10px;
+            opacity: 0;
+            transition: .5s cubic-bezier(.17,.76,.58,.99);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        #pseudoSearch {
+            color: #fff;
+            width: 200px;
+            padding: 0 10px;
+            height: 28px;
+            margin: 10px 0;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 24px;
+            cursor: pointer;
+            transition: .5s cubic-bezier(.17,.76,.58,.99);
+        }
+        #guildSeparator {
+            background-color: hsl(228 6% 32.5%/0.48);
+            height: 2px;
+            width: 32px;
+            margin-top: 12px;
+            margin-left: 20px;
+            transition: .5s cubic-bezier(.17,.76,.58,.99);
+            transform: scale(0);
+        }
+        #pseudoUserArea {
+            margin: 0 10px 10px 10px;
+            width: 190px;
+            box-shadow: var(--cyan-elevation-shadow);
+            border-radius: 10px;
+            background-color: hsl(225, 8%, calc(10% * 0.6));
+            height: 39px;
+            justify-self: end;
+            padding: 12px 15px;
+            transition: .5s cubic-bezier(.17,.76,.58,.99);
+            opacity: 0;
+        }
+        #pseudoChannelList {
+            height: calc(100% - 73px - 48px);
+            width: 240px;
+        }
+        #pseudoAvatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            margin-top: 4px;
+            float: left;
+        }
+        .pseudoChannelWrapper {
+            height: 42px;
+            width: 224px;
+            margin-left: 8px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: .5s cubic-bezier(.17,.76,.58,.99);
+            opacity: 0;
+        }
+        .pseudoChannelWrapper:hover {
+            background-color: hsla(0deg 0% 16% / 40%);
+        }
+        .pseudoChannelPlaceholder {
+            height: 5px;
+            width: 160px;
+            margin-top: 18.5px;
+            margin-left: 32px;
+            background-color: #fff;
+            border-radius: 50px;
+            display: inline-block;
+        }
+        #userInfoContainer {
+            padding-left: 8px;
+            line-height: 18px;
+            font-weight: 600;
+            font-size: 14px;
+            float: left;
+            color: #fff;
+            width: fit-content;
+            display: flex;
+            height: 39px;
+            justify-content: center;
+            flex-direction: column;
+        }
+        #cyanColorPicker {
+            width: 0;
+            height: 32px;
+            border: none;
+            padding: 0;
+            background-color: transparent;
+            opacity: 0;
+        }
+        #colorPickerBtn {
+            width: 46px;
+            height: 32px;
+            border-radius: 8px;
+            display: flex;
+            float: right;
+        }
+        .property {
+            color: #fff;
+            font-weight: lighter;
+            font-size: 30px;
+            margin-right: 10px;
+        }
+        #cyanCustomizer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: .5s cubic-bezier(.17,.76,.58,.99);
+        }
+        #customizerHeader {
+            color: #fff;
+            margin: 0;
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        .propertyWrapper {
+            margin-bottom: 10px;
+        }
+        #cyanBackImgInput {
+            background-color: hsl(225, 8%, calc(10% * 0.6));
+            color: #fff;
+            border: 1.5px solid var(--cyan-accent-color);
+            padding: 10px;
+            width: 360px;
+            border-radius: 10px;
+        }
+        #boxShadowToggle {
+            cursor: pointer;
+        }
+        #rawCodeBlock {
+            border-radius: 16px;
+            box-shadow: var(--cyan-elevation-shadow);
+            background-color: hsl(225, 8%, calc(10% * 0.6));
+            color: #fff;
+            padding: 25px;
+            margin: 0;
+            transition: .5s cubic-bezier(.17,.76,.58,.99);
+            white-space: pre;
+            max-width: calc(100% - 80px);
+            overflow-x: auto;
+        }
+        #rawCodeBlock, #rawCodeBlock span {
+            font-family: 'Source Code Pro', monospace;
+            -webkit-touch-callout: all;
+            -webkit-user-select: all;
+            -khtml-user-select: all;
+            -moz-user-select: all;
+            -ms-user-select: all;
+            user-select: all;
+        }
+        #suggestionHeader {
+            color: #fff;
+            font-weight: lighter;
+            font-size: 30px;
+        }
+        :not(#rawCodeBlock),:not(#rawCodeBlock span) {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <section id="secondSect" class="pageSect">
+        <div id="pseudoTrafficLights">
+            <div class="trafficLight" id="closeTraffic"></div>
+            <div class="trafficLight" id="minimizeTraffic"></div>
+            <div class="trafficLight" id="maximizeTraffic"></div>
+        </div>
+        <div id="pseudoSidebar">
+            <div id="pseudoGuildBar">
+                <div class="guildBtn" id="discordBtn"><svg style="margin: 13px 10px; fill: #fff;"><path d="M 23.0212 1.67671 C 21.3107 0.879656 19.5079 0.318797 17.6584 0 C 17.4062 0.461742 17.1749 0.934541 16.9708 1.4184 C 15.003 1.12145 12.9974 1.12145 11.0283 1.4184 C 10.819 0.934541 10.589 0.461744 10.3368 0.00546311 C 8.48074 0.324393 6.67795 0.885118 4.96746 1.68231 C 1.56727 6.77853 0.649666 11.7538 1.11108 16.652 C 3.10102 18.1418 5.3262 19.2743 7.69177 20 C 8.22338 19.2743 8.69519 18.4993 9.09812 17.691 C 8.32996 17.3997 7.58522 17.0424 6.87684 16.6135 C 7.06531 16.4762 7.24726 16.3387 7.42403 16.1847 C 11.5911 18.1749 16.408 18.1749 20.5763 16.1847 C 20.7531 16.3332 20.9351 16.4762 21.1171 16.6135 C 20.41 17.0369 19.6639 17.3997 18.897 17.691 C 19.3052 18.4993 19.7718 19.2689 20.3021 19.9945 C 22.6677 19.2689 24.8929 18.1364 26.8828 16.6466 H 26.8893 C 27.43 10.9731 25.9665 6.04728 23.0212 1.67671 Z M 9.68041 13.6383 C 8.39754 13.6383 7.34085 12.4453 7.34085 10.994 C 7.34085 9.54272 8.37155 8.34973 9.68041 8.34973 C 10.9893 8.34973 12.0395 9.54272 12.0187 10.994 C 12.0187 12.4453 10.9828 13.6383 9.68041 13.6383 Z M 18.3161 13.6383 C 17.0332 13.6383 15.9765 12.4453 15.9765 10.994 C 15.9765 9.54272 17.0124 8.34973 18.3161 8.34973 C 19.6184 8.34973 20.6751 9.54272 20.6543 10.994 C 20.6543 12.4453 19.6184 13.6383 18.3161 13.6383 Z"></path></svg></div>
+                <div id="guildSeparator"></div>
+                <div class="guildBtn" id="bdServerBtn"></div>
+                <div class="guildBtn" id="cyanServerBtn"></div>
+                <div class="guildBtn" id="plusServerBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="hsl(145 65% 39.2%/1)" class="bi bi-plus-circle-dotted" viewBox="0 0 16 16" style="margin: 12px;">
+                    <path d="M8 0c-.176 0-.35.006-.523.017l.064.998a7.117 7.117 0 0 1 .918 0l.064-.998A8.113 8.113 0 0 0 8 0zM6.44.152c-.346.069-.684.16-1.012.27l.321.948c.287-.098.582-.177.884-.237L6.44.153zm4.132.271a7.946 7.946 0 0 0-1.011-.27l-.194.98c.302.06.597.14.884.237l.321-.947zm1.873.925a8 8 0 0 0-.906-.524l-.443.896c.275.136.54.29.793.459l.556-.831zM4.46.824c-.314.155-.616.33-.905.524l.556.83a7.07 7.07 0 0 1 .793-.458L4.46.824zM2.725 1.985c-.262.23-.51.478-.74.74l.752.66c.202-.23.418-.446.648-.648l-.66-.752zm11.29.74a8.058 8.058 0 0 0-.74-.74l-.66.752c.23.202.447.418.648.648l.752-.66zm1.161 1.735a7.98 7.98 0 0 0-.524-.905l-.83.556c.169.253.322.518.458.793l.896-.443zM1.348 3.555c-.194.289-.37.591-.524.906l.896.443c.136-.275.29-.54.459-.793l-.831-.556zM.423 5.428a7.945 7.945 0 0 0-.27 1.011l.98.194c.06-.302.14-.597.237-.884l-.947-.321zM15.848 6.44a7.943 7.943 0 0 0-.27-1.012l-.948.321c.098.287.177.582.237.884l.98-.194zM.017 7.477a8.113 8.113 0 0 0 0 1.046l.998-.064a7.117 7.117 0 0 1 0-.918l-.998-.064zM16 8a8.1 8.1 0 0 0-.017-.523l-.998.064a7.11 7.11 0 0 1 0 .918l.998.064A8.1 8.1 0 0 0 16 8zM.152 9.56c.069.346.16.684.27 1.012l.948-.321a6.944 6.944 0 0 1-.237-.884l-.98.194zm15.425 1.012c.112-.328.202-.666.27-1.011l-.98-.194c-.06.302-.14.597-.237.884l.947.321zM.824 11.54a8 8 0 0 0 .524.905l.83-.556a6.999 6.999 0 0 1-.458-.793l-.896.443zm13.828.905c.194-.289.37-.591.524-.906l-.896-.443c-.136.275-.29.54-.459.793l.831.556zm-12.667.83c.23.262.478.51.74.74l.66-.752a7.047 7.047 0 0 1-.648-.648l-.752.66zm11.29.74c.262-.23.51-.478.74-.74l-.752-.66c-.201.23-.418.447-.648.648l.66.752zm-1.735 1.161c.314-.155.616-.33.905-.524l-.556-.83a7.07 7.07 0 0 1-.793.458l.443.896zm-7.985-.524c.289.194.591.37.906.524l.443-.896a6.998 6.998 0 0 1-.793-.459l-.556.831zm1.873.925c.328.112.666.202 1.011.27l.194-.98a6.953 6.953 0 0 1-.884-.237l-.321.947zm4.132.271a7.944 7.944 0 0 0 1.012-.27l-.321-.948a6.954 6.954 0 0 1-.884.237l.194.98zm-2.083.135a8.1 8.1 0 0 0 1.046 0l-.064-.998a7.11 7.11 0 0 1-.918 0l-.064.998zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+                  </svg>
+                </div>
+                <div class="guildBtn" id="compassServerBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="hsl(145 65% 39.2%/1)" class="bi bi-compass" viewBox="0 0 16 16" style="margin: 12px;">
+                        <path d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016zm6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                        <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z"/>
+                    </svg>
+                </div>
+            </div>
+            <div id="pseudoChannelBar">
+                <div id="searchBoxWrapper">
+                    <div id="pseudoSearch">Find or start a conversation</div>
+                </div>
+                <div id="pseudoChannelList">
+                    <div class="pseudoChannelWrapper"><div class="pseudoChannelPlaceholder"></div></div>
+                    <div class="pseudoChannelWrapper"><div class="pseudoChannelPlaceholder"></div></div>
+                    <div class="pseudoChannelWrapper"><div class="pseudoChannelPlaceholder"></div></div>
+                    <div class="pseudoChannelWrapper"><div class="pseudoChannelPlaceholder"></div></div>
+                    <div class="pseudoChannelWrapper"><div class="pseudoChannelPlaceholder"></div></div>
+                    <div class="pseudoChannelWrapper"><div class="pseudoChannelPlaceholder"></div></div>
+                    <div class="pseudoChannelWrapper"><div class="pseudoChannelPlaceholder"></div></div>
+                    <div class="pseudoChannelWrapper"><div class="pseudoChannelPlaceholder"></div></div>
+                    <div class="pseudoChannelWrapper"><div class="pseudoChannelPlaceholder"></div></div>
+                    <div class="pseudoChannelWrapper"><div class="pseudoChannelPlaceholder"></div></div>
+                    <div class="pseudoChannelWrapper"><div class="pseudoChannelPlaceholder"></div></div>
+                </div>
+                <div id="pseudoUserArea">
+                    <img src="https://cdn.discordapp.com/avatars/786150381066387456/ef77b84f5524e8192aa8372c5d84d827.png" id="pseudoAvatar" alt="">
+                    <div id="userInfoContainer"><span>Aqua</span></div>
+                </div>
+            </div>
+        </div>
+        <div id="pseudoChat">
+            <h1 id="historyText">It All Starts With This</h1>
+            <button id="storyTellBtn">Next</button>
+            <div id="cyanCustomizer" style="display: none;">
+                <h1 id="customizerHeader">Try customizing Cyan to your liking:</h1>
+                <div class="propertyWrapper" id="cyanAccent"><span class="property">Accent Color:</span><span id="cyanAccentColorDisplay" class="property">#009f88</span><input type="color" id="cyanColorPicker" value="#009f88"><div style="background-color: #009f88;" id="colorPickerBtn" onclick="document.getElementById('cyanColorPicker').showPicker();"></div></div>
+                <div class="propertyWrapper" id="cyanBackImg" style="display: flex;"><span class="property">Background image URL:</span><input type="text" id="cyanBackImgInput" value="https://dablulite.github.io/Cyan/cyan-waves-4k.png"></div>
+                <div class="propertyWrapper" id="cyanAccentedBorders" style="display: flex;"><span class="property">Use accent color as border:</span><input type="checkbox" id="cyanAccentedBordersRadio" style="display: none;"><div id="boxShadowToggle" onclick="changeBoxShadow();"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#f04747" class="bi bi-toggle-off" viewBox="0 0 16 16"><path d="M 11,13 A 5,5 0 0 0 11,3 H 5 A 5,5 0 0 0 5,13 Z M 5,4 a 4,4 0 1 1 0,8 4,4 0 0 1 0,-8 z"></path></svg></div></div>
+                <div id="rawCodeBlock">:root {
+    <span id="accentColorCodeblock">--cyan-accent-color: #009f88;</span>
+    <span id="backImgCodeblock">--cyan-background-img: url(https://dablulite.github.io/Cyan/cyan-waves-4k.png);</span>
+    <span id="boxShadowCodeblock">--cyan-elevation-shadow: 0 0 0 1.5px rgba(180,180,180,.4), 0 2px 10px 0 rgb(0 0 0 / 60%);</span>
+}</div>
+                <h1 id="suggestionHeader">You can add this configuration to your custom CSS tab, or:</h1>
+                <button id="downloadCyanBtn" onclick="downloadCyan();">Download Cyan with your styles applied</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
