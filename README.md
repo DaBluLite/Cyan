@@ -4,7 +4,9 @@
 
 # Cyan
 
-A sleek and clean BetterDiscord theme, with custom background support
+### A sleek and clean BetterDiscord theme, with custom background support
+
+### NEW: Cyan Customizer just released! Check it out at https://dablulite.github.io/Cyan/ and customize Cyan to fit your style easily.
 
 [Get it on BetterDiscord](https://betterdiscord.app/theme/Cyan)
 
