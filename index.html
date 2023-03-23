@@ -5,11 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cyan by DaBluLite</title>
-    <meta content="Cyan by DaBluLite" property="og:title" />
-    <meta content="Sleek and clean BetterDiscord theme, with custom background support" property="og:description" />
-    <meta content="https://dablulite.github.io/Cyan/" property="og:url" />
-    <meta content="https://dablulite.github.io/Cyan/cyan-waves.png" property="og:image" />
-    <meta content="#009f88" data-react-helmet="true" name="theme-color" />
     <link rel="shortcut icon" href="https://dablulite.github.io/Cyan/cyan-waves-modified.png" type="image/x-icon">
     <script>
         document.addEventListener("DOMContentLoaded", () => {
@@ -29,7 +24,7 @@
                     document.getElementById("historyText").innerHTML = "Then come the traffic lights";
                     document.querySelectorAll(".trafficLight").forEach(el => {
                         el.setAttribute("style", "transform: scale(1);");
-                    })
+                    });
                     return;
                 }
                 if(document.getElementById("historyText").innerHTML == "Then come the traffic lights") {
@@ -48,6 +43,7 @@
                 if(document.getElementById("historyText").innerHTML == "Lastly the content") {
                     document.getElementById("historyText").innerHTML = "And we are done, simple as that";
                     document.getElementById("storyTellBtn").setAttribute("style", "transform: scale(0);");
+                    document.getElementById("skipIntroBtn").setAttribute("style", "transform: scale(0);");
                     setTimeout(() => {
                         document.getElementById("historyText").setAttribute("style", "opacity: 0;");
                         setTimeout(() => {
@@ -61,6 +57,36 @@
                     }, 3000);
                     return;
                 }
+            });
+            document.getElementById("skipIntroBtn").addEventListener("click", () => {
+                document.getElementById("pseudoSidebar").setAttribute("style", "height: calc(100% - 30px); top: 15px; left: 15px; border-radius: 10px;");
+                document.getElementById("pseudoChat").setAttribute("style", "height: calc(100% - 30px); top: 15px; right: 15px; width: calc(100% - 82px - 240px - 45px); border-radius: 10px;");
+                document.getElementById("pseudoSidebar").setAttribute("style", "height: calc(100% - 30px - 22px); top: 37px; left: 15px; border-radius: 10px;");
+                document.querySelectorAll(".trafficLight").forEach(el => {
+                    el.setAttribute("style", "transform: scale(1);");
+                });
+                document.querySelectorAll(".guildBtn").forEach(el => {
+                    el.setAttribute("style", "transform: scale(1) rotate(0deg);");
+                });
+                document.querySelectorAll(".pseudoChannelWrapper").forEach(el => {
+                    el.setAttribute("style", "opacity: 1;");
+                });
+                document.getElementById("searchBoxWrapper").setAttribute("style", "opacity: 1;");
+                document.getElementById("guildSeparator").setAttribute("style", "transform: scale(1);");
+                document.getElementById("pseudoUserArea").setAttribute("style", "opacity: 1;");
+                document.getElementById("historyText").setAttribute("style", "opacity: 0;");
+                document.getElementById("storyTellBtn").setAttribute("style", "transform: scale(0);");
+                document.getElementById("skipIntroBtn").setAttribute("style", "transform: scale(0);");
+                setTimeout(() => {
+                        setTimeout(() => {
+                            document.getElementById("cyanCustomizer").setAttribute("style", "");
+                        }, 100);
+                        setTimeout(() => {
+                            document.getElementById("historyText").setAttribute("style", "display: none;");
+                            document.getElementById("storyTellBtn").setAttribute("style", "display: none;");
+                            document.getElementById("cyanCustomizer").setAttribute("style", "opacity: 1;");
+                        }, 200);
+                    }, 500);
             })
             document.getElementById("cyanColorPicker").addEventListener("input", () => {
                 document.getElementById("cyanAccentColorStyle").innerHTML = `:root {--cyan-accent-color: ${document.getElementById("cyanColorPicker").value} !important;}`;
@@ -114,6 +140,17 @@
                 element.click();
 
                 document.body.removeChild(element);
+            }
+            window.downloadUrl = (path, filename) => {
+                const anchor = document.createElement('a');
+                anchor.href = path;
+                anchor.download = filename;
+                document.body.appendChild(anchor);
+                anchor.click();
+                document.body.removeChild(anchor);
+            }; 
+            window.downloadStockCyan = () => {
+                downloadUrl("https://dablulite.github.io/Cyan/Cyan.theme.css", "Cyan.theme.css");
             }
             window.downloadCyan = () => {
                 download("Cyan.theme.css", `/**
@@ -270,20 +307,7 @@ Huge thanks to all the contributors of this project!
             background-image: url(https://github.com/AI-ien/macos-titlebar/raw/main/assets/titlebutton-maximize%402.png);
             left: 65px;
         }
-        #storyTellBtn {
-            width: fit-content;
-            text-align: center;
-            align-self: center;
-            padding: 8px 17px;
-            background: hsl(225, 8%, calc(10% * 0.6));
-            border: 1px solid var(--cyan-accent-color);
-            border-radius: 8px;
-            color: #fff;
-            cursor: pointer;
-            margin-top: 10px;
-            transition: .5s cubic-bezier(.17,.76,.58,.99);
-        }
-        #downloadCyanBtn {
+        .cyanBtn {
             width: fit-content;
             text-align: center;
             align-self: center;
@@ -504,6 +528,13 @@ Huge thanks to all the contributors of this project!
             -ms-user-select: none;
             user-select: none;
         }
+        .mainButtonContainer {
+            display: flex;
+            flex-direction: row;
+            column-gap: 10px;
+            align-items: center;
+            justify-content: center;
+        }
     </style>
 </head>
 <body>
@@ -556,7 +587,7 @@ Huge thanks to all the contributors of this project!
         </div>
         <div id="pseudoChat">
             <h1 id="historyText">It All Starts With This</h1>
-            <button id="storyTellBtn">Next</button>
+            <div class="mainButtonContainer"><button id="storyTellBtn" class="cyanBtn">Next</button><button id="skipIntroBtn" class="cyanBtn">Skip Intro</button></div>
             <div id="cyanCustomizer" style="display: none;">
                 <h1 id="customizerHeader">Try customizing Cyan to your liking:</h1>
                 <div class="propertyWrapper" id="cyanAccent"><span class="property">Accent Color:</span><span id="cyanAccentColorDisplay" class="property">#009f88</span><input type="color" id="cyanColorPicker" value="#009f88"><div style="background-color: #009f88;" id="colorPickerBtn" onclick="document.getElementById('cyanColorPicker').showPicker();"></div></div>
@@ -568,7 +599,7 @@ Huge thanks to all the contributors of this project!
     <span id="boxShadowCodeblock">--cyan-elevation-shadow: 0 0 0 1.5px rgba(180,180,180,.4), 0 2px 10px 0 rgb(0 0 0 / 60%);</span>
 }</div>
                 <h1 id="suggestionHeader">You can add this configuration to your custom CSS tab, or:</h1>
-                <button id="downloadCyanBtn" onclick="downloadCyan();">Download Cyan with your styles applied</button>
+                <div class="mainButtonContainer"><button id="downloadCyanBtn" onclick="downloadCyan();" class="cyanBtn">Download Customized Cyan</button><a href="https://dablulite.github.io/Cyan/Cyan.theme.css" download="Cyan.theme.css" id="downloadStockCyanBtn" class="cyanBtn" style="text-decoration: none;">Download Stock Cyan (Ctrl + S to save)</a></div>
             </div>
         </div>
     </section>
