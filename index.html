@@ -215,6 +215,14 @@
             window.downloadStockCyan = () => {
                 downloadUrl("https://dablulite.github.io/Cyan/Cyan.theme.css", "Cyan.theme.css");
             }
+            window.copyConfig = () => {
+                navigator.clipboard.writeText(document.getElementById("rawCodeBlock").innerText).then(function() {
+                    console.log('Async: Copying to clipboard was successful!');
+                    alert("CustomCSS configuration copied!");
+                }, function(err) {
+                    console.error('Async: Could not copy text: ', err);
+                });
+            }
             window.downloadCyan = () => {
                 download("Cyan.theme.css", `/**
  * @name Cyan
@@ -355,6 +363,12 @@ Huge thanks to all the contributors of this project!
             font-weight: lighter;
             margin: 0;
             transition: .5s cubic-bezier(.17,.76,.58,.99);
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
         }
         .trafficLight {
             width: 14px;
@@ -391,6 +405,13 @@ Huge thanks to all the contributors of this project!
             cursor: pointer;
             margin-top: 10px;
             transition: .5s cubic-bezier(.17,.76,.58,.99);
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            font-size: 18px;
         }
         #pseudoGuildBar {
             height: 100%;
@@ -449,6 +470,12 @@ Huge thanks to all the contributors of this project!
             line-height: 24px;
             cursor: pointer;
             transition: .5s cubic-bezier(.17,.76,.58,.99);
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
         }
         #guildSeparator {
             background-color: hsl(228 6% 32.5%/0.48);
@@ -470,6 +497,12 @@ Huge thanks to all the contributors of this project!
             padding: 12px 15px;
             transition: .5s cubic-bezier(.17,.76,.58,.99);
             opacity: 0;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
         }
         #pseudoChannelList {
             height: calc(100% - 73px - 48px);
@@ -551,6 +584,12 @@ Huge thanks to all the contributors of this project!
             margin: 0;
             font-size: 40px;
             margin-bottom: 10px;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
         }
         .propertyWrapper {
             margin-bottom: 10px;
@@ -558,6 +597,12 @@ Huge thanks to all the contributors of this project!
             justify-content: center;
             align-items: center;
             display: flex;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
         }
         #cyanBackImgInput {
             background-color: hsl(225, 8%, calc(10% * 0.6));
@@ -584,19 +629,11 @@ Huge thanks to all the contributors of this project!
         }
         #rawCodeBlock, #rawCodeBlock span {
             font-family: 'Source Code Pro', monospace;
-            -webkit-touch-callout: all;
-            -webkit-user-select: all;
-            -khtml-user-select: all;
-            -moz-user-select: all;
-            -ms-user-select: all;
-            user-select: all;
         }
         #suggestionHeader {
             color: #fff;
             font-weight: lighter;
             font-size: 30px;
-        }
-        :not(#rawCodeBlock),:not(#rawCodeBlock span) {
             -webkit-touch-callout: none;
             -webkit-user-select: none;
             -khtml-user-select: none;
@@ -610,6 +647,12 @@ Huge thanks to all the contributors of this project!
             column-gap: 10px;
             align-items: center;
             justify-content: center;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
         }
         #backgroundHueSlider {
             position: relative;
@@ -708,7 +751,7 @@ Huge thanks to all the contributors of this project!
     <span id="tintVisibilityCodeblock">--cyan-tint-visibility: 8%;</span>
 }</div>
                 <h1 id="suggestionHeader">You can add this configuration to your custom CSS tab, or:</h1>
-                <div class="mainButtonContainer"><button id="downloadCyanBtn" onclick="downloadCyan();" class="cyanBtn">Download Customized Cyan</button><a href="https://dablulite.github.io/Cyan/Cyan.theme.css" download="Cyan.theme.css" id="downloadStockCyanBtn" class="cyanBtn" style="text-decoration: none;">Download Stock Cyan (Ctrl + S to save)</a></div>
+                <div class="mainButtonContainer"><button id="downloadCyanBtn" onclick="downloadCyan();" class="cyanBtn">Download Customized Cyan</button><a href="https://dablulite.github.io/Cyan/Cyan.theme.css" download="Cyan.theme.css" id="downloadStockCyanBtn" class="cyanBtn" style="text-decoration: none;">Download Stock Cyan (Ctrl + S to save)</a><button id="copyConfigBtn" onclick="copyConfig();" class="cyanBtn">Copy CustomCSS configuration</button></div>
             </div>
         </div>
     </section>
