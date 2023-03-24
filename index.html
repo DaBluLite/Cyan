@@ -112,6 +112,30 @@
                     document.getElementById("boxShadowCodeblock").innerText = `--cyan-elevation-shadow: 0 0 0 1.5px rgba(180,180,180,.4), 0 2px 10px 0 rgb(0 0 0 / 60%);`
                 }
             });
+            document.getElementById("glassMaterialRadio").addEventListener("change", () => {
+                if(document.getElementById("glassMaterialRadio").checked == true) {
+                    document.getElementById("glassMaterialStyle").innerHTML = `:root {--cyan-background-primary: hsl(var(--cyan-background-hue), var(--cyan-tint-visibility), calc(10% * 0.6)) !important;}`;
+                    document.getElementById("glassMaterialCodeblock").innerText = `--cyan-background-primary: hsl(var(--cyan-background-hue), var(--cyan-tint-visibility), calc(10% * 0.6));`;
+                    document.getElementById("blurRadiusCodeblock").innerText = `--cyan-blur-radius: 0;`;
+                } else {
+                    document.getElementById("glassMaterialStyle").innerHTML = `:root {--cyan-background-primary: hsla(var(--cyan-background-hue) var(--cyan-tint-visibility) var(--cyan-background-lightness) / 40%) !important;}`;
+                    document.getElementById("glassMaterialCodeblock").innerText = `--cyan-background-primary: hsla(var(--cyan-background-hue) var(--cyan-tint-visibility) var(--cyan-background-lightness) / 40%);`;
+                    document.getElementById("blurRadiusCodeblock").innerText = `--cyan-blur-radius: 10px;`;
+                }
+            });
+            document.getElementById("backgroundHueSlider").addEventListener("input", () => {
+                document.getElementById("backgroundHueCodeblock").innerText = `--cyan-background-hue: ${document.getElementById("backgroundHueSlider").value}deg;`;
+                document.getElementById("backgroundHueStyle").innerHTML = `:root {--cyan-background-hue: ${document.getElementById("backgroundHueSlider").value}deg !important;}`;
+            });
+            document.getElementById("tintVisibilityRadio").addEventListener("change", () => {
+                if(document.getElementById("tintVisibilityRadio").checked == true) {
+                    document.getElementById("tintVisibilityStyle").innerHTML = `:root {--cyan-tint-visibility: 100% !important;}`;
+                    document.getElementById("tintVisibilityCodeblock").innerText = `--cyan-tint-visibility: 100%;`
+                } else {
+                    document.getElementById("tintVisibilityStyle").innerHTML = `:root {--cyan-tint-visibility: 8% !important;}`;
+                    document.getElementById("tintVisibilityCodeblock").innerText = `--cyan-tint-visibility: 8%;`
+                }
+            });
             function triggerEvent(element, eventName) {
                 var event = document.createEvent("HTMLEvents");
                 event.initEvent(eventName, false, true);
@@ -128,6 +152,40 @@
                     `;
                 } else {
                     document.getElementById("boxShadowToggle").innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#f04747" class="bi bi-toggle-off" viewBox="0 0 16 16">
+                        <path d="M 11,13 A 5,5 0 0 0 11,3 H 5 A 5,5 0 0 0 5,13 Z M 5,4 a 4,4 0 1 1 0,8 4,4 0 0 1 0,-8 z"></path>
+                    </svg>
+                    `;
+                }
+            }
+            window.changeGlassMaterial = () => {
+                document.getElementById("glassMaterialRadio").checked = !document.getElementById("glassMaterialRadio").checked;
+                triggerEvent(document.getElementById("glassMaterialRadio"), 'change');
+                if(document.getElementById("glassMaterialRadio").checked == true) {
+                    document.getElementById("glassMaterialToggle").innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#43b581" class="bi bi-toggle-on" viewBox="0 0 16 16">
+                        <path d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/>
+                    </svg>
+                    `;
+                } else {
+                    document.getElementById("glassMaterialToggle").innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#f04747" class="bi bi-toggle-off" viewBox="0 0 16 16">
+                        <path d="M 11,13 A 5,5 0 0 0 11,3 H 5 A 5,5 0 0 0 5,13 Z M 5,4 a 4,4 0 1 1 0,8 4,4 0 0 1 0,-8 z"></path>
+                    </svg>
+                    `;
+                }
+            }
+            window.changeTintVisibility = () => {
+                document.getElementById("tintVisibilityRadio").checked = !document.getElementById("tintVisibilityRadio").checked;
+                triggerEvent(document.getElementById("tintVisibilityRadio"), 'change');
+                if(document.getElementById("tintVisibilityRadio").checked == true) {
+                    document.getElementById("tintVisibilityToggle").innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#43b581" class="bi bi-toggle-on" viewBox="0 0 16 16">
+                        <path d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/>
+                    </svg>
+                    `;
+                } else {
+                    document.getElementById("tintVisibilityToggle").innerHTML = `
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#f04747" class="bi bi-toggle-off" viewBox="0 0 16 16">
                         <path d="M 11,13 A 5,5 0 0 0 11,3 H 5 A 5,5 0 0 0 5,13 Z M 5,4 a 4,4 0 1 1 0,8 4,4 0 0 1 0,-8 z"></path>
                     </svg>
@@ -187,15 +245,17 @@ Huge thanks to all the contributors of this project!
 
 @import url(https://dablulite.github.io/Cyan/import.css);
 :root {
-	--cyan-background-primary: hsla(0deg 0% var(--cyan-background-lightness) / 40%);
+	${document.getElementById("glassMaterialCodeblock").innerText}
 	${document.getElementById("boxShadowCodeblock").innerText}
 	--cyan-font: 'Montserrat', 'Open Sans';
 	${document.getElementById("backImgCodeblock").innerText}
 	--window-margin: 10;
 	--window-border-radius: 8px;
 	${document.getElementById("accentColorCodeblock").innerText}
-	--cyan-blur-radius: 10px;
+	${document.getElementById("blurRadiusCodeblock").innerText}
 	--cyan-status-mask-background: var(--profile-body-background-color);
+    ${document.getElementById("backgroundHueCodeblock").innerText}
+    ${document.getElementById("tintVisibilityCodeblock").innerText}
 }`);
             }
         })
@@ -203,6 +263,9 @@ Huge thanks to all the contributors of this project!
     <style id="cyanAccentColorStyle"></style>
     <style id="cyanBackImgStyle"></style>
     <style id="cyanAccentedBorderStyle"></style>
+    <style id="glassMaterialStyle"></style>
+    <style id="backgroundHueStyle"></style>
+    <style id="tintVisibilityStyle"></style>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
@@ -210,6 +273,10 @@ Huge thanks to all the contributors of this project!
             --cyan-accent-color: #009f88;
             --cyan-background-img: url(https://dablulite.github.io/Cyan/cyan-waves-4k.png);
             --cyan-elevation-shadow: 0 0 0 1.5px rgba(180,180,180,.4), 0 2px 10px 0 rgb(0 0 0 / 60%);
+            --cyan-background-primary: hsla(var(--cyan-background-hue) var(--cyan-tint-visibility) var(--cyan-background-lightness) / 40%);
+            --cyan-background-lightness: 16%;
+            --cyan-background-hue: 255;
+            --cyan-tint-visibility: 8%;
         }
         * {
             font-family: 'Montserrat', sans-serif;
@@ -232,7 +299,7 @@ Huge thanks to all the contributors of this project!
             left: 80px;
             width: calc(100vw - 160px);
             height: calc(100vh - 160px);
-            background-color: hsla(0deg 0% 16% / 40%);
+            background-color: var(--cyan-background-primary);
             backdrop-filter: blur(10px);
             border-radius: 10px;
             position: absolute;
@@ -259,7 +326,7 @@ Huge thanks to all the contributors of this project!
         #pseudoSidebar {
             height: 100%;
             width: calc(82px + 240px);
-            background-color: hsla(0deg 0% 16% / 40%);
+            background-color: var(--cyan-background-primary);
             backdrop-filter: blur(10px);
             position: absolute;
             top: 0;
@@ -270,7 +337,7 @@ Huge thanks to all the contributors of this project!
         #pseudoChat {
             height: 100%;
             width: calc(100% - 82px - 240px);
-            background-color: hsla(0deg 0% 16% / 40%);
+            background-color: var(--cyan-background-primary);
             backdrop-filter: blur(10px);
             position: absolute;
             top: 0;
@@ -426,7 +493,7 @@ Huge thanks to all the contributors of this project!
             opacity: 0;
         }
         .pseudoChannelWrapper:hover {
-            background-color: hsla(0deg 0% 16% / 40%);
+            background-color: hsla(0deg 8% 16% / 40%);
         }
         .pseudoChannelPlaceholder {
             height: 5px;
@@ -487,6 +554,10 @@ Huge thanks to all the contributors of this project!
         }
         .propertyWrapper {
             margin-bottom: 10px;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            display: flex;
         }
         #cyanBackImgInput {
             background-color: hsl(225, 8%, calc(10% * 0.6));
@@ -496,7 +567,7 @@ Huge thanks to all the contributors of this project!
             width: 360px;
             border-radius: 10px;
         }
-        #boxShadowToggle {
+        #boxShadowToggle, #glassMaterialToggle, #tintVisibilityToggle {
             cursor: pointer;
         }
         #rawCodeBlock {
@@ -539,6 +610,32 @@ Huge thanks to all the contributors of this project!
             column-gap: 10px;
             align-items: center;
             justify-content: center;
+        }
+        #backgroundHueSlider {
+            position: relative;
+            z-index: 1;
+            appearance: none;
+            border-radius: 0;
+            background-color: rgba(0,0,0,0.1);
+            height: 3.5px;
+            width: 250px;
+            display: block;
+            outline: none;
+            transition: .5s cubic-bezier(.17,.76,.58,.99);
+            background: linear-gradient(to right, rgb(255,0,0), rgb(255,255,0), rgb(0,255,0),rgb(0,255,255),rgb(0,0,255),rgb(255,0,255),rgb(255,0,0));
+        }
+        #backgroundHueSlider::-webkit-slider-thumb{
+            height: 1.75em;
+            width: 1.75em;
+            border-radius: 2em;
+            appearance: none;
+            background: hsl(var(--cyan-background-hue), 100%, 50%);
+            cursor: pointer;
+            cursor: move;
+            cursor: grab;
+            cursor: -webkit-grab;
+            transition: .5s cubic-bezier(.17,.76,.58,.99);
+            box-shadow: var(--cyan-elevation-shadow);
         }
     </style>
 </head>
@@ -598,10 +695,17 @@ Huge thanks to all the contributors of this project!
                 <div class="propertyWrapper" id="cyanAccent"><span class="property">Accent Color:</span><span id="cyanAccentColorDisplay" class="property">#009f88</span><input type="color" id="cyanColorPicker" value="#009f88"><div style="background-color: #009f88;" id="colorPickerBtn" onclick="document.getElementById('cyanColorPicker').showPicker();"></div></div>
                 <div class="propertyWrapper" id="cyanBackImg" style="display: flex;"><span class="property">Background image URL:</span><input type="text" id="cyanBackImgInput" value="https://dablulite.github.io/Cyan/cyan-waves-4k.png"></div>
                 <div class="propertyWrapper" id="cyanAccentedBorders" style="display: flex;"><span class="property">Use accent color as border:</span><input type="checkbox" id="cyanAccentedBordersRadio" style="display: none;"><div id="boxShadowToggle" onclick="changeBoxShadow();"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#f04747" class="bi bi-toggle-off" viewBox="0 0 16 16"><path d="M 11,13 A 5,5 0 0 0 11,3 H 5 A 5,5 0 0 0 5,13 Z M 5,4 a 4,4 0 1 1 0,8 4,4 0 0 1 0,-8 z"></path></svg></div></div>
+                <div class="propertyWrapper" id="glassMaterial" style="display: flex;"><span class="property">Use solid background instead of glass:</span><input type="checkbox" id="glassMaterialRadio" style="display: none;"><div id="glassMaterialToggle" onclick="changeGlassMaterial();"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#f04747" class="bi bi-toggle-off" viewBox="0 0 16 16"><path d="M 11,13 A 5,5 0 0 0 11,3 H 5 A 5,5 0 0 0 5,13 Z M 5,4 a 4,4 0 1 1 0,8 4,4 0 0 1 0,-8 z"></path></svg></div></div>
+                <div class="propertyWrapper" id="tintVisibility" style="display: flex;"><span class="property">Tint visibility:</span><input type="checkbox" id="tintVisibilityRadio" style="display: none;"><div id="tintVisibilityToggle" onclick="changeTintVisibility();"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#f04747" class="bi bi-toggle-off" viewBox="0 0 16 16"><path d="M 11,13 A 5,5 0 0 0 11,3 H 5 A 5,5 0 0 0 5,13 Z M 5,4 a 4,4 0 1 1 0,8 4,4 0 0 1 0,-8 z"></path></svg></div></div>
+                <div class="propertyWrapper" id="backgroundHue" style="display: flex;"><span class="property">Background Hue:</span><input type="range" id="backgroundHueSlider" min="0" max="360" value="225"></div>
                 <div id="rawCodeBlock">:root {
     <span id="accentColorCodeblock">--cyan-accent-color: #009f88;</span>
     <span id="backImgCodeblock">--cyan-background-img: url(https://dablulite.github.io/Cyan/cyan-waves-4k.png);</span>
     <span id="boxShadowCodeblock">--cyan-elevation-shadow: 0 0 0 1.5px rgba(180,180,180,.4), 0 2px 10px 0 rgb(0 0 0 / 60%);</span>
+    <span id="glassMaterialCodeblock">--cyan-background-primary: hsla(var(--cyan-background-hue) var(--cyan-tint-visibility) var(--cyan-background-lightness) / 40%);</span>
+    <span id="blurRadiusCodeblock">--cyan-blur-radius: 10px;</span>
+    <span id="backgroundHueCodeblock">--cyan-background-hue: 225deg;</span>
+    <span id="tintVisibilityCodeblock">--cyan-tint-visibility: 8%;</span>
 }</div>
                 <h1 id="suggestionHeader">You can add this configuration to your custom CSS tab, or:</h1>
                 <div class="mainButtonContainer"><button id="downloadCyanBtn" onclick="downloadCyan();" class="cyanBtn">Download Customized Cyan</button><a href="https://dablulite.github.io/Cyan/Cyan.theme.css" download="Cyan.theme.css" id="downloadStockCyanBtn" class="cyanBtn" style="text-decoration: none;">Download Stock Cyan (Ctrl + S to save)</a></div>
