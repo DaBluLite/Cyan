@@ -2,19 +2,16 @@
 <img src="https://github.com/DaBluLite/Cyan/blob/master/cyan-addon-banner.png?raw=true"/>
 </div>
 
-<h1 background="#ff0000">Cyan</h1>
-<h2>A sleek and clean BetterDiscord theme, with custom background support</h2>
+<h1 background="#ff0000">Cyan - A sleek and clean Discord theme, with custom background support</h1>
+
+### Cyan is a sleek theme that aims to be clean, customizable and nice to the eyes.
 
 ### NEW: Cyan Customizer just released! Check it out at https://dablulite.github.io/Cyan/ and customize Cyan to fit your style easily.
 ### Spoiler: working on a neat feature for the Cyan Customizer, stay tuned.
 
-[Get it on BetterDiscord](https://betterdiscord.app/theme/Cyan)
-
-Also available through the ThemeRepo plugin by DevilBro
-
-Cyan is a sleek theme that aims to be clean, customizable and nice to the eyes.
-
-[Addons for Cyan are available here](https://github.com/DaBluLite/Cyan/tree/master/Addons)
+- [Get it on BetterDiscord](https://betterdiscord.app/theme/Cyan)
+- Also available through the ThemeRepo plugin by DevilBro
+- [Addons for Cyan are available here](https://github.com/DaBluLite/Cyan/tree/master/Addons)
 
 # Special thanks to:
 * [@ObjectiveSlayer](https://github.com/ObjectiveSlayer)/carrot#8812
