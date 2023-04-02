@@ -123,6 +123,15 @@
                     document.getElementById("blurRadiusCodeblock").innerText = `--cyan-blur-radius: 10px;`;
                 }
             });
+            document.getElementById("win11TitlebarRadio").addEventListener("change", () => {
+                if(document.getElementById("win11TitlebarRadio").checked == true) {
+                    document.getElementById("win11TitlebarStyle").innerHTML = `@import url(https://dablulite.github.io/Cyan/Addons/CyanWin10Titlebar.css);`;
+                    document.getElementById("win11TitlebarCodeblock").setAttribute("style", "");
+                } else {
+                    document.getElementById("win11TitlebarStyle").innerHTML = ``;
+                    document.getElementById("win11TitlebarCodeblock").setAttribute("style", "display: none;");
+                }
+            });
             document.getElementById("backgroundHueSlider").addEventListener("input", () => {
                 document.getElementById("backgroundHueCodeblock").innerText = `--cyan-background-hue: ${document.getElementById("backgroundHueSlider").value}deg;`;
                 document.getElementById("backgroundHueStyle").innerHTML = `:root {--cyan-background-hue: ${document.getElementById("backgroundHueSlider").value}deg !important;}`;
@@ -169,6 +178,23 @@
                     `;
                 } else {
                     document.getElementById("glassMaterialToggle").innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#f04747" class="bi bi-toggle-off" viewBox="0 0 16 16">
+                        <path d="M 11,13 A 5,5 0 0 0 11,3 H 5 A 5,5 0 0 0 5,13 Z M 5,4 a 4,4 0 1 1 0,8 4,4 0 0 1 0,-8 z"></path>
+                    </svg>
+                    `;
+                }
+            }
+            window.toggleWin11Titlebar = () => {
+                document.getElementById("win11TitlebarRadio").checked = !document.getElementById("win11TitlebarRadio").checked;
+                triggerEvent(document.getElementById("win11TitlebarRadio"), 'change');
+                if(document.getElementById("win11TitlebarRadio").checked == true) {
+                    document.getElementById("win11TitlebarToggle").innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#43b581" class="bi bi-toggle-on" viewBox="0 0 16 16">
+                        <path d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/>
+                    </svg>
+                    `;
+                } else {
+                    document.getElementById("win11TitlebarToggle").innerHTML = `
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#f04747" class="bi bi-toggle-off" viewBox="0 0 16 16">
                         <path d="M 11,13 A 5,5 0 0 0 11,3 H 5 A 5,5 0 0 0 5,13 Z M 5,4 a 4,4 0 1 1 0,8 4,4 0 0 1 0,-8 z"></path>
                     </svg>
@@ -251,6 +277,7 @@ Huge thanks to all the contributors of this project!
 ====================================================
 */
 
+${document.getElementById("win11TitlebarStyle").innerText}
 @import url(https://dablulite.github.io/Cyan/import.css);
 :root {
 	${document.getElementById("glassMaterialCodeblock").innerText}
@@ -268,6 +295,7 @@ Huge thanks to all the contributors of this project!
             }
         })
     </script>
+    <style id="win11TitlebarStyle"></style>
     <style id="cyanAccentColorStyle"></style>
     <style id="cyanBackImgStyle"></style>
     <style id="cyanAccentedBorderStyle"></style>
@@ -614,7 +642,7 @@ Huge thanks to all the contributors of this project!
             width: 360px;
             border-radius: 10px;
         }
-        #boxShadowToggle, #glassMaterialToggle, #tintVisibilityToggle {
+        #boxShadowToggle, #glassMaterialToggle, #tintVisibilityToggle, #win11TitlebarToggle {
             cursor: pointer;
         }
         #rawCodeBlock {
@@ -740,10 +768,12 @@ Huge thanks to all the contributors of this project!
                 <div class="propertyWrapper" id="cyanAccent"><span class="property">Accent Color:</span><span id="cyanAccentColorDisplay" class="property">#009f88</span><input type="color" id="cyanColorPicker" value="#009f88"><div style="background-color: #009f88;" id="colorPickerBtn" onclick="document.getElementById('cyanColorPicker').showPicker();"></div></div>
                 <div class="propertyWrapper" id="cyanBackImg" style="display: flex;"><span class="property">Background image URL:</span><input type="text" id="cyanBackImgInput" value="https://dablulite.github.io/Cyan/cyan-waves-4k.png"></div>
                 <div class="propertyWrapper" id="cyanAccentedBorders" style="display: flex;"><span class="property">Use accent color as border:</span><input type="checkbox" id="cyanAccentedBordersRadio" style="display: none;"><div id="boxShadowToggle" onclick="changeBoxShadow();"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#f04747" class="bi bi-toggle-off" viewBox="0 0 16 16"><path d="M 11,13 A 5,5 0 0 0 11,3 H 5 A 5,5 0 0 0 5,13 Z M 5,4 a 4,4 0 1 1 0,8 4,4 0 0 1 0,-8 z"></path></svg></div></div>
+                <div class="propertyWrapper" id="win11Titlebar" style="display: flex;"><span class="property">Use Win10-type titlebar:</span><input type="checkbox" id="win11TitlebarRadio" style="display: none;"><div id="win11TitlebarToggle" onclick="toggleWin11Titlebar();"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#f04747" class="bi bi-toggle-off" viewBox="0 0 16 16"><path d="M 11,13 A 5,5 0 0 0 11,3 H 5 A 5,5 0 0 0 5,13 Z M 5,4 a 4,4 0 1 1 0,8 4,4 0 0 1 0,-8 z"></path></svg></div></div>
                 <div class="propertyWrapper" id="glassMaterial" style="display: flex;"><span class="property">Use solid background instead of glass:</span><input type="checkbox" id="glassMaterialRadio" style="display: none;"><div id="glassMaterialToggle" onclick="changeGlassMaterial();"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#f04747" class="bi bi-toggle-off" viewBox="0 0 16 16"><path d="M 11,13 A 5,5 0 0 0 11,3 H 5 A 5,5 0 0 0 5,13 Z M 5,4 a 4,4 0 1 1 0,8 4,4 0 0 1 0,-8 z"></path></svg></div></div>
                 <div class="propertyWrapper" id="tintVisibility" style="display: flex;"><span class="property">Tint visibility:</span><input type="checkbox" id="tintVisibilityRadio" style="display: none;"><div id="tintVisibilityToggle" onclick="changeTintVisibility();"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#f04747" class="bi bi-toggle-off" viewBox="0 0 16 16"><path d="M 11,13 A 5,5 0 0 0 11,3 H 5 A 5,5 0 0 0 5,13 Z M 5,4 a 4,4 0 1 1 0,8 4,4 0 0 1 0,-8 z"></path></svg></div></div>
                 <div class="propertyWrapper" id="backgroundHue" style="display: flex;"><span class="property">Background Hue:</span><input type="range" id="backgroundHueSlider" min="0" max="360" value="225"></div>
-                <div id="rawCodeBlock">:root {
+                <div id="rawCodeBlock"><span id="win11TitlebarCodeblock" style="display: none;">@import url(https://dablulite.github.io/Cyan/Addons/CyanWin10Titlebar.css);</span>
+:root {
     <span id="accentColorCodeblock">--cyan-accent-color: #009f88;</span>
     <span id="backImgCodeblock">--cyan-background-img: url(https://dablulite.github.io/Cyan/cyan-waves-4k.png);</span>
     <span id="boxShadowCodeblock">--cyan-elevation-shadow: 0 0 0 1.5px rgba(180,180,180,.4), 0 2px 10px 0 rgb(0 0 0 / 60%);</span>
