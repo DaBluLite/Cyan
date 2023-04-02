@@ -1503,8 +1503,8 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
 .container-1eFtFS {
   background-color: transparent;
 }
-.scroller-3X7KbA {
-  padding: 8px 0;
+#app-mount .scroller-3X7KbA {
+  padding: calc(var(--window-margin) * 1px) 0 !important;
 }
 .embed-hKpSrO {
   background-color: var(--cyan-background-secondary);
