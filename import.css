@@ -2694,3 +2694,17 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
 .withFrame-2dL45i {
     height: 10px;
 }
+#floating-editor-window {
+    border-radius: 16px;
+    box-shadow: var(--cyan-elevation-shadow);
+}
+.searchBar-3TnChZ {
+    background-color: var(--cyan-background-secondary);
+    box-shadow: var(--cyan-elevation-shadow);
+    border-radius: 8px;
+    margin: 5px 7px;
+}
+.quickswitcher-pKcM9U {
+    box-shadow: var(--cyan-elevation-shadow);
+    border-radius: 16px;
+}
