@@ -1,0 +1,31 @@
+.base-2jDfDU, .chat-2ZfjoI, .container-2cd8Mz, .applicationStore-2nk7Lo, .noChannel-1GDIAZ, .pageWrapper-2PwDoS {
+    order: -1;
+}
+.container-1eFtFS::before {
+    left: unset !important;
+    right: calc(var(--window-margin) * 1px);
+    height: calc(100% - ((var(--window-margin) * 1px)) * 2) !important;
+}
+#app-mount .guilds-2JjMmN {
+    margin: calc(var(--window-margin) * 1px) !important;
+    margin-left: 0 !important;
+    margin-top: calc(var(--window-margin) * 1px) !important;
+    height: calc(100% - ((var(--window-margin) * 1px)) * 2) !important;
+}
+#app-mount .sidebar-1tnWFu {
+    margin: calc(var(--window-margin) * 1px) !important;
+    margin-right: 0 !important;
+    margin-top: calc(var(--window-margin) * 1px) !important;
+}
+.platform-win .chat-2ZfjoI,
+.platform-osx .chat-2ZfjoI,
+.platform-win .container-2cd8Mz,
+.platform-osx .container-2cd8Mz,
+.platform-win .applicationStore-2nk7Lo,
+.platform-osx .applicationStore-2nk7Lo,
+.platform-win .noChannel-1GDIAZ,
+.platform-osx .noChannel-1GDIAZ,
+.platform-win .pageWrapper-2PwDoS,
+.platform-osx .pageWrapper-2PwDoS {
+    margin-top: 32px !important;
+}
