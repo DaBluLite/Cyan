@@ -278,10 +278,10 @@
 }
 .bannerSVGWrapper-qc0szY {
   background-color: transparent;
-  margin: 10px;
-  width: calc(100% - 20px);
+  margin: 4px;
+  width: calc(100% - 8px);
   min-width: unset !important;
-  border-radius: var(--window-border-radius-calc);
+  border-radius: 12px;
   box-shadow: var(--cyan-elevation-shadow);
 }
 .bannerSVGWrapper-qc0szY mask{
@@ -2835,4 +2835,7 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
 #Cyan-card .bd-name::after {
   counter-reset: cyan-version var(--cyan-version);
   content: ' (Version ' counter(cyan-version) ')';
+}
+.pencilContainer-11Kuga {
+  background-color: transparent !important;
 }
