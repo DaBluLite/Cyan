@@ -566,10 +566,6 @@ aside.sidebarScrollable-2mW9Ls > div {
 .quickswitcher-pKcM9U > .scroller-2qwVWY > div > .result-u66Ywh[aria-selected="true"] {
   background-color: var(--cyan-background-primary);
 }
-.quickswitcher-pKcM9U {
-  border-radius: 10px;
-  background-color: var(--cyan-background-secondary);
-}
 .perksModalContentWrapper-3RHugb {
   background-color: var(--cyan-background-secondary);
 }
@@ -2705,7 +2701,77 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
     border-radius: 8px;
     margin: 5px 7px;
 }
+.item-2GWPIy {
+  border-radius: 8px !important;
+  padding: 10px !important;
+  overflow: visible;
+}
+.selected-1sf9UK.item-2GWPIy::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 80%;
+  width: 4px;
+  background-color: var(--cyan-accent-color);
+  z-index: +3;
+  border-radius: 4px;
+}
+.menu-2TXYjN:not([id="account"]) {
+  border-radius: 16px;
+  box-shadow: var(--cyan-elevation-shadow);
+  background-color: transparent;
+  position: relative;
+}
+.menu-2TXYjN:not([id="account"])::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 17px;
+  background-color: var(--cyan-background-primary);
+  backdrop-filter: blur(8px);
+}
+.item-5ApiZt {
+  padding: 12px;
+  border-radius: 12px;
+  width: 100%;
+}
+.menu-2TXYjN .scroller-nxCRu_ {
+  padding: 6px !important;
+  overflow-y: overlay !important;
+}
+.custom-theme-background .withBackgroundOverride-gzmZco {
+  background-color: transparent !important;
+  background: transparent !important;
+}
 .quickswitcher-pKcM9U {
-    box-shadow: var(--cyan-elevation-shadow);
-    border-radius: 16px;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+.protip-1jXzAl {
+  display: none;
+}
+.quickswitcher-pKcM9U > .input-3r5zZY {
+  box-shadow: var(--cyan-elevation-shadow);
+  backdrop-filter: blur(var(--cyan-blur-radius));
+}
+.quickswitcher-pKcM9U > .scroller-2qwVWY {
+  overflow-y: overlay !important;
+  padding: 12px !important;
+  border-radius: 16px;
+  box-shadow: var(--cyan-elevation-shadow);
+  margin-right: 0 !important;
+  background-color: var(--cyan-background-primary) !important;
+  backdrop-filter: blur(var(--cyan-blur-radius));
+}
+.result-u66Ywh .content-vQY7Mf {
+  padding: 8px;
+  height: fit-content !important;
+}
+.quickswitcher-pKcM9U > .scroller-2qwVWY > div > .result-u66Ywh {
+  height: fit-content !important;
 }
