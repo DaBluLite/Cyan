@@ -26,3 +26,9 @@
 <div align='center'>
 <img src="https://github.com/DaBluLite/Cyan/blob/master/screenshots/cyan-screenshot-2.png?raw=true"/>
 </div>
+<div align='center'>
+<img src="https://github.com/DaBluLite/Cyan/blob/master/screenshots/cyan-screenshot-3.png?raw=true"/>
+</div>
+<div align='center'>
+<img src="https://github.com/DaBluLite/Cyan/blob/master/screenshots/cyan-screenshot-4.png?raw=true"/>
+</div>
