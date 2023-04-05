@@ -2859,3 +2859,14 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
 .avatarWrapper-3y0KZ1 {
   z-index: +1;
 }
+.textBadge-1fdDPJ {
+  height: 40px;
+  position: absolute;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-color: transparent !important;
+  background: linear-gradient(90deg, rgba(0,0,0,0) 10%, var(--cyan-accent-color) 150%);
+  border-radius: 0 8px 8px 0;
+}
