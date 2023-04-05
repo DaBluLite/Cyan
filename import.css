@@ -107,13 +107,13 @@
   fill: var(--header-primary) !important;
 }
 .messageContent-2t3eCI {
-  color: #fff !important;
+  color: var(--header-primary) !important;
 }
 .overlayBackground-2Zjm9f {
   box-shadow: var(--cyan-elevation-shadow);
 }
 .heroButtons-357iJy > .button-1U79Hu:hover {
-  color: white;
+  color: var(--header-primary);
 }
 
 /*Bigger Channel Bar*/
@@ -501,7 +501,7 @@ aside.sidebarScrollable-2mW9Ls > div {
 }
 .mention {
   background: var(--brand-experiment) !important;
-  color: white !important;
+  color: var(--header-primary) !important;
   opacity: .5;
 }
 .root-g14mjS {
@@ -1141,7 +1141,7 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
   border: none !important;
 }
 .footer-31IekZ .lookFilled-yCfaCM {
-  color: white;
+  color: var(--header-primary);
 }
 .toolbar-37BrJ5 {
   background-color: var(--cyan-background-elevated);
@@ -1391,12 +1391,12 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
   background-color: transparent;
 }
 #channels * {
-    color: white !important;
+    color: var(--header-primary) !important;
 }
 .members-3WRCEx,
 .members-3WRCEx > div {
   background-color: transparent !important;
-  color: white !important;
+  color: var(--header-primary) !important;
 }
 .scrollableContainer-15eg7h {
   border-radius: 10px !important;
@@ -1412,7 +1412,7 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
   border: none !important;
 }
 .privateChannels-oVe7HL * {
-  color: white !important;
+  color: var(--header-primary) !important;
 }
 .content-1jQy2l {
   background-color: transparent !important;
@@ -1663,10 +1663,10 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
   border-bottom: 1px solid var(--cyan-background-tertiary);
   margin-bottom: 10px;
   padding-bottom: 25px !important;
-  color: white;
+  color: var(--header-primary);
 }
 .subText-OGOWMj > div {
-  color: white;
+  color: var(--header-primary);
 }
 .scroller-18M1mG {
   border-radius: 10px;
@@ -1975,7 +1975,7 @@ margin-top: 0;
 }
 #appearance-tab.contentColumn-1C7as6> :not([class]):first-child>.children-1xdcWE>div:nth-child(2) [role="radiogroup"] .item-2idW98 .radioBar-3w9XY- {
     background: linear-gradient(180deg, #000 10%, #00000000 100%);
-    color: #fff;
+    color: var(--header-primary);
 }
 #appearance-tab.contentColumn-1C7as6> :not([class]):first-child>.children-1xdcWE>div:nth-child(2) [role="radiogroup"] .item-2idW98[aria-checked="true"] {
     border: 5px solid var(--cyan-accent-color);
