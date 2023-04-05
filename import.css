@@ -2856,13 +2856,6 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
   border-radius: 30px !important;
   backdrop-filter: blur(var(--cyan-blur-radius));
 }
-.customStatusSection-2TRu5f, .usernameSection-2d814A {
-  text-align: right;
-}
-.overlayBackground-1KgwVi {
-  margin-top: -32px;
-  border-radius: 0 0 16px 16px;
-}
 .avatarWrapper-3y0KZ1 {
   z-index: +1;
 }
