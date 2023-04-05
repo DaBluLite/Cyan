@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url(//dablulite.github.io/CyanBootstrapIcons/import.css);
 :root {
+    --cyan-version: 6;
     --cyan-background-primary-alt: var(--cyan-background-primary);
     --cyan-background-secondary: var(--background-floating);
     --cyan-background-tertiary: var(--background-primary);
@@ -2774,4 +2775,64 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
 }
 .quickswitcher-pKcM9U > .scroller-2qwVWY > div > .result-u66Ywh {
   height: fit-content !important;
+}
+.userInfo-regn9W {
+  position: absolute;
+  z-index: +1;
+  top: 0;
+  padding: 10px 10px 0 10px !important;
+}
+.userInfo-regn9W > div:not([class]), #app-mount .userInfo-regn9W > button {
+  background-color: var(--cyan-background-secondary) !important;
+}
+.userInfo-regn9W > div:not([class]) {
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: var(--cyan-elevation-shadow);
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  top: 25px;
+  position: absolute;
+  left: 25px;
+}
+#app-mount .userInfo-regn9W > button {
+  margin-top: 10px !important;
+  position: absolute !important;
+  right: 10px;
+  padding: 10px !important;
+  height: fit-content;
+  width: fit-content;
+  min-width: 38px !important;
+  border-radius: 50% !important;
+  background-color: transparent !important;
+  box-shadow: var(--cyan-elevation-shadow);
+}
+.userTag-2qPxEZ {
+  margin-bottom: 0 !important;
+}
+.accountProfileCard-lbN7n- {
+  background-color: transparent !important;
+}
+#app-mount .userInfo-regn9W > button > div::before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-pencil-square' viewBox='0 0 16 16'%3E%3Cpath d='M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z'/%3E%3Cpath fill-rule='evenodd' d='M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z'/%3E%3C/svg%3E");
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-30%);
+}
+#app-mount .userInfo-regn9W > button > div {
+  color: transparent;
+  font-size: 0;
+}
+.lookFilled-1H2Jvj.colorPrimary-2-Lusz {
+  color: var(--header-primary);
+}
+.homeIcon-r0w4ny {
+  color: var(--header-primary);
+}
+#Cyan-card .bd-name::after {
+  counter-reset: cyan-version var(--cyan-version);
+  content: ' (Version ' counter(cyan-version) ')';
 }
