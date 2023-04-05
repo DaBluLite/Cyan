@@ -367,6 +367,12 @@
 }
 .background-3d_SjE {
   background-color: transparent;
+  margin-top: 0;
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - 18px);
+  padding: 15px;
+  margin: 10px;
 }
 .fieldList-in8WkP {
   background-color: transparent;
@@ -377,7 +383,7 @@
 .field-21XZwa {
   width: calc((100%/3) - ((20/3) * 1px));
   border-radius: 8px;
-  background-color: var(--background-primary);
+  background-color: var(--cyan-background-secondary);
   height: 108px;
   max-height: none;
   flex-flow: column;
@@ -388,6 +394,7 @@
   position: relative;
   overflow-y: scroll;
   height: 125px;
+  box-shadow: var(--cyan-elevation-shadow);
 }
 .field-21XZwa::-webkit-scrollbar {
   width: 0;
@@ -2331,13 +2338,13 @@ div:not([class="tutorialContainer-1pL9QS"]) .wrapper-3kah-n .childWrapper-1j_1ub
   padding: 16px 16px 0 30px;
 }
 .avatar-3mTjvZ {
-  left: 50%;
-  transform: translateX(-50%);
-  top: 55px;
+  left: 35px;
+  top: 35px;
+  z-index: +1;
 }
 #my-account-tab .bannerSVGWrapper-qc0szY {
-  min-height: 170px !important;
-  max-height: 170px !important;
+  min-height: 340px !important;
+  max-height: 340px !important;
   background-color: var(--cyan-accent-color);
   background-image: var(--cyan-background-img);
   background-position: center;
@@ -2789,13 +2796,14 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
   padding: 10px;
   border-radius: 10px;
   box-shadow: var(--cyan-elevation-shadow);
-  height: fit-content;
   justify-content: center;
   align-items: center;
   display: flex;
   top: 25px;
   position: absolute;
   left: 25px;
+  height: 100px;
+  padding-left: 100px;
 }
 #app-mount .userInfo-regn9W > button {
   margin-top: 10px !important;
@@ -2838,4 +2846,23 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
 }
 .pencilContainer-11Kuga {
   background-color: transparent !important;
+}
+.premiumIconWrapper-yyGDql {
+  display: none;
+}
+.profileBadges-31rDHI {
+  top: -38px;
+  right: 8px;
+  border-radius: 30px !important;
+  backdrop-filter: blur(var(--cyan-blur-radius));
+}
+.customStatusSection-2TRu5f, .usernameSection-2d814A {
+  text-align: right;
+}
+.overlayBackground-1KgwVi {
+  margin-top: -32px;
+  border-radius: 0 0 16px 16px;
+}
+.avatarWrapper-3y0KZ1 {
+  z-index: +1;
 }
