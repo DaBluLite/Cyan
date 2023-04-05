@@ -2709,12 +2709,12 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
     border-radius: 8px;
     margin: 5px 7px;
 }
-.item-2GWPIy {
+.sidebarRegion-1VBisG .item-2GWPIy {
   border-radius: 8px !important;
   padding: 10px !important;
   overflow: visible;
 }
-.selected-1sf9UK.item-2GWPIy::before {
+.sidebarRegion-1VBisG .selected-1sf9UK.item-2GWPIy::before {
   content: "";
   position: absolute;
   left: -7px;
