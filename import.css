@@ -1786,8 +1786,8 @@ section.panels-3wFtMD {
 .bannerSVGWrapper-2CLfzN {
   margin: 5px;
   width: calc(100% - 10px);
-  border-radius: 8px;
-  box-shadow: var(--cyan-elevation-shadow);
+  border-radius: 12px;
+  min-width: 330px !important;
 }
 .bannerSVGWrapper-2CLfzN > foreignObject {
   mask: none;
