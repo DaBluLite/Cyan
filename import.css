@@ -2932,3 +2932,23 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
 #my-account-tab .accountProfileCard-lbN7n- {
   overflow: visible !important;
 }
+.avatarSpeaking-36V2PN {
+  box-shadow: inset 0 0 0 2px var(--cyan-accent-color),inset 0 0 0 3px var(--background-secondary);
+}
+.participantsButton-1WBdFP {
+  padding: 8px;
+  box-shadow: 0 0 0 1.5px var(--cyan-background-primary), 0 2px 10px 0 rgb(0 0 0 / 20%);
+  background-color: var(--cyan-background-secondary);
+  backdrop-filter: blur(16px);
+  transition: .2s;
+}
+.participantsButton-1WBdFP:hover {
+  box-shadow: var(--cyan-elevation-shadow);
+  background-color: var(--cyan-background-primary);
+}
+.participantsButton-1WBdFP svg {
+  padding: 4px;
+}
+.actionRow-3j2A_N {
+  margin-bottom: 20px;
+}
