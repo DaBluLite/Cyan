@@ -442,12 +442,25 @@
   padding-left: 30px !important;
 }
 .body-1Ukv50 {
-  background-color: var(--background-secondary);
   margin: 15px;
   width: calc(100% - 30px);
   border-radius: 8px;
   border: none;
+}
+.overlayBackground-2aa7wt {
+  border-radius: 16px;
+  box-shadow: 0 0 0 1.5px var(--cyan-background-primary), 0 2px 10px 0 rgb(0 0 0 / 20%);
+}
+.userPopoutOuter-1OHwPL {
   box-shadow: var(--cyan-elevation-shadow);
+  border-radius: 16px;
+}
+.userPopoutInner-nv9Y92:before {
+  border-radius: 16px !important;
+}
+.root-8LYsGj {
+  border-radius: 16px;
+  box-shadow: var(--cyan-elevation-shadow) !important;
 }
 #discordRadioBtn {
   background-color: var(--cyan-background-secondary) !important;
@@ -1770,11 +1783,14 @@ section.panels-3wFtMD {
 :is(.withTagAsButton-OsgQ9L, .withTagless-10ooWt) .avatar-1EWyVD {
   transition: opacity .2s ease, filter .2s ease, -webkit-filter .2s ease;
 }
-.popoutBanner-3cqRD9, .banner-1YaD3N {
+.bannerSVGWrapper-2CLfzN {
   margin: 5px;
   width: calc(100% - 10px);
   border-radius: 8px;
   box-shadow: var(--cyan-elevation-shadow);
+}
+.bannerSVGWrapper-2CLfzN > foreignObject {
+  mask: none;
 }
 .menu-1QACrS#account > .scroller-1bVxF5 .popoutBanner-3cqRD9 {
   margin: 0;
@@ -2846,9 +2862,9 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
   counter-reset: cyan-version var(--cyan-version);
   content: ' (Version ' counter(cyan-version) ')';
 }
-.pencilContainer-11Kuga {
+.pencilContainer-18TrEJ {
   right: unset !important;
-  left: 90px;
+  left: 95px;
   top: unset !important;
   bottom: 0;
   background-color: var(--profile-body-background-color);
@@ -2951,4 +2967,8 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
 }
 .actionRow-3j2A_N {
   margin-bottom: 20px;
+}
+.avatarWrapperNormal-ahVUaC {
+  background-color: var(--cyan-background-secondary);
+  box-shadow: 0 0 0 5px var(--cyan-background-secondary);
 }
