@@ -448,8 +448,9 @@
   border: none;
 }
 .overlayBackground-2aa7wt {
-  border-radius: 16px;
-  box-shadow: 0 0 0 1.5px var(--cyan-background-primary), 0 2px 10px 0 rgb(0 0 0 / 20%);
+  background-color: transparent;
+  overflow: overlay !important;
+  margin-top: 0;
 }
 .userPopoutOuter-1OHwPL {
   box-shadow: var(--cyan-elevation-shadow);
@@ -2971,4 +2972,36 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
 .avatarWrapperNormal-ahVUaC {
   background-color: var(--cyan-background-secondary);
   box-shadow: 0 0 0 5px var(--cyan-background-secondary);
+}
+.userText-1_v2Cq {
+  margin-bottom: 4px;
+}
+.section-28YDOf:has(.note-1NN2aP) {
+  display: none;
+}
+.divider-1QVlfF {
+  display: none;
+}
+.scroller-15bIdk {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.scroller-15bIdk::-webkit-scrollbar {
+  display: none;
+}
+.scroller-15bIdk > .section-28YDOf {
+  background-color: var(--cyan-background-secondary);
+  margin-left: 2px !important;
+  border-radius: 4px !important;
+  box-shadow: 0 0 0 1.5px var(--cyan-background-primary), 0 2px 10px 0 rgb(0 0 0 / 20%);
+  padding: 8px;
+  overflow: overlay !important;
+}
+.scroller-15bIdk > .section-28YDOf:first-child {
+  border-radius: 16px 16px 4px 4px !important;
+}
+.scroller-15bIdk > .section-28YDOf:nth-last-child(2):has(.messageInputContainer-24qqTx), .scroller-15bIdk > .section-28YDOf:nth-last-child(3):has(.title-3CjiSS), .scroller-15bIdk > .section-28YDOf:nth-last-child(3):has(.activity-3uaYny), .scroller-15bIdk > .section-28YDOf:nth-last-child(4):has(.title-3CjiSS) {
+  border-radius: 4px 4px 16px 16px !important;
 }
