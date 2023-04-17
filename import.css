@@ -3021,3 +3021,6 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
 .accountProfilePopoutWrapper-3GskID #account {
     border-radius: 8px;
 }
+.pencilIcon-z04-c5 {
+    color: var(--header-primary);
+}
