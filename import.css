@@ -750,7 +750,7 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
   margin-top: 10px !important;
 }
 .winButtonClose-3Q8ZH5 > svg {
-  background-image: url(https://github.com/AI-ien/macos-titlebar/raw/main/assets/titlebutton-close%402.png) !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 85.4 85.4' viewBox='0 0 85.4 85.4'%3E%3Cg clip-rule='evenodd' fill-rule='evenodd'%3E%3Cpath d='m42.7 85.4c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7-42.7 19.1-42.7 42.7 19.1 42.7 42.7 42.7z' fill='%23e24b41'/%3E%3Cpath d='m42.7 81.8c21.6 0 39.1-17.5 39.1-39.1s-17.5-39.1-39.1-39.1-39.1 17.5-39.1 39.1 17.5 39.1 39.1 39.1z' fill='%23ed6a5f'/%3E%3C/g%3E%3C/svg%3E") !important;
   background-size: contain !important;
 }
 .winButtonClose-3Q8ZH5 > svg > polygon {
@@ -758,11 +758,11 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
   fill: transparent !important;
 }
 .winButtonMinMax-3RsPUg > svg {
-  background-image: url(https://github.com/AI-ien/macos-titlebar/raw/main/assets/titlebutton-maximize%402.png) !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 85.4 85.4' viewBox='0 0 85.4 85.4'%3E%3Cg clip-rule='evenodd' fill-rule='evenodd'%3E%3Cpath d='m42.7 85.4c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7-42.7 19.1-42.7 42.7 19.1 42.7 42.7 42.7z' fill='%232dac2f'/%3E%3Cpath d='m42.7 81.8c21.6 0 39.1-17.5 39.1-39.1s-17.5-39.1-39.1-39.1-39.1 17.5-39.1 39.1 17.5 39.1 39.1 39.1z' fill='%2361c555'/%3E%3C/g%3E%3C/svg%3E") !important;
   background-size: contain !important;
 }
 .winButtonMinMax-3RsPUg:last-child > svg {
-  background-image: url(https://github.com/AI-ien/macos-titlebar/raw/main/assets/titlebutton-minimize%402.png) !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 85.4 85.4' viewBox='0 0 85.4 85.4'%3E%3Cg clip-rule='evenodd' fill-rule='evenodd'%3E%3Cpath d='m42.7 85.4c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7-42.7 19.1-42.7 42.7 19.1 42.7 42.7 42.7z' fill='%23e1a73e'/%3E%3Cpath d='m42.7 81.8c21.6 0 39.1-17.5 39.1-39.1s-17.5-39.1-39.1-39.1-39.1 17.5-39.1 39.1 17.5 39.1 39.1 39.1z' fill='%23f6be50'/%3E%3C/g%3E%3C/svg%3E") !important;
   background-size: contain !important;
 }
 .winButtonMinMax-3RsPUg > svg > rect {
