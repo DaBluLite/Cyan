@@ -2861,7 +2861,7 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
 }
 #Cyan-card .bd-name::after {
   counter-reset: cyan-version var(--cyan-version);
-  content: ' (Version ' counter(cyan-version) ')';
+  content: 'Version ' counter(cyan-version) '';
 }
 .pencilContainer-18TrEJ {
   right: unset !important;
@@ -3023,4 +3023,14 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
 }
 .pencilIcon-z04-c5 {
     color: var(--header-primary);
+}
+.bd-controls>.bd-addon-button>svg {
+    fill: var(--header-primary) !important;
+}
+#Cyan-card .bd-name::after {
+    border-radius: 4px;
+    border: 1px solid var(--cyan-accent-color);
+    display: inline-flex;
+    margin: 2px 6px;
+    padding: 1px;
 }
