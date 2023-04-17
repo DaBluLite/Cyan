@@ -2884,7 +2884,7 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
 .avatarWrapper-3y0KZ1 {
   z-index: +1;
 }
-.textBadge-1fdDPJ {
+.side-1lrxIh .item-2GWPIy .textBadge-1fdDPJ {
   height: 40px;
   position: absolute;
   right: 0;
@@ -3017,4 +3017,7 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
 }
 .divider-2dDziJ:has(~ #account) {
     opacity: 0;
+}
+.accountProfilePopoutWrapper-3GskID #account {
+    border-radius: 8px;
 }
