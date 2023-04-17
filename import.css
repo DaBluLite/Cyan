@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url(//dablulite.github.io/CyanBootstrapIcons/import.css);
 :root {
-    --cyan-version: 6;
+    --cyan-version: 7;
     --cyan-background-primary-alt: var(--cyan-background-primary);
     --cyan-background-secondary: var(--background-floating);
     --cyan-background-tertiary: var(--background-primary);
@@ -3033,4 +3033,192 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
     display: inline-flex;
     margin: 2px 6px;
     padding: 1px;
+}
+.searchBar-3TnChZ {
+    margin: 10px;
+    padding: 12px 16px;
+    height: fit-content;
+}
+.searchBarComponent-3N7dCG {
+    padding: 0;
+    font-size: 0 !important;
+    position: relative;
+    height: 20px !important;
+    cursor: text !important;
+}
+.userInfo-regn9W > div:not([class]) {
+    gap: 10px;
+}
+.searchBarComponent-3N7dCG::before {
+    content: "";
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'/%3E%3C/svg%3E");
+    height: 20px;
+    width: 20px;
+    background-color: var(--header-primary);
+    -webkit-mask-repeat: no-repeat;
+    float: left;
+    margin: 1px;
+}
+.searchBarComponent-3N7dCG::after {
+    content: "Search...";
+    line-height: 20px;
+    width: fit-content;
+    font-size: 16px;
+    float: left;
+    margin-left: 10px;
+}
+.backdrop-2ByYRN:has(~ .layer-fP3xEz .quickswitcher-pKcM9U) {
+    background: transparent !important;
+}
+.profilePanel-2VBkh8 {
+    margin: calc(var(--window-margin) * 1px);
+    box-shadow: var(--cyan-elevation-shadow);
+    border-radius: var(--window-border-radius-calc);
+    overflow: hidden;
+}
+.profilePanel-2VBkh8 .scrollerBase-1Pkza4 > .overlayBackground-2aa7wt {
+    border-radius: 4px;
+    box-shadow: 0 0 0 1.5px var(--cyan-background-primary), 0 2px 10px 0 rgb(0 0 0 / 60%);
+    background-color: var(--cyan-background-primary);
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+.profilePanel-2VBkh8 .scrollerBase-1Pkza4 > .overlayBackground-2aa7wt:nth-child(1), .profilePanel-2VBkh8 .scrollerBase-1Pkza4 > .overlayBackground-2aa7wt:nth-child(2) {
+    border-radius: 16px 16px 4px 4px !important;
+}
+.profilePanel-2VBkh8 .scrollerBase-1Pkza4 > .overlayBackground-2aa7wt:nth-last-child(2):not(:empty) {
+    border-radius: 4px 4px 16px 16px !important;
+}
+.profilePanel-2VBkh8 .scrollerBase-1Pkza4 > .overlayBackground-2aa7wt:empty {
+    display: none;
+}
+.profilePanel-2VBkh8 .scrollerBase-1Pkza4 > .overlayBackground-2aa7wt:nth-child(2):has(~ .overlayBackground-2aa7wt:empty) {
+    border-radius: 16px !important;
+}
+.expandedFolderBackground-1kSAf6 {
+    left: 0 !important;
+    padding-right: 19px !important;
+    border-radius: 0 8px 8px 0 !important;
+}
+.content-1gYQeQ {
+    padding: 4px 10px;
+}
+.channel-1Shao0 .layout-1LjVue {
+    padding: 4px 10px;
+}
+.member-2gU6Ar {
+    border-radius: 8px;
+}
+.member-2gU6Ar:hover, .member-2gU6Ar[aria-expanded="true"] {
+    background-color: var(--cyan-background-primary) !important;
+}
+.divider-IqmEqJ .content-3spvdd {
+    background-color: var(--cyan-background-secondary) !important;
+    box-shadow: var(--cyan-elevation-shadow) !important;
+    border-radius: 50px !important;
+}
+.divider-2rZFJK {
+    border-top: thin solid var(--cyan-accent-color);
+}
+.unreadPill-3nEWYM {
+    padding: 16px;
+    border-radius: 50px;
+    box-shadow: var(--cyan-elevation-shadow);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    right: unset;
+    background-color: var(--cyan-background-secondary) !important;
+}
+.unreadPill-3nEWYM > svg {
+    display: none;
+}
+.attachment-1PZZB2 {
+    border-radius: 8px;
+    background-color: var(--cyan-background-secondary);
+    box-shadow: var(--cyan-elevation-shadow);
+    overflow: overlay;
+    margin: 10px;
+}
+#bd-editor-controls button, .link-1-SDSV {
+    padding: 8px;
+    height: fit-content;
+    border-radius: 8px !important;
+    transition: .15s;
+}
+#bd-editor-controls button:hover, .link-1-SDSV:hover {
+    box-shadow: var(--cyan-elevation-shadow);
+}
+#bd-editor-controls .checkbox-item {
+    margin-right: 5px;
+}
+.closeButton-PCZcma {
+    transition: .15s;
+}
+.closeButton-PCZcma:hover {
+    box-shadow: var(--cyan-elevation-shadow);
+}
+.link-1-SDSV {
+    display: inline-flex;
+    width: fit-content;
+}
+.link-1-SDSV:first-of-type {
+    padding: 8px 6px;
+}
+#app-mount #Cyan-card {
+    box-shadow: var(--cyan-elevation-shadow);
+    background-image: var(--cyan-background-img) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    position: relative !important;
+    border: none !important;
+}
+#app-mount #Cyan-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--cyan-background-primary) !important;
+    backdrop-filter: blur(var(--cyan-blur-radius)) !important;
+}
+#Cyan-card .bd-addon-header, #Cyan-card .bd-description-wrap, #Cyan-card .bd-footer {
+    background-color: transparent !important;
+    z-index: +1;
+}
+.attachment-1PZZB2 > img {
+    object-position: -1000px;
+    position: relative;
+}
+.attachment-1PZZB2 > img::before {
+    content: "test";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: var(--header-primary);
+}
+.expandedFolderBackground-1kSAf6.collapsed-uGXEbi ~ div svg > foreignObject {
+    box-shadow: none !important;
+    background-color: transparent;
+}
+.premiumContainer-3GGa8Q {
+    margin: 10px;
+    border-radius: 16px;
+    overflow: hidden !important;
+}
+
+.root-1CAIjD:not(:has(> .quickswitcher-pKcM9U)) {
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: var(--cyan-elevation-shadow) !important;
+    background-color: var(--cyan-background-secondary);
+}
+.root-1CAIjD .footer-IubaaS {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
 }
