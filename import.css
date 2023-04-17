@@ -3002,6 +3002,19 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
 .scroller-15bIdk > .section-28YDOf:first-child {
   border-radius: 16px 16px 4px 4px !important;
 }
-.scroller-15bIdk > .section-28YDOf:nth-last-child(2):has(.messageInputContainer-24qqTx), .scroller-15bIdk > .section-28YDOf:nth-last-child(3):has(.title-3CjiSS), .scroller-15bIdk > .section-28YDOf:nth-last-child(3):has(.activity-3uaYny), .scroller-15bIdk > .section-28YDOf:nth-last-child(4):has(.title-3CjiSS) {
+.scroller-15bIdk > .section-28YDOf:nth-last-child(2):has(.messageInputContainer-24qqTx), .scroller-15bIdk > .section-28YDOf:nth-last-child(3):has(.title-3CjiSS), .scroller-15bIdk > .section-28YDOf:nth-last-child(3):has(.activity-3uaYny) {
   border-radius: 4px 4px 16px 16px !important;
+}
+.messageInputContainer-24qqTx {
+    border: none !important;
+}
+.input-m1-Y7Q {
+    background-color: transparent !important;
+}
+.customStatusSection-2_fKRl {
+    padding-top: 0;
+    padding-bottom: 12px;
+}
+.divider-2dDziJ:has(~ #account) {
+    opacity: 0;
 }
