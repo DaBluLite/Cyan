@@ -875,6 +875,7 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
   margin: calc(var(--window-margin) * 1px);
   border-radius: var(--window-border-radius-calc);
   box-shadow: var(--cyan-elevation-shadow);
+  backdrop-filter: blur(var(--cyan-blur-radius));
 }
 .homeWrapper-L4ors0 {
   background-color: transparent;
