@@ -3218,7 +3218,7 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
     border-radius: 16px;
     overflow: hidden !important;
 }
-.root-1CAIjD:not(:has(> .quickswitcher-pKcM9U)):not(.modal-3Crloo) {
+.root-1CAIjD:not(:has(> .quickswitcher-pKcM9U)):not(.modal-3Crloo):not(.carouselModal-1eUFoq) {
     overflow: hidden;
     border-radius: 16px;
     box-shadow: var(--cyan-elevation-shadow) !important;
