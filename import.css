@@ -3,7 +3,7 @@
 @import url(//dablulite.github.io/CyanBootstrapIcons/import.css);
 :root {
     --cyan-version: 7;
-    --cyan-subversion: 7;
+    --cyan-subversion: 2;
     --cyan-background-primary-alt: var(--cyan-background-primary);
     --cyan-background-secondary: var(--background-floating);
     --cyan-background-tertiary: var(--background-primary);
