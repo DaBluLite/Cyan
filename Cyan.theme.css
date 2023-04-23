@@ -32,10 +32,10 @@ Huge thanks to all the contributors of this project!
 	--cyan-elevation-shadow: 0 0 0 1px rgba(180,180,180,.4), 0 2px 10px 0 rgb(0 0 0 / 60%);
 	--cyan-font: 'Montserrat', 'Open Sans';
 	--cyan-background-img: url(https://dablulite.github.io/Cyan/cyan-waves.png);
-	/*for a 4K version of the background use: url(https://dablulite.github.io/Cyan/cyan-waves-4k.png)*/
 	--window-margin: 10;
 	--window-border-radius: 8px;
 	--cyan-accent-color: #009f88;
 	--cyan-blur-radius: 10px;
 	--cyan-status-mask-background: var(--profile-body-background-color);
+	--cyan-text-shadow: 1;
 }
