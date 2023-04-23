@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url(//dablulite.github.io/CyanBootstrapIcons/import.css);
 :root {
-    --cyan-version: 7;
-    --cyan-subversion: 2;
+    --cyan-version: 8;
+    --cyan-subversion: 0;
     --cyan-background-primary-alt: var(--cyan-background-primary);
     --cyan-background-secondary: var(--background-floating);
     --cyan-background-tertiary: var(--background-primary);
@@ -3494,4 +3494,181 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
     padding: 6px;
     border-radius: 8px;
     box-shadow: var(--cyan-elevation-shadow);
+}
+.channel-1Shao0:has(a[href="/channels/@me"]), .channel-1Shao0:has(a[href="/store"]) {
+    width: calc((100%/2) - 10px);
+    margin-left: 0;
+    position: relative;
+}
+.channel-1Shao0:has(a[href="/channels/@me"]) {
+    float: left;
+    margin-left: 10px;
+}
+.channel-1Shao0:has(a[href="/store"]) {
+    float: right;
+}
+.channel-1Shao0:has(a[href="/channels/@me"]) > .interactiveSelected-29CP8y::before, .channel-1Shao0:has(a[href="/store"]) > .interactiveSelected-29CP8y::before {
+    content: none;
+}
+.channel-1Shao0:has(a[href="/channels/@me"]) > .interactiveSelected-29CP8y, .channel-1Shao0:has(a[href="/store"]) > .interactiveSelected-29CP8y {
+    background-color: var(--cyan-background-secondary) !important;
+    box-shadow: var(--cyan-elevation-shadow);
+}
+.channel-1Shao0:has(a[href="/channels/@me"]) > div, .channel-1Shao0:has(a[href="/store"]) > div {
+    position: relative;
+    padding-right: 0;
+    border-radius: var(--window-border-radius-calc);
+}
+.channel-1Shao0:has(a[href="/channels/@me"]) .content-66wMin, .channel-1Shao0:has(a[href="/store"]) .content-66wMin {
+    display: none;
+}
+.channel-1Shao0:has(a[href="/channels/@me"]) .avatar-1HDIsL, .channel-1Shao0:has(a[href="/store"]) .avatar-1HDIsL {
+    margin-right: 0;
+    width: 100%;
+}
+.scroller-WSmht3, .scroller-1ox3I2 {
+    overflow-y: overlay !important;
+    padding-right: 10px !important;
+}
+.progressBar-2yl2pi {
+    background: var(--cyan-accent-color) !important;
+    height: 5px;
+}
+.tadaIcon-313rPm {
+    display: none;
+}
+.container-2giAcK {
+    background-color: var(--cyan-background-secondary) !important;
+    box-shadow: var(--cyan-elevation-shadow);
+    border-radius: 8px;
+    margin: -10px 0 10px 10px;
+}
+.progressBarContainer-1efroK, .textArea-7J7xQx {
+    margin: 10px;
+}
+.textArea-7J7xQx {
+    margin-bottom: 0;
+}
+.progressBarContainer-1efroK {
+    margin-top: 5px;
+    background-color: var(--interactive-muted) !important;
+    height: 5px;
+}
+.subtext-1mqKVB:has(.tipSubtext-qn0l_-) {
+    display: none;
+}
+.customItem-1KYL7t > .button-1zW0-r {
+    background-color: transparent;
+    border: 1px solid var(--cyan-background-primary);
+    padding: 6px;
+    margin: 0;
+    transition: .2s;
+    width: calc(193px/4);
+    border-radius: 0;
+}
+.customItem-1KYL7t > .button-1zW0-r:hover {
+    border: 1px solid var(--cyan-accent-color);
+    background-color: var(--cyan-background-secondary);
+    box-shadow: var(--cyan-elevation-shadow);
+}
+.customItem-1KYL7t:first-child > .button-1zW0-r {
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+.customItem-1KYL7t:last-child > .button-1zW0-r {
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+.wrapper--nA0oy {
+    grid-template-columns: repeat(4,auto);
+    padding-left: 0;
+    padding-top: 0;
+}
+.customItem-1KYL7t:not(:last-child) > .button-1zW0-r {
+    border-right: none;
+}
+.customItem-1KYL7t:hover {
+    z-index: +1;
+}
+.header-16U6Vf {
+    background: center 15%/90% auto url(/assets/a81e1a44f42b5939d6e007d37b4fb48c.svg) no-repeat,linear-gradient(359.37deg,rgba(0,0,0,.5) 12.68%,hsla(0,0%,100%,0) 50.4%),linear-gradient(159.15deg,rgba(0,159,136,1) 8.49%,rgba(0,159,136,1) 32.21%,var(--cyan-accent-color) 42.9%,var(--cyan-accent-color) 66.06%,var(--cyan-accent-color) 71.4%)/*linear-gradient(45deg, rgba(0,159,136,1), var(--cyan-accent-color)) border-box*/;
+}
+.tierCard-3jmDDi, .tierCardCurrentTier-ed2p6N {
+    background-image: linear-gradient(45deg,rgba(0,159,136,1),var(--cyan-accent-color));
+}
+
+.chat-2ZfjoI:has(.channelRow-4X_3fi) > .container-ZMc96U {
+    box-shadow: none;
+    background-color: transparent !important;
+}
+.returnButton-1xn3Ii {
+    border-radius: 50px;
+    border-color: var(--cyan-background-secondary) !important;
+}
+.returnButton-1xn3Ii:hover {
+    background-color: var(--cyan-background-secondary) !important;
+    box-shadow: var(--cyan-elevation-shadow);
+}
+.chat-2ZfjoI:has(.channelRow-4X_3fi) .pageBody-23bo4p {
+    padding-left: 0;
+}
+.header-2e2w0L {
+    margin: 0;
+    margin-bottom: 16px;
+    margin-top: -25px;
+}
+.header-2e2w0L .container-2oNtJn {
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+.chat-2ZfjoI:has(.chat-2ZfjoI .channelRow-4X_3fi)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: calc(var( --window-margin) * 1px);
+    background-color: var(--cyan-background-secondary) !important;
+    box-shadow: var(--cyan-elevation-shadow);
+    width: calc(100% - ((var(--window-margin) * 1px) * 2)) !important;
+    height: calc(47px*2);
+    border-radius: var( --window-border-radius-calc);
+}
+.channelRow-4X_3fi, .channel-1Shao0, .containerDefault-YUSmu3 {
+    transition: .2s;
+}
+.channel-1Shao0, .containerDefault-YUSmu3 {
+    margin-bottom: 5px;
+}
+.containerDefault-YUSmu3, .container-2giAcK + .wrapper-NhbLHG {
+    margin: 10px;
+    margin-right: 0;
+    border-radius: 12px !important;
+    transition: .2s;
+}
+.channelRow-4X_3fi:hover, .channel-1Shao0:hover, .channel-1Shao0:has(> .interactiveSelected-29CP8y), .containerDefault-YUSmu3:hover, .containerDefault-YUSmu3.selected-2TbFuo, .container-2giAcK + .wrapper-NhbLHG:hover, .container-2giAcK + .wrapper-NhbLHG.modeSelected-3DmyhH {
+    background-color: var(--cyan-background-secondary);
+    box-shadow: var(--cyan-elevation-shadow);
+    transform: scale(1.01);
+    border-radius: 12px;
+}
+.peopleListItem-u6dGxF:hover {
+    transform: scale(1.01);
+}
+.containerDefault-3TQ5YN {
+    border-bottom: none;
+    background-color: var(--cyan-background-primary);
+    color: var(--header-primary);
+    border-radius: 50px;
+    backdrop-filter: brightness(0.5);
+    padding: 0 10px;
+    transition: .2s;
+    box-shadow: var(--cyan-elevation-shadow);
+    margin-right: 0;
+}
+.containerDefault-3TQ5YN:hover {
+    backdrop-filter: brightness(0.8);
+    box-shadow: var(--cyan-elevation-shadow);
+}
+.containerDefault-3TQ5YN:has(> .collapsed-2KOacR) {
+    box-shadow: none;
 }
