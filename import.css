@@ -3,7 +3,8 @@
 @import url(//dablulite.github.io/CyanBootstrapIcons/import.css);
 :root {
     --cyan-version: 8;
-    --cyan-subversion: 0;
+    --cyan-subversion: 1;
+    --cyan-text-shadow: 0;
     --cyan-background-primary-alt: var(--cyan-background-primary);
     --cyan-background-secondary: var(--background-floating);
     --cyan-background-tertiary: var(--background-primary);
@@ -1310,7 +1311,7 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
 .modeSelected-3DmyhH .content-1gYQeQ,
 .side-2ur1Qk .themed-2-lozF.selected-g-kMVV.item-3XjbnG,
 .interactiveSelected-29CP8y {
-  background-color: var(--cyan-background-primary) !important;
+  background-color: transparent !important;
   opacity: .9 !important;
 }
 .tabBar-ra-EuL .item-3mHhwr:hover:not(.addFriend-emTWY1), .tabBar-ra-EuL .item-3mHhwr.selected-g-kMVV:not(.addFriend-emTWY1) {
@@ -3671,4 +3672,38 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
 }
 .containerDefault-3TQ5YN:has(> .collapsed-2KOacR) {
     box-shadow: none;
+}
+.members-3WRCEx *, .scrollerContent-2SW0kQ *, .channelName-3KPsGw, .name-28HaxV {
+    text-shadow: min(1px,calc(var(--cyan-text-shadow) * 1px)) calc(min(1px,(var(--cyan-text-shadow) * 1px))*2) calc(min(1px,(var(--cyan-text-shadow) * 1px))*2) #000;
+}
+#app-mount .icon-2W8DHg {
+    filter: drop-shadow(min(1px,calc(var(--cyan-text-shadow) * 1px)) calc(min(1px,(var(--cyan-text-shadow) * 1px))*2) calc(min(1px,(var(--cyan-text-shadow) * 1px))*2) #000);
+}
+#app-mount .icon-2W8DHg path {
+    fill: #fff;
+    color: #fff !important;
+}
+#app-mount .channelName-3KPsGw, #app-mount .name-28HaxV, #app-mount .messageContent-2t3eCI, #app-mount .membersGroup-2eiWxl, #app-mount .activityText-1rR-8O {
+    color: #fff !important;
+}
+#app-mount .content-1gYQeQ {
+    background: transparent !important;
+}
+.theme-light .scroller-15bIdk > .section-28YDOf {
+    box-shadow: none !important;
+}
+.relationshipButtons-3ByBpj * {
+    color: var(--header-primary);
+}
+#app-mount .wrapper-NhbLHG.modeSelected-3DmyhH *, #app-mount .wrapper-NhbLHG:hover * {
+    color: var(--header-primary) !important;
+    fill: var(--header-primary) !important;
+    filter: none;
+    text-shadow: none;
+}
+.theme-light .expandedFolderBackground-1kSAf6 {
+    padding-right: 10px !important;
+}
+#app-mount .count-e4ipkH {
+    color: var(--header-primary) !important;
 }
