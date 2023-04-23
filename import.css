@@ -2348,7 +2348,7 @@ div:not([class="tutorialContainer-1pL9QS"]) .wrapper-3kah-n .childWrapper-1j_1ub
   border: 2px solid transparent;
 }
 .darkIcon-e6uv7V {
-  background: var(--cyan-background-secondary);
+  background: hsl(225, 8%, calc(10% * (0.6)));
 }
 .premiumFeatureBorder-1i95si {
   background: linear-gradient(var(--cyan-background-secondary),var(--cyan-background-secondary)) padding-box,linear-gradient(45deg, rgba(0,159,136,1), var(--cyan-accent-color)) border-box;
