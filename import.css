@@ -3440,7 +3440,7 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
 .divider-2rZFJK {
     margin: 20px 0;
 }
-.divider-2rZFJK > span {
+.recentMentionsPopout-2bI1ZN .divider-2rZFJK > span {
     box-shadow: 0 0 0 1.5px var(--cyan-accent-color), 0 2px 10px 0 rgb(0 0 0 / 20%);
     background-color: var(--cyan-background-secondary);
     padding: 5px 8px;
