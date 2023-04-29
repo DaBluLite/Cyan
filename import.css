@@ -3,7 +3,7 @@
 @import url(//dablulite.github.io/CyanBootstrapIcons/import.css);
 :root {
     --cyan-version: 8;
-    --cyan-subversion: 1;
+    --cyan-subversion: 2;
     --cyan-text-shadow: 0;
     --cyan-background-primary-alt: var(--cyan-background-primary);
     --cyan-background-secondary: var(--background-floating);
@@ -1041,13 +1041,16 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
 .newMessagesBar-1hF-9G {
   background-color: var(--cyan-background-floating);
   width: fit-content !important;
-  top: 10px !important;
-  border: 1px solid var(--brand-experiment) !important;
-  border-top: 1px solid var(--brand-experiment) !important;
-  border-radius: 20px !important;
+  border: 1px solid var(--cyan-accent-color) !important;
+  border-top: 1px solid var(--cyan-accent-color) !important;
   height: 40px !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
+  top: unset !important;
+  bottom: 20px !important;
+  border-radius: 50% !important;
+  left: 10px !important;
+  padding: 4px;
+  transition: .2s;
+  backdrop-filter: blur(var(--cyan-blur-radius));
 }
 
 
@@ -3780,4 +3783,38 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
 }
 .chat-2ZfjoI:has(> .fullScreen-KhZZcz), .fullScreen-KhZZcz .container-ZMc96U {
   border-radius: 0 !important;
+}
+.userProfileOuterUnthemed-11rPfA > .userPanelInnerThemed-3YO1BB {
+    background: var(--cyan-background-secondary) !important;
+}
+.rtcConnectionQualityFine-3zZrSa .pingForeground-1BRBTc, .rtcConnectionStatusConnected-1c73OK {
+    color: var(--cyan-accent-color);
+}
+#app-mount .newMessagesBar-1hF-9G:hover {
+    background-color: var(--cyan-background-primary);
+}
+.newMessagesBar-1hF-9G > .barButtonMain-2GIx4o {
+    display: none;
+}
+.newMessagesBar-1hF-9G > .barButtonAlt-TQoCdZ {
+    padding-left: 6px !important;
+    padding-right: 10px !important;
+}
+.newMessagesBar-1hF-9G > .barButtonAlt-TQoCdZ > svg {
+    transform: scale(1.3);
+}
+.jumpToPresentBar-1cEnH0 {
+    margin-bottom: 20px !important;
+    left: unset !important;
+    right: 0;
+}
+.jumpToPresentBar-1cEnH0 > .barButtonMain-2GIx4o {
+    display: none;
+}
+.jumpToPresentBar-1cEnH0 > .barButtonAlt-TQoCdZ > svg {
+    margin-left: 0;
+    transform: scale(1.3);
+}
+.jumpToPresentBar-1cEnH0 > .barButtonAlt-TQoCdZ {
+    padding: 0 4px;
 }
