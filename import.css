@@ -3,7 +3,7 @@
 @import url(//dablulite.github.io/CyanBootstrapIcons/import.css);
 :root {
     --cyan-version: 9;
-    --cyan-subversion: 1;
+    --cyan-subversion: 2;
     --cyan-text-shadow: 0;
     --cyan-background-primary-alt: var(--cyan-background-primary);
     --cyan-background-secondary: var(--background-floating);
@@ -3979,4 +3979,77 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
     transition: .15s;
     border: 1px solid var(--cyan-accent-color);
     border-radius: 50% !important;
+}
+.bd-settings-group {
+    padding: 12px;
+    border-radius: 16px;
+    transition: .2s;
+    margin-bottom: 12px;
+}
+.bd-settings-group.expanded {
+    background-color: var(--cyan-background-secondary);
+    box-shadow: var(--cyan-elevation-shadow);
+}
+.bd-settings-group .bd-setting-divider {
+    display: none;
+}
+.bd-settings-group .bd-setting-item:last-child {
+    margin-bottom: 0 !important;
+}
+.bd-settings-group~.bd-settings-group .bd-settings-title {
+    margin: 0;
+}
+.divider-3nqZNm.marginTop40-Q4o1tS {
+    display: none;
+}
+.marginTop40-Q4o1tS:not(.divider-3nqZNm) {
+    padding: 16px;
+    background-color: var(--cyan-background-secondary);
+    box-shadow: var(--cyan-elevation-shadow);
+    border-radius: 16px;
+    margin-top: 20px;
+}
+.radioBar-1XgZqD {
+    transition: .15s;
+}
+.radioBar-1XgZqD:hover {
+    box-shadow: 0 0 0 1.5px var(--radio-bar-accent-color), 0 2px 10px 0 rgb(0 0 0 / 60%);
+}
+.marginBottom40-fvAlAV {
+    padding: 16px;
+    background-color: var(--cyan-background-secondary);
+    box-shadow: var(--cyan-elevation-shadow);
+    border-radius: 16px;
+    margin-bottom: 20px;
+}
+.divider-3nqZNm {
+    display: none;
+}
+.authedApp-8q3NA9 {
+    background-color: var(--cyan-background-secondary);
+    box-shadow: var(--cyan-elevation-shadow);
+    border-radius: 16px;
+    border: none;
+}
+.animatedContainer-2laTjx {
+    border-radius: 8px;
+    box-shadow: var(--cyan-elevation-shadow);
+}
+.container-1-ERn5 {
+    margin: 10px;
+    border-radius: 8px;
+}
+.container-1-ERn5:not(.hasBanner-2IrYih) {
+    margin-bottom: 0;
+}
+.container-1-ERn5 {
+    transition: .2s;
+}
+.container-1-ERn5:not(.hasBanner-2IrYih) > .header-3OsQeK {
+    background-color: var(--cyan-background-secondary);
+    box-shadow: var(--cyan-elevation-shadow);
+    border-radius: 8px;
+}
+.header-3OsQeK {
+    transition: .2s;
 }
