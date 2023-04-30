@@ -3,7 +3,7 @@
 @import url(//dablulite.github.io/CyanBootstrapIcons/import.css);
 :root {
     --cyan-version: 9;
-    --cyan-subversion: 0;
+    --cyan-subversion: 1;
     --cyan-text-shadow: 0;
     --cyan-background-primary-alt: var(--cyan-background-primary);
     --cyan-background-secondary: var(--background-floating);
@@ -3905,4 +3905,78 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
     border-radius: 8px;
     box-shadow: var(--cyan-elevation-shadow);
     margin-bottom: calc(var(--window-margin) * 1px);
+}
+.bd-controls-advanced {
+    order: -1;
+    border-bottom: none;
+}
+.bd-addon-controls {
+    justify-content: end;
+    margin-top: -50px;
+}
+#app-mount .bd-addon-views .bd-view-button {
+    width: 38px;
+    height: 38px;
+    background-color: var(--cyan-background-primary) !important;
+    transition: .15s;
+    border: 1px solid var(--cyan-accent-color);
+    border-radius: 50%;
+    padding: 8px !important;
+}
+#app-mount .bd-addon-views .bd-view-button:hover, .bd-button.bd-button-title:hover, .bd-addon-list .bd-footer .bd-addon-button:hover {
+    background-color: var(--cyan-background-secondary) !important;
+    box-shadow: var(--cyan-elevation-shadow);
+    filter: none !important;
+}
+.bd-button.bd-button-title {
+    height: 38px;
+    padding: 6px 12px;
+    border-radius: 38px;
+    background-color: var(--cyan-background-primary) !important;
+    transition: .15s;
+    border: 1px solid var(--cyan-accent-color);
+}
+.bd-select-options {
+    border: none !important;
+    background-color: var(--cyan-background-secondary) !important;
+    transition: .15s;
+    box-shadow: var(--cyan-elevation-shadow) !important;
+    border-radius: 12px !important;
+}
+.bd-select-option {
+    margin: 4px;
+    border-radius: 8px;
+    transition: .15s;
+}
+.bd-select-option:hover {
+    background-color: var(--cyan-background-primary) !important;
+    backdrop-filter: contrast(.5);
+}
+.bd-empty-image-container {
+    width: 100%;
+    max-width: unset;
+    justify-content: center;
+}
+.bd-settings-title.bd-settings-group-title {
+    border-radius: 38px;
+    background-color: var(--cyan-background-primary);
+    transition: .15s !important;
+    border: 1px solid var(--cyan-accent-color);
+    padding: 6px 16px;
+    cursor: pointer;
+    width: fit-content;
+    gap: 10px;
+}
+.bd-settings-title.bd-settings-group-title:hover {
+    background-color: var(--cyan-background-secondary);
+    box-shadow: var(--cyan-elevation-shadow);
+}
+.bd-settings-title.bd-settings-group-title::before {
+    content: none !important;
+}
+.bd-addon-list .bd-footer .bd-addon-button {
+    background-color: var(--cyan-background-primary) !important;
+    transition: .15s;
+    border: 1px solid var(--cyan-accent-color);
+    border-radius: 50% !important;
 }
