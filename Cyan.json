@@ -1,0 +1,144 @@
+{
+    "name": "Cyan",
+    "description": "A sleek and clean Discord theme",
+    "authors": [
+        {
+            "name": "DaBluLite",
+            "id": "582170007505731594"
+        }
+    ],
+"spec": 2,
+    "semanticColors": {
+        "HEADER_PRIMARY": [
+            "#FFFFFF"
+        ],
+        "HEADER_SECONDARY": [
+            "#FAFAFA"
+        ],
+        "TEXT_NORMAL": [
+            "#FAFAFA"
+        ],
+        "TEXT_MUTED": [
+            "#EAEAEA"
+        ],
+        "INTERACTIVE_NORMAL": [
+            "#AC80BF"
+        ],
+        "INTERACTIVE_HOVER": [
+            "#D5B8E0"
+        ],
+        "INTERACTIVE_ACTIVE": [
+            "#E6A8FF"
+        ],
+        "INTERACTIVE_MUTED": [
+            "#6F517C"
+        ],
+        "BACKGROUND_PRIMARY": [
+            "#0A0A0A"
+        ],
+        "BACKGROUND_SECONDARY": [
+            "0e0f11"
+        ],
+        "BACKGROUND_SECONDARY_ALT": [
+            "#18191c"
+        ],
+        "BACKGROUND_TERTIARY": [
+            "#1E0D28"
+        ],
+        "BACKGROUND_ACCENT": [
+            "#3C2849"
+        ],
+        "BACKGROUND_FLOATING": [
+            "#0e0f11"
+        ],
+        "BACKGROUND_MOBILE_PRIMARY": [
+            "#0A0A0A"
+        ],
+        "BACKGROUND_MOBILE_SECONDARY": [
+            "#0e0f11"
+        ],
+        "BACKGROUND_NESTED_FLOATING": [
+            "#000000"
+        ],
+       
+        "BACKGROUND_MESSAGE_HOVER": [
+            "#020202"
+        ],
+        "BACKGROUND_MODIFIER_HOVER": [
+            "#6F517C"
+        ],
+        "BACKGROUND_MODIFIER_ACTIVE": [
+            "#6F517C"
+        ],
+        "BACKGROUND_MODIFIER_SELECTED": [
+            "#6F517C"
+        ],
+        "BACKGROUND_MODIFIER_ACCENT": [
+            "#6F517C"
+        ],
+        "SCROLLBAR_THIN_THUMB": [
+            "#0e0f11"
+        ],
+        "SCROLLBAR_THIN_TRACK": [
+            "transparent"
+        ],
+        "SCROLLBAR_AUTO_THUMB": [
+            "#0e0f11"
+        ],
+        "SCROLLBAR_AUTO_TRACK": [
+            "transparent"
+        ],
+        "CHANNELTEXTAREA_BACKGROUND": [
+            "#392F3F"
+        ],
+        "CHANNELS_DEFAULT": [
+            "#AC80BF"
+        ],
+        "CHANNEL_TEXT_AREA_PLACEHOLDER" : [
+            "#AC80BF"
+        ],
+        "TEXT_LINK": [
+            "#E1A4F9"
+        ],
+        "TEXT_DANGER": [
+            "#E9438B"
+        ],
+        "KEYBOARD": [
+            "#261133"
+        ],
+        "SPOILER_HIDDEN_BACKGROUND": [
+            "#130021"
+        ],
+          "SPOILER_REVEALED_BACKGROUND": [
+            "#391A4C"
+        ],
+        "CHANNEL_ICON": [
+            "#CB93DF"
+        ],
+        "CHAT_BACKGROUND": [
+            "#261133"
+        ]
+    },
+    "rawColors": {
+        "BRAND_260": "#009f88",
+        "BRAND_300": "#009f88",
+        "BRAND_330": "#009f88",
+        "BRAND_345": "#009f88",
+        "BRAND_360": "#009f88",
+        "BRAND_400": "#009f88",
+        "BRAND_430": "#009f88",
+        "BRAND_460": "#009f88",
+        "BRAND_500": "#009f88",
+        "BRAND_530": "#009f88",
+        "BRAND_560": "#009f88",
+        "BRAND_600": "#009f88",
+        "BRAND_630": "#009f88",
+        "BRAND_660": "#009f88",
+        "BRAND_700": "#009f88",
+    },
+    "background": {
+        "blur": 0.0,
+        "url": "https://dablulite.github.io/Cyan/cyan-waves.png",
+        "alpha": 0.5
+        }
+}
