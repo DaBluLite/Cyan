@@ -53,6 +53,12 @@
         ],
         "SCROLLBAR_AUTO_TRACK": [
             "transparent"
+        ],
+        "KEYBOARD": [
+            "transparent"
+        ],
+        "CHAT_BACKGROUND": [
+            "transparent"
         ]
     },
     "rawColors": {
