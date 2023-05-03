@@ -72,5 +72,11 @@
         "BRAND_660": "#009f88",
         "BRAND_700": "#009f88"
     },
-    "spec": 2
+    "spec": 2,
+    "background": {
+        "blur": 8,
+        "url": "https://raw.githubusercontent.com/DaBluLite/Cyan/master/cyan-waves.png",
+        "alpha": 0.6,
+        "color": "#0A0A0A"
+    }
 }
