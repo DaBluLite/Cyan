@@ -7,7 +7,6 @@
             "id": "582170007505731594"
         }
     ],
-"spec": 2,
     "semanticColors": {
         "HEADER_PRIMARY": [
             "#FFFFFF"
@@ -136,9 +135,5 @@
         "BRAND_660": "#009f88",
         "BRAND_700": "#009f88",
     },
-    "background": {
-        "blur": 0.0,
-        "url": "https://dablulite.github.io/Cyan/cyan-waves.png",
-        "alpha": 0.5
-        }
+    "spec": 2
 }
