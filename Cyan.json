@@ -20,32 +20,11 @@
         "TEXT_MUTED": [
             "#EAEAEA"
         ],
-        "INTERACTIVE_NORMAL": [
-            "#AC80BF"
-        ],
-        "INTERACTIVE_HOVER": [
-            "#D5B8E0"
-        ],
-        "INTERACTIVE_ACTIVE": [
-            "#E6A8FF"
-        ],
-        "INTERACTIVE_MUTED": [
-            "#6F517C"
-        ],
         "BACKGROUND_PRIMARY": [
             "#0A0A0A"
         ],
         "BACKGROUND_SECONDARY": [
             "0e0f11"
-        ],
-        "BACKGROUND_SECONDARY_ALT": [
-            "#18191c"
-        ],
-        "BACKGROUND_TERTIARY": [
-            "#1E0D28"
-        ],
-        "BACKGROUND_ACCENT": [
-            "#3C2849"
         ],
         "BACKGROUND_FLOATING": [
             "#0e0f11"
@@ -63,18 +42,6 @@
         "BACKGROUND_MESSAGE_HOVER": [
             "#020202"
         ],
-        "BACKGROUND_MODIFIER_HOVER": [
-            "#6F517C"
-        ],
-        "BACKGROUND_MODIFIER_ACTIVE": [
-            "#6F517C"
-        ],
-        "BACKGROUND_MODIFIER_SELECTED": [
-            "#6F517C"
-        ],
-        "BACKGROUND_MODIFIER_ACCENT": [
-            "#6F517C"
-        ],
         "SCROLLBAR_THIN_THUMB": [
             "#0e0f11"
         ],
@@ -86,36 +53,6 @@
         ],
         "SCROLLBAR_AUTO_TRACK": [
             "transparent"
-        ],
-        "CHANNELTEXTAREA_BACKGROUND": [
-            "#392F3F"
-        ],
-        "CHANNELS_DEFAULT": [
-            "#AC80BF"
-        ],
-        "CHANNEL_TEXT_AREA_PLACEHOLDER" : [
-            "#AC80BF"
-        ],
-        "TEXT_LINK": [
-            "#E1A4F9"
-        ],
-        "TEXT_DANGER": [
-            "#E9438B"
-        ],
-        "KEYBOARD": [
-            "#261133"
-        ],
-        "SPOILER_HIDDEN_BACKGROUND": [
-            "#130021"
-        ],
-          "SPOILER_REVEALED_BACKGROUND": [
-            "#391A4C"
-        ],
-        "CHANNEL_ICON": [
-            "#CB93DF"
-        ],
-        "CHAT_BACKGROUND": [
-            "#261133"
         ]
     },
     "rawColors": {
@@ -133,7 +70,7 @@
         "BRAND_600": "#009f88",
         "BRAND_630": "#009f88",
         "BRAND_660": "#009f88",
-        "BRAND_700": "#009f88",
+        "BRAND_700": "#009f88"
     },
     "spec": 2
 }
