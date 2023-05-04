@@ -3,7 +3,7 @@
 @import url(//dablulite.github.io/CyanBootstrapIcons/import.css);
 :root {
     --cyan-version: 9;
-    --cyan-subversion: 3;
+    --cyan-subversion: 4;
     --cyan-text-shadow: 0;
     --cyan-background-primary-alt: var(--cyan-background-primary);
     --cyan-background-secondary: var(--background-floating);
@@ -2822,7 +2822,7 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
 }
 #Cyan-card .bd-name::after {
   counter-reset: cyan-version var(--cyan-version) cyan-subversion var(--cyan-subversion);
-  content: 'Version ' counter(cyan-version)'.'counter(cyan-subversion) '';
+  content: 'Version ' counter(cyan-version)'.'counter(cyan-subversion) 'Pre-Major';
 }
 .pencilContainer-18TrEJ {
   right: unset !important;
@@ -4110,4 +4110,28 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
 }
 .container-1QtPKm.checked-16gMAN:has(.slider-HJFN2i) {
     background-color: var(--cyan-accent-color) !important;
+}
+.sidebar-1tnWFu {
+    width: 320px;
+}
+.container-1eFtFS::before {
+    width: calc(320px + (calc(82px - (var(--window-margin) * 1px))));
+}
+.panels-3wFtMD {
+    max-width: 320px;
+}
+section.panels-3wFtMD .container-YkUktl .button-12Fmur {
+    width: calc((288px/3) - (var(--window-margin)*1px));
+}
+.channel-1Shao0 {
+    max-width: 310px;
+}
+.bannerImg-2PzH6z {
+    width: 100% !important;
+}
+.bannerImage-ubW8K- {
+    width: 100% !important;
+}
+.headerContent-2SNbie > .name-3Uvkvr {
+    text-align: center;
 }
