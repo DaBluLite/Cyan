@@ -2822,7 +2822,7 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
 }
 #Cyan-card .bd-name::after {
   counter-reset: cyan-version var(--cyan-version) cyan-subversion var(--cyan-subversion);
-  content: 'Version ' counter(cyan-version)'.'counter(cyan-subversion) 'Pre-Major';
+  content: 'Version ' counter(cyan-version)'.'counter(cyan-subversion) ' (v10-RC1)';
 }
 .pencilContainer-18TrEJ {
   right: unset !important;
