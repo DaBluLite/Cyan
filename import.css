@@ -3,7 +3,7 @@
 @import url(//dablulite.github.io/CyanBootstrapIcons/import.css);
 :root {
     --cyan-version: 9;
-    --cyan-subversion: 2;
+    --cyan-subversion: 3;
     --cyan-text-shadow: 0;
     --cyan-background-primary-alt: var(--cyan-background-primary);
     --cyan-background-secondary: var(--background-floating);
@@ -648,7 +648,7 @@ aside.sidebarScrollable-2mW9Ls > div {
   fill: #515151;
 }
 .expandedFolderBackground-1kSAf6 {
-  background-color: var(--cyan-background-primary);
+  background-color: var(--cyan-background-secondary);
   border-radius: 8px !important;
   padding: 5px !important;
   left: 7px !important;
@@ -1948,7 +1948,7 @@ margin-top: 0;
     z-index: +5;
 }*/
 .expandedFolderBackground-1kSAf6:not(.collapsed-uGXEbi) {
-    box-shadow: var(--cyan-elevation-shadow);
+    border: 1px solid var(--cyan-accent-color);
 }
 .expandedFolderBackground-1kSAf6:not(.collapsed-uGXEbi) ~ ul {
     padding-bottom: 5px;
@@ -4002,4 +4002,112 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
 }
 .header-3OsQeK {
     transition: .2s;
+}
+.channel-1Shao0:has(a[href="/activities"]), .channel-1Shao0:has(a[href="/message-requests"]) {
+    display: inline-flex;
+}
+.interactive-26HRN_:focus-within, .interactive-26HRN_:hover {
+    background: transparent !important;
+}
+.fieldList-in8WkP:has(> .field-21XZwa:nth-child(4)) > .field-21XZwa {
+    width: calc((100%/4) - ((30/4) * 1px));
+}
+.fieldList-in8WkP {
+    display: flex;
+    flex-direction: row;
+}
+.fieldList-in8WkP > .field-21XZwa {
+    margin-bottom: 0 !important;
+}
+.flex-2S1XBF:has(> .backButton-bSKWLe) {
+    margin-top: 3px;
+}
+.flex-2S1XBF:has(> .backButton-bSKWLe) > .searchHeader-2Ava0c {
+    display: none;
+}
+.flex-2S1XBF:has(> .backButton-bSKWLe) > .backButton-bSKWLe {
+    border-radius: 50px;
+    background-color: var(--cyan-background-primary);
+    transition: .15s;
+    padding: 4px 8px;
+}
+.flex-2S1XBF:has(> .backButton-bSKWLe) > .backButton-bSKWLe:hover {
+    background-color: var(--cyan-background-secondary);
+    box-shadow: var(--cyan-elevation-shadow);
+}
+.flex-2S1XBF:has(> .backButton-bSKWLe) > .backButton-bSKWLe::after {
+    content: attr(aria-label);
+}
+.navList-YSb9UB > .navButton-1XuvI- {
+    width: calc((100%/3) - 8px);
+    border-radius: 50px;
+}
+.navList-YSb9UB  {
+    background-color: transparent;
+    width: calc(100%/1.5);
+    border-radius: 50px;
+    gap: 4px;
+    padding: 4px;
+    border: 1px solid var(--cyan-accent-color);
+}
+.navButtonActive-1EqC5l, .navButtonActive-1EqC5l:hover {
+    background-color: var(--cyan-background-primary);
+    backdrop-filter: brightness(3);
+}
+.nav-1zWVQw {
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    margin: 8px 0;
+}
+.contentWrapper-3vHNP2 {
+    padding-top: 5px;
+    border-radius: 16px;
+    box-shadow: var(--cyan-elevation-shadow);
+    grid-template-rows: 46px auto;
+}
+.bd-switch-body .bd-switch-slider > rect, .bd-switch-body .bd-switch-slider > svg > path {
+    fill: #fff;
+}
+.bd-switch input:checked+.bd-switch-body .bd-switch-slider > rect, .bd-switch input:checked+.bd-switch-body .bd-switch-slider > svg > path {
+    fill: var(--cyan-accent-color);
+    filter: brightness(2);
+}
+.bd-switch input:checked+.bd-switch-body {
+    background-color: var(--cyan-accent-color);
+}
+.bd-switch-body {
+    height: 14px;
+    width: 28px;
+}
+.bd-switch-body .bd-switch-slider {
+    left: -12px;
+    top: -5px;
+}
+.bd-switch input:checked+.bd-switch-body .bd-switch-slider {
+    left: 10px;
+}
+.layer-86YKbF:has(+ .layer-86YKbF) .title-31SJ6t {
+    -webkit-app-region: no-drag !important;
+}
+.container-1QtPKm .slider-HJFN2i > svg > path, .container-1QtPKm .slider-HJFN2i > rect {
+    fill: white !important;
+}
+.container-1QtPKm .slider-HJFN2i {
+    margin-top: -2px;
+    margin-left: -4px;
+}
+.container-1QtPKm.checked-16gMAN .slider-HJFN2i {
+    margin-left: 0;
+}
+.container-1QtPKm.checked-16gMAN .slider-HJFN2i > svg > path, .container-1QtPKm.checked-16gMAN .slider-HJFN2i > rect {
+    fill: var(--cyan-accent-color) !important;
+    filter: brightness(2);
+}
+.container-1QtPKm:has(.slider-HJFN2i) {
+    height: 14px;
+    width: 28px !important;
+}
+.container-1QtPKm.checked-16gMAN:has(.slider-HJFN2i) {
+    background-color: var(--cyan-accent-color) !important;
 }
