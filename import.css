@@ -1757,7 +1757,7 @@ section.panels-3wFtMD .container-YkUktl .flex-2S1XBF {
   float: left !important;
   height: 32px !important;
   max-width: unset !important;
-  justify-content: stretch !important;
+  justify-content: center !important;
   margin: calc(min(1px, var(--window-border-radius)) * 10) 0 !important;
   flex: 0 1 auto !important;
 }
@@ -2493,7 +2493,7 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
   backdrop-filter: blur(var(--cyan-blur-radius));
 }
 .platform-win .container-1eFtFS::before, .platform-osx .container-1eFtFS::before {
-  height: calc((100% - ((var(--window-margin) * 1px)) * 2) - 22px);
+  height: calc((100% - ((var(--window-margin) * 1px)) * 2) - 32px + (min(var(--window-margin), 1) * 10px));
 }
 #discordRadioList .radioStation:hover, #searchResultsPanel .radioStation:hover {
   border-color: transparent !important;
