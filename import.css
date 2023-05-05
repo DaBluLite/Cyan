@@ -1516,10 +1516,9 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
 .typing-2J1mQU {
   position: initial;
   margin-bottom: calc(var(--window-margin) * 1px);
-  background-color: var( --cyan-background-secondary);
+  background-color: transparent;
   width: fit-content !important;
-  border-radius: var(--window-border-radius-calc);
-  box-shadow: var( --cyan-elevation-shadow) !important;
+  box-shadow: none !important;
   padding-right: 7px;
 }
 .platform-win .guilds-2JjMmN, .platform-osx .guilds-2JjMmN {
