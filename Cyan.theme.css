@@ -15,13 +15,11 @@ Huge thanks to all the contributors of this project!
 		     Contributors
 ====================================================
 =						   =
-=						   =
 =           Custom Icons: Bootstrap Icons          =
 =          (Licensed Under the MIT Lisence)        =
 =        Darkened color scheme: maenDisease        =
 =               Code cleanup: lucism               =
 =        Additional code and help by carrot        =
-=						   =
 =						   =
 ====================================================
 */
@@ -29,13 +27,15 @@ Huge thanks to all the contributors of this project!
 @import url(https://dablulite.github.io/Cyan/import.css);
 :root {
 	--cyan-background-primary: hsla(0deg 0% var(--cyan-background-lightness) / 40%);
-	--cyan-elevation-shadow: 0 0 0 1px rgba(180,180,180,.4), 0 2px 10px 0 rgb(0 0 0 / 60%);
+	--cyan-elevation-shadow 0 0 0 1.5px var(--cyan-accent-color), 0 2px 10px 0 rgb(0 0 0 / 60%);
 	--cyan-font: 'Montserrat', 'Open Sans';
 	--cyan-background-img: url(https://dablulite.github.io/Cyan/cyan-waves.png);
-	--window-margin: 10;
-	--window-border-radius: 8px;
 	--cyan-accent-color: #009f88;
 	--cyan-blur-radius: 10px;
 	--cyan-status-mask-background: var(--profile-body-background-color);
 	--cyan-text-shadow: 1;
+	--window-margin: 8;
+	--window-border-radius: 8px;
+	/*--cyan-elevation-shadow: 0 0 0 1px rgba(180,180,180,.4), 0 2px 10px 0 rgb(0 0 0 / 60%);
+	--window-margin: 10;*/
 }
