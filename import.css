@@ -1452,10 +1452,14 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
   display: none;
 }
 .buttons-3dF5Kd > div {
-  border-radius: 10px !important;
+  border-radius: 50px !important;
   background-color: var(--cyan-background-secondary);
-  box-shadow: var(--cyan-elevation-shadow);
+  box-shadow: var(--cyan-elevation-shadow) !important;
   border: none;
+  transition: .2s;
+  height: fit-content;
+  padding: 4px;
+  gap: 4px;
 }
 .userPopout-2j1gM4 {
   border-radius: 10px !important;
@@ -1590,9 +1594,12 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
 .buttons-3dF5Kd > div > *:hover,
 .buttons-3dF5Kd > div > .selected-69H4ua {
   background-color: var(--cyan-background-secondary);
-  opacity: 4;
+  box-shadow: var(--cyan-elevation-shadow) !important;
 }
-
+.buttons-3dF5Kd > div > div {
+    transition: .2s;
+    border-radius: 50px !important;
+}
 .autocompleteRow-14iwvH div {
   border-radius: 10px;
 }
@@ -1633,14 +1640,6 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
 }
 .libraryHeader-2loraV {
   background: var(--cyan-background-secondary) !important;
-}
-.buttons-3dF5Kd > div > *:first-child {
-  border-top-left-radius: 10px !important;
-  border-bottom-left-radius: 10px !important;
-}
-.buttons-3dF5Kd > div > *:last-child {
-  border-top-right-radius: 10px !important;
-  border-bottom-right-radius: 10px !important;
 }
 .wordmark-2u86JB {
   height: 32px;
@@ -4218,4 +4217,25 @@ section.panels-3wFtMD .container-YkUktl .button-12Fmur {
 .panels-3wFtMD .container-YkUktl .button-12Fmur:hover {
     box-shadow: var(--cyan-elevation-shadow);
     background-color: var(--cyan-background-secondary);
+}
+.chat-2ZfjoI .messagesWrapper-RpOMA3 > .scroller-kQBbkU {
+    overflow: overlay;
+    padding-right: 0;
+    margin-bottom: 7px;
+}
+.chat-2ZfjoI .messagesWrapper-RpOMA3 > .scroller-kQBbkU .scrollerSpacer-3AqkT9 {
+    height: 10px;
+}
+.chat-2ZfjoI .messagesWrapper-RpOMA3 > .scroller-kQBbkU::-webkit-scrollbar-thumb {
+    transition: .2s;
+    background-color: transparent;
+}
+.chat-2ZfjoI .messagesWrapper-RpOMA3 > .scroller-kQBbkU:hover::-webkit-scrollbar-thumb {
+    background-color: var(--cyan-background-secondary);
+}
+.chat-2ZfjoI .messagesWrapper-RpOMA3 > .scroller-kQBbkU::-webkit-scrollbar-track {
+    display: none;
+}
+.tile-2TcwiO, .border-2Vy6FN {
+    border-radius: 16px;
 }
