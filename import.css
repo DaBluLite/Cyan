@@ -3905,7 +3905,7 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
     border-radius: 50%;
     padding: 8px !important;
 }
-#app-mount .bd-addon-views .bd-view-button:hover, .bd-button.bd-button-title:hover, .bd-addon-list .bd-footer .bd-addon-button:hover {
+#app-mount .bd-addon-views .bd-view-button:hover, .bd-button.bd-button-title:hover, .bd-addon-list .bd-footer .bd-controls .bd-addon-button:hover {
     background-color: var(--cyan-background-secondary) !important;
     box-shadow: var(--cyan-elevation-shadow);
     filter: none !important;
