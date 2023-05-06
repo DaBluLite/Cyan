@@ -3,7 +3,7 @@
 @import url(//dablulite.github.io/CyanBootstrapIcons/import.css);
 :root {
     --cyan-version: 10;
-    --cyan-subversion: 0;
+    --cyan-subversion: 1;
     --cyan-text-shadow: 0;
     --cyan-background-primary-alt: var(--cyan-background-primary);
     --cyan-background-secondary: var(--background-floating);
@@ -1678,7 +1678,7 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
   margin-bottom: calc(var( --window-margin) * 1px);
 }
 .containerDefault-3TQ5YN {
-  border-bottom: 1px solid var(--cyan-background-tertiary);
+  border-bottom: none;
   padding-top: 0px;
   margin-top: 15px;
   margin-bottom: 5px !important;
@@ -1686,13 +1686,51 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
   margin-right: 5px;
 }
 .membersGroup-2eiWxl {
-  border-bottom: 1px solid var(--cyan-background-tertiary);
-  margin-bottom: 10px;
-  padding-bottom: 25px !important;
+  border-bottom: none;
   color: var(--header-primary);
+  border-radius: 8px;
+  box-shadow: var(--light-elevation-border);
+  padding: 8px !important;
+  margin: 8px !important;
+  height: fit-content;
+  transition: .15s;
+}
+#app-mount .membersGroup-2eiWxl:hover {
+  box-shadow: var(--cyan-elevation-shadow);
+  background-color: var(--cyan-background-secondary);
+}
+.guildIconContainer-3QvE6w,
+.guildIconContainer-3QvE6w > div,
+.flowerStarContainer-1QeD-L,
+.flowerStarContainer-1QeD-L > svg {
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  display: flex;
+}
+.flowerStarContainer-1QeD-L > svg {
+  background-color: var(--background-primary);
+  border-radius: 50%;
+}
+.flowerStarContainer-1QeD-L > svg > path {
+  display: none;
+}
+.flowerStarContainer-1QeD-L > .childContainer-U_a6Yh > svg {
+  scale: 1.5;
+  color: var(--cyan-accent-color);
 }
 .subText-OGOWMj > div {
   color: var(--header-primary);
+}
+.children-3xh0VB .icon-2xnN2Y, #app-mount .icon-2W8DHg path {
+  color: var(--cyan-accent-color);
+  fill: var(--cyan-accent-color);
+}
+.iconContainer-21RCa3 {
+  padding: 6px;
+  background-color: var(--background-accent);
+  border-radius: 50%;
 }
 .scroller-18M1mG {
   border-radius: 10px;
@@ -3079,8 +3117,8 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
     box-shadow: var(--cyan-elevation-shadow) !important;
     border-radius: 50px !important;
 }
-.divider-2rZFJK {
-    border-top: thin solid var(--cyan-accent-color);
+.channelTextArea-1VQBuV .divider-2rZFJK {
+    display: none;
 }
 .unreadPill-3nEWYM {
     padding: 16px;
@@ -3610,27 +3648,23 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
 }
 .containerDefault-3TQ5YN {
     border-bottom: none;
-    background-color: var(--cyan-background-primary);
+    background-color: transparent;
     color: var(--header-primary);
     border-radius: 50px;
-    backdrop-filter: brightness(0.5);
     padding: 0 10px;
     transition: .2s;
-    box-shadow: var(--cyan-elevation-shadow);
+    box-shadow: var(--light-elevation-border);
     margin-right: 0;
 }
 .containerDefault-3TQ5YN:hover {
-    backdrop-filter: brightness(0.8);
+    background-color: var(--cyan-background-secondary);
     box-shadow: var(--cyan-elevation-shadow);
-}
-.containerDefault-3TQ5YN:has(> .collapsed-2KOacR) {
-    box-shadow: none;
 }
 .members-3WRCEx *, .scrollerContent-2SW0kQ *, .channelName-3KPsGw, .name-28HaxV {
     text-shadow: min(1px,calc(var(--cyan-text-shadow) * 1px)) calc(min(1px,(var(--cyan-text-shadow) * 1px))*2) calc(min(1px,(var(--cyan-text-shadow) * 1px))*2) #000;
 }
 #app-mount .icon-2W8DHg {
-    filter: drop-shadow(min(1px,calc(var(--cyan-text-shadow) * 1px)) calc(min(1px,(var(--cyan-text-shadow) * 1px))*2) calc(min(1px,(var(--cyan-text-shadow) * 1px))*2) #000);
+    filter: none;
 }
 #app-mount .icon-2W8DHg path {
     fill: #fff;
@@ -4238,4 +4272,28 @@ section.panels-3wFtMD .container-YkUktl .button-12Fmur {
 }
 .tile-2TcwiO, .border-2Vy6FN {
     border-radius: 16px;
+}
+.mainContent-20q_Hp {
+    padding: 0;
+}
+.content-1gYQeQ {
+    padding-left: 4px;
+}
+.tutorialContainer-2jwoiB > .listItem-3SmSlK foreignObject,
+.tutorialContainer-2jwoiB + .listItem-3SmSlK foreignObject {
+    mask: none !important;
+}
+.tutorialContainer-2jwoiB > .listItem-3SmSlK .circleIconButton-1VxDrg,
+.tutorialContainer-2jwoiB + .listItem-3SmSlK .circleIconButton-1VxDrg {
+    border-radius: 50%;
+}
+.tutorialContainer-2jwoiB > .listItem-3SmSlK .wrapper-2PSQCG,
+.tutorialContainer-2jwoiB + .listItem-3SmSlK .wrapper-2PSQCG {
+    box-shadow: 0 0 0 1.5px var(--cyan-background-primary), 0 2px 10px 0 rgb(0 0 0 / 20%);
+    transition: .2s;
+    border-radius: 50%;
+}
+.tutorialContainer-2jwoiB > .listItem-3SmSlK:has(.selected-2r1Hvo) .wrapper-2PSQCG,
+.tutorialContainer-2jwoiB + .listItem-3SmSlK:has(.selected-2r1Hvo) .wrapper-2PSQCG {
+    box-shadow: 0 0 0 1.5px var(--cyan-accent-color), 0 2px 10px 0 rgb(0 0 0 / 20%);
 }
