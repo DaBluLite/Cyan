@@ -3650,7 +3650,7 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
     border-bottom: none;
     background-color: transparent;
     color: var(--header-primary);
-    border-radius: 50px;
+    border-radius: 6px;
     padding: 0 10px;
     transition: .2s;
     box-shadow: var(--light-elevation-border);
@@ -3665,10 +3665,6 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
 }
 #app-mount .icon-2W8DHg {
     filter: none;
-}
-#app-mount .icon-2W8DHg path {
-    fill: #fff;
-    color: #fff !important;
 }
 #app-mount .channelName-3KPsGw, #app-mount .name-28HaxV, #app-mount .messageContent-2t3eCI, #app-mount .membersGroup-2eiWxl, #app-mount .activityText-1rR-8O {
     color: #fff !important;
