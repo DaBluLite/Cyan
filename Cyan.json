@@ -24,7 +24,7 @@
             "#0A0A0A"
         ],
         "BACKGROUND_SECONDARY": [
-            "transparent"
+            "#0e0f11"
         ],
         "BACKGROUND_FLOATING": [
             "#0e0f11"
@@ -76,7 +76,8 @@
         "BRAND_600": "#009f88",
         "BRAND_630": "#009f88",
         "BRAND_660": "#009f88",
-        "BRAND_700": "#009f88"
+        "BRAND_700": "#009f88",
+        "PRIMARY_400": "#009f88"
     },
     "spec": 2,
     "background": {
