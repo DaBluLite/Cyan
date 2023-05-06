@@ -13,86 +13,6 @@
     <meta content="#009f88" data-react-helmet="true" name="theme-color" />
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            document.getElementById("storyTellBtn").addEventListener("click", () => {
-                if(document.getElementById("historyText").innerHTML == "It All Starts With This") {
-                    document.getElementById("historyText").innerHTML = "Then we add a bit of that";
-                    document.getElementById("pseudoSidebar").setAttribute("style", "height: calc(100% - 30px); top: 15px; left: 15px; border-radius: 10px;");
-                    document.getElementById("pseudoChat").setAttribute("style", "height: calc(100% - 30px); top: 15px; right: 15px; width: calc(100% - 82px - 240px - 45px); border-radius: 10px;");
-                    return;
-                }
-                if(document.getElementById("historyText").innerHTML == "Then we add a bit of that") {
-                    document.getElementById("historyText").innerHTML = "We trim this a bit";
-                    document.getElementById("pseudoSidebar").setAttribute("style", "height: calc(100% - 30px - 22px); top: 37px; left: 15px; border-radius: 10px;");
-                    return;
-                }
-                if(document.getElementById("historyText").innerHTML == "We trim this a bit") {
-                    document.getElementById("historyText").innerHTML = "Then come the traffic lights";
-                    document.querySelectorAll(".trafficLight").forEach(el => {
-                        el.setAttribute("style", "transform: scale(1);");
-                    });
-                    return;
-                }
-                if(document.getElementById("historyText").innerHTML == "Then come the traffic lights") {
-                    document.getElementById("historyText").innerHTML = "Lastly the content";
-                    document.querySelectorAll(".guildBtn").forEach(el => {
-                        el.setAttribute("style", "transform: scale(1) rotate(0deg);");
-                    });
-                    document.querySelectorAll(".pseudoChannelWrapper").forEach(el => {
-                        el.setAttribute("style", "opacity: 1;");
-                    });
-                    document.getElementById("searchBoxWrapper").setAttribute("style", "opacity: 1;");
-                    document.getElementById("guildSeparator").setAttribute("style", "transform: scale(1);");
-                    document.getElementById("pseudoUserArea").setAttribute("style", "opacity: 1;");
-                    return;
-                }
-                if(document.getElementById("historyText").innerHTML == "Lastly the content") {
-                    document.getElementById("historyText").innerHTML = "And we are done, simple as that";
-                    document.getElementById("storyTellBtn").setAttribute("style", "transform: scale(0);");
-                    document.getElementById("skipIntroBtn").setAttribute("style", "transform: scale(0);");
-                    setTimeout(() => {
-                        document.getElementById("historyText").setAttribute("style", "opacity: 0;");
-                        setTimeout(() => {
-                            document.getElementById("cyanCustomizer").setAttribute("style", "");
-                        }, 500);
-                        setTimeout(() => {
-                            document.getElementById("historyText").setAttribute("style", "display: none;");
-                            document.getElementById("storyTellBtn").setAttribute("style", "display: none;");
-                            document.getElementById("cyanCustomizer").setAttribute("style", "opacity: 1;");
-                        }, 1000);
-                    }, 3000);
-                    return;
-                }
-            });
-            document.getElementById("skipIntroBtn").addEventListener("click", () => {
-                document.getElementById("pseudoSidebar").setAttribute("style", "height: calc(100% - 30px); top: 15px; left: 15px; border-radius: 10px;");
-                document.getElementById("pseudoChat").setAttribute("style", "height: calc(100% - 30px); top: 15px; right: 15px; width: calc(100% - 82px - 240px - 45px); border-radius: 10px;");
-                document.getElementById("pseudoSidebar").setAttribute("style", "height: calc(100% - 30px - 22px); top: 37px; left: 15px; border-radius: 10px;");
-                document.querySelectorAll(".trafficLight").forEach(el => {
-                    el.setAttribute("style", "transform: scale(1);");
-                });
-                document.querySelectorAll(".guildBtn").forEach(el => {
-                    el.setAttribute("style", "transform: scale(1) rotate(0deg);");
-                });
-                document.querySelectorAll(".pseudoChannelWrapper").forEach(el => {
-                    el.setAttribute("style", "opacity: 1;");
-                });
-                document.getElementById("searchBoxWrapper").setAttribute("style", "opacity: 1;");
-                document.getElementById("guildSeparator").setAttribute("style", "transform: scale(1);");
-                document.getElementById("pseudoUserArea").setAttribute("style", "opacity: 1;");
-                document.getElementById("historyText").setAttribute("style", "opacity: 0;");
-                document.getElementById("storyTellBtn").setAttribute("style", "transform: scale(0);");
-                document.getElementById("skipIntroBtn").setAttribute("style", "transform: scale(0);");
-                setTimeout(() => {
-                        setTimeout(() => {
-                            document.getElementById("cyanCustomizer").setAttribute("style", "");
-                        }, 100);
-                        setTimeout(() => {
-                            document.getElementById("historyText").setAttribute("style", "display: none;");
-                            document.getElementById("storyTellBtn").setAttribute("style", "display: none;");
-                            document.getElementById("cyanCustomizer").setAttribute("style", "opacity: 1;");
-                        }, 200);
-                    }, 500);
-            })
             document.getElementById("cyanColorPicker").addEventListener("input", () => {
                 document.getElementById("cyanAccentColorStyle").innerHTML = `:root {--cyan-accent-color: ${document.getElementById("cyanColorPicker").value} !important;}`;
                 document.getElementById("cyanAccentColorDisplay").innerText = document.getElementById("cyanColorPicker").value;
@@ -103,29 +23,9 @@
                 document.getElementById("cyanBackImgStyle").innerHTML = `:root {--cyan-background-img: url(${document.getElementById("cyanBackImgInput").value}) !important;}`;
                 document.getElementById("backImgCodeblock").innerText = `--cyan-background-img: url(${document.getElementById("cyanBackImgInput").value});`
             });
-            document.getElementById("cyanAccentedBordersRadio").addEventListener("change", () => {
-                if(document.getElementById("cyanAccentedBordersRadio").checked == true) {
-                    document.getElementById("cyanAccentedBorderStyle").innerHTML = `:root {--cyan-elevation-shadow: 0 0 0 1.5px var(--cyan-accent-color), 0 2px 10px 0 rgb(0 0 0 / 60%) !important;}`;
-                    document.getElementById("boxShadowCodeblock").innerText = `--cyan-elevation-shadow: 0 0 0 1.5px var(--cyan-accent-color), 0 2px 10px 0 rgb(0 0 0 / 60%);`
-                } else {
-                    document.getElementById("cyanAccentedBorderStyle").innerHTML = `:root {--cyan-elevation-shadow: 0 0 0 1.5px rgba(180,180,180,.4), 0 2px 10px 0 rgb(0 0 0 / 60%) !important;}`;
-                    document.getElementById("boxShadowCodeblock").innerText = `--cyan-elevation-shadow: 0 0 0 1.5px rgba(180,180,180,.4), 0 2px 10px 0 rgb(0 0 0 / 60%);`
-                }
-            });
-            document.getElementById("glassMaterialRadio").addEventListener("change", () => {
-                if(document.getElementById("glassMaterialRadio").checked == true) {
-                    document.getElementById("glassMaterialStyle").innerHTML = `:root {--cyan-background-primary: hsl(var(--cyan-background-hue), var(--cyan-tint-visibility), calc(10% * 0.6)) !important;}`;
-                    document.getElementById("glassMaterialCodeblock").innerText = `--cyan-background-primary: hsl(var(--cyan-background-hue), var(--cyan-tint-visibility), calc(10% * 0.6));`;
-                    document.getElementById("blurRadiusCodeblock").innerText = `--cyan-blur-radius: 0;`;
-                } else {
-                    document.getElementById("glassMaterialStyle").innerHTML = `:root {--cyan-background-primary: hsla(var(--cyan-background-hue) var(--cyan-tint-visibility) var(--cyan-background-lightness) / 40%) !important;}`;
-                    document.getElementById("glassMaterialCodeblock").innerText = `--cyan-background-primary: hsla(var(--cyan-background-hue) var(--cyan-tint-visibility) var(--cyan-background-lightness) / 40%);`;
-                    document.getElementById("blurRadiusCodeblock").innerText = `--cyan-blur-radius: 10px;`;
-                }
-            });
             document.getElementById("win11TitlebarRadio").addEventListener("change", () => {
                 if(document.getElementById("win11TitlebarRadio").checked == true) {
-                    document.getElementById("win11TitlebarStyle").innerHTML = `@import url(https://dablulite.github.io/Cyan/Addons/CyanWin10Titlebar.css);`;
+                    document.getElementById("win11TitlebarStyle").innerHTML = `@import url(https://dablulite.github.io/Cyan/Addons/CyanWin10Titlebar/import.css);`;
                     document.getElementById("win11TitlebarCodeblock").setAttribute("style", "");
                 } else {
                     document.getElementById("win11TitlebarStyle").innerHTML = ``;
@@ -150,73 +50,13 @@
                 event.initEvent(eventName, false, true);
                 element.dispatchEvent(event);
             }
-            window.changeBoxShadow = () => {
-                document.getElementById("cyanAccentedBordersRadio").checked = !document.getElementById("cyanAccentedBordersRadio").checked;
-                triggerEvent(document.getElementById("cyanAccentedBordersRadio"), 'change');
-                if(document.getElementById("cyanAccentedBordersRadio").checked == true) {
-                    document.getElementById("boxShadowToggle").innerHTML = `
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#43b581" class="bi bi-toggle-on" viewBox="0 0 16 16">
-                        <path d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/>
-                    </svg>
-                    `;
-                } else {
-                    document.getElementById("boxShadowToggle").innerHTML = `
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#f04747" class="bi bi-toggle-off" viewBox="0 0 16 16">
-                        <path d="M 11,13 A 5,5 0 0 0 11,3 H 5 A 5,5 0 0 0 5,13 Z M 5,4 a 4,4 0 1 1 0,8 4,4 0 0 1 0,-8 z"></path>
-                    </svg>
-                    `;
-                }
-            }
-            window.changeGlassMaterial = () => {
-                document.getElementById("glassMaterialRadio").checked = !document.getElementById("glassMaterialRadio").checked;
-                triggerEvent(document.getElementById("glassMaterialRadio"), 'change');
-                if(document.getElementById("glassMaterialRadio").checked == true) {
-                    document.getElementById("glassMaterialToggle").innerHTML = `
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#43b581" class="bi bi-toggle-on" viewBox="0 0 16 16">
-                        <path d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/>
-                    </svg>
-                    `;
-                } else {
-                    document.getElementById("glassMaterialToggle").innerHTML = `
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#f04747" class="bi bi-toggle-off" viewBox="0 0 16 16">
-                        <path d="M 11,13 A 5,5 0 0 0 11,3 H 5 A 5,5 0 0 0 5,13 Z M 5,4 a 4,4 0 1 1 0,8 4,4 0 0 1 0,-8 z"></path>
-                    </svg>
-                    `;
-                }
-            }
             window.toggleWin11Titlebar = () => {
                 document.getElementById("win11TitlebarRadio").checked = !document.getElementById("win11TitlebarRadio").checked;
                 triggerEvent(document.getElementById("win11TitlebarRadio"), 'change');
-                if(document.getElementById("win11TitlebarRadio").checked == true) {
-                    document.getElementById("win11TitlebarToggle").innerHTML = `
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#43b581" class="bi bi-toggle-on" viewBox="0 0 16 16">
-                        <path d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/>
-                    </svg>
-                    `;
-                } else {
-                    document.getElementById("win11TitlebarToggle").innerHTML = `
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#f04747" class="bi bi-toggle-off" viewBox="0 0 16 16">
-                        <path d="M 11,13 A 5,5 0 0 0 11,3 H 5 A 5,5 0 0 0 5,13 Z M 5,4 a 4,4 0 1 1 0,8 4,4 0 0 1 0,-8 z"></path>
-                    </svg>
-                    `;
-                }
             }
             window.changeTintVisibility = () => {
                 document.getElementById("tintVisibilityRadio").checked = !document.getElementById("tintVisibilityRadio").checked;
                 triggerEvent(document.getElementById("tintVisibilityRadio"), 'change');
-                if(document.getElementById("tintVisibilityRadio").checked == true) {
-                    document.getElementById("tintVisibilityToggle").innerHTML = `
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#43b581" class="bi bi-toggle-on" viewBox="0 0 16 16">
-                        <path d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/>
-                    </svg>
-                    `;
-                } else {
-                    document.getElementById("tintVisibilityToggle").innerHTML = `
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#f04747" class="bi bi-toggle-off" viewBox="0 0 16 16">
-                        <path d="M 11,13 A 5,5 0 0 0 11,3 H 5 A 5,5 0 0 0 5,13 Z M 5,4 a 4,4 0 1 1 0,8 4,4 0 0 1 0,-8 z"></path>
-                    </svg>
-                    `;
-                }
             }
             window.download = (filename, text) => {
                 var element = document.createElement('a');
@@ -281,16 +121,17 @@ ${document.getElementById("win11TitlebarStyle").innerText}
 @import url(https://dablulite.github.io/Cyan/import.css);
 :root {
 	${document.getElementById("glassMaterialCodeblock").innerText}
-	${document.getElementById("boxShadowCodeblock").innerText}
+	--cyan-elevation-shadow: 0 0 0 1.5px var(--cyan-accent-color), 0 2px 10px 0 rgb(0 0 0 / 60%);
 	--cyan-font: 'Montserrat', 'Open Sans';
 	${document.getElementById("backImgCodeblock").innerText}
-	--window-margin: 10;
+	--window-margin: 8;
 	--window-border-radius: 8px;
 	${document.getElementById("accentColorCodeblock").innerText}
-	${document.getElementById("blurRadiusCodeblock").innerText}
+	--cyan-blur-radius: 10px;
 	--cyan-status-mask-background: var(--profile-body-background-color);
     ${document.getElementById("backgroundHueCodeblock").innerText}
     ${document.getElementById("tintVisibilityCodeblock").innerText}
+    --cyan-text-shadow: 1;
 }`);
             }
         })
@@ -298,7 +139,6 @@ ${document.getElementById("win11TitlebarStyle").innerText}
     <style id="win11TitlebarStyle"></style>
     <style id="cyanAccentColorStyle"></style>
     <style id="cyanBackImgStyle"></style>
-    <style id="cyanAccentedBorderStyle"></style>
     <style id="glassMaterialStyle"></style>
     <style id="backgroundHueStyle"></style>
     <style id="tintVisibilityStyle"></style>
@@ -308,7 +148,7 @@ ${document.getElementById("win11TitlebarStyle").innerText}
         :root {
             --cyan-accent-color: #009f88;
             --cyan-background-img: url(https://dablulite.github.io/Cyan/cyan-waves-4k.png);
-            --cyan-elevation-shadow: 0 0 0 1.5px rgba(180,180,180,.4), 0 2px 10px 0 rgb(0 0 0 / 60%);
+            --cyan-elevation-shadow: 0 0 0 1.5px var(--cyan-accent-color), 0 2px 10px 0 rgb(0 0 0 / 60%);
             --cyan-background-primary: hsla(var(--cyan-background-hue) var(--cyan-tint-visibility) var(--cyan-background-lightness) / 40%);
             --cyan-background-lightness: 16%;
             --cyan-background-hue: 255;
@@ -360,29 +200,30 @@ ${document.getElementById("win11TitlebarStyle").innerText}
             margin: 0;
         }
         #pseudoSidebar {
-            height: 100%;
-            width: calc(82px + 240px);
             background-color: var(--cyan-background-primary);
             backdrop-filter: blur(10px);
             position: absolute;
-            top: 0;
-            left: 0;
             box-shadow: var(--cyan-elevation-shadow);
             transition: .5s cubic-bezier(.17,.76,.58,.99);
+            height: calc(100% - 16px - 22px);
+            top: 30px;
+            left: 8px;
+            border-radius: 8px;
         }
         #pseudoChat {
-            height: 100%;
-            width: calc(100% - 82px - 240px);
             background-color: var(--cyan-background-primary);
             backdrop-filter: blur(10px);
             position: absolute;
-            top: 0;
-            right: 0;
             display: flex;
             flex-direction: column;
             justify-content: center;
             box-shadow: var(--cyan-elevation-shadow);
             transition: .5s cubic-bezier(.17,.76,.58,.99);
+            height: calc(100% - 16px);
+            top: 8px;
+            right: 8px;
+            width: calc(100% - 418px);
+            border-radius: 8px;
         }
         #historyText {
             text-align: center;
@@ -407,7 +248,6 @@ ${document.getElementById("win11TitlebarStyle").innerText}
             background-size: cover;
             background-position: center;
             transition: .5s cubic-bezier(.17,.76,.58,.99);
-            transform: scale(0);
             cursor: pointer;
         }
         #closeTraffic {
@@ -427,21 +267,26 @@ ${document.getElementById("win11TitlebarStyle").innerText}
             width: fit-content;
             text-align: center;
             align-self: center;
-            padding: 8px 17px;
+            padding: 0 16px;
             background: hsl(225, 8%, calc(10% * 0.6));
             border: 1px solid var(--cyan-accent-color);
             border-radius: 8px;
             color: #fff;
             cursor: pointer;
-            margin-top: 10px;
-            transition: .5s cubic-bezier(.17,.76,.58,.99);
+            transition: .15s;
             -webkit-touch-callout: none;
             -webkit-user-select: none;
             -khtml-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
             user-select: none;
-            font-size: 18px;
+            font-size: 14px;
+            font-weight: 500;
+            height: 32px;
+            max-height: 32px;
+            line-height: 14px;
+            display: flex;
+            align-items: center;
         }
         #pseudoGuildBar {
             height: 100%;
@@ -450,7 +295,7 @@ ${document.getElementById("win11TitlebarStyle").innerText}
         }
         #pseudoChannelBar {
             height: 100%;
-            width: 240px;
+            width: 320px;
             float: right;
             display: flex;
             flex-direction: column;
@@ -464,40 +309,43 @@ ${document.getElementById("win11TitlebarStyle").innerText}
             margin-right: 0;
             box-shadow: var(--cyan-elevation-shadow);
             border-radius: 50%;
-            transform: scale(0) rotate(-365deg);
             transition: .5s cubic-bezier(.17,.76,.58,.99);
             cursor: pointer;
             overflow: hidden;
+            display: flex;
         }
         #bdServerBtn {
-            background-image: url(https://betterdiscord.app/resources/favicon/apple-icon-57x57.png);
+            background-image: url(https://cdn.discordapp.com/icons/86004744966914048/babd1af3fa6011a50e418a80f4970ceb.webp?size=96);
             background-size: cover;
             background-position: center;
+            box-shadow: none;
         }
         #cyanServerBtn {
-            background-image: url(https://dablulite.github.io/Cyan/cyan-waves.png);
+            background-image: url(https://cdn.discordapp.com/icons/997741561683120208/46dd2738d4e2212e5581c2a62f687aac.webp?size=96);
             background-size: cover;
             background-position: center;
+            box-shadow: none;
         }
         #searchBoxWrapper {
-            width: 220px;
-            height: 48px;
-            padding: 0 10px;
-            opacity: 0;
+            width: calc(300px - 32px);
+            height: fit-content;
             transition: .5s cubic-bezier(.17,.76,.58,.99);
             display: flex;
             flex-direction: column;
             justify-content: center;
+            margin: 10px;
+            padding: 12px 16px;
+            border-radius: 8px;
+            box-shadow: var(--cyan-elevation-shadow);
+            background-color: hsl(225, 8%, calc(10% * 0.6));
         }
         #pseudoSearch {
             color: #fff;
             width: 200px;
-            padding: 0 10px;
-            height: 28px;
-            margin: 10px 0;
+            height: fit-content;
             font-size: 14px;
             font-weight: 500;
-            line-height: 24px;
+            line-height: 20px;
             cursor: pointer;
             transition: .5s cubic-bezier(.17,.76,.58,.99);
             -webkit-touch-callout: none;
@@ -506,6 +354,19 @@ ${document.getElementById("win11TitlebarStyle").innerText}
             -moz-user-select: none;
             -ms-user-select: none;
             user-select: none;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        #pseudoSearch::before {
+            content: "";
+            -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='currentColor' style='margin: 1px;' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'/%3E%3C/svg%3E");
+            height: 20px;
+            width: 20px;
+            background-color: #fff;
+            -webkit-mask-repeat: no-repeat;
+            float: left;
+            margin-right: 4px;
         }
         #guildSeparator {
             background-color: hsl(228 6% 32.5%/0.48);
@@ -514,53 +375,55 @@ ${document.getElementById("win11TitlebarStyle").innerText}
             margin-top: 12px;
             margin-left: 20px;
             transition: .5s cubic-bezier(.17,.76,.58,.99);
-            transform: scale(0);
         }
         #pseudoUserArea {
-            margin: 0 10px 10px 10px;
-            width: 190px;
+            margin: 0 8px 8px 8px;
+            width: calc(100% - 32px);
             box-shadow: var(--cyan-elevation-shadow);
-            border-radius: 10px;
+            border-radius: 8px;
             background-color: hsl(225, 8%, calc(10% * 0.6));
-            height: 39px;
+            height: 53px;
             justify-self: end;
-            padding: 12px 15px;
+            padding: 5px 8px;
             transition: .5s cubic-bezier(.17,.76,.58,.99);
-            opacity: 0;
             -webkit-touch-callout: none;
             -webkit-user-select: none;
             -khtml-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
             user-select: none;
+            align-items: center;
+            display: flex;
         }
         #pseudoChannelList {
-            height: calc(100% - 73px - 48px);
+            height: 100%;
             width: 240px;
+            display: flex;
+            flex-direction: column;
         }
         #pseudoAvatar {
             width: 32px;
             height: 32px;
             border-radius: 50%;
-            margin-top: 4px;
             float: left;
         }
         .pseudoChannelWrapper {
             height: 42px;
-            width: 224px;
+            width: 304px;
             margin-left: 8px;
             margin-bottom: 8px;
             cursor: pointer;
             border-radius: 8px;
-            transition: .5s cubic-bezier(.17,.76,.58,.99);
-            opacity: 0;
+            transition: .2s;
         }
         .pseudoChannelWrapper:hover {
-            background-color: hsla(0deg 8% 16% / 40%);
+            background-color: hsl(225, 8%, calc(10% * 0.6));
+            box-shadow: var(--cyan-elevation-shadow);
+            scale: 1.01;
         }
         .pseudoChannelPlaceholder {
             height: 5px;
-            width: 160px;
+            width: calc(100% - 64px);
             margin-top: 18.5px;
             margin-left: 32px;
             background-color: #fff;
@@ -585,8 +448,8 @@ ${document.getElementById("win11TitlebarStyle").innerText}
             height: 32px;
             border: none;
             padding: 0;
-            background-color: transparent;
             opacity: 0;
+            background-color: transparent;
         }
         #colorPickerBtn {
             width: 46px;
@@ -598,22 +461,41 @@ ${document.getElementById("win11TitlebarStyle").innerText}
         .property {
             color: #fff;
             font-weight: lighter;
-            font-size: 30px;
+            font-size: 1rem;
             margin-right: 10px;
+            text-shadow: 1px 2px 2px #000;
         }
         #cyanCustomizer {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            opacity: 0;
             transition: .5s cubic-bezier(.17,.76,.58,.99);
+            height: 100%;
+        }
+        #pseudoChatHeader {
+            background-color: hsl(225, 8%, calc(10% * 0.6));
+            border-radius: 8px;
+            box-shadow: var(--cyan-elevation-shadow);
+            padding: 0 6px;
+            height: 48px;
+            width: calc(100% - 32px);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 8px;
+        }
+        #pseudoChatHeaderIcon {
+            margin: 0 8px;
+            color: var(--cyan-accent-color);
+            transform: scale(1.3);
+            transform-origin: -8px -8px;
         }
         #customizerHeader {
             color: #fff;
             margin: 0;
-            font-size: 40px;
-            margin-bottom: 10px;
+            font-size: 16px;
+            line-height: 24px;
             -webkit-touch-callout: none;
             -webkit-user-select: none;
             -khtml-user-select: none;
@@ -622,9 +504,11 @@ ${document.getElementById("win11TitlebarStyle").innerText}
             user-select: none;
         }
         .propertyWrapper {
-            margin-bottom: 10px;
-            width: 100%;
-            justify-content: center;
+            height: 38px;
+            margin-bottom: 8px;
+            min-height: 22px;
+            width: calc(100% - 16px);
+            justify-content: space-between;
             align-items: center;
             display: flex;
             -webkit-touch-callout: none;
@@ -635,12 +519,22 @@ ${document.getElementById("win11TitlebarStyle").innerText}
             user-select: none;
         }
         #cyanBackImgInput {
-            background-color: hsl(225, 8%, calc(10% * 0.6));
             color: #fff;
-            border: 1.5px solid var(--cyan-accent-color);
             padding: 10px;
             width: 360px;
             border-radius: 10px;
+            transition: .2s;
+            border: none;
+            background-color: transparent;
+            box-shadow: 0 0 0 1px hsl(210 calc(1 * 9.3%) 78.8%/0.3);
+        }
+        .cyanBtn:hover {
+            box-shadow: var(--cyan-elevation-shadow);
+        }
+        #cyanBackImgInput:focus {
+            outline: none;
+            box-shadow: var(--cyan-elevation-shadow);
+            background-color: hsl(225, 8%, calc(10% * 0.6));
         }
         #boxShadowToggle, #glassMaterialToggle, #tintVisibilityToggle, #win11TitlebarToggle {
             cursor: pointer;
@@ -654,35 +548,40 @@ ${document.getElementById("win11TitlebarStyle").innerText}
             margin: 0;
             transition: .5s cubic-bezier(.17,.76,.58,.99);
             white-space: pre;
-            max-width: calc(100% - 80px);
+            max-width: calc(100% - 48px);
             overflow-x: auto;
+            display: flex;
+            flex-direction: column;
         }
         #rawCodeBlock, #rawCodeBlock span {
             font-family: 'Source Code Pro', monospace;
         }
-        #suggestionHeader {
-            color: #fff;
-            font-weight: lighter;
-            font-size: 30px;
-            -webkit-touch-callout: none;
-            -webkit-user-select: none;
-            -khtml-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
         .mainButtonContainer {
             display: flex;
             flex-direction: row;
-            column-gap: 10px;
             align-items: center;
-            justify-content: center;
+            justify-content: space-around;
             -webkit-touch-callout: none;
             -webkit-user-select: none;
             -khtml-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
             user-select: none;
+            width: calc(100% - 32px);
+            margin-bottom: 8px;
+            border-radius: 8px;
+            padding: 0 6px;
+            box-shadow: var(--cyan-elevation-shadow);
+            align-items: center;
+            background-color: hsl(225, 8%, calc(10% * 0.6));
+            height: 48px;
+        }
+        #pseudoChatContainer {
+            display: flex;
+            flex-direction: column;
+            width: calc(100% - 16px);
+            align-items: center;
+            height: calc(100% - 122px);
         }
         #backgroundHueSlider {
             position: relative;
@@ -690,25 +589,67 @@ ${document.getElementById("win11TitlebarStyle").innerText}
             appearance: none;
             border-radius: 0;
             background-color: rgba(0,0,0,0.1);
-            height: 3.5px;
+            height: 8px;
             width: 250px;
             display: block;
             outline: none;
+            border-radius: 8px;
             transition: .5s cubic-bezier(.17,.76,.58,.99);
+            background-color: var(--cyan-accent-color);
+            box-shadow: 0 3px 1px 0 hsl(0 0% 0%/.05),0 2px 2px 0 hsl(0 0% 0%/.1),0 3px 3px 0 hsl(0 0% 0%/.05);
+        }
+        #backgroundHueSlider::after {
+            content: "";
+            position: absolute;
+            width: 250px;
+            height: 8px;
+            border-radius: 8px;
+            top: 20px;
+            box-shadow: 0 3px 1px 0 hsl(0 0% 0%/.05),0 2px 2px 0 hsl(0 0% 0%/.1),0 3px 3px 0 hsl(0 0% 0%/.05);
             background: linear-gradient(to right, rgb(255,0,0), rgb(255,255,0), rgb(0,255,0),rgb(0,255,255),rgb(0,0,255),rgb(255,0,255),rgb(255,0,0));
         }
         #backgroundHueSlider::-webkit-slider-thumb{
-            height: 1.75em;
-            width: 1.75em;
-            border-radius: 2em;
+            height: 24px;
+            width: 10px;
+            border-radius: 3px;
             appearance: none;
-            background: hsl(var(--cyan-background-hue), 100%, 50%);
+            background: #fff;
             cursor: pointer;
             cursor: move;
             cursor: grab;
             cursor: -webkit-grab;
             transition: .5s cubic-bezier(.17,.76,.58,.99);
-            box-shadow: var(--cyan-elevation-shadow);
+            box-shadow: 0 3px 1px 0 hsl(0 0% 0%/.05),0 2px 2px 0 hsl(0 0% 0%/.1),0 3px 3px 0 hsl(0 0% 0%/.05);
+        }
+        .colorPickerWrapper {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+        .toggleTrack {
+            height: 14px;
+            width: 28px;
+            background-color: gray;
+            border-radius: 50px;
+            transition: .2s;
+            position: relative;
+        }
+        .toggleHandle {
+            background-color: #fff;
+            border-radius: 50%;
+            height: 18px;
+            width: 18px;
+            transition: .2s;
+            transform: translateX(-25%) translateY(-12.5%);
+            box-shadow: 0 3px 1px 0 hsl(0 0% 0%/.05),0 2px 2px 0 hsl(0 0% 0%/.1),0 3px 3px 0 hsl(0 0% 0%/.05);
+        }
+        input[type="checkbox"]:checked + .toggleTrack, input[type="checkbox"]:checked + .toggleTrack > .toggleHandle {
+            background-color: var(--cyan-accent-color);
+        }
+        input[type="checkbox"]:checked + .toggleTrack > .toggleHandle {
+            filter: brightness(2);
+            transform: translateX(calc(28px - 75%)) translateY(-12.5%);
         }
     </style>
 </head>
@@ -723,8 +664,8 @@ ${document.getElementById("win11TitlebarStyle").innerText}
             <div id="pseudoGuildBar">
                 <div class="guildBtn" id="discordBtn"><svg style="margin: 13px 10px; fill: #fff;"><path d="M 23.0212 1.67671 C 21.3107 0.879656 19.5079 0.318797 17.6584 0 C 17.4062 0.461742 17.1749 0.934541 16.9708 1.4184 C 15.003 1.12145 12.9974 1.12145 11.0283 1.4184 C 10.819 0.934541 10.589 0.461744 10.3368 0.00546311 C 8.48074 0.324393 6.67795 0.885118 4.96746 1.68231 C 1.56727 6.77853 0.649666 11.7538 1.11108 16.652 C 3.10102 18.1418 5.3262 19.2743 7.69177 20 C 8.22338 19.2743 8.69519 18.4993 9.09812 17.691 C 8.32996 17.3997 7.58522 17.0424 6.87684 16.6135 C 7.06531 16.4762 7.24726 16.3387 7.42403 16.1847 C 11.5911 18.1749 16.408 18.1749 20.5763 16.1847 C 20.7531 16.3332 20.9351 16.4762 21.1171 16.6135 C 20.41 17.0369 19.6639 17.3997 18.897 17.691 C 19.3052 18.4993 19.7718 19.2689 20.3021 19.9945 C 22.6677 19.2689 24.8929 18.1364 26.8828 16.6466 H 26.8893 C 27.43 10.9731 25.9665 6.04728 23.0212 1.67671 Z M 9.68041 13.6383 C 8.39754 13.6383 7.34085 12.4453 7.34085 10.994 C 7.34085 9.54272 8.37155 8.34973 9.68041 8.34973 C 10.9893 8.34973 12.0395 9.54272 12.0187 10.994 C 12.0187 12.4453 10.9828 13.6383 9.68041 13.6383 Z M 18.3161 13.6383 C 17.0332 13.6383 15.9765 12.4453 15.9765 10.994 C 15.9765 9.54272 17.0124 8.34973 18.3161 8.34973 C 19.6184 8.34973 20.6751 9.54272 20.6543 10.994 C 20.6543 12.4453 19.6184 13.6383 18.3161 13.6383 Z"></path></svg></div>
                 <div id="guildSeparator"></div>
-                <div class="guildBtn" id="bdServerBtn"></div>
-                <div class="guildBtn" id="cyanServerBtn"></div>
+                <a class="guildBtn" id="bdServerBtn" href="https://betterdiscord.app/theme/Cyan" target="_blank"></a>
+                <a class="guildBtn" id="cyanServerBtn" href="https://discord.gg/R8AsqdgXjt" target="_blank"></a>
                 <div class="guildBtn" id="plusServerBtn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="hsl(145 65% 39.2%/1)" class="bi bi-plus-circle-dotted" viewBox="0 0 16 16" style="margin: 12px;">
                     <path d="M8 0c-.176 0-.35.006-.523.017l.064.998a7.117 7.117 0 0 1 .918 0l.064-.998A8.113 8.113 0 0 0 8 0zM6.44.152c-.346.069-.684.16-1.012.27l.321.948c.287-.098.582-.177.884-.237L6.44.153zm4.132.271a7.946 7.946 0 0 0-1.011-.27l-.194.98c.302.06.597.14.884.237l.321-.947zm1.873.925a8 8 0 0 0-.906-.524l-.443.896c.275.136.54.29.793.459l.556-.831zM4.46.824c-.314.155-.616.33-.905.524l.556.83a7.07 7.07 0 0 1 .793-.458L4.46.824zM2.725 1.985c-.262.23-.51.478-.74.74l.752.66c.202-.23.418-.446.648-.648l-.66-.752zm11.29.74a8.058 8.058 0 0 0-.74-.74l-.66.752c.23.202.447.418.648.648l.752-.66zm1.161 1.735a7.98 7.98 0 0 0-.524-.905l-.83.556c.169.253.322.518.458.793l.896-.443zM1.348 3.555c-.194.289-.37.591-.524.906l.896.443c.136-.275.29-.54.459-.793l-.831-.556zM.423 5.428a7.945 7.945 0 0 0-.27 1.011l.98.194c.06-.302.14-.597.237-.884l-.947-.321zM15.848 6.44a7.943 7.943 0 0 0-.27-1.012l-.948.321c.098.287.177.582.237.884l.98-.194zM.017 7.477a8.113 8.113 0 0 0 0 1.046l.998-.064a7.117 7.117 0 0 1 0-.918l-.998-.064zM16 8a8.1 8.1 0 0 0-.017-.523l-.998.064a7.11 7.11 0 0 1 0 .918l.998.064A8.1 8.1 0 0 0 16 8zM.152 9.56c.069.346.16.684.27 1.012l.948-.321a6.944 6.944 0 0 1-.237-.884l-.98.194zm15.425 1.012c.112-.328.202-.666.27-1.011l-.98-.194c-.06.302-.14.597-.237.884l.947.321zM.824 11.54a8 8 0 0 0 .524.905l.83-.556a6.999 6.999 0 0 1-.458-.793l-.896.443zm13.828.905c.194-.289.37-.591.524-.906l-.896-.443c-.136.275-.29.54-.459.793l.831.556zm-12.667.83c.23.262.478.51.74.74l.66-.752a7.047 7.047 0 0 1-.648-.648l-.752.66zm11.29.74c.262-.23.51-.478.74-.74l-.752-.66c-.201.23-.418.447-.648.648l.66.752zm-1.735 1.161c.314-.155.616-.33.905-.524l-.556-.83a7.07 7.07 0 0 1-.793.458l.443.896zm-7.985-.524c.289.194.591.37.906.524l.443-.896a6.998 6.998 0 0 1-.793-.459l-.556.831zm1.873.925c.328.112.666.202 1.011.27l.194-.98a6.953 6.953 0 0 1-.884-.237l-.321.947zm4.132.271a7.944 7.944 0 0 0 1.012-.27l-.321-.948a6.954 6.954 0 0 1-.884.237l.194.98zm-2.083.135a8.1 8.1 0 0 0 1.046 0l-.064-.998a7.11 7.11 0 0 1-.918 0l-.064.998zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
@@ -739,7 +680,7 @@ ${document.getElementById("win11TitlebarStyle").innerText}
             </div>
             <div id="pseudoChannelBar">
                 <div id="searchBoxWrapper">
-                    <div id="pseudoSearch">Find or start a conversation</div>
+                    <div id="pseudoSearch">Search...</div>
                 </div>
                 <div id="pseudoChannelList">
                     <div class="pseudoChannelWrapper"><div class="pseudoChannelPlaceholder"></div></div>
@@ -761,29 +702,22 @@ ${document.getElementById("win11TitlebarStyle").innerText}
             </div>
         </div>
         <div id="pseudoChat">
-            <h1 id="historyText">It All Starts With This</h1>
-            <div class="mainButtonContainer"><button id="storyTellBtn" class="cyanBtn">Next</button><button id="skipIntroBtn" class="cyanBtn">Skip Intro</button></div>
-            <div id="cyanCustomizer" style="display: none;">
-                <h1 id="customizerHeader">Try customizing Cyan to your liking:</h1>
-                <div class="propertyWrapper" id="cyanAccent"><span class="property">Accent Color:</span><span id="cyanAccentColorDisplay" class="property">#009f88</span><input type="color" id="cyanColorPicker" value="#009f88"><div style="background-color: #009f88;" id="colorPickerBtn" onclick="document.getElementById('cyanColorPicker').showPicker();"></div></div>
+            <div id="cyanCustomizer">
+                <div id="pseudoChatHeader"><svg width="24" height="24" viewBox="0 0 24 24" id="pseudoChatHeaderIcon" x="0" y="0" aria-hidden="true" role="img"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z"></path></svg><h1 id="customizerHeader">cyan-customizer</h1></div>
+                <div id="pseudoChatContainer">
+                    <div class="propertyWrapper" id="cyanAccent"><span class="property">Accent Color:</span><div class="colorPickerWrapper"><span id="cyanAccentColorDisplay" class="property">#009f88</span><input type="color" id="cyanColorPicker" value="#009f88"><div style="background-color: #009f88;" id="colorPickerBtn" onclick="document.getElementById('cyanColorPicker').showPicker();"></div></div></div>
                 <div class="propertyWrapper" id="cyanBackImg" style="display: flex;"><span class="property">Background image URL:</span><input type="text" id="cyanBackImgInput" value="https://dablulite.github.io/Cyan/cyan-waves-4k.png"></div>
-                <div class="propertyWrapper" id="cyanAccentedBorders" style="display: flex;"><span class="property">Use accent color as border:</span><input type="checkbox" id="cyanAccentedBordersRadio" style="display: none;"><div id="boxShadowToggle" onclick="changeBoxShadow();"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#f04747" class="bi bi-toggle-off" viewBox="0 0 16 16"><path d="M 11,13 A 5,5 0 0 0 11,3 H 5 A 5,5 0 0 0 5,13 Z M 5,4 a 4,4 0 1 1 0,8 4,4 0 0 1 0,-8 z"></path></svg></div></div>
-                <div class="propertyWrapper" id="win11Titlebar" style="display: flex;"><span class="property">Use Win10-type titlebar:</span><input type="checkbox" id="win11TitlebarRadio" style="display: none;"><div id="win11TitlebarToggle" onclick="toggleWin11Titlebar();"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#f04747" class="bi bi-toggle-off" viewBox="0 0 16 16"><path d="M 11,13 A 5,5 0 0 0 11,3 H 5 A 5,5 0 0 0 5,13 Z M 5,4 a 4,4 0 1 1 0,8 4,4 0 0 1 0,-8 z"></path></svg></div></div>
-                <div class="propertyWrapper" id="glassMaterial" style="display: flex;"><span class="property">Use solid background instead of glass:</span><input type="checkbox" id="glassMaterialRadio" style="display: none;"><div id="glassMaterialToggle" onclick="changeGlassMaterial();"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#f04747" class="bi bi-toggle-off" viewBox="0 0 16 16"><path d="M 11,13 A 5,5 0 0 0 11,3 H 5 A 5,5 0 0 0 5,13 Z M 5,4 a 4,4 0 1 1 0,8 4,4 0 0 1 0,-8 z"></path></svg></div></div>
-                <div class="propertyWrapper" id="tintVisibility" style="display: flex;"><span class="property">Tint visibility:</span><input type="checkbox" id="tintVisibilityRadio" style="display: none;"><div id="tintVisibilityToggle" onclick="changeTintVisibility();"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#f04747" class="bi bi-toggle-off" viewBox="0 0 16 16"><path d="M 11,13 A 5,5 0 0 0 11,3 H 5 A 5,5 0 0 0 5,13 Z M 5,4 a 4,4 0 1 1 0,8 4,4 0 0 1 0,-8 z"></path></svg></div></div>
+                <div class="propertyWrapper" id="win11Titlebar" style="display: flex;"><span class="property">Use Windows 10 titlebar:</span><input type="checkbox" id="win11TitlebarRadio" style="display: none;"><div id="win11TitlebarToggle" onclick="toggleWin11Titlebar();" class="toggleTrack"><div class="toggleHandle"></div></div></div>
+                <div class="propertyWrapper" id="tintVisibility" style="display: flex;"><span class="property">Tint visibility:</span><input type="checkbox" id="tintVisibilityRadio" style="display: none;"><div id="tintVisibilityToggle" onclick="changeTintVisibility();" class="toggleTrack"><div class="toggleHandle"></div></div></div>
                 <div class="propertyWrapper" id="backgroundHue" style="display: flex;"><span class="property">Background Hue:</span><input type="range" id="backgroundHueSlider" min="0" max="360" value="225"></div>
-                <div id="rawCodeBlock"><span id="win11TitlebarCodeblock" style="display: none;">@import url(https://dablulite.github.io/Cyan/Addons/CyanWin10Titlebar.css);</span>
-:root {
-    <span id="accentColorCodeblock">--cyan-accent-color: #009f88;</span>
+                <div id="rawCodeBlock"><span id="win11TitlebarCodeblock" style="display: none;">@import url(https://dablulite.github.io/Cyan/Addons/CyanWin10Titlebar.css);</span>:root {
+<span id="accentColorCodeblock">--cyan-accent-color: #009f88;</span>
     <span id="backImgCodeblock">--cyan-background-img: url(https://dablulite.github.io/Cyan/cyan-waves-4k.png);</span>
-    <span id="boxShadowCodeblock">--cyan-elevation-shadow: 0 0 0 1.5px rgba(180,180,180,.4), 0 2px 10px 0 rgb(0 0 0 / 60%);</span>
     <span id="glassMaterialCodeblock">--cyan-background-primary: hsla(var(--cyan-background-hue) var(--cyan-tint-visibility) var(--cyan-background-lightness) / 40%);</span>
-    <span id="blurRadiusCodeblock">--cyan-blur-radius: 10px;</span>
     <span id="backgroundHueCodeblock">--cyan-background-hue: 225deg;</span>
-    <span id="tintVisibilityCodeblock">--cyan-tint-visibility: 8%;</span>
-}</div>
-                <h1 id="suggestionHeader">You can add this configuration to your custom CSS tab, or:</h1>
-                <div class="mainButtonContainer"><button id="downloadCyanBtn" onclick="downloadCyan();" class="cyanBtn">Download Customized Cyan</button><a href="https://dablulite.github.io/Cyan/Cyan.theme.css" download="Cyan.theme.css" id="downloadStockCyanBtn" class="cyanBtn" style="text-decoration: none;">Download Stock Cyan (Ctrl + S to save)</a><button id="copyConfigBtn" onclick="copyConfig();" class="cyanBtn">Copy CustomCSS configuration</button></div>
+    <span id="tintVisibilityCodeblock">--cyan-tint-visibility: 8%;</span>}</div>
+                </div>
+                <div class="mainButtonContainer"><button id="downloadCyanBtn" onclick="downloadCyan();" class="cyanBtn">Download Customized Cyan</button><a href="https://dablulite.github.io/Cyan/Cyan.theme.css" download="Cyan.theme.css" id="downloadStockCyanBtn" class="cyanBtn" style="text-decoration: none;">Download Stock Cyan (Ctrl + S to save)</a><button id="copyConfigBtn" onclick="copyConfig();" class="cyanBtn">Copy CustomCSS configuration</button><a href="https://dablulite.github.io/Cyan/Addons" id="addonsBtn" class="cyanBtn" style="text-decoration: none;">Cyan Addons</a></div>
             </div>
         </div>
     </section>
