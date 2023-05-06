@@ -3956,7 +3956,7 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
 .bd-settings-title.bd-settings-group-title::before {
     content: none !important;
 }
-.bd-addon-list .bd-footer .bd-addon-button {
+.bd-addon-list .bd-footer .bd-controls .bd-addon-button {
     background-color: var(--cyan-background-primary) !important;
     transition: .15s;
     border: 1px solid var(--cyan-accent-color);
