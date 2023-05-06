@@ -1,0 +1,13 @@
+/**
+ * @name CyanTransparencyCompat
+ * @description Cyan Transparency Compatibility
+ * @author DaBluLite#7409
+ * @authorId 582170007505731594
+ * @version 1.0.0
+ * @source https://dablulite.github.com/DaBluLite/Cyan/Addons/CyanTransparencyCompat/CyanTransparencyCompat.theme.css
+ * @updateUrl https://dablulite.github.com/DaBluLite/Cyan/Addons/CyanTransparencyCompat/CyanTransparencyCompat.theme.css
+ */
+
+:root {
+	--cyan-background-img: none !important;
+}
