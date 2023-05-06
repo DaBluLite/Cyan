@@ -32,3 +32,7 @@
 #app-mount .expandedFolderBackground-1kSAf6 {
     border-radius: 8px 0 0 8px !important;
 }
+.chat-2ZfjoI {
+    margin-left: calc(var(--window-margin) * 1px);
+    margin-right: 0;
+}
