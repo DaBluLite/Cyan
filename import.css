@@ -1031,6 +1031,7 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
   border-radius: var(--window-border-radius-calc);
   box-shadow: var(--cyan-elevation-shadow);
   backdrop-filter: blur(var(--cyan-blur-radius));
+  margin-left: 0;
 }
 .newMessagesBar-1hF-9G > .barButtonAlt-TQoCdZ {
   font-size: 0 !important;
