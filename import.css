@@ -3,7 +3,7 @@
 @import url(//dablulite.github.io/CyanBootstrapIcons/import.css);
 :root {
     --cyan-version: 10;
-    --cyan-subversion: 1;
+    --cyan-subversion: 2;
     --cyan-text-shadow: 0;
     --cyan-background-primary-alt: var(--cyan-background-primary);
     --cyan-background-secondary: var(--background-floating);
@@ -4302,4 +4302,68 @@ section.panels-3wFtMD .container-YkUktl .button-12Fmur {
 }
 [d="M21.025 5V4C21.025 2.88 20.05 2 19 2C17.95 2 17 2.88 17 4V5C16.4477 5 16 5.44772 16 6V9C16 9.55228 16.4477 10 17 10H19H21C21.5523 10 22 9.55228 22 9V5.975C22 5.43652 21.5635 5 21.025 5ZM20 5H18V4C18 3.42857 18.4667 3 19 3C19.5333 3 20 3.42857 20 4V5Z"] {
     display: none;
+}
+/*Cyan Addon Notice*/
+#Cyan-card .bd-description-wrap::after {
+    content: "Cyan offers a few add-ons to enhance your experience. They can be found at https://dablulite.github.io/Cyan/Addons/";
+    width: 100%;
+    background-color: var(--background-secondary-alt);
+    padding: 16px;
+    border-radius: 16px;
+    color: var(--text-normal);
+    box-sizing: border-box;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    border: 1px solid rgb(200,200,200,.2);
+    line-height: 18px;
+    display: inline-block;
+}
+/*MFC/WWC Discriminators*/
+.bd-addon-card, .bd-addon-card * {
+    transition: .2s !important;
+}
+/*MFC Discriminators*/
+.bd-addon-card[id="Peterproma Snippets-card"] .bd-name::after {
+    content: "Made For Cyan";
+    width: fit-content;
+    padding: 0;
+    color: var(--cyan-accent-color);
+    line-height: 18px;
+    display: inline-block;
+    user-select: text;
+    transition: .2s;
+    margin-left: 0.5ch;
+}
+/*WWC Discriminators*/
+.bd-addon-card[id="Themed Server Icons-card"] .bd-name::after,
+.bd-addon-card[id="Themed Server Icons (Alternate Method)-card"] .bd-name::after {
+    content: "Works With Cyan";
+    width: fit-content;
+    padding: 0;
+    color: var(--cyan-accent-color);
+    line-height: 18px;
+    display: inline-block;
+    user-select: text;
+    transition: .2s;
+    margin-left: 0.5ch;
+}
+
+/*Extended Descriptions*/
+.bd-addon-card[id="Peterproma Snippets-card"] .bd-description-wrap::after, .bd-addon-card[id="Themed Server Icons-card"] .bd-description-wrap::after {
+    content: "";
+    width: 100%;
+    padding: 0;
+    color: var(--header-secondary);
+    display: inline-flex;
+    user-select: text;
+    transition: .2s, line-height 0.2s ease-in-out;
+    opacity: 1;
+    line-height: 18px;
+}
+
+.bd-addon-card[id="Peterproma Snippets-card"] .bd-description-wrap::after {
+    content: "Based Cyan User";
+}
+.bd-addon-card[id="Themed Server Icons-card"] .bd-description-wrap::after {
+    content: "Please let me know if you would like to see this as an official Cyan addon, or even better, a standalone theme.";
 }
