@@ -4,7 +4,7 @@
 
 <h1 background="#ff0000">Cyan - A sleek and clean Discord theme, with custom background support</h1>
 
-- <b>[Get it on BetterDiscord](https://betterdiscord.app/theme/Cyan) or [Customize it!](https://dablulite.github.io/Cyan)</b>
+- <b>[Get it on BetterDiscord](https://betterdiscord.app/theme/Cyan) or [Customize it! (UPDATED)](https://dablulite.github.io/Cyan)</b>
 - <b>[Addons for Cyan are available here](https://dablulite.github.io/Cyan/Addons)</b>
 
 # Special thanks to:

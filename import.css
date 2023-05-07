@@ -3,7 +3,7 @@
 @import url(//dablulite.github.io/CyanBootstrapIcons/import.css);
 :root {
     --cyan-version: 10;
-    --cyan-subversion: 2;
+    --cyan-subversion: 4;
     --cyan-text-shadow: 0;
     --cyan-background-primary-alt: var(--cyan-background-primary);
     --cyan-background-secondary: var(--background-floating);
@@ -1225,24 +1225,8 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
   transform: scale(1) translate(0px, 0px) !important;
   transform-origin: center;
 }
-.panels-3wFtMD
-  > div
-  > div
-  > div
-  > div
-  > button[aria-label="Noise Suppression powered by Krisp"] {
-  opacity: 0;
-}
 .container-1-ERn5 {
   background-color: transparent;
-}
-.panels-3wFtMD:hover
-  > div
-  > div
-  > div
-  > div
-  > button[aria-label="Noise Suppression powered by Krisp"] {
-  opacity: 1;
 }
 .scroller-3j5xK2,
 .scroller-RfJjkV {
@@ -1300,7 +1284,7 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
 .layout-1qmrhw,
 .interactive-iyXY_x,
 .tooltip-14MtrL {
-  border-radius: 10px;
+  border-radius: 8px;
 }
 .tooltipPointer-3L49xb {
   display: none;
@@ -1470,6 +1454,7 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
   border-radius: 25px !important;
   background-color: var(--cyan-background-elevated);
   box-shadow: var(--cyan-elevation-shadow);
+  z-index: +1;
 }
 .upload-vLbqu- {
   border-radius: 10px !important;
@@ -1788,6 +1773,14 @@ section.panels-3wFtMD .container-YkUktl .button-12Fmur {
   width: calc((240px/3) - (var(--window-margin)*1px));
   border-radius: var(--window-border-radius) !important;
   margin: 0 calc((var(--window-margin)*1px)/2);
+}
+.panels-3wFtMD .container-1zzFcN .button-12Fmur {
+    transition: .15s;
+    border-radius: 50%
+}
+.panels-3wFtMD .container-1zzFcN .button-12Fmur:hover {
+    background-color: var(--cyan-background-secondary);
+    box-shadow: var(--cyan-elevation-shadow);
 }
 section.panels-3wFtMD .container-YkUktl .flex-2S1XBF {
   width: 100% !important;
@@ -2996,7 +2989,6 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
   background-color: var(--cyan-background-secondary);
   margin-left: 2px !important;
   border-radius: 4px !important;
-  box-shadow: 0 0 0 1.5px var(--cyan-background-primary), 0 2px 10px 0 rgb(0 0 0 / 20%);
   padding: 8px;
   overflow: overlay !important;
 }
@@ -3298,6 +3290,12 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
 }
 .input-3O04eu {
     background-color: transparent !important;
+    border: none !important;
+    box-shadow: var(--light-elevation-border);
+    transition: .15s;
+}
+.input-3O04eu.focused-16iuXg, .input-3O04eu:focus {
+    box-shadow: var(--cyan-elevation-shadow);
 }
 .container-iA3Qrz .messageContainer-3VTXBC {
     transition: .1s;
@@ -3753,7 +3751,7 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
 .contents-3NembX:has(> .listenAlongIcon-aXq1MH)::after {
     content: "Listen Along";
     font-size: 14px;
-    color: var(--white-500);
+    color: var(--header-primary);
     font-weight: 500;
     align-content: center;
     display: grid;
@@ -4197,8 +4195,7 @@ section.panels-3wFtMD .container-YkUktl .button-12Fmur {
     background-color: var(--cyan-background-secondary);
 }
 .inner-NQg18Y {
-    padding: 4px 0;
-    padding-left: 0;
+    padding: 4px;
 }
 .webkit-QgSAqd .buttons-uaqb-5 > * {
     margin: 0;
@@ -4366,4 +4363,194 @@ section.panels-3wFtMD .container-YkUktl .button-12Fmur {
 }
 .bd-addon-card[id="Themed Server Icons-card"] .bd-description-wrap::after {
     content: "Please let me know if you would like to see this as an official Cyan addon, or even better, a standalone theme.";
+}
+.tabContainer-CradLt {
+    padding: 6px 8px !important;
+    gap: 8px;
+}
+.tabContainer-CradLt > .tabItem-lbSC8a {
+    width: -webkit-fill-available;
+    text-align: center;
+    align-items: center;
+    margin-right: 0;
+    border-bottom: none;
+    border-radius: 8px;
+    transition: .2s;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.tabContainer-CradLt > .tabItem-lbSC8a:hover,
+.tabContainer-CradLt > .tabItem-lbSC8a.tabItemSelected-Z0xl-W {
+    box-shadow: var(--cyan-elevation-shadow);
+}
+.art-1TvEXv {
+    display: none;
+}
+.group-1_ptLP {
+    padding: 3px;
+    gap: 3px;
+    border-radius: 6px !important;
+    background-color: var(--background-accent);
+}
+.group-1_ptLP > button {
+    background-color: var(--cyan-background-secondary) !important;
+    border-radius: 6px !important;
+    transition: .15s;
+    border: 1px solid transparent;
+}
+.group-1_ptLP > .selectorButtonSelected-3cQUnj, .group-1_ptLP > button:hover {
+    border-color: var(--cyan-accent-color);
+}
+.sourceThumbnail-ERDcZE, .tile-3POX2m {
+    border-radius: 6px;
+    transition: .2s;
+}
+.tile-3POX2m:hover .sourceThumbnail-ERDcZE {
+    box-shadow: var(--cyan-elevation-shadow) !important;
+}
+#bd-editor-controls .checkbox-inner {
+    position: relative;
+}
+#bd-editor-controls .checkbox {
+    width: 37px;
+    transform: translateX(-28px);
+    position: absolute;
+    top: 0;
+    opacity: 0;
+}
+#bd-editor-controls .checkbox-inner::before {
+    content: "";
+    width: 28px;
+    height: 14px;
+    display: flex;
+    background-color: var(--background-primary);
+    border: 28px;
+    border-radius: 50px;
+    transform: translateX(calc(-25% - 20px));
+    transition: .15s;
+}
+#bd-editor-controls .checkbox-inner::after {
+    content: "";
+    width: 18px;
+    height: 18px;
+    display: flex;
+    background-color: #fff;
+    border: 28px;
+    border-radius: 50px;
+    transform: translateX(calc(-75% - 20px)) translateY(-87.5%);
+    transition: .15s;
+}
+#bd-editor-controls .checkbox-inner:has(:checked)::before {
+    background-color: var(--cyan-accent-color);
+}
+#bd-editor-controls .checkbox-inner:has(:checked)::after {
+    background-color: var(--cyan-accent-color);
+    filter: brightness(2);
+    transform: translateX(calc(50% - 20px)) translateY(-87.5%);
+}
+.checkbox-item .checkbox-label {
+    margin-right: 40px;
+}
+path[d="M12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"] {
+    d: path("M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z");
+    opacity: 0;
+    scale: 1.79;
+    transform: translateX(-2px);
+}
+path[d="M12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"]:has(+ circle) {
+    opacity: 1;
+}
+path[d="M12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"] + circle {
+    display: none;
+}
+.userPopoutOuter-1OHwPL > .userProfileInnerThemedNonPremium-2AJg-H {
+    position: relative;
+}
+.userPopoutOuter-1OHwPL > .userProfileInnerThemedNonPremium-2AJg-H::before {
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgb(0,0,0,.7) 100%);
+    height: 100%;
+    width: 340px;
+    z-index: +1;
+}
+.userPopoutOuter-1OHwPL > .userProfileInnerThemedNonPremium-2AJg-H::after {
+    content: "";
+    position: absolute;
+    background-color: rgb(0,0,0,.4);
+    height: calc(100% - 8px);
+    width: 332px;
+    margin: 4px;
+    border-radius: 16px;
+}
+.userPopoutOuter-1OHwPL > .userProfileInnerThemedNonPremium-2AJg-H > .bannerSVGWrapper-2CLfzN {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    max-width: 340px;
+    position: absolute;
+    scale: 500;
+}
+.userPopoutOuter-1OHwPL > .userProfileInnerThemedNonPremium-2AJg-H > .avatarWrapper-eenWra {
+    position: relative;
+    width: 80px;
+    z-index: +1;
+}
+.userPopoutOuter-1OHwPL > .userProfileInnerThemedNonPremium-2AJg-H > .userPopoutOverlayBackground-3A0Pcz {
+    z-index: +1;
+}
+
+div[aria-label="dablulite"] .profileBadges-2pItdR::after {
+    content: "";
+    height: 22px;
+    width: 22px;
+    background-color: var(--cyan-accent-color);
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-palette-fill' viewBox='0 0 16 16'%3E%3Cpath d='M12.433 10.07C14.133 10.585 16 11.15 16 8a8 8 0 1 0-8 8c1.996 0 1.826-1.504 1.649-3.08-.124-1.101-.252-2.237.351-2.92.465-.527 1.42-.237 2.433.07zM8 5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm4.5 3a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM5 6.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm.5 6.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z'/%3E%3C/svg%3E");
+    -webkit-mask-size: 16px;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    cursor: pointer;
+}
+div[aria-label="dablulite"] .markup-eYLPri a {
+    font-size: 0;
+    height: 42px;
+    display: flex;
+    margin-bottom: 8px;
+    text-decoration: none !important;
+}
+div[aria-label="dablulite"] .markup-eYLPri a::after {
+    content: attr(title);
+    font-size: 14px;
+    color: var(--header-primary);
+    padding: 11px 16px;
+    border-radius: 8px;
+    height: fit-content;
+    width: 100%;
+    border: 1px solid var(--cyan-accent-color);
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    transition: .15s;
+    margin: 4px;
+}
+div[aria-label="dablulite"] .markup-eYLPri a:hover::after {
+    box-shadow: var(--cyan-elevation-shadow);
+}
+div[aria-label="dablulite"] .markup-eYLPri > div {
+    display: flex;
+    flex-direction: column;
+}
+div[aria-label="dablulite"] .markup-eYLPri, div[aria-label="dablulite"] .markup-eYLPri > div {
+    max-height: unset;
+    height: fit-content;
+}
+
+div[aria-label="dablulite"] .markup-eYLPri a[title*="dablulite.github.io/Cyan"]::after {
+    content: "Download or Customize Cyan";
+}
+div[aria-label="dablulite"] .markup-eYLPri a[title*="github.com/DaBluLite"]::after {
+    content: "DaBluLite's Github";
+}
+.customStatus-19KW6v, .nickname-3P1RuO, .userTag-3A4Fw4 > span, .attachButtonPlus-3IYelE {
+    color: var(--white-500);
+    fill: var(--white-500);
 }
