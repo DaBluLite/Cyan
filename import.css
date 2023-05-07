@@ -1225,24 +1225,8 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
   transform: scale(1) translate(0px, 0px) !important;
   transform-origin: center;
 }
-.panels-3wFtMD
-  > div
-  > div
-  > div
-  > div
-  > button[aria-label="Noise Suppression powered by Krisp"] {
-  opacity: 0;
-}
 .container-1-ERn5 {
   background-color: transparent;
-}
-.panels-3wFtMD:hover
-  > div
-  > div
-  > div
-  > div
-  > button[aria-label="Noise Suppression powered by Krisp"] {
-  opacity: 1;
 }
 .scroller-3j5xK2,
 .scroller-RfJjkV {
@@ -1300,7 +1284,7 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
 .layout-1qmrhw,
 .interactive-iyXY_x,
 .tooltip-14MtrL {
-  border-radius: 10px;
+  border-radius: 8px;
 }
 .tooltipPointer-3L49xb {
   display: none;
@@ -1788,6 +1772,14 @@ section.panels-3wFtMD .container-YkUktl .button-12Fmur {
   width: calc((240px/3) - (var(--window-margin)*1px));
   border-radius: var(--window-border-radius) !important;
   margin: 0 calc((var(--window-margin)*1px)/2);
+}
+.panels-3wFtMD .container-1zzFcN .button-12Fmur {
+    transition: .15s;
+    border-radius: 50%
+}
+.panels-3wFtMD .container-1zzFcN .button-12Fmur:hover {
+    background-color: var(--cyan-background-secondary);
+    box-shadow: var(--cyan-elevation-shadow);
 }
 section.panels-3wFtMD .container-YkUktl .flex-2S1XBF {
   width: 100% !important;
