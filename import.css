@@ -3,7 +3,7 @@
 @import url(//dablulite.github.io/CyanBootstrapIcons/import.css);
 :root {
     --cyan-version: 10;
-    --cyan-subversion: 4;
+    --cyan-subversion: 5;
     --cyan-text-shadow: 0;
     --cyan-background-primary-alt: var(--cyan-background-primary);
     --cyan-background-secondary: var(--background-floating);
@@ -4553,4 +4553,10 @@ div[aria-label="dablulite"] .markup-eYLPri a[title*="github.com/DaBluLite"]::aft
 .customStatus-19KW6v, .nickname-3P1RuO, .userTag-3A4Fw4 > span, .attachButtonPlus-3IYelE {
     color: var(--white-500);
     fill: var(--white-500);
+}
+.containerDefault-YUSmu3:has(.modeConnected-NrO4cP) {
+    background-color: var(--cyan-background-secondary);
+    box-shadow: var(--cyan-elevation-shadow);
+    transform: scale(1.01);
+    border-radius: 12px;
 }
