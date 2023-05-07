@@ -3,7 +3,7 @@
 @import url(//dablulite.github.io/CyanBootstrapIcons/import.css);
 :root {
     --cyan-version: 10;
-    --cyan-subversion: 3;
+    --cyan-subversion: 4;
     --cyan-text-shadow: 0;
     --cyan-background-primary-alt: var(--cyan-background-primary);
     --cyan-background-secondary: var(--background-floating);
@@ -3745,7 +3745,7 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
 .contents-3NembX:has(> .listenAlongIcon-aXq1MH)::after {
     content: "Listen Along";
     font-size: 14px;
-    color: var(--white-500);
+    color: var(--header-primary);
     font-weight: 500;
     align-content: center;
     display: grid;
@@ -4544,4 +4544,8 @@ div[aria-label="dablulite"] .markup-eYLPri a[title*="dablulite.github.io/Cyan"]:
 }
 div[aria-label="dablulite"] .markup-eYLPri a[title*="github.com/DaBluLite"]::after {
     content: "DaBluLite's Github";
+}
+.customStatus-19KW6v, .nickname-3P1RuO, .userTag-3A4Fw4 > span, .attachButtonPlus-3IYelE {
+    color: var(--white-500);
+    fill: var(--white-500);
 }
