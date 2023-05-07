@@ -3290,6 +3290,12 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
 }
 .input-3O04eu {
     background-color: transparent !important;
+    border: none !important
+    box-shadow: var(--light-elevation-border);
+    transition: .15s;
+}
+.input-3O04eu.focused-16iuXg, .input-3O04eu:focus {
+    box-shadow: var(--cyan-elevation-shadow);
 }
 .container-iA3Qrz .messageContainer-3VTXBC {
     transition: .1s;
