@@ -3,7 +3,7 @@
 @import url(//dablulite.github.io/CyanBootstrapIcons/import.css);
 :root {
     --cyan-version: 10;
-    --cyan-subversion: 5;
+    --cyan-subversion: 6;
     --cyan-text-shadow: 0;
     --cyan-background-primary-alt: var(--cyan-background-primary);
     --cyan-background-secondary: var(--background-floating);
@@ -4559,4 +4559,34 @@ div[aria-label="dablulite"] .markup-eYLPri a[title*="github.com/DaBluLite"]::aft
     box-shadow: var(--cyan-elevation-shadow);
     transform: scale(1.01);
     border-radius: 12px;
+}
+.header-1Uy0p6:has(.input-3O04eu) {
+    background-color: transparent;
+    box-shadow: var(--light-elevation-border);
+    transition: .2s;
+    border-radius: 12px;
+}
+.header-1Uy0p6:has(:focus) {
+    background-color: var(--cyan-background-secondary);
+    box-shadow: var(--cyan-elevation-shadow);
+}
+.header-1Uy0p6 .input-3O04eu {
+    box-shadow: none;
+}
+.matchingPostsRow-2IiEQ1 {
+    background-color: var(--cyan-background-secondary);
+    box-shadow: var(--cyan-elevation-shadow);
+    border-radius: 8px;
+    margin-top: 6px;
+}
+.sansAttachButtonCreatePost-3BMh9R {
+    padding: 4px;
+    padding-right: 12px;
+}
+.sansAttachButtonCreatePost-3BMh9R .textAreaForPostCreation-15Soam {
+    padding: 8px 12px !important;
+}
+.returnButton-1xn3Ii .iconContainer-21RCa3 {
+    background-color: transparent;
+    padding: 0;
 }
