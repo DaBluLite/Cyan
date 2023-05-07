@@ -3,7 +3,7 @@
 @import url(//dablulite.github.io/CyanBootstrapIcons/import.css);
 :root {
     --cyan-version: 10;
-    --cyan-subversion: 6;
+    --cyan-subversion: 7;
     --cyan-text-shadow: 0;
     --cyan-background-primary-alt: var(--cyan-background-primary);
     --cyan-background-secondary: var(--background-floating);
@@ -4589,4 +4589,22 @@ div[aria-label="dablulite"] .markup-eYLPri a[title*="github.com/DaBluLite"]::aft
 .returnButton-1xn3Ii .iconContainer-21RCa3 {
     background-color: transparent;
     padding: 0;
+}
+.theme-light #app-mount .wrapper-NhbLHG.modeSelected-3DmyhH *, .theme-light #app-mount .wrapper-NhbLHG:hover * {
+    fill: var(--cyan-accent-color) !important;
+}
+.theme-light .username-h_Y3Us:not([style]), .theme-light .name-3Vmqxm:not([style]) {
+    color: #fff !important;
+}
+.theme-light .markup-eYLPri code.inline {
+    background-color: var(--cyan-background-primary);
+}
+.theme-light .buttons-uaqb-5 > * * {
+    color: #fff;
+}
+.theme-light .buttons-uaqb-5 > *:hover * {
+    color: #000;
+}
+.theme-light .theme-light .container-1Lk8p7 * {
+    color: #000 !important;
 }
