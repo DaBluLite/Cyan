@@ -1454,6 +1454,7 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
   border-radius: 25px !important;
   background-color: var(--cyan-background-elevated);
   box-shadow: var(--cyan-elevation-shadow);
+  z-index: +1;
 }
 .upload-vLbqu- {
   border-radius: 10px !important;
