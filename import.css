@@ -2853,7 +2853,7 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
 .homeIcon-r0w4ny {
   color: var(--header-primary);
 }
-#Cyan-card .bd-name::after {
+.bd-addon-card[id*="Cyan"] .bd-name::after {
   counter-reset: cyan-version var(--cyan-version) cyan-subversion var(--cyan-subversion);
   content: 'Version ' counter(cyan-version)'.'counter(cyan-subversion) '';
 }
@@ -3020,7 +3020,7 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
 .bd-controls>.bd-addon-button>svg {
     fill: var(--header-primary) !important;
 }
-#Cyan-card .bd-name::after {
+.bd-addon-card[id*="Cyan"] .bd-name::after {
     border-radius: 4px;
     border: 1px solid var(--cyan-accent-color);
     display: inline-flex;
@@ -3158,7 +3158,7 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
 .link-1-SDSV:first-of-type {
     padding: 8px 6px;
 }
-#app-mount #Cyan-card {
+#app-mount .bd-addon-card[id*="Cyan"] {
     box-shadow: var(--cyan-elevation-shadow);
     background-image: var(--cyan-background-img) !important;
     background-size: cover !important;
@@ -3167,7 +3167,7 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
     position: relative !important;
     border: none !important;
 }
-#app-mount #Cyan-card::before {
+#app-mount .bd-addon-card[id*="Cyan"]::before {
     content: "";
     position: absolute;
     top: 0;
@@ -3177,7 +3177,7 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
     background-color: var(--cyan-background-primary) !important;
     backdrop-filter: blur(var(--cyan-blur-radius)) !important;
 }
-#Cyan-card .bd-addon-header, #Cyan-card .bd-description-wrap, #Cyan-card .bd-footer {
+.bd-addon-card[id*="Cyan"] .bd-addon-header, .bd-addon-card[id*="Cyan"] .bd-description-wrap, .bd-addon-card[id*="Cyan"] .bd-footer {
     background-color: transparent !important;
     z-index: +1;
 }
@@ -4301,7 +4301,7 @@ section.panels-3wFtMD .container-YkUktl .button-12Fmur {
     display: none;
 }
 /*Cyan Addon Notice*/
-#Cyan-card .bd-description-wrap::after {
+.bd-addon-card[id*="Cyan"] .bd-description-wrap::after {
     content: "Cyan offers a few add-ons to enhance your experience. They can be found at https://dablulite.github.io/Cyan/Addons/";
     width: 100%;
     background-color: var(--background-secondary-alt);
