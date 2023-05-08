@@ -47,3 +47,15 @@ https://github.com/DaBluLite/Cyan/tree/master/Addons/CyanWin10Titlebar
 ```
 https://github.com/DaBluLite/Cyan/tree/master/Addons/Win10TitlePlusRightSideOmnibarCompat
 ```
+
+### Omnibar Collapse:
+
+#### Importing
+```css
+@import url(https://dablulite.github.io/Cyan/Addons/OmnibarCollapse/import.css);
+```
+
+#### Repo
+```
+https://github.com/DaBluLite/Cyan/tree/master/Addons/OmnibarCollapse
+```
