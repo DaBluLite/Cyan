@@ -271,9 +271,6 @@ ${document.getElementById("win11TitlebarStyle").innerText}
             left: 65px;
         }
         .cyanBtn {
-            width: fit-content;
-            text-align: center;
-            align-self: center;
             padding: 3px 14px;
             background: transparent;
             border: none;
@@ -287,13 +284,15 @@ ${document.getElementById("win11TitlebarStyle").innerText}
             -moz-user-select: none;
             -ms-user-select: none;
             user-select: none;
-            font-size: 0;
+            font-size: 14px;
             font-weight: 500;
             line-height: 14px;
-            display: flex;
+            display: inline-grid;
             align-items: center;
             height: 44px;
             box-sizing: border-box;
+            grid-template-columns: 15px max-content;
+            gap: 4px;
         }
         #pseudoGuildBar {
             height: 100%;
@@ -551,14 +550,11 @@ ${document.getElementById("win11TitlebarStyle").innerText}
         }
         .cyanBtn:hover {
             box-shadow: var(--cyan-elevation-shadow);
-            font-size: 14px;
             background-color: hsl(225, 8%, calc(10% * 0.6));
         }
         .cyanBtn i {
             font-size: 14px !important;
             transition: .2s;
-        }
-        .cyanBtn:hover i {
             margin-right: 4px;
         }
         #cyanBackImgInput:focus {
@@ -602,7 +598,7 @@ ${document.getElementById("win11TitlebarStyle").innerText}
             border-radius: 8px;
             align-items: center;
             height: 48px;
-            gap: 8px;
+            gap: 6px;
         }
         #pseudoChatContainer {
             display: flex;
@@ -749,7 +745,7 @@ ${document.getElementById("win11TitlebarStyle").innerText}
         </div>
         <div id="pseudoChat">
             <div id="cyanCustomizer">
-                <div id="pseudoChatHeader"><svg width="24" height="24" viewBox="0 0 24 24" id="pseudoChatHeaderIcon" x="0" y="0" aria-hidden="true" role="img"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z"></path></svg><h1 id="customizerHeader">cyan-customizer</h1><h1 id="customizerSubHeader">Version 4</h1></div>
+                <div id="pseudoChatHeader"><svg width="24" height="24" viewBox="0 0 24 24" id="pseudoChatHeaderIcon" x="0" y="0" aria-hidden="true" role="img"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z"></path></svg><h1 id="customizerHeader">cyan-customizer</h1><h1 id="customizerSubHeader">Version 5</h1></div>
                 <div id="pseudoChatContainer">
                     <div class="propertyWrapper" id="cyanAccent"><span class="property">Accent Color:</span><div class="colorPickerWrapper"><span id="cyanAccentColorDisplay" class="property">#009f88</span><input type="color" id="cyanColorPicker" value="#009f88"><div style="background-color: #009f88;" id="colorPickerBtn" onclick="document.getElementById('cyanColorPicker').showPicker();"></div></div></div>
                 <div class="propertyWrapper" id="cyanBackImg" style="display: flex;"><span class="property">Background image URL:</span><input type="text" id="cyanBackImgInput" value="https://dablulite.github.io/Cyan/cyan-waves.png"></div>
@@ -763,7 +759,7 @@ ${document.getElementById("win11TitlebarStyle").innerText}
     <span id="backgroundHueCodeblock">--cyan-background-hue: 225deg;</span>
     <span id="tintVisibilityCodeblock">--cyan-tint-visibility: 8%;</span>}</div>
                 </div>
-                <div class="mainButtonContainer"><input type="text" placeholder="Message #name-your-cyan" id="pseudoChatBar"><button id="downloadCyanBtn" onclick="downloadCyan();" class="cyanBtn"><i class="bi bi-download"></i>Download Customized Cyan</button><a href="https://betterdiscord.app/Download?id=753" id="downloadStockCyanBtn" class="cyanBtn" style="text-decoration: none;" target="_blank"><i class="bi bi-cloud-download-fill" ></i>Download Stock Cyan (Ctrl + S to save)</a><button id="copyConfigBtn" onclick="copyConfig();" class="cyanBtn"><i class="bi bi-clipboard-fill" ></i>Copy CustomCSS configuration</button><a href="https://dablulite.github.io/Cyan/Addons" id="addonsBtn" class="cyanBtn" style="text-decoration: none;" target="_blank"><i class="bi bi-puzzle-fill" ></i>Cyan Addons</a></div>
+                <div class="mainButtonContainer"><input type="text" placeholder="Message #name-your-cyan" id="pseudoChatBar"><button id="downloadCyanBtn" onclick="downloadCyan();" class="cyanBtn"><i class="bi bi-download"></i>Download Customized Cyan</button><a href="https://betterdiscord.app/Download?id=753" id="downloadStockCyanBtn" class="cyanBtn" style="text-decoration: none;" target="_blank"><i class="bi bi-cloud-download-fill" ></i>Download Stock Cyan</a><button id="copyConfigBtn" onclick="copyConfig();" class="cyanBtn"><i class="bi bi-clipboard-fill" ></i>Copy CustomCSS configuration</button><a href="https://dablulite.github.io/Cyan/Addons" id="addonsBtn" class="cyanBtn" style="text-decoration: none;" target="_blank"><i class="bi bi-puzzle-fill" ></i>Cyan Addons</a></div>
             </div>
         </div>
     </section>

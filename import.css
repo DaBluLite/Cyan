@@ -4608,3 +4608,87 @@ div[aria-label="dablulite"] .markup-eYLPri a[title*="github.com/DaBluLite"]::aft
 .theme-light .theme-light .container-1Lk8p7 * {
     color: #000 !important;
 }
+.userProfileModalOuter-2wdWjU > .userProfileInnerThemedNonPremium-2AJg-H .bannerSVGWrapper-2CLfzN {
+  position: absolute;
+  height: 100%;
+  width: 600px;
+  margin: 0;
+}
+.userProfileModalOuter-2wdWjU > .userProfileInnerThemedNonPremium-2AJg-H .bannerSVGWrapper-2CLfzN > foreignObject {
+  max-width: 600px;
+  transform: scale(2);
+  width: unset !Important;
+}
+.userProfileModalOuter-2wdWjU > .userProfileInnerThemedNonPremium-2AJg-H .bannerSVGWrapper-2CLfzN .profileBanner-1owKI5 {
+  transform: translateX(-25%) scale(0.5) translateY(calc(-100% + 53px));
+  width: 600px;
+  height: 573px;
+  z-index: +1;
+  position: absolute;
+}
+.userProfileModalOuter-2wdWjU > .userProfileInnerThemedNonPremium-2AJg-H .avatar-3QF_VA {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: +4;
+}
+.userProfileModalOuter-2wdWjU > .userProfileInnerThemedNonPremium-2AJg-H .topSection-13QKHs {
+  margin-bottom: 0;
+}
+.userProfileModalOuter-2wdWjU > .userProfileInnerThemedNonPremium-2AJg-H .header-S26rhB {
+  display: flex;
+  align-items: center;
+  z-index: +3;
+}
+.userProfileModalOuter-2wdWjU > .userProfileInnerThemedNonPremium-2AJg-H .header-S26rhB > div:not([class]) {
+  margin: 20px;
+}
+.userProfileModalOuter-2wdWjU > .userProfileInnerThemedNonPremium-2AJg-H .headerTop-1PNKck {
+  position: relative;
+  top: unset;
+  left: unset;
+  right: unset;
+  bottom: unset;
+  z-index: +3;
+}
+.userProfileModalOuter-2wdWjU > .userProfileInnerThemedNonPremium-2AJg-H .overlayBackground-2aa7wt {
+  z-index: +3;
+  overflow: visible !important;
+}
+.userProfileModalOuter-2wdWjU > .userProfileInnerThemedNonPremium-2AJg-H .body-1Ukv50 {
+  background-color: var(--cyan-background-secondary);
+  margin: 0;
+  width: 100%;
+  border-radius: 16px;
+  position: initial;
+  z-index: +2;
+}
+.userProfileModalOuter-2wdWjU > .userProfileInnerThemedNonPremium-2AJg-H::before {
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgb(0,0,0,.7) 100%);
+  height: 100%;
+  width: 100%;
+  z-index: +2;
+}
+.userProfileModalOuter-2wdWjU > .userProfileInnerThemedNonPremium-2AJg-H .overlayBackground-2aa7wt::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(0,0,0,.4);
+  height: calc(100% + 16px);
+  width: calc(100% + 16px);
+  margin: -8px;
+  border-radius: 0 0 16px 16px;
+  z-index: +2;
+}
+.userProfileModalOuter-2wdWjU > .userProfileInnerThemedNonPremium-2AJg-H .header-S26rhB::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(0,0,0,.4);
+  height: calc(100% - 16px);
+  width: calc(100% - 16px);
+  margin: 8px;
+  border-radius: 16px 16px 0 0;
+  z-index: +2;
+}
+.userProfileModalOuter-2wdWjU > .userProfileInnerThemedNonPremium-2AJg-H .pencilContainer-18TrEJ {
+  display: none;
+}
