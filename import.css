@@ -4692,3 +4692,28 @@ div[aria-label="dablulite"] .markup-eYLPri a[title*="github.com/DaBluLite"]::aft
 .userProfileModalOuter-2wdWjU > .userProfileInnerThemedNonPremium-2AJg-H .pencilContainer-18TrEJ {
   display: none;
 }
+.channelEmojiLeftOfIcon-2qUYhE {
+    margin-left: 12px;
+}
+.content-1gYQeQ:has(.mainContentWithChannelEmoji-3a7jev) {
+    margin-left: 0;
+}
+.selected-2TbFuo .content-1gYQeQ:has(.mainContentWithChannelEmoji-3a7jev)::before {
+    left: 6px;
+}
+.channelEmoji-NJOZuV {
+    max-width: 32px;
+    max-height: 32px;
+    width: 32px;
+    height: 32px;
+}
+.channelEmoji-NJOZuV > img {
+    width: 20px;
+    height: 20px;
+}
+.mainContentWithChannelEmoji-3a7jev > .iconContainer-21RCa3 {
+    background-color: transparent;
+}
+.mainContentWithChannelEmoji-3a7jev > .iconContainer-21RCa3 path {
+    fill: var(--channel-icon) !important;
+}
