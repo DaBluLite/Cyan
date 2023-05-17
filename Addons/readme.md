@@ -59,3 +59,15 @@ https://github.com/DaBluLite/Cyan/tree/master/Addons/Win10TitlePlusRightSideOmni
 ```
 https://github.com/DaBluLite/Cyan/tree/master/Addons/OmnibarCollapse
 ```
+
+### Nitro Theme Support:
+
+#### Importing
+```css
+@import url(https://dablulite.github.io/Cyan/Addons/NitroThemeCompat/import.css);
+```
+
+#### Repo
+```
+https://github.com/DaBluLite/Cyan/tree/master/Addons/NitroThemeCompat
+```
