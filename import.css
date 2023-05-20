@@ -3510,6 +3510,9 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
     padding-right: 0;
     border-radius: var(--window-border-radius-calc);
 }
+.channel-1Shao0:has(a[href="/channels/@me"]), .channel-1Shao0:has(a[href="/store"]) {
+    border-radius: var(--window-border-radius-calc) !important;
+}
 .channel-1Shao0:has(a[href="/channels/@me"]) .content-66wMin, .channel-1Shao0:has(a[href="/store"]) .content-66wMin {
     display: none;
 }
@@ -4716,4 +4719,7 @@ div[aria-label="dablulite"] .markup-eYLPri a[title*="github.com/DaBluLite"]::aft
 }
 .mainContentWithChannelEmoji-3a7jev > .iconContainer-21RCa3 path {
     fill: var(--channel-icon) !important;
+}
+.userProfileModalInner-3dx9L9:before {
+    border-radius: 14px;
 }
