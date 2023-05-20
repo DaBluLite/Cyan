@@ -2,7 +2,7 @@
 <img src="https://github.com/DaBluLite/Cyan/blob/master/cyan-addon-banner.png?raw=true"/>
 </div>
 
-<h1 background="#ff0000">Cyan - A sleek and clean Discord theme, with custom background support</h1>
+<h1 background="#ff0000">Cyan - A Clean and Customizable Discord theme, with custom background support</h1>
 
 [![BetterDiscord][bd-badge]][bd-link] [![Cyan Customizer][cc-badge]][cc-link] [![Cyan Addons][addon-badge]][addon-link]
 
