@@ -407,7 +407,7 @@
   border-radius: 6px !important;
   transition: .15s;
   right: 0 !important;
-  position: initial;
+  position: initial !important;
   width: 100%;
   margin-right: 0;
   border: 1px solid var(--cyan-accent-color);
