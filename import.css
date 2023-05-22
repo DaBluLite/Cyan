@@ -391,7 +391,7 @@
   max-height: none;
   flex-flow: column;
   padding: 15px;
-  display: inline-block;
+  display: flex;
   margin-right: 10px;
   margin-top: 0 !important;
   position: relative;
@@ -403,12 +403,23 @@
   width: 0;
 }
 .field-21XZwa .fieldButton-14lHvK {
-  background-color: var(--background-secondary) !important;
-  border-radius: 8px;
-  transition: .3s;
+  background-color: var(--cyan-background-secondary) !important;
+  border-radius: 6px !important;
+  transition: .15s;
+  right: 0 !important;
+  position: initial;
+  width: 100%;
+  margin-right: 0;
+  border: 1px solid var(--cyan-accent-color);
+  align-self: center;
+  justify-self: center;
 }
 .field-21XZwa .fieldButton-14lHvK:hover {
-  background-color: var(--background-secondary-alt) !important;
+  background-color: var(--cyan-background-primary) !important;
+  box-shadow: 0 0 0 1.5px var(--cyan-accent-color), 0 2px 10px 0 rgb(0 0 0 / 60%);
+}
+.fieldButtonList-28BYbB {
+    gap: 10px;
 }
 .field-21XZwa .fieldButton-14lHvK:hover > div {
   background-image: none !important;
