@@ -3,7 +3,7 @@
 @import url(//dablulite.github.io/CyanBootstrapIcons/import.css);
 :root {
     --cyan-version: 10;
-    --cyan-subversion: 7;
+    --cyan-subversion: 8;
     --cyan-text-shadow: 0;
     --cyan-background-primary-alt: var(--cyan-background-primary);
     --cyan-background-secondary: var(--background-floating);
@@ -4733,4 +4733,57 @@ div[aria-label="dablulite"] .markup-eYLPri a[title*="github.com/DaBluLite"]::aft
 }
 .userProfileModalInner-3dx9L9:before {
     border-radius: 14px;
+}
+.discordColorway {
+    border-radius: 8px !important;
+    background-color: var(--cyan-background-secondary);
+    box-shadow: inset 0 0 0 1px var(--interactive-normal) !important;
+    overflow: visible !important;
+    gap: 2px;
+}
+.discordColorway.active {
+    box-shadow: 0 0 0 5px var(--brand-500) !important;
+}
+.discordColorwayPreviewColor {
+    border-radius: 4px !important;
+    width: 26px !important;
+    height: 26px !important;
+}
+.discordColorway.active > .discordColorwayPreviewColor:first-of-type {
+    margin-top: 3px !important;
+    margin-left: 3px !important;
+}
+.discordColorway.active > .discordColorwayPreviewColor:nth-of-type(2) {
+    margin-top: 3px !important;
+    margin-right: 3px !important;
+}
+.discordColorway.active > .discordColorwayPreviewColor:nth-of-type(3) {
+    margin-bottom: 3px !important;
+    margin-left: 3px !important;
+}
+.discordColorway.active > .discordColorwayPreviewColor:nth-of-type(4) {
+    margin-bottom: 3px !important;
+    margin-right: 3px !important;
+}
+.notAppAsidePanel-3yzkgB:has(~ .themeEditor-1Ebyfp) .container-1eFtFS {
+    margin: 30px;
+    border-radius: 16px;
+    width: calc(100% - 45px);
+}
+.themeEditor-1Ebyfp {
+    border-left: none;
+    background-color: var(--cyan-background-secondary);
+}
+.bg-1QIAus {
+    background: var(--bg-overlay-app-frame,var(--cyan-background-secondary));
+}
+.notAppAsidePanel-3yzkgB:has(~ .themeEditor-1Ebyfp) .container-1eFtFS .guilds-2JjMmN {
+    margin-top: calc(var(--window-margin) * 1px) !important;
+    height: calc(100% - ((var(--window-margin) * 1px)) * 2) !important;
+}
+.notAppAsidePanel-3yzkgB:has(~ .themeEditor-1Ebyfp) .container-1eFtFS .sidebar-1tnWFu {
+    margin-top: calc(var(--window-margin) * 1px) !important;
+}
+.notAppAsidePanel-3yzkgB:has(~ .themeEditor-1Ebyfp) .container-1eFtFS::before {
+    height: calc(100% - ((var(--window-margin) * 1px)) * 2) !important;
 }
