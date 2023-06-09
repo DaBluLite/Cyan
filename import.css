@@ -2338,6 +2338,7 @@ div:not([class="tutorialContainer-1pL9QS"]) .wrapper-3kah-n .childWrapper-1j_1ub
 }
 .selectionCircle-3s5Uex {
     outline: none;
+    box-shadow: inset 0 0 0 2px var(--background-primary) !important;
 }
 .selectionCircle-3s5Uex:after {
   content: '';
