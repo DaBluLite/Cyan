@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url(//dablulite.github.io/CyanBootstrapIcons/import.css);
 :root {
-    --cyan-version: 10;
-    --cyan-subversion: 8;
+    --cyan-version: 11;
+    --cyan-subversion: 0;
     --cyan-text-shadow: 0;
     --cyan-background-primary-alt: var(--cyan-background-primary);
     --cyan-background-secondary: var(--background-floating);
@@ -4827,4 +4827,15 @@ div[aria-label="dablulite"] .markup-eYLPri a[title*="github.com/DaBluLite"]::aft
     border-radius: 11px;
     box-shadow: inset 0 0 0 0px var(--brand-500),inset 0 0 0 4px var(--cyan-background-primary);
     border: 3px solid var(--cyan-accent-color);
+}
+.container-2RRFHK::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 17em;
+    background: url(https://dablulite.github.io/Cyan/cyan-bootup.svg);
+}
+.content-3AIQZv {
+    display: none;
 }
