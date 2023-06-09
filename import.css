@@ -4839,3 +4839,12 @@ div[aria-label="dablulite"] .markup-eYLPri a[title*="github.com/DaBluLite"]::aft
 .content-3AIQZv {
     display: none;
 }
+.container-2RRFHK::before {
+    content: "Cyan";
+    color: var(--header-primary);
+    font-size: 80px;
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    transform: translateY(-50%);
+}
