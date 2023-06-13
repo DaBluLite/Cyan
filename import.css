@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url(//dablulite.github.io/CyanBootstrapIcons/import.css);
 :root {
-    --cyan-version: 11;
+    --cyan-version: 12;
     --cyan-subversion: 0;
     --cyan-text-shadow: 0;
     --cyan-background-primary-alt: var(--cyan-background-primary);
@@ -3113,9 +3113,13 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
 }
 .member-2gU6Ar {
     border-radius: 8px;
+    transition:  .15s;
+    width: 214px;
+    margin-bottom: 4px;
 }
 .member-2gU6Ar:hover, .member-2gU6Ar[aria-expanded="true"] {
-    background-color: var(--cyan-background-primary) !important;
+    background-color: var(--cyan-background-secondary) !important;
+    box-shadow: var(--cyan-elevation-shadow);
 }
 .divider-IqmEqJ .content-3spvdd {
     background-color: var(--cyan-background-secondary) !important;
@@ -4494,7 +4498,7 @@ path[d="M12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4
     height: calc(100% - 8px);
     width: 332px;
     margin: 4px;
-    border-radius: 16px;
+    border-radius: 12px;
 }
 .userPopoutOuter-1OHwPL > .userProfileInnerThemedNonPremium-2AJg-H > .bannerSVGWrapper-2CLfzN {
     margin: 0;
@@ -4870,4 +4874,138 @@ body:has(> #video)::after {
 body:has(> #text) #text {
     font-style: none;
     font-weight: 800;
+}
+@keyframes msganim {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.message-2CShn3:not(:has(.isSending-3SiDwE)) {
+  animation: msganim 0.4s ease;
+}
+.notice-12Koq- {
+    margin-top: calc(var(--window-margin) * 1px) !important;
+    width: calc(100% - 320px - (var(--window-margin) * 4px));
+    margin-left: calc(320px + (var(--window-margin) * 1px));
+    border-radius: 8px;
+    background-color: var(--cyan-background-secondary);
+    box-shadow: var(--cyan-elevation-shadow);
+}
+.main-243VC2:has(>.artwork-3uFrhF) {
+    margin: calc(var(--window-margin) * 1px);
+    border-radius: 8px;
+    background-color: var(--cyan-background-secondary);
+    box-shadow: var(--cyan-elevation-shadow);
+}
+.header-13P3fr {
+    background-image: none !important;
+    background-color: transparent;
+}
+.channel-k2TVLQ {
+    background-color: var(--cyan-background-secondary);
+}
+.channelContainer-3YAhb_ {
+    box-shadow: var(--cyan-elevation-shadow) !important;
+    border-radius: 8px !important;
+}
+.option-Uc12mm {
+    margin: 4px;
+    transition: .15s;
+    border-radius: 8px !important;
+}
+.option-Uc12mm:hover {
+    box-shadow: var(--cyan-elevation-shadow) !important;
+    background-color: var(--cyan-background-secondary);
+}
+
+
+.body-1Ukv50 {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.body-1Ukv50>div {
+    border-radius: 3px;
+    background-color: var(--cyan-background-secondary);
+}
+.tabBarContainer-sCZC4w {
+    height: 43px;
+    margin: 0;
+    width: 100%;
+    border-bottom: none !important;
+}
+.tabBarItem-30Te4- {
+    height: 43px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    border-bottom: none !important;
+}
+.tabBarItem-30Te4-.selected-1sf9UK::after {
+    content: "";
+    width: 50%;
+    height: 2px;
+    background-color: var(--header-primary);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 2px;
+    border-radius: 4px;
+}
+.container-3g15px {
+    padding-bottom: 12px;
+}
+.body-1Ukv50>div:first-child {
+    border-radius: 16px 16px 3px 3px;
+}
+.body-1Ukv50>div:last-child {
+    border-radius: 3px 3px 16px 16px;
+}
+.userProfileOuterThemed-2BgJCM .userProfileModalOverlayBackground-2dAaBg {
+    margin: 0;
+}
+.userProfileModalOuter-2wdWjU > .userProfileInnerThemedNonPremium-2AJg-H .body-1Ukv50 {
+    background-color: transparent !important;
+}
+
+.tooltipPremiumFooterContainer-3Z8jwf {
+    background: none !important;
+}
+.tooltipPremiumFooterTierSegment-24h1a0 {
+    border: none !important;
+}
+
+.downloadLink-3cavAH {
+    border: 1px solid var(--cyan-accent-color);
+    background-color: var(--cyan-background-primary);
+    border-radius: 8px;
+    transition: .15s;
+    padding: 2px 16px;
+}
+.downloadLink-3cavAH:hover {
+    background-color: var(--cyan-background-secondary);
+    box-shadow: var(--cyan-elevation-shadow);
+    text-decoration: none;
+}
+.emptyIcon-uKVxYR {
+    display: none;
+}
+
+.pill-22lZHo {
+    margin-left: 4px;
+    border-radius: 8px !important;
+}
+.pill-22lZHo > span {
+    width: 3px;
+    margin-left: 2px;
+    border-radius: 8px !important;
+    overflow: visible;
+}
+.svg-2ifYOU {
+    border-radius: 50% !important;
 }
