@@ -3,7 +3,7 @@
 @import url(//dablulite.github.io/CyanBootstrapIcons/import.css);
 :root {
     --cyan-version: 12;
-    --cyan-subversion: 0;
+    --cyan-subversion: 5;
     --cyan-text-shadow: 0;
     --cyan-background-primary-alt: var(--cyan-background-primary);
     --cyan-background-secondary: var(--background-floating);
@@ -864,7 +864,7 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
 #status-picker-online, #status-picker-idle, #status-picker-dnd, #status-picker-invisible, #status-picker-custom-status, #account-status-picker--idle, #account-status-picker--online, #account-status-picker--dnd, #account-status-picker--invisible {
   padding: 2px;
   margin: 0;
-  border-radius: 8px;
+  border-radius: 12px;
 }
 .profileGroup-1yKk23 > #account-avatar {
   margin: 10px;
@@ -2769,7 +2769,7 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
 }
 .item-5ApiZt {
   padding: 12px;
-  border-radius: 8px;
+  border-radius: 12px;
   width: 100%;
 }
 .menu-2TXYjN .scroller-nxCRu_ {
@@ -3007,7 +3007,7 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
 .scroller-15bIdk > .section-28YDOf:first-child {
   border-radius: 16px 16px 4px 4px !important;
 }
-.scroller-15bIdk > .section-28YDOf:nth-last-child(2):has(.messageInputContainer-24qqTx), .scroller-15bIdk > .section-28YDOf:nth-last-child(3):has(.title-3CjiSS), .scroller-15bIdk > .section-28YDOf:nth-last-child(3):has(.activity-3uaYny) {
+.scroller-15bIdk > .section-28YDOf:nth-last-child(2):has(.messageInputContainer-24qqTx), .scroller-15bIdk > .section-28YDOf:nth-last-child(3):has(.title-3CjiSS):not(:has(+ .section-28YDOf .activity-3uaYny)), .scroller-15bIdk > .section-28YDOf:nth-last-child(3):has(.activity-3uaYny), .section-28YDOf:nth-last-child(2):has(.activity-3uaYny) {
   border-radius: 4px 4px 16px 16px !important;
 }
 .messageInputContainer-24qqTx {
@@ -3024,7 +3024,8 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
     opacity: 0;
 }
 .accountProfilePopoutWrapper-3GskID #account {
-    border-radius: 8px;
+    border-radius: 16px;
+    margin-top: 4px;
 }
 .pencilIcon-z04-c5 {
     color: var(--header-primary);
@@ -5008,4 +5009,91 @@ body:has(> #text) #text {
 }
 .svg-2ifYOU {
     border-radius: 50% !important;
+}
+span:has(>.botText-1fD6Qk) {
+    border-radius: 50px !important;
+    background-color: var(--cyan-background-secondary);
+    padding: 2px 8px !important;
+    box-shadow: var(--cyan-elevation-shadow);
+    margin: 0;
+}
+.shelfTopBackground-R55ED9 {
+    display: none;
+}
+.picker-20lcBA:has(.soundRow-3Mne9M) {
+    box-shadow: var(--cyan-elevation-shadow);
+    border-radius: 16px;
+}
+.picker-20lcBA:has(.soundRow-3Mne9M) .wrapper-22rqw6,
+.picker-20lcBA:has(.soundRow-3Mne9M) .wrapper-22rqw6 .scroller-2MALzE {
+    background-color: transparent !important;
+}
+.soundButton-2P2Ua2 {
+    transition: .15s;
+}
+.soundButton-2P2Ua2:hover {
+    box-shadow: var(--cyan-elevation-shadow);
+}
+.content-1U25dZ {
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.nameAndDecorators-3ERwy2 {
+    gap: 8px;
+}
+.nameTag-H6kSJ0 span:has(>.botText-1fD6Qk) {
+    margin-left: 8px
+}
+@keyframes animright {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes animbottom {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes animtop {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.result-u66Ywh,
+.member-2gU6Ar,
+.animatorLeft-1I1Kvj,
+.contentColumn-1C7as6 > div > div,
+.bd-addon-card,
+.bd-settings-group
+.bd-settings-title,
+.message-2CShn3:not(:has(.isSending-3SiDwE)) {
+  animation: msganim 0.4s ease;
+}
+.animatorRight-3o3AYV {
+    animation: animright 0.4s ease;
+}
+.root-8LYsGj,
+.root-1CAIjD,
+.animatorTop-3DwSmU {
+    animation: animbottom 0.4s ease;
+}
+.animatorBottom-1jjd1i {
+    animation: animtop 0.4s ease;
 }
