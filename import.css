@@ -3,7 +3,7 @@
 @import url(//dablulite.github.io/CyanBootstrapIcons/import.css);
 :root {
     --cyan-version: 12;
-    --cyan-subversion: 6;
+    --cyan-subversion: 7;
     --cyan-text-shadow: 0;
     --cyan-background-primary-alt: var(--cyan-background-primary);
     --cyan-background-secondary: var(--background-floating);
@@ -5162,4 +5162,32 @@ span:has(>.botText-1fD6Qk) {
 .birthdayFeatureBorder-24qmMm {
     background-size: 1100% 100% !important;
     animation: gradientRTL 6s linear infinite;
+}
+.root-1CAIjD:not(:has(> .quickswitcher-pKcM9U)):not(.modal-3Crloo):not(.carouselModal-1eUFoq):has(.root-1CAIjD) {
+    width: fit-content;
+}
+.item-2GWPIy,
+.header-2F5_LB,
+.bd-sidebar-header,
+.info-3pQQBb,
+.socialLinks-3ywLUf {
+    animation: animright 0.4s ease;
+}
+.peopleListItem-u6dGxF {
+    animation: msganim 0.4s ease;
+}
+.avatar-2e8lTP.clickable-31pE3P:active,
+.avatar-2e8lTP.clickable-31pE3P:active+.avatarDecoration-34OC0G,
+.listItemWrapper-3d87LP:active {
+    transform: translateY(0);
+}
+.avatar-2e8lTP.clickable-31pE3P:hover {
+    box-shadow: var(--light-elevation-border),var(--elevation-high);
+}
+.avatar-2e8lTP.clickable-31pE3P:active {
+    box-shadow: var(--cyan-elevation-shadow);
+}
+.avatar-2e8lTP.clickable-31pE3P,
+.avatar-2e8lTP.clickable-31pE3P+.avatarDecoration-34OC0G {
+    transition: .15s;
 }
