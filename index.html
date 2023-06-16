@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyan by DaBluLite</title>
+    <title>Cyan Customizer</title>
     <link rel="shortcut icon" href="https://dablulite.github.io/Cyan/cyan-waves-modified.png" type="image/x-icon">
     <meta content="Cyan by DaBluLite" property="og:title" />
     <meta content="Sleek and clean BetterDiscord theme, with custom background support" property="og:description" />
@@ -12,6 +12,28 @@
     <meta content="https://dablulite.github.io/Cyan/cyan-waves.png" property="og:image" />
     <meta content="#009f88" data-react-helmet="true" name="theme-color" />
     <script>
+        const createElement = (type, props, ...children) => {
+                if (typeof type === "function") return type({...props, children: [].concat()})
+
+                const node = document.createElement(type);
+
+                for (const key of Object.keys(props)) {
+                    if (key.indexOf("on") === 0) node.addEventListener(key.slice(2).toLowerCase(), props[key]);
+                    else if (key === "children") {
+                        node.append(...(Array.isArray(props[key]) ? props[key] : [].concat(props[key])));
+                    } else {
+                        node.setAttribute(key === "className" ? "class" : key, props[key]);
+                    }
+                }
+
+                if (children.length) node.append(...children);
+
+                node.getElementByClass = (clss) => {
+                    return node.getElementsByClassName(clss)[0];
+                }
+
+                return node;
+            };
         document.addEventListener("DOMContentLoaded", () => {
             document.getElementById("cyanColorPicker").addEventListener("input", () => {
                 document.getElementById("cyanAccentColorStyle").innerHTML = `:root {--cyan-accent-color: ${document.getElementById("cyanColorPicker").value} !important;}`;
@@ -22,15 +44,6 @@
             document.getElementById("cyanBackImgInput").addEventListener("input", () => {
                 document.getElementById("cyanBackImgStyle").innerHTML = `:root {--cyan-background-img: url(${document.getElementById("cyanBackImgInput").value}) !important;}`;
                 document.getElementById("backImgCodeblock").innerText = `--cyan-background-img: url(${document.getElementById("cyanBackImgInput").value});`
-            });
-            document.getElementById("win11TitlebarRadio").addEventListener("change", () => {
-                if(document.getElementById("win11TitlebarRadio").checked == true) {
-                    document.getElementById("win11TitlebarStyle").innerHTML = `@import url(https://dablulite.github.io/Cyan/Addons/CyanWin10Titlebar/import.css);`;
-                    document.getElementById("win11TitlebarCodeblock").setAttribute("style", "");
-                } else {
-                    document.getElementById("win11TitlebarStyle").innerHTML = ``;
-                    document.getElementById("win11TitlebarCodeblock").setAttribute("style", "display: none;");
-                }
             });
             document.getElementById("backgroundHueSlider").addEventListener("input", () => {
                 document.getElementById("backgroundHueCodeblock").innerText = `--cyan-background-hue: ${document.getElementById("backgroundHueSlider").value}deg;`;
@@ -49,10 +62,6 @@
                 var event = document.createEvent("HTMLEvents");
                 event.initEvent(eventName, false, true);
                 element.dispatchEvent(event);
-            }
-            window.toggleWin11Titlebar = () => {
-                document.getElementById("win11TitlebarRadio").checked = !document.getElementById("win11TitlebarRadio").checked;
-                triggerEvent(document.getElementById("win11TitlebarRadio"), 'change');
             }
             window.changeTintVisibility = () => {
                 document.getElementById("tintVisibilityRadio").checked = !document.getElementById("tintVisibilityRadio").checked;
@@ -89,12 +98,24 @@
                     console.error('Async: Could not copy text: ', err);
                 });
             }
+            window.appendMessage = (event) => {
+                if(event.keyCode == 13) {
+                    if(event.target.value) {
+                        let message = createElement("div",{class:"messageWrapper"});
+                        message.innerHTML = `<img src="https://cdn.discordapp.com/avatars/786150381066387456/ef77b84f5524e8192aa8372c5d84d827.webp?size=80" aria-hidden="true" class="messageAvatar" alt=" ">
+                        <h3 class="messageSender"><span class="messageSender"><span class="messageSenderInner"role="button">Aqua</span></span></h3>
+                        <div class="messageContent">${event.target.value}</div>`;
+                        document.getElementById("pseudoChatContainer").append(message);
+                        event.target.value = '';
+                    }
+                }
+            }
             window.downloadCyan = () => {
                 let downloadName;
-                if(document.getElementById("pseudoChatBar").value == '') {
+                if(document.getElementById("themeName").value == '') {
                     downloadName = "Cyan";
                 } else {
-                    downloadName = document.getElementById("pseudoChatBar").value;
+                    downloadName = document.getElementById("themeName").value;
                 }
                 download(`${downloadName}.theme.css`, `/**
  * @name ${downloadName}
@@ -123,7 +144,6 @@ Huge thanks to all the contributors of this project!
 ====================================================
 */
 
-${document.getElementById("win11TitlebarStyle").innerText}
 @import url(https://dablulite.github.io/Cyan/import.css);
 :root {
 	${document.getElementById("glassMaterialCodeblock").innerText}
@@ -138,11 +158,39 @@ ${document.getElementById("win11TitlebarStyle").innerText}
     ${document.getElementById("backgroundHueCodeblock").innerText}
     ${document.getElementById("tintVisibilityCodeblock").innerText}
     --cyan-text-shadow: 1;
+    /*--cyan-elevation-shadow: 0 0 0 1px rgba(180,180,180,.4), 0 2px 10px 0 rgb(0 0 0 / 60%);
+	--window-margin: 10;*/
 }`);
             }
+            let toolTip = (elem,pos,cont) => {
+                let elemPos = elem.getBoundingClientRect();
+                let elemWidth = elem.offsetWidth;
+                let elemHeight = elem.offsetHeight;
+                let tooltip = createElement("div",{
+                    class: "cyan-tooltip"
+                });
+                switch(pos) {
+                    case 'tooltip-left':
+                        tooltip.style = "position: absolute;left: " + (elemWidth + 8) + "px;bottom: " + (elemHeight/2) + "px;";
+                        break
+                    case 'tooltip-right':
+                        tooltip.style = "position: absolute;right: " + (elemWidth + 8) + "px;bottom: " + (elemHeight/2) + "px;";
+                        break
+                    case 'tooltip-top':
+                        tooltip.style = "position: absolute;left: " + (elemWidth/2) + "px;bottom: " + (elemHeight + 8) + "px;";
+                        break
+                    case 'tooltip-bottom':
+                        tooltip.style = "position: absolute;left: " + (elemWidth/2) + "px;top: " + (elemHeight + 8) + "px;";
+                        break
+                }
+                tooltip.innerHTML = cont;
+                elem.append(tooltip);
+            }
+            document.querySelectorAll(".tooltip").forEach(el => {
+                toolTip(el,el.classList[0],el.getAttribute("data-tooltip-title"));
+            })
         })
     </script>
-    <style id="win11TitlebarStyle"></style>
     <style id="cyanAccentColorStyle"></style>
     <style id="cyanBackImgStyle"></style>
     <style id="glassMaterialStyle"></style>
@@ -164,9 +212,107 @@ ${document.getElementById("win11TitlebarStyle").innerText}
         * {
             font-family: 'Montserrat', sans-serif;
         }
+        @keyframes animatetabindicatorBottom {
+            0% {
+                opacity: 0;
+                transform: translateX(-50%) translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+        }
+        @keyframes animatetabindicatorLeft {
+            0% {
+                opacity: 0;
+                transform: translateY(-50%) translateX(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(-50%) translateX(0);
+            }
+        }
+        @keyframes animright {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes animbottom {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes animtop {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes animleft {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
         body {
             margin: 0;
             padding: 0;
+            background-color: #0e0f11;
+            display: flex;
+            overflow: hidden;
+        }
+        .tooltip-left > .cyan-tooltip,
+        .tooltip-right > .cyan-tooltip {
+            transform: translateX(100%) translateY(-50%);
+            opacity: 0;
+            transition: .2s;
+        }
+        .tooltip-bottom > .cyan-tooltip,
+        .tooltip-top > .cyan-tooltip {
+            transform: translateY(100%) translateX(-50%);
+            opacity: 0;
+            transition: .2s;
+        }
+        .tooltip-left:hover > .cyan-tooltip,
+        .tooltip-right:hover > .cyan-tooltip {
+            transform: translateX(0) translateY(-50%);
+            opacity: 1;
+        }
+        .tooltip-bottom:hover > .cyan-tooltip,
+        .tooltip-top:hover > .cyan-tooltip {
+            transform: translateY(0) translateX(-50%);
+            opacity: 1;
+        }
+        .tooltip {
+            position: relative;
+        }
+        .cyan-tooltip {
+            width: max-content;
+            display: flex;
+            text-align: center;
+            background-color: var(--cyan-background-primary);
+            box-shadow: var(--cyan-elevation-shadow);
+            border-radius: 20px;
+            padding: 6px 16px;
+            pointer-events: none;
         }
         .pageSect {
             background-image: var(--cyan-background-img);
@@ -292,7 +438,6 @@ ${document.getElementById("win11TitlebarStyle").innerText}
             height: 44px;
             box-sizing: border-box;
             grid-template-columns: 15px max-content;
-            gap: 4px;
         }
         #pseudoGuildBar {
             height: 100%;
@@ -421,6 +566,7 @@ ${document.getElementById("win11TitlebarStyle").innerText}
             cursor: pointer;
             border-radius: 8px;
             transition: .2s;
+            animation: animright .4s ease;
         }
         .pseudoChannelWrapper:hover {
             background-color: hsl(225, 8%, calc(10% * 0.6));
@@ -448,6 +594,7 @@ ${document.getElementById("win11TitlebarStyle").innerText}
             height: 39px;
             justify-content: center;
             flex-direction: column;
+            animation: animleft .4s ease;
         }
         #cyanColorPicker {
             width: 0;
@@ -458,11 +605,11 @@ ${document.getElementById("win11TitlebarStyle").innerText}
             background-color: transparent;
         }
         #colorPickerBtn {
-            width: 46px;
-            height: 32px;
+            width: fit-content;
             border-radius: 8px;
             display: flex;
             float: right;
+            padding: 4px 16px;
         }
         .property {
             color: #fff;
@@ -470,6 +617,9 @@ ${document.getElementById("win11TitlebarStyle").innerText}
             font-size: 1rem;
             margin-right: 10px;
             text-shadow: 1px 2px 2px #000;
+        }
+        #cyanAccentColorDisplay {
+            margin-right: 0;
         }
         #cyanCustomizer {
             display: flex;
@@ -490,12 +640,12 @@ ${document.getElementById("win11TitlebarStyle").innerText}
             flex-direction: row;
             align-items: center;
             margin-top: 8px;
+            animation: animleft .4s ease;
         }
         #pseudoChatHeaderIcon {
-            margin: 0 8px;
+            margin: 0 10px;
             color: var(--cyan-accent-color);
             transform: scale(1.3);
-            transform-origin: -8px -8px;
         }
         #customizerHeader {
             color: #fff;
@@ -537,6 +687,7 @@ ${document.getElementById("win11TitlebarStyle").innerText}
             -moz-user-select: none;
             -ms-user-select: none;
             user-select: none;
+            animation: animleft .4s ease;
         }
         #cyanBackImgInput {
             color: #fff;
@@ -555,32 +706,14 @@ ${document.getElementById("win11TitlebarStyle").innerText}
         .cyanBtn i {
             font-size: 14px !important;
             transition: .2s;
-            margin-right: 4px;
         }
         #cyanBackImgInput:focus {
             outline: none;
             box-shadow: var(--cyan-elevation-shadow);
             background-color: hsl(225, 8%, calc(10% * 0.6));
         }
-        #boxShadowToggle, #glassMaterialToggle, #tintVisibilityToggle, #win11TitlebarToggle {
+        #boxShadowToggle, #glassMaterialToggle, #tintVisibilityToggle {
             cursor: pointer;
-        }
-        #rawCodeBlock {
-            border-radius: 16px;
-            box-shadow: var(--cyan-elevation-shadow);
-            background-color: hsl(225, 8%, calc(10% * 0.6));
-            color: #fff;
-            padding: 25px;
-            margin: 0;
-            transition: .5s cubic-bezier(.17,.76,.58,.99);
-            white-space: pre;
-            max-width: calc(100% - 48px);
-            overflow-x: auto;
-            display: flex;
-            flex-direction: column;
-        }
-        #rawCodeBlock, #rawCodeBlock span {
-            font-family: 'Source Code Pro', monospace;
         }
         .mainButtonContainer {
             display: flex;
@@ -603,9 +736,12 @@ ${document.getElementById("win11TitlebarStyle").innerText}
         #pseudoChatContainer {
             display: flex;
             flex-direction: column;
-            width: calc(100% - 16px);
+            width: 100%;
             align-items: center;
             height: calc(100% - 122px);
+            position: relative;
+            justify-content: end;
+            overflow: hidden;
         }
         #backgroundHueSlider {
             position: relative;
@@ -613,11 +749,10 @@ ${document.getElementById("win11TitlebarStyle").innerText}
             appearance: none;
             border-radius: 0;
             background-color: rgba(0,0,0,0.1);
-            height: 8px;
+            height: 2px;
             width: 250px;
             display: block;
             outline: none;
-            border-radius: 8px;
             transition: .5s cubic-bezier(.17,.76,.58,.99);
             background-color: var(--cyan-accent-color);
             box-shadow: 0 3px 1px 0 hsl(0 0% 0%/.05),0 2px 2px 0 hsl(0 0% 0%/.1),0 3px 3px 0 hsl(0 0% 0%/.05);
@@ -626,9 +761,8 @@ ${document.getElementById("win11TitlebarStyle").innerText}
             content: "";
             position: absolute;
             width: 250px;
-            height: 8px;
-            border-radius: 8px;
-            top: 20px;
+            height: 2px;
+            z-index: -1;
             box-shadow: 0 3px 1px 0 hsl(0 0% 0%/.05),0 2px 2px 0 hsl(0 0% 0%/.1),0 3px 3px 0 hsl(0 0% 0%/.05);
             background: linear-gradient(to right, rgb(255,0,0), rgb(255,255,0), rgb(0,255,0),rgb(0,255,255),rgb(0,0,255),rgb(255,0,255),rgb(255,0,0));
         }
@@ -675,7 +809,8 @@ ${document.getElementById("win11TitlebarStyle").innerText}
             filter: brightness(2);
             transform: translateX(calc(28px - 75%)) translateY(-12.5%);
         }
-        #pseudoChatBar {
+        #pseudoChatBar,
+        #themeName {
             transition: .2s;
             height: 44px;
             width: 100%;
@@ -687,12 +822,103 @@ ${document.getElementById("win11TitlebarStyle").innerText}
             box-shadow: 0 0 0 1px hsl(210 calc(1 * 9.3%) 78.8%/0.3);
             box-sizing: border-box;
             color: #fff;
+            animation: animleft .4s ease;
         }
-        #pseudoChatBar:focus {
+        #pseudoChatBar:focus,
+        #themeName:focus {
             box-shadow: var(--cyan-elevation-shadow);
             background-color: hsl(225, 8%, calc(10% * 0.6));
             outline: none;
         }
+        #secondSect {
+            margin: 20px;
+            width: calc(100vw - 40px);
+            height: calc(100vh - 40px);
+            border-radius: 16px;
+        }
+        #newCustomizerSettings {
+            width: 420px;
+            height: 100vh;
+        }
+        .settingHeader {
+            color: #fff;
+            animation: animleft .4s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .settingHeader > span {
+            margin-right: 20px !important;
+        }
+        .messagesContainer {
+            width: 100%;
+            height: fit-content;
+        }
+        .messageWrapper {
+            margin-top: 1.0625rem;
+            animation: animleft .4s ease;
+            padding-left: 72px;
+            min-height: 2.75rem;
+            padding-top: 0.125rem;
+            padding-bottom: 0.125rem;
+            width: 100%;
+            box-sizing: border-box;
+            position: relative;
+        }
+        .messageWrapper:hover {
+            background-color: rgba(0,0,0,.2);
+        }
+        .messageAvatar {
+    position: absolute;
+    left: 16px;
+    margin-top: calc(4px - 0.125rem);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    pointer-events: none;
+    z-index: 1;
+    cursor: pointer;
+}
+.messageSender {
+    display: block;
+    position: relative;
+    line-height: 1.375rem;
+    min-height: 1.375rem;
+    white-space: break-spaces;
+    margin: 0;
+}
+.messageSenderInner {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.375rem;
+    color: var(--header-primary);
+    display: inline;
+    vertical-align: baseline;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    cursor: pointer;
+    text-shadow: min(1px,calc(var(--cyan-text-shadow) * 1px)) calc(min(1px,(var(--cyan-text-shadow) * 1px))*2) calc(min(1px,(var(--cyan-text-shadow) * 1px))*2) #000;
+}
+.messageContent {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+    margin-left: -72px;
+    padding-left: 72px;
+    color: #fff;
+    overflow-wrap: anywhere;
+    text-shadow: min(1px,calc(var(--cyan-text-shadow) * 1px)) calc(min(1px,(var(--cyan-text-shadow) * 1px))*2) calc(min(1px,(var(--cyan-text-shadow) * 1px))*2) #000;
+}
     </style>
 </head>
 <body>
@@ -745,23 +971,49 @@ ${document.getElementById("win11TitlebarStyle").innerText}
         </div>
         <div id="pseudoChat">
             <div id="cyanCustomizer">
-                <div id="pseudoChatHeader"><svg width="24" height="24" viewBox="0 0 24 24" id="pseudoChatHeaderIcon" x="0" y="0" aria-hidden="true" role="img"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z"></path></svg><h1 id="customizerHeader">cyan-customizer</h1><h1 id="customizerSubHeader">Version 5</h1></div>
+                <div id="pseudoChatHeader">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-text-fill" viewBox="0 0 16 16" id="pseudoChatHeaderIcon">
+                        <path d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM4.5 5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7zm0 2.5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7zm0 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4z"/>
+                    </svg>
+                    <h1 id="customizerHeader">offtopic</h1>
+                    <h1 id="customizerSubHeader">General chatting...</h1>
+                </div>
                 <div id="pseudoChatContainer">
-                    <div class="propertyWrapper" id="cyanAccent"><span class="property">Accent Color:</span><div class="colorPickerWrapper"><span id="cyanAccentColorDisplay" class="property">#009f88</span><input type="color" id="cyanColorPicker" value="#009f88"><div style="background-color: #009f88;" id="colorPickerBtn" onclick="document.getElementById('cyanColorPicker').showPicker();"></div></div></div>
-                <div class="propertyWrapper" id="cyanBackImg" style="display: flex;"><span class="property">Background image URL:</span><input type="text" id="cyanBackImgInput" value="https://dablulite.github.io/Cyan/cyan-waves.png"></div>
-                <div class="propertyWrapper" id="win11Titlebar" style="display: flex;"><span class="property">Use Windows 10 titlebar:</span><input type="checkbox" id="win11TitlebarRadio" style="display: none;"><div id="win11TitlebarToggle" onclick="toggleWin11Titlebar();" class="toggleTrack"><div class="toggleHandle"></div></div></div>
-                <div class="propertyWrapper" id="tintVisibility" style="display: flex;"><span class="property">Tint visibility:</span><input type="checkbox" id="tintVisibilityRadio" style="display: none;"><div id="tintVisibilityToggle" onclick="changeTintVisibility();" class="toggleTrack"><div class="toggleHandle"></div></div></div>
-                <div class="propertyWrapper" id="backgroundHue" style="display: flex;"><span class="property">Background Hue:</span><input type="range" id="backgroundHueSlider" min="0" max="360" value="225"></div>
-                <div id="rawCodeBlock"><span id="win11TitlebarCodeblock" style="display: none;">@import url(https://dablulite.github.io/Cyan/Addons/CyanWin10Titlebar.css);</span>:root {
-<span id="accentColorCodeblock">--cyan-accent-color: #009f88;</span>
+                    <div class="messageWrapper">
+                        <img src="https://cdn.discordapp.com/avatars/582170007505731594/6dd70f03c036a5cd27f6355669b0325c.webp?size=80" aria-hidden="true" class="messageAvatar" alt=" ">
+                        <h3 class="messageSender"><span class="messageSender"><span class="messageSenderInner"role="button">DaBluLite</span></span></h3>
+                        <div class="messageContent">How in the world do you even use this thing???</div>
+                    </div>
+                    <div class="messageWrapper">
+                        <img src="https://cdn.discordapp.com/avatars/786150381066387456/ef77b84f5524e8192aa8372c5d84d827.webp?size=80" aria-hidden="true" class="messageAvatar" alt=" ">
+                        <h3 class="messageSender"><span class="messageSender"><span class="messageSenderInner"role="button">Aqua</span></span></h3>
+                        <div class="messageContent">Look on the right side of your screen...</div>
+                    </div>
+                    <div class="messageWrapper">
+                        <img src="https://cdn.discordapp.com/avatars/582170007505731594/6dd70f03c036a5cd27f6355669b0325c.webp?size=80" aria-hidden="true" class="messageAvatar" alt=" ">
+                        <h3 class="messageSender"><span class="messageSender"><span class="messageSenderInner"role="button">DaBluLite</span></span></h3>
+                        <div class="messageContent">Oh, right. Thanks...</div>
+                    </div>
+                </div>
+                <div class="mainButtonContainer"><input type="text" placeholder="Message #offtopic" id="pseudoChatBar" onkeypress="appendMessage(event);"><button id="downloadCyanBtn" onclick="downloadCyan();" class="tooltip-top tooltip cyanBtn" data-tooltip-title="Download Customized Cyan"><i class="bi bi-download"></i></button><a href="https://betterdiscord.app/Download?id=753" id="downloadStockCyanBtn" class="tooltip-top tooltip cyanBtn" style="text-decoration: none;" target="_blank" data-tooltip-title="Download Stock Cyan"><i class="bi bi-cloud-download-fill" ></i></a><button id="copyConfigBtn" onclick="copyConfig();" class="tooltip-top tooltip cyanBtn" data-tooltip-title="Copy CustomCSS configuration"><i class="bi bi-clipboard-fill" ></i></button><a href="https://dablulite.github.io/Cyan/Addons" id="addonsBtn" class="tooltip-top tooltip cyanBtn" style="text-decoration: none;" target="_blank" data-tooltip-title="Cyan Addons"><i class="bi bi-puzzle-fill" ></i></a></div>
+            </div>
+        </div>
+    </section>
+    <section id="newCustomizerSettings">
+        <h1 class="settingHeader settingHeaderH1">Cyan Customizer<span id="customizerSubHeader">Version 6</span></h1>
+        <div class="propertyWrapper" id="cyanThemeName"><input type="text" placeholder="Give a name to your theme:" id="themeName"></div>
+        <div class="propertyWrapper" id="cyanAccent"><span class="property">Accent Color:</span><div class="colorPickerWrapper"><input type="color" id="cyanColorPicker" value="#009f88"><div style="background-color: #009f88;" id="colorPickerBtn" onclick="document.getElementById('cyanColorPicker').showPicker();"><span id="cyanAccentColorDisplay" class="property">#009f88</span></div></div></div>
+        <div class="propertyWrapper" id="cyanBackImg" style="display: flex;"><span class="property">Background image URL:</span><input type="text" id="cyanBackImgInput" value="https://dablulite.github.io/Cyan/cyan-waves.png"></div>
+        <div class="propertyWrapper" id="tintVisibility" style="display: flex;"><span class="property">Tint visibility:</span><input type="checkbox" id="tintVisibilityRadio" style="display: none;"><div id="tintVisibilityToggle" onclick="changeTintVisibility();" class="toggleTrack"><div class="toggleHandle"></div></div></div>
+        <div class="propertyWrapper" id="backgroundHue" style="display: flex;"><span class="property">Background Hue:</span><input type="range" id="backgroundHueSlider" min="0" max="360" value="225"></div>
+        <div id="rawCodeBlock" style="display: none;">
+:root {
+    <span id="accentColorCodeblock">--cyan-accent-color: #009f88;</span>
     <span id="backImgCodeblock">--cyan-background-img: url(https://dablulite.github.io/Cyan/cyan-waves.png);</span>
     <span id="glassMaterialCodeblock">--cyan-background-primary: hsla(var(--cyan-background-hue) var(--cyan-tint-visibility) var(--cyan-background-lightness) / 40%);</span>
     <span id="backgroundHueCodeblock">--cyan-background-hue: 225deg;</span>
-    <span id="tintVisibilityCodeblock">--cyan-tint-visibility: 8%;</span>}</div>
-                </div>
-                <div class="mainButtonContainer"><input type="text" placeholder="Message #name-your-cyan" id="pseudoChatBar"><button id="downloadCyanBtn" onclick="downloadCyan();" class="cyanBtn"><i class="bi bi-download"></i>Download Customized Cyan</button><a href="https://betterdiscord.app/Download?id=753" id="downloadStockCyanBtn" class="cyanBtn" style="text-decoration: none;" target="_blank"><i class="bi bi-cloud-download-fill" ></i>Download Stock Cyan</a><button id="copyConfigBtn" onclick="copyConfig();" class="cyanBtn"><i class="bi bi-clipboard-fill" ></i>Copy CustomCSS configuration</button><a href="https://dablulite.github.io/Cyan/Addons" id="addonsBtn" class="cyanBtn" style="text-decoration: none;" target="_blank"><i class="bi bi-puzzle-fill" ></i>Cyan Addons</a></div>
-            </div>
-        </div>
+    <span id="tintVisibilityCodeblock">--cyan-tint-visibility: 8%;</span>
+}</div>
     </section>
 </body>
 </html>
