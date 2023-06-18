@@ -3,7 +3,7 @@
 @import url(//dablulite.github.io/CyanBootstrapIcons/import.css);
 :root {
     --cyan-version: 12;
-    --cyan-subversion: 7;
+    --cyan-subversion: 8;
     --cyan-text-shadow: 0;
     --cyan-background-primary-alt: var(--cyan-background-primary);
     --cyan-background-secondary: var(--background-floating);
@@ -1726,7 +1726,7 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
 }
 .iconContainer-21RCa3 {
   padding: 6px;
-  background-color: var(--background-accent);
+  background-color: var(--cyan-background-secondary);
   border-radius: 50%;
 }
 .scroller-18M1mG {
@@ -5190,4 +5190,7 @@ span:has(>.botText-1fD6Qk) {
 .avatar-2e8lTP.clickable-31pE3P,
 .avatar-2e8lTP.clickable-31pE3P+.avatarDecoration-34OC0G {
     transition: .15s;
+}
+.divider-SH6OnO {
+    display: none;
 }
