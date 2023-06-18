@@ -534,6 +534,7 @@ aside.sidebarScrollable-2mW9Ls > div {
 #app-mount .profileBadges-2pItdR:empty {
   background-color: transparent;
   box-shadow: none;
+  border: none !important;
 }
 .mention {
   background: var(--brand-experiment) !important;
