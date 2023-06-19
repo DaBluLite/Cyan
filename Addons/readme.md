@@ -71,3 +71,15 @@ https://github.com/DaBluLite/Cyan/tree/master/Addons/OmnibarCollapse
 ```
 https://github.com/DaBluLite/Cyan/tree/master/Addons/NitroThemeCompat
 ```
+
+### Cyan Colorways:
+
+#### Importing
+```css
+@import url(https://dablulite.github.io/Cyan/Addons/CyanColorways/CyanColorways.theme.css);
+```
+
+#### Repo
+```
+https://github.com/DaBluLite/Cyan/tree/master/Addons/CyanColorways
+```
