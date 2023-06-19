@@ -3,7 +3,7 @@
 @import url(//dablulite.github.io/CyanBootstrapIcons/import.css);
 :root {
     --cyan-version: 13;
-    --cyan-subversion: 2;
+    --cyan-subversion: 3;
     --cyan-text-shadow: 0;
     --cyan-background-primary-alt: var(--cyan-background-primary);
     --cyan-background-secondary: var(--background-floating);
@@ -5227,9 +5227,9 @@ span:has(>.botText-1fD6Qk) {
     box-shadow: none;
     border: 2px solid var(--cyan-accent-color);
 }
-.userProfileOuterThemed-2BgJCM .scroller-15bIdk > .section-28YDOf,
-.userProfileOuterThemed-2BgJCM .customStatusSection-2_fKRl,
-.userProfileOuterThemed-2BgJCM .usernameSection-3FppkT {
+.scroller-15bIdk > .section-28YDOf,
+.customStatusSection-2_fKRl,
+.usernameSection-3FppkT {
 	background-color: rgba(0,0,0,.4);
 }
 .userProfileOuterThemed-2BgJCM, .userProfileOuterThemed-2BgJCM * {
@@ -5343,4 +5343,23 @@ span:has(>.botText-1fD6Qk) {
 }
 .root-1CAIjD:not(:has(> .quickswitcher-pKcM9U)):not(.modal-3Crloo):not(.carouselModal-1eUFoq):has(> .userProfileModalOuter-2wdWjU) {
 	box-shadow: var(--light-elevation-border),var(--elevation-high) !important;
+}
+.avatarWrapperNormal-ahVUaC .wrapper-3Un6-K {
+    overflow: visible;
+}
+.avatarWrapperNormal-ahVUaC .wrapper-3Un6-K::after {
+    content: "";
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    background-color: var(--cyan-background-secondary);
+    display: flex;
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    z-index: -1;
+}
+.channelRow-4X_3fi {
+    background-color: var(--cyan-background-secondary) !important;
+    box-shadow: var(--light-elevation-border);
 }
