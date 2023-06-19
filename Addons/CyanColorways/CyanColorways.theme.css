@@ -10,8 +10,8 @@
 
 
 :root {
-    --cyan-background-primary: hsla(var(--primary-700-hsl) / 40%);
-    --cyan-accent-color: hsl(var(--brand-500-hsl));
+    --cyan-background-primary: hsla(var(--primary-700-hsl) / 40%) !important;
+    --cyan-accent-color: hsl(var(--brand-500-hsl)) !important;
 }
 .theme-dark #app-mount .lookFilled-1H2Jvj.colorBrand-2M3O3N {
     color: #fff !important;
