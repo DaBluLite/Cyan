@@ -4965,7 +4965,8 @@ body:has(> #text) #text {
     border-radius: 16px;
     border: 3px solid var(--cyan-accent-color);
 }
-.body-1Ukv50>div:nth-child(2) {
+.body-1Ukv50>div:nth-child(2),
+.body-1Ukv50>div:first-child + .divider-SH6OnO + .infoScroller-1QMpon {
     border-radius: 16px 16px 3px 3px;
 }
 .body-1Ukv50>div:last-child {
