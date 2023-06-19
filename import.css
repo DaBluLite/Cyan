@@ -3,7 +3,7 @@
 @import url(//dablulite.github.io/CyanBootstrapIcons/import.css);
 :root {
     --cyan-version: 13;
-    --cyan-subversion: 1;
+    --cyan-subversion: 2;
     --cyan-text-shadow: 0;
     --cyan-background-primary-alt: var(--cyan-background-primary);
     --cyan-background-secondary: var(--background-floating);
@@ -5293,4 +5293,54 @@ span:has(>.botText-1fD6Qk) {
 .wrapper-UvA17F {
 	display: flex;
 	align-items: center;
+}
+.userProfileModalOuter-2wdWjU > .userProfileInnerThemedNonPremium-2AJg-H .overlayBackground-2aa7wt::before {
+	border-radius: 16px;
+}
+.userProfileModalOuter-2wdWjU > .userProfileInnerThemedNonPremium-2AJg-H .header-S26rhB {
+	width: fit-content;
+	margin: 12px;
+	margin-bottom: 20px;
+	background-color: var(--cyan-background-secondary);
+	border-radius: 20px;
+	border: 3px solid var(--cyan-accent-color);
+}
+.VPP-profile.VPP-self {
+	right: 14px;
+	top: 20px;
+}
+.badgeList-2aoHPw {
+	border-radius: 50px;
+	margin-right: 0;
+	border: 3px solid var(--cyan-accent-color);
+}
+.userProfileModalOuter-2wdWjU > .userProfileInnerThemedNonPremium-2AJg-H .bannerSVGWrapper-2CLfzN .profileBanner-1owKI5,
+.userProfileModalOuter-2wdWjU > .userProfileInnerThemedNonPremium-2AJg-H .bannerSVGWrapper-2CLfzN {
+	height: 620px !important;
+	top: 0;
+}
+.userProfileModalOuter-2wdWjU > .userProfileInnerThemedNonPremium-2AJg-H .header-S26rhB > div:not([class]) {
+	margin: 4px;
+}
+.userProfileModalOuter-2wdWjU > .userProfileInnerThemedNonPremium-2AJg-H .header-S26rhB > div:not([class]) > div {
+	width: 90px !important;
+	height: 90px !important;
+}
+.userProfileModalOuter-2wdWjU > .userProfileInnerThemedNonPremium-2AJg-H .header-S26rhB > div:not([class]) > div > svg {
+	width: 108px;
+	height: 108px;
+}
+.headerTop-1PNKck {
+	align-items: center;
+	gap: 8px;
+	justify-content: start;
+}
+.additionalActionsIcon-3Cy8UU {
+	margin-left: 0;
+}
+.userProfileModalOuter-2wdWjU > .userProfileInnerThemedNonPremium-2AJg-H .overlayBackground-2aa7wt::before {
+	content: none;
+}
+.root-1CAIjD:not(:has(> .quickswitcher-pKcM9U)):not(.modal-3Crloo):not(.carouselModal-1eUFoq):has(> .userProfileModalOuter-2wdWjU) {
+	box-shadow: var(--light-elevation-border),var(--elevation-high) !important;
 }
