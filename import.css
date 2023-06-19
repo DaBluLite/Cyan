@@ -2866,7 +2866,7 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
 .homeIcon-r0w4ny {
   color: var(--header-primary);
 }
-.bd-addon-card[id*="Cyan"] .bd-name::after {
+#Cyan-card .bd-name::after {
   counter-reset: cyan-version var(--cyan-version) cyan-subversion var(--cyan-subversion);
   content: 'Version ' counter(cyan-version)'.'counter(cyan-subversion) '';
 }
@@ -3034,7 +3034,7 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
 .bd-controls>.bd-addon-button>svg {
     fill: var(--header-primary) !important;
 }
-.bd-addon-card[id*="Cyan"] .bd-name::after {
+#Cyan-card .bd-name::after {
     border-radius: 4px;
     border: 1px solid var(--cyan-accent-color);
     display: inline-flex;
@@ -3176,7 +3176,7 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
 .link-1-SDSV:first-of-type {
     padding: 8px 6px;
 }
-#app-mount .bd-addon-card[id*="Cyan"] {
+#app-mount #Cyan-card {
     box-shadow: var(--cyan-elevation-shadow);
     background-image: var(--cyan-background-img) !important;
     background-size: cover !important;
@@ -3185,7 +3185,7 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
     position: relative !important;
     border: none !important;
 }
-#app-mount .bd-addon-card[id*="Cyan"]::before {
+#app-mount #Cyan-card::before {
     content: "";
     position: absolute;
     top: 0;
@@ -3195,7 +3195,7 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
     background-color: var(--cyan-background-primary) !important;
     backdrop-filter: blur(var(--cyan-blur-radius)) !important;
 }
-.bd-addon-card[id*="Cyan"] .bd-addon-header, .bd-addon-card[id*="Cyan"] .bd-description-wrap, .bd-addon-card[id*="Cyan"] .bd-footer {
+#Cyan-card .bd-addon-header, #Cyan-card .bd-description-wrap, #Cyan-card .bd-footer {
     background-color: transparent !important;
     z-index: +1;
 }
@@ -4322,8 +4322,8 @@ section.panels-3wFtMD .container-YkUktl .button-12Fmur {
     display: none;
 }
 /*Cyan Addon Notice*/
-.bd-addon-card[id*="Cyan"] .bd-description-wrap::after {
-    content: "Cyan offers a few add-ons to enhance your experience. They can be found at https://dablulite.github.io/Cyan/Addons/";
+#Cyan-card .bd-description-wrap::after {
+    content: "Cyan offers add-ons to enhance your experience, available at https://dablulite.github.io/Cyan/Addons/";
     width: 100%;
     background-color: var(--background-secondary-alt);
     padding: 16px;
@@ -4337,11 +4337,9 @@ section.panels-3wFtMD .container-YkUktl .button-12Fmur {
     display: inline-block;
 }
 /*MFC/WWC Discriminators*/
-.bd-addon-card, .bd-addon-card * {
-    transition: .2s !important;
-}
 /*MFC Discriminators*/
-.bd-addon-card[id="Peterproma Snippets-card"] .bd-name::after {
+.bd-addon-card[id="Peterproma Snippets-card"] .bd-name::after,
+#CyanColorways-card .bd-name::after {
     content: "Made For Cyan";
     width: fit-content;
     padding: 0;
