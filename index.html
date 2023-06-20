@@ -13,51 +13,123 @@
     <meta content="#009f88" data-react-helmet="true" name="theme-color" />
     <script>
         const createElement = (type, props, ...children) => {
-                if (typeof type === "function") return type({...props, children: [].concat()})
+            if (typeof type === "function") return type({...props, children: [].concat()})
 
-                const node = document.createElement(type);
+            const node = document.createElement(type);
 
-                for (const key of Object.keys(props)) {
-                    if (key.indexOf("on") === 0) node.addEventListener(key.slice(2).toLowerCase(), props[key]);
-                    else if (key === "children") {
-                        node.append(...(Array.isArray(props[key]) ? props[key] : [].concat(props[key])));
-                    } else {
-                        node.setAttribute(key === "className" ? "class" : key, props[key]);
-                    }
+            for (const key of Object.keys(props)) {
+                if (key.indexOf("on") === 0) node.addEventListener(key.slice(2).toLowerCase(), props[key]);
+                else if (key === "children") {
+                    node.append(...(Array.isArray(props[key]) ? props[key] : [].concat(props[key])));
+                } else {
+                    node.setAttribute(key === "className" ? "class" : key, props[key]);
                 }
+            }
 
-                if (children.length) node.append(...children);
+            if (children.length) node.append(...children);
 
-                node.getElementByClass = (clss) => {
-                    return node.getElementsByClassName(clss)[0];
-                }
+            node.getElementByClass = (clss) => {
+                return node.getElementsByClassName(clss)[0];
+            }
 
-                return node;
-            };
+            return node;
+        };
+
+        let toolTip = (elem,pos,cont) => {
+            let elemPos = elem.getBoundingClientRect();
+            let elemWidth = elem.offsetWidth;
+            let elemHeight = elem.offsetHeight;
+            let tooltip = createElement("div",{
+                class: "cyan-tooltip"
+            });
+            switch(pos) {
+                case 'tooltip-left':
+                    tooltip.style = "position: absolute;left: " + (elemWidth + 8) + "px;bottom: " + (elemHeight/2) + "px;";
+                    break
+                case 'tooltip-right':
+                    tooltip.style = "position: absolute;right: " + (elemWidth + 8) + "px;bottom: " + (elemHeight/2) + "px;";
+                    break
+                case 'tooltip-top':
+                    tooltip.style = "position: absolute;left: " + (elemWidth/2) + "px;bottom: " + (elemHeight + 8) + "px;";
+                    break
+                case 'tooltip-bottom':
+                    tooltip.style = "position: absolute;left: " + (elemWidth/2) + "px;top: " + (elemHeight + 8) + "px;";
+                    break
+            }
+            tooltip.innerHTML = cont;
+            elem.append(tooltip);
+        }
+        
+
+        let initTooltips = () => {
+            document.querySelectorAll(".tooltip").forEach(el => {
+                toolTip(el,el.classList[0],el.getAttribute("data-tooltip-title"));
+            });
+        }
+            
+        
+        let tintVisibility = 8; //%
+        let backImg = "https://dablulite.github.io/Cyan/cyan-waves.png";
+        let accentColor = "#009f88"; //hex
+        let backgroundHue = "225"; //deg
+        let windowMargin = 8; //px
+        let cyanCSSconfig = () => { return `:root {
+	--cyan-background-primary: hsla(var(--cyan-background-hue) var(--cyan-tint-visibility) var(--cyan-background-lightness) / 40%) !important;
+	--cyan-elevation-shadow: 0 0 0 1.5px var(--cyan-accent-color), 0 2px 10px 0 rgb(0 0 0 / 60%) !important;
+	--cyan-font: 'Montserrat', 'Open Sans' !important;
+	--cyan-background-img: url(${backImg}) !important;
+	--window-margin: ${windowMargin} !important;
+	--window-border-radius: 8px !important;
+	--cyan-accent-color: ${accentColor} !important;
+	--cyan-blur-radius: 10px !important;
+	--cyan-status-mask-background: var(--profile-body-background-color) !important;
+    --cyan-background-hue: ${backgroundHue}deg !important;
+    --cyan-tint-visibility: ${tintVisibility}% !important;
+    --cyan-text-shadow: 1 !important;
+    --cyan-background-lightness: 16% !important;
+    --window-border-radius-calc: calc(min(1, var(--window-margin)) * var(--window-border-radius)) !important;
+    /*--cyan-elevation-shadow: 0 0 0 1px rgba(180,180,180,.4), 0 2px 10px 0 rgb(0 0 0 / 60%);
+	--window-margin: 10;*/
+}`};
         document.addEventListener("DOMContentLoaded", () => {
+            // Apply initial values
+            document.getElementById("cyanStyle").innerHTML = cyanCSSconfig();
+
+            // Accent color
             document.getElementById("cyanColorPicker").addEventListener("input", () => {
-                document.getElementById("cyanAccentColorStyle").innerHTML = `:root {--cyan-accent-color: ${document.getElementById("cyanColorPicker").value} !important;}`;
                 document.getElementById("cyanAccentColorDisplay").innerText = document.getElementById("cyanColorPicker").value;
-                document.getElementById("colorPickerBtn").setAttribute("style", `background-color: ${document.getElementById("cyanColorPicker").value};`);
-                document.getElementById("accentColorCodeblock").innerText = `--cyan-accent-color: ${document.getElementById("cyanColorPicker").value};`
+                accentColor = document.getElementById("cyanColorPicker").value;
+                document.getElementById("cyanStyle").innerHTML = cyanCSSconfig();
             });
+
+            // Background Image
             document.getElementById("cyanBackImgInput").addEventListener("input", () => {
-                document.getElementById("cyanBackImgStyle").innerHTML = `:root {--cyan-background-img: url(${document.getElementById("cyanBackImgInput").value}) !important;}`;
-                document.getElementById("backImgCodeblock").innerText = `--cyan-background-img: url(${document.getElementById("cyanBackImgInput").value});`
+                backImg = document.getElementById("cyanBackImgInput").value;
+                document.getElementById("cyanStyle").innerHTML = cyanCSSconfig();
             });
+
+            // Background "Glass" Hue
             document.getElementById("backgroundHueSlider").addEventListener("input", () => {
-                document.getElementById("backgroundHueCodeblock").innerText = `--cyan-background-hue: ${document.getElementById("backgroundHueSlider").value}deg;`;
-                document.getElementById("backgroundHueStyle").innerHTML = `:root {--cyan-background-hue: ${document.getElementById("backgroundHueSlider").value}deg !important;}`;
+                backgroundHue = document.getElementById("backgroundHueSlider").value;
+                document.getElementById("cyanStyle").innerHTML = cyanCSSconfig();
             });
+
+            // Background "Glass" Tint Visibility
             document.getElementById("tintVisibilityRadio").addEventListener("change", () => {
                 if(document.getElementById("tintVisibilityRadio").checked == true) {
-                    document.getElementById("tintVisibilityStyle").innerHTML = `:root {--cyan-tint-visibility: 100% !important;}`;
-                    document.getElementById("tintVisibilityCodeblock").innerText = `--cyan-tint-visibility: 100%;`
+                    tintVisibility = 100;
                 } else {
-                    document.getElementById("tintVisibilityStyle").innerHTML = `:root {--cyan-tint-visibility: 8% !important;}`;
-                    document.getElementById("tintVisibilityCodeblock").innerText = `--cyan-tint-visibility: 8%;`
+                    tintVisibility = 8;
                 }
+                document.getElementById("cyanStyle").innerHTML = cyanCSSconfig();
             });
+
+            // Window Margin
+            document.getElementById("windowMarginCounterValue").addEventListener("input", () => {
+                windowMargin = document.getElementById("windowMarginCounterValue").value;
+                document.getElementById("cyanStyle").innerHTML = cyanCSSconfig();
+            });
+
             function triggerEvent(element, eventName) {
                 var event = document.createEvent("HTMLEvents");
                 event.initEvent(eventName, false, true);
@@ -91,7 +163,7 @@
                 downloadUrl("https://dablulite.github.io/Cyan/Cyan.theme.css", "Cyan.theme.css");
             }
             window.copyConfig = () => {
-                navigator.clipboard.writeText(document.getElementById("rawCodeBlock").innerText).then(function() {
+                navigator.clipboard.writeText(cyanCSSconfig().replaceAll(" !important;", ";")).then(function() {
                     console.log('Async: Copying to clipboard was successful!');
                     alert("CustomCSS configuration copied!");
                 }, function(err) {
@@ -145,72 +217,20 @@ Huge thanks to all the contributors of this project!
 */
 
 @import url(https://dablulite.github.io/Cyan/import.css);
-:root {
-	${document.getElementById("glassMaterialCodeblock").innerText}
-	--cyan-elevation-shadow: 0 0 0 1.5px var(--cyan-accent-color), 0 2px 10px 0 rgb(0 0 0 / 60%);
-	--cyan-font: 'Montserrat', 'Open Sans';
-	${document.getElementById("backImgCodeblock").innerText}
-	--window-margin: 8;
-	--window-border-radius: 8px;
-	${document.getElementById("accentColorCodeblock").innerText}
-	--cyan-blur-radius: 10px;
-	--cyan-status-mask-background: var(--profile-body-background-color);
-    ${document.getElementById("backgroundHueCodeblock").innerText}
-    ${document.getElementById("tintVisibilityCodeblock").innerText}
-    --cyan-text-shadow: 1;
-    /*--cyan-elevation-shadow: 0 0 0 1px rgba(180,180,180,.4), 0 2px 10px 0 rgb(0 0 0 / 60%);
-	--window-margin: 10;*/
-}`);
+${cyanCSSconfig().replaceAll(" !important;", ";")}`);
             }
-            let toolTip = (elem,pos,cont) => {
-                let elemPos = elem.getBoundingClientRect();
-                let elemWidth = elem.offsetWidth;
-                let elemHeight = elem.offsetHeight;
-                let tooltip = createElement("div",{
-                    class: "cyan-tooltip"
-                });
-                switch(pos) {
-                    case 'tooltip-left':
-                        tooltip.style = "position: absolute;left: " + (elemWidth + 8) + "px;bottom: " + (elemHeight/2) + "px;";
-                        break
-                    case 'tooltip-right':
-                        tooltip.style = "position: absolute;right: " + (elemWidth + 8) + "px;bottom: " + (elemHeight/2) + "px;";
-                        break
-                    case 'tooltip-top':
-                        tooltip.style = "position: absolute;left: " + (elemWidth/2) + "px;bottom: " + (elemHeight + 8) + "px;";
-                        break
-                    case 'tooltip-bottom':
-                        tooltip.style = "position: absolute;left: " + (elemWidth/2) + "px;top: " + (elemHeight + 8) + "px;";
-                        break
-                }
-                tooltip.innerHTML = cont;
-                elem.append(tooltip);
-            }
-            document.querySelectorAll(".tooltip").forEach(el => {
-                toolTip(el,el.classList[0],el.getAttribute("data-tooltip-title"));
-            })
+            initTooltips();
         })
     </script>
-    <style id="cyanAccentColorStyle"></style>
-    <style id="cyanBackImgStyle"></style>
-    <style id="glassMaterialStyle"></style>
-    <style id="backgroundHueStyle"></style>
-    <style id="tintVisibilityStyle"></style>
+    <style id="cyanStyle">
+
+    </style>
     <style>
         @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
         @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
-        :root {
-            --cyan-accent-color: #009f88;
-            --cyan-background-img: url(https://dablulite.github.io/Cyan/cyan-waves.png);
-            --cyan-elevation-shadow: 0 0 0 1.5px var(--cyan-accent-color), 0 2px 10px 0 rgb(0 0 0 / 60%);
-            --cyan-background-primary: hsla(var(--cyan-background-hue) var(--cyan-tint-visibility) var(--cyan-background-lightness) / 40%);
-            --cyan-background-lightness: 16%;
-            --cyan-background-hue: 255;
-            --cyan-tint-visibility: 8%;
-        }
         * {
-            font-family: 'Montserrat', sans-serif;
+            font-family: var(--cyan-font);
         }
         @keyframes animatetabindicatorBottom {
             0% {
@@ -358,10 +378,12 @@ Huge thanks to all the contributors of this project!
             position: absolute;
             box-shadow: var(--cyan-elevation-shadow);
             transition: .5s cubic-bezier(.17,.76,.58,.99);
-            height: calc(100% - 16px - 22px);
-            top: 30px;
-            left: 8px;
-            border-radius: 8px;
+            height: calc(100% - (var(--window-margin) * 2px) - 22px);
+            top: calc(22px + (var(--window-margin) * 1px));
+            left: calc(var(--window-margin) * 1px);
+            border-radius: var(--window-border-radius-calc);
+            width: calc(410px - (var(--window-margin) * 2px));
+            display: flex;
         }
         #pseudoChat {
             background-color: var(--cyan-background-primary);
@@ -372,11 +394,11 @@ Huge thanks to all the contributors of this project!
             justify-content: center;
             box-shadow: var(--cyan-elevation-shadow);
             transition: .5s cubic-bezier(.17,.76,.58,.99);
-            height: calc(100% - 16px);
-            top: 8px;
-            right: 8px;
-            width: calc(100% - 418px);
-            border-radius: 8px;
+            height: calc(100% - (var(--window-margin) * 2px));
+            top: calc(var(--window-margin) * 1px);
+            right: calc(var(--window-margin) * 1px);
+            width: calc(100% - 410px - (var(--window-margin) * 1px));
+            border-radius: var(--window-border-radius-calc);
         }
         #historyText {
             text-align: center;
@@ -446,10 +468,11 @@ Huge thanks to all the contributors of this project!
         }
         #pseudoChannelBar {
             height: 100%;
-            width: 320px;
+            max-width: 320px;
             float: right;
             display: flex;
             flex-direction: column;
+            width: 100%;
         }
         .guildBtn {
             background-color: hsl(225, 8%, calc(10% * 0.6));
@@ -528,10 +551,10 @@ Huge thanks to all the contributors of this project!
             transition: .5s cubic-bezier(.17,.76,.58,.99);
         }
         #pseudoUserArea {
-            margin: 0 8px 8px 8px;
-            width: calc(100% - 32px);
+            margin: 0 calc(var(--window-margin) * 1px) calc(var(--window-margin) * 1px) calc(var(--window-margin) * 1px);
+            width: calc(100% - (var(--window-margin) * 2px));
             box-shadow: var(--cyan-elevation-shadow);
-            border-radius: 8px;
+            border-radius: var(--window-border-radius-calc);
             background-color: hsl(225, 8%, calc(10% * 0.6));
             height: 53px;
             justify-self: end;
@@ -545,6 +568,7 @@ Huge thanks to all the contributors of this project!
             user-select: none;
             align-items: center;
             display: flex;
+            box-sizing: border-box;
         }
         #pseudoChannelList {
             height: 100%;
@@ -631,16 +655,17 @@ Huge thanks to all the contributors of this project!
         }
         #pseudoChatHeader {
             background-color: hsl(225, 8%, calc(10% * 0.6));
-            border-radius: 8px;
+            border-radius: var(--window-border-radius-calc);
             box-shadow: var(--cyan-elevation-shadow);
             padding: 0 6px;
             height: 48px;
-            width: calc(100% - 32px);
+            width: calc(100% - (var(--window-margin) * 2px));
             display: flex;
             flex-direction: row;
             align-items: center;
-            margin-top: 8px;
+            margin-top: calc(var(--window-margin) * 1px);
             animation: animleft .4s ease;
+            box-sizing: border-box;
         }
         #pseudoChatHeaderIcon {
             margin: 0 10px;
@@ -689,16 +714,6 @@ Huge thanks to all the contributors of this project!
             user-select: none;
             animation: animleft .4s ease;
         }
-        #cyanBackImgInput {
-            color: #fff;
-            padding: 10px;
-            width: 360px;
-            border-radius: 10px;
-            transition: .2s;
-            border: none;
-            background-color: transparent;
-            box-shadow: 0 0 0 1px hsl(210 calc(1 * 9.3%) 78.8%/0.3);
-        }
         .cyanBtn:hover {
             box-shadow: var(--cyan-elevation-shadow);
             background-color: hsl(225, 8%, calc(10% * 0.6));
@@ -707,17 +722,12 @@ Huge thanks to all the contributors of this project!
             font-size: 14px !important;
             transition: .2s;
         }
-        #cyanBackImgInput:focus {
-            outline: none;
-            box-shadow: var(--cyan-elevation-shadow);
-            background-color: hsl(225, 8%, calc(10% * 0.6));
-        }
         #boxShadowToggle, #glassMaterialToggle, #tintVisibilityToggle {
             cursor: pointer;
         }
         .mainButtonContainer {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             align-items: center;
             justify-content: end;
             -webkit-touch-callout: none;
@@ -726,12 +736,16 @@ Huge thanks to all the contributors of this project!
             -moz-user-select: none;
             -ms-user-select: none;
             user-select: none;
-            width: calc(100% - 20px);
-            margin-bottom: 8px;
-            border-radius: 8px;
+            width: calc(100% - 16px);
             align-items: center;
-            height: 48px;
             gap: 6px;
+            margin-top: auto;
+            margin-bottom: 16px;
+            animation: animleft .4s ease;
+        }
+        .mainButtonContainer .cyanBtn {
+            width: 100%;
+            gap: 8px;
         }
         #pseudoChatContainer {
             display: flex;
@@ -809,8 +823,7 @@ Huge thanks to all the contributors of this project!
             filter: brightness(2);
             transform: translateX(calc(28px - 75%)) translateY(-12.5%);
         }
-        #pseudoChatBar,
-        #themeName {
+        .cyanTextInput {
             transition: .2s;
             height: 44px;
             width: 100%;
@@ -824,11 +837,15 @@ Huge thanks to all the contributors of this project!
             color: #fff;
             animation: animleft .4s ease;
         }
-        #pseudoChatBar:focus,
-        #themeName:focus {
+        .cyanTextInput:focus {
             box-shadow: var(--cyan-elevation-shadow);
             background-color: hsl(225, 8%, calc(10% * 0.6));
             outline: none;
+        }
+        #pseudoChatBar {
+            margin: calc(var(--window-margin) * 1px);
+            width: calc(100% - (var(--window-margin) * 2px));
+            border-radius: var(--window-border-radius-calc);
         }
         #secondSect {
             margin: 20px;
@@ -839,6 +856,8 @@ Huge thanks to all the contributors of this project!
         #newCustomizerSettings {
             width: 420px;
             height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
         .settingHeader {
             color: #fff;
@@ -995,25 +1014,20 @@ Huge thanks to all the contributors of this project!
                         <div class="messageContent">Oh, right. Thanks...</div>
                     </div>
                 </div>
-                <div class="mainButtonContainer"><input type="text" placeholder="Message #offtopic" id="pseudoChatBar" onkeypress="appendMessage(event);"><button id="downloadCyanBtn" onclick="downloadCyan();" class="tooltip-top tooltip cyanBtn" data-tooltip-title="Download Customized Cyan"><i class="bi bi-download"></i></button><a href="https://betterdiscord.app/Download?id=753" id="downloadStockCyanBtn" class="tooltip-top tooltip cyanBtn" style="text-decoration: none;" target="_blank" data-tooltip-title="Download Stock Cyan"><i class="bi bi-cloud-download-fill" ></i></a><button id="copyConfigBtn" onclick="copyConfig();" class="tooltip-top tooltip cyanBtn" data-tooltip-title="Copy CustomCSS configuration"><i class="bi bi-clipboard-fill" ></i></button><a href="https://dablulite.github.io/Cyan/Addons" id="addonsBtn" class="tooltip-top tooltip cyanBtn" style="text-decoration: none;" target="_blank" data-tooltip-title="Cyan Addons"><i class="bi bi-puzzle-fill" ></i></a></div>
+                <input type="text" placeholder="Message #offtopic" id="pseudoChatBar" class="cyanTextInput" onkeypress="appendMessage(event);">
             </div>
         </div>
     </section>
     <section id="newCustomizerSettings">
-        <h1 class="settingHeader settingHeaderH1">Cyan Customizer<span id="customizerSubHeader">Version 6</span></h1>
-        <div class="propertyWrapper" id="cyanThemeName"><input type="text" placeholder="Give a name to your theme:" id="themeName"></div>
-        <div class="propertyWrapper" id="cyanAccent"><span class="property">Accent Color:</span><div class="colorPickerWrapper"><input type="color" id="cyanColorPicker" value="#009f88"><div style="background-color: #009f88;" id="colorPickerBtn" onclick="document.getElementById('cyanColorPicker').showPicker();"><span id="cyanAccentColorDisplay" class="property">#009f88</span></div></div></div>
-        <div class="propertyWrapper" id="cyanBackImg" style="display: flex;"><span class="property">Background image URL:</span><input type="text" id="cyanBackImgInput" value="https://dablulite.github.io/Cyan/cyan-waves.png"></div>
+        <h1 class="settingHeader settingHeaderH1">Cyan Customizer<span id="customizerSubHeader">Version 7</span></h1>
+        <div class="propertyWrapper" id="cyanThemeName"><input type="text" placeholder="Give a name to your theme:" id="themeName" class="cyanTextInput"></div>
+        <div class="propertyWrapper" id="cyanAccent"><span class="property">Accent Color:</span><div class="colorPickerWrapper"><input type="color" id="cyanColorPicker" value="#009f88"><div style="background-color: var(--cyan-accent-color);" id="colorPickerBtn" onclick="document.getElementById('cyanColorPicker').showPicker();"><span id="cyanAccentColorDisplay" class="property">#009f88</span></div></div></div>
+        <div class="propertyWrapper" id="cyanBackImg" style="display: flex;"><span class="property">Background image URL:</span><input class="cyanTextInput" type="text" id="cyanBackImgInput" value="https://dablulite.github.io/Cyan/cyan-waves.png"></div>
         <div class="propertyWrapper" id="tintVisibility" style="display: flex;"><span class="property">Tint visibility:</span><input type="checkbox" id="tintVisibilityRadio" style="display: none;"><div id="tintVisibilityToggle" onclick="changeTintVisibility();" class="toggleTrack"><div class="toggleHandle"></div></div></div>
         <div class="propertyWrapper" id="backgroundHue" style="display: flex;"><span class="property">Background Hue:</span><input type="range" id="backgroundHueSlider" min="0" max="360" value="225"></div>
-        <div id="rawCodeBlock" style="display: none;">
-:root {
-    <span id="accentColorCodeblock">--cyan-accent-color: #009f88;</span>
-    <span id="backImgCodeblock">--cyan-background-img: url(https://dablulite.github.io/Cyan/cyan-waves.png);</span>
-    <span id="glassMaterialCodeblock">--cyan-background-primary: hsla(var(--cyan-background-hue) var(--cyan-tint-visibility) var(--cyan-background-lightness) / 40%);</span>
-    <span id="backgroundHueCodeblock">--cyan-background-hue: 225deg;</span>
-    <span id="tintVisibilityCodeblock">--cyan-tint-visibility: 8%;</span>
-}</div>
+        <div class="propertyWrapper" id="windowMarginCounter"><span class="property">Window Margin:</span><input type="number" id="windowMarginCounterValue" class="cyanTextInput" min="0" value="8"></div>
+
+        <div class="mainButtonContainer"><button id="downloadCyanBtn" onclick="downloadCyan();" class="cyanBtn" data-tooltip-title="Download Customized Cyan"><i class="bi bi-download"></i>Download Customized Cyan</button><a href="https://betterdiscord.app/Download?id=753" id="downloadStockCyanBtn" class="cyanBtn" style="text-decoration: none;" target="_blank" data-tooltip-title="Download Stock Cyan"><i class="bi bi-cloud-download-fill" ></i>Download Stock Cyan</a><button id="copyConfigBtn" onclick="copyConfig();" class="cyanBtn" data-tooltip-title="Copy CustomCSS configuration"><i class="bi bi-clipboard-fill" ></i>Copy CustomCSS configuration</button><a href="https://dablulite.github.io/Cyan/Addons" id="addonsBtn" class="cyanBtn" style="text-decoration: none;" target="_blank" data-tooltip-title="Cyan Addons"><i class="bi bi-puzzle-fill" ></i>Cyan Addons</a></div>
     </section>
 </body>
 </html>
