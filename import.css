@@ -3,7 +3,7 @@
 @import url(//dablulite.github.io/CyanBootstrapIcons/import.css);
 :root {
     --cyan-version: 14;
-    --cyan-subversion: 2;
+    --cyan-subversion: 3;
     --cyan-text-shadow: 0;
     --cyan-background-primary-alt: var(--cyan-background-primary);
     --cyan-background-secondary: var(--background-floating);
@@ -5778,4 +5778,31 @@ span:has(>.botText-1fD6Qk) {
     border: 1px solid rgb(200,200,200,.2);
     line-height: 18px;
     display: inline-block;
+}
+#customcss-tab {
+    padding-right: 0;
+}
+.contentRegionScroller-2_GT_N:has(#customcss-tab) .toolsContainer-25FL6V {
+    position: absolute;
+    right: -10px;
+    padding: 0;
+    margin: 0;
+    z-index: 600;
+    top: 32px;
+}
+.contentRegionScroller-2_GT_N:has(#customcss-tab) .toolsContainer-25FL6V .closeButton-PCZcma {
+    width: 34px;
+    height: 34px !important;
+    min-height: 34px;
+    box-sizing: border-box;
+    flex: 0 1;
+}
+#customcss-tab #bd-editor-controls {
+    padding-right: 44px;
+}
+#customcss-tab #bd-customcss-editor {
+    height: calc(100vh - 81px) !important;
+}
+.contentRegionScroller-2_GT_N:has(#customcss-tab) {
+    overflow: hidden !important;
 }
