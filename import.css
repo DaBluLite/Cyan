@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url(//dablulite.github.io/CyanBootstrapIcons/import.css);
 :root {
-    --cyan-version: 13;
-    --cyan-subversion: 5;
+    --cyan-version: 14;
+    --cyan-subversion: 0;
     --cyan-text-shadow: 0;
     --cyan-background-primary-alt: var(--cyan-background-primary);
     --cyan-background-secondary: var(--background-floating);
