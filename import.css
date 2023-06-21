@@ -3,7 +3,7 @@
 @import url(//dablulite.github.io/CyanBootstrapIcons/import.css);
 :root {
     --cyan-version: 14;
-    --cyan-subversion: 0;
+    --cyan-subversion: 1;
     --cyan-text-shadow: 0;
     --cyan-background-primary-alt: var(--cyan-background-primary);
     --cyan-background-secondary: var(--background-floating);
@@ -5686,4 +5686,62 @@ span:has(>.botText-1fD6Qk) {
     line-height: 18px;
     display: inline-block;
     margin-bottom: 8px;
+}
+.body-2qXItL,
+.wrapper-wOVKdL {
+    background-color: transparent;
+}
+.paymentNote-3dcb-Z {
+    background-color: transparent;
+    height: fit-content;
+    padding-top: 21px;
+    font-size: 16px;
+    font-weight: 600;
+    gap: 8px;
+}
+.paymentNote-3dcb-Z > svg {
+    margin-right: 0;
+    width: 22px;
+    height: 22px;
+}
+.container-ZMc96U.transparent-1lUmft {
+    background: var(--cyan-background-secondary);
+}
+
+#app-mount .noChat-2UYgeE {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+#app-mount .noChat-2UYgeE .scroller-2MALzE {
+    background: transparent !important;
+}
+#app-mount .noChat-2UYgeE .callContainer-HtHELf {
+    background: none;
+}
+.controlSection-1mNixL {
+    opacity: 1 !important;
+    transform: none !important;
+}
+#app-mount .noChat-2UYgeE .gradientContainer-phMG8d {
+    display: none;
+}
+#app-mount .noChat-2UYgeE .bottomControls-31YuPK {
+    background: var(--cyan-background-secondary);
+    border-radius: var(--window-border-radius-calc);
+    box-shadow: var(--cyan-elevation-shadow);
+    padding: 8px 16px;
+    box-sizing: border-box;
+    width: calc(100% - (var(--window-margin) * 2px));
+    margin: calc(var(--window-margin) * 1px);
+}
+#app-mount .noChat-2UYgeE .videoControls-353CsJ {
+    padding: 0 !important;
+    box-sizing: border-box;
+}
+#app-mount .noChat-2UYgeE .headerWrapper-1ULEPv {
+    margin: 0;
+}
+#app-mount .noChat-2UYgeE .viewer-1av623 {
+    margin-left: 0;
 }
