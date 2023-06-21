@@ -3872,7 +3872,7 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
     display: none;
 }
 #profile-customization-tab .section-28YDOf:has(.title-3CjiSS) {
-    background-color: var(--cyan-background-secondary);
+    background-color: rgba(0,0,0,.4);
     border-radius: 16px 16px 4px 4px;
     padding: 8px;
     margin-bottom: 4px;
@@ -3881,7 +3881,7 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
     padding: 0;
 }
 .lastSection-q3HCfo {
-    background-color: var(--cyan-background-secondary);
+    background-color: rgba(0,0,0,.4);
     border-radius: 4px 4px 16px 16px;
     padding: 8px;
     margin-bottom: 0;
@@ -5484,4 +5484,206 @@ span:has(>.botText-1fD6Qk) {
     margin-right: 0;
     width: 22px;
     height: 22px;
+}
+.userInfo-regn9W > div:not([class]),
+#my-account-tab .bannerSVGWrapper-2CLfzN,
+.field-21XZwa {
+    box-shadow: none !important;
+    border-radius: 16px !important;
+    border: 3px solid var(--cyan-accent-color) !important;
+}
+.field-21XZwa .fieldButton-14lHvK {
+    border-radius: 16px !important;
+}
+#app-mount .userInfo-regn9W > button {
+    background-color: var(--cyan-background-primary) !important;
+    box-shadow: none !important;
+    border: 3px solid var(--cyan-accent-color) !important;
+    width: 42px !important;
+}
+.userPopoutOuter-1OHwPL:has(.pencilContainer-18TrEJ) .bannerSVGWrapper-2CLfzN {
+    scale: 1;
+    height: 120px;
+    position: static;
+    z-index: +1;
+    width: 322px;
+    min-width: unset !important;
+    margin-left: 9px;
+    background-image: var(--cyan-background-img);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 9px;
+}
+.userPopoutOuter-1OHwPL:has(.pencilContainer-18TrEJ) .bannerSVGWrapper-2CLfzN .banner-1YaD3N {
+    background-color: transparent !important;
+}
+.userPopoutOuter-1OHwPL:has(.pencilContainer-18TrEJ) > .userProfileInnerThemedNonPremium-2AJg-H {
+    background: var(--cyan-accent-color) !important;
+}
+.userPopoutOuter-1OHwPL:has(.pencilContainer-18TrEJ) .avatarWrapperNormal-ahVUaC {
+    position: absolute !important;
+    top: 76px;
+}
+.userPopoutOuter-1OHwPL:has(.pencilContainer-18TrEJ) .pencilContainer-18TrEJ {
+    top: 54px !important;
+    height: 22px !important;
+}
+.userProfileModalOuter-2wdWjU:has(.pencilContainer-18TrEJ) .userProfileModalInner-3dx9L9 {
+    background: var(--cyan-accent-color) !important;
+    padding: 4px;
+}
+.userProfileModalOuter-2wdWjU:has(.pencilContainer-18TrEJ) .bannerSVGWrapper-2CLfzN {
+    scale: 1 !important;
+    height: 212px !important;
+    position: static;
+    z-index: +1;
+    width: 582px;
+    min-width: unset !important;
+    margin: 5px;
+    background-image: var(--cyan-background-img);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.userProfileModalOuter-2wdWjU:has(.pencilContainer-18TrEJ) .bannerSVGWrapper-2CLfzN .banner-1YaD3N {
+    background-color: transparent !important;
+    height: 0 !important;
+}
+.userProfileModalOuter-2wdWjU:has(.pencilContainer-18TrEJ) > .userProfileInnerThemedNonPremium-2AJg-H .header-S26rhB::before {
+    content: none;
+}
+.userProfileModalOuter-2wdWjU:has(.pencilContainer-18TrEJ) > .userProfileInnerThemedNonPremium-2AJg-H .header-S26rhB {
+    border: none;
+    background-color: transparent;
+    margin: 0;
+    width: 0;
+    position: absolute;
+}
+.userProfileModalOuter-2wdWjU:has(.pencilContainer-18TrEJ) .avatar-3QF_VA {
+    border: 6px solid var(--background-primary);
+    background-color: var(--background-primary);
+    position: absolute;
+    top: -68px;
+    left: 22px;
+}
+.userProfileModalOuter-2wdWjU:has(.pencilContainer-18TrEJ) > .userProfileInnerThemedNonPremium-2AJg-H .header-S26rhB > div:not([class]) {
+    margin: 0 !important;
+}
+.userProfileModalOuter-2wdWjU:has(.pencilContainer-18TrEJ) > .userProfileInnerThemedNonPremium-2AJg-H .header-S26rhB > div:not([class]) > div {
+    width: 120px !important;
+    height: 120px !important;
+}
+.userProfileModalOuter-2wdWjU:has(.pencilContainer-18TrEJ) > .userProfileInnerThemedNonPremium-2AJg-H .header-S26rhB > div:not([class]) > div > svg {
+    width: 138px !important;
+    height: 138px !important;
+}
+.userProfileModalOuter-2wdWjU:has(.pencilContainer-18TrEJ) .headerTop-1PNKck {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    left: 160px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: start;
+    min-width: 424px;
+}
+.userProfileModalOuter-2wdWjU:has(.pencilContainer-18TrEJ) .topSection-13QKHs {
+    margin-bottom: 70px;
+    z-index: +3;
+}
+.userProfileModalOuter-2wdWjU:has(.pencilContainer-18TrEJ) > .userProfileInnerThemedNonPremium-2AJg-H::before {
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    background: hsla(0,0%,0%,0.6);
+}
+.messageGroupWrapper-1jf_7C {
+    border-radius: 16px;
+    background-color: var(--cyan-background-secondary);
+    box-shadow: var(--cyan-elevation-shadow);
+    border: none;
+    margin: 4px;
+}
+.bioTextArea-dDGOeC {
+    height: fit-content;
+}
+#profile-customization-tab .body-3lbupa .section-28YDOf:has(.customStatus-19KW6v,.userText-1_v2Cq) {
+    background-color: rgba(0,0,0,.4);
+    padding: 8px;
+}
+#profile-customization-tab .body-3lbupa .section-28YDOf:has(.userText-1_v2Cq) {
+    border-radius: 16px;
+    border: 3px solid var(--cyan-accent-color);
+}
+#profile-customization-tab .body-3lbupa .section-28YDOf:has(.userText-1_v2Cq):has( + .section-28YDOf .customStatus-19KW6v) {
+    border-radius: 16px 16px 0 0;
+    border-bottom: none;
+}
+#profile-customization-tab .body-3lbupa .section-28YDOf:has(.customStatus-19KW6v) {
+    border-radius: 0 0 16px 16px;
+    border: 3px solid var(--cyan-accent-color);
+    border-top: none;
+}
+#profile-customization-tab .section-28YDOf:has(.title-3CjiSS) {
+    margin-top: 4px;
+}
+#profile-customization-tab .avatarUploaderInner-p38nm2 {
+    background-color: var(--cyan-background-secondary);
+    box-shadow: 0 0 0 5px var(--cyan-background-secondary);
+}
+#profile-customization-tab .userProfileOuterUnthemed-11rPfA .bannerSVGWrapper-2CLfzN {
+    scale: 1;
+    height: 120px;
+    position: static;
+    z-index: +1;
+    width: 322px;
+    min-width: unset !important;
+    margin-left: 9px;
+    background-image: var(--cyan-background-img);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 9px;
+}
+#profile-customization-tab .avatarUploaderNormal-2m2hFm {
+    top: 66px;
+}
+#profile-customization-tab .bannerNormal-2jf-df {
+    display: none;
+}
+#profile-customization-tab .userProfileOuterUnthemed-11rPfA > div{
+    background: var(--cyan-accent-color);
+}
+.imageUploaderIcon-2OHmFu {
+    background-color: var(--cyan-background-secondary) !important;
+    background-image: none !important;
+    box-shadow: var(--cyan-elevation-shadow);
+}
+.imageUploaderIcon-2OHmFu::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--header-primary);
+    -webkit-mask: url("https://discord.com/assets/4a1000a95b1aad334e98f9d15b9d0ec4.svg");
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+}
+#profile-customization-tab .customizationSection-IGy2fS:has(.userProfileOuterUnthemed-11rPfA)::before {
+    content: "Due to some restrictions by Discord's code, Cyan doesn't allow the normal banner color of the current user to be visible. To change that, install the Cyan+ BetterDiscord plugin from the official Cyan repository.";
+    width: 100%;
+    background-color: var(--background-secondary-alt);
+    padding: 16px;
+    border-radius: 16px;
+    color: var(--text-normal);
+    box-sizing: border-box;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    border: 1px solid rgb(200,200,200,.2);
+    line-height: 18px;
+    display: inline-block;
+    margin-bottom: 8px;
 }
