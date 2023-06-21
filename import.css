@@ -3,7 +3,7 @@
 @import url(//dablulite.github.io/CyanBootstrapIcons/import.css);
 :root {
     --cyan-version: 14;
-    --cyan-subversion: 1;
+    --cyan-subversion: 2;
     --cyan-text-shadow: 0;
     --cyan-background-primary-alt: var(--cyan-background-primary);
     --cyan-background-secondary: var(--background-floating);
@@ -741,7 +741,8 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
   border-width: 2px !important;
 }
 .divider-IqmEqJ .content-3spvdd {
-  padding: 10px !important;
+  padding: 8px 12px !important;
+  color: var(--header-secondary);
 }
 .chatContent-3KubbW, .content-1jQy2l, .container-2o3qEW {
   background-color: transparent !important;
@@ -3136,14 +3137,16 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
     padding: 16px;
     border-radius: 50px;
     box-shadow: var(--cyan-elevation-shadow);
-    left: 50%;
+    left: 10px
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(0,-50%);
     right: unset;
     background-color: var(--cyan-background-secondary) !important;
+    text-transform: capitalize;
 }
 .unreadPill-3nEWYM > svg {
-    display: none;
+    position: relative;
+    transform: rotateY(180deg);
 }
 .attachment-1PZZB2 {
     border-radius: 8px;
@@ -5744,4 +5747,35 @@ span:has(>.botText-1fD6Qk) {
 }
 #app-mount .noChat-2UYgeE .viewer-1av623 {
     margin-left: 0;
+}
+#themes-tab .bd-settings-title::after {
+  counter-reset: cyan-version var(--cyan-version) cyan-subversion var(--cyan-subversion);
+  content: 'Cyan ' counter(cyan-version)'.'counter(cyan-subversion) ' is active!';
+  margin-left: 8px;
+  font-weight: 400;
+  background-color: var(--cyan-background-primary);
+  padding: 4px 16px;
+  border-radius: 50px;
+  box-shadow: var(--cyan-elevation-shadow);
+  font-size: 16px;
+  height: 100%;
+  border: 1px solid var(--cyan-accent-color);
+}
+#themes-tab .bd-settings-title {
+    display: flex;
+    align-items: center;
+}
+#themes-tab > .bd-controls::after {
+    content: "Cyan offers add-ons to enhance your experience, available at https://dablulite.github.io/Cyan/Addons/";
+    width: 100%;
+    background-color: var(--background-secondary-alt);
+    padding: 16px;
+    border-radius: 16px;
+    color: var(--text-normal);
+    box-sizing: border-box;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    border: 1px solid rgb(200,200,200,.2);
+    line-height: 18px;
+    display: inline-block;
 }
