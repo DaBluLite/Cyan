@@ -4,7 +4,7 @@
 
 <h1 background="#ff0000">Cyan - A Clean and Customizable Discord theme, with custom background support</h1>
 
-[![BetterDiscord][bd-badge]][bd-link] [![Cyan Customizer][cc-badge]][cc-link] [![Cyan Addons][addon-badge]][addon-link]
+[![BetterDiscord][bd-badge]][bd-link] [![Cyan Customizer][cc-badge]][cc-link] [![Cyan Addons][addon-badge]][addon-link] [![Cyan+][helper-badge]][helper-link]
 
 [bd-link]: https://betterdiscord.app/theme/Cyan
 [bd-badge]: https://img.shields.io/badge/Cyan-Download%20On%20BetterDiscord-3a71c1?labelColor=0c0d10&color=009f88&style=for-the-badge
@@ -14,6 +14,9 @@
 
 [addon-link]: https://dablulite.github.io/Cyan/Addons
 [addon-badge]: https://img.shields.io/badge/Addons%20For%20Cyan-Download-3a71c1?labelColor=0c0d10&color=009f88&style=for-the-badge
+
+[helper-link]: https://dablulite.github.io/Cyan/CyanPlus.plugin.js
+[helper-badge]: https://img.shields.io/badge/Cyan+-Download-3a71c1?labelColor=0c0d10&color=009f88&style=for-the-badge
 
 # Special thanks to:
 * [@ObjectiveSlayer](https://github.com/ObjectiveSlayer)/carrot#8812
