@@ -1019,7 +1019,7 @@ ${cyanCSSconfig().replaceAll(" !important;", ";")}`);
         </div>
     </section>
     <section id="newCustomizerSettings">
-        <h1 class="settingHeader settingHeaderH1">Cyan Customizer<span id="customizerSubHeader">Version 7</span></h1>
+        <h1 class="settingHeader settingHeaderH1">Cyan Customizer<span id="customizerSubHeader">Version 7.1</span></h1>
         <div class="propertyWrapper" id="cyanThemeName"><input type="text" placeholder="Give a name to your theme:" id="themeName" class="cyanTextInput"></div>
         <div class="propertyWrapper" id="cyanAccent"><span class="property">Accent Color:</span><div class="colorPickerWrapper"><input type="color" id="cyanColorPicker" value="#009f88"><div style="background-color: var(--cyan-accent-color);" id="colorPickerBtn" onclick="document.getElementById('cyanColorPicker').showPicker();"><span id="cyanAccentColorDisplay" class="property">#009f88</span></div></div></div>
         <div class="propertyWrapper" id="cyanBackImg" style="display: flex;"><span class="property">Background image URL:</span><input class="cyanTextInput" type="text" id="cyanBackImgInput" value="https://dablulite.github.io/Cyan/cyan-waves.png"></div>
@@ -1027,7 +1027,12 @@ ${cyanCSSconfig().replaceAll(" !important;", ";")}`);
         <div class="propertyWrapper" id="backgroundHue" style="display: flex;"><span class="property">Background Hue:</span><input type="range" id="backgroundHueSlider" min="0" max="360" value="225"></div>
         <div class="propertyWrapper" id="windowMarginCounter"><span class="property">Window Margin:</span><input type="number" id="windowMarginCounterValue" class="cyanTextInput" min="0" value="8"></div>
 
-        <div class="mainButtonContainer"><button id="downloadCyanBtn" onclick="downloadCyan();" class="cyanBtn" data-tooltip-title="Download Customized Cyan"><i class="bi bi-download"></i>Download Customized Cyan</button><a href="https://betterdiscord.app/Download?id=753" id="downloadStockCyanBtn" class="cyanBtn" style="text-decoration: none;" target="_blank" data-tooltip-title="Download Stock Cyan"><i class="bi bi-cloud-download-fill" ></i>Download Stock Cyan</a><button id="copyConfigBtn" onclick="copyConfig();" class="cyanBtn" data-tooltip-title="Copy CustomCSS configuration"><i class="bi bi-clipboard-fill" ></i>Copy CustomCSS configuration</button><a href="https://dablulite.github.io/Cyan/Addons" id="addonsBtn" class="cyanBtn" style="text-decoration: none;" target="_blank" data-tooltip-title="Cyan Addons"><i class="bi bi-puzzle-fill" ></i>Cyan Addons</a></div>
+        <div class="mainButtonContainer">
+            <button id="downloadCyanBtn" onclick="downloadCyan();" class="cyanBtn" data-tooltip-title="Download Customized Cyan"><i class="bi bi-download"></i>Download Customized Cyan</button>
+            <a href="https://betterdiscord.app/Download?id=753" id="downloadStockCyanBtn" class="cyanBtn" style="text-decoration: none;" target="_blank" data-tooltip-title="Download Stock Cyan"><i class="bi bi-cloud-download-fill" ></i>Download Stock Cyan</a>
+            <a href="https://dablulite.github.io/Cyan/CyanPlus.plugin.js" id="downloadCyanPlusBtn" class="cyanBtn" style="text-decoration: none;" target="_blank" data-tooltip-title="Download Cyan+"><i class="bi bi-puzzle-fill" ></i>(NEW) Download Cyan+</a>
+            <button id="copyConfigBtn" onclick="copyConfig();" class="cyanBtn" data-tooltip-title="Copy CustomCSS configuration"><i class="bi bi-clipboard-fill" ></i>Copy CustomCSS configuration</button>
+            <a href="https://dablulite.github.io/Cyan/Addons" id="addonsBtn" class="cyanBtn" style="text-decoration: none;" target="_blank" data-tooltip-title="Cyan Addons"><i class="bi bi-puzzle-fill" ></i>Cyan Addons</a></div>
     </section>
 </body>
 </html>

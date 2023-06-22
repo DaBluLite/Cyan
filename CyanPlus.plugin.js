@@ -3,7 +3,7 @@
 * @displayName Cyan+
 * @authorId 582170007505731594
 * @invite ZfPH6SDkMW
-* @version 1.0.0
+* @version 1.1.0
 */
 /*@cc_on
 @if (@_jscript)
@@ -28,6 +28,7 @@
     WScript.Quit();
 @else@*/
 
+let currentUserAccentColor;
 module.exports = (() => {
     const config = {
         info: {
@@ -39,9 +40,8 @@ module.exports = (() => {
                     github_username: "DaBluLite"
                 }
             ],
-            version: "1.0.0",
-            creatorVersion: "1.0.0",
-            description: "A plugin that allows for various Cyan features to work properly."
+            version: "1.1.0",
+            description: "A plugin that allows for various Cyan features to work properly (When changing banner color on a non-nitro account, reload Discord or turn off and back on the plugin for the color to apply)."
         }
     };
     
@@ -76,14 +76,22 @@ module.exports = (() => {
             const SessionsStore = WebpackModules.getByProps("getSessions", "_dispatchToken");
  
             const {Webpack, Webpack: {Filters}, React} = BdApi;
-            const [Toast, UnthemedProfiles, BannerSVG, BadgeList, ProfileBadges, AccountProfileCard] = Webpack.getBulk.apply(null, [
+            const { getUserProfile } = BdApi.Webpack.getModule(BdApi.Webpack.Filters.byProps("getUserProfile"))
+            const [Toast, UnthemedProfiles, BannerSVG, BadgeList, ProfileBadges, {getCurrentUser}, UserArea] = Webpack.getBulk.apply(null, [
                 Filters.byProps("createToast"),
                 Filters.byProps("userProfileOuterUnthemed"),
                 Filters.byProps("bannerSVGWrapper"),
                 Filters.byProps("headerTop"),
                 Filters.byProps("profileBadges"),
-                Filters.byProps("accountProfileCard")
+                Filters.byProps("getUser"),
+                Filters.byProps("panels")
             ].map(fn => ({filter: fn})));
+
+            const UserProfile = Webpack.getModule((exports, module, index) => exports.toString?.().includes(".apply(this,arguments)") &&  Webpack.modules[index].toString().includes("USER_PROFILE_FETCH_START"), { searchExports: true });
+            UserProfile(getCurrentUser().id).then(profile => {
+                currentUserAccentColor = profile.user.banner_color;
+                console.log(currentUserAccentColor);
+            });
             
             let nativeToast = (text,type) => {
                 let toast = Toast.createToast(text,type);
@@ -222,13 +230,29 @@ module.exports = (() => {
                 return this.switch;
             }
 
+            const bdSwitchReact = (status,options) => {
+                let _checked;
+                options['class'] = "bd-switch";
+                if(status==true) {
+                    _checked = "checked";
+                }
+
+
+                this.switch = React.createElement("div", options);
+
+                this.switch.dangerouslySetInnerHTML(`<input type="checkbox" ${_checked}><div class="bd-switch-body"><svg class="bd-switch-slider" viewBox="0 0 28 20" preserveAspectRatio="xMinYMid meet"><rect class="bd-switch-handle" fill="white" x="4" y="0" height="20" width="20" rx="10"></rect><svg class="bd-switch-symbol" viewBox="0 0 20 20" fill="none"><path></path><path></path></svg></svg></div>`);
+            
+                return this.switch;
+            }
+
             return class cyanColorways extends Plugin {
                 css = `
                 div[aria-label="dablulite"] .profileBadges-2pItdR::after,
                 #profile-customization-tab .customizationSection-IGy2fS:has(.userProfileOuterUnthemed-11rPfA)::before {
                     content: none;
                 }
-                #Cyan-card .bd-description-wrap::after {
+                #Cyan-card .bd-description-wrap::after,
+                #themes-tab > .bd-controls::after {
                     content: none;
                 }
 
@@ -241,6 +265,95 @@ module.exports = (() => {
                     border-radius: 16px;
                     margin-left: 4px;
                 }
+                .panelTitleContainer-bZ3AM_ {
+                    margin-bottom: 6px;
+                }
+                .panelTitleContainer-bZ3AM_ > div {
+                    overflow: visible;
+                }
+                .panelTitleContainer-bZ3AM_ > div::after {
+                    content: "Cyan+";
+                    padding: 1px 8px;
+                    background-color: var(--cyan-background-primary);
+                    border: 2px solid var(--cyan-accent-color);
+                    border-radius: 16px;
+                    margin-left: 4px;
+                }
+                .panels-3wFtMD {
+                    box-shadow: none;
+                    border-radius: 16px;
+                    background-color: var(--cyan-accent-color);
+                    position: relative;
+                    background-image: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgb(0,0,0,.7) 100%);
+                    padding: 4px;
+                }
+                .panels-3wFtMD::after {
+                    content: "";
+                    position: absolute;
+                    top: 4px;
+                    left: 4px;
+                    width: calc(100% - 8px);
+                    height: calc(100% - 8px);
+                    border-radius: 13px;
+                    background-color: rgba(0,0,0,.4);
+                    z-index: -1;
+                }
+                .field-21XZwa::after,
+                .userInfo-regn9W > div:not([class])::after {
+                    content: "";
+                    position: absolute;
+                    top: 4px;
+                    left: 4px;
+                    width: calc(100% - 8px);
+                    height: calc(100% - 8px);
+                    border-radius: 13px;
+                    background-color: rgba(0,0,0,.4);
+                }
+                .panels-3wFtMD .container-YkUktl::before {
+                    content: "";
+                    width: 288px;
+                    height: 0;
+                    border-radius: 10px;
+                    background-image: var(--cyan-background-img);
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    display: flex;
+                    transition: .3s;
+                    opacity: 0;
+                }
+                .panels-3wFtMD:hover .container-YkUktl::before {
+                    height: 120px;
+                    margin-bottom: 8px;
+                    opacity: 1;
+                }
+                .panels-3wFtMD .container-YkUktl {
+                    padding: 4px !important;
+                }
+                .field-21XZwa {
+                    border-radius: 16px;
+                    background-color: var(--cyan-accent-color) !important;
+                    position: relative;
+                    background-image: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgb(0,0,0,.7) 100%);
+                    padding: 16px;
+                    border: none !important;
+                }
+                .userInfo-regn9W > div:not([class]) {
+                    border-radius: 16px;
+                    background-color: var(--cyan-accent-color) !important;
+                    background-image: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgb(0,0,0,.7) 100%);
+                    padding: 12px;
+                    border: none !important;
+                    padding-left: 100px;
+                }
+                .field-21XZwa > *,
+                .userInfo-regn9W > div:not([class]) {
+                    z-index: +1;
+                }
+                .avatar-3mTjvZ,
+                .userInfo-regn9W > div:not([class]) > * {
+                    z-index: +2;
+                }
                 `;
                 onStart() {
                     PluginUtilities.addStyle(config.info.name, this.css);
@@ -248,11 +361,25 @@ module.exports = (() => {
                     StoreWatcher._init();
 
                     const elements = Array.from(document.body.getElementsByClassName(UnthemedProfiles?.userProfileInnerThemedNonPremium));
-                    const settingsElement = Array.from(document.body.getElementsByClassName(AccountProfileCard?.accountProfileCard));
+                    const settingsElement = Array.from(document.body.getElementsByClassName("accountProfileCard-lbN7n-"));
+                    const panelsElement = Array.from(document.body.getElementsByClassName(UserArea?.panels));
 
                     if(settingsElement.length) {
                         settingsElement.forEach(elem => {
-                            elem.style = elem.style + ";--cyan-accent-color: " + elem.querySelector("." + BannerSVG?.bannerSVGWrapper + " > foreignObject > div[style]").style.backgroundColor + "; --cyan-elevation-shadow: 0 0 0 1.5px " + elem.querySelector("." + BannerSVG?.bannerSVGWrapper + " > foreignObject > div[style]").style.backgroundColor + ", 0 2px 10px 0 rgb(0 0 0 / 60%);";
+                            elem.style = elem.style + ";--cyan-accent-color: " + currentUserAccentColor + "; --cyan-elevation-shadow: 0 0 0 1.5px " + currentUserAccentColor + ", 0 2px 10px 0 rgb(0 0 0 / 60%);";
+                        })
+                    }
+
+                    if(panelsElement.length) {
+                        panelsElement.forEach(elem => {
+                            let styleLoop = setInterval(() => {
+                                if(!currentUserAccentColor) {
+                                    
+                                } else {
+                                    elem.style = elem.style + ";--cyan-accent-color: " + currentUserAccentColor + "; --cyan-elevation-shadow: 0 0 0 1.5px " + currentUserAccentColor + ", 0 2px 10px 0 rgb(0 0 0 / 60%);";
+                                    clearInterval(styleLoop);
+                                }
+                            },200);
                         })
                     }
 
@@ -297,16 +424,6 @@ module.exports = (() => {
                         href: "https://dablulite.github.io/Cyan/Addons/CyanColorways/"
                     });
                     cyanColorwaysButton.innerHTML = `<div class="contents-3NembX">Get CyanColorways Addon</div>`;
-
-                    try {
-                        if(!added.querySelector("#Cyan-card .cyanAddonsBtn"))
-                            document.getElementById("Cyan-card").querySelector(".bd-description-wrap").append(addonsButton);
-                    } catch(e) {}
-
-                    try {
-                        if(!added.querySelector(".ColorwaySelectorWrapperContainer .cyanAddonsBtn"))
-                            document.querySelector(".ColorwaySelectorWrapperContainer").append(cyanColorwaysButton);
-                    } catch(e) {}
                 }
 
                 observer({addedNodes}) {
@@ -314,11 +431,18 @@ module.exports = (() => {
                         if (added.nodeType === Node.TEXT_NODE) continue;
 
                         const elements = Array.from(added.getElementsByClassName(UnthemedProfiles?.userProfileInnerThemedNonPremium));
-                        const settingsElement = Array.from(added.getElementsByClassName(AccountProfileCard?.accountProfileCard));
+                        const settingsElement = Array.from(added.getElementsByClassName("accountProfileCard-lbN7n-"));
+                        const panelsElement = Array.from(added.getElementsByClassName(UserArea?.panels));
 
                         if(settingsElement.length) {
                             settingsElement.forEach(elem => {
-                                elem.style = elem.style + ";--cyan-accent-color: " + elem.querySelector("." + BannerSVG?.bannerSVGWrapper + " > foreignObject > div[style]").style.backgroundColor + "; --cyan-elevation-shadow: 0 0 0 1.5px " + elem.querySelector("." + BannerSVG?.bannerSVGWrapper + " > foreignObject > div[style]").style.backgroundColor + ", 0 2px 10px 0 rgb(0 0 0 / 60%);";
+                                elem.style = elem.style + ";--cyan-accent-color: " + currentUserAccentColor + "; --cyan-elevation-shadow: 0 0 0 1.5px " + currentUserAccentColor + ", 0 2px 10px 0 rgb(0 0 0 / 60%);";
+                            })
+                        }
+
+                        if(panelsElement.length) {
+                            panelsElement.forEach(elem => {
+                                elem.style = elem.style + ";--cyan-accent-color: " + currentUserAccentColor + "; --cyan-elevation-shadow: 0 0 0 1.5px " + currentUserAccentColor + ", 0 2px 10px 0 rgb(0 0 0 / 60%);";
                             })
                         }
 
@@ -381,6 +505,21 @@ module.exports = (() => {
                     StoreWatcher._stop();
                     StoreWatcher._listeners.clear();
                     PluginUtilities.removeStyle(config.info.name);
+                    const panelsElement = Array.from(document.body.getElementsByClassName(UserArea?.panels));
+
+                    if(panelsElement.length) {
+                        panelsElement.forEach(elem => {
+                            elem.style = "";
+                        })
+                    }
+                }
+
+                getSettingsPanel() {
+                    let _container = createElement("div",{id: "CyanPlusSettings"});
+
+                    _container.append();
+
+                    return _container;
                 }
             };
         };
