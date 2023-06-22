@@ -3,7 +3,7 @@
 @import url(//dablulite.github.io/CyanBootstrapIcons/import.css);
 :root {
     --cyan-version: 14;
-    --cyan-subversion: 3;
+    --cyan-subversion: 4;
     --cyan-text-shadow: 0;
     --cyan-background-primary-alt: var(--cyan-background-primary);
     --cyan-background-secondary: var(--background-floating);
@@ -5805,4 +5805,60 @@ span:has(>.botText-1fD6Qk) {
 }
 .contentRegionScroller-2_GT_N:has(#customcss-tab) {
     overflow: hidden !important;
+}
+.actionsProfileV2-2xJe2L {
+    flex-direction: column;
+    gap: 8px;
+    width: 30% !important;
+    max-width: unset !important;
+}
+.actionsProfileV2-2xJe2L .disabledButtonWrapper-1m0hYZ:has(.listenAlongIcon-aXq1MH,.spotifyButtonLogo-2wqT62) {
+    width: 100% !important;
+    height: fit-content !important;
+    max-width: unset !important;
+    margin-left: 0;
+}
+.actionsProfileV2-2xJe2L .iconButtonSize-1-pz2t {
+    max-width: unset !important;
+}
+.actionsProfileV2-2xJe2L .buttonSize-dIiz43.actionColor-19rsEu {
+    border: 1px solid var(--profile-gradient-button-color);
+    background-color: var(--cyan-background-primary);
+    border-radius: 8px;
+    color: var(--header-primary);
+    transition: .15s;
+    width: 100%;
+    padding: 8px 16px;
+    height: fit-content;
+}
+.expandedFolderBackground-1kSAf6 {
+    margin-top: 48px;
+}
+.expandedFolderBackground-1kSAf6:not(.collapsed-uGXEbi) {
+    border-radius: 12px !important;
+    border: none;
+    margin-left: 12px;
+    width: 48px;
+    padding: 0 !important;
+    height: calc(100% - 56px);
+    box-shadow: var(--light-elevation-border);
+    animation: msganim 0.4s ease;
+}
+.expandedFolderBackground-1kSAf6:not(.collapsed-uGXEbi)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -12px;
+    height: 100%;
+    background-color: var(--cyan-accent-color);
+    padding: 0 !important;
+    width: 3px;
+    margin-left: 4px;
+    border-radius: 50px !important;
+    border: none;
+    animation: animright 0.4s ease;
+}
+.expandedFolderBackground-1kSAf6:not(.collapsed-uGXEbi) ~ ul .pill-2RsI5Q > span {
+    box-shadow: var(--cyan-elevation-shadow);
+    background-color: var(--cyan-background-secondary);
 }
