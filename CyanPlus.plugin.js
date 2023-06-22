@@ -3,7 +3,7 @@
 * @displayName Cyan+
 * @authorId 582170007505731594
 * @invite ZfPH6SDkMW
-* @version 1.1.0
+* @version 1.1.5
 */
 /*@cc_on
 @if (@_jscript)
@@ -40,7 +40,7 @@ module.exports = (() => {
                     github_username: "DaBluLite"
                 }
             ],
-            version: "1.1.0",
+            version: "1.1.5",
             description: "A plugin that allows for various Cyan features to work properly (When changing banner color on a non-nitro account, reload Discord or turn off and back on the plugin for the color to apply)."
         }
     };
@@ -247,6 +247,7 @@ module.exports = (() => {
 
             return class cyanColorways extends Plugin {
                 css = `
+                @import url(https://itmesarah.github.io/usrbg/usrbg.css);
                 div[aria-label="dablulite"] .profileBadges-2pItdR::after,
                 #profile-customization-tab .customizationSection-IGy2fS:has(.userProfileOuterUnthemed-11rPfA)::before {
                     content: none;
@@ -448,7 +449,34 @@ module.exports = (() => {
 
                         if(elements.length) {
                             elements.forEach(elem => {
-                                elem.style = elem.style + ";--cyan-accent-color: " + elem.querySelector("." + BannerSVG?.bannerSVGWrapper + " > foreignObject > div[style]").style.backgroundColor + "; --cyan-elevation-shadow: 0 0 0 1.5px " + elem.querySelector("." + BannerSVG?.bannerSVGWrapper + " > foreignObject > div[style]").style.backgroundColor + ", 0 2px 10px 0 rgb(0 0 0 / 60%);";
+                                elem.style = elem.style + ";--cyan-accent-color: " + elem.querySelector("." + BannerSVG?.bannerSVGWrapper + " > foreignObject > div[style]").style.backgroundColor + "; --cyan-elevation-shadow: 0 0 0 1.5px " + elem.querySelector("." + BannerSVG?.bannerSVGWrapper + " > foreignObject > div[style]").style.backgroundColor + ", 0 2px 10px 0 rgb(0 0 0 / 60%); background: var(--cyan-accent-color) !important;";
+                                if(getComputedStyle(elem).getPropertyValue('--u')) {
+                                    if(elem.classList.contains("userPopoutInner-nv9Y92")) {
+                                        elem.style = elem.style + ";--cyan-accent-color: " + elem.querySelector("." + BannerSVG?.bannerSVGWrapper + " > foreignObject > div[style]").style.backgroundColor + "; --cyan-elevation-shadow: 0 0 0 1.5px " + elem.querySelector("." + BannerSVG?.bannerSVGWrapper + " > foreignObject > div[style]").style.backgroundColor + ", 0 2px 10px 0 rgb(0 0 0 / 60%); background: var(--cyan-accent-color) !important;max-width: 340px;"
+                                    }
+                                    elem.querySelector("." + BannerSVG?.bannerSVGWrapper).style +=  `
+                                    scale: 1 !important;
+                                        scale: 1 !important;
+                                        position: static !important;
+                                        z-index: +1 !important;
+                                        min-width: 322px !important;
+                                        max-width: calc(100% - 18px) !important;
+                                        min-height: 120px !important;
+                                        max-height: 212px !important;
+                                        margin-left: 9px !important;
+                                        background-image: var(--u) !important;
+                                        background-position: center !important;
+                                        background-repeat: no-repeat !important;
+                                        background-size: cover !important;
+                                        margin-top: 9px !important;
+                                    `;
+                                    try {
+                                        elem.querySelector("." + BannerSVG?.bannerSVGWrapper + " > foreignObject > div[style]").style = elem.querySelector("." + BannerSVG?.bannerSVGWrapper + " > foreignObject > div[style]").style + ";opacity: 0;";
+                                    } catch(e) {}
+                                    try {
+                                        elem.querySelector(".avatarWrapperNormal-ahVUaC").style = elem.querySelector(".avatarWrapperNormal-ahVUaC").style + ";position: absolute !important; top: 76px;";
+                                    } catch(e) {}
+                                }
                                 if(elem.querySelector('img[src*="582170007505731594"]')) {
                                     if(!elem.querySelectorAll(".cyanAuthorBadge").length) {
                                         let badge = createElement("a",{
@@ -492,6 +520,13 @@ module.exports = (() => {
                             if(added.querySelector("#Cyan-card")) {
                                 if(!added.querySelector("#Cyan-card .cyanAddonsBtn"))
                                     added.querySelector("#Cyan-card .bd-description-wrap").append(addonsButton);
+                                    added.querySelector("#Cyan-card .bd-description-wrap").append(createElement("div",{
+                                        class: "button-1d_47w button-ejjZWC lookFilled-1H2Jvj buttonColor-1u-3JF sizeSmall-3R2P2p fullWidth-3M-YBR grow-2T4nbg cyanAddonsBtn",
+                                        type: "button",
+                                        onclick: () => {
+                                            BdApi.Plugins.reload("Cyan+");
+                                        }
+                                    },"Reload Cyan+"));
                             }
                             if(added.querySelector(".ColorwaySelectorWrapperContainer")) {
                                 if(!added.querySelector(".ColorwaySelectorWrapperContainer .cyanAddonsBtn"))
