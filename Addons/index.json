@@ -1,0 +1,32 @@
+{
+  "addons": [
+    {
+      "name": "Right-side Omnibar",
+      "import": "@import url(https://dablulite.github.io/Cyan/Addons/RightSideOmnibar/import.css);"
+    },
+    {
+      "name": "Transparency Compatibility",
+      "import": "@import url(https://dablulite.github.io/Cyan/Addons/CyanTransparencyCompat/CyanTransparencyCompat.theme.css);"
+    },
+    {
+      "name": "Windows 10 Titlebar",
+      "import": "@import url(https://dablulite.github.io/Cyan/Addons/CyanWin10Titlebar/import.css);"
+    },
+    {
+      "name": "Combination Compatibility for Windows 10 Titlebar and Right-side Omnibar",
+      "import": "@import url(https://dablulite.github.io/Cyan/Addons/Win10TitlePlusRightSideOmnibarCompat/import.css);"
+    },
+    {
+      "name": "Omnibar Collapse",
+      "import": "@import url(https://dablulite.github.io/Cyan/Addons/OmnibarCollapse/import.css);"
+    },
+    {
+      "name": "Nitro Theme Support",
+      "import": "@import url(https://dablulite.github.io/Cyan/Addons/NitroThemeCompat/import.css);"
+    },
+    {
+      "name": "Cyan Colorways",
+      "import": "@import url(https://dablulite.github.io/Cyan/Addons/CyanColorways/CyanColorways.theme.css);"
+    }
+  ]
+}
