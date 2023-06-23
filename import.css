@@ -4558,10 +4558,6 @@ div[aria-label="dablulite"] .markup-eYLPri a::after {
 div[aria-label="dablulite"] .markup-eYLPri a:hover::after {
     box-shadow: var(--cyan-elevation-shadow);
 }
-div[aria-label="dablulite"] .markup-eYLPri > div {
-    display: flex;
-    flex-direction: column;
-}
 div[aria-label="dablulite"] .markup-eYLPri, div[aria-label="dablulite"] .markup-eYLPri > div {
     max-height: unset;
     height: fit-content;
