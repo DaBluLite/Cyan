@@ -3,7 +3,7 @@
 * @displayName Cyan+
 * @authorId 582170007505731594
 * @invite ZfPH6SDkMW
-* @version 1.2.0
+* @version 1.2.1
 */
 /*@cc_on
 @if (@_jscript)
@@ -49,7 +49,7 @@ module.exports = (() => {
                     github_username: "DaBluLite"
                 }
             ],
-            version: "1.2.0",
+            version: "1.2.1",
             description: "A plugin that allows for various Cyan features to work properly (When changing banner color on a non-nitro account, reload Discord or turn off and back on the plugin for the color to apply)."
         }
     };
@@ -253,6 +253,134 @@ module.exports = (() => {
                 return this.switch;
             }
 
+            class SettingsRenderer {
+                constructor(target) {
+                    this.ref = null;
+                    this.target = target;
+                    this._destroyed = false;
+
+                    target._patched = true;
+
+                    this.container = createElement("div", {
+                        className: Utilities.className("colorwaySettingsWrapper"),
+                    },);
+
+                    DOMTools.onRemoved(target, () => this.unmount());
+
+                    StoreWatcher.onChange(this.handleChange);
+                }
+
+                unmount() {
+                    this.ref?.remove();
+                    this._destroyed = true;
+                    StoreWatcher.offChange(this.handleChange);
+                    this.target._patched = false;
+                }
+
+                mount() {
+                    if (this._destroyed) return false;
+
+                    const res = this.render();
+                    if (!res) this.ref?.remove();
+                    else {
+                        if (this.ref) {
+                            /*this.ref.replaceWith(res);*/
+                        } else {
+                            this.target.appendChild(res);
+                        }
+                        
+                        this.ref = res;
+                    }
+                }
+
+                handleChange = () => {
+                    if (this._destroyed) return false;
+
+                    if (this.state && _.isEqual(this.state, this.getState())) return;
+
+                    this.mount();
+                }
+
+                getState() {
+                    
+                }
+
+                render() {
+                    const container = this.container.cloneNode(true);
+                    const state = this.state = this.getState();
+
+                    container._unmount = this.unmount.bind(this);
+
+                    container.append(createElement("div",{class: "cyan-settings-header"},"Addons"));
+
+                    fetch("https://dablulite.github.io/Cyan/Addons/index.json")
+                    .then(res => res.json())
+                    .then(data => {
+                        let _addons = data.addons;
+                        _addons.forEach(addon => {
+                            let checked = false;
+                            if(document.getElementById("cyan-addon-" + addon.name)) {
+                                checked = true;
+                            }
+                            let cyanAddon = createElement("span",{
+                                class: "cyan-addon"
+                            },
+                            createElement("span",{},addon.name),
+                            bdSwitch(checked, {
+                                onclick: (ev) => {
+                                    if(ev.target.checked == false) {
+                                        if(document.querySelector("bd-styles")) {
+                                            try {
+                                                document.getElementById("cyan-addon-" + addon.name).remove();
+                                                let newAddons = [];
+                                                BdApi.loadData("CyanPlus", "settings").activeAddons.forEach(pastAddon => {
+                                                    newAddons.push(pastAddon);
+                                                });
+                                                if(BdApi.loadData("CyanPlus", "settings").activeAddons.includes("cyan-addon-" + addon.name)) {
+                                                    const index = newAddons.indexOf("cyan-addon-" + addon.name);
+                                                    if (index > -1) {
+                                                        newAddons.splice(index, 1);
+                                                    }
+                                                }
+                                                userSettings = {
+                                                    activeAddons: newAddons
+                                                }
+                                                BdApi.saveData("CyanPlus", "settings", userSettings);
+                                            } catch(e) {}
+                                        }
+                                    }
+                                    if(ev.target.checked == true) {
+                                        if(document.querySelector("bd-styles")) {
+                                            if(!document.getElementById("cyan-addon-" + addon.name)) {
+                                                document.querySelector("bd-styles").append(createElement("style", {
+                                                    class: "cyan-addon-stylesheet",
+                                                    id: "cyan-addon-" + addon.name
+                                                },addon.import));
+                                                let newAddons = [];
+                                                BdApi.loadData("CyanPlus", "settings").activeAddons.forEach(pastAddon => {
+                                                    newAddons.push(pastAddon);
+                                                });
+                                                if(!BdApi.loadData("CyanPlus", "settings").activeAddons.includes("cyan-addon-" + addon.name)) {
+                                                    newAddons.push("cyan-addon-" + addon.name);
+                                                }
+                                                userSettings = {
+                                                    activeAddons: newAddons
+                                                }
+                                                BdApi.saveData("CyanPlus", "settings", userSettings);
+                                            }
+                                        }
+                                    }
+                                }
+                            })
+                            )
+                            container.append(cyanAddon);
+                        })
+                    })
+
+                    return container;
+                }
+            }
+
             return class CyanPlus extends Plugin {
                 css = `
                 @import url(https://itmesarah.github.io/usrbg/usrbg.css);
@@ -446,12 +574,15 @@ module.exports = (() => {
                         })
                     }
 
-                    let addonsButton = createElement("a", {
+                    let addonsButton = createElement("button", {
                         class: "button-1d_47w button-ejjZWC lookFilled-1H2Jvj buttonColor-1u-3JF sizeSmall-3R2P2p fullWidth-3M-YBR grow-2T4nbg cyanAddonsBtn",
-                        target: "_blank",
-                        href: "https://dablulite.github.io/Cyan/Addons"
+                        ttype: "button",
+                        onclick: () => {
+                            BdApi.alert("Cyan+ Settings",React.createElement("div",{id:"cyanplus-settings-container"}));
+                            new SettingsRenderer(document.querySelector("#cyanplus-settings-container")).mount();
+                        }
                     });
-                    addonsButton.innerHTML = `<div class="contents-3NembX">Get Addons for Cyan</div>`;
+                    addonsButton.innerHTML = `<div class="contents-3NembX">Cyan Addons</div>`;
 
                     let cyanColorwaysButton = createElement("a", {
                         class: "button-1d_47w button-ejjZWC lookFilled-1H2Jvj buttonColor-1u-3JF sizeSmall-3R2P2p fullWidth-3M-YBR grow-2T4nbg cyanAddonsBtn",
@@ -607,12 +738,19 @@ module.exports = (() => {
                             })
                         }
 
-                        let addonsButton = createElement("a", {
+                        let addonsButton = createElement("button", {
                             class: "button-1d_47w button-ejjZWC lookFilled-1H2Jvj buttonColor-1u-3JF sizeSmall-3R2P2p fullWidth-3M-YBR grow-2T4nbg cyanAddonsBtn",
-                            target: "_blank",
-                            href: "https://dablulite.github.io/Cyan/Addons"
+                            ttype: "button",
+                            onclick: () => {
+                                BdApi.alert("Cyan+ Settings",React.createElement("div",{id:"cyanplus-settings-container"}));
+                            }
                         });
-                        addonsButton.innerHTML = `<div class="contents-3NembX">Get Addons for Cyan</div>`;
+                        addonsButton.innerHTML = `<div class="contents-3NembX">Cyan Addons</div>`;
+
+                        try {
+                            if(added.querySelector("#cyanplus-settings-container"))
+                                new SettingsRenderer(added.querySelector("#cyanplus-settings-container")).mount();
+                        } catch(e) {}
 
                         let cyanColorwaysButton = createElement("a", {
                             class: "button-1d_47w button-ejjZWC lookFilled-1H2Jvj buttonColor-1u-3JF sizeSmall-3R2P2p fullWidth-3M-YBR grow-2T4nbg cyanAddonsBtn",
@@ -673,71 +811,11 @@ module.exports = (() => {
                 getSettingsPanel() {
                     let _container = createElement("div",{id: "CyanPlusSettings"});
 
-                    _container.append(createElement("div",{class: "cyan-settings-header"},"Addons"));
+                    let contain = createElement("div",{});
 
-                    fetch("https://dablulite.github.io/Cyan/Addons/index.json")
-                    .then(res => res.json())
-                    .then(data => {
-                        let _addons = data.addons;
-                        _addons.forEach(addon => {
-                            let checked = false;
-                            if(document.getElementById("cyan-addon-" + addon.name)) {
-                                checked = true;
-                            }
-                            let cyanAddon = createElement("span",{
-                                class: "cyan-addon"
-                            },
-                            createElement("span",{},addon.name),
-                            bdSwitch(checked, {
-                                onclick: (ev) => {
-                                    if(ev.target.checked == false) {
-                                        if(document.querySelector("bd-styles")) {
-                                            try {
-                                                document.getElementById("cyan-addon-" + addon.name).remove();
-                                                let newAddons = [];
-                                                BdApi.loadData("CyanPlus", "settings").activeAddons.forEach(pastAddon => {
-                                                    newAddons.push(pastAddon);
-                                                });
-                                                if(BdApi.loadData("CyanPlus", "settings").activeAddons.includes("cyan-addon-" + addon.name)) {
-                                                    const index = newAddons.indexOf("cyan-addon-" + addon.name);
-                                                    if (index > -1) {
-                                                        newAddons.splice(index, 1);
-                                                    }
-                                                }
-                                                userSettings = {
-                                                    activeAddons: newAddons
-                                                }
-                                                BdApi.saveData("CyanPlus", "settings", userSettings);
-                                            } catch(e) {}
-                                        }
-                                    }
-                                    if(ev.target.checked == true) {
-                                        if(document.querySelector("bd-styles")) {
-                                            if(!document.getElementById("cyan-addon-" + addon.name)) {
-                                                document.querySelector("bd-styles").append(createElement("style", {
-                                                    class: "cyan-addon-stylesheet",
-                                                    id: "cyan-addon-" + addon.name
-                                                },addon.import));
-                                                let newAddons = [];
-                                                BdApi.loadData("CyanPlus", "settings").activeAddons.forEach(pastAddon => {
-                                                    newAddons.push(pastAddon);
-                                                });
-                                                if(!BdApi.loadData("CyanPlus", "settings").activeAddons.includes("cyan-addon-" + addon.name)) {
-                                                    newAddons.push("cyan-addon-" + addon.name);
-                                                }
-                                                userSettings = {
-                                                    activeAddons: newAddons
-                                                }
-                                                BdApi.saveData("CyanPlus", "settings", userSettings);
-                                            }
-                                        }
-                                    }
-                                }
-                            })
-                            )
-                            _container.append(cyanAddon);
-                        })
-                    })
+                    _container.append(contain);
+
+                    new SettingsRenderer(contain).mount();
 
                     return _container;
                 }
