@@ -5872,3 +5872,17 @@ span:has(>.botText-1fD6Qk) {
 .bd-toast.icon {
     padding-left: 40px !important;
 }
+.bd-notice {
+    margin-top: calc(var(--window-margin) * 1px) !important;
+    border-radius: 8px !important;
+    background-color: var(--cyan-background-secondary);
+    box-shadow: var(--cyan-elevation-shadow);
+}
+#bd-notices {
+    width: calc(100% - 320px - (var(--window-margin) * 2px)) !important;
+    margin-right: calc(var(--window-margin) * 1px);
+    align-self: end;
+}
+#bd-notices:not(:empty) + .content-1SgpWY .sidebar-1tnWFu {
+    margin-top: calc(var(--window-margin) * -1.5px) !important;
+}
