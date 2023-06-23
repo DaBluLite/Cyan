@@ -5882,3 +5882,25 @@ span:has(>.botText-1fD6Qk) {
 #bd-notices:not(:empty) + .content-1SgpWY .sidebar-1tnWFu {
     margin-top: calc(var(--window-margin) * -1.5px) !important;
 }
+.contentRegion-3HkfJJ::before {
+    opacity: 1;
+}
+.contentRegionScroller-2_GT_N::before {
+    background-image: none;
+    background-color: var(--cyan-background-primary);
+    filter: none;
+    opacity: 1;
+}
+.monaco-editor .margin, .monaco-editor, .monaco-editor-background, .monaco-editor .inputarea.ime-input {
+    background-color: rgba(0,0,0,.4) !important;
+}
+.minimap {
+    right: -120px !important;
+    opacity: 0;
+    transition: .4s;
+}
+.editor-scrollable:has(.scrollbar.vertical:hover) ~ .minimap,
+.minimap:hover {
+    right: 14px !important;
+    opacity: 1;
+}
