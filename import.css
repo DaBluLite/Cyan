@@ -3,7 +3,7 @@
 @import url(//dablulite.github.io/CyanBootstrapIcons/import.css);
 :root {
     --cyan-version: 14;
-    --cyan-subversion: 4;
+    --cyan-subversion: 5;
     --cyan-text-shadow: 0;
     --cyan-background-primary-alt: var(--cyan-background-primary);
     --cyan-background-secondary: var(--background-floating);
@@ -5861,4 +5861,14 @@ span:has(>.botText-1fD6Qk) {
 .expandedFolderBackground-1kSAf6:not(.collapsed-uGXEbi) ~ ul .pill-2RsI5Q > span {
     box-shadow: var(--cyan-elevation-shadow);
     background-color: var(--cyan-background-secondary);
+}
+.bd-toast.toast-success {
+    --cyan-elevation-shadow: 0 0 0 1.5px #43b581, 0 2px 10px 0 rgb(0 0 0 / 60%);
+    background-color: var(--cyan-background-secondary);
+}
+.bd-toast.toast-success.icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23FFFFFF' class='bi bi-check2' viewBox='0 0 16 16'%3E%3Cpath d='M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+}
+.bd-toast.icon {
+    padding-left: 40px !important;
 }
