@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url(//dablulite.github.io/CyanBootstrapIcons/import.css);
 :root {
-    --cyan-version: 14;
-    --cyan-subversion: 9;
+    --cyan-version: 15;
+    --cyan-subversion: 0;
     --cyan-text-shadow: 0;
     --cyan-background-primary-alt: var(--cyan-background-primary);
     --cyan-background-secondary: var(--background-floating);
@@ -190,7 +190,7 @@
   border-radius: 8px 0 0 8px;
 }
 .avatar-3QF_VA {
-  border: 6px solid var(--background-primary);
+  box-shadow: 0 0 0 5px var(--cyan-background-secondary);
   background-color: var(--background-primary);
 }
 .member-48YF_l {
@@ -4673,6 +4673,7 @@ div[aria-label="dablulite"] .markup-eYLPri a[title*="github.com/DaBluLite"]::aft
 .userProfileModalOuter-2wdWjU > .userProfileInnerThemedNonPremium-2AJg-H .overlayBackground-2aa7wt {
   z-index: +3;
   overflow: visible !important;
+  margin-top: -14px;
 }
 .userProfileModalOuter-2wdWjU > .userProfileInnerThemedNonPremium-2AJg-H .body-1Ukv50 {
   background-color: var(--cyan-background-secondary);
@@ -4696,16 +4697,6 @@ div[aria-label="dablulite"] .markup-eYLPri a[title*="github.com/DaBluLite"]::aft
   width: calc(100% + 16px);
   margin: -8px;
   border-radius: 0 0 16px 16px;
-  z-index: +2;
-}
-.userProfileModalOuter-2wdWjU > .userProfileInnerThemedNonPremium-2AJg-H .header-S26rhB::before {
-  content: "";
-  position: absolute;
-  background-color: rgb(0,0,0,.4);
-  height: calc(100% - 16px);
-  width: calc(100% - 16px);
-  margin: 8px;
-  border-radius: 16px 16px 0 0;
   z-index: +2;
 }
 .userProfileModalOuter-2wdWjU > .userProfileInnerThemedNonPremium-2AJg-H .pencilContainer-18TrEJ {
@@ -5305,7 +5296,6 @@ span:has(>.botText-1fD6Qk) {
 	width: fit-content;
 	margin: 12px;
 	margin-bottom: 20px;
-	background-color: var(--cyan-background-secondary);
 	border-radius: 20px;
 	border: 3px solid var(--cyan-accent-color);
 }
@@ -5327,8 +5317,8 @@ span:has(>.botText-1fD6Qk) {
 	margin: 4px;
 }
 .userProfileModalOuter-2wdWjU > .userProfileInnerThemedNonPremium-2AJg-H .header-S26rhB > div:not([class]) > div {
-	width: 90px !important;
-	height: 90px !important;
+	width: 94px !important;
+	height: 94px !important;
 }
 .userProfileModalOuter-2wdWjU > .userProfileInnerThemedNonPremium-2AJg-H .header-S26rhB > div:not([class]) > div > svg {
 	width: 108px;
