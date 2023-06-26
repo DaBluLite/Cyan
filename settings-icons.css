@@ -6,41 +6,41 @@
 	--settingsicons-gap: 14px;
 	
 	--settingsicons-default: url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/svgs/settingsicons/questionmark.svg);
-	--settingsicons-myaccount: url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/svgs/settingsicons/account.svg);
-	--settingsicons-profile: url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/svgs/settingsicons/profile.svg);
-	--settingsicons-privacy: url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/svgs/settingsicons/privacy.svg);
-	--settingsicons-apps: url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/svgs/settingsicons/apps.svg);
-	--settingsicons-sessions: url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/svgs/settingsicons/sessions.svg);
-	--settingsicons-connections: url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/svgs/settingsicons/connections.svg);
-	--settingsicons-friendrequests: url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/svgs/settingsicons/vanityurl.svg);
+	--settingsicons-myaccount: url(https://icons.getbootstrap.com/assets/icons/person-circle.svg);
+	--settingsicons-profile: url(https://icons.getbootstrap.com/assets/icons/pencil-square.svg);
+	--settingsicons-privacy: url(https://icons.getbootstrap.com/assets/icons/shield-check.svg);
+	--settingsicons-apps: url(https://icons.getbootstrap.com/assets/icons/app-indicator.svg);
+	--settingsicons-sessions: url(https://icons.getbootstrap.com/assets/icons/pc-display.svg);
+	--settingsicons-connections: url(https://icons.getbootstrap.com/assets/icons/reception-4.svg);
+	--settingsicons-friendrequests: url(https://icons.getbootstrap.com/assets/icons/person-fill-add.svg);
 	--settingsicons-nitro: url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/svgs/settingsicons/nitro.svg);
 	--settingsicons-boosts: url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/svgs/settingsicons/boosts.svg);
-	--settingsicons-subscriptions: url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/svgs/settingsicons/subscriptions.svg);
-	--settingsicons-gifts: url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/svgs/settingsicons/gift.svg);
-	--settingsicons-billing: url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/svgs/settingsicons/billing.svg);
-	--settingsicons-appearance: url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/svgs/settingsicons/appearance.svg);
-	--settingsicons-accessibility: url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/svgs/settingsicons/accessibility.svg);
-	--settingsicons-voice: url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/svgs/settingsicons/voice.svg);
+	--settingsicons-subscriptions: url(https://icons.getbootstrap.com/assets/icons/stars.svg);
+	--settingsicons-gifts: url(https://icons.getbootstrap.com/assets/icons/gift-fill.svg);
+	--settingsicons-billing: url(https://icons.getbootstrap.com/assets/icons/credit-card-2-front-fill.svg);
+	--settingsicons-appearance: url(https://icons.getbootstrap.com/assets/icons/palette2.svg);
+	--settingsicons-accessibility: url(https://icons.getbootstrap.com/assets/icons/universal-access.svg);
+	--settingsicons-voice: url(https://icons.getbootstrap.com/assets/icons/headset.svg);
 	--settingsicons-powermode: url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/svgs/settingsicons/party.svg);
-	--settingsicons-text: url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/svgs/settingsicons/text.svg);
-	--settingsicons-notifications: url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/svgs/settingsicons/notifications.svg);
-	--settingsicons-keybinds: url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/svgs/settingsicons/keybinds.svg);
-	--settingsicons-language: url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/svgs/settingsicons/language.svg);
-	--settingsicons-windows: url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/svgs/settingsicons/windows.svg);
-	--settingsicons-streamermode: url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/svgs/settingsicons/streamermode.svg);
-	--settingsicons-advanced: url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/svgs/settingsicons/advanced.svg);
+	--settingsicons-text: url(https://icons.getbootstrap.com/assets/icons/chat-dots-fill.svg);
+	--settingsicons-notifications: url(https://icons.getbootstrap.com/assets/icons/bell-fill.svg);
+	--settingsicons-keybinds: url(https://icons.getbootstrap.com/assets/icons/keyboard-fill.svg);
+	--settingsicons-language: url(https://icons.getbootstrap.com/assets/icons/translate.svg);
+	--settingsicons-windows: url(https://icons.getbootstrap.com/assets/icons/windows.svg);
+	--settingsicons-streamermode: url(https://icons.getbootstrap.com/assets/icons/camera-video-fill.svg);
+	--settingsicons-advanced: url(https://icons.getbootstrap.com/assets/icons/three-dots.svg);
 	--settingsicons-activityprivacy: url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/svgs/settingsicons/activityprivacy.svg);
-	--settingsicons-games: url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/svgs/settingsicons/games.svg);
-	--settingsicons-overlay: url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/svgs/settingsicons/overlay.svg);
-	--settingsicons-bd-settings: url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/svgs/settingsicons/settings.svg);
-	--settingsicons-bd-changelog: url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/svgs/settingsicons/changelog.svg);
-	--settingsicons-bd-customcss: url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/svgs/settingsicons/custom.svg);
-	--settingsicons-bd-plugins: url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/svgs/settingsicons/plugins.svg);
-	--settingsicons-bd-themes: url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/svgs/settingsicons/themes.svg);
+	--settingsicons-games: url(https://icons.getbootstrap.com/assets/icons/dpad-fill.svg);
+	--settingsicons-overlay: url(https://icons.getbootstrap.com/assets/icons/pip.svg);
+	--settingsicons-bd-settings: url(https://icons.getbootstrap.com/assets/icons/gear-wide-connected.svg);
+	--settingsicons-bd-changelog: url(https://icons.getbootstrap.com/assets/icons/clock-history.svg);
+	--settingsicons-bd-customcss: url(https://icons.getbootstrap.com/assets/icons/palette-fill.svg);
+	--settingsicons-bd-plugins: url(https://icons.getbootstrap.com/assets/icons/plugin.svg);
+	--settingsicons-bd-themes: url(https://icons.getbootstrap.com/assets/icons/palette2.svg);
 	--settingsicons-bd-pluginrepo: url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/svgs/settingsicons/pluginrepo.svg);
 	--settingsicons-bd-themerepo: url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/svgs/settingsicons/themerepo.svg);
-	--settingsicons-changelog: url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/svgs/settingsicons/changelog.svg);
-	--settingsicons-hypesquad: url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/svgs/settingsicons/hypesquad.svg);
+	--settingsicons-changelog: url(https://icons.getbootstrap.com/assets/icons/clock-history.svg);
+	--settingsicons-hypesquad: url(https://discord.com/assets/42b60052f80abd9c2bdd8fc24cf97988.svg);
 	--settingsicons-experiments: url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/svgs/settingsicons/experiments.svg);
 	--settingsicons-developer: url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/svgs/settingsicons/developer.svg);
 	--settingsicons-hotspots: url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/svgs/settingsicons/hotspots.svg);
@@ -237,7 +237,7 @@ body #app-mount .layer-86YKbF ~ .layer-86YKbF .sidebar-nqHbhN {
 .platform-win .sidebar-nqHbhN .side-1lrxIh:is([aria-label="Brugerindstillinger" i], [aria-label="Benutzereinstellungen" i], [aria-label="User Settings" i], [aria-label="Ajustes de usuario" i], [aria-label="Paramètres utilisateur" i], [aria-label="Korisničke postavke" i], [aria-label="Impostazioni utente" i], [aria-label="Naudotojo Nustatymai" i], [aria-label="Felhasználói beállítások" i], [aria-label="Gebruikersinstellingen" i], [aria-label="Brukerinnstillinger" i], [aria-label="Ustawienia użytkownika" i], [aria-label="Configurações de Usuário" i], [aria-label="Setări utilizator" i], [aria-label="Käyttäjäasetukset" i], [aria-label="Användarinställningar" i], [aria-label="Cài đặt người dùng" i], [aria-label="Kullanıcı Ayarları" i], [aria-label="Uživatelská nastavení" i], [aria-label="Ρυθμίσεις χρήστη" i], [aria-label="Потребителски настройки" i], [aria-label="Настройки пользователя" i], [aria-label="Користувацькі налаштування" i], [aria-label="यूज़र सेटिंग" i], [aria-label="ตั้งค่าผู้ใช้" i], [aria-label="用户设置" i], [aria-label="ユーザー設定" i], [aria-label="使用者設定" i], [aria-label="사용자 설정" i]) .item-2GWPIy.themerepo-tab ~ .item-2GWPIy:nth-child(43)::after,
 .platform-win .sidebar-nqHbhN .side-1lrxIh:is([aria-label="Brugerindstillinger" i], [aria-label="Benutzereinstellungen" i], [aria-label="User Settings" i], [aria-label="Ajustes de usuario" i], [aria-label="Paramètres utilisateur" i], [aria-label="Korisničke postavke" i], [aria-label="Impostazioni utente" i], [aria-label="Naudotojo Nustatymai" i], [aria-label="Felhasználói beállítások" i], [aria-label="Gebruikersinstellingen" i], [aria-label="Brukerinnstillinger" i], [aria-label="Ustawienia użytkownika" i], [aria-label="Configurações de Usuário" i], [aria-label="Setări utilizator" i], [aria-label="Käyttäjäasetukset" i], [aria-label="Användarinställningar" i], [aria-label="Cài đặt người dùng" i], [aria-label="Kullanıcı Ayarları" i], [aria-label="Uživatelská nastavení" i], [aria-label="Ρυθμίσεις χρήστη" i], [aria-label="Потребителски настройки" i], [aria-label="Настройки пользователя" i], [aria-label="Користувацькі налаштування" i], [aria-label="यूज़र सेटिंग" i], [aria-label="ตั้งค่าผู้ใช้" i], [aria-label="用户设置" i], [aria-label="ユーザー設定" i], [aria-label="使用者設定" i], [aria-label="사용자 설정" i]) .item-2GWPIy.pluginrepo-tab ~ .item-2GWPIy.themerepo-tab ~ .item-2GWPIy:nth-child(44)::after,
 #app-mount .sidebar-nqHbhN .side-1lrxIh .item-2GWPIy[aria-controls="hypesquad-online-tab" i]::after {
-	-webkit-mask: var(--settingsicons-hypesquad) center/contain no-repeat;
+	-webkit-mask: var(--settingsicons-changelog) center/contain no-repeat;
 }
 .sidebar-nqHbhN .side-1lrxIh:is([aria-label="Brugerindstillinger" i], [aria-label="Benutzereinstellungen" i], [aria-label="User Settings" i], [aria-label="Ajustes de usuario" i], [aria-label="Paramètres utilisateur" i], [aria-label="Korisničke postavke" i], [aria-label="Impostazioni utente" i], [aria-label="Naudotojo Nustatymai" i], [aria-label="Felhasználói beállítások" i], [aria-label="Gebruikersinstellingen" i], [aria-label="Brukerinnstillinger" i], [aria-label="Ustawienia użytkownika" i], [aria-label="Configurações de Usuário" i], [aria-label="Setări utilizator" i], [aria-label="Käyttäjäasetukset" i], [aria-label="Användarinställningar" i], [aria-label="Cài đặt người dùng" i], [aria-label="Kullanıcı Ayarları" i], [aria-label="Uživatelská nastavení" i], [aria-label="Ρυθμίσεις χρήστη" i], [aria-label="Потребителски настройки" i], [aria-label="Настройки пользователя" i], [aria-label="Користувацькі налаштування" i], [aria-label="यूज़र सेटिंग" i], [aria-label="ตั้งค่าผู้ใช้" i], [aria-label="用户设置" i], [aria-label="ユーザー設定" i], [aria-label="使用者設定" i], [aria-label="사용자 설정" i]) .item-2GWPIy:nth-child(42)::after,
 .sidebar-nqHbhN .side-1lrxIh:is([aria-label="Brugerindstillinger" i], [aria-label="Benutzereinstellungen" i], [aria-label="User Settings" i], [aria-label="Ajustes de usuario" i], [aria-label="Paramètres utilisateur" i], [aria-label="Korisničke postavke" i], [aria-label="Impostazioni utente" i], [aria-label="Naudotojo Nustatymai" i], [aria-label="Felhasználói beállítások" i], [aria-label="Gebruikersinstellingen" i], [aria-label="Brukerinnstillinger" i], [aria-label="Ustawienia użytkownika" i], [aria-label="Configurações de Usuário" i], [aria-label="Setări utilizator" i], [aria-label="Käyttäjäasetukset" i], [aria-label="Användarinställningar" i], [aria-label="Cài đặt người dùng" i], [aria-label="Kullanıcı Ayarları" i], [aria-label="Uživatelská nastavení" i], [aria-label="Ρυθμίσεις χρήστη" i], [aria-label="Потребителски настройки" i], [aria-label="Настройки пользователя" i], [aria-label="Користувацькі налаштування" i], [aria-label="यूज़र सेटिंग" i], [aria-label="ตั้งค่าผู้ใช้" i], [aria-label="用户设置" i], [aria-label="ユーザー設定" i], [aria-label="使用者設定" i], [aria-label="사용자 설정" i]) .item-2GWPIy.pluginrepo-tab ~ .item-2GWPIy:nth-child(43)::after,
@@ -248,7 +248,10 @@ body #app-mount .layer-86YKbF ~ .layer-86YKbF .sidebar-nqHbhN {
 .platform-win .sidebar-nqHbhN .side-1lrxIh:is([aria-label="Brugerindstillinger" i], [aria-label="Benutzereinstellungen" i], [aria-label="User Settings" i], [aria-label="Ajustes de usuario" i], [aria-label="Paramètres utilisateur" i], [aria-label="Korisničke postavke" i], [aria-label="Impostazioni utente" i], [aria-label="Naudotojo Nustatymai" i], [aria-label="Felhasználói beállítások" i], [aria-label="Gebruikersinstellingen" i], [aria-label="Brukerinnstillinger" i], [aria-label="Ustawienia użytkownika" i], [aria-label="Configurações de Usuário" i], [aria-label="Setări utilizator" i], [aria-label="Käyttäjäasetukset" i], [aria-label="Användarinställningar" i], [aria-label="Cài đặt người dùng" i], [aria-label="Kullanıcı Ayarları" i], [aria-label="Uživatelská nastavení" i], [aria-label="Ρυθμίσεις χρήστη" i], [aria-label="Потребителски настройки" i], [aria-label="Настройки пользователя" i], [aria-label="Користувацькі налаштування" i], [aria-label="यूज़र सेटिंग" i], [aria-label="ตั้งค่าผู้ใช้" i], [aria-label="用户设置" i], [aria-label="ユーザー設定" i], [aria-label="使用者設定" i], [aria-label="사용자 설정" i]) .item-2GWPIy.themerepo-tab ~ .item-2GWPIy:nth-child(44)::after,
 .platform-win .sidebar-nqHbhN .side-1lrxIh:is([aria-label="Brugerindstillinger" i], [aria-label="Benutzereinstellungen" i], [aria-label="User Settings" i], [aria-label="Ajustes de usuario" i], [aria-label="Paramètres utilisateur" i], [aria-label="Korisničke postavke" i], [aria-label="Impostazioni utente" i], [aria-label="Naudotojo Nustatymai" i], [aria-label="Felhasználói beállítások" i], [aria-label="Gebruikersinstellingen" i], [aria-label="Brukerinnstillinger" i], [aria-label="Ustawienia użytkownika" i], [aria-label="Configurações de Usuário" i], [aria-label="Setări utilizator" i], [aria-label="Käyttäjäasetukset" i], [aria-label="Användarinställningar" i], [aria-label="Cài đặt người dùng" i], [aria-label="Kullanıcı Ayarları" i], [aria-label="Uživatelská nastavení" i], [aria-label="Ρυθμίσεις χρήστη" i], [aria-label="Потребителски настройки" i], [aria-label="Настройки пользователя" i], [aria-label="Користувацькі налаштування" i], [aria-label="यूज़र सेटिंग" i], [aria-label="ตั้งค่าผู้ใช้" i], [aria-label="用户设置" i], [aria-label="ユーザー設定" i], [aria-label="使用者設定" i], [aria-label="사용자 설정" i]) .item-2GWPIy.pluginrepo-tab ~ .item-2GWPIy.themerepo-tab ~ .item-2GWPIy:nth-child(45)::after,
 #app-mount .sidebar-nqHbhN .side-1lrxIh .item-2GWPIy[aria-controls="experiments-tab" i]::after {
-	-webkit-mask: var(--settingsicons-experiments) center/contain no-repeat;
+	-webkit-mask: var(--settingsicons-hypesquad) center/contain no-repeat;
+}
+#app-mount .sidebar-nqHbhN .side-1lrxIh #openasar-item::after {
+	-webkit-mask: var(--settingsicons-bd-settings) center/contain no-repeat;
 }
 .sidebar-nqHbhN .side-1lrxIh:is([aria-label="Brugerindstillinger" i], [aria-label="Benutzereinstellungen" i], [aria-label="User Settings" i], [aria-label="Ajustes de usuario" i], [aria-label="Paramètres utilisateur" i], [aria-label="Korisničke postavke" i], [aria-label="Impostazioni utente" i], [aria-label="Naudotojo Nustatymai" i], [aria-label="Felhasználói beállítások" i], [aria-label="Gebruikersinstellingen" i], [aria-label="Brukerinnstillinger" i], [aria-label="Ustawienia użytkownika" i], [aria-label="Configurações de Usuário" i], [aria-label="Setări utilizator" i], [aria-label="Käyttäjäasetukset" i], [aria-label="Användarinställningar" i], [aria-label="Cài đặt người dùng" i], [aria-label="Kullanıcı Ayarları" i], [aria-label="Uživatelská nastavení" i], [aria-label="Ρυθμίσεις χρήστη" i], [aria-label="Потребителски настройки" i], [aria-label="Настройки пользователя" i], [aria-label="Користувацькі налаштування" i], [aria-label="यूज़र सेटिंग" i], [aria-label="ตั้งค่าผู้ใช้" i], [aria-label="用户设置" i], [aria-label="ユーザー設定" i], [aria-label="使用者設定" i], [aria-label="사용자 설정" i]) .item-2GWPIy:nth-child(43)::after,
 .sidebar-nqHbhN .side-1lrxIh:is([aria-label="Brugerindstillinger" i], [aria-label="Benutzereinstellungen" i], [aria-label="User Settings" i], [aria-label="Ajustes de usuario" i], [aria-label="Paramètres utilisateur" i], [aria-label="Korisničke postavke" i], [aria-label="Impostazioni utente" i], [aria-label="Naudotojo Nustatymai" i], [aria-label="Felhasználói beállítások" i], [aria-label="Gebruikersinstellingen" i], [aria-label="Brukerinnstillinger" i], [aria-label="Ustawienia użytkownika" i], [aria-label="Configurações de Usuário" i], [aria-label="Setări utilizator" i], [aria-label="Käyttäjäasetukset" i], [aria-label="Användarinställningar" i], [aria-label="Cài đặt người dùng" i], [aria-label="Kullanıcı Ayarları" i], [aria-label="Uživatelská nastavení" i], [aria-label="Ρυθμίσεις χρήστη" i], [aria-label="Потребителски настройки" i], [aria-label="Настройки пользователя" i], [aria-label="Користувацькі налаштування" i], [aria-label="यूज़र सेटिंग" i], [aria-label="ตั้งค่าผู้ใช้" i], [aria-label="用户设置" i], [aria-label="ユーザー設定" i], [aria-label="使用者設定" i], [aria-label="사용자 설정" i]) .item-2GWPIy.pluginrepo-tab ~ .item-2GWPIy:nth-child(44)::after,
