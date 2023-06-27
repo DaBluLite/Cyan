@@ -26,6 +26,9 @@
         "BACKGROUND_SECONDARY": [
             "#0e0f11"
         ],
+        "BACKGROUND_TERTIARY": [
+            "#0e0f11"
+        ],
         "BACKGROUND_FLOATING": [
             "#0e0f11"
         ],
@@ -33,6 +36,9 @@
             "#0A0A0A"
         ],
         "BACKGROUND_MOBILE_SECONDARY": [
+            "#0e0f11"
+        ],
+        "BACKGROUND_MOBILE_TERTIARY": [
             "#0e0f11"
         ],
         "BACKGROUND_NESTED_FLOATING": [
