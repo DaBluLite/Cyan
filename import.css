@@ -3,8 +3,9 @@
 @import url(//dablulite.github.io/CyanBootstrapIcons/import.css);
 :root {
     --cyan-version: 15;
-    --cyan-subversion: 5;
+    --cyan-subversion: 6;
     --cyan-text-shadow: 0;
+    --cyan-blur-secondary: 0;
     --cyan-background-primary-alt: var(--cyan-background-primary);
     --cyan-background-secondary: var(--background-floating);
     --cyan-background-tertiary: var(--background-primary);
@@ -803,6 +804,7 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
   margin: calc(var( --window-margin) * 1px);
   border-radius: var( --window-border-radius-calc);
   box-shadow: var(--cyan-elevation-shadow);
+  backdrop-filter: blur(var(--cyan-blur-secondary));
 }
 .wordmark-2u86JB {
   display: none !important;
@@ -1459,6 +1461,7 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
   height: fit-content;
   padding: 4px;
   gap: 4px;
+  backdrop-filter: blur(var(--cyan-blur-secondary));
 }
 .userPopout-2j1gM4 {
   border-radius: 10px !important;
@@ -3320,6 +3323,8 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
 }
 .input-3O04eu.focused-16iuXg, .input-3O04eu:focus {
     box-shadow: var(--cyan-elevation-shadow);
+    background-color: var(--cyan-background-secondary);
+    backdrop-filter: blur(var(--cyan-blur-secondary));
 }
 .container-iA3Qrz .messageContainer-3VTXBC {
     transition: .1s;
@@ -4056,6 +4061,7 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
     background-color: var(--cyan-background-secondary);
     box-shadow: var(--cyan-elevation-shadow);
     border-radius: 8px;
+    backdrop-filter: blur(var(--cyan-blur-secondary));
 }
 .header-3OsQeK {
     transition: .2s;
@@ -4220,6 +4226,7 @@ section.panels-3wFtMD .container-YkUktl .button-12Fmur {
 .textArea-2CLwUE:has(:focus) {
     box-shadow: var(--cyan-elevation-shadow);
     background-color: var(--cyan-background-secondary);
+    backdrop-filter: blur(var(--cyan-blur-secondary));
 }
 .inner-NQg18Y {
     padding: 4px;
@@ -5832,6 +5839,7 @@ span:has(>.botText-1fD6Qk) {
     height: calc(100% - 56px);
     box-shadow: var(--light-elevation-border);
     animation: msganim 0.4s ease;
+    backdrop-filter: blur(var(--cyan-blur-secondary));
 }
 .expandedFolderBackground-1kSAf6:not(.collapsed-uGXEbi)::before {
     content: "";
@@ -6262,4 +6270,7 @@ div[role="radiogroup"] {
     border-radius: 16px;
     box-shadow: var(--cyan-elevation-shadow) !important;
     backdrop-filter: blur(var(--cyan-blur-radius));
+}
+.wrapper-NhbLHG {
+    width: 100%;
 }
