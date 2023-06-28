@@ -4,6 +4,7 @@
 :root {
     --cyan-version: 15;
     --cyan-subversion: 6;
+    --cyan-patch-version: 1;
     --cyan-text-shadow: 0;
     --cyan-blur-secondary: 0;
     --cyan-background-primary-alt: var(--cyan-background-primary);
@@ -378,14 +379,11 @@
   padding: 15px;
   margin: 10px;
 }
-.fieldList-in8WkP {
-  background-color: transparent;
-}
 .field-21XZwa:last-child {
   margin-right: 0 !important;
 }
 .field-21XZwa {
-  width: calc((100%/3) - ((20/3) * 1px));
+  width: 100%;
   border-radius: 8px;
   background-color: var(--cyan-background-secondary);
   height: 108px;
@@ -393,7 +391,7 @@
   flex-flow: column;
   padding: 15px;
   display: flex;
-  margin-right: 10px;
+  margin-right: 0 !important;
   margin-top: 0 !important;
   position: relative;
   overflow-y: scroll;
@@ -2873,8 +2871,8 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
 }
 #Cyan-card .bd-name::after,
 .bd-addon-card:has(.bd-link[href*="github.com/DaBluLite/Cyan"]) .bd-name::after {
-  counter-reset: cyan-version var(--cyan-version) cyan-subversion var(--cyan-subversion);
-  content: 'Version ' counter(cyan-version)'.'counter(cyan-subversion) '';
+  counter-reset: cyan-version var(--cyan-version) cyan-subversion var(--cyan-subversion) cyan-patch-version var(--cyan-patch-version);
+  content: 'Version ' counter(cyan-version)'.'counter(cyan-subversion)'.'counter(cyan-patch-version) '';
 }
 .pencilContainer-18TrEJ {
   right: unset !important;
@@ -4072,12 +4070,11 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
 .interactive-26HRN_:focus-within, .interactive-26HRN_:hover {
     background: transparent !important;
 }
-.fieldList-in8WkP:has(> .field-21XZwa:nth-child(4)) > .field-21XZwa {
-    width: calc((100%/4) - ((30/4) * 1px));
-}
 .fieldList-in8WkP {
     display: flex;
     flex-direction: row;
+    background-color: transparent;
+    gap: 10px;
 }
 .fieldList-in8WkP > .field-21XZwa {
     margin-bottom: 0 !important;
