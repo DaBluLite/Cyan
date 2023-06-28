@@ -3,7 +3,7 @@
 * @displayName Cyan+
 * @authorId 582170007505731594
 * @invite ZfPH6SDkMW
-* @version 1.2.1
+* @version 1.3.1
 */
 /*@cc_on
 @if (@_jscript)
@@ -49,8 +49,10 @@ module.exports = (() => {
                     github_username: "DaBluLite"
                 }
             ],
-            version: "1.2.1",
-            description: "A plugin that allows for various Cyan features to work properly (When changing banner color on a non-nitro account, reload Discord or turn off and back on the plugin for the color to apply)."
+            version: "1.3.1",
+            description: "A plugin that allows for various Cyan features to work properly (When changing banner color on a non-nitro account, reload Discord or turn off and back on the plugin for the color to apply).",
+            github: "https://github.com/DaBluLite/Cyan/blob/master/CyanPlus.plugin.js",
+            github_raw: "https://github.com/DaBluLite/Cyan/raw/master/CyanPlus.plugin.js"
         }
     };
     
@@ -85,13 +87,12 @@ module.exports = (() => {
             const SessionsStore = WebpackModules.getByProps("getSessions", "_dispatchToken");
  
             const {Webpack, Webpack: {Filters}, React} = BdApi;
-            const { getUserProfile } = BdApi.Webpack.getModule(BdApi.Webpack.Filters.byProps("getUserProfile"))
-            const [Toast, UnthemedProfiles, BannerSVG, BadgeList, ProfileBadges, {getCurrentUser}, UserArea] = Webpack.getBulk.apply(null, [
+            const { getUserProfile } = Webpack.getModule(Filters.byProps("getUserProfile"));
+            const { field } = Webpack.getModule(Filters.byProps("field"));
+            const [Toast, UnthemedProfiles, BannerSVG, {getCurrentUser}, UserArea] = Webpack.getBulk.apply(null, [
                 Filters.byProps("createToast"),
                 Filters.byProps("userProfileOuterUnthemed"),
                 Filters.byProps("bannerSVGWrapper"),
-                Filters.byProps("headerTop"),
-                Filters.byProps("profileBadges"),
                 Filters.byProps("getUser"),
                 Filters.byProps("panels")
             ].map(fn => ({filter: fn})));
@@ -382,9 +383,69 @@ module.exports = (() => {
             }
 
             return class CyanPlus extends Plugin {
+                cyanUpdateNotice = (_showToast) => {
+                    if(getComputedStyle(document.body).getPropertyValue('--cyan-version')) {
+                        if(_showToast == true) {
+                            nativeToast("Checking For Updates",0);
+                        }
+                        fetch("https://dablulite.github.io/Cyan/import.css", {cache:"no-cache"})
+                        .then(res => res.text())
+                        .then(data => {
+                            let cyanPatchVersion;
+                            if(getComputedStyle(document.body).getPropertyValue('--cyan-patch-version').replace(" ","")) {
+                                cyanPatchVersion = "." + getComputedStyle(document.body).getPropertyValue('--cyan-patch-version').replace(" ","");
+                            } else {
+                                cyanPatchVersion = ".0";
+                            }
+                            if(data.split("--cyan-version: ")[1].split(";")[0] + "." + data.split("--cyan-subversion: ")[1].split(";")[0] + "." + data.split("--cyan-patch-version: ")[1].split(";")[0] > getComputedStyle(document.body).getPropertyValue('--cyan-version').replace(" ","") + "." + getComputedStyle(document.body).getPropertyValue('--cyan-subversion').replace(" ","") + cyanPatchVersion) {
+                                console.log("Cyan Update found, sending update notice");
+                                if(!document.querySelector("#bd-notices")) {
+                                    document.querySelector(".base-2jDfDU").insertAdjacentElement('afterbegin',createElement("div",{id:"bd-notices"}))
+                                }
+                                if(!document.querySelector("#cyan-update-notice")) {
+                                    let cyanNotice = createElement("div",{
+                                        class: "bd-notice",
+                                        id: "cyan-update-notice"
+                                    },
+                                    createElement("div",{
+                                        class: "bd-notice-close",
+                                        onclick: (e) => {
+                                            event.path[1].classList.add("bd-notice-closing");
+                                            setTimeout(() => {
+                                                e.path[1].remove();
+                                            },300);
+                                        }
+                                    }),
+                                    createElement("span",{
+                                        class: "bd-notice-content"
+                                    },"Cyan Update available (New: " + data.split("--cyan-version: ")[1].split(";")[0] + "." + data.split("--cyan-subversion: ")[1].split(";")[0] + "." + data.split("--cyan-patch-version: ")[1].split(";")[0] + ", Current: " + getComputedStyle(document.body).getPropertyValue('--cyan-version').replace(" ","") + "." + getComputedStyle(document.body).getPropertyValue('--cyan-subversion').replace(" ","") + cyanPatchVersion + "), reload Cyan to update."),
+                                    createElement("button",{
+                                        class: "bd-notice-button",
+                                        onclick: (e) => {
+                                            BdApi.Themes.getAll().forEach(theme => {
+                                                if(theme.css.includes("@import url(https://dablulite.github.io/Cyan/import.css);")) {
+                                                    BdApi.Themes.reload(theme.id);
+                                                }
+                                            })
+                                            event.path[1].classList.add("bd-notice-closing");
+                                            setTimeout(() => {
+                                                e.path[1].remove();
+                                            },300);
+                                        }
+                                    },"Reload Cyan")
+                                    )
+                                    document.querySelector("#bd-notices").append(cyanNotice);
+                                }
+                            } else {
+                                if(_showToast == true) {
+                                    nativeToast("You're up-to-date!",1);
+                                }
+                            }
+                        })
+                    }
+                }
                 css = `
                 @import url(https://itmesarah.github.io/usrbg/usrbg.css);
-                div[aria-label="dablulite"] .profileBadges-2pItdR::after,
                 #profile-customization-tab .customizationSection-IGy2fS:has(.userProfileOuterUnthemed-11rPfA)::before {
                     content: none;
                 }
@@ -445,27 +506,6 @@ module.exports = (() => {
                     height: calc(100% - 8px);
                     border-radius: 13px;
                     background-color: rgba(0,0,0,.4);
-                }
-                .panels-3wFtMD .container-YkUktl::before {
-                    content: "";
-                    width: 288px;
-                    height: 0;
-                    border-radius: 10px;
-                    background-image: var(--cyan-background-img);
-                    background-position: center;
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    display: flex;
-                    transition: .3s;
-                    opacity: 0;
-                }
-                .panels-3wFtMD:hover .container-YkUktl::before {
-                    height: 120px;
-                    margin-bottom: 8px;
-                    opacity: 1;
-                }
-                .panels-3wFtMD .container-YkUktl {
-                    padding: 4px !important;
                 }
                 .field-21XZwa {
                     border-radius: 16px;
@@ -549,28 +589,6 @@ module.exports = (() => {
                     if(elements.length) {
                         elements.forEach(elem => {
                             elem.style = elem.style + ";--cyan-accent-color: " + elem.querySelector("." + BannerSVG?.bannerSVGWrapper + " > foreignObject > div[style]").style.backgroundColor + "; --cyan-elevation-shadow: 0 0 0 1.5px " + elem.querySelector("." + BannerSVG?.bannerSVGWrapper + " > foreignObject > div[style]").style.backgroundColor + ", 0 2px 10px 0 rgb(0 0 0 / 60%);";
-                            if(elem.querySelector('img[src*="582170007505731594"]')) {
-                                if(!elem.querySelectorAll(".cyanAuthorBadge").length) {
-                                    let badge = createElement("a",{
-                                        class: "anchor-1X4H4q anchorUnderlineOnHover-wiZFZ_ cyanAuthorBadge",
-                                        target: "_blank",
-                                        href: "https://dablulite.github.io/Cyan/",
-                                        style: "width: 22px; height: 22px; display: flex; justify-content: center; align-items: center;"
-                                    });
-                                    badge.innerHTML = `<img alt=" " style="border-radius: 50%; width: 16px; height: 16px;" aria-hidden="true" src="https://cdn.discordapp.com/icons/997741561683120208/46dd2738d4e2212e5581c2a62f687aac.webp?size=22" class="profileBadge22-3GAYRy profileBadge-12r2Nm desaturate-_Twf3u">`;
-                                    BdApi.UI.createTooltip(badge, "Author of Cyan", {});
-                                    try {
-                                        elem.querySelectorAll("." + ProfileBadges?.profileBadges).forEach(e => {
-                                            e.append(badge);
-                                        })
-                                    } catch(e) {}
-                                    try {
-                                        elem.querySelectorAll("." + BadgeList?.badgeList).forEach(e => {
-                                            e.append(badge);
-                                        })
-                                    } catch(e) {}
-                                }
-                            }
                         })
                     }
 
@@ -590,55 +608,9 @@ module.exports = (() => {
                         href: "https://dablulite.github.io/Cyan/Addons/CyanColorways/"
                     });
                     cyanColorwaysButton.innerHTML = `<div class="contents-3NembX">Get CyanColorways Addon</div>`;
-                    let cyanUpdateNotice = () => {
-                        if(getComputedStyle(document.body).getPropertyValue('--cyan-version')) {
-                            fetch("https://dablulite.github.io/Cyan/import.css")
-                            .then(res => res.text())
-                            .then(data => {
-                                if(data.split("--cyan-version: ")[1].split(";")[0] + "." + data.split("--cyan-subversion: ")[1].split(";")[0] > getComputedStyle(document.body).getPropertyValue('--cyan-version').replace(" ","") + "." + getComputedStyle(document.body).getPropertyValue('--cyan-subversion').replace(" ","")) {
-                                    if(document.querySelector("#bd-notices")) {
-                                        if(!document.querySelector("#cyan-update-notice")) {
-                                            let cyanNotice = createElement("div",{
-                                                class: "bd-notice",
-                                                id: "cyan-update-notice"
-                                            },
-                                            createElement("div",{
-                                                class: "bd-notice-close",
-                                                onclick: (e) => {
-                                                    event.path[1].classList.add("bd-notice-closing");
-                                                    setTimeout(() => {
-                                                        e.path[1].remove();
-                                                    },300);
-                                                }
-                                            }),
-                                            createElement("span",{
-                                                class: "bd-notice-content"
-                                            },"Cyan Update available, reload Cyan to update."),
-                                            createElement("button",{
-                                                class: "bd-notice-button",
-                                                onclick: (e) => {
-                                                    BdApi.Themes.getAll().forEach(theme => {
-                                                        if(theme.css.includes("@import url(https://dablulite.github.io/Cyan/import.css);")) {
-                                                            BdApi.Themes.reload(theme.id);
-                                                        }
-                                                    })
-                                                    event.path[1].classList.add("bd-notice-closing");
-                                                    setTimeout(() => {
-                                                        e.path[1].remove();
-                                                    },300);
-                                                }
-                                            },"Reload Cyan")
-                                            )
-                                            document.querySelector("#bd-notices").append(cyanNotice);
-                                        }
-                                    }
-                                }
-                            })
-                        }
-                    }
-                    cyanUpdateNotice();
+                    this.cyanUpdateNotice(false);
                     cyanUpdater = setInterval(() => {
-                        cyanUpdateNotice();
+                        this.cyanUpdateNotice(false);
                     },300000);
 
 
@@ -663,7 +635,7 @@ module.exports = (() => {
                     })
                 }
 
-                observer({addedNodes}) {
+                observer({addedNodes,removedNodes}) {
                     for (const added of addedNodes) {
                         if (added.nodeType === Node.TEXT_NODE) continue;
 
@@ -713,28 +685,6 @@ module.exports = (() => {
                                         elem.querySelector(".avatarWrapperNormal-ahVUaC").style = elem.querySelector(".avatarWrapperNormal-ahVUaC").style + ";position: absolute !important; top: 76px;";
                                     } catch(e) {}
                                 }
-                                if(elem.querySelector('img[src*="582170007505731594"]')) {
-                                    if(!elem.querySelectorAll(".cyanAuthorBadge").length) {
-                                        let badge = createElement("a",{
-                                            class: "anchor-1X4H4q anchorUnderlineOnHover-wiZFZ_ cyanAuthorBadge",
-                                            target: "_blank",
-                                            href: "https://dablulite.github.io/Cyan/",
-                                            style: "width: 22px; height: 22px; display: flex; justify-content: center; align-items: center;"
-                                        });
-                                        badge.innerHTML = `<img alt=" " style="border-radius: 50%; width: 16px; height: 16px;" aria-hidden="true" src="https://cdn.discordapp.com/icons/997741561683120208/46dd2738d4e2212e5581c2a62f687aac.webp?size=22" class="profileBadge22-3GAYRy profileBadge-12r2Nm desaturate-_Twf3u">`;
-                                        BdApi.UI.createTooltip(badge, "Author of Cyan", {});
-                                        try {
-                                            elem.querySelectorAll("." + ProfileBadges?.profileBadges).forEach(e => {
-                                                e.append(badge);
-                                            })
-                                        } catch(e) {}
-                                        try {
-                                            elem.querySelectorAll("." + BadgeList?.badgeList).forEach(e => {
-                                                e.append(badge);
-                                            })
-                                        } catch(e) {}
-                                    }
-                                }
                             })
                         }
 
@@ -744,38 +694,37 @@ module.exports = (() => {
                             onclick: () => {
                                 BdApi.alert("Cyan+ Settings",React.createElement("div",{id:"cyanplus-settings-container"}));
                             }
-                        });
-                        addonsButton.innerHTML = `<div class="contents-3NembX">Cyan Addons</div>`;
+                        },createElement("div",{class:"contents-3NembX"},"Cyan Addons"));
 
                         try {
                             if(added.querySelector("#cyanplus-settings-container"))
                                 new SettingsRenderer(added.querySelector("#cyanplus-settings-container")).mount();
                         } catch(e) {}
 
-                        let cyanColorwaysButton = createElement("a", {
+                        let cyanColorwaysButton = createElement("button", {
                             class: "button-1d_47w button-ejjZWC lookFilled-1H2Jvj buttonColor-1u-3JF sizeSmall-3R2P2p fullWidth-3M-YBR grow-2T4nbg cyanAddonsBtn",
-                            target: "_blank",
-                            href: "https://dablulite.github.io/Cyan/Addons/CyanColorways/"
-                        });
-                        cyanColorwaysButton.innerHTML = `<div class="contents-3NembX">Get CyanColorways Addon</div>`;
+                            type: "button",
+                            onclick: () => {
+                                this.cyanUpdateNotice(true);
+                            }
+                        },createElement("div",{class:"contents-3NembX"},"Check For Updates"));
     
                         try {
                             if(added.querySelector("#Cyan-card")) {
                                 if(!added.querySelector("#Cyan-card .cyanAddonsBtn"))
-                                    added.querySelector("#Cyan-card .bd-description-wrap").append(addonsButton);
-                                    added.querySelector("#Cyan-card .bd-description-wrap").append(createElement("div",{
+                                    added.querySelector("#Cyan-card .bd-description-wrap").append(addonsButton,createElement("div",{
                                         class: "button-1d_47w button-ejjZWC lookFilled-1H2Jvj buttonColor-1u-3JF sizeSmall-3R2P2p fullWidth-3M-YBR grow-2T4nbg cyanAddonsBtn",
                                         type: "button",
                                         onclick: () => {
                                             BdApi.Plugins.reload("Cyan+");
                                         }
-                                    },"Reload Cyan+"));
-                            }
-                            if(added.querySelector(".ColorwaySelectorWrapperContainer")) {
-                                if(!added.querySelector(".ColorwaySelectorWrapperContainer .cyanAddonsBtn"))
-                                    added.querySelector(".ColorwaySelectorWrapperContainer").append(cyanColorwaysButton);
+                                    },"Reload Cyan+"),cyanColorwaysButton);
                             }
                         } catch(e) {}
+                    }
+
+                    if(!document.querySelector("bd-themes").innerHTML.includes("@import url(https://dablulite.github.io/Cyan/import.css);")) {
+                        console.log("Cyan Not Detected");
                     }
                 }
 
