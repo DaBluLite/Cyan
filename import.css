@@ -4,7 +4,7 @@
 :root {
     --cyan-version: 15;
     --cyan-subversion: 6;
-    --cyan-patch-version: 2;
+    --cyan-patch-version: 3;
     --cyan-text-shadow: 0;
     --cyan-blur-secondary: 0;
     --cyan-background-primary-alt: var(--cyan-background-primary);
@@ -6270,4 +6270,27 @@ div[role="radiogroup"] {
 }
 .wrapper-NhbLHG {
     width: 100%;
+}
+.divider-IqmEqJ {
+    z-index: 3;
+}
+.headerText-3g1XK9,
+.eyebrow-1Shfyi,
+.eyebrow-2wJAoF {
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 500;
+    border-bottom: 1px solid currentColor;
+    width: fit-content;
+    overflow: visible;
+}
+.userProfileModalOuter-2wdWjU:has(.pencilContainer-18TrEJ) .avatar-3QF_VA {
+    border: none;
+}
+.userProfileModalOuter-2wdWjU:has(.pencilContainer-18TrEJ) > .userProfileInnerThemedNonPremium-2AJg-H .overlayBackground-2aa7wt {
+    margin-top: 0;
+}
+.outer-VAWfYQ.videoSizer-ZRgT6y {
+    padding-top: 0 !important;
+    height: calc(100vh - 122px - 48px);
 }
