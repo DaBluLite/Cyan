@@ -3,7 +3,7 @@
 @import url(//dablulite.github.io/CyanBootstrapIcons/import.css);
 :root {
     --cyan-version: 16;
-    --cyan-subversion: 0;
+    --cyan-subversion: 1;
     --cyan-patch-version: 0;
     --cyan-text-shadow: 0;
     --cyan-blur-secondary: 0;
@@ -1786,7 +1786,7 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
 .panels-3wFtMD > .container-YkUktl .flex-2S1XBF > :last-child {
   transition: all 0.2s ease-in-out;
 }
-section.panels-3wFtMD .container-YkUktl .button-12Fmur {
+.panels-3wFtMD .container-YkUktl .button-12Fmur {
   width: calc((240px/3) - (var(--window-margin)*1px));
   border-radius: var(--window-border-radius) !important;
   margin: 0 calc((var(--window-margin)*1px)/2);
@@ -1799,16 +1799,35 @@ section.panels-3wFtMD .container-YkUktl .button-12Fmur {
     background-color: var(--cyan-background-secondary);
     box-shadow: var(--cyan-elevation-shadow);
 }
-section.panels-3wFtMD .container-YkUktl .flex-2S1XBF {
+.panels-3wFtMD .container-YkUktl .flex-2S1XBF {
   width: 100% !important;
   float: left !important;
-  height: 32px !important;
+  height: 32px;
   max-width: unset !important;
   justify-content: center !important;
-  margin: calc(min(1px, var(--window-border-radius)) * 10) 0 !important;
+  margin: 0;
+  margin-bottom: -40px;
   flex: 0 1 auto !important;
+  padding: 4px 0;
+  animation: hideUserArea .2s ease;
 }
-section.panels-3wFtMD .avatarWrapper-1B9FTW {
+@keyframes hideUserArea {
+  0% {
+    margin-bottom: 0px;
+  }
+  100% {
+    margin-bottom: -40px;
+  }
+}
+@keyframes showUserArea {
+  0% {
+    margin-bottom: -40px;
+  }
+  100% {
+    margin-bottom: 0px;
+  }
+}
+.panels-3wFtMD .avatarWrapper-1B9FTW {
   width: calc(100% - 10px);
   max-width: unset;
   float: left;
@@ -1816,15 +1835,17 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
   border-radius: var(--window-border-radius) !important;
   transition: .1s;
 }
-section.panels-3wFtMD .avatarWrapper-1B9FTW:hover {
+.panels-3wFtMD .avatarWrapper-1B9FTW:hover {
   background-color: var(--background-modifier-selected);
 }
-section.panels-3wFtMD .container-YkUktl {
-  display: block;
-  padding: 0 calc(min(1px, var(--window-border-radius)) * 8);
-  padding-top: calc(min(1px, var(--window-border-radius)) * 5);
+.panels-3wFtMD .container-YkUktl {
+  display: flex;
+  flex-direction: column;
+  padding: calc(min(1px, var(--window-border-radius)) * 8);
+  height: fit-content;
+  overflow: hidden;
 }
-section.panels-3wFtMD {
+.panels-3wFtMD {
   display: inline-block;
 }
 .withTagAsButton-OsgQ9L, .withTagless-10ooWt {
@@ -2472,21 +2493,20 @@ div:not([class="tutorialContainer-1pL9QS"]) .wrapper-3kah-n .childWrapper-1j_1ub
     background: var(--cyan-background-secondary) !important;
 }
 /*account area "hover to reveal"*/
-section.panels-3wFtMD .container-YkUktl .flex-2S1XBF {
-  height: 0 !important;
-  transition: .2s;
-  overflow: hidden;
-  margin: 0 !important;
+#app-mount .panels-3wFtMD:hover .container-YkUktl .flex-2S1XBF {
+  animation: showUserArea .2s ease;
+  margin-bottom: 0;
 }
-#app-mount section.panels-3wFtMD:hover .container-YkUktl .flex-2S1XBF {
-  height: 32px !important;
-  transition: .2s;
-  margin: calc(min(1px, var(--window-border-radius)) * 10) 0 !important;
-}
-section.panels-3wFtMD .avatarWrapper-1B9FTW {
-  margin-bottom: 5px;
+.panels-3wFtMD .avatarWrapper-1B9FTW {
+  margin: 0;
   position: relative;
   transition: .2s;
+}
+.panels-3wFtMD .wrapper-3Hk9OB:empty {
+  display: none;
+}
+.panels-3wFtMD .wrapper-3Hk9OB:not(:empty) {
+  animation: animbottom .4s ease;
 }
 .mini-2qY9iv .grabber-2GQyvM {
   top: 7px;
@@ -4182,7 +4202,7 @@ section.panels-3wFtMD .avatarWrapper-1B9FTW {
 .panels-3wFtMD {
     max-width: 320px;
 }
-section.panels-3wFtMD .container-YkUktl .button-12Fmur {
+.panels-3wFtMD .container-YkUktl .button-12Fmur {
     width: calc((288px/3) - (var(--window-margin)*1px));
 }
 .channel-1Shao0 {
