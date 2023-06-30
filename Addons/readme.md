@@ -83,3 +83,39 @@ https://github.com/DaBluLite/Cyan/tree/master/Addons/NitroThemeCompat
 ```
 https://github.com/DaBluLite/Cyan/tree/master/Addons/CyanColorways
 ```
+
+### Disable PIP (Works with other themes):
+
+#### Importing
+```css
+@import url(https://dablulite.github.io/Cyan/Addons/DisablePIP/import.css);
+```
+
+#### Repo
+```
+https://github.com/DaBluLite/Cyan/tree/master/Addons/DisablePIP
+```
+
+### Discrete Titlebar:
+
+#### Importing
+```css
+@import url(https://dablulite.github.io/Cyan/Addons/DiscreteTitlebar/import.css);
+```
+
+#### Repo
+```
+https://github.com/DaBluLite/Cyan/tree/master/Addons/DiscreteTitlebar
+```
+
+### user Area Lite:
+
+#### Importing
+```css
+@import url(https://dablulite.github.io/Cyan/Addons/userAreaLite/import.css);
+```
+
+#### Repo
+```
+https://github.com/DaBluLite/Cyan/tree/master/Addons/userAreaLite
+```
