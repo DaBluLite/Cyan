@@ -29,10 +29,11 @@
 .platform-osx .pageWrapper-2PwDoS {
     margin-top: 32px !important;
 }
-#app-mount .expandedFolderBackground-1kSAf6 {
-    border-radius: 8px 0 0 8px !important;
-}
 .chat-2ZfjoI {
     margin-left: calc(var(--window-margin) * 1px) !important;
     margin-right: 0 !important;
+}
+.expandedFolderBackground-1kSAf6:not(.collapsed-uGXEbi)::before {
+    right: -12px;
+    left: unset;
 }

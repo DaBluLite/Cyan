@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root {
     --cyan-version: 16;
-    --cyan-subversion: 2;
+    --cyan-subversion: 3;
     --cyan-patch-version: 0;
     --cyan-text-shadow: 0;
     --cyan-blur-secondary: 0;
@@ -5934,8 +5934,8 @@ span:has(>.botText-1fD6Qk) {
     background-color: var(--cyan-background-secondary);
     box-sizing: content-box;
 }
-.menu-2TXYjN .item-5ApiZt:not(:has(.iconContainer-Ksy8Oj)) {
-    padding: 12px;
+.menu-2TXYjN .item-5ApiZt:not(:has(.iconContainer-Ksy8Oj,.optionIcon-1Ft8w0)) {
+  padding: 12px;
 }
 .item-5ApiZt[id*="guild-context-guild-notifications"] .iconContainer-Ksy8Oj > .caret-1TZU-U,
 .item-5ApiZt[id*="guild-context-guild-settings"] .iconContainer-Ksy8Oj > .caret-1TZU-U {
@@ -6441,4 +6441,52 @@ div:not([class="tutorialContainer-1pL9QS"]) .wrapper-3kah-n .childWrapper-1j_1ub
 }
 div:not([class="tutorialContainer-1pL9QS"]) .wrapper-3kah-n.selected-1Drb7Z .childWrapper-1j_1ub {
     animation: guildAnim .2s ease;
+}
+.item-5ApiZt .labelContainer-35-WEd {
+  padding: 0;
+  height: fit-content;
+  min-height: unset;
+}
+.container-2giAcK {
+  padding-right: 8px;
+}
+.contentRegionScroller-2_GT_N {
+  overflow: hidden auto !important;
+}
+.addFriendInputWrapper-kkoSV9 {
+  border: none;
+  gap: 8px;
+  background-color: transparent;
+}
+.addFriendInputWrapper-kkoSV9 .input-3O04eu {
+  padding-left: 8px;
+}
+.addFriendInputWrapper-kkoSV9.success-2Cnckk .input-3O04eu {
+  --cyan-elevation-shadow: 0 0 0 1.5px var(--green-360), 0 2px 10px 0 rgb(0 0 0 / 60%);
+}
+.addFriendInputWrapper-kkoSV9.error-31k8Cx .input-3O04eu {
+  --cyan-elevation-shadow: 0 0 0 1.5px var(--status-danger), 0 2px 10px 0 rgb(0 0 0 / 60%);
+}
+.addFriendInput-1Ta-rO {
+  margin-right: 0;
+}
+.container-2cd8Mz:has(.addFriendInput-1Ta-rO)::before {
+  content: none;
+}
+.container-2cd8Mz:has(.addFriendInput-1Ta-rO) .container-ZMc96U {
+  box-shadow: var(--cyan-elevation-shadow) !important;
+}
+.container-2cd8Mz:has(.addFriendInput-1Ta-rO) .nowPlayingColumn-1eCBCN {
+  margin-top: 0;
+}
+.nowPlayingColumn-1eCBCN .scroller-hE2gWq {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.image-20MDYu {
+  display: none;
+}
+.header-30YxSJ {
+  border-bottom: none;
 }
