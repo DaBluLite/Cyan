@@ -35,6 +35,10 @@
     {
       "name": "Discrete Titlebar",
       "import": "@import url(https://dablulite.github.io/Cyan/Addons/DiscreteTitlebar/import.css);"
+    },
+    {
+      "name": "User Area Lite",
+      "import": "@import url(https://dablulite.github.io/Cyan/Addons/UserAreaLite/import.css);"
     }
   ]
 }
