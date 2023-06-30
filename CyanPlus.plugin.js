@@ -3,7 +3,7 @@
 * @displayName Cyan+
 * @authorId 582170007505731594
 * @invite ZfPH6SDkMW
-* @version 1.3.1
+* @version 1.4.0
 */
 /*@cc_on
 @if (@_jscript)
@@ -49,7 +49,7 @@ module.exports = (() => {
                     github_username: "DaBluLite"
                 }
             ],
-            version: "1.3.1",
+            version: "1.4.0",
             description: "A plugin that allows for various Cyan features to work properly (When changing banner color on a non-nitro account, reload Discord or turn off and back on the plugin for the color to apply).",
             github: "https://github.com/DaBluLite/Cyan/blob/master/CyanPlus.plugin.js",
             github_raw: "https://github.com/DaBluLite/Cyan/raw/master/CyanPlus.plugin.js"
@@ -559,7 +559,7 @@ module.exports = (() => {
                 }
                 `;
                 onStart() {
-                    PluginUtilities.addStyle(config.info.name, this.css);
+                    PluginUtilities.addStyle("CyanPlus", this.css);
 
                     StoreWatcher._init();
 
@@ -591,16 +591,6 @@ module.exports = (() => {
                             elem.style = elem.style + ";--cyan-accent-color: " + elem.querySelector("." + BannerSVG?.bannerSVGWrapper + " > foreignObject > div[style]").style.backgroundColor + "; --cyan-elevation-shadow: 0 0 0 1.5px " + elem.querySelector("." + BannerSVG?.bannerSVGWrapper + " > foreignObject > div[style]").style.backgroundColor + ", 0 2px 10px 0 rgb(0 0 0 / 60%);";
                         })
                     }
-
-                    let addonsButton = createElement("button", {
-                        class: "button-1d_47w button-ejjZWC lookFilled-1H2Jvj buttonColor-1u-3JF sizeSmall-3R2P2p fullWidth-3M-YBR grow-2T4nbg cyanAddonsBtn",
-                        ttype: "button",
-                        onclick: () => {
-                            BdApi.alert("Cyan+ Settings",React.createElement("div",{id:"cyanplus-settings-container"}));
-                            new SettingsRenderer(document.querySelector("#cyanplus-settings-container")).mount();
-                        }
-                    });
-                    addonsButton.innerHTML = `<div class="contents-3NembX">Cyan Addons</div>`;
 
                     let cyanColorwaysButton = createElement("a", {
                         class: "button-1d_47w button-ejjZWC lookFilled-1H2Jvj buttonColor-1u-3JF sizeSmall-3R2P2p fullWidth-3M-YBR grow-2T4nbg cyanAddonsBtn",
@@ -725,13 +715,37 @@ module.exports = (() => {
 
                     if(!document.querySelector("bd-themes").innerHTML.includes("@import url(https://dablulite.github.io/Cyan/import.css);")) {
                         console.log("Cyan Not Detected");
+                        try {
+                            Array.from(document.getElementsByClassName("cyanAddonsBtn")).forEach(e => {
+                                e.remove();
+                            })
+                        } catch(e) {}
+                        try {
+                            PluginUtilities.removeStyle("CyanPlus");
+                        } catch(e) {}
+                    } else {
+                        if(!document.querySelector("style#CyanPlus")) {
+                            PluginUtilities.addStyle("CyanPlus", this.css);
+                            try {
+                                if(added.querySelector("#Cyan-card")) {
+                                    if(!added.querySelector("#Cyan-card .cyanAddonsBtn"))
+                                        added.querySelector("#Cyan-card .bd-description-wrap").append(addonsButton,createElement("div",{
+                                            class: "button-1d_47w button-ejjZWC lookFilled-1H2Jvj buttonColor-1u-3JF sizeSmall-3R2P2p fullWidth-3M-YBR grow-2T4nbg cyanAddonsBtn",
+                                            type: "button",
+                                            onclick: () => {
+                                                BdApi.Plugins.reload("Cyan+");
+                                            }
+                                        },"Reload Cyan+"),cyanColorwaysButton);
+                                }
+                            } catch(e) {}
+                        }
                     }
                 }
 
                 onStop() {
                     StoreWatcher._stop();
                     StoreWatcher._listeners.clear();
-                    PluginUtilities.removeStyle(config.info.name);
+                    PluginUtilities.removeStyle("CyanPlus");
                     const panelsElement = Array.from(document.body.getElementsByClassName(UserArea?.panels));
 
                     if(panelsElement.length) {
