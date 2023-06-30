@@ -27,6 +27,14 @@
     {
       "name": "Cyan Colorways",
       "import": "@import url(https://dablulite.github.io/Cyan/Addons/CyanColorways/CyanColorways.theme.css);"
+    },
+    {
+      "name": "Disable PIP",
+      "import": "@import url(https://dablulite.github.io/Cyan/Addons/DisablePIP/import.css);"
+    },
+    {
+      "name": "Discrete Titlebar",
+      "import": "@import url(https://dablulite.github.io/Cyan/Addons/DiscreteTitlebar/import.css);"
     }
   ]
 }
