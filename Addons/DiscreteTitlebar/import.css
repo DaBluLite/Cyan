@@ -1,0 +1,6 @@
+.winButton-3UMjdg:not(:hover) > svg {
+    background-color: var(--cyan-background-primary);
+    background-size: 0 !important;
+    border-radius: 50%;
+    backdrop-filter: blur(var(--cyan-blur-radius));
+}
