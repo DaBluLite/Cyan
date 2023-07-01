@@ -4,7 +4,7 @@
 :root {
   --cyan-version: 16;
   --cyan-subversion: 4;
-  --cyan-patch-version: 1;
+  --cyan-patch-version: 2;
   --cyan-text-shadow: 0;
   --cyan-blur-secondary: 0;
   --cyan-background-primary-alt: var(--cyan-background-primary);
@@ -2954,7 +2954,7 @@ div:not([class="tutorialContainer-1pL9QS"])
 }
 .container-1eFtFS::before {
   content: "";
-  background-color: var(--cyan-background-primary);
+  background-color: var(--cyan-background-primary-alt);
   width: calc(240px + (calc(82px - (var(--window-margin) * 1px))));
   border-radius: var(--window-border-radius-calc);
   box-shadow: var(--cyan-elevation-shadow);
