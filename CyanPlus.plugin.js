@@ -1,10 +1,11 @@
 /**
 * @name Cyan+
 * @displayName Cyan+
+* @author DaBluLite
 * @authorId 582170007505731594
 * @invite ZfPH6SDkMW
 * @description A plugin that allows for various Cyan features to work properly (When changing banner color on a non-nitro account, reload Discord or turn off and back on the plugin for the color to apply).
-* @version 1.5.0
+* @version 1.5.1
 * @github https://github.com/DaBluLite/Cyan/blob/master/CyanPlus.plugin.js
 * @github_raw https://github.com/DaBluLite/Cyan/raw/master/CyanPlus.plugin.js
 */
