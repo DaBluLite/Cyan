@@ -3,7 +3,7 @@
 @import url("https://dablulite.github.io/CyanBootstrapIcons/import.css");
 :root {
   --cyan-version: 16;
-  --cyan-subversion: 6;
+  --cyan-subversion: 7;
   --cyan-patch-version: 0;
   --cyan-text-shadow: 0;
   --cyan-blur-secondary: 0;
@@ -932,7 +932,7 @@ html
   display: none !important;
 }
 .panels-3wFtMD {
-  background-color: var(--cyan-background-elevated);
+  background-color: var(--cyan-background-secondary);
   box-shadow: var(--cyan-elevation-shadow);
   transition: width 0.3s !important;
   max-width: calc(240px);
@@ -2467,7 +2467,7 @@ div:not([class="tutorialContainer-1pL9QS"])
   height: 44px;
   width: 44px;
   border-radius: 50%;
-  background-color: var(--background-floating);
+  background-color: var(--cyan-background-secondary);
   box-shadow: 0 0 0 1.5px var(--cyan-background-primary),
     0 2px 10px 0 rgb(0 0 0 / 20%);
 }
@@ -6842,6 +6842,7 @@ span:has(> .botText-1fD6Qk) {
 .marginTop40-Q4o1tS .marginTop40-Q4o1tS {
   box-shadow: none;
   padding: 0;
+  background-color: transparent;
 }
 .divider-1bpIoX,
 .tabBar-11FwuO {
