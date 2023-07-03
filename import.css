@@ -3,8 +3,8 @@
 @import url("https://dablulite.github.io/CyanBootstrapIcons/import.css");
 :root {
   --cyan-version: 16;
-  --cyan-subversion: 5;
-  --cyan-patch-version: 1;
+  --cyan-subversion: 6;
+  --cyan-patch-version: 0;
   --cyan-text-shadow: 0;
   --cyan-blur-secondary: 0;
   --cyan-background-primary-alt: var(--cyan-background-primary);
@@ -180,27 +180,54 @@
   width: calc(100% - 16px);
 }
 /*Expandable search bar*/
+@keyframes expandSearchBar {
+  from {
+    padding: 8px;
+    width: 40px;
+    margin: 0;
+  }
+  to {
+    width: 224px;
+    margin: 0 10px;
+    padding: 5px !important;
+  }
+}
+@keyframes collapseSearchBar {
+  from {
+    width: 224px;
+    margin: 0 10px;
+    padding: 5px !important;
+  }
+  to {
+    padding: 8px;
+    width: 40px;
+    margin: 0;
+  }
+}
 .searchBar-jGtisZ {
   padding: 8px;
   height: fit-content;
   background-color: transparent;
-  transition: 0.3s !important;
   width: 40px;
+  border-radius: 8px;
+  box-shadow: none;
+  animation: collapseSearchBar .4s ease;
 }
 .searchBar-jGtisZ:hover {
   box-shadow: var(--light-elevation-border);
+  animation: expandSearchBar .4s ease;
 }
 .focused-1xh-wG .searchBar-jGtisZ,
 .open-1F8u2c .searchBar-jGtisZ {
   box-shadow: var(--cyan-elevation-shadow);
+  animation: expandSearchBar .4s ease;
 }
 .searchBar-jGtisZ:hover,
 .focused-1xh-wG .searchBar-jGtisZ,
 .open-1F8u2c .searchBar-jGtisZ {
+  animation: expandSearchBar .4s ease;
   width: 224px;
   margin: 0 10px;
-  background-color: var(--cyan-background-secondary);
-  border-radius: 8px;
   padding: 5px !important;
 }
 .search-39IXmY {
@@ -4658,17 +4685,8 @@ div:not([class="tutorialContainer-1pL9QS"])
 .container-1-ERn5:not(.hasBanner-2IrYih) {
   margin-bottom: 0;
 }
-.container-1-ERn5 {
-  transition: 0.2s;
-}
 .container-1-ERn5:not(.hasBanner-2IrYih) > .header-3OsQeK {
-  background-color: var(--cyan-background-secondary);
-  box-shadow: var(--cyan-elevation-shadow);
-  border-radius: 8px;
-  backdrop-filter: blur(var(--cyan-blur-secondary));
-}
-.header-3OsQeK {
-  transition: 0.2s;
+  margin-bottom: 0;
 }
 .channel-1Shao0:has(a[href="/activities"]),
 .channel-1Shao0:has(a[href="/message-requests"]) {
@@ -4696,7 +4714,6 @@ div:not([class="tutorialContainer-1pL9QS"])
 .flex-2S1XBF:has(> .backButton-bSKWLe) > .backButton-bSKWLe {
   border-radius: 50px;
   background-color: var(--cyan-background-primary);
-  transition: 0.15s;
   padding: 4px 8px;
 }
 .flex-2S1XBF:has(> .backButton-bSKWLe) > .backButton-bSKWLe:hover {
@@ -5014,7 +5031,6 @@ div:not([class="tutorialContainer-1pL9QS"])
   line-height: 18px;
   display: inline-block;
   user-select: text;
-  transition: 0.2s;
   margin-left: 0.5ch;
 }
 /*WWC Discriminators*/
@@ -5028,7 +5044,6 @@ div:not([class="tutorialContainer-1pL9QS"])
   line-height: 18px;
   display: inline-block;
   user-select: text;
-  transition: 0.2s;
   margin-left: 0.5ch;
 }
 
@@ -5041,7 +5056,6 @@ div:not([class="tutorialContainer-1pL9QS"])
   color: var(--header-secondary);
   display: inline-flex;
   user-select: text;
-  transition: 0.2s, line-height 0.2s ease-in-out;
   opacity: 1;
   line-height: 18px;
 }
@@ -6164,9 +6178,9 @@ span:has(> .botText-1fD6Qk) {
   height: 100%;
   max-height: none !important;
 }
-.sidebar-1tnWFu .scroller-1ox3I2,
-.sidebar-1tnWFu .animatedContainer-2laTjx {
-  transition: 0.4s;
+
+.animatedContainer-2laTjx {
+  animation: msganim .4s ease;
 }
 @keyframes hideChannelBar {
   0% {
