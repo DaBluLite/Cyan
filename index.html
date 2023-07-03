@@ -73,25 +73,58 @@
         let accentColor = "#009f88"; //hex
         let backgroundHue = "225"; //deg
         let windowMargin = 8; //px
+        let windowBlur = 10; //px
+        let glassOpacity = 40; //%
+        let glassBrightness = 16; //%
+        let textShadow = 1;
         let cyanCSSconfig = () => { return `:root {
-	--cyan-background-primary: hsla(var(--cyan-background-hue) var(--cyan-tint-visibility) var(--cyan-background-lightness) / 40%) !important;
+	--cyan-background-primary: hsla(${backgroundHue}deg ${tintVisibility}% ${glassBrightness}% / ${glassOpacity}%) !important;
 	--cyan-elevation-shadow: 0 0 0 1.5px var(--cyan-accent-color), 0 2px 10px 0 rgb(0 0 0 / 60%) !important;
 	--cyan-font: 'Montserrat', 'Open Sans' !important;
 	--cyan-background-img: url(${backImg}) !important;
 	--window-margin: ${windowMargin} !important;
 	--window-border-radius: 8px !important;
 	--cyan-accent-color: ${accentColor} !important;
-	--cyan-blur-radius: 10px !important;
+	--cyan-blur-radius: ${windowBlur}px !important;
 	--cyan-status-mask-background: var(--profile-body-background-color) !important;
-    --cyan-background-hue: ${backgroundHue}deg !important;
-    --cyan-tint-visibility: ${tintVisibility}% !important;
-    --cyan-text-shadow: 1 !important;
-    --cyan-background-lightness: 16% !important;
+    --cyan-text-shadow: ${textShadow} !important;
     --window-border-radius-calc: calc(min(1, var(--window-margin)) * var(--window-border-radius)) !important;
-    /*--cyan-elevation-shadow: 0 0 0 1px rgba(180,180,180,.4), 0 2px 10px 0 rgb(0 0 0 / 60%);
-	--window-margin: 10;*/
 }`};
         document.addEventListener("DOMContentLoaded", () => {
+
+            let addonArray;
+
+
+            fetch("./Addons/index.json")
+                    .then(res => res.json())
+                    .then(addons => {
+                        addonArray = addons.addons;
+                        addons.addons.forEach(addon => {
+                            let addonElem = createElement("div",{
+                                class: "propertyWrapper"
+                            },
+                            createElement("span",{class:"property"},addon.name),
+                            createElement("div",{
+                                class:"toggleTrack"
+                            },
+                            createElement("input",{
+                                type:"checkbox",
+                                class:"toggleCheckbox",
+                                "data-addon-import": addon.import,
+                                onclick: (e) => {
+                                    e.srcElement.parentElement.classList.toggle("_checked");
+                                }
+                            }),
+                            createElement("div",{class:"toggleHandle"})
+                            )
+                            )
+
+                            document.getElementById("addonsPanel").append(addonElem);
+                        })
+                    })
+
+
+
             // Apply initial values
             document.getElementById("cyanStyle").innerHTML = cyanCSSconfig();
 
@@ -114,31 +147,59 @@
                 document.getElementById("cyanStyle").innerHTML = cyanCSSconfig();
             });
 
-            // Background "Glass" Tint Visibility
-            document.getElementById("tintVisibilityRadio").addEventListener("change", () => {
-                if(document.getElementById("tintVisibilityRadio").checked == true) {
-                    tintVisibility = 100;
-                } else {
-                    tintVisibility = 8;
-                }
-                document.getElementById("cyanStyle").innerHTML = cyanCSSconfig();
-            });
-
             // Window Margin
             document.getElementById("windowMarginCounterValue").addEventListener("input", () => {
                 windowMargin = document.getElementById("windowMarginCounterValue").value;
                 document.getElementById("cyanStyle").innerHTML = cyanCSSconfig();
             });
 
+            // Window Blur
+            document.getElementById("windowBlurCounterValue").addEventListener("input", () => {
+                windowBlur = document.getElementById("windowBlurCounterValue").value;
+                document.getElementById("cyanStyle").innerHTML = cyanCSSconfig();
+            });
+
+            // "Glass" Opacity
+            document.getElementById("glassOpacityCounterValue").addEventListener("input", () => {
+                glassOpacity = document.getElementById("glassOpacityCounterValue").value;
+                document.getElementById("cyanStyle").innerHTML = cyanCSSconfig();
+            });
+
+            // "Glass" Brightness
+            document.getElementById("glassBrightnessCounterValue").addEventListener("input", () => {
+                glassBrightness = document.getElementById("glassBrightnessCounterValue").value;
+                document.getElementById("cyanStyle").innerHTML = cyanCSSconfig();
+            });
+
+            // "Glass" Saturation
+            document.getElementById("glassSaturationSlider").addEventListener("input", () => {
+                tintVisibility = document.getElementById("glassSaturationSlider").value;
+                document.getElementById("cyanStyle").innerHTML = cyanCSSconfig();
+            });
+
+            // Text Shadow
+            document.getElementById("textShadowCheckbox").addEventListener("input", () => {
+                if(document.getElementById("textShadowCheckbox").checked) {
+                    textShadow = 1;
+                } else {
+                    textShadow = 0;
+                }
+                document.getElementById("cyanStyle").innerHTML = cyanCSSconfig();
+            });
+
+            // Toggles
+            document.querySelectorAll(".toggleCheckbox").forEach(toggleCheckbox => {
+                toggleCheckbox.addEventListener("input",(e) => {
+                    e.srcElement.parentElement.classList.toggle("_checked");
+                })
+            })
+
             function triggerEvent(element, eventName) {
                 var event = document.createEvent("HTMLEvents");
                 event.initEvent(eventName, false, true);
                 element.dispatchEvent(event);
             }
-            window.changeTintVisibility = () => {
-                document.getElementById("tintVisibilityRadio").checked = !document.getElementById("tintVisibilityRadio").checked;
-                triggerEvent(document.getElementById("tintVisibilityRadio"), 'change');
-            }
+
             window.download = (filename, text) => {
                 var element = document.createElement('a');
                 element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
@@ -219,6 +280,15 @@ Huge thanks to all the contributors of this project!
 @import url(https://dablulite.github.io/Cyan/import.css);
 ${cyanCSSconfig().replaceAll(" !important;", ";")}`);
             }
+
+            window.changePanelTab = (elem) => {
+                document.querySelector(".newCustomizerSettingsPanel.visible").classList.remove("visible");
+                document.getElementById(elem.getAttribute("data-panel-id")).classList.add("visible");
+
+                document.querySelector(".settingTab.active").classList.remove("active");
+                elem.classList.add("active");
+            }
+
             initTooltips();
         })
     </script>
@@ -342,20 +412,8 @@ ${cyanCSSconfig().replaceAll(" !important;", ";")}`);
             width: 100%;
             height: 100vh;
             position: relative;
-        }
-        #pseudoWindow {
-            top: 80px;
-            left: 80px;
-            width: calc(100vw - 160px);
-            height: calc(100vh - 160px);
-            background-color: var(--cyan-background-primary);
-            backdrop-filter: blur(10px);
-            border-radius: 10px;
-            position: absolute;
             display: flex;
-            box-shadow: var(--cyan-elevation-shadow);
-            flex-direction: column;
-            justify-content: center;
+            overflow: hidden;
         }
         #mainThemeTitle {
             text-align: center;
@@ -374,20 +432,20 @@ ${cyanCSSconfig().replaceAll(" !important;", ";")}`);
         }
         #pseudoSidebar {
             background-color: var(--cyan-background-primary);
-            backdrop-filter: blur(10px);
-            position: absolute;
+            backdrop-filter: blur(var(--cyan-blur-radius));
             box-shadow: var(--cyan-elevation-shadow);
             transition: .5s cubic-bezier(.17,.76,.58,.99);
-            height: calc(100% - (var(--window-margin) * 2px) - 22px);
-            top: calc(22px + (var(--window-margin) * 1px));
-            left: calc(var(--window-margin) * 1px);
+            height: calc((100% - ((var(--window-margin) * 1px)) * 2) - 32px + (min(var(--window-margin), 1) * 10px));
+            margin-bottom: calc(var(--window-margin) * 1px);
+            margin-left: calc(var(--window-margin) * 1px);
             border-radius: var(--window-border-radius-calc);
             width: calc(410px - (var(--window-margin) * 2px));
             display: flex;
+            align-self: end;
         }
         #pseudoChat {
             background-color: var(--cyan-background-primary);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(var(--cyan-blur-radius));
             position: absolute;
             display: flex;
             flex-direction: column;
@@ -468,11 +526,10 @@ ${cyanCSSconfig().replaceAll(" !important;", ";")}`);
         }
         #pseudoChannelBar {
             height: 100%;
-            max-width: 320px;
             float: right;
             display: flex;
             flex-direction: column;
-            width: 100%;
+            width: calc(100% - 72px);
         }
         .guildBtn {
             background-color: hsl(225, 8%, calc(10% * 0.6));
@@ -501,7 +558,7 @@ ${cyanCSSconfig().replaceAll(" !important;", ";")}`);
             box-shadow: none;
         }
         #searchBoxWrapper {
-            width: calc(300px - 32px);
+            width: calc(100% - 20px);
             height: fit-content;
             transition: .5s cubic-bezier(.17,.76,.58,.99);
             display: flex;
@@ -512,6 +569,7 @@ ${cyanCSSconfig().replaceAll(" !important;", ";")}`);
             border-radius: 8px;
             box-shadow: var(--cyan-elevation-shadow);
             background-color: hsl(225, 8%, calc(10% * 0.6));
+            box-sizing: border-box;
         }
         #pseudoSearch {
             color: #fff;
@@ -572,7 +630,7 @@ ${cyanCSSconfig().replaceAll(" !important;", ";")}`);
         }
         #pseudoChannelList {
             height: 100%;
-            width: 240px;
+            width: 100%;
             display: flex;
             flex-direction: column;
         }
@@ -629,11 +687,11 @@ ${cyanCSSconfig().replaceAll(" !important;", ";")}`);
             background-color: transparent;
         }
         #colorPickerBtn {
-            width: fit-content;
+            width: 100%;
             border-radius: 8px;
             display: flex;
-            float: right;
-            padding: 4px 16px;
+            justify-content: center;
+            padding: 8px 16px;
         }
         .property {
             color: #fff;
@@ -641,9 +699,14 @@ ${cyanCSSconfig().replaceAll(" !important;", ";")}`);
             font-size: 1rem;
             margin-right: 10px;
             text-shadow: 1px 2px 2px #000;
+            width: 50%;
+        }
+        .property + * {
+            width: 50%;
         }
         #cyanAccentColorDisplay {
             margin-right: 0;
+            width: fit-content !important;
         }
         #cyanCustomizer {
             display: flex;
@@ -698,8 +761,8 @@ ${cyanCSSconfig().replaceAll(" !important;", ";")}`);
             -ms-user-select: none;
             user-select: none;
         }
-        .propertyWrapper {
-            height: 38px;
+        .visible > .propertyWrapper {
+            height: fit-content;
             margin-bottom: 8px;
             min-height: 22px;
             width: calc(100% - 16px);
@@ -757,30 +820,32 @@ ${cyanCSSconfig().replaceAll(" !important;", ";")}`);
             justify-content: end;
             overflow: hidden;
         }
-        #backgroundHueSlider {
+        .cyanSlider {
             position: relative;
             z-index: 1;
             appearance: none;
             border-radius: 0;
             background-color: rgba(0,0,0,0.1);
             height: 2px;
-            width: 250px;
+            width: 100%;
             display: block;
             outline: none;
             transition: .5s cubic-bezier(.17,.76,.58,.99);
             background-color: var(--cyan-accent-color);
             box-shadow: 0 3px 1px 0 hsl(0 0% 0%/.05),0 2px 2px 0 hsl(0 0% 0%/.1),0 3px 3px 0 hsl(0 0% 0%/.05);
         }
-        #backgroundHueSlider::after {
+        .cyanSlider.hueSlider::after {
             content: "";
             position: absolute;
-            width: 250px;
+            width: 100%;
             height: 2px;
             z-index: -1;
+            top: 0;
+            left: 0;
             box-shadow: 0 3px 1px 0 hsl(0 0% 0%/.05),0 2px 2px 0 hsl(0 0% 0%/.1),0 3px 3px 0 hsl(0 0% 0%/.05);
             background: linear-gradient(to right, rgb(255,0,0), rgb(255,255,0), rgb(0,255,0),rgb(0,255,255),rgb(0,0,255),rgb(255,0,255),rgb(255,0,0));
         }
-        #backgroundHueSlider::-webkit-slider-thumb{
+        .cyanSlider::-webkit-slider-thumb{
             height: 24px;
             width: 10px;
             border-radius: 3px;
@@ -815,11 +880,12 @@ ${cyanCSSconfig().replaceAll(" !important;", ";")}`);
             transition: .2s;
             transform: translateX(-25%) translateY(-12.5%);
             box-shadow: 0 3px 1px 0 hsl(0 0% 0%/.05),0 2px 2px 0 hsl(0 0% 0%/.1),0 3px 3px 0 hsl(0 0% 0%/.05);
+            pointer-events: none;
         }
-        input[type="checkbox"]:checked + .toggleTrack, input[type="checkbox"]:checked + .toggleTrack > .toggleHandle {
+        .toggleTrack._checked, .toggleTrack._checked > .toggleHandle {
             background-color: var(--cyan-accent-color);
         }
-        input[type="checkbox"]:checked + .toggleTrack > .toggleHandle {
+        .toggleTrack._checked > .toggleHandle {
             filter: brightness(2);
             transform: translateX(calc(28px - 75%)) translateY(-12.5%);
         }
@@ -854,7 +920,7 @@ ${cyanCSSconfig().replaceAll(" !important;", ";")}`);
             border-radius: 16px;
         }
         #newCustomizerSettings {
-            width: 420px;
+            width: 40%;
             height: 100vh;
             display: flex;
             flex-direction: column;
@@ -865,6 +931,9 @@ ${cyanCSSconfig().replaceAll(" !important;", ";")}`);
             display: flex;
             justify-content: space-between;
             align-items: center;
+        }
+        .settingHeaderH1 {
+            margin-bottom: 0;
         }
         .settingHeader > span {
             margin-right: 20px !important;
@@ -937,6 +1006,56 @@ ${cyanCSSconfig().replaceAll(" !important;", ";")}`);
     color: #fff;
     overflow-wrap: anywhere;
     text-shadow: min(1px,calc(var(--cyan-text-shadow) * 1px)) calc(min(1px,(var(--cyan-text-shadow) * 1px))*2) calc(min(1px,(var(--cyan-text-shadow) * 1px))*2) #000;
+}
+.toggleCheckbox {
+    position: absolute;
+    width: 100%;
+    margin: 0;
+    opacity: 0;
+    height: 18px;
+    margin-top: -2px;
+}
+.newCustomizerSettingsPanel {
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    pointer-events: none;
+}
+.newCustomizerSettingsPanel.visible {
+    opacity: 1;
+    pointer-events: all;
+}
+.settingTab {
+    font-weight: 400;
+    color: #fff;
+    animation: animleft .4s ease;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: fit-content;
+    padding: 6px 12px;
+    border-radius: 8px;
+    user-select: none;
+    cursor: pointer;
+}
+.settingTab.active {
+    box-shadow: 0 0 0 3px var(--cyan-accent-color);
+}
+.settingsTabbar {
+    padding-inline: 0;
+    margin-inline: 0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    gap: 8px;
+}
+.settingsPanelViewer {
+    width: 100%;
+    position: relative;
 }
     </style>
 </head>
@@ -1019,13 +1138,28 @@ ${cyanCSSconfig().replaceAll(" !important;", ";")}`);
         </div>
     </section>
     <section id="newCustomizerSettings">
-        <h1 class="settingHeader settingHeaderH1">Cyan Customizer<span id="customizerSubHeader">Version 7.1</span></h1>
-        <div class="propertyWrapper" id="cyanThemeName"><input type="text" placeholder="Give a name to your theme:" id="themeName" class="cyanTextInput"></div>
-        <div class="propertyWrapper" id="cyanAccent"><span class="property">Accent Color:</span><div class="colorPickerWrapper"><input type="color" id="cyanColorPicker" value="#009f88"><div style="background-color: var(--cyan-accent-color);" id="colorPickerBtn" onclick="document.getElementById('cyanColorPicker').showPicker();"><span id="cyanAccentColorDisplay" class="property">#009f88</span></div></div></div>
-        <div class="propertyWrapper" id="cyanBackImg" style="display: flex;"><span class="property">Background image URL:</span><input class="cyanTextInput" type="text" id="cyanBackImgInput" value="https://dablulite.github.io/Cyan/cyan-waves.png"></div>
-        <div class="propertyWrapper" id="tintVisibility" style="display: flex;"><span class="property">Tint visibility:</span><input type="checkbox" id="tintVisibilityRadio" style="display: none;"><div id="tintVisibilityToggle" onclick="changeTintVisibility();" class="toggleTrack"><div class="toggleHandle"></div></div></div>
-        <div class="propertyWrapper" id="backgroundHue" style="display: flex;"><span class="property">Background Hue:</span><input type="range" id="backgroundHueSlider" min="0" max="360" value="225"></div>
-        <div class="propertyWrapper" id="windowMarginCounter"><span class="property">Window Margin:</span><input type="number" id="windowMarginCounterValue" class="cyanTextInput" min="0" value="8"></div>
+        <h1 class="settingHeader settingHeaderH1">Cyan Customizer<span id="customizerSubHeader">Version 8</span></h1>
+        <ul class="settingsTabbar">
+            <li class="settingTab active" data-panel-id="settingsPanel" onclick="changePanelTab(this);">Settings</li>
+            <li class="settingTab" data-panel-id="addonsPanel" onclick="changePanelTab(this);">Addons (WIP)</li>
+        </ul>
+        <div class="settingsPanelViewer">
+            <section id="settingsPanel" class="newCustomizerSettingsPanel visible">
+                <div class="propertyWrapper" id="cyanThemeName"><input type="text" placeholder="Give a name to your theme:" id="themeName" class="cyanTextInput"></div>
+                <div class="propertyWrapper" id="cyanAccent"><span class="property">Accent Color:</span><div class="colorPickerWrapper"><input type="color" id="cyanColorPicker" value="#009f88"><div style="background-color: var(--cyan-accent-color);" id="colorPickerBtn" onclick="document.getElementById('cyanColorPicker').showPicker();"><span id="cyanAccentColorDisplay" class="property">#009f88</span></div></div></div>
+                <div class="propertyWrapper" id="cyanBackImg" style="display: flex;"><span class="property">Background image URL:</span><input class="cyanTextInput" type="text" id="cyanBackImgInput" value="https://dablulite.github.io/Cyan/cyan-waves.png"></div>
+                <div class="propertyWrapper" id="tintVisibility" style="display: flex;"><span class="property">Tint visibility:</span><input type="range" id="glassSaturationSlider" class="cyanSlider" min="0" max="100" value="8"></div>
+                <div class="propertyWrapper" id="backgroundHue" style="display: flex;"><span class="property">Background Hue:</span><input type="range" id="backgroundHueSlider" class="cyanSlider hueSlider" min="0" max="360" value="225"></div>
+                <div class="propertyWrapper" id="windowMarginCounter"><span class="property">Window Margin:</span><input type="number" id="windowMarginCounterValue" class="cyanTextInput" min="0" value="8"></div>
+                <div class="propertyWrapper" id="windowBlurCounter"><span class="property">Window Blur:</span><input type="number" id="windowBlurCounterValue" class="cyanTextInput" min="0" value="10"></div>
+                <div class="propertyWrapper" id="glassOpacityCounter"><span class="property">Glass Opacity:</span><input type="number" id="glassOpacityCounterValue" class="cyanTextInput" min="0" max="100" value="40"></div>
+                <div class="propertyWrapper" id="glassBrightnessCounter"><span class="property">Glass brightness:</span><input type="number" id="glassBrightnessCounterValue" class="cyanTextInput" min="0" max="100" value="16"></div>
+                <div class="propertyWrapper" id="textShadow" style="display: flex;"><span class="property">Text Shadow:</span><div id="textShadowToggle" class="toggleTrack _checked"><input type="checkbox" id="textShadowCheckbox" class="toggleCheckbox" checked><div class="toggleHandle"></div></div></div>
+            </section>
+            <section id="addonsPanel" class="newCustomizerSettingsPanel">
+                
+            </section>
+        </div>
 
         <div class="mainButtonContainer">
             <button id="downloadCyanBtn" onclick="downloadCyan();" class="cyanBtn" data-tooltip-title="Download Customized Cyan"><i class="bi bi-download"></i>Download Customized Cyan</button>
