@@ -12,28 +12,28 @@
 }
 #app-mount .winButton-3UMjdg {
     order: unset !important;
-    margin-top: calc(9px + (var(--window-margin) * 2px)) !important;
-    height: 38px !important;
-    width: 54px !important;
+    margin-top: calc((var(--window-margin) * 2px)) !important;
+    height: 48px !important;
+    width: 64px !important;
     margin-left: 5px !important;
-    border-radius: 8px;
-    transition: .2s;
-    z-index: +5;
+    transition: .3s !important;
+    border-radius: var(--window-border-radius);
+    top: 0;
 }
 .winButtonClose-3Q8ZH5 {
     margin-left: 5px !important;
-    margin-right: calc(5px + (var(--window-margin) * 2px)) !important;
+    margin-right: calc((var(--window-margin) * 2px)) !important;
 }
 #app-mount .winButton-3UMjdg:hover {
-    background-color: var(--cyan-background-primary) !important;
+    background-color: var(--cyan-background-secondary) !important;
     box-shadow: var(--cyan-elevation-shadow);
 }
 #app-mount .typeWindows-2-g3UY {
     justify-content: end !important;
 }
-.title-31SJ6t, .container-ZMc96U {
-    padding-right: calc((54px * 3) + 20px);
-    -webkit-app-region: no-drag !important;
+.container-ZMc96U {
+    margin-right: calc((64px * 3) + (var(--window-margin) * 2px));
+    width: calc(100% - ((var(--window-margin) * 2px) * 2) - ((64px * 3))) !important;
 }
 .platform-win .container-1eFtFS::before, .platform-osx .container-1eFtFS::before {
     height: calc((100% - ((var(--window-margin) * 1px)) * 2)) !important;
@@ -46,5 +46,5 @@
     margin-top: calc(var(--window-margin) * 1px) !important;
 }
 #customcss-tab {
-    padding-right: calc(54px*2.5);
+    padding-right: calc((59px*3) + 21px);
 }
