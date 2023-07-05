@@ -5,7 +5,7 @@
 * @authorId 582170007505731594
 * @invite ZfPH6SDkMW
 * @description A plugin that allows for various Cyan features to work properly (When changing banner color on a non-nitro account, reload Discord or turn off and back on the plugin for the color to apply).
-* @version 1.5.1
+* @version 1.6.0
 * @github https://github.com/DaBluLite/Cyan/blob/master/CyanPlus.plugin.js
 * @github_raw https://github.com/DaBluLite/Cyan/raw/master/CyanPlus.plugin.js
 */
@@ -62,67 +62,6 @@ UserProfile(getCurrentUser().id).then(profile => {
 let nativeToast = (text, type) => {
     let toast = Toast.createToast(text, type);
     Toast.showToast(toast);
-}
-
-let textInput = (placeholdr, idd) => {
-    if (placeholdr) {
-        return createElement("input", {
-            type: "text",
-            class: "inputDefault-Ciwd-S input-3O04eu",
-            placeholder: placeholdr,
-            id: idd
-        })
-    } else {
-        return createElement("input", {
-            type: "text",
-            class: "inputDefault-Ciwd-S input-3O04eu"
-        })
-    }
-};
-
-let modalHeader = (text) => {
-    return createElement("h2", {
-        class: "h5-2feg8J eyebrow-2wJAoF"
-    }, text);
-}
-
-let modalBtn = (text, options) => {
-    options['class'] = "button-ejjZWC lookFilled-1H2Jvj colorBrand-2M3O3N sizeMedium-2oH5mg grow-2T4nbg cyanColorwayModalBtn";
-    return createElement("button", options, text);
-}
-let modalBtnGray = (text, options) => {
-    options['class'] = "button-ejjZWC lookFilled-1H2Jvj colorPrimary-2-Lusz sizeMedium-2oH5mg grow-2T4nbg cyanColorwayModalBtn";
-    return createElement("button", options, text);
-}
-let betaBadge = () => {
-    return createElement("div", {
-        class: "textBadge-1fdDPJ base-3IDx3L eyebrow-132Xza baseShapeRound-3epLEv",
-        style: "background-color: var(--brand-500);"
-    }, "Beta");
-}
-let alphaBadge = () => {
-    return createElement("div", {
-        class: "textBadge-1fdDPJ base-3IDx3L eyebrow-132Xza baseShapeRound-3epLEv",
-        style: "background-color: var(--background-secondary);"
-    }, "Alpha");
-}
-let versionBadge = (text, ver) => {
-    return createElement("div", {
-        class: "textBadge-1fdDPJ base-3IDx3L eyebrow-132Xza baseShapeRound-3epLEv",
-        style: "background-color: var(--background-secondary);"
-    }, text + " V" + ver);
-}
-let primaryBadge = (text) => {
-    return createElement("div", {
-        class: "textBadge-1fdDPJ base-3IDx3L eyebrow-132Xza baseShapeRound-3epLEv",
-        style: "background-color: var(--background-secondary);"
-    }, text);
-}
-let unstableBadge = () => {
-    return createElement("div", {
-        class: "textBadge-1fdDPJ base-3IDx3L eyebrow-132Xza baseShapeRound-3epLEv",
-        style: "background-color: var(--red-430);"
-    }, "Unstable");
 }
 
 const createElement = (type, props, ...children) => {
@@ -214,18 +153,6 @@ class SettingsRenderer {
         }
     }
 
-    handleChange = () => {
-        if (this._destroyed) return false;
-
-        if (this.state && _.isEqual(this.state, this.getState())) return;
-
-        this.mount();
-    }
-
-    getState() {
-
-    }
-
     render() {
         const container = this.container.cloneNode(true);
         const state = this.state = this.getState();
@@ -301,24 +228,44 @@ class SettingsRenderer {
         return container;
     }
 }
+
+function findInTree(tree, searchFilter, {
+	walkable = null,
+	ignore = []
+} = {}) {
+	if (typeof searchFilter === "string") {
+		if (tree.hasOwnProperty(searchFilter)) return tree[searchFilter];
+	} else if (searchFilter(tree)) {
+		return tree;
+	}
+	if (typeof tree !== "object" || tree == null) return undefined;
+	let tempReturn;
+	if (Array.isArray(tree)) {
+		for (const value of tree) {
+			tempReturn = findInTree(value, searchFilter, {
+				walkable,
+				ignore
+			});
+			if (typeof tempReturn != "undefined") return tempReturn;
+		}
+	} else {
+		const toWalk = walkable == null ? Object.keys(tree) : walkable;
+		for (const key of toWalk) {
+			if (!tree.hasOwnProperty(key) || ignore.includes(key)) continue;
+			tempReturn = findInTree(tree[key], searchFilter, {
+				walkable,
+				ignore
+			});
+			if (typeof tempReturn != "undefined") return tempReturn;
+		}
+	}
+	return tempReturn;
+};
+
+
 module.exports = class CyanPlus {
     constructor() {
-        this._config = {
-            info: {
-                name: "Cyan+",
-                authors: [
-                    {
-                        name: "DaBluLite",
-                        discord_id: "582170007505731594",
-                        github_username: "DaBluLite"
-                    }
-                ],
-                version: "1.4.0",
-                description: "A plugin that allows for various Cyan features to work properly (When changing banner color on a non-nitro account, reload Discord or turn off and back on the plugin for the color to apply).",
-                github: "https://github.com/DaBluLite/Cyan/blob/master/CyanPlus.plugin.js",
-                github_raw: "https://github.com/DaBluLite/Cyan/raw/master/CyanPlus.plugin.js"
-            }
-        };
+        this._config;
     }
     load() { }
     cyanUpdateNotice = (_showToast) => {
@@ -401,11 +348,11 @@ module.exports = class CyanPlus {
                     border-radius: 16px;
                     margin-left: 4px;
                 }
-                .panelTitleContainer-bZ3AM_ {
-                    margin-bottom: 6px;
-                }
                 .panelTitleContainer-bZ3AM_ > div {
                     overflow: visible;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
                 }
                 .panelTitleContainer-bZ3AM_ > div::after {
                     content: "Cyan+";
@@ -414,6 +361,9 @@ module.exports = class CyanPlus {
                     border: 2px solid var(--cyan-accent-color);
                     border-radius: 16px;
                     margin-left: 4px;
+                }
+                html:has(#activeColorway:not(:empty)) .panelTitleContainer-bZ3AM_ > div::after {
+                    content: "Cyan+ Colorways";
                 }
                 .panels-3wFtMD {
                     box-shadow: none;
@@ -494,6 +444,61 @@ module.exports = class CyanPlus {
                     align-items: center;
                     color: var(--header-primary);
                     font-weight: 600;
+                }
+                .lazyPreventingList {
+                    height: 100%;
+                    overflow-y: overlay;
+                }
+                #channels {
+                    height: fit-content;
+                }
+                .lazyPreventingList::-webkit-scrollbar-track {
+                    border-color: var(--scrollbar-thin-track);
+                    background-color: var(--scrollbar-thin-track);
+                    border: 2px solid var(--scrollbar-thin-track);
+                }
+                .lazyPreventingList::-webkit-scrollbar-thumb {
+                    background-clip: padding-box;
+                    border: 2px solid transparent;
+                    border-radius: 4px;
+                    background-color: var(--scrollbar-thin-thumb);
+                    min-height: 40px;
+                }
+                .lazyPreventingList::-webkit-scrollbar-corner {
+                    background-color: transparent;
+                }
+                .lazyPreventingList::-webkit-scrollbar-thumb,
+                .lazyPreventingList::-webkit-scrollbar-track {
+                    visibility: hidden;
+                }
+                .lazyPreventingList::-webkit-scrollbar {
+                    width: 8px;
+                    height: 8px;
+                }
+                .userPopoutOuter-1OHwPL > .userProfileInnerThemedNonPremium-2AJg-H > .bannerSVGWrapper-2CLfzN {
+                    scale: 1;
+                    width: 322px !important;
+                    height: 120px !important;
+                    min-width: unset !important;
+                    margin-left: 9px;
+                    margin-top: 9px;
+                    z-index: +1;
+                }
+                .userPopoutOuter-1OHwPL > .userProfileInnerThemedNonPremium-2AJg-H > .bannerSVGWrapper-2CLfzN:not(:has(.pencilContainer-18TrEJ)) {
+                    background-image: var(--u);
+                }
+                .userPopoutOuter-1OHwPL > .userProfileInnerThemedNonPremium-2AJg-H > .bannerSVGWrapper-2CLfzN:has(.pencilContainer-18TrEJ) {
+                    background-image: var(--u,var(--cyan-background-img));
+                }
+                #userpopout,
+                #userpopout > .userPopoutInner-nv9Y92 {
+                    width: 340px !important;
+                }
+                #userpopout > .userPopoutInner-nv9Y92 {
+                    background: var(--cyan-accent-color) !important;
+                }
+                .userPopoutOuter-1OHwPL > .userProfileInnerThemedNonPremium-2AJg-H > .bannerSVGWrapper-2CLfzN > foreignObject > div {
+                    filter: opacity(0);
                 }
                 `;
     start() {
@@ -647,11 +652,31 @@ module.exports = class CyanPlus {
                         }, "Reload Cyan+"), cyanColorwaysButton);
                 }
             } catch (e) { }
+
+
+            const popout = added.querySelector(`[class*="userPopoutOuter-"]`) ?? added;
+			if (popout && popout.matches(`[class*="userPopout-"],[class*="userPopoutOuter-"]`)) {
+				const userId = findInTree(BdApi.ReactUtils.getInternalInstance(popout), m => m?.user?.id || m?.userId || m?.message?.author?.id, {
+					walkable: ["memoizedProps", "return"]
+				});
+				popout.classList.add(`id-${userId?.userId ?? userId?.user?.id ?? userId?.message?.author?.id}`);
+				popout.id = "userpopout";
+
+                if(getComputedStyle(popout).getPropertyValue('--u')) {
+                    console.log(getComputedStyle(popout).getPropertyValue('--u'));
+                    popout.querySelector("." + BannerSVG?.bannerSVGWrapper).style = `
+                    position: static;
+                    `;
+                    popout.querySelector(".avatarWrapper-eenWra").style = `
+                    top: 76px;
+                    position: absolute !important;
+                    `;
+                }
+			}
         }
 
         if (!document.querySelector("bd-themes").innerHTML.includes("@import url(https://dablulite.github.io/Cyan/import.css);")) {
             if (!document.querySelector("bd-themes").innerHTML.includes("@import url(https://dablulite.github.io/Cyan/import-noicons.css);")) {
-                console.log("Cyan Not Detected");
                 try {
                     Array.from(document.getElementsByClassName("cyanAddonsBtn")).forEach(e => {
                         e.remove();
@@ -681,7 +706,9 @@ module.exports = class CyanPlus {
     }
 
     stop() {
-        document.getElementById("CyanPlus").remove();
+        try {
+            document.getElementById("CyanPlus").remove();
+        } catch(e) {console.warn("Failed to remove Stylesheet, probably has been removed, ignoring...")}
         const panelsElement = Array.from(document.body.getElementsByClassName(UserArea?.panels));
 
         if (panelsElement.length) {
