@@ -5,7 +5,7 @@
 * @authorId 582170007505731594
 * @invite ZfPH6SDkMW
 * @description A plugin that allows for various Cyan features to work properly (When changing banner color on a non-nitro account, reload Discord or turn off and back on the plugin for the color to apply).
-* @version 1.6.0
+* @version 1.7.0
 * @github https://github.com/DaBluLite/Cyan/blob/master/CyanPlus.plugin.js
 * @github_raw https://github.com/DaBluLite/Cyan/raw/master/CyanPlus.plugin.js
 */
@@ -62,10 +62,10 @@ UserProfile(getCurrentUser().id).then(profile => {
 let nativeToast = (text, type) => {
     let toast = Toast.createToast(text, type);
     Toast.showToast(toast);
-}
+};
 
 const createElement = (type, props, ...children) => {
-    if (typeof type === "function") return type({ ...props, children: [].concat() })
+    if (typeof type === "function") return type({ ...props, children: [].concat() });
 
     const node = document.createElement(type);
 
@@ -82,14 +82,14 @@ const createElement = (type, props, ...children) => {
 
     node.getElementByClass = (clss) => {
         return node.getElementsByClassName(clss)[0];
-    }
+    };
 
     return node;
 };
 
 const bdSwitch = (status, options) => {
     let _checked;
-    options['class'] = "bd-switch"
+    options['class'] = "bd-switch";
     this.switch = createElement("div", options);
 
     if (status == true) {
@@ -99,7 +99,7 @@ const bdSwitch = (status, options) => {
     this.switch.innerHTML = `<input type="checkbox" ${_checked}><div class="bd-switch-body"><svg class="bd-switch-slider" viewBox="0 0 28 20" preserveAspectRatio="xMinYMid meet"><rect class="bd-switch-handle" fill="white" x="4" y="0" height="20" width="20" rx="10"></rect><svg class="bd-switch-symbol" viewBox="0 0 20 20" fill="none"><path></path><path></path></svg></svg></div>`;
 
     return this.switch;
-}
+};
 
 const bdSwitchReact = (status, options) => {
     let _checked;
@@ -114,7 +114,7 @@ const bdSwitchReact = (status, options) => {
     this.switch.dangerouslySetInnerHTML(`<input type="checkbox" ${_checked}><div class="bd-switch-body"><svg class="bd-switch-slider" viewBox="0 0 28 20" preserveAspectRatio="xMinYMid meet"><rect class="bd-switch-handle" fill="white" x="4" y="0" height="20" width="20" rx="10"></rect><svg class="bd-switch-symbol" viewBox="0 0 20 20" fill="none"><path></path><path></path></svg></svg></div>`);
 
     return this.switch;
-}
+};
 
 class SettingsRenderer {
     constructor(target) {
@@ -155,7 +155,6 @@ class SettingsRenderer {
 
     render() {
         const container = this.container.cloneNode(true);
-        const state = this.state = this.getState();
 
         container._unmount = this.unmount.bind(this);
 
@@ -165,6 +164,16 @@ class SettingsRenderer {
             .then(res => res.json())
             .then(data => {
                 let _addons = data.addons;
+
+                let USRBGAddon = [
+                    {
+                        import: "@import url(https://itmesarah.github.io/usrbg/usrbg.css);",
+                        name: "USRBG"
+                    }
+                ];
+
+                _addons.push(USRBGAddon[0]);
+
                 _addons.forEach(addon => {
                     let checked = false;
                     if (document.getElementById("cyan-addon-" + addon.name)) {
@@ -192,7 +201,7 @@ class SettingsRenderer {
                                             }
                                             userSettings = {
                                                 activeAddons: newAddons
-                                            }
+                                            };
                                             BdApi.saveData("CyanPlus", "settings", userSettings);
                                         } catch (e) { }
                                     }
@@ -213,53 +222,53 @@ class SettingsRenderer {
                                             }
                                             userSettings = {
                                                 activeAddons: newAddons
-                                            }
+                                            };
                                             BdApi.saveData("CyanPlus", "settings", userSettings);
                                         }
                                     }
                                 }
                             }
                         })
-                    )
+                    );
                     container.append(cyanAddon);
-                })
-            })
+                });
+            });
 
         return container;
     }
 }
 
 function findInTree(tree, searchFilter, {
-	walkable = null,
-	ignore = []
+    walkable = null,
+    ignore = []
 } = {}) {
-	if (typeof searchFilter === "string") {
-		if (tree.hasOwnProperty(searchFilter)) return tree[searchFilter];
-	} else if (searchFilter(tree)) {
-		return tree;
-	}
-	if (typeof tree !== "object" || tree == null) return undefined;
-	let tempReturn;
-	if (Array.isArray(tree)) {
-		for (const value of tree) {
-			tempReturn = findInTree(value, searchFilter, {
-				walkable,
-				ignore
-			});
-			if (typeof tempReturn != "undefined") return tempReturn;
-		}
-	} else {
-		const toWalk = walkable == null ? Object.keys(tree) : walkable;
-		for (const key of toWalk) {
-			if (!tree.hasOwnProperty(key) || ignore.includes(key)) continue;
-			tempReturn = findInTree(tree[key], searchFilter, {
-				walkable,
-				ignore
-			});
-			if (typeof tempReturn != "undefined") return tempReturn;
-		}
-	}
-	return tempReturn;
+    if (typeof searchFilter === "string") {
+        if (tree.hasOwnProperty(searchFilter)) return tree[searchFilter];
+    } else if (searchFilter(tree)) {
+        return tree;
+    }
+    if (typeof tree !== "object" || tree == null) return undefined;
+    let tempReturn;
+    if (Array.isArray(tree)) {
+        for (const value of tree) {
+            tempReturn = findInTree(value, searchFilter, {
+                walkable,
+                ignore
+            });
+            if (typeof tempReturn != "undefined") return tempReturn;
+        }
+    } else {
+        const toWalk = walkable == null ? Object.keys(tree) : walkable;
+        for (const key of toWalk) {
+            if (!tree.hasOwnProperty(key) || ignore.includes(key)) continue;
+            tempReturn = findInTree(tree[key], searchFilter, {
+                walkable,
+                ignore
+            });
+            if (typeof tempReturn != "undefined") return tempReturn;
+        }
+    }
+    return tempReturn;
 };
 
 
@@ -285,7 +294,7 @@ module.exports = class CyanPlus {
                     if (data.split("--cyan-version: ")[1].split(";")[0] + "." + data.split("--cyan-subversion: ")[1].split(";")[0] + "." + data.split("--cyan-patch-version: ")[1].split(";")[0] > getComputedStyle(document.body).getPropertyValue('--cyan-version').replace(" ", "") + "." + getComputedStyle(document.body).getPropertyValue('--cyan-subversion').replace(" ", "") + cyanPatchVersion) {
                         console.log("Cyan Update found, sending update notice");
                         if (!document.querySelector("#bd-notices")) {
-                            document.querySelector(".base-2jDfDU").insertAdjacentElement('afterbegin', createElement("div", { id: "bd-notices" }))
+                            document.querySelector(".base-2jDfDU").insertAdjacentElement('afterbegin', createElement("div", { id: "bd-notices" }));
                         }
                         if (!document.querySelector("#cyan-update-notice")) {
                             let cyanNotice = createElement("div", {
@@ -311,14 +320,14 @@ module.exports = class CyanPlus {
                                             if (theme.css.includes("@import url(https://dablulite.github.io/Cyan/import.css);") || theme.css.includes("@import url(https://dablulite.github.io/Cyan/import-noicons.css);")) {
                                                 BdApi.Themes.reload(theme.id);
                                             }
-                                        })
+                                        });
                                         event.path[1].classList.add("bd-notice-closing");
                                         setTimeout(() => {
                                             e.path[1].remove();
                                         }, 300);
                                     }
                                 }, "Reload Cyan")
-                            )
+                            );
                             document.querySelector("#bd-notices").append(cyanNotice);
                         }
                     } else {
@@ -326,11 +335,10 @@ module.exports = class CyanPlus {
                             nativeToast("You're up-to-date!", 1);
                         }
                     }
-                })
+                });
         }
-    }
+    };
     css = `
-                @import url(https://itmesarah.github.io/usrbg/usrbg.css);
                 #profile-customization-tab .customizationSection-IGy2fS:has(.userProfileOuterUnthemed-11rPfA)::before {
                     content: none;
                 }
@@ -486,9 +494,13 @@ module.exports = class CyanPlus {
                 }
                 .userPopoutOuter-1OHwPL > .userProfileInnerThemedNonPremium-2AJg-H > .bannerSVGWrapper-2CLfzN:not(:has(.pencilContainer-18TrEJ)) {
                     background-image: var(--u);
+                    background-size: cover;
+                    background-repeat: no-repeat;
                 }
                 .userPopoutOuter-1OHwPL > .userProfileInnerThemedNonPremium-2AJg-H > .bannerSVGWrapper-2CLfzN:has(.pencilContainer-18TrEJ) {
                     background-image: var(--u,var(--cyan-background-img));
+                    background-size: cover;
+                    background-repeat: no-repeat;
                 }
                 #userpopout,
                 #userpopout > .userPopoutInner-nv9Y92 {
@@ -511,7 +523,7 @@ module.exports = class CyanPlus {
         if (settingsElement.length) {
             settingsElement.forEach(elem => {
                 elem.style = elem.style + ";--cyan-accent-color: " + currentUserAccentColor + "; --cyan-elevation-shadow: 0 0 0 1.5px " + currentUserAccentColor + ", 0 2px 10px 0 rgb(0 0 0 / 60%);";
-            })
+            });
         }
 
         if (panelsElement.length) {
@@ -524,13 +536,13 @@ module.exports = class CyanPlus {
                         clearInterval(styleLoop);
                     }
                 }, 200);
-            })
+            });
         }
 
         if (elements.length) {
             elements.forEach(elem => {
                 elem.style = elem.style + ";--cyan-accent-color: " + elem.querySelector("." + BannerSVG?.bannerSVGWrapper + " > foreignObject > div[style]").style.backgroundColor + "; --cyan-elevation-shadow: 0 0 0 1.5px " + elem.querySelector("." + BannerSVG?.bannerSVGWrapper + " > foreignObject > div[style]").style.backgroundColor + ", 0 2px 10px 0 rgb(0 0 0 / 60%);";
-            })
+            });
         }
 
         let cyanColorwaysButton = createElement("a", {
@@ -549,6 +561,16 @@ module.exports = class CyanPlus {
             .then(res => res.json())
             .then(data => {
                 let _addons = data.addons;
+
+                let USRBGAddon = [
+                    {
+                        import: "@import url(https://itmesarah.github.io/usrbg/usrbg.css);",
+                        name: "USRBG"
+                    }
+                ];
+
+                _addons.push(USRBGAddon[0]);
+
                 _addons.forEach(addon => {
                     if (document.querySelector("bd-styles")) {
                         if (!document.getElementById("cyan-addon-" + addon.name)) {
@@ -562,8 +584,8 @@ module.exports = class CyanPlus {
                             });
                         }
                     }
-                })
-            })
+                });
+            });
     }
 
     observer({ addedNodes, removedNodes }) {
@@ -577,13 +599,13 @@ module.exports = class CyanPlus {
             if (settingsElement.length) {
                 settingsElement.forEach(elem => {
                     elem.style = elem.style + ";--cyan-accent-color: " + currentUserAccentColor + "; --cyan-elevation-shadow: 0 0 0 1.5px " + currentUserAccentColor + ", 0 2px 10px 0 rgb(0 0 0 / 60%);";
-                })
+                });
             }
 
             if (panelsElement.length) {
                 panelsElement.forEach(elem => {
                     elem.style = elem.style + ";--cyan-accent-color: " + currentUserAccentColor + "; --cyan-elevation-shadow: 0 0 0 1.5px " + currentUserAccentColor + ", 0 2px 10px 0 rgb(0 0 0 / 60%);";
-                })
+                });
             }
 
             if (elements.length) {
@@ -591,7 +613,7 @@ module.exports = class CyanPlus {
                     elem.style = elem.style + ";--cyan-accent-color: " + elem.querySelector("." + BannerSVG?.bannerSVGWrapper + " > foreignObject > div[style]").style.backgroundColor + "; --cyan-elevation-shadow: 0 0 0 1.5px " + elem.querySelector("." + BannerSVG?.bannerSVGWrapper + " > foreignObject > div[style]").style.backgroundColor + ", 0 2px 10px 0 rgb(0 0 0 / 60%); background: var(--cyan-accent-color) !important;";
                     if (getComputedStyle(elem).getPropertyValue('--u')) {
                         if (elem.classList.contains("userPopoutInner-nv9Y92")) {
-                            elem.style = elem.style + ";--cyan-accent-color: " + elem.querySelector("." + BannerSVG?.bannerSVGWrapper + " > foreignObject > div[style]").style.backgroundColor + "; --cyan-elevation-shadow: 0 0 0 1.5px " + elem.querySelector("." + BannerSVG?.bannerSVGWrapper + " > foreignObject > div[style]").style.backgroundColor + ", 0 2px 10px 0 rgb(0 0 0 / 60%); background: var(--cyan-accent-color) !important;max-width: 340px;"
+                            elem.style = elem.style + ";--cyan-accent-color: " + elem.querySelector("." + BannerSVG?.bannerSVGWrapper + " > foreignObject > div[style]").style.backgroundColor + "; --cyan-elevation-shadow: 0 0 0 1.5px " + elem.querySelector("." + BannerSVG?.bannerSVGWrapper + " > foreignObject > div[style]").style.backgroundColor + ", 0 2px 10px 0 rgb(0 0 0 / 60%); background: var(--cyan-accent-color) !important;max-width: 340px;";
                         }
                         elem.querySelector("." + BannerSVG?.bannerSVGWrapper).style += `
                                     scale: 1 !important;
@@ -616,7 +638,7 @@ module.exports = class CyanPlus {
                             elem.querySelector(".avatarWrapperNormal-ahVUaC").style = elem.querySelector(".avatarWrapperNormal-ahVUaC").style + ";position: absolute !important; top: 76px;";
                         } catch (e) { }
                     }
-                })
+                });
             }
 
             let addonsButton = createElement("button", {
@@ -655,14 +677,14 @@ module.exports = class CyanPlus {
 
 
             const popout = added.querySelector(`[class*="userPopoutOuter-"]`) ?? added;
-			if (popout && popout.matches(`[class*="userPopout-"],[class*="userPopoutOuter-"]`)) {
-				const userId = findInTree(BdApi.ReactUtils.getInternalInstance(popout), m => m?.user?.id || m?.userId || m?.message?.author?.id, {
-					walkable: ["memoizedProps", "return"]
-				});
-				popout.classList.add(`id-${userId?.userId ?? userId?.user?.id ?? userId?.message?.author?.id}`);
-				popout.id = "userpopout";
+            if (popout && popout.matches(`[class*="userPopout-"],[class*="userPopoutOuter-"]`)) {
+                const userId = findInTree(BdApi.ReactUtils.getInternalInstance(popout), m => m?.user?.id || m?.userId || m?.message?.author?.id, {
+                    walkable: ["memoizedProps", "return"]
+                });
+                popout.classList.add(`id-${userId?.userId ?? userId?.user?.id ?? userId?.message?.author?.id}`);
+                popout.id = "userpopout";
 
-                if(getComputedStyle(popout).getPropertyValue('--u')) {
+                if (getComputedStyle(popout).getPropertyValue('--u')) {
                     console.log(getComputedStyle(popout).getPropertyValue('--u'));
                     popout.querySelector("." + BannerSVG?.bannerSVGWrapper).style = `
                     position: static;
@@ -672,7 +694,7 @@ module.exports = class CyanPlus {
                     position: absolute !important;
                     `;
                 }
-			}
+            }
         }
 
         if (!document.querySelector("bd-themes").innerHTML.includes("@import url(https://dablulite.github.io/Cyan/import.css);")) {
@@ -680,7 +702,7 @@ module.exports = class CyanPlus {
                 try {
                     Array.from(document.getElementsByClassName("cyanAddonsBtn")).forEach(e => {
                         e.remove();
-                    })
+                    });
                 } catch (e) { }
                 try {
                     document.getElementById("CyanPlus").remove();
@@ -708,13 +730,13 @@ module.exports = class CyanPlus {
     stop() {
         try {
             document.getElementById("CyanPlus").remove();
-        } catch(e) {console.warn("Failed to remove Stylesheet, probably has been removed, ignoring...")}
+        } catch (e) { console.warn("Failed to remove Stylesheet, probably has been removed, ignoring..."); }
         const panelsElement = Array.from(document.body.getElementsByClassName(UserArea?.panels));
 
         if (panelsElement.length) {
             panelsElement.forEach(elem => {
                 elem.style = "";
-            })
+            });
         }
 
         try {
@@ -724,14 +746,24 @@ module.exports = class CyanPlus {
             .then(res => res.json())
             .then(data => {
                 let _addons = data.addons;
+
+                let USRBGAddon = [
+                    {
+                        import: "@import url(https://itmesarah.github.io/usrbg/usrbg.css);",
+                        name: "USRBG"
+                    }
+                ];
+
+                _addons.push(USRBGAddon[0]);
+
                 _addons.forEach(addon => {
                     if (document.querySelector("bd-styles")) {
                         try {
                             document.getElementById("cyan-addon-" + addon.name).remove();
                         } catch (e) { }
                     }
-                })
-            })
+                });
+            });
     }
 
     getSettingsPanel() {
