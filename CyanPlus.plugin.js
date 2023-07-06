@@ -5,7 +5,7 @@
 * @authorId 582170007505731594
 * @invite ZfPH6SDkMW
 * @description A plugin that allows for various Cyan features to work properly (When changing banner color on a non-nitro account, reload Discord or turn off and back on the plugin for the color to apply).
-* @version 1.7.0
+* @version 1.8.0
 * @github https://github.com/DaBluLite/Cyan/blob/master/CyanPlus.plugin.js
 * @github_raw https://github.com/DaBluLite/Cyan/raw/master/CyanPlus.plugin.js
 */
@@ -125,7 +125,7 @@ class SettingsRenderer {
         target._patched = true;
 
         this.container = createElement("div", {
-            className: "colorwaySettingsWrapper",
+            className: "cyanPlusSettingsWrapper",
         },);
 
         DOM.onRemoved(target, () => this.unmount());
@@ -158,7 +158,12 @@ class SettingsRenderer {
 
         container._unmount = this.unmount.bind(this);
 
-        container.append(createElement("div", { class: "cyan-settings-header" }, "Addons"));
+        container.append(createElement("div", {
+            class: "cyan-settings-header bd-settings-title bd-settings-group-title",
+            onclick: (e) => {
+                e.srcElement.parentElement.classList.toggle("expanded");
+            }
+        }, "Addons"));
 
         fetch("https://dablulite.github.io/Cyan/Addons/index.json")
             .then(res => res.json())
@@ -428,12 +433,17 @@ module.exports = class CyanPlus {
                     z-index: +2;
                 }
                 .cyan-addon {
-                    display: flex;
+                    display: none;
                     flex-direction: row;
                     justify-content: space-between;
                     align-items: center;
                     color: var(--header-secondary);
                     font-weight: 400;
+                    min-height: 32px;
+                    height: fit-content;
+                }
+                .cyan-addon:not(:last-child) {
+                    border-bottom: 1px solid var(--cyan-background-primary);
                 }
                 #CyanPlusSettings {
                     display: flex;
@@ -441,21 +451,41 @@ module.exports = class CyanPlus {
                     gap: 12px;
                 }
                 .cyan-addon > span {
-                    white-space: nowrap; 
-                    overflow: hidden;
-                    text-overflow: ellipsis;
+                    max-width: 50%;
+                    text-wrap: wrap;
+                    height: fit-content;
+                    line-height: 22px;
                 }
                 .cyan-settings-header {
                     display: flex;
-                    flex-direction: row;
                     justify-content: space-between;
                     align-items: center;
-                    color: var(--header-primary);
-                    font-weight: 600;
+                    margin-bottom: 0 !important;
+                }
+                .cyan-settings-header::after {
+                    content: "";
+                    -webkit-mask: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FscXVlXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSItOTUwIDUzMiAxOCAxOCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAtOTUwIDUzMiAxOCAxODsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4NCgkuc3Qwe2ZpbGw6bm9uZTt9DQoJLnN0MXtmaWxsOm5vbmU7c3Ryb2tlOiNGRkZGRkY7c3Ryb2tlLXdpZHRoOjEuNTtzdHJva2UtbWl0ZXJsaW1pdDoxMDt9DQo8L3N0eWxlPg0KPHBhdGggY2xhc3M9InN0MCIgZD0iTS05MzIsNTMydjE4aC0xOHYtMThILTkzMnoiLz4NCjxwb2x5bGluZSBjbGFzcz0ic3QxIiBwb2ludHM9Ii05MzYuNiw1MzguOCAtOTQxLDU0My4yIC05NDUuNCw1MzguOCAiLz4NCjwvc3ZnPg0K)center/contain no-repeat;
+                    mask: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FscXVlXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSItOTUwIDUzMiAxOCAxOCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAtOTUwIDUzMiAxOCAxODsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4NCgkuc3Qwe2ZpbGw6bm9uZTt9DQoJLnN0MXtmaWxsOm5vbmU7c3Ryb2tlOiNGRkZGRkY7c3Ryb2tlLXdpZHRoOjEuNTtzdHJva2UtbWl0ZXJsaW1pdDoxMDt9DQo8L3N0eWxlPg0KPHBhdGggY2xhc3M9InN0MCIgZD0iTS05MzIsNTMydjE4aC0xOHYtMThILTkzMnoiLz4NCjxwb2x5bGluZSBjbGFzcz0ic3QxIiBwb2ludHM9Ii05MzYuNiw1MzguOCAtOTQxLDU0My4yIC05NDUuNCw1MzguOCAiLz4NCjwvc3ZnPg0K)center/contain no-repeat;
+                    background: var(--header-secondary);
+                    height: 20px;
+                    width: 20px;
+                    display: inline-block;
+                    vertical-align: bottom;
+                    transition: transform .3s ease;
+                    transform: rotate(0);
+                    order: 3;
+                    transform: rotate(90deg);
+                }
+                .expanded > .cyan-settings-header::after {
+                    transform: none;
                 }
                 .lazyPreventingList {
                     height: 100%;
                     overflow-y: overlay;
+                }
+                .cyanPlusSettingsWrapper.expanded > .cyan-addon {
+                    display: flex;
+                    animation: msganim .4s ease;
                 }
                 #channels {
                     height: fit-content;
@@ -511,6 +541,27 @@ module.exports = class CyanPlus {
                 }
                 .userPopoutOuter-1OHwPL > .userProfileInnerThemedNonPremium-2AJg-H > .bannerSVGWrapper-2CLfzN > foreignObject > div {
                     filter: opacity(0);
+                }
+                .cyanPlusSettingsWrapper {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 20px;
+                    width: 564px;
+                    box-sizing: border-box;
+                }
+                #cyanplus-settings-container {
+                    max-width: 564px;
+                    width: 100%;
+                }
+                .root-1CAIjD:has(.cyanPlusSettingsWrapper) {
+                    width: fit-content;
+                    min-height: unset;
+                }
+                .root-1CAIjD:has(.cyanPlusSettingsWrapper) .content-1OG56Q {
+                    min-height: unset;
+                }
+                .root-1CAIjD:has(.cyanPlusSettingsWrapper) .footer-IubaaS {
+                    display: none;
                 }
                 `;
     start() {
