@@ -31,18 +31,18 @@
 #app-mount .typeWindows-2-g3UY {
     justify-content: end !important;
 }
-.container-ZMc96U {
+#app-mount .container-ZMc96U {
     margin-right: calc((64px * 3) + (var(--window-margin) * 2px));
     width: calc(100% - ((var(--window-margin) * 2px) * 2) - ((64px * 3))) !important;
 }
-.platform-win .container-1eFtFS::before, .platform-osx .container-1eFtFS::before {
+.platform-win #app-mount .container-1eFtFS::before, .platform-osx #app-mount .container-1eFtFS::before {
     height: calc((100% - ((var(--window-margin) * 1px)) * 2)) !important;
 }
 .platform-win #app-mount .guilds-2JjMmN {
     margin-top: calc(var(--window-margin) * 1px) !important;
     height: calc((100% - ((var(--window-margin) * 1px)) * 2)) !important;
 }
-.platform-win .sidebar-1tnWFu {
+.platform-win #app-mount .sidebar-1tnWFu {
     margin-top: calc(var(--window-margin) * 1px) !important;
 }
 #customcss-tab {
