@@ -24,6 +24,29 @@
 * [@lucysim9](https://github.com/lucysim9)/lucism#3987
 * [@Lavender-Discord](https://github.com/Lavender-Discord) - [@Obscure-Git](https://github.com/Obscure-Git)/Obscure.#4719
 
+# Customizing:
+[NEW] Presets are now in DiscordColorways! Select the "Cyan" preset to easiy generate colors for Cyan.
+
+Colors:
+* Accent: `--cyan-accent-color`
+* Primary: `--cyan-background-primary`
+* Tertiary `--cyan-background-secondary`
+
+Cyan uses the following values to change the way it looks:
+```css
+:root {
+	--cyan-background-primary: hsla(0deg 0% var(--cyan-background-lightness) / 40%); /*The "glass" color*/
+	--cyan-elevation-shadow: 0 0 0 1.5px var(--cyan-accent-color), 0 2px 10px 0 rgb(0 0 0 / 60%); /*The border/shadow*/
+	--cyan-font: 'Montserrat', 'Open Sans'; /*The main fonts*/
+	--cyan-background-img: url(https://dablulite.github.io/Cyan/cyan-waves.png); /*The Background image*/
+	--cyan-accent-color: #009f88; /*The accent color for various UI elements*/
+	--cyan-blur-radius: 10px; /*How blurry blurry surfaces should be*/
+	--cyan-text-shadow: 1; /*If the test shadow should be on or off (1 or 0 is true or false)*/
+	--window-margin: 8; /*The margins around the windows*/
+	--window-border-radius: 8px; /*Their border radii*/
+}
+```
+
 # Screenshots
 <div align='center'>
 <img src="https://github.com/DaBluLite/Cyan/blob/master/screenshots/cyan-screenshot-1.png?raw=true"/>
