@@ -25,7 +25,7 @@
 * [@Lavender-Discord](https://github.com/Lavender-Discord) - [@Obscure-Git](https://github.com/Obscure-Git)/Obscure.#4719
 
 # Customizing:
-[NEW] Presets are now in DiscordColorways! Select the "Cyan" preset to easiy generate colors for Cyan.
+[NEW] Presets are now in [DiscordColorways](https://raw.githubusercontent.com/DaBluLite/DiscordColorways/master/DiscordColorways.plugin.js)! Select the "Cyan" preset to easiy generate colors for Cyan.
 
 Colors:
 * Accent: `--cyan-accent-color`
