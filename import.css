@@ -3,8 +3,8 @@
 @import url("https://dablulite.github.io/CyanBootstrapIcons/import.css");
 :root {
   --cyan-version: 16;
-  --cyan-subversion: 7;
-  --cyan-patch-version: 6;
+  --cyan-subversion: 8;
+  --cyan-patch-version: 0;
   --cyan-text-shadow: 0;
   --cyan-blur-secondary: 0;
   --cyan-background-primary-alt: var(--cyan-background-primary);
@@ -7514,5 +7514,141 @@ div:not(.bannerVisible-Vkyg1I) > .animatedContainer-2laTjx,
   margin-left: 4px;
 }
 .nowPlayingColumn-1eCBCN .itemCard-3Etziu {
+    overflow: visible;
+}
+#app-mount .searchBar-20T4t6 {
+    background-color: transparent !important;
+    gap: 12px;
+    padding-right: 0;
+    border: none;
+    box-shadow: none;
+    overflow: visible;
+}
+#app-mount .directoryContainer-z-0pgp {
+    background-color: var(--cyan-background-primary);
+    backdrop-filter: blur(var(--cyan-blur-radius));
+    padding-right: 32px !important;
+    padding-left: 32px;
+    padding-top: 56px;
+}
+#app-mount .directoryContainer-z-0pgp > .content-3C5Io5 {
+    width: 100%;
+    max-width: unset;
+}
+#app-mount .app-3xd6d0:has(>.directoryContainer-z-0pgp) {
+    background: var(--cyan-background-img);
+}
+.rightImage-TOZ-q9 {
+    display: none;
+}
+#app-mount .directoryContainer-z-0pgp .headerName-2jZqFB + a {
+    border-radius: 8px;
+    border: 1px solid var(--cyan-accent-color);
+    width: auto;
+    height: 32px;
+    min-width: 60px;
+    min-height: 32px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    transition: .15s ease;
+    padding: 2px 16px;
+}
+#app-mount .directoryContainer-z-0pgp .headerName-2jZqFB + a:hover {
+    box-shadow: var(--cyan-elevation-shadow);
+    background-color: var(--cyan-background-secondary);
+}
+#app-mount .closeWrapper-3LFoyE:has(+.directoryContainer-z-0pgp) .closeIconNotMobile-e2ElFI {
+    top: 16px;
+    right: 24px;
+}
+#app-mount .closeWrapper-3LFoyE:has(+.directoryContainer-z-0pgp) .closeContentNotMobile-1HRpiO {
+    max-width: unset;
+}
+.typeThread-2Aqh6X.wrapper-NhbLHG {
+    margin-left: 0;
+}
+#app-mount .wrapper-NhbLHG .link-1_kTxV {
+    background: none;
+}
+.wrapper-NhbLHG {
+    margin-left: 0;
+}
+#app-mount .modeSelected-3DmyhH::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: calc(100% - 16px);
+    border-radius: 8px;
+    top: 8px;
+    background-color: var(--header-primary);
+    left: 6px;
+    z-index: +1;
+}
+#app-mount .containerDefault-YUSmu3 > .modeUnread-3Cxepe > .unread-36eUEm {
+    left: 6px;
+}
+.container-1Bj0eq {
+    border-left: none;
+}
+.container-1Bj0eq .containerDefault-YUSmu3::before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: calc(50% + 4px);
+    border-bottom-left-radius: 12px;
+    top: -4px;
+    border-left: 3px solid var(--header-primary);
+    border-bottom: 3px solid var(--header-primary);
+    left: 0;
+    z-index: +1;
+    transition: .2s;
+}
+.container-1Bj0eq .containerDefault-YUSmu3:has(+.containerDefault-YUSmu3)::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: calc(50% + 4px);
+    border-top-left-radius: 12px;
+    bottom: -4px;
+    border-left: 3px solid var(--header-primary);
+    border-top: 3px solid var(--header-primary);
+    left: 0;
+    z-index: +1;
+    transition: .2s;
+}
+.container-1Bj0eq .containerDefault-YUSmu3:hover::before,
+.container-1Bj0eq .containerDefault-YUSmu3:hover::after {
+    transform: scale(.99) translateX(1px);
+}
+.container-1Bj0eq > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+#app-mount .max-width-2sPUCJ,
+#app-mount .max-width-30Gozx {
+    max-width: unset;
+}
+#app-mount .settingsTabBar-1Fi_kb {
+    border-bottom: none;
+    gap: 4px;
+}
+#app-mount .settingsTabBar-1Fi_kb > div {
+    color: #fff;
+    padding: 8px 16px;
+}
+#app-mount .container-2WMFjc,
+#app-mount .container-jV-A82,
+#app-mount .container-1iKw09 {
+    border-radius: 16px;
+    box-shadow: var(--cyan-elevation-shadow);
+    background-color: var(--cyan-background-secondary);
+    overflow: visible;
+}
+#app-mount .contentPanel-2uDEUG,
+#app-mount .container-TT--xs,
+.banner-3Hf665,
+.featureCards-1Jt7gz {
     overflow: visible;
 }
