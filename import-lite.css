@@ -3,8 +3,8 @@
 @import url("https://dablulite.github.io/CyanBootstrapIcons/import.css");
 :root {
   --cyan-version: 16;
-  --cyan-subversion: 7;
-  --cyan-patch-version: 6;
+  --cyan-subversion: 8;
+  --cyan-patch-version: 1;
   --cyan-text-shadow: 0;
   --cyan-blur-secondary: 0;
   --cyan-background-primary-alt: var(--cyan-background-primary);
@@ -7026,4 +7026,228 @@ div:not(.bannerVisible-Vkyg1I) > .animatedContainer-2laTjx,
 }
 .nowPlayingColumn-1eCBCN .itemCard-3Etziu {
     overflow: visible;
+}
+#app-mount .searchBar-20T4t6 {
+    background-color: transparent !important;
+    gap: 12px;
+    padding-right: 0;
+    border: none;
+    box-shadow: none;
+    overflow: visible;
+}
+#app-mount .directoryContainer-z-0pgp {
+    background-color: var(--cyan-background-primary);
+    backdrop-filter: blur(var(--cyan-blur-radius));
+    padding-right: 32px !important;
+    padding-left: 32px;
+    padding-top: 56px;
+}
+#app-mount .directoryContainer-z-0pgp > .content-3C5Io5 {
+    width: 100%;
+    max-width: unset;
+}
+#app-mount .app-3xd6d0:has(>.directoryContainer-z-0pgp) {
+    background: var(--cyan-background-img);
+}
+.rightImage-TOZ-q9 {
+    display: none;
+}
+#app-mount .directoryContainer-z-0pgp .headerName-2jZqFB + a {
+    border-radius: 8px;
+    border: 1px solid var(--cyan-accent-color);
+    width: auto;
+    height: 32px;
+    min-width: 60px;
+    min-height: 32px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    transition: .15s ease;
+    padding: 2px 16px;
+}
+#app-mount .directoryContainer-z-0pgp .headerName-2jZqFB + a:hover {
+    box-shadow: var(--cyan-elevation-shadow);
+    background-color: var(--cyan-background-secondary);
+}
+#app-mount .closeWrapper-3LFoyE:has(+.directoryContainer-z-0pgp) .closeIconNotMobile-e2ElFI {
+    top: 16px;
+    right: 24px;
+}
+#app-mount .closeWrapper-3LFoyE:has(+.directoryContainer-z-0pgp) .closeContentNotMobile-1HRpiO {
+    max-width: unset;
+}
+.typeThread-2Aqh6X.wrapper-NhbLHG {
+    margin-left: 0;
+}
+#app-mount .wrapper-NhbLHG .link-1_kTxV {
+    background: none;
+}
+.wrapper-NhbLHG {
+    margin-left: 0;
+}
+#app-mount .modeSelected-3DmyhH::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: calc(100% - 16px);
+    border-radius: 8px;
+    top: 8px;
+    background-color: var(--header-primary);
+    left: 6px;
+    z-index: +1;
+}
+#app-mount .containerDefault-YUSmu3 > .modeUnread-3Cxepe > .unread-36eUEm {
+    left: 6px;
+}
+.container-1Bj0eq {
+    border-left: none;
+}
+.container-1Bj0eq .containerDefault-YUSmu3::before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: calc(50% + 4px);
+    border-bottom-left-radius: 12px;
+    top: -4px;
+    border-left: 3px solid var(--header-primary);
+    border-bottom: 3px solid var(--header-primary);
+    left: 0;
+    z-index: +1;
+    transition: .2s;
+}
+.container-1Bj0eq .containerDefault-YUSmu3:has(+.containerDefault-YUSmu3)::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: calc(50% + 4px);
+    border-top-left-radius: 12px;
+    bottom: -4px;
+    border-left: 3px solid var(--header-primary);
+    border-top: 3px solid var(--header-primary);
+    left: 0;
+    z-index: +1;
+    transition: .2s;
+}
+.container-1Bj0eq .containerDefault-YUSmu3:hover::before,
+.container-1Bj0eq .containerDefault-YUSmu3:hover::after {
+    transform: scale(.99) translateX(1px);
+}
+.container-1Bj0eq > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+#app-mount .max-width-2sPUCJ,
+#app-mount .max-width-30Gozx {
+    max-width: unset;
+}
+#app-mount .settingsTabBar-1Fi_kb {
+    border-bottom: none;
+    gap: 4px;
+}
+#app-mount .settingsTabBar-1Fi_kb > div {
+    color: #fff;
+    padding: 8px 16px;
+}
+#app-mount .container-2WMFjc,
+#app-mount .container-jV-A82,
+#app-mount .container-1iKw09 {
+    border-radius: 16px;
+    box-shadow: var(--cyan-elevation-shadow);
+    background-color: var(--cyan-background-secondary);
+    overflow: visible;
+}
+#app-mount .contentPanel-2uDEUG,
+#app-mount .container-TT--xs,
+.banner-3Hf665,
+.featureCards-1Jt7gz {
+    overflow: visible;
+}
+.channel-1Shao0:has(~.privateChannelsHeaderContainer-1UWASm) {
+    width: calc((100% / 2) - 10px);
+    height: 52px;
+    float: left;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+.privateChannelsHeaderContainer-1UWASm {
+    width: 100%;
+}
+.channel-1Shao0:has(~.privateChannelsHeaderContainer-1UWASm) .interactiveSelected-29CP8y::before,
+.channel-1Shao0:has(~.privateChannelsHeaderContainer-1UWASm) .selected-2TbFuo .content-1gYQeQ::before {
+    content: none;
+}
+.channel-1Shao0:has(~.privateChannelsHeaderContainer-1UWASm) .interactive-26HRN_ {
+    padding-right: 0;
+}
+.channel-1Shao0:has(~.privateChannelsHeaderContainer-1UWASm) .content-66wMin {
+    display: none;
+}
+.channel-1Shao0:has(~.privateChannelsHeaderContainer-1UWASm) .avatar-1HDIsL {
+    margin-right: 0;
+}
+.channel-1Shao0:has(~.privateChannelsHeaderContainer-1UWASm) .avatarWithText-1tTt2S {
+    justify-content: center;
+}
+.containerSidenav-3qiKqP {
+    background-color: var(--cyan-background-primary);
+    border-radius: var(--window-border-radius-calc);
+    box-shadow: var(--cyan-elevation-shadow);
+    backdrop-filter: blur(var(--cyan-blur-radius));
+    margin: calc(var(--window-margin) * 1px);
+    margin-left: 0;
+}
+#app-mount .contentPanel-2uDEUG {
+    overflow: overlay;
+    height: 100%;
+    box-sizing: border-box;
+}
+#app-mount .contentPanel-2uDEUG::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+}
+*::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+*::-webkit-scrollbar-thumb {
+    transition: 0.2s;
+    background-color: transparent;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: var(--cyan-background-secondary);
+    border-radius: 10px;
+    min-height: 40px;
+}
+#app-mount .contentPanel-2uDEUG::-webkit-scrollbar-thumb,
+#app-mount .contentPanel-2uDEUG::-webkit-scrollbar-track {
+    border: 4px solid transparent;
+    background-clip: padding-box;
+    border-radius: 8px;
+}
+.topPill-2vcLsa .item-2GWPIy {
+    padding: 5px 10px;
+    border-radius: 50px;
+    border: 1px solid var(--background-modifier-selected);
+    margin: 0;
+}
+.topPill-2vcLsa {
+    gap: 8px;
+}
+.sideNavContent-D1tzYo {
+    width: 100%;
+    max-width: unset;
+    box-sizing: border-box;
+}
+.container-3Ok1v9 {
+    max-width: unset;
+}
+.linkingBanner-rB7UPH,
+.box-3QCU9H {
+    background-color: var(--cyan-background-secondary);
+    border-radius: 16px;
+    box-shadow: var(--cyan-elevation-shadow);
+}
+.container-2rzSkx,
+.container-3Ok1v9 {
+    padding: 8px;
 }
