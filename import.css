@@ -4,7 +4,7 @@
 :root {
   --cyan-version: 16;
   --cyan-subversion: 8;
-  --cyan-patch-version: 1;
+  --cyan-patch-version: 2;
   --cyan-text-shadow: 0;
   --cyan-blur-secondary: 0;
   --cyan-background-primary-alt: var(--cyan-background-primary);
@@ -7652,7 +7652,7 @@ div:not(.bannerVisible-Vkyg1I) > .animatedContainer-2laTjx,
 .featureCards-1Jt7gz {
     overflow: visible;
 }
-.channel-1Shao0:has(~.privateChannelsHeaderContainer-1UWASm) {
+.channel-1Shao0:has(~.privateChannelsHeaderContainer-1UWASm):not(.pinned-0lM4wD) {
     width: calc((100% / 2) - 10px);
     height: 52px;
     float: left;
@@ -7662,20 +7662,20 @@ div:not(.bannerVisible-Vkyg1I) > .animatedContainer-2laTjx,
 .privateChannelsHeaderContainer-1UWASm {
     width: 100%;
 }
-.channel-1Shao0:has(~.privateChannelsHeaderContainer-1UWASm) .interactiveSelected-29CP8y::before,
-.channel-1Shao0:has(~.privateChannelsHeaderContainer-1UWASm) .selected-2TbFuo .content-1gYQeQ::before {
+.channel-1Shao0:has(~.privateChannelsHeaderContainer-1UWASm):not(.pinned-0lM4wD) .interactiveSelected-29CP8y::before,
+.channel-1Shao0:has(~.privateChannelsHeaderContainer-1UWASm):not(.pinned-0lM4wD) .selected-2TbFuo .content-1gYQeQ::before {
     content: none;
 }
-.channel-1Shao0:has(~.privateChannelsHeaderContainer-1UWASm) .interactive-26HRN_ {
+.channel-1Shao0:has(~.privateChannelsHeaderContainer-1UWASm):not(.pinned-0lM4wD) .interactive-26HRN_ {
     padding-right: 0;
 }
-.channel-1Shao0:has(~.privateChannelsHeaderContainer-1UWASm) .content-66wMin {
+.channel-1Shao0:has(~.privateChannelsHeaderContainer-1UWASm):not(.pinned-0lM4wD) .content-66wMin {
     display: none;
 }
-.channel-1Shao0:has(~.privateChannelsHeaderContainer-1UWASm) .avatar-1HDIsL {
+.channel-1Shao0:has(~.privateChannelsHeaderContainer-1UWASm):not(.pinned-0lM4wD) .avatar-1HDIsL {
     margin-right: 0;
 }
-.channel-1Shao0:has(~.privateChannelsHeaderContainer-1UWASm) .avatarWithText-1tTt2S {
+.channel-1Shao0:has(~.privateChannelsHeaderContainer-1UWASm):not(.pinned-0lM4wD) .avatarWithText-1tTt2S {
     justify-content: center;
 }
 .containerSidenav-3qiKqP {
@@ -7739,4 +7739,12 @@ div:not(.bannerVisible-Vkyg1I) > .animatedContainer-2laTjx,
 .container-2rzSkx,
 .container-3Ok1v9 {
     padding: 8px;
+}
+#app-mount .listItem-3SmSlK.frame-oXWS21 .childWrapper-1j_1ub {
+    height: 24px;
+    border-radius: 8px;
+    width: 100%;
+}
+#app-mount .listItem-3SmSlK.frame-oXWS21 > div {
+    width: 56px;
 }
