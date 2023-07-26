@@ -4,7 +4,7 @@
 :root {
   --cyan-version: 16;
   --cyan-subversion: 8;
-  --cyan-patch-version: 3;
+  --cyan-patch-version: 4;
   --cyan-text-shadow: 0;
   --cyan-blur-secondary: 0;
   --cyan-background-primary-alt: var(--cyan-background-primary);
@@ -7792,4 +7792,14 @@ div:not(.bannerVisible-Vkyg1I) > .animatedContainer-2laTjx,
 .templatesList-uohY49 > .container-x8Y1ix:hover {
     background-color: transparent;
     box-shadow: var(--cyan-elevation-shadow);
+}
+.headerText-2z4IhQ {
+  overflow: visible !important;
+  display: flex;
+  gap: 8px;
+  width: fit-content;
+  float: left;
+}
+.header-2jRmjb {
+  overflow: visible !important;
 }
