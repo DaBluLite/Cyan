@@ -400,7 +400,7 @@ body {
 }
 .container-32HW5s {
     width: 100%;
-    max-width: unset;
+    max-width: calc(var(--cyan-channelbar-width) - 40px);
     box-sizing: border-box;
     padding-right: 12px;
 }
