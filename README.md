@@ -2,7 +2,7 @@
 <img src="https://github.com/DaBluLite/Cyan/blob/master/cyan-addon-banner.png?raw=true"/>
 </div>
 
-<h1 background="#ff0000">Cyan - A Clean and Customizable Discord theme, with custom background support</h1>
+# Cyan - Clean and Customizable, with custom background support
 
 [![BetterDiscord][bd-badge]][bd-link] [![Cyan Customizer][cc-badge]][cc-link] [![Cyan Addons][addon-badge]][addon-link] [![Cyan+][helper-badge]][helper-link]
 
@@ -22,7 +22,20 @@
 * [@ObjectiveSlayer](https://github.com/ObjectiveSlayer)/carrot#8812
 * [@maenDisease](https://github.com/maenDisease)/Disease#3749 
 * [@lucysim9](https://github.com/lucysim9)/lucism#3987
-* [@Lavender-Discord](https://github.com/Lavender-Discord) - [@Obscure-Git](https://github.com/Obscure-Git)/Obscure.#4719
+
+## [NEW] Cyan Rewrite is here! Faster and lighter than ever, Cyan is ready to be your next theme. Available only on [Vesktop](https://github.com/Vencord/Vesktop) for the time being.
+### Installation:
+* Donwload Cyan from any official source
+* Open the `theme.css` file on any text editor
+* Replace `import.css` with `remaster.css`
+* In Vesktop, go to Settings > Vencord > Themes > Local Themes > Open themes folder
+* Drag and drop the `theme.css` file from its current folder to Vesktop's themes folder
+* Settings > Vencord > Themes > Local Themes > Load Missing Themes
+* You're done! This can be done with any Cyan version, as the import fully supports *most* of Cyan's existing settings (Except text shadow, for now). This release also offers some remarkable new settings, such as:
+	* `--cyan-channelbar-width`: the width of the channels/DMs list
+	* `--cyan-glass-foreground`: any text in front of Cyan's glass material
+ 	* `--window-titlebar-size`: the extra space added at the top of the omnibar to account for the traffic lights
+	* `--cyan-secondary-foreground`: any text in front of Cyan's secondary background
 
 # Customizing:
 [NEW] Presets are now in [DiscordColorways](https://raw.githubusercontent.com/DaBluLite/DiscordColorways/master/DiscordColorways.plugin.js)! Select the "Cyan" preset to easiy generate colors for Cyan.
