@@ -15,6 +15,7 @@
   --cyan-text-shadow: 0;
   --cyan-blur-secondary: 0;
   --cyan-background-primary-alt: var(--cyan-background-primary);
+  --cyan-channelbar-width: 320px;
   --brand-100: color-mix(in srgb, white calc(3.6% * 12), var(--cyan-accent-color));
   --brand-130: color-mix(in srgb, white calc(3.6% * 11), var(--cyan-accent-color));
   --brand-160: color-mix(in srgb, white calc(3.6% * 10), var(--cyan-accent-color));
