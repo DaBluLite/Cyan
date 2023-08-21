@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://dablulite.github.io/CyanBootstrapIcons/import.css");
 :root {
     --cyan-background-primary-alt: var(--cyan-background-primary);
     --cyan-background-secondary: var(--background-floating);
@@ -6,7 +9,13 @@
         min(1, var(--window-margin)) * var(--window-border-radius)
     );
     --cyan-glass-foreground: #FFFFFF;
-    --brand-100: color-mix(in srgb, white calc(3.6% * 12), var(--cyan-accent-color));
+    --cyan-version: 16;
+  --cyan-subversion: 8;
+  --cyan-patch-version: 4;
+  --cyan-text-shadow: 0;
+  --cyan-blur-secondary: 0;
+  --cyan-background-primary-alt: var(--cyan-background-primary);
+  --brand-100: color-mix(in srgb, white calc(3.6% * 12), var(--cyan-accent-color));
   --brand-130: color-mix(in srgb, white calc(3.6% * 11), var(--cyan-accent-color));
   --brand-160: color-mix(in srgb, white calc(3.6% * 10), var(--cyan-accent-color));
   --brand-200: color-mix(in srgb, white calc(3.6% * 9), var(--cyan-accent-color));
