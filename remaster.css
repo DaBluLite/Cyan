@@ -1312,3 +1312,45 @@ div[aria-label="dablulite"] .markup-eYLPri > .lineClamp2Plus-2SCQmH {
 	border-bottom: none;
 	border-radius: 16px 16px 0 0;
 }
+.jumpToPresentBar-1cEnH0 > .barButtonMain-2GIx4o {
+  display: none;
+}
+.jumpToPresentBar-1cEnH0 > .barButtonAlt-TQoCdZ > .barButtonIcon-bMvzp2 {
+  margin-left: 0;
+  transform: scale(1.3);
+}
+.jumpToPresentBar-1cEnH0 > .barButtonAlt-TQoCdZ {
+  padding: 0 4px;
+}
+.jumpToPresentBar-1cEnH0 {
+  margin-bottom: 20px !important;
+  left: unset !important;
+  right: 0;
+  border-radius: 50px !important;
+  padding: 10px;
+  background-color: transparent;
+  border: 1px solid var(--cyan-accent-color);
+  width: fit-content !important;
+  transform: translateX(-50%) !important;
+  backdrop-filter: blur(var(--cyan-blur-radius));
+  transition: .2s ease;
+}
+.jumpToPresentBar-1cEnH0:hover {
+    background-color: var(--cyan-background-primary);
+    box-shadow: var(--cyan-elevation-shadow);
+}
+.submenuPaddingContainer-_k62dJ {
+  padding: 0 !important;
+}
+.submenuPaddingContainer-_k62dJ > .submenu-1apzyU {
+  left: 0 !important;
+}
+.jumpToPresentBar-1cEnH0 > .barButtonMain-2GIx4o {
+  border-right: 1px solid var(--brand-experiment);
+}
+.jumpToPresentBar-1cEnH0 .barButtonAlt-TQoCdZ {
+  font-size: 0;
+}
+.searchBar-3TnChZ .searchBarComponent-3N7dCG {
+    background: none;
+}
