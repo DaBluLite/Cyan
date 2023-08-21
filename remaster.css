@@ -1085,3 +1085,65 @@ body {
   transition: 0.2s;
   backdrop-filter: blur(var(--cyan-blur-radius));
 }
+.sidebarRegion-1VBisG {
+	width: fit-content;
+	justify-content: start;
+	flex: none;
+}
+.contentColumn-1C7as6,
+.customColumn-2n-oKU {
+  max-width: 100% !important;
+}
+.avatar-3mTjvZ {
+  left: 35px;
+  top: 35px;
+  z-index: +1;
+}
+.lookFilled-1H2Jvj.colorBrand-2M3O3N {
+	background-color: var(--cyan-background-secondary);
+	border-radius: 8px;
+	border: 1px solid var(--brand-600);
+	transition: .2s;
+}
+.lookFilled-1H2Jvj.colorBrand-2M3O3N:hover {
+	background-color: var(--cyan-background-secondary);
+	box-shadow: var(--cyan-elevation-shadow);
+}
+.lookOutlined-3RTC7c.colorRed-2VFhM4,
+.lookFilled-1H2Jvj.colorRed-2VFhM4 {
+	background-color: var(--cyan-background-secondary);
+	border-radius: 8px;
+	transition: .2s;
+	border: 1px solid var(--red-600);
+}
+.lookOutlined-3RTC7c.colorRed-2VFhM4:hover,
+.lookFilled-1H2Jvj.colorRed-2VFhM4:hover {
+	background-color: var(--cyan-background-secondary);
+	box-shadow: 0 0 0 1.5px var(--red-500), 0 2px 10px 0 rgb(0 0 0 / 60%);
+}
+.closeButton-PCZcma {
+  border: none;
+  background-color: var(--cyan-background-secondary);
+  transition: .2s;
+}
+.closeButton-PCZcma:hover {
+  box-shadow: var(--cyan-elevation-shadow);
+}
+.contentRegionScroller-2_GT_N:has(#customcss-tab) .toolsContainer-25FL6V .closeButton-PCZcma {
+  width: 34px;
+  height: 34px !important;
+  min-height: 34px;
+  box-sizing: border-box;
+  flex: 0 1;
+}
+.closeButton-PCZcma ~ .keybind-13vtq8 {
+  display: none;
+}
+.contentRegionScroller-2_GT_N:has(#customcss-tab) .toolsContainer-25FL6V {
+  position: absolute;
+  right: -10px;
+  padding: 0;
+  margin: 0;
+  z-index: 600;
+  top: 32px;
+}
