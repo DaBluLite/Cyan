@@ -400,7 +400,7 @@ body {
 }
 .container-32HW5s {
     width: 100%;
-    max-width: calc(var(--cyan-channelbar-width) - 40px);
+    max-width: calc(var(--cyan-channelbar-width) - 8px);
     box-sizing: border-box;
     padding-right: 12px;
 }
@@ -876,4 +876,7 @@ body {
 }
 .sidebarRegion-1VBisG .selected-1sf9UK.item-2GWPIy {
     background-color: var(--cyan-background-secondary) !important;
+}
+.wrapper-3HVHpV, .wrapper-15CKyy {
+    background: none;
 }
