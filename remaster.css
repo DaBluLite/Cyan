@@ -755,11 +755,10 @@ body {
   float: left;
   margin-left: 10px;
 }
-#app-mount .userInfo-regn9W > button {
+#app-mount .userInfo-regn9W > .button-ejjZWC {
   background-color: var(--cyan-background-primary) !important;
   box-shadow: none !important;
   border: 3px solid var(--cyan-accent-color) !important;
-  width: 42px !important;
 }
 .userInfo-regn9W {
   padding: 16px 16px 0 30px;
@@ -771,7 +770,7 @@ body {
   padding: 10px 10px 0 10px !important;
 }
 .userInfo-regn9W > div:not([class]),
-#app-mount .userInfo-regn9W > button {
+#app-mount .userInfo-regn9W > .button-ejjZWC {
   background-color: var(--cyan-background-secondary) !important;
 }
 .userInfo-regn9W > div:not([class]) {
@@ -787,7 +786,7 @@ body {
   height: 100px;
   padding-left: 100px;
 }
-#app-mount .userInfo-regn9W > button {
+#app-mount .userInfo-regn9W > .button-ejjZWC {
   margin-top: 10px !important;
   position: absolute !important;
   right: 10px;
@@ -795,8 +794,7 @@ body {
   height: fit-content;
   width: fit-content;
   min-width: 38px !important;
-  border-radius: 50% !important;
-  background-color: transparent !important;
+  border-radius: 50px !important;
   box-shadow: var(--cyan-elevation-shadow);
 }
 .userTag-2qPxEZ {
@@ -805,10 +803,6 @@ body {
 .accountProfileCard-lbN7n- {
   background-color: transparent !important;
   overflow: visible !important;
-}
-#app-mount .userInfo-regn9W > button > div {
-  color: transparent;
-  font-size: 0;
 }
 .userInfo-regn9W {
   position: absolute;
