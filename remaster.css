@@ -1297,14 +1297,14 @@ div[aria-label="dablulite"] .markup-eYLPri > .lineClamp2Plus-2SCQmH {
 .usernameSection-3FppkT {
 	border-radius: 16px;
 	border: 3px solid var(--cyan-accent-color);
-	background-color: var(--cyan-background-primary);
+	background-color: rgba(0,0,0,.4);
 }
 .customStatusSection-2_fKRl {
 	border-radius: 0 0 16px 16px;
 	border: 3px solid var(--cyan-accent-color);
 	border-top: none;
 	padding-bottom: 12px;
-	background-color: var(--cyan-background-primary);
+	background-color: rgba(0,0,0,.4);
 }
 .usernameSection-3FppkT:not(:has(+.customStatusSection-2_fKRl)) {
 	padding-bottom: 12px;
