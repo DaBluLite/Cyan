@@ -1396,3 +1396,109 @@ div[aria-label="dablulite"] .markup-eYLPri > .lineClamp2Plus-2SCQmH {
 .userPopoutInner-nv9Y92::before {
     border-radius: 12px;
 }
+.profileColors-2AgAV4 {
+    --profile-body-background-color: rgb(0,0,0,.4)
+}
+.overlayBackground-2aa7wt {
+    background: none;
+    margin: 8px;
+}
+.overlayBackground-2aa7wt > .scroller-15bIdk {
+    background-color: var(--profile-body-background-color);
+    border-radius: 10px;
+    margin-top: 8px;
+    padding-bottom: 12px;
+}
+.profileBadges-2pItdR {
+    top: -16px;
+    background-color: rgb(0,0,0,.4);
+    backdrop-filter: blur(8px);
+}
+.body-1Ukv50 > .container-3g15px {
+    border: 3px solid var(--cyan-accent-color);
+    border-radius: 16px;
+    background-color: rgb(0,0,0,.4);
+    padding-bottom: 12px;
+}
+.userProfileModalInner-3dx9L9:before {
+    border-radius: 12px;
+}
+.body-1Ukv50 .tabBar-2hXqzU {
+    justify-content: space-evenly;
+    gap: 0;
+}
+.body-1Ukv50 .tabBarItem-30Te4- {
+    border-bottom: 0;
+    display: flex;
+    height: fit-content;
+    padding: 12px 16px;
+    width: 40%;
+    justify-content: center;
+    box-sizing: border-box;
+}
+@keyframes userModalTabInd {
+    from {
+        bottom: -4px;
+    }
+    to {
+        bottom: -2px;
+    }
+}
+.body-1Ukv50 .tabBarItem-30Te4-.selected-1sf9UK::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    translate: -50% 0;
+    width: 50%;
+    height: 6px;
+    border-radius: 8px;
+    background-color: #fff;
+    animation: userModalTabInd .3s ease;
+}
+.body-1Ukv50 > .tabBarContainer-sCZC4w {
+    background-color: rgb(0,0,0,.4);
+    border-radius: 12px 12px 0 0;
+    border-bottom: 0;
+    margin: 0;
+    margin-top: 8px;
+}
+.body-1Ukv50 > .infoScroller-1QMpon,
+.body-1Ukv50 > .listScroller-entkMk {
+    background-color: rgb(0,0,0,.4);
+    border-radius: 0 0 12px 12px;
+}
+.body-1Ukv50 .tabBar-2hXqzU:has(.tabBarItem-30Te4-:nth-child(3)) > .tabBarItem-30Te4- {
+    width: calc(584px/3);
+}
+.body-1Ukv50 .tabBar-2hXqzU:has(.tabBarItem-30Te4-:nth-child(4)) > .tabBarItem-30Te4- {
+    width: calc(584px/4);
+}
+.body-1Ukv50 .tabBar-2hXqzU:has(.tabBarItem-30Te4-:nth-child(5)) > .tabBarItem-30Te4- {
+    width: calc(584px/5);
+}
+.userInfoSection-2u2hir+.userInfoSection-2u2hir {
+    border-top: none;
+}
+.userInfoSection-2u2hir {
+    padding-bottom: 0;
+}
+.note-3M15gE,
+.eyebrow-1Shfyi:has(+.note-3M15gE),
+.overlayBackground-2aa7wt > .divider-2dDziJ,
+.section-28YDOf:has(>.note-1NN2aP) {
+    display: none;
+}
+.memberSinceContainer-2CBD23 > .defaultColor-1EVLSt {
+    margin-bottom: 0;
+}
+.connectedAccountContainer-3aLMHJ {
+    border-radius: 12px;
+    border: none;
+    box-shadow: var(--light-elevation-border);
+    transition: box-shadow .2s ease,background-color .2s ease;
+}
+.connectedAccountContainer-3aLMHJ:hover {
+    box-shadow: var(--cyan-elevation-shadow);
+    background-color: var(--cyan-background-secondary);
+}
