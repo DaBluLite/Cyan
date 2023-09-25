@@ -4959,29 +4959,37 @@ span:has(> .botText-1fD6Qk) {
     background: var(--cyan-accent-color) !important
 }
 .userPopoutOuter-1OHwPL:has(.pencilContainer-18TrEJ) .avatarWrapperNormal-ahVUaC {
-    position: absolute !important;
-    top: 76px
+    position: absolute !important
+}
+.userPopoutOuter-1OHwPL:has(.pencilContainer-18TrEJ) .userProfileInnerThemedNonPremium-2AJg-H .avatarWrapperNormal-ahVUaC {
+    top: 76px !important
 }
 .userPopoutOuter-1OHwPL:has(.pencilContainer-18TrEJ) .pencilContainer-18TrEJ {
     top: 85px !important;
     height: 22px !important
 }
-.userProfileModalOuter-2wdWjU:has(.pencilContainer-18TrEJ) .userProfileModalInner-3dx9L9 {
+.userProfileModalOuter-2wdWjU:has(.pencilContainer-18TrEJ) .userProfileModalInner-3dx9L9:not(.userProfileInnerThemedPremiumWithoutBanner-lZ9inp) {
     background: var(--cyan-accent-color) !important;
-    padding: 4px
+    padding: 4px;
+    width: 608px;
+    box-sizing: border-box
+}
+.userProfileModalOuter-2wdWjU:has(.userProfileInnerThemedNonPremium-2AJg-H .pencilContainer-18TrEJ) {
+    width: 608px
 }
 .userProfileModalOuter-2wdWjU:has(.pencilContainer-18TrEJ) .bannerSVGWrapper-2CLfzN {
     scale: 1 !important;
-    height: 212px !important;
+    height: 208px !important;
     position: static;
     z-index: 1;
-    width: 582px;
+    width: 590px;
     min-width: unset !important;
     margin: 5px;
     background-image: var(--cyan-background-img);
     background-position: 50%;
     background-repeat: no-repeat;
-    background-size: cover
+    background-size: cover;
+    min-height: unset !important
 }
 .userProfileModalOuter-2wdWjU:has(.pencilContainer-18TrEJ) .bannerSVGWrapper-2CLfzN .banner-1YaD3N {
     background-color: transparent !important;
@@ -5027,7 +5035,7 @@ span:has(> .botText-1fD6Qk) {
 .userProfileModalOuter-2wdWjU:has(.pencilContainer-18TrEJ)>.userProfileInnerThemedNonPremium-2AJg-H::before {
     width: calc(100% - 8px);
     height: calc(100% - 8px);
-    background: hsla(0, 0, 0, .6)
+    background: hsla(0 0 0/.6)
 }
 .messageGroupWrapper-1jf_7C {
     border-radius: 16px;
