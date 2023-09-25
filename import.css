@@ -3,9 +3,9 @@
 @import url("https://dablulite.github.io/CyanBootstrapIcons/import.css");
 
 :root {
-    --cyan-version: 16;
-    --cyan-subversion: 8;
-    --cyan-patch-version: 4;
+    --cyan-version: 17;
+    --cyan-subversion: 0;
+    --cyan-patch-version: 0;
     --cyan-text-shadow: 0;
     --cyan-blur-secondary: 0;
     --cyan-background-primary-alt: var(--cyan-background-primary);
@@ -15,6 +15,8 @@
     --cyan-background-floating: var(--background-floating);
     --cyan-status-mask-background: var(--profile-body-background-color);
     --window-border-radius-calc: calc(min(1, var(--window-margin)) * var(--window-border-radius));
+    --cyan-channelbar-width: 320px;
+    --window-titlebar-size: 0;
     --background-lightness: -0.4;
     --brand-experiment-100: var(--cyan-accent-color);
     --brand-experiment-130: var(--cyan-accent-color);
@@ -78,10 +80,6 @@
 .theme-amoled {
     --background-lightness: -10 !important
 }
-#discordRadioSidebar {
-    background-color: var(--cyan-background-primary) !important;
-    backdrop-filter: blur(var(--cyan-blur-radius))
-}
 .theme-dark {
     --background-primary: hsl(220, 8%, calc(23% * (1 + var(--background-lightness))));
     --background-secondary: hsl(223, 7%, calc(20% * (1 + var(--background-lightness))));
@@ -102,6 +100,10 @@
 .theme-light {
     --cyan-background-lightness: 71%;
     --background-modifier-hover: hsla(225, 8%, 100%, 60%)
+}
+.platform-win,
+.platform-osx {
+    --window-titlebar-size: 24px
 }
 .container-3YcgdM {
     background-color: var(--cyan-background-secondary);
@@ -203,7 +205,8 @@ div[aria-label=dablulite] .markup-eYLPri a:hover::after,
     width: 36px;
     border-radius: 8px;
     box-shadow: none;
-    animation: collapseSearchBar.4s ease
+    animation: collapseSearchBar.4s ease;
+    background: none
 }
 .DraftEditor-root,
 .bannerSVGWrapper-qc0szY mask,
@@ -268,12 +271,12 @@ body:has(> #video) #video,
 .spine-29OFwR+.spine-29OFwR,
 .spineBorder-1-F4s1,
 .image-20MDYu,
-.container-1NXEtd div:not([class])[style*=height],
 div:not(.bannerVisible-Vkyg1I)>.animatedContainer-2laTjx,
 .selected-1GtAC5>.animatedContainer-2laTjx,
 .rightImage-TOZ-q9,
 .channel-1Shao0:has(~.privateChannelsHeaderContainer-1UWASm):not(.pinned-0lM4wD) .content-66wMin,
-.separator-12G2Op {
+.separator-12G2Op,
+.unreadPillCap-2-iI4h {
     display: none
 }
 .searchBar-jGtisZ:hover .DraftEditor-root,
@@ -480,7 +483,8 @@ div:not(.bannerVisible-Vkyg1I)>.animatedContainer-2laTjx,
 .swatch-efj8wq,
 .lookFilled-1H2Jvj.colorGreen-jIPCAS,
 .inputDefault-Ciwd-S,
-.lookOutlined-3RTC7c.colorRed-2VFhM4 {
+.lookOutlined-3RTC7c.colorRed-2VFhM4,
+.animatedContainer-2laTjx {
     border-radius: 8px
 }
 .clickable-1knRMS,
@@ -491,7 +495,7 @@ div:not(.bannerVisible-Vkyg1I)>.animatedContainer-2laTjx,
 #app-mount .noChat-2UYgeE .headerWrapper-1ULEPv,
 .featureBorder-39brDJ,
 #floating-editor-window .controls-section,
-.templatesList-uohY49>div {
+.templatesList-uohY49>.optionHeader-27AHfD {
     margin: 0
 }
 .container-1gYwHN {
@@ -521,7 +525,8 @@ div:not(.bannerVisible-Vkyg1I)>.animatedContainer-2laTjx,
 .attachButton-_ACFSu,
 .typeThread-2Aqh6X.wrapper-NhbLHG,
 .wrapper-NhbLHG,
-.link-1_kTxV {
+.link-1_kTxV,
+.compact-3bMNvi {
     margin-left: 0
 }
 .bd-notice {
@@ -582,7 +587,6 @@ aside.sidebarScrollable-2mW9Ls>div,
 .scroller-3j5xK2,
 .scroller-RfJjkV,
 .app-2CXKsg,
-.bg-1QIAus,
 .wrapper-1_HaEi,
 #app-mount,
 .scroller-3X7KbA,
@@ -592,7 +596,6 @@ aside.sidebarScrollable-2mW9Ls>div,
 .header-3OsQeK,
 .scroller-1ox3I2,
 .base-2jDfDU,
-.container-1eFtFS,
 .buttons-3dF5Kd>div>*,
 .container-3u6dG-,
 .stickyHeader-fX4ei6,
@@ -610,7 +613,8 @@ aside.sidebarScrollable-2mW9Ls>div,
 .previewMessage-2g_aBv,
 .sidebarRegionScroller-FXiQOh,
 *::-webkit-scrollbar-corner {
-    background-color: transparent
+    background-color: transparent;
+    background: none !important
 }
 .header-1RJoTb {
     border-radius: 8px;
@@ -678,7 +682,7 @@ aside.sidebarScrollable-2mW9Ls>div,
 .userInfo-regn9W>div:not([class]) {
     gap: 10px
 }
-.field-21XZwa .fieldButton-14lHvK:hover>div {
+.field-21XZwa .fieldButton-14lHvK:hover>.contents-3NembX {
     background-image: none !important
 }
 .field-21XZwa .fieldButton-14lHvK:nth-child(1) {
@@ -756,11 +760,6 @@ aside.sidebarScrollable-2mW9Ls>div,
     border-radius: 16px;
     box-shadow: var(--cyan-elevation-shadow) !important
 }
-#discordRadioBtn {
-    background-color: var(--cyan-background-secondary) !important;
-    box-shadow: 0 0 0 1.5px var(--cyan-background-primary), 0 2px 10px 0 rgb(0 0 0/20%)
-}
-#discordRadioBtn:hover,
 .svg-2ifYOU {
     border-radius: 50% !important
 }
@@ -777,7 +776,7 @@ aside.sidebarScrollable-2mW9Ls>div,
 .wrapper-NhbLHG,
 .privateChannelsHeaderContainer-1UWASm,
 .templatesList-uohY49>.container-x8Y1ix:first-child,
-.templatesList-uohY49>div {
+.templatesList-uohY49>div:not([class]) {
     width: 100%
 }
 .authorize-2xTTr-,
@@ -1132,7 +1131,7 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
     margin: 0 calc(var(--window-margin)*1px) calc(var(--window-margin)*1px);
     border-radius: var(--window-border-radius-calc);
     display: inline-block;
-    max-width: 320px
+    max-width: var(--cyan-channelbar-width)
 }
 .sidebarRegion-1VBisG {
     justify-content: end
@@ -1151,11 +1150,6 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
 }
 .contentRegion-3HkfJJ {
     flex: 1 1 100%
-}
-.hasBanner-2IrYih>.animatedContainer-2laTjx,
-.animatedContainer-2laTjx {
-    border-radius: 8px;
-    box-shadow: var(--cyan-elevation-shadow)
 }
 .container-1NXEtd,
 .scrollableContainer-15eg7h,
@@ -1316,7 +1310,7 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
     font-size: 0
 }
 .chat-2ZfjoI {
-    background-color: var(--cyan-background-primary);
+    background: var(--bg-overlay-chat, var(--cyan-background-primary)) !important;
     margin: calc(var(--window-margin)*1px);
     border-radius: var(--window-border-radius-calc);
     box-shadow: var(--cyan-elevation-shadow);
@@ -1454,16 +1448,8 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
     box-shadow: none;
     border-radius: 0 var(--window-border-radius-calc) var(--window-border-radius-calc) 0 !important;
     margin-left: 0 !important;
-    width: 320px
-}
-.platform-win .sidebar-1tnWFu,
-.platform-osx .sidebar-1tnWFu,
-#app-mount>#linuxCustomTitlebar~div[class] .sidebar-1tnWFu {
-    margin-top: 32px !important
-}
-.animatedContainer-2laTjx {
-    z-index: 2;
-    position: static
+    width: var(--cyan-channelbar-width);
+    margin-top: calc((var(--window-margin)*1px) + var(--window-titlebar-size)) !important
 }
 .tooltipContent-Nejnvh,
 .expandedInboxHeader-HkRSug,
@@ -1587,6 +1573,16 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
     box-shadow: none;
     border: 2px solid var(--cyan-accent-color)
 }
+.avatarPositionNormal-2jWoC2 {
+    top: 16px !important
+}
+.avatarWrapper-eenWra,
+.avatarWrapper-3y0KZ1,
+.customItem-1KYL7t:hover,
+.userPopoutOuter-1OHwPL>.userProfileInnerThemedNonPremium-2AJg-H>.userPopoutOverlayBackground-3A0Pcz,
+.contentRegion-3HkfJJ {
+    z-index: 1
+}
 .upload-vLbqu- {
     border-radius: 10px !important;
     background-color: var(--cyan-background-primary) !important;
@@ -1604,12 +1600,13 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
 .guilds-2JjMmN {
     position: relative;
     margin: calc(var(--window-margin)*1px);
+    margin-top: calc((var(--window-margin)*1px) + var(--window-titlebar-size));
     z-index: 2;
     border-radius: var(--window-border-radius-calc) 0 0 var(--window-border-radius-calc);
     transition: .3s;
     background-color: transparent;
     box-shadow: none;
-    height: calc(100% - ((var(--window-margin)*1px))*2) !important;
+    height: calc(100% - (((var(--window-margin)*1px))*2) - var(--window-titlebar-size)) !important;
     margin-right: 0 !important;
     width: calc(82px - (var(--window-margin)*1px))
 }
@@ -1624,12 +1621,6 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
     width: fit-content !important;
     box-shadow: none !important;
     padding-right: 7px
-}
-.platform-win .guilds-2JjMmN,
-.platform-osx .guilds-2JjMmN,
-#app-mount>#linuxCustomTitlebar~div[class] .guilds-2JjMmN {
-    margin-top: 32px !important;
-    height: calc((100% - ((var(--window-margin)*1px))*2) - 22px) !important
 }
 #app-mount .scroller-3X7KbA {
     padding: 10px 0 !important;
@@ -2285,10 +2276,6 @@ div:not([class="tutorialContainer-1pL9QS"]) .wrapper-3kah-n:hover .childWrapper-
     box-shadow: var(--cyan-elevation-shadow);
     margin-top: 3px
 }
-#app-mount #discordRadioBtn:hover {
-    background-color: var(--cyan-background-floating) !important;
-    box-shadow: 0 0 0 1.5px var(--cyan-accent-color), 0 2px 10px 0 rgb(0 0 0/20%) !important
-}
 @keyframes greenGuildBtn {
     from {
         box-shadow: 0 0 0 1.5px var(--cyan-background-primary), 0 2px 10px 0 rgb(0 0 0/20%)
@@ -2356,8 +2343,6 @@ div:not([class="tutorialContainer-1pL9QS"]) .wrapper-3kah-n:hover .childWrapper-
     margin-left: 0
 }
 .userProfileInner-3F03PX:before,
-#discordRadioList .radioStation,
-#searchResultsPanel .radioStation,
 .profilePanel-2VBkh8 .scrollerBase-1Pkza4>.overlayBackground-2aa7wt:nth-child(2):has(~ .overlayBackground-2aa7wt:empty),
 .field-21XZwa .fieldButton-14lHvK {
     border-radius: 16px !important
@@ -2546,52 +2531,17 @@ div:not([class="tutorialContainer-1pL9QS"]) .wrapper-3kah-n:hover .childWrapper-
     background-color: var(--cyan-background-secondary);
     box-shadow: var(--cyan-elevation-shadow)
 }
-#slycraftPlayer {
-    border-radius: 16px !important;
-    background-color: var(--cyan-background-secondary) !important;
-    box-shadow: var(--cyan-elevation-shadow) !important
-}
-#discordRadioSidebar,
-#cyanToolboxViewSidebar {
-    border-radius: 16px !important;
-    box-shadow: var(--cyan-elevation-shadow) !important
-}
-#discRadHeader,
-#cyanToolboxMainHeader {
-    border-radius: 16px 16px 0 0 !important;
-    background: none !important;
-    padding-left: 30px !important;
-    width: calc(100% - 45px) !important
-}
 .container-1eFtFS::before {
     content: "";
-    background-color: var(--cyan-background-primary-alt);
-    width: calc(240px + (calc(82px - (var(--window-margin)*1px))));
+    background: var(--bg-overlay-chat, var(--cyan-background-primary-alt)) !important;
     border-radius: var(--window-border-radius-calc);
     box-shadow: var(--cyan-elevation-shadow);
-    height: calc(100% - ((var(--window-margin)*1px))*2);
+    height: calc(100% - (var(--window-margin)*2px) - ((var(--window-titlebar-size)*1)));
     position: absolute;
     left: calc(var(--window-margin)*1px);
     bottom: calc(var(--window-margin)*1px);
     backdrop-filter: blur(var(--cyan-blur-radius));
-    width: calc(320px + (calc(82px - (var(--window-margin)*1px))))
-}
-.platform-win .container-1eFtFS::before,
-.platform-osx .container-1eFtFS::before {
-    height: calc((100% - ((var(--window-margin)*1px))*2) - 32px + (min(var(--window-margin), 1)*10px))
-}
-#discordRadioList .radioStation:hover,
-#searchResultsPanel .radioStation:hover {
-    border-color: transparent !important;
-    box-shadow: var(--cyan-elevation-shadow) !important;
-    background-color: var(--cyan-background-secondary) !important
-}
-#discordRadioMiniSidebar,
-#cyanToolboxToolbar {
-    border-radius: 16px !important;
-    box-shadow: var(--cyan-elevation-shadow) !important;
-    background-color: var(--cyan-background-primary) !important;
-    backdrop-filter: blur(var(--cyan-blur-radius)) !important
+    width: calc(var(--cyan-channelbar-width) + (calc(82px - (var(--window-margin)*1px))))
 }
 .contextMenuNub-NuTZ_U {
     border-radius: 0 56px 56px 0;
@@ -2878,7 +2828,7 @@ div:not([class="tutorialContainer-1pL9QS"]) .wrapper-3kah-n:hover .childWrapper-
     left: 95px;
     top: unset !important;
     bottom: 0;
-    background-color: var(--profile-body-background-color);
+    background-color: var(--cyan-background-primary);
     border-radius: 0 28px 28px 0;
     padding: 8px 8px 8px 15px
 }
@@ -2887,12 +2837,6 @@ div:not([class="tutorialContainer-1pL9QS"]) .wrapper-3kah-n:hover .childWrapper-
     right: 8px;
     border-radius: 30px !important;
     backdrop-filter: blur(var(--cyan-blur-radius))
-}
-.avatarWrapper-3y0KZ1,
-.customItem-1KYL7t:hover,
-.userPopoutOuter-1OHwPL>.userProfileInnerThemedNonPremium-2AJg-H>.userPopoutOverlayBackground-3A0Pcz,
-.contentRegion-3HkfJJ {
-    z-index: 1
 }
 .side-1lrxIh .item-2GWPIy .textBadge-1fdDPJ {
     height: 40px;
@@ -2933,7 +2877,8 @@ div:not([class="tutorialContainer-1pL9QS"]) .wrapper-3kah-n:hover .childWrapper-
 }
 #my-account-tab .accountProfileCard-lbN7n-,
 .scroller-3_YDR2,
-.header-2jRmjb {
+.header-2jRmjb,
+.headerText-2z4IhQ {
     overflow: visible !important
 }
 .avatarSpeaking-36V2PN {
@@ -3073,19 +3018,24 @@ div:not([class="tutorialContainer-1pL9QS"]) .wrapper-3kah-n:hover .childWrapper-
     box-shadow: var(--cyan-elevation-shadow)
 }
 .unreadPill-3nEWYM {
-    padding: 16px;
+    padding: 8px 16px;
     border-radius: 50px;
-    box-shadow: var(--cyan-elevation-shadow);
+    --cyan-accent-color: var(--divider-color);
+    box-shadow: 0 0 0 1.5px var(--cyan-accent-color), 0 2px 10px 0 rgb(0 0 0/60%);
     left: 10px;
     top: 50%;
     transform: translate(0, -50%);
     right: unset;
     background-color: var(--cyan-background-secondary) !important;
-    text-transform: capitalize
+    text-transform: capitalize;
+    height: fit-content;
+    align-items: center;
+    line-height: 11px
 }
-.unreadPill-3nEWYM>svg {
-    position: relative;
-    transform: rotateY(180deg)
+#---new-messages-bar {
+    --cyan-accent-color: var(--divider-color);
+    box-shadow: 0 0 0 .75px var(--cyan-accent-color), 0 2px 10px 0 rgb(0 0 0/60%);
+    border: none
 }
 .attachment-1PZZB2 {
     border-radius: 8px;
@@ -3373,9 +3323,8 @@ path[d="M12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4
 }
 .tooltip-33Jwqe {
     box-shadow: 0 0 0 1.5px var(--cyan-accent-color), 0 2px 10px 0 rgb(0 0 0/20%) !important;
-    backdrop-filter: blur(var(--cyan-blur-radius)) !important;
     border-radius: 16px;
-    background-color: var(--cyan-background-primary) !important
+    background-color: var(--cyan-background-secondary) !important
 }
 .quickswitcher-pKcM9U>.input-3r5zZY,
 .quickswitcher-pKcM9U>.scroller-2qwVWY {
@@ -3452,9 +3401,9 @@ path[d="M12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4
     width: 100%
 }
 .scroller-WSmht3,
-.scroller-1ox3I2 {
-    overflow-y: overlay !important;
-    padding-right: 10px !important
+.scroller-1ox3I2,
+.contentRegionScroller-2_GT_N {
+    overflow: hidden auto !important
 }
 .progressBar-2yl2pi {
     background: var(--cyan-accent-color) !important;
@@ -3471,7 +3420,8 @@ path[d="M12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4
 .container-1-ERn5:not(.hasBanner-2IrYih),
 .container-1-ERn5:not(.hasBanner-2IrYih)>.header-3OsQeK,
 .userProfileModalOuter-2wdWjU>.userProfileInnerThemedNonPremium-2AJg-H .topSection-13QKHs,
-.row-2mBMW2 {
+.row-2mBMW2,
+.item-1TA5qI:last-child {
     margin-bottom: 0
 }
 .progressBarContainer-1efroK {
@@ -3596,7 +3546,8 @@ path[d="M12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4
 .bd-sidebar-header *,
 .headerText-10ez_d,
 .info-3pQQBb span,
-.link-1-SDSV {
+.link-1-SDSV,
+.theme-light .buttons-uaqb-5>:is(.button-ejjZWC, .buttonContainer-2lnNiN) .button-2fCJ0o {
     color: #fff !important
 }
 #app-mount .content-1gYQeQ {
@@ -4024,7 +3975,7 @@ path[d="M12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4
     transition: .2s;
     backdrop-filter: none !important
 }
-.webkit-QgSAqd .buttons-uaqb-5>* {
+.webkit-QgSAqd .buttons-uaqb-5>:is(.button-ejjZWC, .buttonContainer-2lnNiN) {
     margin: 0;
     width: 44px;
     height: 44px;
@@ -4044,7 +3995,7 @@ path[d="M12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4
 #guild-header-popout {
     border-radius: 8px;
     background: var(--cyan-background-secondary) !important;
-    width: 300px;
+    width: var(--cyan-channelbar-width);
     height: calc(100vh - ((var(--window-margin)*1px))*2);
     animation: msganim.4s ease !important;
     background-color: transparent !important;
@@ -4338,16 +4289,7 @@ div[aria-label=dablulite] .markup-eYLPri a[title*="github.com/DaBluLite"]::after
     background-color: transparent;
     padding: 0
 }
-.theme-light #app-mount .wrapper-NhbLHG.modeSelected-3DmyhH *,
-.theme-light #app-mount .wrapper-NhbLHG:hover * {
-    fill: var(--cyan-accent-color) !important
-}
-.theme-light .buttons-uaqb-5>* * {
-    color: #fff
-}
-.theme-light .buttons-uaqb-5>*:hover * {
-    color: #000
-}
+.theme-light .buttons-uaqb-5>:is(.button-ejjZWC:hover, .buttonContainer-2lnNiN:hover) .button-2fCJ0o,
 .theme-light .theme-light .container-1Lk8p7 * {
     color: #000 !important
 }
@@ -4582,8 +4524,8 @@ body:has(> #text) #text {
 }
 .notice-12Koq- {
     margin-top: calc(var(--window-margin)*1px) !important;
-    width: calc(100% - 320px - (var(--window-margin)*4px));
-    margin-left: calc(320px + (var(--window-margin)*1px));
+    width: calc(100% - var(--cyan-channelbar-width) - (var(--window-margin)*4px));
+    margin-left: calc(var(--cyan-channelbar-width) + (var(--window-margin)*1px));
     border-radius: 8px;
     background-color: var(--cyan-background-secondary);
     box-shadow: var(--cyan-elevation-shadow)
@@ -4873,11 +4815,11 @@ span:has(> .botText-1fD6Qk) {
     height: 620px !important;
     top: 0
 }
-.userProfileModalOuter-2wdWjU>.userProfileInnerThemedNonPremium-2AJg-H .header-S26rhB>div:not([class])>div {
+.userProfileModalOuter-2wdWjU>.userProfileInnerThemedNonPremium-2AJg-H .header-S26rhB .avatar-3QF_VA {
     width: 94px !important;
     height: 94px !important
 }
-.userProfileModalOuter-2wdWjU>.userProfileInnerThemedNonPremium-2AJg-H .header-S26rhB>div:not([class])>div>svg {
+.userProfileModalOuter-2wdWjU>.userProfileInnerThemedNonPremium-2AJg-H .header-S26rhB .avatar-3QF_VA .svg-1G_H_8 {
     width: 108px;
     height: 108px
 }
@@ -4953,7 +4895,7 @@ span:has(> .botText-1fD6Qk) {
 }
 .platform-win #guild-header-popout,
 .platform-osx #guild-header-popout {
-    height: calc((100vh - ((var(--window-margin)*1px))*6) - 32px + (min(var(--window-margin), 1)*10px) - 48px - 69px)
+    height: calc((100vh - ((var(--window-margin)*1px))*7) - 32px + (min(var(--window-margin), 1)*10px) - 48px - 69px)
 }
 .menu-2TXYjN .item-5ApiZt {
     flex-direction: row-reverse;
@@ -5000,7 +4942,7 @@ span:has(> .botText-1fD6Qk) {
 .userPopoutOuter-1OHwPL:has(.pencilContainer-18TrEJ) .bannerSVGWrapper-2CLfzN,
 #profile-customization-tab .userProfileOuterUnthemed-11rPfA .bannerSVGWrapper-2CLfzN {
     scale: 1;
-    height: 120px;
+    height: 114px;
     position: static;
     z-index: 1;
     width: 322px;
@@ -5010,7 +4952,8 @@ span:has(> .botText-1fD6Qk) {
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    margin-top: 9px
+    margin-top: 9px;
+    min-height: 114px !important
 }
 .userPopoutOuter-1OHwPL:has(.pencilContainer-18TrEJ)>.userProfileInnerThemedNonPremium-2AJg-H {
     background: var(--cyan-accent-color) !important
@@ -5020,7 +4963,7 @@ span:has(> .botText-1fD6Qk) {
     top: 76px
 }
 .userPopoutOuter-1OHwPL:has(.pencilContainer-18TrEJ) .pencilContainer-18TrEJ {
-    top: 54px !important;
+    top: 85px !important;
     height: 22px !important
 }
 .userProfileModalOuter-2wdWjU:has(.pencilContainer-18TrEJ) .userProfileModalInner-3dx9L9 {
@@ -5257,7 +5200,7 @@ span:has(> .botText-1fD6Qk) {
     padding-left: 40px !important
 }
 #bd-notices {
-    width: calc(100% - 320px - (var(--window-margin)*2px)) !important;
+    width: calc(100% - var(--cyan-channelbar-width) - (var(--window-margin)*2px)) !important;
     margin-right: calc(var(--window-margin)*1px);
     align-self: end
 }
@@ -5601,7 +5544,11 @@ div[role=radiogroup] {
 .containerDefault-YUSmu3 {
     transition: unset !important;
     will-change: background-color, transform, box-shadow, border-radius;
-    animation: channelAnimReverse.2s ease, msganim.4s ease
+    animation: channelAnimReverse.2s ease, msganim.4s ease;
+    padding: 0 !important
+}
+.interactive-iyXY_x {
+    border-radius: 12px
 }
 .member-2gU6Ar,
 .attachButton-1ijpt9,
@@ -5646,9 +5593,6 @@ div:not([class="tutorialContainer-1pL9QS"]) .wrapper-3kah-n.selected-1Drb7Z .chi
     padding: 0;
     height: fit-content;
     min-height: unset
-}
-.contentRegionScroller-2_GT_N {
-    overflow: hidden auto !important
 }
 .addFriendInputWrapper-kkoSV9 {
     border: none;
@@ -5729,13 +5673,6 @@ div:not([class]):has(> .row-2mBMW2),
     justify-content: space-between;
     width: 100%
 }
-.container-1NXEtd .content-yjf30S,
-.members-3WRCEx>.content-yjf30S {
-    display: flex;
-    flex-direction: column;
-    height: fit-content !important;
-    gap: 8px
-}
 .containerDefault-YUSmu3,
 .containerDefault-3TQ5YN,
 .membersGroup-2eiWxl,
@@ -5749,7 +5686,8 @@ ul[id*=folder-items-] {
     height: fit-content !important;
     animation: msganim.4s ease
 }
-.header-3OsQeK {
+.animatedContainer-2laTjx,
+.container-1-ERn5:not(.bannerVisible-Vkyg1I) .header-3OsQeK {
     background-color: var(--cyan-background-secondary) !important;
     box-shadow: var(--cyan-elevation-shadow) !important;
     border-radius: 8px !important;
@@ -5952,7 +5890,7 @@ ul[id*=folder-items-] {
 #app-mount .listItem-3SmSlK.frame-oXWS21>div {
     width: 56px
 }
-.templatesList-uohY49>div~.container-x8Y1ix {
+.templatesList-uohY49>.optionHeader-27AHfD~.container-x8Y1ix {
     width: calc(50% - 4px)
 }
 .templatesList-uohY49 {
@@ -5968,7 +5906,7 @@ ul[id*=folder-items-] {
     align-content: center;
     justify-content: center
 }
-.templatesList-uohY49+.footer-3ie9JP>* {
+.templatesList-uohY49+.footer-3ie9JP>:is(.lookFilled-1H2Jvj.colorPrimary-2-Lusz, .footerTitle-3Bslxi) {
     width: 100%;
     margin-bottom: 0
 }
@@ -5987,13 +5925,6 @@ ul[id*=folder-items-] {
 .templatesList-uohY49>.container-x8Y1ix:hover {
     background-color: transparent;
     box-shadow: var(--cyan-elevation-shadow)
-}
-.headerText-2z4IhQ {
-    overflow: visible !important;
-    display: flex;
-    gap: 8px;
-    width: fit-content;
-    float: left
 }
 #account-status-picker--online {
     --cyan-accent-color: var(--green-360);
@@ -6019,4 +5950,19 @@ ul[id*=folder-items-] {
     display: flex;
     margin-bottom: 0;
     max-height: 5rem
+}
+#vc-membercount {
+    border-radius: 8px;
+    box-shadow: var(--cyan-elevation-shadow);
+    background-color: var(--cyan-background-secondary) !important;
+    align-items: center;
+    min-height: 36px;
+    margin: 0 8px
+}
+.themeTitle-3WIti0 {
+    gap: 8px;
+    padding-bottom: 4px
+}
+.editorBody-1rnOXH {
+    padding: var(--custom-client-themes-editor-editor-padding)
 }
