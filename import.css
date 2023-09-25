@@ -272,7 +272,8 @@ body:has(> #video) #video,
 div:not(.bannerVisible-Vkyg1I)>.animatedContainer-2laTjx,
 .selected-1GtAC5>.animatedContainer-2laTjx,
 .rightImage-TOZ-q9,
-.channel-1Shao0:has(~.privateChannelsHeaderContainer-1UWASm):not(.pinned-0lM4wD) .content-66wMin {
+.channel-1Shao0:has(~.privateChannelsHeaderContainer-1UWASm):not(.pinned-0lM4wD) .content-66wMin,
+.separator-12G2Op {
     display: none
 }
 .searchBar-jGtisZ:hover .DraftEditor-root,
@@ -856,7 +857,8 @@ aside.sidebarScrollable-2mW9Ls>div,
     background-repeat: no-repeat !important
 }
 .sidebar-nqHbhN>.side-2ur1Qk>.premiumTab-39eQzY.selected-g-kMVV,
-.container-1QtPKm.checked-16gMAN:has(.slider-HJFN2i) {
+.container-1QtPKm.checked-16gMAN:has(.slider-HJFN2i),
+.status-3cqfT9 {
     background-color: var(--cyan-accent-color) !important
 }
 .sidebar-nqHbhN>.side-2ur1Qk>.premiumTab-39eQzY>.premiumLabel-3HPvdB>svg,
@@ -1375,7 +1377,11 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
 }
 .statusItem-38ArJn {
     padding: 10px;
-    border-radius: 8px
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 8px;
+    transition: .2s ease
 }
 .submenu-1apzyU {
     left: -10px
@@ -2994,7 +3000,7 @@ div:not([class="tutorialContainer-1pL9QS"]) .wrapper-3kah-n:hover .childWrapper-
     padding-top: 0;
     padding-bottom: 12px;
     border-radius: 0 0 16px 16px;
-    border-top: none
+    border-top: none !important
 }
 .divider-2dDziJ:has(~ #account) {
     opacity: 0
@@ -3564,10 +3570,14 @@ path[d="M12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4
     border-radius: 12px;
     animation: channelAnim.2s ease, msganim.4s ease
 }
-.members-3WRCEx *,
-.scrollerContent-2SW0kQ *,
+.name-3Vmqxm,
+.activityText-1rR-8O,
+.scrollerContent-2SW0kQ,
 .channelName-3KPsGw,
-.name-28HaxV {
+.name-28HaxV,
+.overflow-1wOqNV,
+.membersGroup-2eiWxl,
+.subtext-14b69p {
     text-shadow: min(1px, calc(var(--cyan-text-shadow)*1px)) calc(min(1px, (var(--cyan-text-shadow)*1px))*2) calc(min(1px, (var(--cyan-text-shadow)*1px))*2) #000
 }
 #app-mount .icon-2W8DHg {
@@ -4672,7 +4682,8 @@ span:has(> .botText-1fD6Qk) {
 }
 .nameAndDecorators-3ERwy2,
 .children-2C96Ex,
-.topPill-2vcLsa {
+.topPill-2vcLsa,
+.item-5ApiZt:hover .statusItem-38ArJn {
     gap: 8px
 }
 @keyframes animright {
@@ -5083,7 +5094,8 @@ span:has(> .botText-1fD6Qk) {
     margin: 4px
 }
 .bioTextArea-dDGOeC,
-.floating-window-titlebar {
+.floating-window-titlebar,
+.item-5ApiZt:hover .description-1Dd2kv {
     height: fit-content
 }
 #profile-customization-tab .body-3lbupa .section-28YDOf:has(.customStatus-19KW6v, .userText-1_v2Cq) {
@@ -5982,4 +5994,29 @@ ul[id*=folder-items-] {
     gap: 8px;
     width: fit-content;
     float: left
+}
+#account-status-picker--online {
+    --cyan-accent-color: var(--green-360);
+    --cyan-elevation-shadow: 0 0 0 1.5px var(--cyan-accent-color), 0 2px 10px 0 rgb(0 0 0 / 60%)
+}
+#account-status-picker--dnd {
+    --cyan-accent-color: var(--red-400);
+    --cyan-elevation-shadow: 0 0 0 1.5px var(--cyan-accent-color), 0 2px 10px 0 rgb(0 0 0 / 60%)
+}
+#account-status-picker--idle {
+    --cyan-accent-color: var(--yellow-300);
+    --cyan-elevation-shadow: 0 0 0 1.5px var(--cyan-accent-color), 0 2px 10px 0 rgb(0 0 0 / 60%)
+}
+#account-status-picker--invisible {
+    --cyan-accent-color: var(--primary-400);
+    --cyan-elevation-shadow: 0 0 0 1.5px var(--cyan-accent-color), 0 2px 10px 0 rgb(0 0 0 / 60%)
+}
+.description-1Dd2kv {
+    height: 0;
+    overflow: hidden;
+    transition: .2s ease;
+    align-items: center;
+    display: flex;
+    margin-bottom: 0;
+    max-height: 5rem
 }
