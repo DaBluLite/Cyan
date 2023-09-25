@@ -4,7 +4,7 @@
 
 # Cyan - Clean and Customizable, with custom background support
 
-[![BetterDiscord][bd-badge]][bd-link] [![Cyan Customizer][cc-badge]][cc-link] [![Cyan Addons][addon-badge]][addon-link] [![Cyan+][helper-badge]][helper-link]
+[![BetterDiscord][bd-badge]][bd-link] [![Cyan Customizer][cc-badge]][cc-link] [![Cyan Addons][addon-badge]][addon-link]
 
 [bd-link]: https://betterdiscord.app/theme/Cyan
 [bd-badge]: https://img.shields.io/badge/Cyan-Download%20On%20BetterDiscord-3a71c1?labelColor=0c0d10&color=009f88&style=for-the-badge
@@ -14,14 +14,6 @@
 
 [addon-link]: https://dablulite.github.io/Cyan/Addons
 [addon-badge]: https://img.shields.io/badge/Addons%20For%20Cyan-Download-3a71c1?labelColor=0c0d10&color=009f88&style=for-the-badge
-
-[helper-link]: https://dablulite.github.io/Cyan/CyanPlus.plugin.js
-[helper-badge]: https://img.shields.io/badge/Cyan+-Download-3a71c1?labelColor=0c0d10&color=009f88&style=for-the-badge
-
-# Special thanks to:
-* [@ObjectiveSlayer](https://github.com/ObjectiveSlayer)/carrot#8812
-* [@maenDisease](https://github.com/maenDisease)/Disease#3749 
-* [@lucysim9](https://github.com/lucysim9)/lucism#3987
 
 # Customizing:
 [NEW] Presets are now in [DiscordColorways](https://raw.githubusercontent.com/DaBluLite/DiscordColorways/master/DiscordColorways.plugin.js)! Select the "Cyan" preset to easiy generate colors for Cyan.
@@ -43,8 +35,15 @@ Cyan uses the following values to change the way it looks:
 	--cyan-text-shadow: 1; /*If the test shadow should be on or off (1 or 0 is true or false)*/
 	--window-margin: 8; /*The margins around the windows*/
 	--window-border-radius: 8px; /*Their border radii*/
+	--cyan-channelbar-width: 320px; /*The channels portion of the Omnibar*/
+	--window-titlebar-size: 24px; /*The Extra margin that gets added to the omnibar to account for windows'/macos' title bars*/
 }
 ```
+
+# Special thanks to:
+* [@ObjectiveSlayer](https://github.com/ObjectiveSlayer)/carrot#8812
+* [@maenDisease](https://github.com/maenDisease)/Disease#3749 
+* [@lucysim9](https://github.com/lucysim9)/lucism#3987
 
 # Screenshots
 <div align='center'>
