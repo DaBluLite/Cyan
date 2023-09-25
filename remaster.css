@@ -939,7 +939,6 @@ body {
   height: fit-content;
   padding: 4px;
   gap: 4px;
-  backdrop-filter: blur(var(--cyan-blur-secondary));
 }
 .menu-2TXYjN:not([id="account"]) {
   border-radius: 16px;
@@ -955,8 +954,7 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 17px;
-  background-color: var(--cyan-background-primary);
-  backdrop-filter: blur(8px);
+  background-color: var(--cyan-background-secondary);
 }
 .item-5ApiZt {
   padding: 12px;
@@ -1906,8 +1904,7 @@ div:has(>div[style*="position: absolute;"] >.modalSize-3WSXDU),
 }
 .contentWrapper-3vHNP2 {
     box-shadow: var(--cyan-elevation-shadow);
-    background-color: var(--cyan-background-primary);
-    backdrop-filter: blur(var(--cyan-blur-radius));
+    background-color: var(--cyan-background-secondary);
 }
 .wrapper-1NNaWG,
 .inspector-DFKXwB,
@@ -2006,4 +2003,48 @@ div:has(>div[style*="position: absolute;"] >.modalSize-3WSXDU),
 }
 .folder-241Joy {
     background-color: var(--cyan-background-secondary) !important;
+}
+#account-status-picker--online {
+    --cyan-accent-color: var(--green-360);
+    --cyan-elevation-shadow: 0 0 0 1.5px var(--cyan-accent-color), 0 2px 10px 0 rgb(0 0 0 / 60%);
+}
+#account-status-picker--dnd {
+    --cyan-accent-color: var(--red-400);
+    --cyan-elevation-shadow: 0 0 0 1.5px var(--cyan-accent-color), 0 2px 10px 0 rgb(0 0 0 / 60%);
+}
+#account-status-picker--idle {
+    --cyan-accent-color: var(--yellow-300);
+    --cyan-elevation-shadow: 0 0 0 1.5px var(--cyan-accent-color), 0 2px 10px 0 rgb(0 0 0 / 60%);
+}
+#account-status-picker--invisible {
+    --cyan-accent-color: var(--primary-400);
+    --cyan-elevation-shadow: 0 0 0 1.5px var(--cyan-accent-color), 0 2px 10px 0 rgb(0 0 0 / 60%);
+}
+.status-3cqfT9 {
+    background-color: var(--cyan-accent-color) !important;
+}
+.statusItem-38ArJn {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 8px;
+    transition: .2s ease;
+}
+.separator-12G2Op {
+    display: none;
+}
+.description-1Dd2kv {
+    height: 0;
+    overflow: hidden;
+    transition: .2s ease;
+    align-items: center;
+    display: flex;
+    margin-bottom: 0;
+    max-height: 5rem;
+}
+.item-5ApiZt:hover .description-1Dd2kv {
+    height: fit-content;
+}
+.item-5ApiZt:hover .statusItem-38ArJn {
+    gap: 8px;
 }
