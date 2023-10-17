@@ -5,7 +5,7 @@
 :root {
     --cyan-version: 17;
     --cyan-subversion: 1;
-    --cyan-patch-version: 0;
+    --cyan-patch-version: 1;
     --cyan-text-shadow: 0;
     --cyan-blur-secondary: 0;
     --cyan-background-primary-alt: var(--cyan-background-primary);
@@ -253,7 +253,7 @@ div[aria-label=dablulite] .markup-eYLPri a:hover::after,
 .divider-3nqZNm.marginTop40-Q4o1tS,
 .divider-3nqZNm,
 .flex-2S1XBF:has(> .backButton-bSKWLe)>.searchHeader-2Ava0c,
-.chat-2ZfjoI .messagesWrapper-RpOMA3>.scroller-kQBbkU::-webkit-scrollbar-track,
+.chat-9g_3Xj .messagesWrapper-RpOMA3>.scroller-kQBbkU::-webkit-scrollbar-track,
 [d="M21.025 5V4C21.025 2.88 20.05 2 19 2C17.95 2 17 2.88 17 4V5C16.4477 5 16 5.44772 16 6V9C16 9.55228 16.4477 10 17 10H19H21C21.5523 10 22 9.55228 22 9V5.975C22 5.43652 21.5635 5 21.025 5ZM20 5H18V4C18 3.42857 18.4667 3 19 3C19.5333 3 20 3.42857 20 4V5Z"],
 .art-1TvEXv,
 path[d="M12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"]+circle,
@@ -688,7 +688,11 @@ aside.sidebarScrollable-2mW9Ls>div,
 .wrapper-wOVKdL,
 .previewMessage-2g_aBv,
 .sidebarRegionScroller-FXiQOh,
-*::-webkit-scrollbar-corner {
+*::-webkit-scrollbar-corner,
+.chatContent-2O4SXb,
+.members-2y1nVj,
+.container-2vWgD2,
+.member-2iQhp7:not(:hover) {
     background-color: transparent;
     background: none !important
 }
@@ -784,7 +788,7 @@ aside.sidebarScrollable-2mW9Ls>div,
 .container-x8Y1ix,
 .browser-mnQ1T7,
 .browser-mnQ1T7>div,
-.chat-2ZfjoI .messagesWrapper-RpOMA3>.scroller-kQBbkU:hover::-webkit-scrollbar-thumb,
+.chat-9g_3Xj .messagesWrapper-RpOMA3>.scroller-kQBbkU:hover::-webkit-scrollbar-thumb,
 .channel-k2TVLQ,
 .footer-5ji8u1,
 .header-1w9Q93,
@@ -1236,7 +1240,7 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
 .content-2a4AW9>ol,
 .scroller-WSmht3,
 .scroller-3X7KbA,
-.container-YkUktl,
+.container-1CH86i,
 .panel-2ZFCRb,
 .backdrop-2ByYRN:has(~ .layer-fP3xEz .quickswitcher-pKcM9U),
 .interactive-26HRN_:focus-within,
@@ -1385,7 +1389,7 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
 .jumpToPresentBar-1cEnH0 .barButtonAlt-TQoCdZ {
     font-size: 0
 }
-.chat-2ZfjoI {
+.chat-9g_3Xj {
     background: var(--bg-overlay-chat, var(--cyan-background-primary)) !important;
     margin: calc(var(--window-margin)*1px);
     border-radius: var(--window-border-radius-calc);
@@ -1588,7 +1592,7 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
 .scroller-WSmht3.scrollerBase-_bVAAt {
     padding-bottom: 72px
 }
-.container-YkUktl {
+.container-1CH86i {
     height: 47px
 }
 .lookFilled-yCfaCM,
@@ -1834,7 +1838,7 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
     height: fit-content
 }
 .attachButton-1ijpt9:hover,
-.panels-3wFtMD .container-YkUktl .button-12Fmur:hover,
+.panels-3wFtMD .container-1CH86i .button-12Fmur:hover,
 .expandedFolderBackground-1kSAf6:not(.collapsed-uGXEbi)~ul .pill-2RsI5Q>span,
 .accountButtonInner-33vCDY:hover,
 .accountBtnInner-1DCgBm:hover,
@@ -1900,14 +1904,14 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
 .container-1NXEtd+.panels-3wFtMD {
     transition: .5s ease !important
 }
-.container-1NXEtd+.panels-3wFtMD>.container-YkUktl .avatarWrapper-1B9FTW~.flex-2S1XBF {
+.container-1NXEtd+.panels-3wFtMD>.container-1CH86i .avatarWrapper-12uuu4~.flex-2S1XBF {
     margin-left: auto
 }
-.panels-3wFtMD>.container-YkUktl .flex-2S1XBF>:not(:last-child),
-.panels-3wFtMD>.container-YkUktl .flex-2S1XBF>:last-child {
+.panels-3wFtMD>.container-1CH86i .flex-2S1XBF>:not(:last-child),
+.panels-3wFtMD>.container-1CH86i .flex-2S1XBF>:last-child {
     transition: all.2s ease-in-out
 }
-.panels-3wFtMD .container-YkUktl .button-12Fmur {
+.panels-3wFtMD .container-1CH86i .button-12Fmur {
     width: calc((240px/3) - (var(--window-margin)*1px));
     border-radius: var(--window-border-radius) !important;
     margin: 0 calc((var(--window-margin)*1px)/2);
@@ -1926,7 +1930,7 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
     background-color: var(--cyan-background-secondary);
     box-shadow: var(--cyan-elevation-shadow)
 }
-.panels-3wFtMD .container-YkUktl .flex-2S1XBF {
+.panels-3wFtMD .container-1CH86i .flex-2S1XBF {
     width: 100% !important;
     float: left !important;
     height: 32px;
@@ -1974,7 +1978,7 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
         box-shadow: none
     }
 }
-.panels-3wFtMD .avatarWrapper-1B9FTW {
+.panels-3wFtMD .avatarWrapper-12uuu4 {
     width: calc(100% - 10px);
     max-width: unset;
     float: left;
@@ -1986,12 +1990,12 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
     box-shadow: none;
     animation: userAreaAccountReverse.2s ease
 }
-.panels-3wFtMD .avatarWrapper-1B9FTW:hover {
+.panels-3wFtMD .avatarWrapper-12uuu4:hover {
     animation: userAreaAccount.2s ease;
     box-shadow: var(--cyan-elevation-shadow);
     background: var(--cyan-background-secondary)
 }
-.panels-3wFtMD .container-YkUktl {
+.panels-3wFtMD .container-1CH86i {
     display: flex;
     flex-direction: column;
     padding: calc(min(1px, var(--window-border-radius))*8);
@@ -2567,7 +2571,7 @@ div:not([class="tutorialContainer-1pL9QS"]) .wrapper-3kah-n:hover .childWrapper-
     margin: 10px;
     margin-top: 0
 }
-#app-mount .panels-3wFtMD:hover .container-YkUktl .flex-2S1XBF {
+#app-mount .panels-3wFtMD:hover .container-1CH86i .flex-2S1XBF {
     animation: showUserArea.2s ease;
     margin-bottom: 0
 }
@@ -3408,7 +3412,7 @@ path[d="M12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4
 .typeThread-2Aqh6X .link-1_kTxV {
     margin-left: 4px
 }
-.chat-2ZfjoI .chat-2ZfjoI.container-1um7CU {
+.chat-9g_3Xj .chat-9g_3Xj.container-1um7CU {
     background-color: transparent !important;
     box-shadow: none !important;
     backdrop-filter: none !important
@@ -3545,7 +3549,7 @@ path[d="M12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4
 .tierCardCurrentTier-ed2p6N {
     background-image: linear-gradient(45deg, rgba(0, 159, 136, 1), var(--cyan-accent-color))
 }
-.chat-2ZfjoI:has(.channelRow-4X_3fi)>.container-ZMc96U {
+.chat-9g_3Xj:has(.channelRow-4X_3fi)>.container-ZMc96U {
     box-shadow: none;
     background-color: transparent !important
 }
@@ -3553,7 +3557,7 @@ path[d="M12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4
     border-radius: 50px;
     border-color: var(--cyan-background-secondary) !important
 }
-.chat-2ZfjoI:has(.channelRow-4X_3fi) .pageBody-23bo4p {
+.chat-9g_3Xj:has(.channelRow-4X_3fi) .pageBody-23bo4p {
     padding-left: 0
 }
 .header-2e2w0L {
@@ -3561,7 +3565,7 @@ path[d="M12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4
     margin-bottom: 16px;
     margin-top: -25px
 }
-.chat-2ZfjoI:has(.chat-2ZfjoI .channelRow-4X_3fi)::before {
+.chat-9g_3Xj:has(.chat-9g_3Xj .channelRow-4X_3fi)::before {
     content: "";
     position: absolute;
     top: 0;
@@ -3716,7 +3720,7 @@ path[d="M12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4
     display: flex;
     flex-direction: row
 }
-.chat-2ZfjoI:has(> .fullScreen-KhZZcz),
+.chat-9g_3Xj:has(> .fullScreen-KhZZcz),
 .fullScreen-KhZZcz .container-ZMc96U {
     border-radius: 0 !important
 }
@@ -4083,18 +4087,18 @@ path[d="M12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4
     background-color: transparent !important;
     box-shadow: none
 }
-.panels-3wFtMD:hover .container-YkUktl .flex-2S1XBF {
+.panels-3wFtMD:hover .container-1CH86i .flex-2S1XBF {
     padding: 4px 0
 }
-.chat-2ZfjoI .messagesWrapper-RpOMA3>.scroller-kQBbkU {
+.chat-9g_3Xj .messagesWrapper-RpOMA3>.scroller-kQBbkU {
     overflow: overlay;
     padding-right: 0;
     margin-bottom: 7px
 }
-.chat-2ZfjoI .messagesWrapper-RpOMA3>.scroller-kQBbkU .scrollerSpacer-3AqkT9 {
+.chat-9g_3Xj .messagesWrapper-RpOMA3>.scroller-kQBbkU .scrollerSpacer-3AqkT9 {
     height: 10px
 }
-.chat-2ZfjoI .messagesWrapper-RpOMA3>.scroller-kQBbkU::-webkit-scrollbar-thumb,
+.chat-9g_3Xj .messagesWrapper-RpOMA3>.scroller-kQBbkU::-webkit-scrollbar-thumb,
 *::-webkit-scrollbar-thumb {
     transition: .2s;
     background-color: transparent
