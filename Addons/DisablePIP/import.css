@@ -1,5 +1,5 @@
-div:not(:has(.videoWrapper-qKddsp)) + .pictureInPicture-1GQX91,
-div:not(:has(.videoWrapper-qKddsp)) + .pictureInPicture-1GQX91 * {
+div:not(:has(.videoWrapper__73cb7)) + .pictureInPicture__48d51,
+div:not(:has(.videoWrapper__73cb7)) + .pictureInPicture__48d51 * {
     opacity: 0;
     pointer-events: none !important;
     transition: 0s !important;
