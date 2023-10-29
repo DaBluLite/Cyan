@@ -1,25 +1,25 @@
-.platform-win .chat-2ZfjoI,
-.platform-osx .chat-2ZfjoI,
-.platform-win .container-2cd8Mz,
-.platform-osx .container-2cd8Mz,
-.platform-win .applicationStore-2nk7Lo,
-.platform-osx .applicationStore-2nk7Lo,
-.platform-win .noChannel-1GDIAZ,
-.platform-osx .noChannel-1GDIAZ,
-.platform-win .pageWrapper-2PwDoS,
-.platform-osx .pageWrapper-2PwDoS {
+.platform-win .chat__52833,
+.platform-osx .chat__52833,
+.platform-win .container__5c7e7,
+.platform-osx .container__5c7e7,
+.platform-win .applicationStore_fc7d76,
+.platform-osx .applicationStore_fc7d76,
+.platform-win .noChannel__7bbff,
+.platform-osx .noChannel__7bbff,
+.platform-win .pageWrapper_fef757,
+.platform-osx .pageWrapper_fef757 {
     margin-top: calc(var(--window-margin) * 1px) !important;
 }
-#app-mount .app-2CXKsg .guilds-2JjMmN {
+#app-mount .app_de4237 .guilds__2b93a {
     margin-top: calc((var(--window-margin) * 1px) + 60px) !important;
     height: calc((100% - ((var(--window-margin) * 1px)) * 2) - 60px) !important;
 }
-#app-mount .sidebar-1tnWFu {
+#app-mount .sidebar_ded4b5 {
     margin-top: calc((var(--window-margin) * 1px) + 60px) !important;
 }
-.platform-win .container-1eFtFS::before {
+.platform-win .container__037ed::before {
     height: calc((100% - ((var(--window-margin) * 1px)) * 2) - 60px) !important;
 }
-.title-31SJ6t, .container-ZMc96U {
+.title_b7d661, .container__11d72 {
     padding-right: 8px !important;
 }
