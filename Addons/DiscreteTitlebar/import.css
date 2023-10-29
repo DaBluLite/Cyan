@@ -1,4 +1,4 @@
-#app-mount .winButton-3UMjdg:not(:hover) > svg {
+#app-mount .winButton__88672:not(:hover) > svg {
     background-color: var(--cyan-background-primary) !important;
     background-size: 0 !important;
     border-radius: 50% !important;
