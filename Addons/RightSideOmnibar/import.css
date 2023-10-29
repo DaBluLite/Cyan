@@ -1,39 +1,39 @@
-.base-2jDfDU, .chat-2ZfjoI, .container-2cd8Mz, .applicationStore-2nk7Lo, .noChannel-1GDIAZ, .pageWrapper-2PwDoS {
+.base__3e6af, .chat__52833, .container__5c7e7, .applicationStore_fc7d76, .noChannel__7bbff, .pageWrapper_fef757 {
     order: -1;
 }
-.container-1eFtFS::before {
+.container__037ed::before {
     left: unset !important;
     right: calc(var(--window-margin) * 1px);
     height: calc(100% - ((var(--window-margin) * 1px)) * 2) !important;
 }
-#app-mount .guilds-2JjMmN {
+#app-mount .guilds__2b93a {
     margin: calc(var(--window-margin) * 1px) !important;
     margin-left: 0 !important;
     margin-top: calc(var(--window-margin) * 1px) !important;
     height: calc(100% - ((var(--window-margin) * 1px)) * 2) !important;
 }
-#app-mount .sidebar-1tnWFu {
+#app-mount .sidebar_ded4b5 {
     margin: calc(var(--window-margin) * 1px) !important;
     margin-right: 0 !important;
     margin-top: calc(var(--window-margin) * 1px) !important;
 }
-.platform-win .chat-2ZfjoI,
-.platform-osx .chat-2ZfjoI,
-.platform-win .container-2cd8Mz,
-.platform-osx .container-2cd8Mz,
-.platform-win .applicationStore-2nk7Lo,
-.platform-osx .applicationStore-2nk7Lo,
-.platform-win .noChannel-1GDIAZ,
-.platform-osx .noChannel-1GDIAZ,
-.platform-win .pageWrapper-2PwDoS,
-.platform-osx .pageWrapper-2PwDoS {
+.platform-win .chat__52833,
+.platform-osx .chat__52833,
+.platform-win .container__5c7e7,
+.platform-osx .container__5c7e7,
+.platform-win .applicationStore_fc7d76,
+.platform-osx .applicationStore_fc7d76,
+.platform-win .noChannel__7bbff,
+.platform-osx .noChannel__7bbff,
+.platform-win .pageWrapper_fef757,
+.platform-osx .pageWrapper_fef757 {
     margin-top: 32px !important;
 }
-.chat-2ZfjoI {
+.chat__52833 {
     margin-left: calc(var(--window-margin) * 1px) !important;
     margin-right: 0 !important;
 }
-.expandedFolderBackground-1kSAf6:not(.collapsed-uGXEbi)::before {
+.expandedFolderBackground__1bec6:not(.collapsed__0a270)::before {
     right: -12px;
     left: unset;
 }
