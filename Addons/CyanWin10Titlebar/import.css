@@ -1,16 +1,16 @@
-#app-mount .winButton-3UMjdg > svg {
+#app-mount .winButton__88672 > svg {
     background-image: none !important;
 }
-#app-mount .winButton-3UMjdg > svg > * {
+#app-mount .winButton__88672 > svg > * {
     fill: currentColor !important;
     display: -webkit-box !important;
     transform: scale(1.3);
     transform-origin: center;
 }
-#app-mount .winButtonMinMax-3RsPUg:nth-of-type(3) > svg > * {
+#app-mount .winButtonMinMax__72f36:nth-of-type(3) > svg > * {
     fill: transparent !important;
 }
-#app-mount .winButton-3UMjdg {
+#app-mount .winButton__88672 {
     order: unset !important;
     margin-top: calc((var(--window-margin) * 2px)) !important;
     height: 48px !important;
@@ -20,29 +20,29 @@
     border-radius: var(--window-border-radius);
     top: 0;
 }
-.winButtonClose-3Q8ZH5 {
+.winButtonClose__73489 {
     margin-left: 5px !important;
     margin-right: calc((var(--window-margin) * 2px)) !important;
 }
-#app-mount .winButton-3UMjdg:hover {
+#app-mount .winButton__88672:hover {
     background-color: var(--cyan-background-secondary) !important;
     box-shadow: var(--cyan-elevation-shadow);
 }
-#app-mount .typeWindows-2-g3UY {
+#app-mount .typeWindows__5fa63 {
     justify-content: end !important;
 }
-#app-mount .container-ZMc96U {
+#app-mount .container__11d72 {
     margin-right: calc((64px * 3) + (var(--window-margin) * 2px));
     width: calc(100% - ((var(--window-margin) * 2px) * 2) - ((64px * 3))) !important;
 }
-.platform-win #app-mount .container-1eFtFS::before, .platform-osx #app-mount .container-1eFtFS::before {
+.platform-win #app-mount .container__037ed::before, .platform-osx #app-mount .container__037ed::before {
     height: calc((100% - ((var(--window-margin) * 1px)) * 2)) !important;
 }
-.platform-win #app-mount .guilds-2JjMmN {
+.platform-win #app-mount .guilds__2b93a {
     margin-top: calc(var(--window-margin) * 1px) !important;
     height: calc((100% - ((var(--window-margin) * 1px)) * 2)) !important;
 }
-.platform-win #app-mount .sidebar-1tnWFu {
+.platform-win #app-mount .sidebar_ded4b5 {
     margin-top: calc(var(--window-margin) * 1px) !important;
 }
 #customcss-tab {
