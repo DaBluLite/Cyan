@@ -39,3 +39,12 @@
 #app-mount .winButtonClose__73489 {
     margin-right: calc((var(--window-margin) * 1px)) !important;
 }
+.sidebar_ded4b5 {
+    z-index: +1;
+}
+.wrapper__3670f,
+.pill__6b31b,
+.pill__13f64 {
+    left: unset !important;
+    right: 0 !important;
+}
