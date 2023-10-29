@@ -1,28 +1,28 @@
-.container-1eFtFS::before {
+.container__037ed::before {
     box-shadow: var(--light-elevation-border);
     background-color: transparent;
     backdrop-filter: none;
     transition: .6s;
     width: calc(82px - (var(--window-margin) * 1px));
 }
-.container-1eFtFS:has(.guilds-2JjMmN:hover, .sidebar-1tnWFu:hover)::before {
+.container__037ed:has(.guilds__2b93a:hover, .sidebar_ded4b5:hover)::before {
     box-shadow: var(--cyan-elevation-shadow);
     background-color: var(--cyan-background-primary);
     backdrop-filter: blur(var(--cyan-blur-radius));
     width: calc(320px + ((82px - (var(--window-margin) * 1px))));
 }
-.sidebar-1tnWFu {
+.sidebar_ded4b5 {
     width: 0;
     transition: .6s;
     opacity: 0;
 }
-.guilds-2JjMmN:hover + .base-2jDfDU .sidebar-1tnWFu, .sidebar-1tnWFu:hover {
+.guilds__2b93a:hover + .base__3e6af .sidebar_ded4b5, .sidebar_ded4b5:hover {
     width: 320px;
     opacity: 1;
 }
-.guilds-2JjMmN {
+.guilds__2b93a {
     opacity: .5;
 }
-.guilds-2JjMmN:hover {
+.guilds__2b93a:hover {
     opacity: 1;
 }
