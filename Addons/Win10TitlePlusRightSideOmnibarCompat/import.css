@@ -23,3 +23,19 @@
 .title_b7d661, .container__11d72 {
     padding-right: 8px !important;
 }
+#app-mount .container__11d72 {
+    margin-right: calc(var(--window-margin) * 1px) !important;
+    width: calc(100% - (var(--window-margin) * 2px)) !important;
+}
+.platform-win #app-mount .sidebar_ded4b5 {
+    margin-top: calc((var(--window-margin) * 2px) + 48px) !important;
+}
+.platform-win #app-mount .container__037ed::before {
+    height: calc((100% - (var(--window-margin) * 3px)) - 48px) !important;
+}
+#app-mount .winButton__88672 {
+    margin-top: calc((var(--window-margin) * 1px)) !important;
+}
+#app-mount .winButtonClose__73489 {
+    margin-right: calc((var(--window-margin) * 1px)) !important;
+}
