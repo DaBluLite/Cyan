@@ -6066,3 +6066,80 @@ ul[id*=folder-items-] {
     background-color: transparent;
     padding: 0
 }
+.tabBarContainer__63f55 {
+    border-bottom: none;
+}
+.tabBar__35f81 {
+    flex-wrap: nowrap;
+}
+.tabBarItem_b56b35 {
+    width: 100% !important;
+    flex: 0 1 auto;
+}
+.userProfileOuterUnthemed__48723 .topSection_dfb73b {
+    padding-top: 80px;
+}
+.userProfileModalOuter__3fe6b .editIcon__48e69 {
+    padding-left: 30px;
+}
+.userProfileModalOuter__3fe6b .container_b6b15b {
+    border: 2px solid var(--cyan-accent-color);
+    border-radius: 16px;
+    margin: 0 10px;
+    padding-bottom: 15px;
+}
+.userProfileModalOuter__3fe6b.userProfileOuterUnthemed__48723 .container_b6b15b {
+    margin-top: 30px;
+}
+#vc-spotify-player {
+    background-color: transparent !important;
+}
+.vc-spotify-button {
+    width: 100%;
+    border-radius: var(--window-border-radius);
+    margin: 0 calc((var(--window-margin)*1px)/2);
+    transition: all .2s ease-in-out;
+}
+.vc-spotify-button:hover {
+    box-shadow: var(--cyan-elevation-shadow);
+    background-color: var(--cyan-background-secondary);
+}
+.vc-spotify-button-row {
+    margin-top: 8px;
+}
+#vc-spotify-player .bar_e58961 {
+    height: 2px !important;
+    transform: translateY(1px);
+}
+.sliderContainer__109be {
+    order: 1;
+}
+.vc-spotify-time-left {
+    width: fit-content !important;
+    position: static;
+    order: 2;
+}
+.vc-spotify-time-left::after {
+    content: " | ";
+    white-space: pre;
+}
+.vc-spotify-time-right {
+    position: static;
+    order: 3;
+}
+#vc-spotify-progress-bar {
+    display: flex;
+    flex-wrap: wrap;
+}
+.menu_dc52c6::before {
+    border-radius: 16px !important;
+}
+.menu_dc52c6 {
+    overflow: hidden;
+}
+#account::before {
+    content: none;
+}
+#account {
+    box-shadow: none;
+}
