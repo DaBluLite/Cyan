@@ -9,7 +9,7 @@
 [bd-link]: https://betterdiscord.app/theme/Cyan
 [bd-badge]: https://img.shields.io/badge/Cyan-Download%20On%20BetterDiscord-3a71c1?labelColor=0c0d10&color=009f88&style=for-the-badge
 
-[cc-link]: https://dablulite.github.io/Cyan
+[cc-link]: https://dablulite.github.io/?tab=cyan
 [cc-badge]: https://img.shields.io/badge/Customize%20With%20Cyan%20Customizer-3a71c1?labelColor=0c0d10&color=009f88&style=for-the-badge
 
 [addon-link]: https://dablulite.github.io/Cyan/Addons
