@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 :root {
+	--cyan-interface-shadow: 0 4px 10px 0 rgb(0 0 0 / 60%);
+	--cyan-font: 'Montserrat', 'Open Sans';
+	--cyan-background-img: url("https://dablulite.github.io/Cyan/cyan-waves.png");
+	--cyan-accent-color: #009f88;
     --cyan-version: 24;
     --cyan-subversion: 3;
     --cyan-patch-version: 6;
