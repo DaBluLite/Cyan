@@ -13,9 +13,10 @@
     --cyan-radius-xs: 4px;
     --cyan-channelbar-width: 320px;
     --cyan-loading-header: "Polishing surfaces...";
+    --cyan-accent-color: #009f88;
     --cyan-interface-shadow: 0 4px 10px 0 rgb(0 0 0 / 60%);/*0 0 0 1.5px var(--cyan-accent-color), 0 2px 10px 0 rgb(0 0 0 / 60%)*/
-    --cyan-font: 'Montserrat', 'Open Sans';
-    --cyan-background-img: url("https://dablulite.github.io/Cyan/cyan-waves.png");
+	--cyan-font: 'Montserrat', 'Open Sans';
+	--cyan-background-img: url("https://dablulite.github.io/Cyan/cyan-waves.png");
     --window-titlebar-size: 0;
     --brand-experiment-100: var(--cyan-accent-color);
     --brand-experiment-130: var(--cyan-accent-color);
@@ -7121,4 +7122,33 @@ ul[id*=folder-items-] {
     font-size: 12px;
     line-height: 1.3333333333333333;
     font-weight: 400;
+}
+.base__3e6af,
+div:not([class]):has(>.chatButtonSpacer_a9ecb2,>.button__6d958) {
+    display: contents;
+}
+.button__6d958 {
+    margin: 0;
+}
+.lastButton__27ef0,
+.chatButtonSpacer_a9ecb2 > .button_afdfd9,
+.button__6d958 {
+    transition: .2s ease;
+    border-radius: var(--cyan-radius-medium);
+    padding: 12px;
+    display: inline-flex;
+    height: 48px;
+    margin: 0;
+    box-shadow: none;
+    will-change: box-shadow, background-color;
+}
+.lastButton__27ef0:hover,
+.chatButtonSpacer_a9ecb2 > .button_afdfd9:hover,
+.button__6d958:hover {
+    background-color: var(--cyan-second-layer);
+    box-shadow: var(--cyan-interface-shadow);
+}
+.chatButtonSpacer_a9ecb2 {
+    visibility: visible;
+    margin: 0;
 }
