@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
 :root {
     --cyan-version: 24;
@@ -15,8 +16,8 @@
     --cyan-loading-header: "Polishing surfaces...";
     --cyan-accent-color: #009f88;
     --cyan-interface-shadow: 0 4px 10px 0 rgb(0 0 0 / 60%);/*0 0 0 1.5px var(--cyan-accent-color), 0 2px 10px 0 rgb(0 0 0 / 60%)*/
-	--cyan-font: 'Montserrat', 'Open Sans';
-	--cyan-background-img: url("https://dablulite.github.io/Cyan/cyan-waves.png");
+    --cyan-font: 'Montserrat', 'Open Sans';
+    --cyan-background-img: url("https://dablulite.github.io/Cyan/cyan-waves.png");
     --window-titlebar-size: 0;
     --brand-experiment-100: var(--cyan-accent-color);
     --brand-experiment-130: var(--cyan-accent-color);
@@ -1419,7 +1420,7 @@ aside.sidebarScrollable__4aad1>div,
     border-radius: var(--cyan-radius-medium);
     box-shadow: var(--cyan-interface-shadow);
     backdrop-filter: blur(var(--cyan-blur));
-    text-align: center
+    padding-left: 50px;
 }
 
 .quickswitcher_a3d29a>.scroller__52ae7>div>.result__25f11,
@@ -1486,19 +1487,6 @@ aside.sidebarScrollable__4aad1>div,
 .item_b7fb7e {
     border-radius: var(--cyan-radius-small);
     border: none
-}
-
-.radioBar-3w9XY->div>svg>.radioIconForeground-2BMavi {
-    cx: 5.3;
-    cy: 5.2;
-    transform: scale(2.2);
-    fill: var(--cyan-accent-color)
-}
-
-.radioBar-3w9XY->div>svg>path {
-    d: path("m 32 2 c -16.568 0 -30 13.432 -30 30 s 13.432 30 30 30 s 30 -13.432 30 -30 s -13.432 -30 -30 -30");
-    transform: scale(.35);
-    fill: #515151
 }
 
 .expandedFolderBackground__1bec6 {
@@ -2134,7 +2122,6 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
     width: var(--cyan-channelbar-width);
 }
 
-.tooltipContent-Nejnvh,
 .expandedInboxHeader__395ef,
 .channel_c21703 {
     margin-bottom: 5px;
@@ -2148,7 +2135,6 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
 }
 
 .modeSelected__487d6 .wrapper__7bcde,
-.side-2ur1Qk .themed-2-lozF.selected-g-kMVV.item-3XjbnG,
 .interactiveSelected_ec846b {
     background-color: transparent !important;
     opacity: .9 !important
@@ -2213,21 +2199,6 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
     height: 47px
 }
 
-.lookFilled-yCfaCM,
-.lookOutlined-3yKVGo {
-    border-radius: var(--cyan-radius-medium);
-    background-color: var(--cyan-background-primary) !important
-}
-
-.colorRed-rQXKgM:hover {
-    background-color: var(--button-outline-danger-border) !important
-}
-
-.lookLink-15mFoz {
-    padding: 5px 8px;
-    margin-left: 5px
-}
-
 .form__13a2c {
     background-color: transparent !important;
     padding: 0 !important;
@@ -2283,7 +2254,6 @@ html #app-mount .container-2nx-BQ.checked-25WXMf .slider-32CRPX[style*="left: 12
 }
 
 .avatarWrapper_f77579,
-.avatarWrapper-3y0KZ1,
 .customItem__7173b:hover,
 .contentRegion__0bec1 {
     z-index: 1
@@ -3542,7 +3512,43 @@ div:not([class="tutorialContainer__890ea"]) .wrapper_d281dd .childWrapper__01b9c
     background-color: transparent !important;
     box-shadow: none !important
 }
+.searchBox_a63854 {
+	border: none !important;
+	background: none !important;
+	box-shadow: none !important;
+	overflow: visible;
+	padding: 0;
+	flex-direction: row-reverse;
+	gap: 8px;
+}
+.searchBarContainer__2c0f8 > .heading__15022,
+.tutorial_af9431 {
+	display: none;
+}
+.quickswitcher_a3d29a::before {
+	content: "\F52A";
+	font-size: 24px;
+	position: absolute;
+	top: 13px;
+	left: 13px;
+	z-index: +2;
+	font-family: "bootstrap-icons";
+}
+.quickswitcher_a3d29a>.input__848cd[value=""]+.scroller__52ae7 {
+	display: none;
+}
+.layer_ad604d:has(.quickswitcher_a3d29a) {
+	justify-content: start;
+	padding-top: 100px;
+}
+.root_a28985:has(.quickswitcher_a3d29a) {
+	animation: animtop .4s ease;
+}
 
+.quickswitcher_a3d29a .content__23cab {
+	padding-top: 0 !important;
+	height: fit-content !important;
+}
 .quickswitcher_a3d29a>.scroller__52ae7 {
     overflow-y: overlay !important;
     padding: 12px !important;
@@ -3551,6 +3557,12 @@ div:not([class="tutorialContainer__890ea"]) .wrapper_d281dd .childWrapper__01b9c
     margin-right: 0 !important;
     background-color: var(--cyan-background-primary) !important;
     backdrop-filter: blur(var(--cyan-blur))
+}
+.quickswitcher_a3d29a>.scroller__52ae7:has(.content__23cab .result__25f11:nth-child(2):last-child) {
+	background: none !important;
+	backdrop-filter: none;
+	padding: 0 !important;
+	box-shadow: none !important;
 }
 
 .result__25f11 .content_ad5076 {
@@ -4446,7 +4458,6 @@ div:not([class="tutorialContainer__890ea"]) .wrapper_d281dd .childWrapper__01b9c
 
 .connectedAccountContainer__23f00:hover {
     box-shadow: var(--cyan-interface-shadow);
-    transform: scale(1.03)
 }
 
 .disabledButtonWrapper__69c70:has(.listenAlongIcon__86ce9, .spotifyButtonLogo__526f7) {
@@ -6656,7 +6667,7 @@ ul[id*=folder-items-] {
 
 .container_f87d43 .containerDefault__3187b:hover::before,
 .container_f87d43 .containerDefault__3187b:hover::after {
-    transform: scale(.99) translateX(1px)
+    transform: translateX(1px)
 }
 
 #app-mount .settingsTabBar__19aa3 {
@@ -7151,4 +7162,21 @@ div:not([class]):has(>.chatButtonSpacer_a9ecb2,>.button__6d958) {
 .chatButtonSpacer_a9ecb2 {
     visibility: visible;
     margin: 0;
+}
+#---new-messages-bar {
+	height: 0;
+}
+.form__13a2c {
+	display: flex;
+	flex-direction: column-reverse;
+}
+.typing__6fd1d {
+	margin-bottom: 0;
+}
+#vencordthemes-tab .vc-settings-card::after {
+	content: "Looking for more options? Try setting Cyan's accent color to \"var(--os-accent-color);\"";
+	color: var(--header-primary);
+	font-size: 14px;
+    line-height: 18px;
+	user-select: all !important;
 }
