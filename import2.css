@@ -7194,3 +7194,6 @@ div:not([class]):has(>.chatButtonSpacer_a9ecb2,>.button__6d958) {
 .actionsProfileV2__1c710 {
     align-items: center;
 }
+.tip__6e299 .combo__57290 {
+    display: none !important;
+}
