@@ -1,0 +1,31 @@
+/**
+Alternative import of Cyan 2 for clients that support the css color-mix function
+*/
+
+:root:root {
+    --brand-100: color-mix(in srgb, var(--cyan-accent-color), white 80%);
+    --brand-130: color-mix(in srgb, var(--cyan-accent-color), white 74%);
+    --brand-160: color-mix(in srgb, var(--cyan-accent-color), white 68%);
+    --brand-200: color-mix(in srgb, var(--cyan-accent-color), white 60%);
+    --brand-230: color-mix(in srgb, var(--cyan-accent-color), white 54%);
+    --brand-260: color-mix(in srgb, var(--cyan-accent-color), white 48%);
+    --brand-300: color-mix(in srgb, var(--cyan-accent-color), white 40%);
+    --brand-330: color-mix(in srgb, var(--cyan-accent-color), white 34%);
+    --brand-360: color-mix(in srgb, var(--cyan-accent-color), white 28%);
+    --brand-400: color-mix(in srgb, var(--cyan-accent-color), white 20%);
+    --brand-430: color-mix(in srgb, var(--cyan-accent-color), white 14%);
+    --brand-460: color-mix(in srgb, var(--cyan-accent-color), white 8%);
+    --brand-500: var(--cyan-accent-color);
+    --brand-530: color-mix(in srgb, var(--cyan-accent-color), black 8%);
+    --brand-560: color-mix(in srgb, var(--cyan-accent-color), black 14%);
+    --brand-600: color-mix(in srgb, var(--cyan-accent-color), black 20%);
+    --brand-630: color-mix(in srgb, var(--cyan-accent-color), black 28%);
+    --brand-660: color-mix(in srgb, var(--cyan-accent-color), black 34%);
+    --brand-700: color-mix(in srgb, var(--cyan-accent-color), black 40%);
+    --brand-730: color-mix(in srgb, var(--cyan-accent-color), black 48%);
+    --brand-760: color-mix(in srgb, var(--cyan-accent-color), black 54%);
+    --brand-800: color-mix(in srgb, var(--cyan-accent-color), black 60%);
+    --brand-830: color-mix(in srgb, var(--cyan-accent-color), black 68%);
+    --brand-860: color-mix(in srgb, var(--cyan-accent-color), black 74%);
+    --brand-900: color-mix(in srgb, var(--cyan-accent-color), black 80%);
+}
