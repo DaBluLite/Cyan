@@ -2,6 +2,8 @@
 Alternative import of Cyan 2 for clients that support the css color-mix function
 */
 
+@import url("https://dablulite.github.io/Cyan/import2.css");
+
 :root:root {
     --brand-100: color-mix(in srgb, var(--cyan-accent-color), white 80%);
     --brand-130: color-mix(in srgb, var(--cyan-accent-color), white 74%);
