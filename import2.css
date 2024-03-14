@@ -4,7 +4,7 @@
 :root {
     --cyan-version: 24;
     --cyan-subversion: 3;
-    --cyan-patch-version: 10;
+    --cyan-patch-version: 14;
     --cyan-blur: 48px;
     --cyan-radius-interface: 24px;
     --cyan-radius-large: 16px;
@@ -2540,6 +2540,7 @@ s.container_d667ff .button__4f306:hover,
 .panels__58331 .avatarWrapper_ba5175 {
     width: calc((100%/4) - 14px);
     max-width: unset;
+    min-width: unset !important;
     float: left;
     padding: 7px;
     border-radius: var(--cyan-radius-small) !important;
@@ -7418,4 +7419,62 @@ div:not([class]):has(>.chatButtonSpacer_a9ecb2,>.button__6d958) {
     background: var(--cyan-background-primary);
     backdrop-filter: blur(var(--cyan-blur));
     box-shadow: var(--cyan-interface-shadow);
+}
+.flexChild__6e093:has(>.imageUploader__8d497) {
+    flex: 0 0 auto !important;
+}
+.flex_f5fbb7:has(>.flexChild__6e093>.imageUploader__8d497) {
+    flex: 0 0 auto !important;
+}
+.container_ca50b9:has(.flex_f5fbb7 > .button__4f306:nth-child(4)) .flex_f5fbb7 {
+    width: calc((100%/5) * 4) !important;
+}
+.container_ca50b9:has(.flex_f5fbb7 > .button__4f306:nth-child(4)) .avatarWrapper_ba5175 {
+    width: calc((100%/5) - 14px);
+    min-width: unset !important;
+}
+.container_ca50b9:has(.flex_f5fbb7 > .button__4f306:nth-child(5)) .flex_f5fbb7 {
+    width: calc((100%/6) * 5) !important;
+}
+.container_ca50b9:has(.flex_f5fbb7 > .button__4f306:nth-child(5)) .avatarWrapper_ba5175 {
+    width: calc((100%/6) - 14px);
+}
+.container__79822 {
+    border-radius: 12px;
+    background: var(--cyan-second-layer);
+    box-shadow: var(--cyan-interface-shadow);
+    padding: 6px;
+}
+.rippleContainer_bf482c {
+    border-radius: 12px;
+}
+.playButtonContainer_d887d6 {
+    border-radius: 8px;
+    background: var(--cyan-second-layer) !important;
+    box-shadow: var(--cyan-interface-shadow);
+    margin: 0;
+}
+.playButtonContainer_d887d6 > .playIcon_e14cf9 {
+    color: var(--header-primary) !important;
+}
+.canvas__097d5 {
+    filter: grayscale(1);
+}
+.rowContainer__6f4c6 {
+    background-color: transparent;
+    border-radius: var(--cyan-radius-medium);
+    transition: .2s ease;
+}
+.rowContainer__6f4c6:hover {
+    box-shadow: var(--cyan-interface-shadow);
+    background-color: var(--cyan-second-layer);
+}
+.rowIcon__1bb28 {
+    display: none;
+}
+.input__0c269 {
+    background: none;
+}
+.iconContainer_cd2671 > svg > circle {
+    fill: var(--cyan-accent-color);
 }
