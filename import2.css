@@ -4,7 +4,7 @@
 :root {
     --cyan-version: 24;
     --cyan-subversion: 3;
-    --cyan-patch-version: 15;
+    --cyan-patch-version: 16;
     --cyan-blur: 48px;
     --cyan-radius-interface: 24px;
     --cyan-radius-large: 16px;
@@ -5532,4 +5532,9 @@ div:not([class]):has(>.chatButtonSpacer_a9ecb2, >.button__6d958),
     background-color: var(--cyan-second-layer) !important;
     backdrop-filter: blur(var(--cyan-blur));
     box-shadow: var(--cyan-interface-shadow)
+}
+.profileMutuals__5a6ff {
+    border-radius: 4px;
+    padding: 8px;
+    background-color: var(--cyan-second-layer);
 }
