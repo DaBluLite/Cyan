@@ -4,7 +4,7 @@
 :root {
     --cyan-version: 24;
     --cyan-subversion: 3;
-    --cyan-patch-version: 16;
+    --cyan-patch-version: 19;
     --cyan-blur: 48px;
     --cyan-radius-interface: 24px;
     --cyan-radius-large: 16px;
@@ -98,7 +98,6 @@
 .nameTag__693ff span:has(> .botText__19848) {
     margin-left: 8px
 }
-.overlayBackground-2Zjm9f,
 .sidebarRegion__60457,
 #bd-editor-controls button:hover,
 .link_b006df:hover,
@@ -125,7 +124,6 @@ div[aria-label=dablulite] .markup_a7e664 a:hover::after,
 .card__86773 .wrapper_c727b6 .button_d553e5:hover {
     box-shadow: var(--cyan-interface-shadow)
 }
-.heroButtons-357iJy>.button-1U79Hu:hover,
 .categoryItem_b1be5c,
 .subText_ab7e13>div,
 .lookFilled__19298.colorPrimary__6ed40,
@@ -146,7 +144,6 @@ div[aria-label=dablulite] .markup_a7e664 a:hover::after,
 .option_b5597b:after,
 #guild-header-popout::before,
 .userProfileModalOuter__3fe6b>.userProfileInnerThemedNonPremium__3d0a6 .overlayBackground__86b78::before,
-.userProfileModalOuter__3fe6b:has(.pencilContainer_d4ce8d)>.userProfileInnerThemedNonPremium__3d0a6 .header-S26rhB::before,
 .contentRegion__0bec1::before,
 .contentRegionScroller__86c79::before,
 .container__5c7e7:has(.addFriendInput__568d8)::before,
@@ -552,10 +549,8 @@ div[aria-label=dablulite] .markup_a7e664 a:hover::after,
 #appearance-tab.contentColumn_dc7d36>:not([class]):first-child>.children_b15c64>div:nth-child(2) [role=radiogroup] .item_b7fb7e .radioBar-3w9XY->div:not([class]),
 #customcss-tab>.bd-settings-title,
 .closeButton__34341~.keybind__57645,
-.modalDivider-MtZbPb,
 .panels__58331 .wrapper__0ed4a:empty,
 .protip__84833,
-.premiumIconWrapper-yyGDql,
 .section__6f61e:has(.note_ba0c31),
 .divider__56f26,
 .scroller__83262::-webkit-scrollbar,
@@ -568,8 +563,6 @@ div[aria-label=dablulite] .markup_a7e664 a:hover::after,
 .separator__3cfd2,
 .tadaIcon__3b97b,
 .subtext__8a015:has(.tipSubtext_d3460f),
-.note-3M15gE,
-.newMessagesBar__8b6d7>.barButtonMain__0f5c6,
 .jumpToPresentBar__0ff7f>.barButtonMain__0f5c6,
 .divider_ed0c1d,
 .bd-settings-group .bd-setting-divider,
@@ -578,15 +571,9 @@ div[aria-label=dablulite] .markup_a7e664 a:hover::after,
 .flex_f5fbb7:has(> .backButton__6a1f0)>.searchHeader_b6500e,
 .chat__52833 .messagesWrapper_ea2b0b>.scroller__1f96e::-webkit-scrollbar-track,
 [d="M21.025 5V4C21.025 2.88 20.05 2 19 2C17.95 2 17 2.88 17 4V5C16.4477 5 16 5.44772 16 6V9C16 9.55228 16.4477 10 17 10H19H21C21.5523 10 22 9.55228 22 9V5.975C22 5.43652 21.5635 5 21.025 5ZM20 5H18V4C18 3.42857 18.4667 3 19 3C19.5333 3 20 3.42857 20 4V5Z"],
-.art-1TvEXv,
 path[d="M12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"]+circle,
 .userProfileModalOuter__3fe6b>.userProfileInnerThemedNonPremium__3d0a6 .pencilContainer_d4ce8d,
-body:has(> #video) #video,
 .emptyIcon__655a1,
-.shelfTopBackground-R55ED9,
-.divider-SH6OnO,
-.searchBox-31Zv9h>.searchIcon_e60ea8,
-.headerImage-2D5D-v,
 .headerImage_d4505b,
 .notches__065e9,
 .item__183e8>.iconContainer__829e7+.iconContainer__829e7,
@@ -609,12 +596,7 @@ div:not(.bannerVisible__191f6)>.animatedContainer__341f6,
 .credentialItem_d7739a .avatar__6337f:empty,
 #vencordthemes-tab>div:not([class])>div:not([class])>.sectionTitle_e32631,
 .shelfTopBackground__8e15b,
-.sidebar__9e3e2>.side-2ur1Qk>.premiumTab__57bdc>.premiumLabel_f2cd55>svg,
-.slider-32CRPX>svg,
 .wordmark__0d178,
-.item-1OdjEX::before,
-.dragRegion-147xxt,
-#linuxCustomTitlebarWordmark,
 #my-account-tab .bannerSVGWrapper__3e7b0>foreignObject,
 .ready__61f2f,
 .prefixElement__829f9,
@@ -639,7 +621,8 @@ html:not(.is-mobile) .avatarWrapper_ba5175 .nameTag__0e320,
 .listItem_fa7b36:has(.guildSeparator_dcb3cc)+div[aria-label]:empty,
 .headerImage__0db01,
 .attachment_f3cf2c:not(.attachmentContentItem_ef9fc2) .icon__30aa7,
-.attachment_f3cf2c:not(.attachmentContentItem_ef9fc2) .filenameWrapper__61a04 {
+.attachment_f3cf2c:not(.attachmentContentItem_ef9fc2) .filenameWrapper__61a04,
+.section__6f61e:has(>.roles__74a2b:empty) {
     display: none !important
 }
 .searchBar_e0c60b:hover .DraftEditor-root,
@@ -718,9 +701,6 @@ html:not(.is-mobile) .avatarWrapper_ba5175 .nameTag__0e320,
     border-radius: var(--cyan-radius-large) !important;
     box-shadow: var(--cyan-interface-shadow)
 }
-.userPopoutInnerWithoutTheme-23vLID {
-    background-color: var(--background-secondary-alt) !important
-}
 .navList__9f792,
 .contentRegionScroller__86c79.contentRegionShownSidebar__610ed,
 .webkit__8d35a .buttons_ce5b56 button,
@@ -762,8 +742,8 @@ html:not(.is-mobile) .avatarWrapper_ba5175 .nameTag__0e320,
     border-radius: var(--cyan-radius-large)
 }
 .container__5bda1 {
-    border-radius: var(--cyan-radius-small);
-    background-color: var(--background-primary);
+    border-radius: var(--cyan-radius-large);
+    background-color: var(--cyan-second-layer);
     padding: 5px;
     width: fit-content
 }
@@ -1284,18 +1264,22 @@ body {
     border-color: #e1a73e
 }
 .winButton__88672 {
-    box-shadow: var(--cyan-interface-shadow);
     width: 14px;
     height: 14px;
     top: 0;
-    border-radius: 50px
 }
 .winButton__88672>svg {
     border: 1.5px solid transparent;
     display: block;
     height: calc(100% - 3px);
     width: calc(100% - 3px);
+    border-radius: 50px;
+    opacity: .8;
+    box-shadow: var(--cyan-interface-shadow);
     border-radius: 50px
+}
+.winButton__88672:hover>svg {
+    opacity: 1;
 }
 .container__11d72 {
     margin-bottom: 0 !important;
@@ -1494,16 +1478,15 @@ body {
 }
 .newMessagesBar__8b6d7 {
     background-color: var(--cyan-second-layer);
-    width: 40px !important;
-    border: none !important;
+    width: fit-content !important;
     height: 40px !important;
-    top: unset !important;
-    bottom: 20px !important;
+    top: 10px !important;
     border-radius: 50px !important;
-    left: 10px !important;
+    left: 50% !important;
+    transform: translateX(-50%);
     padding: 4px;
     transition: .2s ease;
-    backdrop-filter: blur(var(--cyan-blur)) !important;
+    backdrop-filter: brightness(0) !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1710,7 +1693,10 @@ s.container_d667ff .button__4f306:hover,
 .contentRegion__0bec1 {
     z-index: 1
 }
-.userPopoutOverlayBackground_d8afa4:has(#account) :is(.scroller__83262>.section__6f61e:nth-last-child(2):has(.messageInputContainer__768e6), .scroller__83262>.section__6f61e:nth-last-child(3):has(.title_ef4a6d):not(:has(+ .section__6f61e .activity__20c1e)), .scroller__83262>.section__6f61e:nth-last-child(3):has(.activity__20c1e), .section__6f61e:nth-last-child(2):has(.activity__20c1e), .profilePanel__12596 .scrollerBase_dc3aa9>.overlayBackground__86b78:nth-last-child(2):not(:empty)) {
+.userPopoutOverlayBackground_d8afa4:has(#account) :is(.scroller__83262>.section__6f61e:nth-last-child(2):has(.messageInputContainer__768e6),
+.scroller__83262>.section__6f61e:nth-last-of-type(1):has(.title_ef4a6d):not(:has(+ .section__6f61e .activity__20c1e)),
+.scroller__83262>.section__6f61e:nth-last-child(3):has(.activity__20c1e), .section__6f61e:nth-last-child(2):has(.activity__20c1e),
+.profilePanel__12596 .scrollerBase_dc3aa9>.overlayBackground__86b78:nth-last-child(2):not(:empty)) {
     border-radius: var(--cyan-radius-xs) !important
 }
 .upload_c98ecb {
@@ -1784,7 +1770,7 @@ s.container_d667ff .button__4f306:hover,
     margin-top: 10px;
     height: 15px;
     justify-content: space-evenly !important;
-    width: 70px !important;
+    width: 80px !important;
     margin-left: 10px
 }
 .footer__06f4b {
@@ -2750,7 +2736,8 @@ div:not([class="tutorialContainer__890ea"]) .wrapper_d281dd .childWrapper__01b9c
 .scroller__83262>.section__6f61e:nth-last-child(3):has(.title_ef4a6d):not(:has(+ .section__6f61e .activity__20c1e)),
 .scroller__83262>.section__6f61e:nth-last-child(3):has(.activity__20c1e),
 .section__6f61e:nth-last-child(2):has(.activity__20c1e),
-.profilePanel__12596 .scrollerBase_dc3aa9>.overlayBackground__86b78:nth-last-child(2):not(:empty) {
+.profilePanel__12596 .scrollerBase_dc3aa9>.overlayBackground__86b78:nth-last-child(2):not(:empty),
+.section__6f61e:has(>.activity__20c1e):has(+.section__6f61e > .roles__74a2b:empty) {
     border-radius: var(--cyan-radius-xs) 4px 16px 16px !important
 }
 .messageInputContainer__768e6,
@@ -2792,12 +2779,15 @@ div:not([class="tutorialContainer__890ea"]) .wrapper_d281dd .childWrapper__01b9c
     line-height: 20px
 }
 .searchBarComponent__22760::after {
-    content: "Search...";
+    content: "Search... (Ctrl + K)";
     line-height: 20px;
     width: fit-content;
     font-size: 16px;
     margin-left: 10px;
     color: var(--header-primary)
+}
+.platform-osx .searchBarComponent__22760::after {
+    content: "Search... (Cmd + K)";
 }
 .profilePanel__12596 {
     margin: 8px;
@@ -3280,18 +3270,15 @@ div:not([class="tutorialContainer__890ea"]) .wrapper_d281dd .childWrapper__01b9c
     max-width: unset !important;
     max-height: 42px !important
 }
-.scroller__83262>.section__6f61e:has(.activity__20c1e) {
-    padding-bottom: 25px
-}
 .spotifyButtonLogo__526f7 {
     transform: scale(1.3)
 }
 .newMessagesBar__8b6d7>.barButtonAlt__4b48f {
     font-size: 0 !important;
-    padding: 0 !important
+    padding: 0 !important;
+    order: -1;
 }
-.newMessagesBar__8b6d7>.barButtonAlt__4b48f>svg {
-    margin: 0;
+.newMessagesBar__8b6d7>.barButtonAlt__4b48f>.barButtonIcon__907ef {
     transform: scale(1.3)
 }
 .listenAlongIcon__86ce9 {
@@ -3670,7 +3657,6 @@ div:not([class="tutorialContainer__890ea"]) .wrapper_d281dd .childWrapper__01b9c
 .chat__52833 .messagesWrapper_ea2b0b>.scroller__1f96e {
     overflow: overlay;
     padding-right: 0;
-    margin-bottom: 7px
 }
 .chat__52833 .messagesWrapper_ea2b0b>.scroller__1f96e .scrollerSpacer__9cd32,
 .sliderContainer__109be {
@@ -3813,7 +3799,8 @@ path[d="M12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4
     height: 27px !important
 }
 .notAppAsidePanel__9d124:has(~ .themeEditor__6df21) .container__037ed {
-    width: calc(100% - 16px) margin:8px;
+    width: calc(100% - 16px);
+    margin:8px;
     border-radius: var(--cyan-radius-interface);
     box-shadow: var(--cyan-interface-shadow);
     margin-top: calc(var(--window-titlebar-size) + 4px)
