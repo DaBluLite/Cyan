@@ -2759,10 +2759,6 @@ path[d="M12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4
 .channel_c21703:has(a[href="/channels/@me"],a[href="/store"])>.interactiveSelected_ec846b::before {
 	content: none
 }
-.channel_c21703:has(a[href="/store"],a[href="/channels/@me"])>.interactiveSelected_ec846b {
-	background-color: var(--cyan-background-secondary) !important;
-	box-shadow: var(--cyan-elevation-shadow)
-}
 .channel_c21703:has(a[href="/store"],a[href="/channels/@me"])>div {
 	position: relative;
 	padding-right: 0;
@@ -2932,11 +2928,6 @@ path[d="M12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4
 .link_b006df,
 .theme-light .buttons_ce5b56>:is(.button_afdfd9, .buttonContainer__8b164) .button_f0455c {
 	color: #fff !important
-}
-#app-mount .wrapper__7bcde {
-	background: transparent !important;
-	width: 100%;
-	justify-content: space-between
 }
 .tabBar-2hXqzU {
 	gap: 0
@@ -3375,7 +3366,9 @@ path[d="M12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4
 	background-color: transparent
 }
 .wrapper__7bcde {
-	padding-left: 4px
+	padding-left: 4px;
+	width: calc(var(--cyan-channelbar-width) - 28px);
+	justify-content: space-between
 }
 .tutorialContainer_dc6fde>.listItem_fa7b36 .circleIconButton_d8df29,
 .tutorialContainer_dc6fde+.listItem_fa7b36 .circleIconButton_d8df29 {
