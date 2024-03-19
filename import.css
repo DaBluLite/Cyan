@@ -547,7 +547,6 @@ div:not(.bannerVisible__191f6)>.animatedContainer__341f6,
 .maskBackground__23cef,
 .picker__6dca7:has(.soundRow__3fb1b) .wrapper__4f229,
 .picker__6dca7:has(.soundRow__3fb1b) .wrapper__4f229 .scroller_e89578,
-.userPopoutOuter_d739b2:has(.pencilContainer_d4ce8d) .bannerSVGWrapper__3e7b0 .banner__6d414,
 .monaco-editor .margin,
 .monaco-editor-background,
 .monaco-editor .inputarea.ime-input,
@@ -2003,7 +2002,7 @@ div:not([class="tutorialContainer__890ea"]) .wrapper_d281dd:hover .childWrapper_
 #app-mount .centerButton__3205b:hover {
 	background: var(--cyan-background-primary) !important
 }
-.contextMenuContainer_fc4df6 .centerButton__3205b {
+.contextMenuContainer_fc4df6:has(>:nth-child(2)) .centerButton__3205b {
 	border-radius: 56px 0 0 56px;
 	height: 56px;
 	width: 28px;
@@ -3179,7 +3178,7 @@ path[d="M12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4
 }
 .marginBottom40__9109c {
 	padding: 16px;
-	background-color: var(--cyan-background-secondary);
+	background-color: var(--cyan-background-secondary) !important;
 	box-shadow: var(--cyan-elevation-shadow);
 	border-radius: 16px;
 	margin-bottom: 20px
