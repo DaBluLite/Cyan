@@ -1,5 +1,5 @@
 <div align='center'>
-<img src="https://github.com/DaBluLite/Cyan/blob/master/cyan2-addon-banner.png?raw=true"/>
+<img src="https://github.com/DaBluLite/Cyan/blob/master/cyan-addon-banner.png?raw=true"/>
 </div>
 
 # Cyan - Clean and Customizable, with custom background support
