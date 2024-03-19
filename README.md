@@ -27,9 +27,7 @@
 * [@lucysim9](https://github.com/lucysim9)/lucism#3987
 
 # Screenshots
-<div align='center'>
-<img src="https://github.com/DaBluLite/Cyan/blob/master/screenshots/cyan-screenshot-1.png?raw=true"/>
-</div>
+![image](https://github.com/DaBluLite/Cyan/assets/73998678/9b9e4852-7bca-4e82-9b7a-4c3837204531)
 <div align='center'>
 <img src="https://github.com/DaBluLite/Cyan/blob/master/screenshots/cyan-screenshot-2.png?raw=true"/>
 </div>
