@@ -2015,7 +2015,7 @@ div:not([class="tutorialContainer__890ea"]) .wrapper_d281dd:hover .childWrapper_
 	background-color: transparent !important;
 	background: transparent !important
 }
-.contextMenuContainer_fc4df6 {
+.contextMenuContainer_fc4df6:has(>:nth-child(2)) {
 	width: calc(56px + 28px)
 }
 .contextMenuContainer_fc4df6 .centerButton__3205b .controlIcon__25700 {
