@@ -4,7 +4,7 @@
 :root {
     --cyan-version: 24;
     --cyan-subversion: 3;
-    --cyan-patch-version: 19;
+    --cyan-patch-version: 21;
     --cyan-blur: 48px;
     --cyan-radius-interface: 24px;
     --cyan-radius-large: 16px;
@@ -992,7 +992,6 @@ aside.sidebarScrollable__4aad1>div,
 }
 .overlayBackground__86b78 {
     background-color: transparent;
-    overflow: hidden !important;
     margin: 12px;
     gap: 2px
 }
@@ -2730,7 +2729,6 @@ div:not([class="tutorialContainer__890ea"]) .wrapper_d281dd .childWrapper__01b9c
     margin-left: 0 !important;
     border-radius: var(--cyan-radius-xs) !important;
     padding: 8px;
-    overflow: overlay !important
 }
 .scroller__83262>.section__6f61e:nth-last-child(2):has(.messageInputContainer__768e6),
 .scroller__83262>.section__6f61e:nth-last-child(3):has(.title_ef4a6d):not(:has(+ .section__6f61e .activity__20c1e)),
@@ -5524,4 +5522,15 @@ div:not([class]):has(>.chatButtonSpacer_a9ecb2, >.button__6d958),
     border-radius: 4px;
     padding: 8px;
     background-color: var(--cyan-second-layer);
+}
+.scroller__83262 {
+    overflow: visible !important;
+}
+.scrollerSeparator__321f3 {
+    box-shadow: none;
+}
+.userPopoutOverlayBackground_d8afa4 {
+    overflow: hidden auto !important;
+    scrollbar-width: none;
+    scrollbar-color: var(--profile-body-divider-color) var(--scrollbar-thin-track);
 }
