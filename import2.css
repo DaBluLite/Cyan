@@ -4,7 +4,7 @@
 :root {
     --cyan-version: 24;
     --cyan-subversion: 3;
-    --cyan-patch-version: 21;
+    --cyan-patch-version: 23;
     --cyan-blur: 48px;
     --cyan-radius-interface: 24px;
     --cyan-radius-large: 16px;
@@ -537,7 +537,6 @@ div[aria-label=dablulite] .markup_a7e664 a:hover::after,
     --white: var(--white-500);
     --you-bar-bg: var(--white-500)
 }
-.DraftEditor-root,
 .background__584e7.selectedBackground_d847da,
 .divider_c09b64,
 .tabBody_b3d268:before,
@@ -625,8 +624,6 @@ html:not(.is-mobile) .avatarWrapper_ba5175 .nameTag__0e320,
 .section__6f61e:has(>.roles__74a2b:empty) {
     display: none !important
 }
-.searchBar_e0c60b:hover .DraftEditor-root,
-.search_ac353c:is(.focused_ddee54, .open_d3ab4e) .DraftEditor-root,
 .uploadContainer__5a7da {
     display: block
 }
@@ -5533,4 +5530,22 @@ div:not([class]):has(>.chatButtonSpacer_a9ecb2, >.button__6d958),
     overflow: hidden auto !important;
     scrollbar-width: none;
     scrollbar-color: var(--profile-body-divider-color) var(--scrollbar-thin-track);
+}
+.vc-notification-root {
+    width: 500px !important;
+}
+.vc-notification-close-btn {
+    height: calc(100%);
+    transition: .2s ease;
+    padding: 10px;
+    box-sizing: border-box;
+    opacity: 1;
+    top: 0;
+    display: flex;
+    align-items: center;
+    right: 0;
+}
+.vc-notification-close-btn:hover {
+    box-shadow: var(--cyan-interface-shadow);
+    background-color: var(--cyan-second-layer);
 }
