@@ -17,7 +17,7 @@
     --cyan-interface-shadow: 0 4px 10px 0 rgb(0 0 0 / 60%);
     --cyan-font: 'Montserrat', 'Open Sans';
     --cyan-background-img: url("https://dablulite.github.io/Cyan/cyan-waves.png");
-    --window-titlebar-size: 0;
+    --window-titlebar-size: 0px;
     --brand-100: var(--cyan-accent-color);
     --brand-130: var(--cyan-accent-color);
     --brand-160: var(--cyan-accent-color);
@@ -99,7 +99,6 @@
     margin-left: 8px
 }
 .sidebarRegion__60457,
-#bd-editor-controls button:hover,
 .link_b006df:hover,
 .tabContainer_dc7d02>.tabItem__0cb9d:hover,
 .tabContainer_dc7d02>.tabItem__0cb9d.tabItemSelected__3dfe7,
@@ -189,10 +188,13 @@ div[aria-label=dablulite] .markup_a7e664 a:hover::after,
 .userProfileOuterThemed__6eb84 .userProfileModalOverlayBackground__52d65,
 #app-mount .noChat_ce920d .headerWrapper__94dd8,
 .featureBorder__1eaf9,
-#floating-editor-window .controls-section,
 .vc-settings-card>h2,
 .button__6d958 {
     margin: 0
+}
+#floating-editor-window .controls-section {
+    margin-bottom: 0;
+    margin-left: 0;
 }
 .accountBtnInner_fe9b67,
 .folder__17546,
@@ -621,7 +623,8 @@ html:not(.is-mobile) .avatarWrapper_ba5175 .nameTag__0e320,
 .headerImage__0db01,
 .attachment_f3cf2c:not(.attachmentContentItem_ef9fc2) .icon__30aa7,
 .attachment_f3cf2c:not(.attachmentContentItem_ef9fc2) .filenameWrapper__61a04,
-.section__6f61e:has(>.roles__74a2b:empty) {
+.section__6f61e:has(>.roles__74a2b:empty),
+.listItem_fa7b36:has(.guildSeparator_dcb3cc)+div[aria-label]::-webkit-scrollbar {
     display: none !important
 }
 .uploadContainer__5a7da {
@@ -657,7 +660,6 @@ html:not(.is-mobile) .avatarWrapper_ba5175 .nameTag__0e320,
 .controlIcon__25700 {
     color: var(--interactive-normal)
 }
-#account,
 .progressBarContainer__9b571,
 .textArea_f2029c {
     margin: 10px
@@ -716,7 +718,6 @@ html:not(.is-mobile) .avatarWrapper_ba5175 .nameTag__0e320,
 }
 .wrapper__7bcde,
 .button__4f306,
-#bd-editor-controls button,
 .layout_bb8e67,
 .interactive_a868bc,
 .searchBar_ff8800,
@@ -876,8 +877,6 @@ aside.sidebarScrollable__4aad1>div,
 .metadataContainer__7b316,
 .userProfileModalInner__7c87d.userProfileInnerThemedNonPremium__3d0a6,
 .userProfileModalOuter__3fe6b,
-.withTagAsButton_cc125f:hover,
-.withTagless__98b7d:hover,
 .theme-light .footerSeparator__57d95,
 .container_def45c,
 .container_b181b6,
@@ -935,6 +934,7 @@ aside.sidebarScrollable__4aad1>div,
     overflow-y: scroll;
     height: 125px;
     backdrop-filter: blur(var(--cyan-blur))
+    scrollbar-width: none;
 }
 .field__9e8e2 .fieldButton_a93f59 {
     background-color: var(--cyan-second-layer) !important;
@@ -994,7 +994,8 @@ aside.sidebarScrollable__4aad1>div,
 }
 .userPopoutOuter_d739b2 {
     box-shadow: var(--elevation-high);
-    border-radius: var(--cyan-radius-large)
+    border-radius: var(--cyan-radius-large);
+    overflow: visible;
 }
 .inlineMediaEmbed__4270e {
     background-color: transparent !important;
@@ -1825,7 +1826,6 @@ s.container_d667ff .button__4f306:hover,
 }
 .header__104ca,
 .sidebarRegion__60457,
-#account,
 .defaultThemeSelection__5c688 {
     box-shadow: none
 }
@@ -1985,10 +1985,6 @@ s.container_d667ff .button__4f306:hover,
     padding: 8px;
     height: fit-content
 }
-.withTagAsButton_cc125f,
-.withTagless__98b7d {
-    min-width: unset
-}
 .userProfileModalOuter__3fe6b:has(.pencilContainer_d4ce8d)>.userProfileInnerThemedNonPremium__3d0a6 .overlayBackground__86b78,
 .container__5c7e7:has(.addFriendInput__568d8) .nowPlayingColumn_f5023f,
 .listItem_fa7b36:has(.guildSeparator_dcb3cc)+div[aria-label]:empty~.tutorialContainer_dc6fde {
@@ -2006,12 +2002,23 @@ s.container_d667ff .button__4f306:hover,
     border-bottom: 1px solid var(--primary-dark-500)
 }
 .bd-button {
-    background-color: var(--cyan-accent-color) !important;
-    padding: 6px 8px;
-    border-radius: var(--cyan-radius-small)
+    background-color: var(--cyan-second-layer) !important;
+    width: 38px;
+    height: 38px !important;
+    border-radius: var(--cyan-radius-interface) !important;
+    margin-left: 0 !important;
+    transition: .2s ease;
 }
 .bd-button:hover {
-    filter: contrast(.5)
+    box-shadow: var(--cyan-interface-shadow);
+}
+.bd-controls-basic,
+.bd-controls-advanced,
+.bd-addon-views {
+    display: contents;
+}
+.bd-addon-dropdowns {
+    order: -1;
 }
 .bd-search-wrapper {
     padding: 8px;
@@ -2049,12 +2056,6 @@ div:not([class="tutorialContainer__890ea"]) .wrapper_d281dd .childWrapper__01b9c
     --cyan-x: "M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z";
     --cyan-check: "M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z";
     --background-modifier-selected: var(--cyan-second-layer)
-}
-.bd-controls-advanced {
-    border-bottom: 1px solid rgb(200, 200, 200, .2);
-    padding-bottom: 10px;
-    order: -1;
-    border-bottom: none
 }
 .bd-addon-list.bd-grid-view .bd-addon-card {
     width: calc(100%)
@@ -2157,13 +2158,15 @@ div:not([class="tutorialContainer__890ea"]) .wrapper_d281dd .childWrapper__01b9c
 }
 .floating-window-buttons .button {
     padding: 0 7px;
-    height: 30px;
+    height: 38px;
+    width: 38px;
+    padding: 0;
     margin: 6px;
-    border-radius: var(--cyan-radius-small);
-    padding: 2px;
-    transition: .2s;
-    background-color: transparent !important;
-    margin-left: 0
+    margin-right: 5px;
+    margin-left: 0;
+    border-radius: var(--cyan-radius-interface);
+    transition: .2s ease;
+    background-color: var(--cyan-second-layer) !important;
 }
 .profilePanel__12596 .scrollerBase_dc3aa9>.overlayBackground__86b78:nth-child(2):has(~ .overlayBackground__86b78:empty),
 .menu_dc52c6::before {
@@ -2270,17 +2273,19 @@ div:not([class="tutorialContainer__890ea"]) .wrapper_d281dd .childWrapper__01b9c
 .floating-window-titlebar>.title {
     margin: 10px;
     margin-bottom: 5px;
-    line-height: 27px;
-    display: flex;
+    line-height: 50px;
     padding-left: 16px;
     margin: 0;
     position: absolute;
     z-index: 11;
     top: 0;
-    height: 46px;
+    height: 50px;
     padding-top: 0;
     align-items: center;
-    width: calc(100% - 80px - 117px - 140px - 36px)
+    width: calc(100% - 80px - 117px - 140px - 36px - 1rem);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .floating-window-titlebar {
     background: var(--cyan-second-layer) !important;
@@ -2381,13 +2386,6 @@ div:not([class="tutorialContainer__890ea"]) .wrapper_d281dd .childWrapper__01b9c
 .inviteSplash_f4eb93 {
     border-radius: var(--cyan-radius-large) 16px 0 0
 }
-.bd-controls>.bd-addon-button {
-    padding: 8px;
-    background-color: transparent !important;
-    border-radius: var(--cyan-radius-small) !important;
-    margin-left: 7px;
-    border: 1px solid var(--cyan-accent-color)
-}
 .buttons_ce5b56>button:hover,
 .buttons_ce5b56>div:hover,
 .buttons_ce5b56>button:active,
@@ -2450,6 +2448,8 @@ div:not([class="tutorialContainer__890ea"]) .wrapper_d281dd .childWrapper__01b9c
 }
 .userProfileInnerThemedNonPremium__3d0a6:not(.userProfileModalInner__7c87d) {
     background: var(--cyan-second-layer);
+}
+.userProfileInnerThemedNonPremium__3d0a6:not(.userProfileModalInner__7c87d)::before {
     backdrop-filter: blur(var(--cyan-blur))
 }
 .container__5c7e7::before {
@@ -2469,7 +2469,6 @@ div:not([class="tutorialContainer__890ea"]) .wrapper_d281dd .childWrapper__01b9c
 }
 .userProfileInner__8065b {
     border-radius: var(--cyan-radius-medium);
-    overflow: hidden
 }
 .searchBar_ff8800 {
     margin: 0;
@@ -2746,8 +2745,8 @@ div:not([class="tutorialContainer__890ea"]) .wrapper_d281dd .childWrapper__01b9c
 }
 .accountProfilePopoutWrapper_af829a #account {
     border-radius: var(--cyan-radius-xs) 4px 16px 16px;
-    margin-top: 2px;
-    backdrop-filter: none
+    backdrop-filter: none;
+    box-shadow: none;
 }
 .bd-name,
 .contents_fb6220:has(.spotifyButtonLogo__526f7, .listenAlongIcon__86ce9),
@@ -2862,7 +2861,6 @@ div:not([class="tutorialContainer__890ea"]) .wrapper_d281dd .childWrapper__01b9c
 .attachment_f3cf2c:not(.attachmentContentItem_ef9fc2)>div[role=button] {
     height: 24px
 }
-#bd-editor-controls button,
 .link_b006df {
     padding: 8px;
     height: fit-content;
@@ -2878,31 +2876,6 @@ div:not([class="tutorialContainer__890ea"]) .wrapper_d281dd .childWrapper__01b9c
 }
 .link_b006df:first-of-type {
     padding: 8px 6px
-}
-#app-mount #Cyan-card {
-    box-shadow: var(--cyan-interface-shadow);
-    background-image: var(--cyan-background-img) !important;
-    background-size: cover !important;
-    background-position: 50% !important;
-    background-repeat: no-repeat !important;
-    position: relative !important;
-    border: none !important
-}
-#app-mount #Cyan-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--cyan-background-primary) !important;
-    backdrop-filter: blur(var(--cyan-blur)) !important
-}
-#Cyan-card .bd-addon-header,
-#Cyan-card .bd-description-wrap,
-#Cyan-card .bd-footer {
-    background-color: transparent !important;
-    z-index: 1
 }
 .premiumContainer__2ebd0 {
     margin: 10px;
@@ -3248,12 +3221,12 @@ div:not([class="tutorialContainer__890ea"]) .wrapper_d281dd .childWrapper__01b9c
 .disabledButtonWrapper__69c70:has(.listenAlongIcon__86ce9, .spotifyButtonLogo__526f7) {
     width: 50% !important;
     max-width: unset !important;
-    max-height: unset !important
+    max-height: unset !important;
+    height: fit-content;
 }
 .buttonColor__01bf8:has(.listenAlongIcon__86ce9) {
     float: right;
     max-width: unset !important;
-    max-height: 42px !important
 }
 .buttonColor__01bf8:has(.spotifyButtonLogo__526f7) {
     float: left;
@@ -3407,9 +3380,12 @@ div:not([class="tutorialContainer__890ea"]) .wrapper_d281dd .childWrapper__01b9c
     box-shadow: var(--cyan-interface-shadow);
     margin-bottom: 8px
 }
+.bd-settings-title:not(.bd-settings-group-title) {
+    margin-bottom: 0;
+}
 .bd-addon-controls {
     justify-content: end;
-    margin-top: -50px
+    gap: 8px;
 }
 #app-mount .bd-addon-views .bd-view-button {
     width: 38px;
@@ -3464,10 +3440,8 @@ div:not([class="tutorialContainer__890ea"]) .wrapper_d281dd .childWrapper__01b9c
     width: fit-content;
     gap: 10px
 }
-.bd-addon-list .bd-footer .bd-controls .bd-addon-button {
-    background-color: var(--cyan-background-primary) !important;
-    transition: .2s ease;
-    border-radius: 50px !important
+.bd-addon-list .bd-footer .bd-controls {
+    gap: 8px;
 }
 .bd-settings-group {
     padding: 12px;
@@ -3552,15 +3526,14 @@ div:not([class="tutorialContainer__890ea"]) .wrapper_d281dd .childWrapper__01b9c
     filter: brightness(2)
 }
 .bd-switch-body {
-    height: 14px;
-    width: 28px
+    height: 24px;
+    width: 46px;
 }
 .bd-switch-body .bd-switch-slider {
-    left: -12px;
-    top: -5px
+    margin-top: 3px;
 }
 .bd-switch input:checked+.bd-switch-body .bd-switch-slider {
-    left: 10px
+    margin-left: 10px;
 }
 .container__871ba .slider__41d94>svg>path,
 .container__871ba .slider__41d94>rect,
@@ -4158,9 +4131,14 @@ body:has(> #text) #text {
     width: 100% !important
 }
 .wrapper__61220,
-#themes-tab .bd-settings-title {
+.bd-settings-title {
     display: flex;
-    align-items: center
+    align-items: center;
+    gap: 8px;
+}
+#updates-tab .bd-settings-title,
+#settings-tab .bd-settings-title {
+    margin-bottom: 20px;
 }
 .VPP-profile.VPP-self {
     right: 14px;
@@ -4293,19 +4271,6 @@ body:has(> #text) #text {
     padding: 0 !important;
     box-sizing: border-box
 }
-#themes-tab .bd-settings-title::after {
-    counter-reset: cyan-version var(--cyan-version) cyan-subversion var(--cyan-subversion) cyan-patch-version var(--cyan-patch-version);
-    content: "Cyan " counter(cyan-version)"." counter(cyan-subversion)"." counter(cyan-patch-version)" is active!";
-    margin-left: 8px;
-    font-weight: 400;
-    background-color: var(--cyan-background-primary);
-    padding: 4px 16px;
-    border-radius: 50px;
-    box-shadow: var(--cyan-interface-shadow);
-    font-size: 16px;
-    height: 100%;
-    border: 1px solid var(--cyan-accent-color)
-}
 .contentRegionScroller__86c79:has(#customcss-tab) .toolsContainer_f5d55d {
     position: absolute;
     right: -10px;
@@ -4315,11 +4280,9 @@ body:has(> #text) #text {
     top: 32px
 }
 .contentRegionScroller__86c79:has(#customcss-tab) .toolsContainer_f5d55d .closeButton__34341 {
-    width: 34px;
-    height: 34px !important;
-    min-height: 34px;
-    box-sizing: border-box;
-    flex: 0 1
+    width: 38px;
+    height: 38px !important;
+    flex: unset
 }
 #customcss-tab #bd-editor-controls {
     padding-right: 44px
@@ -4328,7 +4291,8 @@ body:has(> #text) #text {
     height: calc(100vh - 81px) !important
 }
 .contentRegionScroller__86c79:has(#customcss-tab) {
-    overflow: hidden !important
+    overflow: hidden !important;
+    padding: 0 !important;
 }
 .actionsProfileV2__1c710 {
     flex-direction: column;
@@ -4542,7 +4506,7 @@ div[role=radiogroup] {
     padding: 6px
 }
 .floating-window-content #bd-editor-controls .controls-left {
-    margin-right: 76px
+    margin-right: 80px
 }
 .input_d266e7:has(.input_d266e7) {
     box-shadow: none !important;
@@ -5276,9 +5240,9 @@ div:not([class]):has(>.chatButtonSpacer_a9ecb2, >.button__6d958),
     margin: 8px;
     margin-top: 0;
     width: fit-content;
-    overflow: hidden scroll;
-    scrollbar-width: none;
-    justify-self: center
+    overflow: hidden auto;
+    justify-self: center;
+    scrollbar-width: none !important;
 }
 .listItem_fa7b36:has(.guildSeparator_dcb3cc)+div[aria-label] .wrapper__3af0b {
     background-color: var(--cyan-second-layer);
@@ -5526,11 +5490,6 @@ div:not([class]):has(>.chatButtonSpacer_a9ecb2, >.button__6d958),
 .scrollerSeparator__321f3 {
     box-shadow: none;
 }
-.userPopoutOverlayBackground_d8afa4 {
-    overflow: hidden auto !important;
-    scrollbar-width: none;
-    scrollbar-color: var(--profile-body-divider-color) var(--scrollbar-thin-track);
-}
 .vc-notification-root {
     width: 500px !important;
 }
@@ -5548,4 +5507,17 @@ div:not([class]):has(>.chatButtonSpacer_a9ecb2, >.button__6d958),
 .vc-notification-close-btn:hover {
     box-shadow: var(--cyan-interface-shadow);
     background-color: var(--cyan-second-layer);
+}
+.activityUserPopoutV2__32328 .platformIcon__05c5e {
+    right: unset;
+    left: 0;
+}
+.activityUserPopoutV2__32328 .headerContainer__2ec4e {
+    padding-left: 28px;
+    width: calc(100% - 28px);
+}
+.activityUserPopoutV2__32328 .headerContainer__2ec4e .overflow__87fe8 {
+    line-height: 24px;
+    position: static;
+    max-width: 272px;
 }
