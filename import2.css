@@ -1261,6 +1261,13 @@ body {
     padding: 0;
     background: var(--cyan-second-layer) !important
 }
+.wrapper_bd2abe:not(.noChat_ce920d) .container__11d72 {
+    margin: 0 !important;
+    width: 100% !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background: none !important;
+}
 .panels__58331 {
     background: var(--cyan-second-layer);
     box-shadow: var(--cyan-interface-shadow);
