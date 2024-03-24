@@ -1397,11 +1397,18 @@ body {
     -webkit-app-region: no-drag !important;
     gap: 8px;
 }
-.mention__1afd3 {
-    border: 2px solid var(--status-danger);
-    background-color: var(--cyan-second-layer);
+.bar_edc096 {
+    background-color: rgb(255,0,0/80%);
     border-radius: var(--cyan-radius-interface);
-    color: var(--header-primary)
+    color: var(--header-primary);
+    backdrop-filter: blur(var(--cyan-blur));
+    box-shadow: var(--cyan-interface-shadow);
+    text-transform: capitalize;
+}
+.unreadMentionsIndicatorTop_ada847,
+.unreadMentionsIndicatorBottom_fdb943 {
+    margin: 0 auto;
+    padding: 4px;
 }
 .modal__4f3da,
 .root_a28985.fullscreenOnMobile__96797 {
