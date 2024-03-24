@@ -1705,7 +1705,35 @@ s.container_d667ff .button__4f306:hover,
     box-shadow: var(--cyan-interface-shadow);
     border-radius: var(--cyan-radius-large) !important;
     border: none;
-    background: var(--cyan-second-layer)
+    background: var(--cyan-second-layer) !important
+}
+.wrapperAudio__555ce .audioControls__9fbe9 {
+    background: none;
+}
+.wrapperAudio__555ce .audioControls__9fbe9 .controlIcon__11f8e {
+    padding: 0;
+}
+.nonMediaAttachment__30665 {
+    outline: none;
+    background: var(--cyan-second-layer);
+    border-radius: var(--cyan-radius-interface);
+    box-shadow: var(--cyan-interface-shadow);
+    padding: 4px;
+    gap: 4px;
+    transition: .2s ease;
+}
+.vc-vmsg-preview {
+    background: var(--cyan-second-layer);
+    border-radius: var(--cyan-radius-medium);
+    box-shadow: var(--cyan-interface-shadow);
+}
+.hoverButton__13836 {
+    border-radius: var(--cyan-radius-large);
+    transition: .2s ease;
+}
+.hoverButton__13836:hover {
+    background: var(--cyan-second-layer);
+    box-shadow: var(--cyan-interface-shadow);
 }
 .textContainer__709ff {
     border-radius: var(--cyan-radius-large) var(--cyan-radius-large) 0 0 !important;
@@ -3151,7 +3179,7 @@ div:not([class="tutorialContainer__890ea"]) .wrapper_d281dd .childWrapper__01b9c
 }
 .progressBarContainer__9b571 {
     margin-top: 5px;
-    background-color: var(--interactive-muted) !important;
+    background-color: var(--cyan-second-layer) !important;
     height: 5px
 }
 .customItem__7173b>.button__3ecb4 {
