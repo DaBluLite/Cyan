@@ -1089,13 +1089,9 @@ aside.sidebarScrollable_d64933>div,
     border-radius: var(--cyan-radius-large)
 }
 .mention {
-    background: var(--cyan-accent-color) !important;
     color: #fff !important;
+    background: var(--cyan-accent-color) !important;
     opacity: .5;
-    box-shadow: var(--cyan-interface-shadow);
-    border-radius: var(--cyan-radius-large);
-    transition: .2s ease;
-    padding: 2px 8px
 }
 .messageContent_abea64:has(.mention) {
     overflow: visible;
@@ -4641,13 +4637,13 @@ div[role=radiogroup]:not(.answersContainer_d6d472) {
 .cozyMessage__9f4fd:not(.systemMessage_fced96):hover .messageContent_abea64:not(.repliedTextContent_b12fe1) {
     background-color: var(--cyan-second-layer) !important;
 }
-.cozyMessage__9f4fd:not(.systemMessage_fced96) .messageContent_abea64:has(.mention:nth-child(1):nth-last-child(1)) {
-    padding: 8px 0;
+.cozyMessage__9f4fd:not(.systemMessage_fced96) .messageContent_abea64:has(.wrapper__53064:nth-child(1):nth-last-child(1)) {
     background-color: transparent !important;
+    padding: 0;
     box-shadow: none !important;
 }
-.cozyMessage__9f4fd:not(.systemMessage_fced96) .messageContent_abea64 > .mention:nth-child(1):nth-last-child(1) {
-    padding: 8px 12px;
+.cozyMessage__9f4fd:not(.systemMessage_fced96):hover .messageContent_abea64 > .mention:nth-child(1):nth-last-child(1) {
+    opacity: 1;
 }
 .cozyMessage__9f4fd:not(.systemMessage_fced96) .container__62863 {
     margin-top: 8px;
@@ -5559,8 +5555,8 @@ div:not([class]):has(>.chatButtonSpacer__69fb8, >.button_ab327f),
     fill: var(--cyan-accent-color)
 }
 .wrapper__53064 {
-    padding: 4px 8px;
-    border-radius: var(--cyan-radius-medium);
+    padding: 3px 8px;
+    border-radius: var(--cyan-radius-small);
     background-color: var(--cyan-second-layer)
 }
 .actionBarContainer_ffaba7 {
