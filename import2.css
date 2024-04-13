@@ -1857,7 +1857,7 @@ s.container_e1958d .button_ae40a4:hover,
 .channelTextArea__648e5 {
     background-color: transparent;
     box-shadow: none;
-    margin-bottom: 8px
+    margin-bottom: 0;
 }
 .containerDefault_e3b32b {
     border-bottom: none;
@@ -2792,9 +2792,11 @@ div:not([class="tutorialContainer_b06ae6"]) .wrapper__8436d .childWrapper_a6ce15
     box-shadow: var(--cyan-interface-shadow);
     background-color: var(--cyan-background-primary)
 }
-.participantsButton__11fa3 svg,
-.inner__9fd0b {
+.participantsButton__11fa3 svg {
     padding: 4px
+}
+.inner__9fd0b {
+    padding-bottom: 8px;
 }
 .actionRow__6f701 {
     margin-bottom: 20px
@@ -3721,7 +3723,8 @@ div:not([class="tutorialContainer_b06ae6"]) .wrapper__8436d .childWrapper_a6ce15
     margin: 0;
     width: 44px;
     height: 44px;
-    justify-content: center
+    justify-content: center;
+    transition: .2s ease;
 }
 .attachButton__5f6dc {
     padding: 10px;
@@ -4644,7 +4647,7 @@ div[role=radiogroup]:not(.answersContainer_d6d472) {
     box-shadow: var(--cyan-interface-shadow) !important;
 }
 .cozyMessage__9f4fd:not(.systemMessage_fced96) .messageContent_abea64:has(.mention:nth-child(1):nth-last-child(1)) {
-    padding: 0;
+    padding: 8px 0;
     background-color: transparent !important;
     box-shadow: none !important;
 }
@@ -4657,6 +4660,8 @@ div[role=radiogroup]:not(.answersContainer_d6d472) {
 }
 .cozyMessage__9f4fd:not(.systemMessage_fced96) {
     margin-bottom: 8px;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 .systemMessage_fced96 .container__2acd5 {
     padding: 0;
