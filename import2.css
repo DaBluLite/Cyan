@@ -162,6 +162,11 @@ div[aria-label=dablulite] .markup_a7e664 a:hover::after,
 .form_d8a4a1:after {
     content: none !important
 }
+.mentioned_fa6fd2:before {
+    left: 2px;
+    border-radius: 8px;
+    width: 4px;
+}
 .collapsed__55a23 .title__20d69 {
     margin: 0;
     padding: 8px 16px;
@@ -936,7 +941,7 @@ aside.sidebarScrollable_d64933>div,
 .authBox__6f336,
 .navRow_bb8efc,
 .list__4e6aa,
-.cozyMessage__9f4fd:not(.systemMessage_fced96):hover,
+.cozyMessage__9f4fd:not(.systemMessage_fced96),
 .wrapperAudio__178e9 .audioControls_da7066 {
     background: none !important
 }
@@ -4187,9 +4192,6 @@ body:has(> #text) #text {
 .info__755e1,
 .socialLinks_dbdd6f {
     animation: animright.4s ease
-}
-.message_ccca67:has(.isSending__93355) .contents_d3ae0d {
-    display: flex;
 }
 .message_ccca67:has(.isSending__93355) .messageContent_abea64::before {
     content: "";
