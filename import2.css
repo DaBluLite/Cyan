@@ -4630,7 +4630,6 @@ div[role=radiogroup]:not(.answersContainer_d6d472) {
 .cozyMessage__9f4fd:not(.systemMessage_fced96) .messageContent_abea64:not(.repliedTextContent_b12fe1) {
     width: fit-content;
     border-radius: var(--cyan-radius-small);
-    transition: .2s ease;
     padding: 3px 12px;
     margin-left: -12px;
 }
