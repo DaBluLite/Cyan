@@ -4607,7 +4607,7 @@ div[role=radiogroup]:not(.answersContainer_d6d472) {
     background-color: transparent !important;
     gap: 6px
 }
-.cozyMessage__9f4fd:not(.systemMessage_fced96) .messageContent_abea64 {
+.cozyMessage__9f4fd:not(.systemMessage_fced96) .messageContent_abea64:not(.repliedTextContent_b12fe1) {
     width: fit-content;
     border-radius: var(--cyan-radius-medium);
     transition: .2s ease;
@@ -4622,7 +4622,7 @@ div[role=radiogroup]:not(.answersContainer_d6d472) {
     margin-left: 8px;
 }
 .systemMessage_fced96:hover,
-.cozyMessage__9f4fd:not(.systemMessage_fced96) .messageContent_abea64 {
+.cozyMessage__9f4fd:not(.systemMessage_fced96) .messageContent_abea64:not(.repliedTextContent_b12fe1) {
     background-color: var(--cyan-second-layer) !important;
     box-shadow: var(--cyan-interface-shadow) !important;
 }
