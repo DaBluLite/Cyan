@@ -4629,9 +4629,9 @@ div[role=radiogroup]:not(.answersContainer_d6d472) {
 }
 .cozyMessage__9f4fd:not(.systemMessage_fced96) .messageContent_abea64:not(.repliedTextContent_b12fe1) {
     width: fit-content;
-    border-radius: var(--cyan-radius-medium);
+    border-radius: var(--cyan-radius-small);
     transition: .2s ease;
-    padding: 5px 12px;
+    padding: 3px 12px;
     margin-left: -12px;
 }
 .systemMessage_fced96 {
@@ -4641,10 +4641,12 @@ div[role=radiogroup]:not(.answersContainer_d6d472) {
     padding: 8px !important;
     margin-left: 8px;
 }
-.systemMessage_fced96:hover,
-.cozyMessage__9f4fd:not(.systemMessage_fced96):hover .messageContent_abea64:not(.repliedTextContent_b12fe1) {
+.systemMessage_fced96:hover {
     background-color: var(--cyan-second-layer) !important;
     box-shadow: var(--cyan-interface-shadow) !important;
+}
+.cozyMessage__9f4fd:not(.systemMessage_fced96):hover .messageContent_abea64:not(.repliedTextContent_b12fe1) {
+    background-color: var(--cyan-second-layer) !important;
 }
 .cozyMessage__9f4fd:not(.systemMessage_fced96) .messageContent_abea64:has(.mention:nth-child(1):nth-last-child(1)) {
     padding: 8px 0;
