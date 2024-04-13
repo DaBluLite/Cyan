@@ -156,7 +156,8 @@ div[aria-label=dablulite] .markup_a7e664 a:hover::after,
 .chat__1d65d:before,
 .profilePanel_e2cafe .userProfileInner__61cc1:before,
 .userPopoutInner_e90432:before,
-.userProfileInner__61cc1:before {
+.userProfileInner__61cc1:before,
+.wrapper__91b2c:after {
     content: none !important
 }
 .collapsed__55a23 .title__20d69 {
@@ -821,9 +822,6 @@ html:not(.is-mobile) .avatarWrapper__500a6 .nameTag__77ab2,
     margin: 8px;
     gap: 32px;
 }
-.list__4e6aa {
-    background: none;
-}
 .accountCard__21066 {
     border-radius: var(--cyan-radius-large);
     background-color: var(--cyan-second-layer);
@@ -932,8 +930,17 @@ aside.sidebarScrollable_d64933>div,
 .standardSidebarView__12528,
 .item_b7fb7e,
 .applicationStreamingPreviewWrapper_cdc31a,
-.userProfileInner__61cc1 {
+.userProfileInner__61cc1,
+.authBox__6f336,
+.navRow_bb8efc,
+.list__4e6aa,
+.cozyMessage__9f4fd:not(.systemMessage_fced96):hover,
+.wrapperAudio__178e9 .audioControls_da7066 {
     background: none !important
+}
+.wrapper__81567 {
+    backdrop-filter: blur(48px);
+    background: none !important;
 }
 .header__8863a {
     margin: 8px;
@@ -1161,10 +1168,6 @@ body {
     --font-display: var(--cyan-font), "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-variant: no-common-ligatures;
     background-color: transparent
-}
-.authBox__6f336,
-.navRow_bb8efc {
-    background: none !important;
 }
 .searchHeader__4d70e {
     margin: 10px;
@@ -1744,9 +1747,6 @@ s.container_e1958d .button_ae40a4:hover,
     border: none;
     background: var(--cyan-second-layer) !important
 }
-.wrapperAudio__178e9 .audioControls_da7066 {
-    background: none;
-}
 .wrapperAudio__178e9 .audioControls_da7066 .controlIcon_d1bbd7 {
     padding: 0;
 }
@@ -2152,8 +2152,25 @@ div:not([class="tutorialContainer_b06ae6"]) .wrapper__8436d .childWrapper_a6ce15
 .wrapper_c4c084,
 .searchBar_ca009d {
     border-radius: var(--cyan-radius-small);
+    margin-top: 3px;
+    transition: .2s ease;
+}
+.searchBar__57f39:has(:focus),
+.wrapper_c4c084:has(:focus),
+.searchBar_ca009d:has(:focus) {
     box-shadow: var(--cyan-interface-shadow);
-    margin-top: 3px
+    background-color: var(--cyan-second-layer) !important;
+}
+.header_e5d8b2,
+.emojiPicker__5e2e2 {
+    background: none !important;
+    box-shadow: none;
+}
+.wrapper__0757b {
+    box-shadow: var(--cyan-interface-shadow);
+    background-color: var(--cyan-second-layer);
+    overflow: hidden;
+    border-radius: var(--cyan-radius-large);
 }
 .circleIconButton__05cf2 {
     mask: none;
@@ -4634,9 +4651,6 @@ div[role=radiogroup]:not(.answersContainer_d6d472) {
 .cozyMessage__9f4fd:not(.systemMessage_fced96) .messageContent_abea64 > .mention:nth-child(1):nth-last-child(1) {
     padding: 8px 12px;
 }
-.cozyMessage__9f4fd:not(.systemMessage_fced96):hover {
-    background: none !important;
-}
 .cozyMessage__9f4fd:not(.systemMessage_fced96) .container__62863 {
     margin-top: 8px;
     margin-left: -12px;
@@ -4764,7 +4778,7 @@ div:has(> .rowGuildName__6b00c) {
 }
 .header__3028e,
 .packHeader__8c477 {
-    border-radius: var(--cyan-radius-xs);
+    border-radius: var(--cyan-radius-small);
     background-color: var(--cyan-background-primary) !important;
     box-shadow: var(--cyan-interface-shadow);
     margin: 4px !important;
@@ -5708,4 +5722,27 @@ div:not([class]):has(>.chatButtonSpacer__69fb8, >.button_ab327f),
     background: var(--cyan-second-layer);
     box-shadow: var(--cyan-interface-shadow);
     border-radius: var(--cyan-radius-medium);
+}
+.reaction__4a43f {
+    margin-right: 0;
+    border-radius: 0;
+    margin-top: 4px;
+    background-color: var(--cyan-second-layer) !important;
+    border: none !important;
+    transition: .2s ease;
+}
+.reactionInner_bd636d {
+    padding: 4px 8px;
+}
+.reaction__4a43f:hover {
+    box-shadow: var(--cyan-interface-shadow);
+}
+.reactions_da5b2a > div:nth-child(2) .reaction__4a43f {
+    border-radius: var(--cyan-radius-small) 0 0 var(--cyan-radius-small);
+}
+.reactions_da5b2a > div:nth-last-child(2) .reaction__4a43f {
+    border-radius: 0 var(--cyan-radius-small) var(--cyan-radius-small) 0;
+}
+.reactions_da5b2a > div:nth-child(2):nth-last-child(2) .reaction__4a43f {
+    border-radius: var(--cyan-radius-small);
 }
