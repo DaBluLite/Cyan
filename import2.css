@@ -618,7 +618,6 @@ div:not(.bannerVisible_ef30fe)>.animatedContainer__0e828,
 html:not(.is-mobile) .avatarWrapper__500a6 .nameTag__77ab2,
 .expandedFolderBackground_b1385f,
 .winButton_f17fb6>svg>:is(rect, polygon),
-.divider__855e3,
 .listItem__48528:has(.guildSeparator__75928),
 .darkCardBackground__38c63,
 .listItem__48528:has(.guildSeparator__75928)+div[aria-label]:empty,
@@ -629,7 +628,8 @@ html:not(.is-mobile) .avatarWrapper__500a6 .nameTag__77ab2,
 .listItem__48528:has(.guildSeparator__75928)+div[aria-label]::-webkit-scrollbar,
 .item_b7fb7e:not([aria-checked="true"]) .radioBar__70669 > div:not([class]),
 .applicationStreamingPreviewWrapper_cdc31a:has(.emptyPreviewImage_d74d4a),
-.leftDivider__622f7 {
+.leftDivider__622f7,
+.userProfileModalOuter_a65559 .divider__7116f {
     display: none !important
 }
 .bottomControls__72d8d {
@@ -1249,7 +1249,8 @@ body {
     color: var(--header-secondary);
     background-color: var(--cyan-second-layer) !important;
     box-shadow: var(--cyan-interface-shadow) !important;
-    border-radius: 50px !important
+    border-radius: 50px !important;
+    z-index: +1;
 }
 .contentColumn__5f80b,
 .customColumn__0b6a6 {
@@ -2962,27 +2963,17 @@ div:not([class="tutorialContainer_b06ae6"]) .wrapper__8436d .childWrapper_a6ce15
 #---new-messages-bar {
     border: none;
     height: 32px;
-    width: fit-content;
-    pointer-events: all;
-    height: 0
 }
-#---new-messages-bar::after {
+#---new-messages-bar::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
     left: 0;
     background-color: var(--divider-color);
-    width: 4px;
-    border-radius: 0 var(--cyan-radius-interface) var(--cyan-radius-interface) 0;
-    height: 32px;
+    width: 100%;
+    height: 1px;
     margin-bottom: 0;
-    transition: .2s ease
-}
-#---new-messages-bar:hover .unreadPill__1b4fa {
-    padding-left: 32px
-}
-#---new-messages-bar:hover::after {
-    width: 20px
 }
 .attachment__06ca3:not(.attachmentContentItem__47a25) {
     border-radius: 0 !important;
