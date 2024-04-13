@@ -1655,8 +1655,6 @@ s.container_e1958d .button_ae40a4:hover,
     background-color: transparent !important;
     padding: 0 !important;
     width: 100%;
-    display: flex;
-    flex-direction: column-reverse
 }
 .members__573eb {
     background-color: transparent !important;
