@@ -2045,12 +2045,23 @@ s.container_e1958d .button_ae40a4:hover,
     width: 74px
 }
 .typing__6fd1d {
-    position: initial;
-    margin-bottom: 8px;
-    background-color: transparent;
     width: fit-content !important;
-    box-shadow: none !important;
-    padding-right: 7px
+    padding-right: 7px;
+    top: -24px;
+    background-color: var(--cyan-second-layer);
+    border-radius: 50px;
+    backdrop-filter: blur(48px);
+    box-shadow: var(--cyan-interface-shadow);
+    animation: animbottom .4s ease;
+}
+.banner_f13f1e {
+    padding-bottom: 8px;
+    border-radius: var(--cyan-radius-medium);
+    box-shadow: var(--cyan-interface-shadow);
+    background-color: var(--cyan-second-layer);
+    margin: 12px;
+    margin-bottom: 12px !important;
+    margin-top: 0;
 }
 #app-mount .scroller_de945b {
     padding: 10px 0 !important
@@ -3811,9 +3822,11 @@ div:not([class="tutorialContainer_b06ae6"]) .wrapper__8436d .childWrapper_a6ce15
 }
 .wrapper__57349 {
     background-color: var(--cyan-second-layer);
-    border-radius: var(--cyan-radius-small);
+    border-radius: var(--cyan-radius-medium);
     box-shadow: var(--cyan-interface-shadow);
-    margin-bottom: 8px
+    margin: 12px;
+    width: calc(100% - 24px);
+    margin-top: 0;
 }
 .bd-settings-title:not(.bd-settings-group-title) {
     margin-bottom: 0;
