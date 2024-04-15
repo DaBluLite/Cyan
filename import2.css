@@ -3789,7 +3789,7 @@ div:not([class="tutorialContainer_b06ae6"]) .wrapper__8436d .childWrapper_a6ce15
 }
 .lookOutlined__014b5.colorRed__5a617,
 .lookFilled__950dd.colorRed__5a617 {
-    background-color: rgb(255 0 0/60%) !important;
+    background-color: hsl(0deg calc(var(--saturation-factor, 1) * 100%) 50% / 60%) !important;
     border: none !important
 }
 .lookOutlined__014b5.colorRed__5a617 .contents__322f4,
