@@ -9,7 +9,7 @@
 :root {
     --cyan-version: 24;
     --cyan-subversion: 4;
-    --cyan-patch-version: 14;
+    --cyan-patch-version: 15;
     --cyan-blur: 48px;
     --cyan-radius-interface: 24px;
     --cyan-radius-large: 16px;
@@ -4401,10 +4401,7 @@ body:has(> #text) #text {
     box-shadow: var(--cyan-interface-shadow)
 }
 .main_e0b3ac:has(> .artwork_eaea88) {
-    margin: 8px;
-    border-radius: var(--cyan-radius-small);
-    background-color: var(--cyan-second-layer);
-    box-shadow: var(--cyan-interface-shadow)
+    border-radius: var(--cyan-radius-interface);
 }
 .option_eb83e4 {
     margin: 4px;
