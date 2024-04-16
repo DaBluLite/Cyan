@@ -9,7 +9,7 @@
 :root {
     --cyan-version: 24;
     --cyan-subversion: 4;
-    --cyan-patch-version: 15;
+    --cyan-patch-version: 16;
     --cyan-blur: 48px;
     --cyan-radius-interface: 24px;
     --cyan-radius-large: 16px;
@@ -1257,7 +1257,8 @@ aside.sidebarScrollable_d64933>div,
 .navRow_bb8efc,
 .list__4e6aa,
 .cozyMessage__9f4fd:not(.systemMessage_fced96),
-.wrapperAudio__178e9 .audioControls_da7066 {
+.wrapperAudio__178e9 .audioControls_da7066,
+.profilePanel_e2cafe > .userProfileOuterUnthemed__9741c {
     background: none !important
 }
 .wrapper__81567 {
@@ -1628,16 +1629,15 @@ body {
     background: none !important;
 }
 .panels__58331 {
-    background: var(--cyan-second-layer);
-    box-shadow: var(--cyan-interface-shadow);
-    transition: width.3s !important;
-    max-width: calc(240px);
-    margin: 0 8px 8px;
+    background: none;
     border-radius: var(--cyan-radius-large);
+    background-color: var(--cyan-second-layer);
+    box-shadow: var(--cyan-interface-shadow);
     display: inline-block;
-    max-width: var(--cyan-channelbar-width);
+    width: calc(var(--cyan-channelbar-width) - 16px);
+    overflow: hidden;
+    margin: 0 8px 8px;
     position: relative;
-    overflow: hidden
 }
 #vc-spotify-player::before {
     content: "";
@@ -1651,7 +1651,7 @@ body {
     background-size: cover;
     border-radius: var(--cyan-radius-large);
     z-index: -1;
-    filter: blur(calc(var(--cyan-blur)/4)) brightness(.7)
+    filter: blur(calc(var(--cyan-blur)/4)) brightness(.7);
 }
 #vc-spotify-album-image,
 .sliderContainer__1d624 {
@@ -2307,40 +2307,39 @@ s.container_e1958d .button_ae40a4:hover,
     border-radius: var(--cyan-radius-small) !important
 }
 .panels__58331 .container_debb33 .flex_f18b02 {
-    width: calc((100%/4)*3) !important;
-    float: left !important;
-    height: 56px;
-    max-width: unset !important;
-    justify-content: center !important;
-    margin: 0;
-    flex: initial !important;
-    padding: 0
+    display: contents;
 }
 .panels__58331 .avatarWrapper__500a6 {
-    width: calc((100%/4) - 14px);
+    width: 100%;
     max-width: unset;
     min-width: unset !important;
-    float: left;
-    padding: 7px;
+    padding: 0;
     border-radius: var(--cyan-radius-small) !important;
     margin: 0;
-    position: relative;
-    background-color: transparent;
+    background: none;
     box-shadow: none;
     transition: .2s ease;
     cursor: pointer;
-    height: 42px;
-    justify-content: center
+    height: 56px;
+    justify-content: center;
 }
 .panels__58331 .avatarWrapper__500a6:hover {
     box-shadow: var(--cyan-interface-shadow);
-    background: var(--cyan-second-layer)
+    background: var(--cyan-second-layer);
 }
 .panels__58331 .container_debb33 {
     display: flex;
+    padding: 0;
+    height: fit-content;
+    gap: 4px;
     padding: 8px;
-    height: fit-content
 }
+/* .panels__58331:has(.wrapper_e832ee:empty:first-child + .container_debb33:last-child) {
+    box-shadow: none;
+    margin: 0;
+    border-radius: 0;
+    background: none !important;
+} */
 .container_bd15da:has(.addFriendInput__12af4) .nowPlayingColumn_b025fe,
 .listItem__48528:has(.guildSeparator__75928)+div[aria-label]:empty~.tutorialContainer__6835f {
     margin-top: 0
@@ -3244,12 +3243,11 @@ div:not([class="tutorialContainer_b06ae6"]) .wrapper__8436d .childWrapper_a6ce15
 .platform-osx .searchBarComponent__8f95f::before {
     content: "\F52A Search... (Cmd + K)";
 }
-.profilePanel_e2cafe {
-    margin: 8px;
-    box-shadow: var(--cyan-interface-shadow);
-    border-radius: var(--cyan-radius-large);
+.profilePanel_e2cafe > .userPanelOuter_df01a5 {
+    border-bottom-right-radius: var(--cyan-radius-interface);
+    padding-top: 8px;
+    height: calc(100% - 8px);
     overflow: hidden;
-    background: var(--cyan-second-layer)
 }
 .profilePanel_e2cafe .scrollerBase_f742b2>.overlayBackground__345c9 {
     border-radius: var(--cyan-radius-xs);
@@ -3257,6 +3255,9 @@ div:not([class="tutorialContainer_b06ae6"]) .wrapper__8436d .childWrapper_a6ce15
     background-color: var(--cyan-background-primary);
     margin-top: 8px;
     margin-bottom: 0
+}
+.profilePanel_e2cafe .bannerSVGWrapper__8a38c {
+    border-radius: 0;
 }
 .wrapper__612a5,
 .channel__0aef5 .layout__59abc {
@@ -4075,9 +4076,23 @@ div:not([class="tutorialContainer_b06ae6"]) .wrapper__8436d .childWrapper_a6ce15
 .chat__52833 .messagesWrapper_add28b>.scroller_e412fe {
     overflow: overlay;
     padding-right: 0;
+    scrollbar-width: thin;
 }
 .sliderContainer__1d624 {
     height: 10px
+}
+.mutualFriendsDivider__2c616 {
+    border-top: none;
+}
+.mutualFriendsList__02caf > .lookFilled__950dd,
+.mutualGuildsList__5e9f3 > .lookFilled__950dd{
+    background: none !important;
+    box-shadow: none !important;
+}
+.mutualFriendsList__02caf,
+.mutualGuildsList__5e9f3 {
+    background-color: var(--cyan-second-layer);
+    border-radius: var(--cyan-radius-large);
 }
 .chat__52833 .messagesWrapper_add28b>.scroller_e412fe::-webkit-scrollbar-thumb,
 ::-webkit-scrollbar-thumb {
@@ -4991,6 +5006,7 @@ div[role=radiogroup]:not(.answersContainer_d6d472) {
     padding: 0;
     border-radius: 50px;
     background-color: var(--cyan-second-layer);
+    flex: 0 0 auto;
 }
 .systemMessage_fced96 .iconContainer_d0200f:has([style*="/assets/d750b80048af0194841b.svg"],[style*="/assets/b754caa743f8c49fbbf0.svg"]) {
     background-color: var(--green-360);
@@ -5001,7 +5017,10 @@ div[role=radiogroup]:not(.answersContainer_d6d472) {
 .systemMessage_fced96 .iconContainer_d0200f:has([style*="/assets/27552340cbc7f06073e6.svg"]) {
     background-color: var(--yellow-300);
 }
-.systemMessage_fced96 .iconContainer_d0200f:has([style*="/assets/d750b80048af0194841b.svg"],[style*="/assets/b754caa743f8c49fbbf0.svg"],[style*="/assets/2d5b7fbc16d039920476.svg"],[style*="/assets/27552340cbc7f06073e6.svg"]) .icon__467d5 {
+.systemMessage_fced96 .iconContainer_d0200f:has([style*="/assets/df491f0594fc00f10ff5.svg"]) {
+    background-color: var(--primary-500);
+}
+.systemMessage_fced96 .iconContainer_d0200f:has([style*="/assets/d750b80048af0194841b.svg"],[style*="/assets/b754caa743f8c49fbbf0.svg"],[style*="/assets/2d5b7fbc16d039920476.svg"],[style*="/assets/27552340cbc7f06073e6.svg"],[style*="/assets/df491f0594fc00f10ff5.svg"]) .icon__467d5 {
     filter: saturate(0) brightness(5);
 }
 .container__84c26 {
