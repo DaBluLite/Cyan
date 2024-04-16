@@ -56,7 +56,8 @@
 .theme-dark,
 .theme-dark .theme-light {
     --cyan-second-layer: rgb(0 0 0/60%);
-    --cyan-background-primary: hsla(0deg 100% 0% / 60%)
+    --cyan-background-primary: hsla(0deg 100% 0% / 60%);
+    --cyan-bg-brightness: .7
 }
 .theme-light {
     --cyan-second-layer: rgb(255 255 255/60%);
@@ -4269,9 +4270,7 @@ path[d="M12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4
 .bg__12180 {
     background: var(--cyan-background-img, #FFFFFF);
     background-size: cover;
-}
-.theme-dark .bg__12180 {
-    filter: brightness(.7);
+    filter: brightness(min(max(var(--cyan-bg-brightness),0),1));
 }
 .layer_f7d46a {
     backdrop-filter: blur(var(--cyan-blur));
