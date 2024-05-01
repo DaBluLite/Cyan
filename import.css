@@ -1085,7 +1085,6 @@ html:not(.is-mobile) .avatarWrapper__500a6 .nameTag__77ab2,
 .result_e1fc74,
 .gif__2aa16,
 .pill__6b31b,
-.selectionCircle_aa3fcd,
 .themeSelection_b3e3ae,
 .discordColorwayPreviewGradient {
     border-radius: var(--cyan-radius-small) !important
@@ -1097,7 +1096,6 @@ html:not(.is-mobile) .avatarWrapper__500a6 .nameTag__77ab2,
 .searchBar__310d8,
 .wrapper_c4c084>div,
 .option__1d8de,
-.swatch__96672,
 .inputDefault__22335,
 .animatedContainer__0e828,
 .authorize__9e6f3,
@@ -2605,23 +2603,6 @@ div:not([class="tutorialContainer_b06ae6"]) .wrapper__8436d .childWrapper_a6ce15
 }
 .defaultThemeSelection_f6b081 {
     outline: none
-}
-.selectionCircle_aa3fcd {
-    outline: none;
-    box-shadow: inset 0 0 0 2px var(--background-primary) !important
-}
-.selectionCircle_aa3fcd:after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: -3px;
-    bottom: 0;
-    left: -3px;
-    right: 0;
-    border-radius: var(--cyan-radius-medium);
-    border: 3px solid var(--cyan-accent-color);
-    width: 100%;
-    height: 100%
 }
 .preview__30ef4 {
     background: linear-gradient(var(--cyan-second-layer), var(--cyan-second-layer)) padding-box, linear-gradient(45deg, rgba(0, 159, 136, 1), var(--cyan-accent-color)) border-box;
@@ -6131,4 +6112,45 @@ ul[id*=folder-items-] {
 }
 .actions__8415b .actionButton__985bb .centerButton__8316e {
     width: 56px
+}
+.colorwaysCreator-setting {
+    border-radius: var(--cyan-radius-medium);
+    background-color: transparent;
+    transition: .2s ease;
+}
+.colorwaysCreator-setting:hover,
+.lookOutlined__014b5.colorPrimary_ebe632:hover {
+    box-shadow: var(--cyan-interface-shadow);
+    background-color: var(--cyan-second-layer);
+}
+.swatch__96672 {
+    border-radius: var(--cyan-radius-medium);
+    transition: .2s ease;
+}
+.swatch__96672:hover,
+.colorwayInfoIconContainer:hover {
+    box-shadow: var(--cyan-interface-shadow);
+}
+.colorwaysCreator-settingCat {
+    padding: 0;
+    background: none;
+}
+.colorwaysCreator-settingCat:has(>.colorwayCreator-colorPreviews) {
+    overflow: visible;
+}
+.item_b7fb7e[aria-checked="false"] > .radioBar__70669 > svg:not([class]) {
+    display: none;
+}
+.colorwaysSettings-colorwaySource {
+    margin: 0 8px 8px;
+}
+.colorwaysSettings-colorwaySource:hover {
+    background: var(--cyan-second-layer) !important;
+}
+.lookOutlined__014b5.colorPrimary_ebe632 {
+    border-radius: var(--cyan-radius-medium);
+}
+.colorwayInfoIconContainer {
+    background-color: var(--cyan-second-layer) !important;
+    backdrop-filter: blur(var(--cyan-blur));
 }
