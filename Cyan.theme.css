@@ -1,37 +1,45 @@
 /**
  * @name Cyan
  * @description Clean and Customizable, with custom background support
- * @author DaBluLite#7409
+ * @author DaBluLite
  * @authorId 582170007505731594
- * @version 5.0.0
+ * @version 6.0.0
  * @updateUrl https://dablulite.github.io/Cyan/Cyan.theme.css
  * @source https://github.com/DaBluLite/Cyan
  * @invite ZfPH6SDkMW
  */
 
-/*
-Huge thanks to all the contributors of this project!
-
-		     Contributors
-====================================================
-=						   =
-=        Darkened color scheme: maenDisease        =
-=               Code cleanup: lucism               =
-=        Additional code and help by carrot        =
-=						   =
-====================================================
+/**
+* Credits:
+* Icons by Bootrstrap Icons
+* Fonts by Google Fonts
 */
  
 @import url("https://dablulite.github.io/Cyan/import.css");
 :root {
-	--cyan-background-primary: hsla(0deg 0% var(--cyan-background-lightness) / 40%);
-	--cyan-elevation-shadow: 0 0 0 1.5px var(--cyan-accent-color), 0 2px 10px 0 rgb(0 0 0 / 60%);
+	--cyan-interface-shadow: 0 4px 10px 0 rgb(0 0 0 / 60%);
 	--cyan-font: 'Montserrat', 'Open Sans';
 	--cyan-background-img: url(https://dablulite.github.io/Cyan/cyan-waves.png);
 	--cyan-accent-color: #009f88;
-	--cyan-blur-radius: 10px;
-	--cyan-status-mask-background: var(--profile-body-background-color);
-	--cyan-text-shadow: 1;
-	--window-margin: 8;
-	--window-border-radius: 8px;
+	--cyan-blur: 48px;
+	--cyan-radius-round-interface: 50px;
+    --cyan-radius-interface: 24px;
+    --cyan-radius-xl: 20px;
+    --cyan-radius-large: 16px;
+    --cyan-radius-medium: 12px;
+    --cyan-radius-small: 8px;
+    --cyan-radius-xs: 4px;
+    --cyan-channelbar-width: 320px;
+    --cyan-loading-header: "Polishing surfaces...";
+}
+
+.theme-dark,
+.theme-dark .theme-light {
+    --cyan-second-layer: rgb(0 0 0/60%);
+    --cyan-background-primary: hsla(0deg 100% 0% / 60%);
+    --cyan-bg-brightness: .7
+}
+.theme-light {
+    --cyan-second-layer: rgb(255 255 255/60%);
+    --cyan-background-primary: hsla(0deg 100% 100% / 60%)
 }
