@@ -6430,3 +6430,6 @@ ul[id*="folder-items-"] {
   backdrop-filter: blur(var(--cyan-blur)) !important;
   background: var(--cyan-background-primary) !important;
 }
+.toolsContainer_c25c6d {
+ position: absolute; 
+}
