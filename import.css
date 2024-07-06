@@ -8,8 +8,8 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 :root {
   --cyan-version: 24;
-  --cyan-subversion: 6;
-  --cyan-patch-version: 25;
+  --cyan-subversion: 7;
+  --cyan-patch-version: 6;
   --cyan-blur: 48px;
   --cyan-radius-round-interface: 50px;
   --cyan-radius-interface: 24px;
@@ -23,7 +23,7 @@
   --cyan-accent-color: #009f88;
   --cyan-interface-shadow: 0 4px 10px 0 rgb(0 0 0 / 60%);
   --cyan-font: "Montserrat", "Open Sans";
-  --cyan-background-img: url("https://dablulite.github.io/Cyan/cyan-waves.png");
+  --cyan-background-img: url("https://dablulite.github.io/Cyan/cyan-waves.png") /* Change to "none" to use with transparency */;
   --window-titlebar-size: 0;
   --brand-100: color-mix(in srgb, var(--cyan-accent-color), white 80%);
   --brand-130: color-mix(in srgb, var(--cyan-accent-color), white 74%);
@@ -4398,9 +4398,6 @@ path[d="M12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4
 .appAsidePanelWrapper_bd26cc:has(.themeEditor_c9dda6, .editor_bcfa1e)
   .content_a4d4d9 {
   margin-right: calc(344px + 24px);
-}
-.theme-dark #app-mount {
-  background: #0e0f11 !important;
 }
 .bg_d4b6c5 {
   background: var(--cyan-background-img, #fff);
