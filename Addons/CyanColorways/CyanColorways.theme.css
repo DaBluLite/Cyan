@@ -10,20 +10,9 @@
 
 
 :root {
-    --cyan-background-primary: hsla(var(--primary-700-hsl) / 40%) !important;
+    --cyan-background-primary: hsla(var(--primary-700-hsl) / 60%) !important;
     --cyan-accent-color: hsl(var(--brand-500-hsl)) !important;
 }
-.theme-dark #app-mount .lookFilled__19298.colorBrand_b2253e {
+.theme-dark #app-mount .lookFilled_dd4f85.colorBrand_dd4f85 {
     color: #fff !important;
-}
-.theme-dark #app-mount .ColorwaySelectorBtn > div {
-    background-color: #fff !important;
-}
-.ColorwaySelectorBtn {
-    background-color: var(--cyan-background-secondary) !important;
-    border-radius: 50% !important;
-    box-shadow: 0 0 0 1.5px var(--cyan-background-primary), 0 2px 10px 0 rgb(0 0 0 / 20%) !important;
-}
-.ColorwaySelectorBtn:hover {
-    box-shadow: 0 0 0 1.5px var(--cyan-accent-color), 0 2px 10px 0 rgb(0 0 0 / 20%) !important;
 }
