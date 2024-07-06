@@ -1,39 +1,12 @@
-.base__3e6af, .chat__52833, .container__5c7e7, .applicationStore_fc7d76, .noChannel__7bbff, .pageWrapper_fef757 {
-    order: -1;
+.guilds_a4d4d9{
+    order: 2;
+    margin-left: 0;
+    margin-right: 8px;
 }
-.container__037ed::before {
-    left: unset !important;
-    right: calc(var(--window-margin) * 1px);
-    height: calc(100% - ((var(--window-margin) * 1px)) * 2) !important;
-}
-#app-mount .guilds__2b93a {
-    margin: calc(var(--window-margin) * 1px) !important;
-    margin-left: 0 !important;
-    margin-top: calc(var(--window-margin) * 1px) !important;
-    height: calc(100% - ((var(--window-margin) * 1px)) * 2) !important;
-}
-#app-mount .sidebar_ded4b5 {
-    margin: calc(var(--window-margin) * 1px) !important;
-    margin-right: 0 !important;
-    margin-top: calc(var(--window-margin) * 1px) !important;
-}
-.platform-win .chat__52833,
-.platform-osx .chat__52833,
-.platform-win .container__5c7e7,
-.platform-osx .container__5c7e7,
-.platform-win .applicationStore_fc7d76,
-.platform-osx .applicationStore_fc7d76,
-.platform-win .noChannel__7bbff,
-.platform-osx .noChannel__7bbff,
-.platform-win .pageWrapper_fef757,
-.platform-osx .pageWrapper_fef757 {
-    margin-top: 32px !important;
-}
-.chat__52833 {
-    margin-left: calc(var(--window-margin) * 1px) !important;
-    margin-right: 0 !important;
-}
-.expandedFolderBackground__1bec6:not(.collapsed__0a270)::before {
-    right: -12px;
+.typeWindows_a934d8 {
+    right: 8px;
     left: unset;
+}
+.sidebar_a4d4d9 {
+    order: 2;
 }
