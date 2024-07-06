@@ -1,6 +1,6 @@
-#app-mount .winButton__88672:not(:hover) > svg {
+#app-mount .winButton_a934d8:not(:hover) > svg {
     background-color: var(--cyan-background-primary) !important;
-    background-size: 0 !important;
-    border-radius: 50% !important;
     backdrop-filter: blur(var(--cyan-blur-radius)) !important;
+    border-color: transparent;
+    transition: .2s ease;
 }
