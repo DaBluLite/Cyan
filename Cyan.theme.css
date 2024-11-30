@@ -7,6 +7,9 @@
  * @updateUrl https://dablulite.github.io/Cyan/Cyan.theme.css
  * @source https://github.com/DaBluLite/Cyan
  * @invite 67VRpSjzxU
+ * @colorwayVar cyan-accent-color {{accent}}
+ * @colorwayVar cyan-background-primary hsl({{primary-h}} calc(var(--saturation-factor, 1)*{{primary-s}}%) {{primary-l}}%/60%)
+ * @colorwayVar cyan-second-layer hsl({{tertiary-h}} calc(var(--saturation-factor, 1)*{{tertiary-s}}%) min(calc({{tertiary-l}}% + 7.2%), 100%)/60%)
  */
 
 /**
