@@ -4,14 +4,13 @@
 
 # Cyan - Clean and Customizable, with custom background support
 
-[![BetterDiscord][bd-badge]][bd-link] ![Cyan Studio (Coming Soon)][cs-badge]
+[![BetterDiscord][bd-badge]][bd-link] [![ThemeLibrary][tl-badge]][tl-link]
 
 [bd-link]: https://betterdiscord.app/theme/Cyan
-[bd-badge]: https://img.shields.io/badge/Cyan-Download%20On%20BetterDiscord-3a71c1?labelColor=0c0d10&color=009f88&style=for-the-badge
+[bd-badge]: GetItOnBetterDiscord.png
 
-[cs-badge]: https://img.shields.io/badge/Go%20To%20Cyan%20Studio%20(Coming%20Soon)-3a71c1?labelColor=0c0d10&color=009f88&style=for-the-badge
-
-### NOTICE: As of May 1st, 2024, Cyan w/ UI v1 has been archived and Cyan 2 is released. Cyan 1 will still be available in the Repo archive.
+[tl-link]: https://discord-themes.com/theme/1
+[tl-badge]: GetItOnThemeLibrary.png
 
 ### Screenshots:
 ![image](https://github.com/DaBluLite/Cyan/assets/73998678/f3750248-52b2-4a93-966e-c945be1f2147)
