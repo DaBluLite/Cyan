@@ -8,8 +8,8 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 :root {
   --cyan-version: 25;
-  --cyan-subversion: 1;
-  --cyan-patch-version: 30;
+  --cyan-subversion: 3;
+  --cyan-patch-version: 2;
   --cyan-blur: 48px;
   --cyan-radius-round-interface: 50px;
   --cyan-radius-interface: 24px;
@@ -19,7 +19,7 @@
   --cyan-radius-small: 8px;
   --cyan-radius-xs: 4px;
   --cyan-channelbar-width: 320px;
-  --cyan-loading-header: "Blurring...";
+  --cyan-loading-header: "Warming up some soup...";
   --cyan-accent-color: #009f88;
   --cyan-interface-shadow: 0 4px 10px 0 rgb(0 0 0 / 60%);
   --cyan-font: "Montserrat", "Open Sans";
@@ -6504,4 +6504,10 @@ ul[id*="folder-items-"] {
 .button_e6e74f:hover {
   box-shadow: var(--cyan-interface-shadow);
   background: var(--cyan-second-layer) !important;
+}
+.buttons__37e49 {
+    display: contents;
+}
+.micButtonParent__37e49 {
+    width: 100%;
 }
