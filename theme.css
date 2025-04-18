@@ -22,17 +22,31 @@
     --color-tertiary-800: #0e0f10;
     --color-tertiary-900: #070708;
     --color-tertiary-950: #020203;
-    --color-accent-50: #e6f4e7;
-    --color-accent-100: #cae8cb;
-    --color-accent-200: #94d197;
-    --color-accent-300: #62bb67;
-    --color-accent-400: #3f9243;
-    --color-accent-500: #285d2b;
-    --color-accent-600: #204b22;
-    --color-accent-700: #19391a;
-    --color-accent-800: #0f2410;
-    --color-accent-900: #081208;
-    --color-accent-950: #050b05;
+      --color-accent-100: color-mix(in srgb, var(--cyan-accent-color), white 80%);
+    --color-accent-130: color-mix(in srgb, var(--cyan-accent-color), white 74%);
+    --color-accent-160: color-mix(in srgb, var(--cyan-accent-color), white 68%);
+    --color-accent-200: color-mix(in srgb, var(--cyan-accent-color), white 60%);
+    --color-accent-230: color-mix(in srgb, var(--cyan-accent-color), white 54%);
+    --color-accent-260: color-mix(in srgb, var(--cyan-accent-color), white 48%);
+    --color-accent-300: color-mix(in srgb, var(--cyan-accent-color), white 40%);
+    --color-accent-330: color-mix(in srgb, var(--cyan-accent-color), white 34%);
+    --color-accent-360: color-mix(in srgb, var(--cyan-accent-color), white 28%);
+    --color-accent-400: color-mix(in srgb, var(--cyan-accent-color), white 20%);
+    --color-accent-430: color-mix(in srgb, var(--cyan-accent-color), white 14%);
+    --color-accent-460: color-mix(in srgb, var(--cyan-accent-color), white 8%);
+    --color-accent-500: var(--cyan-accent-color);
+    --color-accent-530: color-mix(in srgb, var(--cyan-accent-color), black 8%);
+    --color-accent-560: color-mix(in srgb, var(--cyan-accent-color), black 14%);
+    --color-accent-600: color-mix(in srgb, var(--cyan-accent-color), black 20%);
+    --color-accent-630: color-mix(in srgb, var(--cyan-accent-color), black 28%);
+    --color-accent-660: color-mix(in srgb, var(--cyan-accent-color), black 34%);
+    --color-accent-700: color-mix(in srgb, var(--cyan-accent-color), black 40%);
+    --color-accent-730: color-mix(in srgb, var(--cyan-accent-color), black 48%);
+    --color-accent-760: color-mix(in srgb, var(--cyan-accent-color), black 54%);
+    --color-accent-800: color-mix(in srgb, var(--cyan-accent-color), black 60%);
+    --color-accent-830: color-mix(in srgb, var(--cyan-accent-color), black 68%);
+    --color-accent-860: color-mix(in srgb, var(--cyan-accent-color), black 74%);
+    --color-accent-900: color-mix(in srgb, var(--cyan-accent-color), black 80%);
     --font-logo: "Edu AU VIC WA NT Hand";
     --custom-avatar-avatar-decoration-border-position: calc((1 - var(--decoration-to-avatar-ratio)) / 2 * 100%);
     --custom-button-button-xl-width: 148px;
@@ -54,4 +68,37 @@
     --custom-modal-min-width-large: 800px;
     --animate-notification: notification 0.3s ease;
     --animate-modal: show-modal 0.4s ease;
+    --color-second-layer: var(--cyan-second-layer);
+    --color-first-layer: var(--cyan-background-primary);
+    --blur-normal: var(--cyan-blur);
+    --shadow-cyan: var(--cyan-interface-shadow);
+    --radius-xl: 20px;
+    --radius-round-interface: 50px;
+    --radius-interface: 24px;
+    --radius-xl: 20px;
+    --radius-large: 16px;
+    --radius-medium: 12px;
+    --radius-small: 8px;
+    --radius-xs: 4px;
+}
+
+:root {
+	--cyan-interface-shadow: 0 4px 10px 0 rgb(0 0 0 / 60%);
+	--cyan-font: 'Montserrat', 'Open Sans';
+	--cyan-background-img: url(https://dablulite.github.io/Cyan/cyan-waves.png);
+	--cyan-accent-color: #009f88;
+	--cyan-blur: 48px;
+    --cyan-channelbar-width: 320px;
+    --cyan-loading-header: "Polishing surfaces...";
+}
+
+.theme-dark,
+.theme-dark .theme-light {
+    --cyan-second-layer: rgb(0 0 0/60%);
+    --cyan-background-primary: hsla(0deg 100% 0% / 60%);
+    --cyan-bg-brightness: .7
+}
+.theme-light {
+    --cyan-second-layer: rgb(255 255 255/60%);
+    --cyan-background-primary: hsla(0deg 100% 100% / 60%)
 }

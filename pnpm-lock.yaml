@@ -14,9 +14,6 @@ importers:
       '@tailwindcss/postcss':
         specifier: ^4.0.17
         version: 4.0.17
-      postcss:
-        specifier: ^8.5.3
-        version: 8.5.3
       postcss-cli:
         specifier: ^11.0.1
         version: 11.0.1(jiti@2.4.2)(postcss@8.5.3)
@@ -26,6 +23,16 @@ importers:
       tailwindcss:
         specifier: ^4.0.15
         version: 4.0.17
+    devDependencies:
+      postcss:
+        specifier: ^8.5.3
+        version: 8.5.3
+      postcss-header:
+        specifier: ^3.0.3
+        version: 3.0.3(postcss@8.5.3)
+      postcss-prepend-plugin:
+        specifier: ^1.0.7
+        version: 1.0.7
 
 packages:
 
@@ -266,6 +273,11 @@ packages:
       picomatch:
         optional: true
 
+  figlet@1.8.1:
+    resolution: {integrity: sha512-kEC3Sme+YvA8Hkibv0NR1oClGcWia0VB2fC1SlMy027cwe795Xx40Xiv/nw/iFAwQLupymWh+uhAAErn/7hwPg==}
+    engines: {node: '>= 0.4.0'}
+    hasBin: true
+
   fill-range@7.1.1:
     resolution: {integrity: sha512-YsGpe3WHLK8ZYi4tWDg2Jy3ebRz2rXowDxnld4bkQB00cc/1Zw9AWnC0i9ztDJitivtQvaI9KaLyKrc+hBW0yg==}
     engines: {node: '>=8'}
@@ -430,6 +442,11 @@ packages:
     peerDependencies:
       postcss: ^8.0.0
 
+  postcss-header@3.0.3:
+    resolution: {integrity: sha512-bmm/qVdphnJcHHLyL2efiPUaLRR6y0iMRYKWl06cfdvNEoXlPUBENL1vqBBn2uTnxYTYvWoec7o+bYnPRJAmMA==}
+    peerDependencies:
+      postcss: ^8.0.0
+
   postcss-load-config@5.1.0:
     resolution: {integrity: sha512-G5AJ+IX0aD0dygOE0yFZQ/huFFMSNneyfp0e3/bT05a8OfPC5FUoZRPfGijUdGOJNMewJiwzcHJXFafFzeKFVA==}
     engines: {node: '>= 18'}
@@ -444,6 +461,9 @@ packages:
         optional: true
       tsx:
         optional: true
+
+  postcss-prepend-plugin@1.0.7:
+    resolution: {integrity: sha512-KaAx5SrLvQuJBMLlQm9tp5zOs8SJyJoNAd6oCsJgjJRWAG6NQaP7Gmn9sSEhVbvyraw/4BeeyoOpcXGnw2ZLiw==}
 
   postcss-reporter@7.1.0:
     resolution: {integrity: sha512-/eoEylGWyy6/DOiMP5lmFRdmDKThqgn7D6hP2dXKJI/0rJSO1ADFNngZfDzxL0YAxFvws+Rtpuji1YIHj4mySA==}
@@ -739,6 +759,8 @@ snapshots:
     optionalDependencies:
       picomatch: 4.0.2
 
+  figlet@1.8.1: {}
+
   fill-range@7.1.1:
     dependencies:
       to-regex-range: 5.0.1
@@ -870,12 +892,21 @@ snapshots:
       - jiti
       - tsx
 
+  postcss-header@3.0.3(postcss@8.5.3):
+    dependencies:
+      postcss: 8.5.3
+
   postcss-load-config@5.1.0(jiti@2.4.2)(postcss@8.5.3):
     dependencies:
       lilconfig: 3.1.3
       yaml: 2.7.1
     optionalDependencies:
       jiti: 2.4.2
+      postcss: 8.5.3
+
+  postcss-prepend-plugin@1.0.7:
+    dependencies:
+      figlet: 1.8.1
       postcss: 8.5.3
 
   postcss-reporter@7.1.0(postcss@8.5.3):

@@ -1,21 +1,25 @@
 {
   "name": "cyan",
   "version": "2.5.0-next",
-  "description": "",
+  "description": "Clean and customizable, Cyan is the go-to experience for Discord.",
   "main": "index.js",
   "scripts": {
-    "build": "postcss --use @tailwindcss/postcss -o import.css index.css",
-    "build:watch": "postcss --use @tailwindcss/postcss -o import.css index.css --watch"
+    "build": "postcss --sourcemap=none --use @tailwindcss/postcss --use postcss-header -o import.css index.css",
+    "build:watch": "postcss --sourcemap=none --use @tailwindcss/postcss --use postcss-header -o import.css index.css --watch"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "DaBluLite",
+  "license": "MIT",
   "dependencies": {
     "@tailwindcss/cli": "^4.0.15",
     "@tailwindcss/postcss": "^4.0.17",
-    "postcss": "^8.5.3",
     "postcss-cli": "^11.0.1",
     "sass": "^1.86.0",
     "tailwindcss": "^4.0.15"
+  },
+  "devDependencies": {
+    "postcss": "^8.5.3",
+    "postcss-header": "^3.0.3",
+    "postcss-prepend-plugin": "^1.0.7"
   }
 }
