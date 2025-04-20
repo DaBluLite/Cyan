@@ -22,7 +22,7 @@
     --color-tertiary-800: #0e0f10;
     --color-tertiary-900: #070708;
     --color-tertiary-950: #020203;
-      --color-accent-100: color-mix(in srgb, var(--cyan-accent-color), white 80%);
+    --color-accent-100: color-mix(in srgb, var(--cyan-accent-color), white 80%);
     --color-accent-130: color-mix(in srgb, var(--cyan-accent-color), white 74%);
     --color-accent-160: color-mix(in srgb, var(--cyan-accent-color), white 68%);
     --color-accent-200: color-mix(in srgb, var(--cyan-accent-color), white 60%);
@@ -68,7 +68,6 @@
     --custom-modal-min-width-large: 800px;
     --animate-notification: notification 0.3s ease;
     --animate-modal: show-modal 0.4s ease;
-    --color-second-layer: var(--cyan-second-layer);
     --color-first-layer: var(--cyan-background-primary);
     --blur-normal: var(--cyan-blur);
     --shadow-cyan: var(--cyan-interface-shadow);
@@ -80,6 +79,12 @@
     --radius-medium: 12px;
     --radius-small: 8px;
     --radius-xs: 4px;
+    --color-second-layer-thin: var(--button-secondary-background);
+    --color-second-layer-thin-hover: var(--button-secondary-background-hover);
+    --color-second-layer-thin-active: var(--button-secondary-background-active);
+    --color-second-layer: var(--cyan-second-layer);
+    --color-faint: var(--border-faint);
+    --color-subtle: var(--border-subtle);
 }
 
 :root {
@@ -89,6 +94,9 @@
 	--cyan-accent-color: #009f88;
 	--cyan-blur: 48px;
     --cyan-channelbar-width: 320px;
+    --cyan-version: 25;
+    --cyan-subversion: 4;
+    --cyan-patch-version: 20;
     --cyan-loading-header: "Polishing surfaces...";
 }
 

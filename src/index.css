@@ -1,0 +1,529 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+@import "tailwindcss/utilities.css" prefix(cyan);
+@import "tailwindcss/theme.css" prefix(cyan);
+@import "./theme.css" prefix(cyan);
+@import "./no-bg.css" prefix(cyan);
+@import "./utilities.css" prefix(cyan);
+@import "./components/quickSwitcher.css" prefix(cyan);
+@import "./components/userPanel.css" prefix(cyan);
+@import "./components/titlebar.css" prefix(cyan);
+@import "./components/callUI.css" prefix(cyan);
+@custom-variant dark (&:where(.theme-dark, .theme-dark *, .theme-dark .theme-light, .theme-dark .theme-light *));
+@custom-variant darker (&:where(.theme-darker, .theme-darker *));
+@custom-variant black (&:where(.theme-midnight, .theme-midnight *));
+
+.base_c48ade {
+  @apply cyan:!flex cyan:!flex-col
+}
+
+.content_c48ade,
+.sidebar_c48ade {
+  @apply cyan:!flex cyan:flex-row
+}
+
+.bg__960e4 {
+  filter: brightness(min(max(var(--cyan-bg-brightness), 0), 1));
+  background-size: cover;
+  @apply cyan:!use-wallpaper
+}
+
+.svg_cc5dd2 > foreignObject {
+  @apply cyan:!w-12 cyan:!h-12 cyan:-translate-1
+}
+
+.svg_cc5dd2 > mask {
+  @apply cyan:!hidden
+}
+
+.svg_cc5dd2 {
+  @apply cyan:!top-0 cyan:!left-0 cyan:shadow-cyan cyan:rounded-round-interface cyan:overflow-hidden cyan:transition-all cyan:duration-300 cyan:ease-in-out cyan:backdrop-blur-normal
+}
+
+.wrapper__6e9f8,
+.wrapper_cc5dd2 {
+  @apply cyan:!w-12 cyan:!h-12
+}
+
+.childWrapper__6e9f8,
+.wrapper__6e9f8 .icon__6e9f8,
+.svg_cc5dd2,
+.circleIconButton__5bc7e {
+  @apply cyan:!w-12 cyan:!h-12
+}
+
+.folderIcon__48112 .svg_cc5dd2 foreignObject {
+  @apply cyan:scale-[1.1667]
+}
+
+.childWrapper__6e9f8 {
+  @apply cyan:!bgp-second-layer
+}
+
+.svg_cc5dd2:has(
+  .wrapper__6e9f8.selected__6e9f8,
+  .wrapper__6e9f8:hover
+) {
+  @apply cyan:rounded-large
+}
+
+.item__58105 {
+  @apply cyan:bg-second-layer cyan:backdrop-blur-normal cyan:brightness-50
+}
+
+.wrapper__48112.isExpanded__48112 {
+  @apply cyan:!h-max cyan:!max-h-max
+}
+
+.wrapper__48112.isExpanded__48112 .stack_dbd263 {
+  @apply cyan:!h-max cyan:!max-h-max cyan:!gap-1 cyan:!overflow-visible
+}
+
+.wrapper__48112.isExpanded__48112 .expandedFolderBackground__48112 {
+  @apply cyan:rounded-medium cyan:w-14 cyan:!left-2 cyan:h-full cyan:bg-first-layer cyan:shadow-cyan cyan:backdrop-blur-normal
+}
+
+.wrapper__48112.isExpanded__48112 {
+  @apply cyan:py-1
+}
+
+.expandedFolderIconWrapper__48112 {
+  @apply cyan:!m-0 cyan:!w-12 cyan:!h-12 cyan:transition-all cyan:duration-300 cyan:ease-in-out cyan:!bgp-second-layer-thin
+}
+
+.dc-app-launcher {
+  @apply cyan:!w-12 cyan:!h-12 cyan:!rounded-round-interface cyan:hover:!rounded-large cyan:!transition-all cyan:!duration-300 cyan:!ease-in-out cyan:!bgp-first-layer cyan:!backdrop-blur-normal cyan:shadow-cyan
+}
+
+.sidebar_c48ade:after {
+  content: none !important;
+}
+
+.sidebarList_c48ade {
+  margin-bottom: calc(var(--custom-app-panels-height, 0) + 16px);
+  width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width) - 8px) !important;
+  @apply cyan:!border-none cyan:!bgp-first-layer cyan:!rounded-xl cyan:!mr-2 cyan:!backdrop-blur-normal cyan:shadow-cyan
+}
+
+.scroller__99e7c {
+  @apply cyan:!mb-0 cyan:!no-bg
+}
+
+.panels_c48ade {
+  @apply cyan:!rounded-large cyan:!border-none cyan:!backdrop-blur-normal cyan:shadow-cyan cyan:!bgp-first-layer
+}
+
+.circleIconButton__5bc7e {
+  @apply cyan:!bg-first-layer
+}
+
+.chat_f75fb0,
+.container__133bf,
+.applicationStore_f07d62,
+.container_ad5cdf {
+  @apply cyan:!border-none cyan:mr-2 cyan:mb-2 cyan:!bgp-first-layer cyan:!rounded-interface cyan:!backdrop-blur-normal cyan:shadow-cyan
+}
+
+.page_c48ade {
+  @apply cyan:!overflow-visible
+}
+
+.channelTextArea_f75fb0 {
+  @apply cyan:!no-bg cyan:!border-none
+}
+
+.themedBackground__74017 {
+  @apply cyan:!no-bg cyan:!overflow-visible
+}
+
+.themedBackground__74017 .textAreaSlate__74017 {
+  max-height: var(--custom-channel-textarea-text-area-max-height);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  @apply cyan:!no-bg cyan:transition cyan:duration-200 cyan:rounded-large cyan:border cyan:border-transparent
+}
+
+.themedBackground__74017 .textAreaSlate__74017::-webkit-scrollbar {
+  width: 0;
+}
+
+.themedBackground__74017:has(:focus) .textAreaSlate__74017 {
+  @apply cyan:!bgp-second-layer-thin cyan:border-faint
+}
+
+.inner__74017 {
+  @apply cyan:pl-0 cyan:gap-2
+}
+
+.attachButton__74017 {
+  @apply cyan:!-ml-2 cyan:rounded-large cyan:hover:bgp-second-layer-thin cyan:duration-200 cyan:ease-in-out cyan:border cyan:border-transparent cyan:hover:border-faint
+}
+
+.container__9293f {
+  @apply cyan:!bgp-second-layer-thin cyan:m-2 cyan:rounded-large cyan:!w-[calc(100%-1rem)] cyan:border cyan:border-faint cyan:shadow-none
+}
+
+.children__9293f:after {
+  content: none !important;
+}
+
+.newMessagesBar__0f481 {
+  @apply cyan:bg-accent-500 cyan:!border-none cyan:rounded-large
+}
+
+.newMessagesBar__0f481 .barButtonAlt__0f481 {
+  @apply cyan:transition cyan:duration-200 cyan:rounded-large cyan:hover:bg-accent-600
+}
+
+.jumpToPresentBar__0f481 {
+  @apply cyan:!rounded-medium cyan:!border-none cyan:!bgp-second-layer cyan:backdrop-blur-normal
+}
+
+.lookFilled__201d5.colorBrand__201d5,
+.botTagRegular__82f07 {
+  @apply cyan:bg-accent-500
+}
+
+.lookFilled__201d5.colorBrand__201d5 {
+  @apply cyan:hover:bg-accent-560 cyan:active:bg-accent-600
+}
+
+.container__2637a {
+  @apply cyan:!pb-0
+}
+
+.container__7d20c .scroller__7d20c,
+.container_c8ffbb {
+  @apply cyan:!border-none
+}
+
+.menu_c1e9c4 {
+  @apply cyan:bg-first-layer cyan:border-none cyan:rounded-large cyan:shadow-cyan cyan:border cyan:border-faint
+}
+
+.menu_c1e9c4:after {
+  content: "";
+  @apply cyan:absolute cyan:top-0 cyan:left-0 cyan:w-full cyan:h-full cyan:backdrop-blur-normal cyan:rounded-large cyan:-z-1 cyan:backdrop-brightness-200
+}
+
+.submenuPaddingContainer_c1e9c4,
+.submenuPaddingContainer_ce8328 {
+  @apply cyan:p-0
+}
+
+.item_c1e9c4 {
+  @apply cyan:!rounded-medium cyan:transition cyan:duration-150 cyan:ease-in-out cyan:gap-2 cyan:border cyan:border-transparent
+}
+
+.item_c1e9c4.focused_c1e9c4 {
+  @apply cyan:border-faint cyan:bg-second-layer-thin
+}
+
+.iconContainer_c1e9c4 {
+  order: -1;
+  margin-left: 0;
+}
+
+.button_f563df {
+  @apply cyan:transition cyan:duration-150 cyan:ease-in-out cyan:rounded-medium
+}
+
+.button_f563df.focused_f563df {
+  @apply cyan:shadow-cyan cyan:bg-second-layer
+}
+
+.wrapper_f563df {
+  @apply cyan:p-1
+}
+
+.homeWrapper__0920e {
+  @apply cyan:!border-none cyan:!no-bg
+}
+
+.heroHeading_ca1a02 {
+  @apply cyan:pl-4 cyan:box-border cyan:pt-2
+}
+
+.headerArt__3ce43 {
+  @apply cyan:!rounded-t-large
+}
+
+.layer__960e4:not(.baseLayer__960e4) {
+  @apply cyan:bg-first-layer cyan:backdrop-blur-normal
+}
+
+.root__49fc1,
+.dc-modal {
+  @apply cyan:!shadow-cyan cyan:!border-none cyan:!bg-first-layer cyan:!backdrop-blur-normal cyan:!backdrop-brightness-400 cyan:!rounded-xl
+}
+
+.footer__49fc1 {
+  @apply cyan:no-bg
+}
+
+.container_eb2cd2 {
+  @apply cyan:transition cyan:duration-200 cyan:rounded-medium
+}
+
+.button__201d5 {
+  @apply cyan:rounded-medium
+}
+
+.searchBar__35e86 {
+  @apply cyan:pl-2 cyan:pr-2 cyan:!border-none
+}
+
+.panel__5dec7 {
+  @apply cyan:!no-bg cyan:!border-none
+}
+
+.message__5126c {
+  @apply cyan:border cyan:border-transparent cyan:m-1 cyan:!rounded-medium cyan:transition cyan:duration-300
+}
+
+.message__5126c:hover,
+.message__5126c.selected__5126c {
+  @apply cyan:bg-second-layer-thin cyan:border-faint
+}
+
+.container__37e49 {
+  @apply cyan:!gap-1 cyan:!p-1
+}
+
+.container__37e49 .buttons__37e49 {
+  @apply cyan:contents
+}
+
+.container__37e49 .nameTag__37e49 {
+  @apply cyan:hidden
+}
+
+.container__37e49 .avatarWrapper__37e49 {
+  @apply cyan:!w-full cyan:justify-center cyan:h-12 cyan:rounded-medium cyan:transition cyan:duration-200 cyan:border cyan:border-transparent cyan:min-w-[unset] cyan:!flex-[unset]
+}
+
+.container__37e49 .buttons__37e49 > .micButtonParent__37e49 {
+  @apply cyan:!w-full cyan:h-12 cyan:!flex-[unset]
+}
+
+.container__37e49 .buttons__37e49 > .button__67645,
+.container__37e49 .buttons__37e49 > .micButtonParent__37e49 > .button__67645 {
+  @apply cyan:!m-0 cyan:!w-full cyan:h-12 cyan:rounded-medium cyan:transition cyan:duration-200 cyan:border cyan:border-transparent
+}
+
+.container__37e49 .buttons__37e49 > .button__67645:hover,
+.container__37e49 .buttons__37e49 > .micButtonParent__37e49 > .button__67645:hover,
+.container__37e49 .avatarWrapper__37e49:hover {
+  @apply cyan:border-faint cyan:bg-second-layer-thin
+}
+
+.mentioned__5126c {
+  background-color: hsl(var(--opacity-yellow-4-hsl)/0.08) !important;
+  @apply cyan:border-faint
+}
+
+.mentioned__5126c:hover {
+  background-color: hsl(var(--opacity-yellow-4-hsl)/0.15) !important;
+}
+
+.mentioned__5126c:before {
+  transform: translateY(-50%);
+  @apply cyan:-left-1 cyan:rounded-xl cyan:w-0.75 cyan:h-[80%] cyan:!bottom-[unset] cyan:top-[50%]
+}
+
+.buttonSection__1405b {
+  @apply cyan:!contents
+}
+
+.experimentWrapper__1405b {
+  @apply cyan:gap-0.5 cyan:bg-second-layer-thin cyan:border cyan:border-faint cyan:rounded-medium cyan:p-0.5
+}
+
+.experimentButton_f1ceac {
+  @apply cyan:h-11 cyan:w-11 cyan:border cyan:border-transparent cyan:hover:border-faint cyan:transition cyan:duration-200 cyan:ease-in-out
+}
+
+.attachedCaretButtonContainer_f1ceac:has(> div:nth-child(2)) .experimentButton_f1ceac {
+  @apply cyan:rounded-r-none
+}
+
+.contextMenuNubExperiment_f1ceac {
+  @apply cyan:rounded-r-medium cyan:border cyan:border-transparent cyan:hover:border-faint cyan:h-11 cyan:box-border
+}
+
+.upload_aa605f {
+  @apply cyan:!bg-second-layer-thin cyan:!rounded-medium cyan:!border-subtle
+}
+
+.carouselModal_d3a6f0 {
+  @apply cyan:!no-bg cyan:!backdrop-blur-none cyan:!backdrop-brightness-100 cyan:!shadow-none
+}
+
+.voiceAvatar_f910d0 {
+  @apply cyan:!rounded-large
+}
+
+#svg-mask-avatar-default {
+  @apply cyan:hidden
+}
+
+.border_f910d0 {
+  @apply cyan:rounded-large cyan:transition cyan:duration-200
+}
+
+.border_f910d0.speaking_f910d0 {
+  box-shadow: 0 0 3px 3px var(--cyan-accent-color),inset 0 0 4px 2px var(--cyan-second-layer);
+}
+
+.avatar__44b0c {
+  @apply cyan:rounded-full
+}
+
+.tooltipPrimary__382e7 {
+  @apply cyan:!bg-second-layer-thin cyan:backdrop-blur-normal
+}
+
+
+.tooltipPointerBg__382e7,
+.tooltipPointer__382e7 {
+  @apply cyan:!hidden
+}
+
+.container_a2f514 {
+  @apply cyan:!bg-second-layer cyan:backdrop-blur-normal
+}
+
+.container_a2f514:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 17em;
+  background-color: var(--cyan-accent-color);
+  -webkit-mask: url("https://dablulite.github.io/Cyan/cyan-bootup-mask.svg");
+  -webkit-mask-size: 100%;
+  -webkit-mask-position: 50%;
+  -webkit-mask-repeat: no-repeat;
+}
+
+.tipTitle_a2f514,
+.tip_a2f514 {
+  font-size: 0;
+  width: fit-content !important;
+  max-width: unset !important;
+  line-height: unset !important;
+}
+
+.text_a2f514 {
+  position: absolute;
+  top: 57px;
+  left: 35px;
+}
+
+.problems_a2f514 {
+  z-index: 1;
+  width: fit-content;
+  padding-left: 35px;
+}
+
+.problemsText_a2f514 {
+  color: #fff;
+}
+
+.tipTitle_a2f514:after {
+  content: var(--cyan-loading-header);
+  color: var(--header-primary);
+  font-size: 30px;
+  font-weight: 300;
+  opacity: 0.7;
+}
+
+.tip_a2f514:after {
+  counter-reset: cyan-version var(--cyan-version) cyan-subversion
+    var(--cyan-subversion) cyan-patch-version var(--cyan-patch-version);
+  content: "Cyan v" counter(cyan-version) "." counter(cyan-subversion) "."
+    counter(cyan-patch-version) " is loading...";
+  color: var(--header-primary);
+  font-size: 22px;
+  font-weight: 300;
+  opacity: 0.5;
+}
+
+.ready_a2f514 {
+  @apply cyan:hidden
+}
+
+.wrapper__00943 {
+  @apply cyan:!bg-second-layer-thin cyan:border-subtle cyan:rounded-large
+}
+
+.wrapper__00943 .body__00943 {
+  @apply cyan:!bg-second-layer-thin cyan:border-subtle cyan:rounded-medium
+}
+
+.wrapper__00943 .body__00943 .wrapper__960df {
+  @apply cyan:no-bg
+}
+
+.wrapper__00943 .body__00943 .section__00943 {
+  @apply cyan:border-none
+}
+
+.container_a45028 {
+  @apply cyan:bg-second-layer-thin cyan:border-faint
+}
+
+.container__9293f:before {
+  content: none !important;
+}
+
+.svg__27106 .foreground__27106 {
+  stroke: var(--cyan-accent-color);
+}
+
+.fullRegionIcon_f1ceac {
+  @apply cyan:p-1
+}
+
+.regionSelectPopout__5621e {
+  @apply cyan:p-2 cyan:gap-1 cyan:rounded-large cyan:!bg-first-layer cyan:backdrop-blur-normal cyan:border cyan:border-faint cyan:backdrop-brightness-200
+}
+
+.quickSelectPopoutOption_ebaca5 {
+  @apply cyan:transition cyan:duration-200 cyan:ease-in-out cyan:rounded-medium cyan:border cyan:border-transparent cyan:hover:border-faint cyan:hover:bg-second-layer-thin cyan:focus:border-faint cyan:focus:bg-second-layer-thin
+}
+
+.panelButtonContainer__4cd01 {
+  @apply cyan:w-fit
+}
+
+.actions__4cd01 .button__67645,
+.voiceButtonsContainer_e131a9 .button__67645 {
+  @apply cyan:!m-0 cyan:min-w-14 cyan:transition cyan:duration-200 cyan:border cyan:border-transparent cyan:ease-in-out cyan:border-faint cyan:bg-second-layer-thin cyan:hover:bg-second-layer-thin-hover cyan:active:bg-second-layer-thin-active
+}
+
+.actionButtons_e131a9 {
+  @apply cyan:!gap-1
+}
+
+.container_e131a9 {
+  @apply cyan:!p-1 cyan:!m-1 cyan:!rounded-medium cyan:border cyan:border-faint
+}
+
+.container_e131a9:has(.rtcConnectionStatusConnected__06d62) {
+  @apply cyan:bg-(--green-400)/30
+}
+
+.container_e131a9:has(.rtcConnectionQualityFine__06d62) {
+  @apply cyan:bg-(--green-400)/30
+}
+
+.container_e131a9:has(.rtcConnectionQualityAverage__06d62, .rtcConnectionStatusConnecting__06d62) {
+  @apply cyan:bg-(--yellow-400)/30
+}
+
+.container_e131a9:has(.rtcConnectionQualityBad__06d62, .rtcConnectionStatusError__06d62) {
+  @apply cyan:bg-(--red-400)/30
+}

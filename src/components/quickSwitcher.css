@@ -1,0 +1,16 @@
+.quickswitcher_ac6cb0 {
+    @apply cyan:!border-none cyan:!no-bg cyan:p-2
+  }
+  
+  .quickswitcher_ac6cb0 .protip_ac6cb0,
+  .quickswitcher_ac6cb0:has(:placeholder-shown) .scroller_ac6cb0 {
+    @apply cyan:hidden
+  }
+  
+  .root__49fc1:has(.quickswitcher_ac6cb0) {
+    @apply cyan:!min-h-0 cyan:h-fit cyan:absolute cyan:top-8 cyan:left-[50%] cyan:translate-x-[-50%]
+  }
+  
+  .quickswitcher_ac6cb0 .input_ac6cb0 {
+    @apply cyan:h-14 cyan:placeholder-shown:text-center
+  }

@@ -1,0 +1,27 @@
+@utility bgp-* {
+  background: --value(--color- *);
+}
+
+@utility border-faint {
+  border: 1px solid var(--border-faint);
+}
+
+@utility border-subtle {
+  border: 1px solid var(--border-subtle);
+}
+
+@utility no-bg {
+  background: none;
+}
+
+@utility ui-primary {
+  @apply cyan:!bgp-white cyan:dark:!bgp-primary-500 cyan:darker:!bgp-primary-700 cyan:black:!bgp-black;
+}
+
+@utility ui-secondary {
+  @apply cyan:!bgp-primary-100 cyan:dark:!bgp-primary-600 cyan:darker:!bgp-primary-800 cyan:black:!bgp-primary-800;
+}
+
+@utility use-wallpaper {
+  background: var(--cyan-background-img);
+}

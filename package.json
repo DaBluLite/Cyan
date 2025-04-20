@@ -4,8 +4,8 @@
   "description": "Clean and customizable, Cyan is the go-to experience for Discord.",
   "main": "index.js",
   "scripts": {
-    "build": "postcss --sourcemap=none --use @tailwindcss/postcss --use postcss-header -o import.css index.css",
-    "build:watch": "postcss --sourcemap=none --use @tailwindcss/postcss --use postcss-header -o import.css index.css --watch"
+    "build": "postcss --sourcemap=none --use @tailwindcss/postcss --use postcss-header -o import.css ./src/index.css",
+    "build:watch": "postcss --sourcemap=none --use @tailwindcss/postcss --use postcss-header -o import.css ./src/index.css --watch"
   },
   "keywords": [],
   "author": "DaBluLite",

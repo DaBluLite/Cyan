@@ -1,0 +1,4 @@
+.wrapper_f910d0.ringingIncoming_f910d0:after,
+.wrapper_f910d0.ringingOutgoing_f910d0:after {
+    @apply cyan:!rounded-large
+}

@@ -1,0 +1,38 @@
+.footer__537ec {
+    @apply cyan:border-none cyan:p-3
+  }
+  
+  .footer__537ec .button__201d5 {
+    @apply cyan:!min-h-8 cyan:!h-8 cyan:!border cyan:!border-faint cyan:!bg-second-layer-thin cyan:hover:!bg-second-layer-thin-hover cyan:active:!bg-second-layer-thin-active
+  }
+  
+  .outer_c0bea0.custom-user-profile-theme .inner_c0bea0:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0.25rem;
+    width: calc(100% - .5rem);
+    height: calc(100% - 56px - .25rem);
+    background: linear-gradient(var(--profile-gradient-primary-color),var(--profile-gradient-secondary-color));
+    @apply cyan:rounded-large
+  }
+  
+  .outer_c0bea0.custom-user-profile-theme .inner_c0bea0 .scrollerBase_d125d2 {
+    position: relative;
+    --profile-gradient-start: color-mix(in oklab,var(--profile-gradient-overlay-color) 100%,var(--profile-gradient-primary-color));
+    --profile-gradient-end: color-mix(in oklab,var(--profile-gradient-overlay-color) 100%,var(--profile-gradient-secondary-color));
+    background: linear-gradient(var(--profile-gradient-start),var(--profile-gradient-start) var(--custom-user-profile-banner-height),var(--profile-gradient-end));
+  }
+  
+  .overlay__747b1,
+  .overlay__325ce {
+    @apply cyan:border cyan:rounded-medium cyan:border-faint cyan:!bg-second-layer-thin
+  }
+  
+  .overlay__325ce .section_c7ac92 {
+    @apply cyan:transition cyan:duration-200 cyan:hover:!bg-second-layer-thin-hover cyan:active:!bg-second-layer-thin-active
+  }
+  
+  .inner_c0bea0 .scrollerBase_d125d2 {
+    @apply cyan:m-1 cyan:mt-0 cyan:rounded-large cyan:border cyan:border-faint cyan:!bg-second-layer-thin
+  }
