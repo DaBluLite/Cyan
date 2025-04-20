@@ -25,6 +25,10 @@
 .scroller_fb04e1,
 .outer_c0bea0,
 .outer_c0bea0.custom-user-profile-theme .inner_c0bea0,
-.quickswitcher_ac6cb0 .scroller_ac6cb0 {
+.quickswitcher_ac6cb0 .scroller_ac6cb0,
+.container_fed6d3,
+.wrapper__4e6ce,
+.picker__09f65,
+.soundButtonWrapper__9be63 {
   @apply cyan:!no-bg
 }

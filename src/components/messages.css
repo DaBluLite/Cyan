@@ -1,0 +1,47 @@
+.popoverReactionHoverBar_f84418 {
+  @apply cyan:border cyan:border-subtle cyan:!bg-second-layer-thin cyan:backdrop-blur-normal cyan:rounded-medium cyan:p-0.5 cyan:gap-0.5
+}
+
+.mentioned__5126c {
+  background-color: hsl(var(--opacity-yellow-4-hsl) / 0.08) !important;
+  @apply cyan:border-faint;
+}
+
+.mentioned__5126c:hover {
+  background-color: hsl(var(--opacity-yellow-4-hsl) / 0.15) !important;
+}
+
+.mentioned__5126c:before {
+  transform: translateY(-50%);
+  @apply cyan:-left-1 cyan:rounded-xl cyan:w-0.75 cyan:h-[80%] cyan:!bottom-[unset] cyan:top-[50%]
+}
+
+.message__5126c {
+  @apply cyan:!border cyan:!border-transparent cyan:!m-1 cyan:!rounded-medium cyan:transition cyan:duration-200
+}
+
+.message__5126c:hover,
+.message__5126c.selected__5126c {
+  @apply cyan:!bg-second-layer-thin cyan:!border-faint
+}
+
+.hoverBarButton_f84418 {
+    @apply cyan:!w-7 cyan:!h-7 cyan:rounded-small cyan:border cyan:border-transparent cyan:hover:border-faint cyan:hover:bg-second-layer-thin-hover cyan:active:bg-second-layer-thin-active
+}
+
+.hoverBarButton_f84418:hover .icon_f84418 {
+    transform: none !important;
+}
+
+.hoverButtonGroup__06ab4 {
+    @apply cyan:p-0.5 cyan:gap-0.5 cyan:bg-second-layer-thin cyan:border cyan:border-faint cyan:rounded-medium cyan:backdrop-blur-normal
+}
+
+.hoverButton__06ab4 {
+    @apply cyan:transition cyan:duration-200 cyan:ease-in-out cyan:hover:bg-second-layer-thin-hover cyan:active:bg-second-layer-thin-active cyan:border cyan:border-transparent cyan:rounded-small cyan:hover:border-faint
+}
+
+.removeMosaicItemHoverButton__6c706:hover,
+.keyboard-mode .removeMosaicItemHoverButton__6c706:focus {
+    @apply cyan:bg-(--button-danger-background)/60
+}

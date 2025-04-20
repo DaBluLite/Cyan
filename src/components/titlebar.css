@@ -1,31 +1,25 @@
 .bar_c38106 {
-  @apply cyan:w-fit cyan:h-fit cyan:pl-0 cyan:m-2 cyan:ml-auto cyan:!p-1 cyan:min-h-8 cyan:rounded-medium cyan:bg-first-layer cyan:backdrop-blur-normal cyan:shadow-cyan;
-}
-
-.bar_c38106 .title_c38106,
-.bar_c38106 .leading_c38106 {
-  @apply cyan:hidden;
+  @apply cyan:h-fit cyan:min-h-8 cyan:relative cyan:mb-1;
 }
 
 .bar_c38106 .trailing_c38106,
 .bar_c38106 .winButtons_c38106 {
-  @apply cyan:gap-1;
+  @apply cyan:gap-0;
 }
 
 .bar_c38106 .trailing_c38106 .button__85643 {
-  @apply cyan:w-8 cyan:h-8 cyan:transition-all cyan:duration-150 cyan:rounded-small cyan:ease-in-out cyan:border cyan:border-transparent cyan:hover:border-faint cyan:hover:bg-second-layer-thin;
-}
-
-.base_c48ade:after {
-  content: '';
-  -webkit-app-region: drag;
-  @apply cyan:fixed cyan:top-0 cyan:left-0 cyan:w-full cyan:h-3;
+  @apply cyan:w-8 cyan:h-8 cyan:transition-all cyan:duration-150 cyan:ease-in-out cyan:hover:bg-second-layer;
 }
 
 .bar_c38106 .winButton_c38106 {
-  @apply cyan:transition-all cyan:duration-150 cyan:rounded-small cyan:ease-in-out cyan:border cyan:border-transparent cyan:hover:border-faint cyan:hover:bg-second-layer-thin cyan:w-11 cyan:h-8;
+  @apply cyan:transition-all cyan:duration-150 cyan:ease-in-out cyan:hover:bg-second-layer cyan:w-11 cyan:h-8 cyan:region-no-drag;
 }
 
 .bar_c38106 .winButtonClose_c38106 {
-  @apply cyan:hover:bg-(--status-danger);
+  @apply cyan:hover:bg-(--red-400);
+}
+
+
+.bar_c38106 .title_c38106 {
+  @apply cyan:bg-second-layer cyan:backdrop-blur-normal cyan:rounded-small cyan:absolute cyan:py-1 cyan:px-2 cyan:shadow-cyan cyan:top-[calc(50%+.125rem)] cyan:left-[50%] cyan:-translate-1/2 cyan:w-fit cyan:h-fit
 }

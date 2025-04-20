@@ -106,7 +106,22 @@
     --cyan-background-primary: hsla(0deg 100% 0% / 60%);
     --cyan-bg-brightness: .7
 }
+
 .theme-light {
     --cyan-second-layer: rgb(255 255 255/60%);
     --cyan-background-primary: hsla(0deg 100% 100% / 60%)
+}
+
+.theme-darker,
+.theme-darker .theme-light {
+    --cyan-second-layer: rgb(0 0 0/75%);
+    --cyan-background-primary: hsla(0deg 100% 0% / 75%);
+    --cyan-bg-brightness: .4
+}
+
+.theme-midnight,
+.theme-midnight .theme-light {
+    --cyan-second-layer: rgb(0 0 0/90%);
+    --cyan-background-primary: hsla(0deg 100% 0% / 90%);
+    --cyan-bg-brightness: .1
 }

@@ -23,5 +23,34 @@
 }
 
 @utility use-wallpaper {
-  background: var(--cyan-background-img);
+  background-image: var(--cyan-background-img);
+  background-size: cover;
+}
+
+@utility region-drag {
+  -webkit-app-region: drag;
+}
+
+@utility region-no-drag {
+  -webkit-app-region: no-drag;
+}
+
+@utility invis-btn {
+  @apply cyan:transition cyan:duration-200 cyan:ease-in-out cyan:bg-transparent cyan:hover:bg-second-layer-thin-hover cyan:active:bg-second-layer-thin-active cyan:border cyan:border-transparent cyan:hover:border-faint
+}
+
+@utility btn {
+  @apply cyan:transition cyan:duration-200 cyan:ease-in-out cyan:bg-second-layer-thin cyan:hover:bg-second-layer-thin-hover cyan:active:bg-second-layer-thin-active cyan:border cyan:border-faint
+}
+
+@utility raised-interface {
+  @apply cyan:bg-second-layer-thin cyan:border cyan:border-faint
+}
+
+@utility embed {
+  @apply cyan:bg-second-layer-thin cyan:border-r cyan:border-t cyan:border-b cyan:border-t-faint cyan:border-b-faint cyan:border-r-faint
+}
+
+@utility raised-interface-large {
+  @apply cyan:bg-second-layer-thin cyan:border cyan:border-subtle
 }

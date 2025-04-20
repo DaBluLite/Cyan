@@ -1,0 +1,63 @@
+.svg_cc5dd2 > foreignObject {
+  @apply cyan:!w-12 cyan:!h-12 cyan:-translate-1;
+}
+
+.svg_cc5dd2 > mask {
+  @apply cyan:!hidden;
+}
+
+.svg_cc5dd2 {
+  @apply cyan:!top-0 cyan:!left-0 cyan:shadow-cyan cyan:rounded-round-interface cyan:overflow-hidden cyan:transition-all cyan:duration-200 cyan:ease-in-out cyan:backdrop-blur-normal;
+}
+
+.wrapper__6e9f8,
+.wrapper_cc5dd2 {
+  @apply cyan:!w-12 cyan:!h-12;
+}
+
+.childWrapper__6e9f8,
+.wrapper__6e9f8 .icon__6e9f8,
+.svg_cc5dd2,
+.circleIconButton__5bc7e {
+  @apply cyan:!w-12 cyan:!h-12;
+}
+
+.folderIcon__48112 .svg_cc5dd2 foreignObject {
+  @apply cyan:scale-[1.1667];
+}
+
+.childWrapper__6e9f8 {
+  @apply cyan:!bgp-second-layer;
+}
+
+.svg_cc5dd2:has(.wrapper__6e9f8.selected__6e9f8, .wrapper__6e9f8:hover) {
+  @apply cyan:rounded-large;
+}
+
+.item__58105 {
+  @apply cyan:bg-second-layer cyan:backdrop-blur-normal cyan:brightness-50;
+}
+
+.wrapper__48112.isExpanded__48112 {
+  @apply cyan:!h-max cyan:!max-h-max;
+}
+
+.wrapper__48112.isExpanded__48112 .stack_dbd263 {
+  @apply cyan:!h-max cyan:!max-h-max cyan:!gap-1 cyan:!overflow-visible;
+}
+
+.wrapper__48112.isExpanded__48112 .expandedFolderBackground__48112 {
+  @apply cyan:rounded-medium cyan:w-14 cyan:!left-2 cyan:h-full cyan:bg-first-layer cyan:shadow-cyan cyan:backdrop-blur-normal;
+}
+
+.wrapper__48112.isExpanded__48112 {
+  @apply cyan:py-1;
+}
+
+.expandedFolderIconWrapper__48112 {
+  @apply cyan:!m-0 cyan:!w-12 cyan:!h-12 cyan:transition-all cyan:duration-200 cyan:ease-in-out cyan:!bgp-second-layer-thin;
+}
+
+.dc-app-launcher {
+  @apply cyan:!w-12 cyan:!h-12 cyan:!rounded-round-interface cyan:hover:!rounded-large cyan:!transition-all cyan:!duration-200 cyan:!ease-in-out cyan:!bgp-first-layer cyan:!backdrop-blur-normal cyan:shadow-cyan;
+}
