@@ -1,0 +1,13 @@
+.info__2debe:after {
+    counter-reset: cyan-version var(--cyan-version) cyan-subversion
+    var(--cyan-subversion) cyan-patch-version var(--cyan-patch-version);
+  content: "Cyan v" counter(cyan-version) "." counter(cyan-subversion) "."
+    counter(cyan-patch-version) " (Cyan UI 3)\ahttps://dablulite.dev";
+    color: var(--text-muted);
+    display: inline-block;
+    font-family: var(--font-primary);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.3333333333333333;
+    text-transform: none;
+}

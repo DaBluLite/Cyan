@@ -88,16 +88,16 @@
 }
 
 :root {
-	--cyan-interface-shadow: 0 4px 10px 0 rgb(0 0 0 / 60%);
+	--cyan-interface-shadow: 0 4px 10px 0 rgb(0 0 0 / 40%);
 	--cyan-font: 'Montserrat', 'Open Sans';
-	--cyan-background-img: url(https://dablulite.github.io/Cyan/cyan-waves.png);
+	--cyan-background-img: url("https://github.com/DaBluLite/Cyan/blob/next/cyan-ocean-waves.png?raw=true");
 	--cyan-accent-color: #009f88;
 	--cyan-blur: 48px;
     --cyan-channelbar-width: 320px;
     --cyan-version: 25;
-    --cyan-subversion: 4;
-    --cyan-patch-version: 20;
-    --cyan-loading-header: "Polishing surfaces...";
+    --cyan-subversion: 5;
+    --cyan-patch-version: 28;
+    --cyan-loading-header: "Getting up to speed...";
 }
 
 .theme-dark,

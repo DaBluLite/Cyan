@@ -17,6 +17,8 @@
 @import "./components/bootup.css" prefix(cyan);
 @import "./components/messageBars.css" prefix(cyan);
 @import "./components/search.css" prefix(cyan);
+@import "./components/settings/userSettings.css" prefix(cyan);
+@import "./components/settings/sidebar.css" prefix(cyan);
 @custom-variant dark (&:where(.theme-dark, .theme-dark *, .theme-dark .theme-light, .theme-dark .theme-light *));
 @custom-variant darker (&:where(.theme-darker, .theme-darker *));
 @custom-variant black (&:where(.theme-midnight, .theme-midnight *));
@@ -57,11 +59,13 @@
   @apply cyan:!bg-first-layer
 }
 
+/* Main Interfaces */
 .chat_f75fb0,
 .container__133bf,
 .applicationStore_f07d62,
 .container_ad5cdf,
-.shop__6db1d {
+.shop__6db1d,
+.container_a592e1 .scroller__23746 {
   @apply cyan:!border-none cyan:!mr-2 cyan:!mb-2 cyan:!bgp-first-layer cyan:!rounded-interface cyan:!backdrop-blur-normal cyan:!shadow-cyan
 }
 
@@ -76,6 +80,10 @@
 .shop__08415,
 .pageWrapper__6db1d {
   @apply cyan:overflow-x-hidden cyan:overflow-y-scroll cyan:h-full cyan:relative cyan:contain-[layout_size] cyan:!no-bg
+}
+
+.container_a592e1 {
+  @apply cyan:!border-t-0
 }
 
 :is(.shop__08415,.pageWrapper__6db1d)::-webkit-scrollbar {
@@ -240,7 +248,7 @@
 
 .root__49fc1,
 .dc-modal {
-  @apply cyan:!shadow-cyan cyan:!border-none cyan:!bg-first-layer cyan:!backdrop-blur-normal cyan:!backdrop-brightness-400 cyan:!rounded-xl
+  @apply cyan:!shadow-cyan cyan:!bg-first-layer cyan:!border cyan:!border-subtle cyan:!backdrop-blur-normal cyan:!backdrop-brightness-400 cyan:!rounded-large
 }
 
 .footer__49fc1 {
@@ -306,7 +314,7 @@
   @apply cyan:rounded-r-none
 }
 
-.contextMenuNubExperiment_f1ceac {
+.contextMenuNub_f1ceac {
   @apply cyan:rounded-r-medium cyan:border cyan:border-transparent cyan:hover:border-faint cyan:h-11 cyan:box-border
 }
 
@@ -439,7 +447,7 @@
   @apply cyan:bg-second-layer-thin-active cyan:border-faint
 }
 
-.outer_c0bea0.biteSize_c0bea0 {
+.outer_c0bea0.user-profile-popout {
   @apply cyan:rounded-large cyan:bg-first-layer cyan:backdrop-blur-normal cyan:border cyan:border-faint
 }
 
@@ -455,12 +463,13 @@
   @apply cyan:p-1 cyan:pt-0
 }
 
-.biteSize_c0bea0 .inner_c0bea0 {
+.user-profile-popout .inner_c0bea0 {
   @apply cyan:!gap-1 cyan:!pb-0
 }
 
-.biteSize_c0bea0 .inner_c0bea0 .scrollerBase_d125d2 {
-  @apply cyan:!mb-0
+.user-profile-popout .inner_c0bea0 .scrollerBase_d125d2,
+.customizationSection_ace4f5 .outer_c0bea0 .body__5be3e {
+  @apply cyan:p-2 cyan:!pr-0
 }
 
 .outer_c0bea0 .emojiButton__04eed {
@@ -483,7 +492,7 @@
   @apply cyan:no-bg cyan:hover:bg-second-layer-thin-hover cyan:border cyan:border-transparent cyan:hover:border-faint cyan:active:bg-second-layer-thin-active
 }
 
-.outer_c0bea0.biteSize_c0bea0.custom-user-profile-theme .inner_c0bea0:before {
+.outer_c0bea0.user-profile-popout.custom-user-profile-theme .inner_c0bea0:before {
   @apply cyan:h-[calc(100%-.5rem)] cyan:top-1 cyan:rounded-medium
 }
 
@@ -664,4 +673,21 @@
 
 .header_c0e32c {
   @apply cyan:gap-2
+}
+
+.addFriend__133bf {
+  @apply cyan:!bg-accent-500 cyan:hover:!bg-accent-560 cyan:active:!bg-accent-600
+}
+
+.addFriend__133bf[aria-selected=true] {
+  @apply cyan:!bg-accent-500/16 cyan:!text-accent-260
+}
+
+.lookFilled__201d5.colorBrand__201d5:disabled,
+.lookFilled__201d5.colorBrand__201d5[aria-disabled=true] {
+  @apply cyan:bg-accent-500
+}
+
+.card__39ec2 {
+  @apply cyan:bg-second-layer-thin cyan:border cyan:border-faint cyan:rounded-large
 }

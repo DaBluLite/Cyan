@@ -1,4 +1,4 @@
-.popoverReactionHoverBar_f84418 {
+.wrapper_f7ecac {
   @apply cyan:border cyan:border-subtle cyan:!bg-second-layer-thin cyan:backdrop-blur-normal cyan:rounded-medium cyan:p-0.5 cyan:gap-0.5
 }
 
@@ -25,11 +25,11 @@
   @apply cyan:!bg-second-layer-thin cyan:!border-faint
 }
 
-.hoverBarButton_f84418 {
-    @apply cyan:!w-7 cyan:!h-7 cyan:rounded-small cyan:border cyan:border-transparent cyan:hover:border-faint cyan:hover:bg-second-layer-thin-hover cyan:active:bg-second-layer-thin-active
+.button__2d0ab {
+    @apply cyan:!w-7 cyan:!h-7 cyan:!rounded-small cyan:border cyan:border-transparent cyan:hover:border-faint cyan:hover:bg-second-layer-thin-hover cyan:active:bg-second-layer-thin-active cyan:box-border
 }
 
-.hoverBarButton_f84418:hover .icon_f84418 {
+.button__2d0ab:hover .icon_f84418 {
     transform: none !important;
 }
 
