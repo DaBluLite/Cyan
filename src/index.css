@@ -14,6 +14,9 @@
 @import "./components/serverList.css" prefix(cyan);
 @import "./components/messages.css" prefix(cyan);
 @import "./components/hidden.css" prefix(cyan);
+@import "./components/bootup.css" prefix(cyan);
+@import "./components/messageBars.css" prefix(cyan);
+@import "./components/search.css" prefix(cyan);
 @custom-variant dark (&:where(.theme-dark, .theme-dark *, .theme-dark .theme-light, .theme-dark .theme-light *));
 @custom-variant darker (&:where(.theme-darker, .theme-darker *));
 @custom-variant black (&:where(.theme-midnight, .theme-midnight *));
@@ -349,62 +352,6 @@
 
 .container_a2f514 {
   @apply cyan:!bg-second-layer cyan:backdrop-blur-normal
-}
-
-.container_a2f514:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 17em;
-  background-color: var(--cyan-accent-color);
-  -webkit-mask: url("https://dablulite.github.io/Cyan/cyan-bootup-mask.svg");
-  -webkit-mask-size: 100%;
-  -webkit-mask-position: 50%;
-  -webkit-mask-repeat: no-repeat;
-}
-
-.tipTitle_a2f514,
-.tip_a2f514 {
-  font-size: 0;
-  width: fit-content !important;
-  max-width: unset !important;
-  line-height: unset !important;
-}
-
-.text_a2f514 {
-  position: absolute;
-  top: 57px;
-  left: 35px;
-}
-
-.problems_a2f514 {
-  z-index: 1;
-  width: fit-content;
-  padding-left: 35px;
-}
-
-.problemsText_a2f514 {
-  color: #fff;
-}
-
-.tipTitle_a2f514:after {
-  content: var(--cyan-loading-header);
-  color: var(--header-primary);
-  font-size: 30px;
-  font-weight: 300;
-  opacity: 0.7;
-}
-
-.tip_a2f514:after {
-  counter-reset: cyan-version var(--cyan-version) cyan-subversion
-    var(--cyan-subversion) cyan-patch-version var(--cyan-patch-version);
-  content: "Cyan v" counter(cyan-version) "." counter(cyan-subversion) "."
-    counter(cyan-patch-version) " is loading...";
-  color: var(--header-primary);
-  font-size: 22px;
-  font-weight: 300;
-  opacity: 0.5;
 }
 
 .wrapper__00943 {

@@ -1,8 +1,8 @@
-.footer__537ec {
+.footer__7f9c0 {
     @apply cyan:border-none cyan:p-3
   }
   
-  .footer__537ec .button__201d5 {
+  .footer__7f9c0 .button__201d5 {
     @apply cyan:!min-h-8 cyan:!h-8 cyan:!border cyan:!border-faint cyan:!bg-second-layer-thin cyan:hover:!bg-second-layer-thin-hover cyan:active:!bg-second-layer-thin-active
   }
   
@@ -24,15 +24,19 @@
     background: linear-gradient(var(--profile-gradient-start),var(--profile-gradient-start) var(--custom-user-profile-banner-height),var(--profile-gradient-end));
   }
   
-  .overlay__747b1,
-  .overlay__325ce {
+  .overlay_b32ca4,
+  .overlay__3b260 {
     @apply cyan:border cyan:rounded-medium cyan:border-faint cyan:!bg-second-layer-thin
   }
   
-  .overlay__325ce .section_c7ac92 {
+  .overlay__3b260 .section__1f6ca {
     @apply cyan:transition cyan:duration-200 cyan:hover:!bg-second-layer-thin-hover cyan:active:!bg-second-layer-thin-active
   }
   
   .inner_c0bea0 .scrollerBase_d125d2 {
     @apply cyan:m-1 cyan:mt-0 cyan:rounded-large cyan:border cyan:border-faint cyan:!bg-second-layer-thin
   }
+
+.button__67645.redGlow__67645 {
+  @apply cyan:!bg-(--notice-background-critical)/60 cyan:hover:!bg-(--notice-background-critical)/70
+}

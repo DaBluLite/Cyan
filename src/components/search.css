@@ -1,0 +1,38 @@
+.container__55c99 {
+    @apply cyan:!border cyan:!border-subtle cyan:!rounded-xl cyan:!bg-first-layer cyan:!backdrop-blur-normal
+}
+
+.option__56fec {
+    @apply cyan:!rounded-medium cyan:border cyan:border-transparent cyan:hover:border-faint cyan:hover:bg-second-layer-thin cyan:transition cyan:duration-200 cyan:ease-in-out
+}
+
+.searchAnswer_bd8186,
+.searchFilter_bd8186 {
+    @apply cyan:!bg-second-layer-thin cyan:!border cyan:!border-faint
+}
+
+.searchAnswer_bd8186:first-child,
+.searchFilter_bd8186:first-child {
+    @apply cyan:!rounded-l-small
+}
+
+.searchAnswer_bd8186:nth-child(2),
+.searchFilter_bd8186:nth-child(2) {
+    @apply cyan:!rounded-r-small
+}
+
+.queryContainer__55c99 {
+    @apply cyan:bg-second-layer-thin cyan:m-1 cyan:rounded-large cyan:!border-b-0
+}
+
+.searchResultsWrap_a9e706 {
+    @apply cyan:!no-bg
+}
+
+.searchResult__02a39 {
+    @apply cyan:rounded-medium cyan:!bg-second-layer-thin cyan:border cyan:border-faint
+}
+
+.button__02a39 {
+    @apply cyan:rounded-small cyan:border cyan:border-faint cyan:bg-second-layer-thin
+}

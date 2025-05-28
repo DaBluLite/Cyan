@@ -1,0 +1,11 @@
+.messagesErrorBar__0f481 {
+    @apply cyan:!bg-(--notice-background-critical)/60 cyan:backdrop-blur-normal
+}
+
+.bottomBar__0f481 {
+    @apply cyan:!rounded-large cyan:!w-[calc(100%-var(--cyan-spacing)*4)] cyan:!border cyan:!border-faint
+}
+
+.barButtonAlt__0f481 {
+    @apply cyan:!rounded-medium
+}

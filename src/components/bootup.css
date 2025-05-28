@@ -1,0 +1,53 @@
+.container_a2f514 {
+  backdrop-filter: blur(var(--cyan-blur));
+}
+.container_a2f514:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 17em;
+  background-color: var(--cyan-accent-color);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='editorial' viewBox='0 24 150 28' preserveAspectRatio='none'%3E%3Cstyle%3E @keyframes animate-forever %7B 0%25 %7B height: 1em; opacity: 0; %7D 100%25 %7B height: 2em; opacity: 1; %7D %7D .editorial %7B display: block; width: 100%25; height: 17em; margin: 0; %7D body %7B display: flex; align-items: end; justify-content: end; margin: 0; %7D rect %7B width: 100%25; height: 1em; animation: animate-forever 3s ease-out alternate-reverse infinite; %7D %3C/style%3E%3Cdefs%3E%3ClinearGradient id='grad1' x1='0%25' x2='0%25' y1='0%25' y2='100%25'%3E%3Cstop offset='20%25' stop-color='rgba(0,0,0,1)' /%3E%3Cstop offset='100%25' stop-color='rgba(0,0,0,0)' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23grad1)'%3E%3C/rect%3E%3C/svg%3E");
+  -webkit-mask-size: 100%;
+  -webkit-mask-position: 50%;
+  -webkit-mask-repeat: no-repeat;
+  rotate: 180deg;
+}
+.tipTitle_a2f514,
+.tip_a2f514 {
+  font-size: 0;
+  width: fit-content !important;
+  max-width: unset !important;
+  line-height: unset !important;
+}
+.text_a2f514 {
+  position: absolute;
+  top: 57px;
+  left: 35px;
+}
+.problems_a2f514 {
+  z-index: 1;
+  width: fit-content;
+  padding-left: 35px;
+}
+.problemsText_a2f514 {
+  color: #fff;
+}
+.tipTitle_a2f514:after {
+  content: var(--cyan-loading-header);
+  color: var(--header-primary);
+  font-size: 30px;
+  font-weight: 300;
+  opacity: 0.7;
+}
+.tip_a2f514:after {
+  counter-reset: cyan-version var(--cyan-version) cyan-subversion
+    var(--cyan-subversion) cyan-patch-version var(--cyan-patch-version);
+  content: "Cyan v" counter(cyan-version) "." counter(cyan-subversion) "."
+    counter(cyan-patch-version) " is loading...";
+  color: var(--header-primary);
+  font-size: 22px;
+  font-weight: 300;
+  opacity: 0.5;
+}
