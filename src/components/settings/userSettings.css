@@ -39,7 +39,7 @@
 }
 
 .marker_d878e7 {
-    @apply cyan:bg-second-layer-thin cyan:border cyan:border-faint cyan:backdrop-blur-normal
+    @apply cyan:bg-second-layer-thin cyan:border cyan:border-faint cyan:use-blur
 }
 
 .statusOption_d878e7 {
@@ -51,5 +51,5 @@
 }
 
 .credentialItem__6c75d {
-    @apply cyan:border cyan:border-transparent cyan:hover:border-faint cyan:transition cyan:duration-200 cyan:ease-in-out cyan:rounded-medium cyan:hover:bg-second-layer-thin-hover
+    @apply cyan:border cyan:border-transparent cyan:hover:border-faint cyan:use-transition cyan:rounded-medium cyan:hover:bg-second-layer-thin-hover
 }

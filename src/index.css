@@ -6,6 +6,7 @@
 @import "tailwindcss/theme.css" prefix(cyan);
 @import "./theme.css" prefix(cyan);
 @import "./no-bg.css" prefix(cyan);
+@import "./animations.css" prefix(cyan);
 @import "./utilities.css" prefix(cyan);
 @import "./components/quickSwitcher.css" prefix(cyan);
 @import "./components/userPanel.css" prefix(cyan);
@@ -17,6 +18,10 @@
 @import "./components/bootup.css" prefix(cyan);
 @import "./components/messageBars.css" prefix(cyan);
 @import "./components/search.css" prefix(cyan);
+@import "./components/toasts.css" prefix(cyan);
+@import "./components/loading.css" prefix(cyan);
+@import "./components/editors.css" prefix(cyan);
+@import "./components/cards.css" prefix(cyan);
 @import "./components/settings/userSettings.css" prefix(cyan);
 @import "./components/settings/sidebar.css" prefix(cyan);
 @custom-variant dark (&:where(.theme-dark, .theme-dark *, .theme-dark .theme-light, .theme-dark .theme-light *));
@@ -44,7 +49,7 @@
 .sidebarList_c48ade {
   margin-bottom: calc(var(--custom-app-panels-height, 0) + 16px);
   width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width) - 8px) !important;
-  @apply cyan:!border-none cyan:!bgp-first-layer cyan:!rounded-xl cyan:!mr-2 cyan:!backdrop-blur-normal cyan:shadow-cyan
+  @apply cyan:!border-none cyan:!bgp-first-layer cyan:!rounded-xl cyan:!mr-2 cyan:!use-blur cyan:shadow-cyan
 }
 
 .scroller__99e7c {
@@ -52,7 +57,7 @@
 }
 
 .panels_c48ade {
-  @apply cyan:!rounded-large cyan:!border-none cyan:!backdrop-blur-normal cyan:shadow-cyan cyan:!bgp-first-layer
+  @apply cyan:!rounded-large cyan:!border-none cyan:!use-blur cyan:shadow-cyan cyan:!bgp-first-layer
 }
 
 .circleIconButton__5bc7e {
@@ -65,8 +70,15 @@
 .applicationStore_f07d62,
 .container_ad5cdf,
 .shop__6db1d,
-.container_a592e1 .scroller__23746 {
-  @apply cyan:!border-none cyan:!mr-2 cyan:!mb-2 cyan:!bgp-first-layer cyan:!rounded-interface cyan:!backdrop-blur-normal cyan:!shadow-cyan
+.innerContainer_e1147e,
+.container_d08938,
+.container__955a3 {
+  @apply cyan:!border-none cyan:!mr-2 cyan:!mb-2 cyan:!bgp-first-layer cyan:!rounded-interface cyan:!use-blur cyan:!shadow-cyan
+}
+
+.container_d08938,
+.container__955a3 {
+  @apply cyan:h-[calc(100%-var(--cyan-spacing)*2)]
 }
 
 .shop__6db1d {
@@ -161,18 +173,6 @@
   content: none !important;
 }
 
-.newMessagesBar__0f481 {
-  @apply cyan:bg-accent-500 cyan:!border-none cyan:rounded-large
-}
-
-.newMessagesBar__0f481 .barButtonAlt__0f481 {
-  @apply cyan:transition cyan:duration-200 cyan:rounded-large cyan:hover:bg-accent-600
-}
-
-.jumpToPresentBar__0f481 {
-  @apply cyan:!rounded-medium cyan:!border-none cyan:!bgp-second-layer cyan:backdrop-blur-normal
-}
-
 .lookFilled__201d5.colorBrand__201d5,
 .botTagRegular__82f07 {
   @apply cyan:bg-accent-500
@@ -197,7 +197,7 @@
 
 .menu_c1e9c4:after {
   content: "";
-  @apply cyan:absolute cyan:top-0 cyan:left-0 cyan:w-full cyan:h-full cyan:backdrop-blur-normal cyan:rounded-large cyan:-z-1 cyan:backdrop-brightness-200
+  @apply cyan:absolute cyan:top-0 cyan:left-0 cyan:w-full cyan:h-full cyan:use-blur cyan:rounded-large cyan:-z-1 cyan:backdrop-brightness-200
 }
 
 .submenuPaddingContainer_c1e9c4,
@@ -206,7 +206,7 @@
 }
 
 .item_c1e9c4 {
-  @apply cyan:!rounded-medium cyan:transition cyan:duration-200 cyan:ease-in-out cyan:gap-2 cyan:border cyan:border-transparent
+  @apply cyan:!rounded-medium cyan:use-transition cyan:gap-2 cyan:border cyan:border-transparent
 }
 
 .item_c1e9c4.focused_c1e9c4 {
@@ -219,7 +219,7 @@
 }
 
 .button_f563df {
-  @apply cyan:transition cyan:duration-200 cyan:ease-in-out cyan:rounded-medium
+  @apply cyan:use-transition cyan:rounded-medium
 }
 
 .button_f563df.focused_f563df {
@@ -243,12 +243,12 @@
 }
 
 .layer__960e4:not(.baseLayer__960e4) {
-  @apply cyan:bg-first-layer cyan:backdrop-blur-normal
+  @apply cyan:bg-first-layer cyan:use-blur
 }
 
 .root__49fc1,
 .dc-modal {
-  @apply cyan:!shadow-cyan cyan:!bg-first-layer cyan:!border cyan:!border-subtle cyan:!backdrop-blur-normal cyan:!backdrop-brightness-400 cyan:!rounded-large
+  @apply cyan:!shadow-cyan cyan:!bg-first-layer cyan:!border cyan:!border-subtle cyan:!backdrop-blur-normal cyan:!backdrop-brightness-400 cyan:!rounded-large cyan:!use-enter-btt
 }
 
 .footer__49fc1 {
@@ -307,7 +307,7 @@
 }
 
 .experimentButton_f1ceac {
-  @apply cyan:h-11 cyan:w-11 cyan:border cyan:border-transparent cyan:hover:border-faint cyan:transition cyan:duration-200 cyan:ease-in-out
+  @apply cyan:h-11 cyan:w-11 cyan:border cyan:border-transparent cyan:hover:border-faint cyan:use-transition
 }
 
 .attachedCaretButtonContainer_f1ceac:has(> div:nth-child(2)) .experimentButton_f1ceac {
@@ -327,11 +327,11 @@
 }
 
 .carouselModal_d3a6f0 .actionButtons_cc1819 {
-  @apply cyan:rounded-medium cyan:rounded-r-none cyan:!border cyan:border-faint cyan:bg-second-layer-thin cyan:!border-r-0 cyan:-mr-[12px] cyan:!backdrop-blur-normal cyan:!gap-0.5 cyan:p-0.5
+  @apply cyan:rounded-medium cyan:rounded-r-none cyan:!border cyan:border-faint cyan:bg-second-layer-thin cyan:!border-r-0 cyan:-mr-[12px] cyan:!use-blur cyan:!gap-0.5 cyan:p-0.5
 }
 
 .carouselModal_d3a6f0 .closeButton__6088c {
-  @apply cyan:no-bg cyan:!border cyan:border-faint cyan:!border-l-0 cyan:rounded-r-medium cyan:rounded-l-none cyan:!backdrop-blur-normal cyan:!bg-second-layer-thin cyan:p-0.5 cyan:pl-0 cyan:h-fit cyan:w-fit
+  @apply cyan:no-bg cyan:!border cyan:border-faint cyan:!border-l-0 cyan:rounded-r-medium cyan:rounded-l-none cyan:!use-blur cyan:!bg-second-layer-thin cyan:p-0.5 cyan:pl-0 cyan:h-fit cyan:w-fit
 }
 
 .carouselModal_d3a6f0 .closeButton__6088c .buttonInner_aec7ab {
@@ -355,11 +355,11 @@
 }
 
 .tooltipPrimary__382e7 {
-  @apply cyan:!bg-second-layer-thin cyan:backdrop-blur-normal
+  @apply cyan:!bg-second-layer-thin cyan:use-blur
 }
 
 .container_a2f514 {
-  @apply cyan:!bg-second-layer cyan:backdrop-blur-normal
+  @apply cyan:!bg-second-layer cyan:use-blur
 }
 
 .wrapper__00943 {
@@ -395,11 +395,11 @@
 }
 
 .regionSelectPopout__5621e {
-  @apply cyan:p-2 cyan:gap-1 cyan:rounded-large cyan:!bg-first-layer cyan:backdrop-blur-normal cyan:border cyan:border-faint cyan:backdrop-brightness-200
+  @apply cyan:p-2 cyan:gap-1 cyan:rounded-large cyan:!bg-first-layer cyan:use-blur cyan:border cyan:border-faint cyan:backdrop-brightness-200
 }
 
 .quickSelectPopoutOption_ebaca5 {
-  @apply cyan:transition cyan:duration-200 cyan:ease-in-out cyan:rounded-medium cyan:border cyan:border-transparent cyan:hover:border-faint cyan:hover:bg-second-layer-thin cyan:focus:border-faint cyan:focus:bg-second-layer-thin
+  @apply cyan:use-transition cyan:rounded-medium cyan:border cyan:border-transparent cyan:hover:border-faint cyan:hover:bg-second-layer-thin cyan:focus:border-faint cyan:focus:bg-second-layer-thin
 }
 
 .panelButtonContainer__4cd01 {
@@ -408,7 +408,7 @@
 
 .actions__4cd01 .button__67645,
 .voiceButtonsContainer_e131a9 .button__67645 {
-  @apply cyan:!m-0 cyan:min-w-14 cyan:transition cyan:duration-200 cyan:border cyan:border-transparent cyan:ease-in-out cyan:border-faint cyan:bg-second-layer-thin cyan:hover:bg-second-layer-thin-hover cyan:active:bg-second-layer-thin-active
+  @apply cyan:!m-0 cyan:min-w-14 cyan:transition cyan:duration-200 cyan:border cyan:border-transparent cyan:ease-in-out cyan:hover:border-faint cyan:bg-second-layer-thin cyan:hover:bg-second-layer-thin-hover cyan:active:bg-second-layer-thin-active
 }
 
 .actionButtons_e131a9 {
@@ -436,7 +436,7 @@
 }
 
 .member__5d473 .childContainer__91a9d {
-  @apply cyan:border cyan:border-transparent cyan:transition cyan:duration-200 cyan:ease-in-out cyan:rounded-medium
+  @apply cyan:border cyan:border-transparent cyan:use-transition cyan:rounded-medium
 }
 
 .member__5d473:hover .childContainer__91a9d {
@@ -448,7 +448,7 @@
 }
 
 .outer_c0bea0.user-profile-popout {
-  @apply cyan:rounded-large cyan:bg-first-layer cyan:backdrop-blur-normal cyan:border cyan:border-faint
+  @apply cyan:rounded-large cyan:bg-first-layer cyan:use-blur cyan:border cyan:border-faint
 }
 
 .channelTextArea__74017 {
@@ -473,7 +473,7 @@
 }
 
 .outer_c0bea0 .emojiButton__04eed {
-  @apply cyan:w-11 cyan:h-11 cyan:border cyan:border-transparent cyan:border-faint cyan:bg-second-layer-thin cyan:hover:bg-second-layer-thin-hover cyan:active:bg-second-layer-thin-active cyan:rounded-large cyan:transition cyan:duration-200 cyan:ease-in-out
+  @apply cyan:w-11 cyan:h-11 cyan:border cyan:border-transparent cyan:border-faint cyan:bg-second-layer-thin cyan:hover:bg-second-layer-thin-hover cyan:active:bg-second-layer-thin-active cyan:rounded-large cyan:use-transition
 }
 
 .outer_ab8609 {
@@ -485,7 +485,7 @@
 }
 
 .wrapper_da5890 {
-  @apply cyan:gap-0.5 cyan:!p-0.5 cyan:rounded-medium cyan:bg-second-layer-thin cyan:border cyan:border-faint cyan:backdrop-brightness-25 cyan:top-2 cyan:right-2 cyan:backdrop-blur-normal
+  @apply cyan:gap-0.5 cyan:!p-0.5 cyan:rounded-medium cyan:bg-second-layer-thin cyan:border cyan:border-faint cyan:backdrop-brightness-25 cyan:top-2 cyan:right-2 cyan:use-blur
 }
 
 .wrapper_da5890 .button__201d5 {
@@ -561,7 +561,7 @@
 }
 
 .wrapper__926d7 {
-  @apply cyan:!raised-interface cyan:backdrop-blur-normal cyan:rounded-medium cyan:p-1 cyan:h-fit cyan:items-center cyan:gap-1 cyan:backdrop-brightness-75
+  @apply cyan:!raised-interface cyan:use-blur cyan:rounded-medium cyan:p-1 cyan:h-fit cyan:items-center cyan:gap-1 cyan:backdrop-brightness-75
 }
 
 .searchBarContainer__927fc {
@@ -586,7 +586,7 @@
 }
 
 .container_a45028 {
-  @apply cyan:transition cyan:duration-200 cyan:ease-in-out cyan:border cyan:border-transparent cyan:bg-second-layer-thin cyan:focus-within:border-subtle cyan:focus-within:bg-second-layer-thin-active
+  @apply cyan:use-transition cyan:border cyan:border-transparent cyan:bg-second-layer-thin cyan:focus-within:border-subtle cyan:focus-within:bg-second-layer-thin-active
 }
 
 .searchBar_c0e32c {
@@ -625,11 +625,11 @@
 }
 
 .contentWrapper__08434 {
-  @apply cyan:flex cyan:flex-col cyan:gap-2 cyan:pt-0 cyan:!raised-interface-large cyan:!bg-first-layer cyan:backdrop-blur-normal cyan:backdrop-brightness-125 cyan:!rounded-large
+  @apply cyan:flex cyan:flex-col cyan:gap-2 cyan:pt-0 cyan:!raised-interface-large cyan:!bg-first-layer cyan:use-blur cyan:backdrop-brightness-125 cyan:!rounded-large
 }
 
 .categoryText_d02962 {
-  @apply cyan:w-fit cyan:h-fit cyan:justify-start cyan:px-4 cyan:py-2 cyan:rounded-medium cyan:raised-interface cyan:m-2 cyan:backdrop-blur-normal cyan:backdrop-brightness-150
+  @apply cyan:w-fit cyan:h-fit cyan:justify-start cyan:px-4 cyan:py-2 cyan:rounded-medium cyan:raised-interface cyan:m-2 cyan:use-blur cyan:backdrop-brightness-150
 }
 
 .categoryName_d02962 {
@@ -658,7 +658,7 @@
 .standardStickerShortcut__3ad28,
 .unicodeShortcut_b9ee0c,
 .inspector_aeaaeb {
-  @apply cyan:!backdrop-blur-normal cyan:!bg-second-layer-thin
+  @apply cyan:!use-blur cyan:!bg-second-layer-thin
 }
 
 .packHeader_e94b8c,
@@ -690,4 +690,29 @@
 
 .card__39ec2 {
   @apply cyan:bg-second-layer-thin cyan:border cyan:border-faint cyan:rounded-large
+}
+
+.headerImage__2dea3 {
+  @apply cyan:!rounded-t-large
+}
+
+.iconButton__8a7fc {
+  @apply cyan:rounded-medium cyan:border cyan:border-faint
+}
+
+.bannerContainer__955a3 {
+  @apply cyan:!rounded-t-xl
+}
+
+.giftCardButton_da4aee {
+  background: linear-gradient(95.07deg,var(--premium-tier-2-purple-for-gradients) 0,var(--premium-tier-2-purple-for-gradients-2) 49.96%,var(--premium-tier-2-pink-for-gradients) 95.93%);
+  @apply cyan:!border cyan:!border-faint
+}
+
+.layer_da8173:has(> div > .recentMentionsPopout__95796) {
+  @apply cyan:use-enter-rtl cyan:!top-9 cyan:!right-2 cyan:use-transition
+}
+
+.recentMentionsPopout__95796.recentMentionsPopout__95796 {
+  @apply cyan:!raised-interface-large cyan:rounded-large cyan:!use-blur cyan:h-[calc(100vh-var(--cyan-spacing)*11)] cyan:!max-h-[unset] cyan:use-transition
 }

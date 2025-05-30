@@ -8,7 +8,7 @@
 }
 
 .bar_c38106 .trailing_c38106 {
-  @apply cyan:hover:bg-second-layer-thin cyan:hover:backdrop-blur-normal cyan:border-b cyan:border-l cyan:border-b-transparent cyan:border-l-transparent cyan:hover:border-b-subtle cyan:hover:border-l-subtle cyan:overflow-hidden cyan:rounded-bl-small cyan:hover:shadow-cyan cyan:opacity-25 cyan:hover:opacity-100 cyan:transition cyan:duration-200 cyan:ease-in-out
+  @apply cyan:hover:bg-second-layer-thin cyan:hover:use-blur cyan:border-b cyan:border-l cyan:border-b-transparent cyan:border-l-transparent cyan:hover:border-b-subtle cyan:hover:border-l-subtle cyan:overflow-hidden cyan:rounded-bl-small cyan:hover:shadow-cyan cyan:opacity-25 cyan:hover:opacity-100 cyan:use-transition
 }
 
 .bar_c38106 .trailing_c38106 .button__85643 {
@@ -25,5 +25,5 @@
 
 
 .bar_c38106 .title_c38106 {
-  @apply cyan:bg-second-layer cyan:backdrop-blur-normal cyan:rounded-small cyan:absolute cyan:py-1 cyan:px-2 cyan:shadow-cyan cyan:top-[calc(50%+.125rem)] cyan:left-[50%] cyan:-translate-1/2 cyan:w-fit cyan:h-fit
+  @apply cyan:bg-second-layer-thin cyan:use-blur cyan:rounded-xl cyan:absolute cyan:py-1 cyan:px-2 cyan:border cyan:border-faint cyan:backdrop-brightness-50 cyan:top-[calc(50%+.125rem)] cyan:left-[50%] cyan:-translate-1/2 cyan:w-fit cyan:h-fit
 }

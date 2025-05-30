@@ -2,14 +2,6 @@
   background: --value(--color- *);
 }
 
-@utility border-faint {
-  border: 1px solid var(--border-faint);
-}
-
-@utility border-subtle {
-  border: 1px solid var(--border-subtle);
-}
-
 @utility no-bg {
   background: none;
 }
@@ -36,11 +28,11 @@
 }
 
 @utility invis-btn {
-  @apply cyan:transition cyan:duration-200 cyan:ease-in-out cyan:bg-transparent cyan:hover:bg-second-layer-thin-hover cyan:active:bg-second-layer-thin-active cyan:border cyan:border-transparent cyan:hover:border-faint
+  @apply cyan:use-transition cyan:bg-transparent cyan:hover:bg-second-layer-thin-hover cyan:active:bg-second-layer-thin-active cyan:border cyan:border-transparent cyan:hover:border-faint
 }
 
 @utility btn {
-  @apply cyan:transition cyan:duration-200 cyan:ease-in-out cyan:bg-second-layer-thin cyan:hover:bg-second-layer-thin-hover cyan:active:bg-second-layer-thin-active cyan:border cyan:border-faint
+  @apply cyan:use-transition cyan:bg-second-layer-thin cyan:hover:bg-second-layer-thin-hover cyan:active:bg-second-layer-thin-active cyan:border cyan:border-faint
 }
 
 @utility raised-interface {
@@ -53,4 +45,28 @@
 
 @utility raised-interface-large {
   @apply cyan:bg-second-layer-thin cyan:border cyan:border-subtle
+}
+
+@utility use-blur {
+  @apply cyan:backdrop-blur-normal cyan:translate-z-0
+}
+
+@utility use-transition {
+  @apply cyan:transition-all cyan:duration-200 cyan:ease-in-out cyan:translate-z-0
+}
+
+@utility use-enter-rtl {
+  @apply cyan:!animate-enter-rtl cyan:translate-z-0
+}
+
+@utility use-enter-ltr {
+  @apply cyan:!animate-enter-ltr cyan:translate-z-0
+}
+
+@utility use-enter-ttb {
+  @apply cyan:!animate-enter-ttb cyan:translate-z-0
+}
+
+@utility use-enter-btt {
+  @apply cyan:!animate-enter-btt cyan:translate-z-0
 }

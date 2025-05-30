@@ -1,0 +1,43 @@
+@keyframes animate-rtl {
+    0% {
+		opacity: 0;
+		transform: translateX(20px) translateZ(0)
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0) translateZ(0)
+	}
+}
+
+@keyframes animate-ltr {
+    0% {
+		opacity: 0;
+		transform: translateX(-20px) translateZ(0)
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0) translateZ(0)
+	}
+}
+
+@keyframes animate-ttb {
+    0% {
+		opacity: 0;
+		transform: translateY(-20px) translateZ(0)
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0) translateZ(0)
+	}
+}
+
+@keyframes animate-btt {
+    0% {
+		opacity: 0;
+		transform: translateY(20px) translateZ(0)
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0) translateZ(0)
+	}
+}

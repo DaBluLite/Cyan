@@ -1,9 +1,9 @@
 .container__55c99 {
-    @apply cyan:!border cyan:!border-subtle cyan:!rounded-xl cyan:!bg-first-layer cyan:!backdrop-blur-normal
+    @apply cyan:!border cyan:!border-subtle cyan:!rounded-xl cyan:!bg-first-layer cyan:!use-blur
 }
 
 .option__56fec {
-    @apply cyan:!rounded-medium cyan:border cyan:border-transparent cyan:hover:border-faint cyan:hover:bg-second-layer-thin cyan:transition cyan:duration-200 cyan:ease-in-out
+    @apply cyan:!rounded-medium cyan:border cyan:border-transparent cyan:hover:border-faint cyan:hover:bg-second-layer-thin cyan:use-transition
 }
 
 .searchAnswer_bd8186,

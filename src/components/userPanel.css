@@ -42,3 +42,11 @@
 .button__67645.redGlow__67645 {
   @apply cyan:!bg-(--notice-background-critical)/60 cyan:hover:!bg-(--notice-background-critical)/70
 }
+
+.menuOverlay_ce8328 {
+  @apply cyan:rounded-large cyan:border cyan:border-subtle cyan:bg-second-layer-thin cyan:p-1
+}
+
+.menus_ce8328 {
+  @apply cyan:gap-2
+}

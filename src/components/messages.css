@@ -1,5 +1,5 @@
 .wrapper_f7ecac {
-  @apply cyan:border cyan:border-subtle cyan:!bg-second-layer-thin cyan:backdrop-blur-normal cyan:rounded-medium cyan:p-0.5 cyan:gap-0.5
+  @apply cyan:border cyan:border-subtle cyan:!bg-second-layer-thin cyan:use-blur cyan:rounded-medium cyan:p-0.5 cyan:gap-0.5
 }
 
 .mentioned__5126c {
@@ -14,6 +14,11 @@
 .mentioned__5126c:before {
   transform: translateY(-50%);
   @apply cyan:-left-1 cyan:rounded-xl cyan:w-0.75 cyan:h-[80%] cyan:!bottom-[unset] cyan:top-[50%]
+}
+
+.replying__5126c:before {
+  transform: translateY(-50%);
+  @apply cyan:-left-1 cyan:rounded-xl cyan:w-0.75 cyan:h-[80%] cyan:!bottom-[unset] cyan:top-[50%] cyan:bg-accent-500
 }
 
 .message__5126c {
@@ -34,14 +39,36 @@
 }
 
 .hoverButtonGroup__06ab4 {
-    @apply cyan:p-0.5 cyan:gap-0.5 cyan:bg-second-layer-thin cyan:border cyan:border-faint cyan:rounded-medium cyan:backdrop-blur-normal
+    @apply cyan:p-0.5 cyan:gap-0.5 cyan:bg-second-layer-thin cyan:border cyan:border-faint cyan:rounded-medium cyan:use-blur
 }
 
 .hoverButton__06ab4 {
-    @apply cyan:transition cyan:duration-200 cyan:ease-in-out cyan:hover:bg-second-layer-thin-hover cyan:active:bg-second-layer-thin-active cyan:border cyan:border-transparent cyan:rounded-small cyan:hover:border-faint
+    @apply cyan:use-transition cyan:hover:bg-second-layer-thin-hover cyan:active:bg-second-layer-thin-active cyan:border cyan:border-transparent cyan:rounded-small cyan:hover:border-faint
 }
 
 .removeMosaicItemHoverButton__6c706:hover,
 .keyboard-mode .removeMosaicItemHoverButton__6c706:focus {
     @apply cyan:bg-(--button-danger-background)/60
+}
+
+.highlighted__5126c,
+.replying__5126c {
+  @apply cyan:bg-accent-160/16
+}
+
+.unreadPillCap__908e2 {
+  @apply cyan:hidden
+}
+
+.unreadPill__908e2 {
+  @apply cyan:rounded-large cyan:!border cyan:!border-subtle cyan:px-3 cyan:py-1
+}
+
+.group-spacing-16 .divider__5126c.beforeGroup__5126c {
+  top: 0;
+}
+
+.cardPrimary__73069,
+.cardPrimary__73069.editable__73069 {
+  @apply cyan:!bg-second-layer-thin cyan:!border cyan:!border-subtle
 }

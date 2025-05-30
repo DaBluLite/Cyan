@@ -7,7 +7,7 @@
 }
 
 .svg_cc5dd2 {
-  @apply cyan:!top-0 cyan:!left-0 cyan:shadow-cyan cyan:rounded-round-interface cyan:overflow-hidden cyan:transition-all cyan:duration-200 cyan:ease-in-out cyan:backdrop-blur-normal;
+  @apply cyan:!top-0 cyan:!left-0 cyan:shadow-cyan cyan:rounded-round-interface cyan:overflow-hidden cyan:transition-all cyan:duration-200 cyan:ease-in-out cyan:use-blur
 }
 
 .wrapper__6e9f8,
@@ -35,7 +35,7 @@
 }
 
 .item__58105 {
-  @apply cyan:bg-second-layer cyan:backdrop-blur-normal cyan:brightness-50;
+  @apply cyan:bg-second-layer cyan:use-blur cyan:brightness-50;
 }
 
 .folderGroup__48112.isExpanded__48112 {
@@ -47,7 +47,7 @@
 }
 
 .folderGroup__48112.isExpanded__48112 .folderGroupBackground__48112 {
-  @apply cyan:rounded-medium cyan:w-14 cyan:!left-2 cyan:h-full cyan:bg-first-layer cyan:shadow-cyan cyan:backdrop-blur-normal;
+  @apply cyan:rounded-large cyan:w-14 cyan:!left-2 cyan:h-full cyan:bg-first-layer cyan:shadow-cyan cyan:border cyan:border-subtle cyan:use-blur cyan:backdrop-brightness-200
 }
 
 .folderGroup__48112.isExpanded__48112 {
@@ -59,5 +59,5 @@
 }
 
 .dc-app-launcher {
-  @apply cyan:!w-12 cyan:!h-12 cyan:!rounded-round-interface cyan:hover:!rounded-large cyan:!transition-all cyan:!duration-200 cyan:!ease-in-out cyan:!bgp-first-layer cyan:!backdrop-blur-normal cyan:shadow-cyan;
+  @apply cyan:!w-12 cyan:!h-12 cyan:!rounded-round-interface cyan:hover:!rounded-large cyan:!transition-all cyan:!duration-200 cyan:!ease-in-out cyan:!bgp-first-layer cyan:!use-blur cyan:shadow-cyan;
 }

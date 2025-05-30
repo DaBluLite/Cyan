@@ -32,6 +32,18 @@
 .soundButtonWrapper__9be63,
 .backdrop__8a7fc,
 .gradient_e9ef78,
-.container__551b0 {
+.container__551b0,
+.innerContainer_e1147e .scroller__23746,
+.container_d08938 .scroller__23746,
+.container__955a3 .scroller__23746,
+.relative__8a7fc,
+.body_c6f1a4,
+.wrapper__4106a,
+.container_cec934 .container__956c6,
+.container_da4aee,
+.textContainer_da4aee,
+.header_ab6641,
+.container__0f711,
+.channelHeader__35a7e {
   @apply cyan:!no-bg
 }

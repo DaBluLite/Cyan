@@ -1,0 +1,11 @@
+.toast__3fde7 {
+    @apply cyan:!bg-(--background-surface-highest)/60 cyan:!rounded-medium cyan:use-blur cyan:!border cyan:!border-subtle cyan:!text-white
+}
+
+.toast__3fde7[data-type="success"] {
+    @apply cyan:!bg-(--notice-background-positive)/60
+}
+
+.toast__3fde7[data-type="failure"] {
+    @apply cyan:!bg-(--notice-background-critical)/60
+}
