@@ -166,7 +166,7 @@
 }
 
 .container__9293f {
-  @apply cyan:!bgp-second-layer-thin cyan:m-2 cyan:rounded-large cyan:!w-[calc(100%-1rem)] cyan:border cyan:border-faint cyan:shadow-none
+  @apply cyan:!bgp-second-layer-thin cyan:m-2 cyan:rounded-large cyan:!w-[calc(100%-1rem)] cyan:border cyan:border-faint cyan:!shadow-none cyan:!pr-1
 }
 
 .children__9293f:after {
@@ -246,7 +246,7 @@
   @apply cyan:bg-first-layer cyan:use-blur
 }
 
-.root__49fc1,
+.root__49fc1:not(.carouselModal_d3a6f0),
 .dc-modal {
   @apply cyan:!shadow-cyan cyan:!bg-first-layer cyan:!border cyan:!border-subtle cyan:!backdrop-blur-normal cyan:!backdrop-brightness-400 cyan:!rounded-large cyan:!use-enter-btt
 }
@@ -474,14 +474,6 @@
 
 .outer_c0bea0 .emojiButton__04eed {
   @apply cyan:w-11 cyan:h-11 cyan:border cyan:border-transparent cyan:border-faint cyan:bg-second-layer-thin cyan:hover:bg-second-layer-thin-hover cyan:active:bg-second-layer-thin-active cyan:rounded-large cyan:use-transition
-}
-
-.outer_ab8609 {
-  @apply cyan:bg-gray-500
-}
-
-.inner_ab8609 {
-  @apply cyan:bg-gray-500
 }
 
 .wrapper_da5890 {
@@ -715,4 +707,41 @@
 
 .recentMentionsPopout__95796.recentMentionsPopout__95796 {
   @apply cyan:!raised-interface-large cyan:rounded-large cyan:!use-blur cyan:h-[calc(100vh-var(--cyan-spacing)*11)] cyan:!max-h-[unset] cyan:use-transition
+}
+
+.wrapper__44df5.wrapper__44df5 {
+  @apply cyan:mr-0 cyan:ml-0 cyan:raised-interface-large cyan:rounded-large
+}
+
+.wrapper_f61d60 {
+  @apply cyan:rounded-small cyan:bg-accent-230/23 cyan:text-accent-100 cyan:border cyan:border-faint cyan:use-transition
+}
+
+.interactive:hover {
+  @apply cyan:bg-accent-500 cyan:text-white cyan:border-subtle
+}
+
+.reactionTooltip_b49891 {
+  @apply cyan:raised-interface-large cyan:rounded-medium cyan:use-blur cyan:use-enter-btt
+}
+
+.reactionEmojiDetailsClickable_d5cd2d {
+  @apply cyan:bg-second-layer-thin cyan:hover:bg-second-layer-thin-hover cyan:active:bg-second-layer-thin-active cyan:border cyan:border-faint cyan:rounded-medium cyan:use-transition
+}
+
+.wrapper__2ea32 .link__2ea32 {
+  @apply cyan:use-transition cyan:border cyan:border-transparent cyan:rounded-medium
+}
+
+.wrapper__2ea32:hover .link__2ea32 {
+  @apply cyan:bg-second-layer-thin-hover cyan:border-faint
+}
+
+.modeSelected__2ea32 .link__2ea32,
+.modeSelected__2ea32:hover .link__2ea32 {
+  @apply cyan:bg-second-layer-thin-active cyan:border-faint
+}
+
+.tutorial__73f2a {
+  @apply cyan:!hidden
 }

@@ -27,3 +27,11 @@
 .bar_c38106 .title_c38106 {
   @apply cyan:bg-second-layer-thin cyan:use-blur cyan:rounded-xl cyan:absolute cyan:py-1 cyan:px-2 cyan:border cyan:border-faint cyan:backdrop-brightness-50 cyan:top-[calc(50%+.125rem)] cyan:left-[50%] cyan:-translate-1/2 cyan:w-fit cyan:h-fit
 }
+
+.toolbar__9293f .iconWrapper__9293f {
+  @apply cyan:border cyan:border-transparent cyan:hover:border-faint cyan:rounded-medium cyan:use-transition cyan:hover:bg-second-layer-thin-hover cyan:active:bg-second-layer-thin-active cyan:p-0.5 cyan:box-content
+}
+
+.toolbar__9293f {
+  @apply cyan:!gap-1
+}

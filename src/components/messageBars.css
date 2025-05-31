@@ -11,7 +11,7 @@
 }
 
 .newMessagesBar__0f481 {
-  @apply cyan:use-transition cyan:bg-accent-500/70 cyan:hover:bg-accent-500 cyan:!border-none cyan:py-1 cyan:px-2 cyan:rounded-medium cyan:shadow-none cyan:hover:shadow-cyan cyan:!border cyan:!border-subtle
+  @apply cyan:use-transition cyan:bg-accent-500/70 cyan:hover:bg-accent-500 cyan:!border-none cyan:py-1 cyan:px-2 cyan:rounded-medium cyan:shadow-none cyan:hover:shadow-cyan cyan:!border cyan:!border-subtle cyan:use-blur
 }
 
 .newMessagesBar__0f481 .barButtonAlt__0f481 {

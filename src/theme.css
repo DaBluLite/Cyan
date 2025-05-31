@@ -81,9 +81,9 @@
     --radius-medium: 12px;
     --radius-small: 8px;
     --radius-xs: 4px;
-    --color-second-layer-thin: var(--button-secondary-background);
-    --color-second-layer-thin-hover: var(--button-secondary-background-hover);
-    --color-second-layer-thin-active: var(--button-secondary-background-active);
+    --color-second-layer-thin: var(--cyan-second-layer-thin);
+    --color-second-layer-thin-hover: var(--cyan-second-layer-thin-hover);
+    --color-second-layer-thin-active: var(--cyan-second-layer-thin-active);
     --color-second-layer: var(--cyan-second-layer);
     --color-faint: var(--border-faint);
     --color-subtle: var(--border-subtle);
@@ -106,24 +106,36 @@
 .theme-dark .theme-light {
     --cyan-second-layer: rgb(0 0 0/60%);
     --cyan-background-primary: hsla(0deg 100% 0% / 60%);
-    --cyan-bg-brightness: .7
+    --cyan-bg-brightness: .7;
+    --cyan-second-layer-thin: hsl(240 4% 60.784%/0.12156862745098039);
+    --cyan-second-layer-thin-hover: hsl(240 4% 60.784%/0.2);
+    --cyan-second-layer-thin-active: hsl(234.545 6.509% 33.137%/0.3);
 }
 
 .theme-light {
     --cyan-second-layer: rgb(255 255 255/60%);
-    --cyan-background-primary: hsla(0deg 100% 100% / 60%)
+    --cyan-background-primary: hsla(0deg 100% 100% / 60%);
+    --cyan-second-layer-thin: hsl(240 4% 60.784%/0.1607843137254902);
+    --cyan-second-layer-thin-hover: hsl(240 4% 60.784%/0.2784313725490196);
+    --cyan-second-layer-thin-active: hsl(233.333 3.734% 52.745%/0.08);
 }
 
 .theme-darker,
 .theme-darker .theme-light {
     --cyan-second-layer: rgb(0 0 0/75%);
     --cyan-background-primary: hsla(0deg 100% 0% / 75%);
-    --cyan-bg-brightness: .4
+    --cyan-bg-brightness: .4;
+    --cyan-second-layer-thin: hsl(240 4% 70.784%/0.12156862745098039);
+    --cyan-second-layer-thin-hover: hsl(240 4% 70.784%/0.2);
+    --cyan-second-layer-thin-active: hsl(234.545 6.509% 45.137%/0.3);
 }
 
 .theme-midnight,
 .theme-midnight .theme-light {
     --cyan-second-layer: rgb(0 0 0/90%);
     --cyan-background-primary: hsla(0deg 100% 0% / 90%);
-    --cyan-bg-brightness: .1
+    --cyan-bg-brightness: .1;
+    --cyan-second-layer-thin: hsl(240 4% 70.784%/0.12156862745098039);
+    --cyan-second-layer-thin-hover: hsl(240 4% 70.784%/0.2);
+    --cyan-second-layer-thin-active: hsl(234.545 6.509% 45.137%/0.3);
 }
