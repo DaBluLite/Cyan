@@ -1,0 +1,21 @@
+.container__87bf1 {
+    @apply cyan:border cyan:border-faint cyan:!bg-second-layer-thin cyan:overflow-hidden;
+    &.checked__87bf1 {
+        @apply cyan:!bg-accent-500;
+        & .slider__87bf1 {
+            @apply cyan:!left-4 cyan:shadow-cyan;
+            &> rect {
+                @apply cyan:!fill-accent-260;
+            }
+        }
+    }
+    & .slider__87bf1 {
+        @apply cyan:m-0 cyan:!h-6.5 cyan:!w-6.5 cyan:rounded-xl cyan:!left-0 cyan:!use-transition cyan:rotate-90 cyan:!transform-none;
+        &> rect {
+            @apply cyan:!fill-second-layer-thin cyan:scale-200 cyan:origin-center cyan:!use-transition;
+        }
+        &> svg {
+            @apply cyan:hidden;
+        }
+    }
+}

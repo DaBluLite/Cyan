@@ -40,7 +40,7 @@
 }
 
 @utility embed {
-  @apply cyan:bg-second-layer-thin cyan:border-r cyan:border-t cyan:border-b cyan:border-t-faint cyan:border-b-faint cyan:border-r-faint
+  @apply cyan:bg-second-layer-thin cyan:border-r cyan:border-t cyan:border-b cyan:border-t-subtle cyan:border-b-subtle cyan:border-r-subtle cyan:rounded-r-large
 }
 
 @utility raised-interface-large {
@@ -69,4 +69,24 @@
 
 @utility use-enter-btt {
   @apply cyan:!animate-enter-btt cyan:translate-z-0
+}
+
+@utility use-horizontal-tab-indicator {
+  @apply cyan:!animate-horizontal-tab-indicator cyan:translate-z-0
+}
+
+@utility use-sidebar-indicator {
+  @apply cyan:!animate-sidebar-indicator cyan:translate-z-0
+}
+
+@utility use-exit-rtl {
+  @apply cyan:!animate-exit-rtl cyan:translate-z-0
+}
+
+@utility use-exit-ltr {
+  @apply cyan:!animate-exit-ltr cyan:translate-z-0
+}
+
+@utility use-exit-ttb {
+  @apply cyan:!animate-exit-ttb cyan:translate-z-0
 }

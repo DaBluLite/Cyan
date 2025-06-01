@@ -1,0 +1,17 @@
+.layer__960e4.baseLayer__960e4 {
+    @apply cyan:!transform-none cyan:!opacity-100 cyan:!use-transition;
+    & .page_c48ade {
+        @apply cyan:!use-enter-rtl cyan:!use-transition
+    }
+    & .sidebar_c48ade {
+        @apply cyan:!use-enter-ltr cyan:!use-transition
+    }
+}
+
+.layer_da8173:has(> div > .recentMentionsPopout__95796) {
+  @apply cyan:use-enter-rtl cyan:!top-9 cyan:!right-2 cyan:use-transition
+}
+
+.layer__960e4:not(.baseLayer__960e4) {
+  @apply cyan:bg-first-layer cyan:use-blur
+}

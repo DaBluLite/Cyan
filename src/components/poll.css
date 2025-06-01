@@ -1,0 +1,15 @@
+.container__0be77 {
+    @apply cyan:!raised-interface-large cyan:!rounded-large
+}
+
+.answer__4c520 .answerInner__4c520 {
+    @apply cyan:border cyan:border-subtle cyan:!outline-none cyan:rounded-medium cyan:bg-second-layer-thin cyan:hover:bg-second-layer-thin-hover cyan:active:bg-second-layer-thin-active cyan:use-transition
+}
+
+.answer__4c520 .answerInner__4c520.currentlyVoting__4c520.selected__4c520 {
+    @apply cyan:!border-accent-500/60 cyan:!bg-accent-500/40
+}
+
+.radioForeground_f4f0eb {
+    @apply cyan:text-accent-400 cyan:scale-160 cyan:origin-center
+}

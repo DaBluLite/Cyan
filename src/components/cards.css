@@ -16,13 +16,17 @@
 .contentContainer_c6b177,
 .contentContainer_f8758b,
 .contentContainer__8f46b,
-.container_a76561 {
+.container_a76561,
+.wrapperAudio_cf09d8,
+.box_f8c98c {
     @apply cyan:!border cyan:!border-subtle cyan:!bg-second-layer-thin cyan:!rounded-large
 }
 
 .card_c59071,
 .messages__1ccd1,
-.messageContainer__95796 {
+.messageContainer__95796,
+.container__9271d,
+.row__0624f {
     @apply cyan:!border cyan:!border-faint cyan:!bg-second-layer-thin cyan:!rounded-medium
 }
 
@@ -50,4 +54,33 @@
 
 .contentContainer__98ba8 {
     @apply cyan:!rounded-large cyan:!border cyan:!border-subtle
+}
+
+.file__0ccae,
+.wrapper_d5f3cd {
+    @apply cyan:!raised-interface-large cyan:!rounded-large
+}
+
+.chipletContainerInner__10651 {
+    @apply cyan:!rounded-sm cyan:!btn
+}
+
+.popout__76f04 {
+    @apply cyan:!raised-interface-large cyan:!rounded-large cyan:use-blur
+}
+
+.row__76f04 {
+    @apply cyan:use-transition cyan:hover:bg-second-layer-thin-hover cyan:active:bg-second-layer-thin-active cyan:border cyan:border-transparent cyan:hover:border-faint cyan:rounded-medium
+}
+
+.stepNumber_d9914b .heading-md\/semibold_cf4812 {
+    @apply cyan:!text-accent-260
+}
+
+.list__920b8 {
+    @apply cyan:raised-interface-large cyan:rounded-large cyan:p-1
+}
+
+.accountCard__920b8 {
+    @apply cyan:rounded-medium cyan:border cyan:border-transparent cyan:hover:border-faint cyan:hover:bg-second-layer-thin cyan:use-transition;
 }

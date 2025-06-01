@@ -1,0 +1,47 @@
+.mainCard_f369db {
+    @apply cyan:!btn cyan:!rounded-large cyan:!border-subtle cyan:hover:shadow-cyan
+}
+
+.contentPreview__9a337 {
+    @apply cyan:!raised-interface-large cyan:!rounded-large
+}
+
+.textContentFooter__9a337 {
+    @apply cyan:!bg-gradient-to-t cyan:!from-first-layer cyan:!to-transparent
+}
+
+.pinIcon__08166 {
+    @apply cyan:!bg-accent-500 cyan:!rounded-small cyan:border cyan:border-faint
+}
+
+.pill_a2c9e8 {
+    @apply cyan:!btn cyan:!use-transition cyan:rounded-medium
+}
+
+.tagPill__9a337 {
+    @apply cyan:use-blur cyan:rounded-small cyan:backdrop-brightness-50
+}
+
+.textBadge__2b1f5 {
+    @apply cyan:!bg-accent-260 cyan:!text-accent-560 cyan:!rounded-xs cyan:!border cyan:!border-faint
+}
+
+.header__34c2c {
+    @apply cyan:!bg-first-layer cyan:!use-blur cyan:rounded-large cyan:border cyan:border-subtle cyan:ml-2
+}
+
+.newMessagesBar__0f481:has(+.scroller__36d07 .header__34c2c) {
+    @apply cyan:top-13
+}
+
+.container__7641b {
+    @apply cyan:!no-bg cyan:!border-0
+}
+
+.actionButton__34c2c, .active__34c2c, .active__34c2c:hover, .reaction_f8896c.reactionMe_f8896c .reactionCount_f8896c {
+    @apply cyan:!text-accent-260
+}
+
+.reaction_f8896c.reactionMe_f8896c {
+    @apply cyan:!border-accent-500 cyan:!bg-accent-230/24
+}

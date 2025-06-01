@@ -41,3 +41,7 @@
 .clipContainer__841c8 {
     @apply cyan:pt-0
 }
+
+.content__908e2 {
+    @apply cyan:!bg-second-layer-thin cyan:use-blur cyan:!text-black cyan:dark:!text-white cyan:!font-light
+}

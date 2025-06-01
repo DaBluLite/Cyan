@@ -9,6 +9,12 @@
 @import "./animations.css" prefix(cyan);
 @import "./utilities.css" prefix(cyan);
 @import "./components/quickSwitcher.css" prefix(cyan);
+@import "./components/switch.css" prefix(cyan);
+@import "./components/mediaPlayers.css" prefix(cyan);
+@import "./components/animators.css" prefix(cyan);
+@import "./components/forums.css" prefix(cyan);
+@import "./components/publishAnnouncement.css" prefix(cyan);
+@import "./components/codeblocks.css" prefix(cyan);
 @import "./components/userPanel.css" prefix(cyan);
 @import "./components/titlebar.css" prefix(cyan);
 @import "./components/callUI.css" prefix(cyan);
@@ -22,14 +28,25 @@
 @import "./components/loading.css" prefix(cyan);
 @import "./components/editors.css" prefix(cyan);
 @import "./components/cards.css" prefix(cyan);
+@import "./components/layers.css" prefix(cyan);
+@import "./components/poll.css" prefix(cyan);
 @import "./components/settings/userSettings.css" prefix(cyan);
 @import "./components/settings/sidebar.css" prefix(cyan);
+@import "./components/settings/tabBars.css" prefix(cyan);
+@import "./components/settings/authorizedApps.css" prefix(cyan);
+@import "./components/settings/connections.css" prefix(cyan);
+@import "./components/vencord/settings.css" prefix(cyan);
+@import "./components/vencord/addon.css" prefix(cyan);
 @custom-variant dark (&:where(.theme-dark, .theme-dark *, .theme-dark .theme-light, .theme-dark .theme-light *));
 @custom-variant darker (&:where(.theme-darker, .theme-darker *));
 @custom-variant black (&:where(.theme-midnight, .theme-midnight *));
 
 .base_c48ade {
   @apply cyan:!flex cyan:!flex-col
+}
+
+.gifFavoriteButton_b7e1cb {
+  @apply cyan:rounded-medium cyan:bg-second-layer-thin cyan:use-blur cyan:hover:bg-second-layer-thin-hover cyan:active:bg-second-layer-thin-active cyan:use-transition cyan:border cyan:border-subtle
 }
 
 .content_c48ade,
@@ -240,10 +257,6 @@
 
 .headerArt__3ce43 {
   @apply cyan:!rounded-t-large
-}
-
-.layer__960e4:not(.baseLayer__960e4) {
-  @apply cyan:bg-first-layer cyan:use-blur
 }
 
 .root__49fc1:not(.carouselModal_d3a6f0),
@@ -552,6 +565,10 @@
   @apply cyan:h-8.5
 }
 
+.authBox__921c5 {
+  @apply cyan:shadow-none
+}
+
 .wrapper__926d7 {
   @apply cyan:!raised-interface cyan:use-blur cyan:rounded-medium cyan:p-1 cyan:h-fit cyan:items-center cyan:gap-1 cyan:backdrop-brightness-75
 }
@@ -561,7 +578,7 @@
 }
 
 .contentWrapper__9c62c {
-  @apply cyan:!no-bg cyan:!border-0 cyan:shadow-none
+  @apply cyan:!raised-interface-large cyan:shadow-cyan cyan:rounded-large cyan:use-blur
 }
 
 .searchBarContainer__927fc .container_a45028 {
@@ -701,10 +718,6 @@
   @apply cyan:!border cyan:!border-faint
 }
 
-.layer_da8173:has(> div > .recentMentionsPopout__95796) {
-  @apply cyan:use-enter-rtl cyan:!top-9 cyan:!right-2 cyan:use-transition
-}
-
 .recentMentionsPopout__95796.recentMentionsPopout__95796 {
   @apply cyan:!raised-interface-large cyan:rounded-large cyan:!use-blur cyan:h-[calc(100vh-var(--cyan-spacing)*11)] cyan:!max-h-[unset] cyan:use-transition
 }
@@ -744,4 +757,9 @@
 
 .tutorial__73f2a {
   @apply cyan:!hidden
+}
+
+.lookLink__201d5.colorLink__201d5,
+.lookLink__201d5.colorPrimary__201d5 {
+  @apply cyan:!text-accent-360
 }

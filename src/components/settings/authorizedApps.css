@@ -1,0 +1,9 @@
+.authedAppV2__50a54 {
+    @apply cyan:raised-interface-large cyan:rounded-large;
+    & .headerV2__50a54 {
+        @apply cyan:bg-second-layer-thin;
+        & .actionMenuButton_d84e0f {
+            @apply cyan:btn cyan:rounded-medium cyan:use-transition
+        }
+    }
+}

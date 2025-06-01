@@ -2,6 +2,10 @@
     @apply cyan:rounded-round-interface cyan:bg-second-layer-thin cyan:use-blur cyan:border cyan:border-subtle cyan:p-1
 }
 
+.spinnerContainer__86bf6 {
+    @apply cyan:rounded-round-interface cyan:!bg-first-layer cyan:use-blur cyan:border cyan:border-subtle cyan:p-2
+}
+
 .circular__0b5bb :is(.path2__0b5bb, .path3__0b5bb) {
     @apply cyan:hidden
 }
