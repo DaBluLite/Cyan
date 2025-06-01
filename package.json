@@ -4,22 +4,24 @@
   "description": "Clean and customizable, Cyan is the go-to experience for Discord.",
   "main": "index.js",
   "scripts": {
-    "build": "postcss --sourcemap=none --use @tailwindcss/postcss --use postcss-header -o import.css ./src/index.css",
-    "build:watch": "postcss --sourcemap=none --use @tailwindcss/postcss --use postcss-header -o import.css ./src/index.css --watch"
+    "build": "postcss --sourcemap=none --config ./postcss.config.js -o import.css ./src/index.css",
+    "build:watch": "postcss --sourcemap=none --config ./postcss.config.js -o import.css ./src/index.css --watch"
   },
   "keywords": [],
   "author": "DaBluLite",
   "license": "MIT",
-  "dependencies": {
-    "@tailwindcss/cli": "^4.0.15",
-    "@tailwindcss/postcss": "^4.0.17",
-    "postcss-cli": "^11.0.1",
-    "sass": "^1.86.0",
-    "tailwindcss": "^4.0.15"
-  },
   "devDependencies": {
     "postcss": "^8.5.3",
     "postcss-header": "^3.0.3",
-    "postcss-prepend-plugin": "^1.0.7"
+    "postcss-prepend-plugin": "^1.0.7",
+    "@tailwindcss/cli": "^4.0.15",
+    "@tailwindcss/postcss": "^4.0.17",
+    "postcss-cli": "^11.0.1",
+    "postcss-load-config": "^6.0.1",
+    "sass": "^1.86.0",
+    "tailwindcss": "^4.0.15"
+  },
+  "peerDependencies": {
+    "postcss": "^8.5.3"
   }
 }

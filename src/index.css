@@ -486,7 +486,7 @@
 }
 
 .outer_c0bea0 .emojiButton__04eed {
-  @apply cyan:w-11 cyan:h-11 cyan:border cyan:border-transparent cyan:border-faint cyan:bg-second-layer-thin cyan:hover:bg-second-layer-thin-hover cyan:active:bg-second-layer-thin-active cyan:rounded-large cyan:use-transition
+  @apply cyan:w-11 cyan:h-11 cyan:border cyan:border-transparent cyan:hover:border-faint cyan:bg-second-layer-thin cyan:hover:bg-second-layer-thin-hover cyan:active:bg-second-layer-thin-active cyan:rounded-large cyan:use-transition
 }
 
 .wrapper_da5890 {

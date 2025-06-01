@@ -4,11 +4,6 @@ const header = require('postcss-header');
 const config = {
     map: { annotation: false },
     plugins: [
-        header({header: `/**
-            * Credits:
-            * Icons by Bootrstrap Icons
-            * Fonts by Google Fonts
-            */`}),
         require('@tailwindcss/postcss'),
     ]
 }
