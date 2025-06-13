@@ -1,0 +1,11 @@
+.markup__75297 code,
+.newMosaicStyle__4d95d {
+    @apply cyan:!raised-interface-large cyan:!rounded-medium
+}
+
+.newMosaicStyle__4d95d .footer__4d95d,
+.newMosaicStyle__4d95d .textContainer__4d95d,
+.modalTextContainer__4d95d,
+.footer__4d95d {
+    @apply cyan:!no-bg cyan:!border-0
+}

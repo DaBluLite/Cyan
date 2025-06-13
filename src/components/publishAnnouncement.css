@@ -1,0 +1,7 @@
+.bumpBox_cacd02 {
+    @apply cyan:raised-interface cyan:rounded-medium
+}
+
+.bumpBox_cacd02 .closeIcon_cacd02 {
+    @apply cyan:text-black cyan:dark:text-white
+}

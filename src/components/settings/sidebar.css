@@ -1,0 +1,53 @@
+.info__2debe:after {
+    counter-reset: cyan-version var(--cyan-version) cyan-subversion
+    var(--cyan-subversion) cyan-patch-version var(--cyan-patch-version);
+  content: "Cyan v" counter(cyan-version) "." counter(cyan-subversion) "."
+    counter(cyan-patch-version) " (Cyan UI 3)\ahttps://dablulite.dev";
+    color: var(--text-muted);
+    display: inline-block;
+    font-family: var(--font-primary);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.3333333333333333;
+    text-transform: none;
+}
+
+.standardSidebarView__23e6b {
+  & .sidebarRegion__23e6b {
+    @apply cyan:!w-fit cyan:!justify-start cyan:!flex-[unset] cyan:use-enter-ltr;
+    & .sidebarRegionScroller__23e6b {
+      @apply cyan:!flex-[unset];
+    }
+    & .side_b3f026 .item_b3f026 {
+      @apply cyan:border cyan:border-transparent cyan:hover:border-faint cyan:!rounded-medium cyan:hover:bg-second-layer-thin-hover cyan:active:bg-second-layer-thin-active cyan:use-transition cyan:overflow-visible;
+      &:before {
+        content: "";
+        @apply cyan:absolute cyan:h-6 cyan:w-0.75 cyan:bg-accent-500 cyan:top-1 cyan:-left-1.5 cyan:rounded-large cyan:use-sidebar-indicator;
+      }
+      &:not(.selected_b3f026):before {
+        @apply cyan:hidden;
+      }
+      &.selected_b3f026 {
+        @apply cyan:!border-subtle cyan:!bg-second-layer-thin-active
+      }
+    }
+  }
+  & .contentRegionScroller__23e6b {
+    @apply cyan:justify-center cyan:use-enter-rtl;
+  }
+}
+
+.background_e681d1 {
+  @apply cyan:rounded-medium cyan:border cyan:border-transparent;
+  &.selectedBackground_e681d1 {
+    @apply cyan:!bg-accent-500 cyan:border-faint
+  }
+}
+
+.closeButton_c2b141 {
+  @apply cyan:!btn cyan:!border-subtle cyan:use-transition
+}
+
+.keybind_c2b141 {
+  @apply cyan:hidden
+}

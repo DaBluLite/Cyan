@@ -1,0 +1,12 @@
+.vc-addon-card {
+    @apply cyan:!transform-none cyan:!shadow-none cyan:!raised-interface-large cyan:!rounded-large
+}
+
+.vc-author-modal-header {
+    @apply cyan:!bg-second-layer-thin cyan:!border cyan:!border-subtle cyan:w-fit cyan:rounded-large
+}
+
+.vc-author-modal-name,
+.vc-author-modal-avatar {
+    @apply cyan:no-bg
+}

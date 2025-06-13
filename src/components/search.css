@@ -1,0 +1,50 @@
+.container__55c99 {
+    @apply cyan:!border cyan:!border-subtle cyan:!rounded-xl cyan:!bg-first-layer cyan:!use-blur
+}
+
+.option__56fec {
+    @apply cyan:!rounded-medium cyan:border cyan:border-transparent cyan:hover:border-faint cyan:hover:bg-second-layer-thin cyan:use-transition
+}
+
+.searchAnswer_bd8186,
+.searchFilter_bd8186 {
+    @apply cyan:!bg-second-layer-thin cyan:!border cyan:!border-faint
+}
+
+.searchAnswer_bd8186:first-child,
+.searchFilter_bd8186:first-child {
+    @apply cyan:!rounded-l-small
+}
+
+.searchAnswer_bd8186:nth-child(2),
+.searchFilter_bd8186:nth-child(2) {
+    @apply cyan:!rounded-r-small
+}
+
+.queryContainer__55c99 {
+    @apply cyan:bg-second-layer-thin cyan:m-1 cyan:rounded-large cyan:!border-b-0
+}
+
+.searchResultsWrap_a9e706 {
+    @apply cyan:!no-bg
+}
+
+.searchResult__02a39 {
+    @apply cyan:rounded-medium cyan:!bg-second-layer-thin cyan:border cyan:border-faint
+}
+
+.button__02a39 {
+    @apply cyan:rounded-small cyan:border cyan:border-faint cyan:bg-second-layer-thin
+}
+
+.searchBar__97492 {
+    @apply cyan:!rounded-medium cyan:!p-1 cyan:!pr-1 cyan:!use-transition cyan:!border cyan:!border-faint cyan:!bg-second-layer-thin cyan:!max-h-[unset] cyan:!h-fit cyan:items-center
+}
+
+.search__49676 {
+    @apply cyan:!m-0 cyan:order-12
+}
+
+.search__97492 .DraftEditor-root {
+    line-height: 28px !important;
+}

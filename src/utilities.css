@@ -1,0 +1,92 @@
+@utility bgp-* {
+  background: --value(--color- *);
+}
+
+@utility no-bg {
+  background: none;
+}
+
+@utility ui-primary {
+  @apply cyan:!bgp-white cyan:dark:!bgp-primary-500 cyan:darker:!bgp-primary-700 cyan:black:!bgp-black;
+}
+
+@utility ui-secondary {
+  @apply cyan:!bgp-primary-100 cyan:dark:!bgp-primary-600 cyan:darker:!bgp-primary-800 cyan:black:!bgp-primary-800;
+}
+
+@utility use-wallpaper {
+  background-image: var(--cyan-background-img);
+  background-size: cover;
+}
+
+@utility region-drag {
+  -webkit-app-region: drag;
+}
+
+@utility region-no-drag {
+  -webkit-app-region: no-drag;
+}
+
+@utility invis-btn {
+  @apply cyan:use-transition cyan:bg-transparent cyan:hover:bg-second-layer-thin-hover cyan:active:bg-second-layer-thin-active cyan:border cyan:border-transparent cyan:hover:border-faint
+}
+
+@utility btn {
+  @apply cyan:use-transition cyan:bg-second-layer-thin cyan:hover:bg-second-layer-thin-hover cyan:active:bg-second-layer-thin-active cyan:border cyan:border-faint
+}
+
+@utility raised-interface {
+  @apply cyan:bg-second-layer-thin cyan:border cyan:border-faint
+}
+
+@utility embed {
+  @apply cyan:bg-second-layer-thin cyan:border-r cyan:border-t cyan:border-b cyan:border-t-subtle cyan:border-b-subtle cyan:border-r-subtle cyan:rounded-r-large
+}
+
+@utility raised-interface-large {
+  @apply cyan:bg-second-layer-thin cyan:border cyan:border-subtle
+}
+
+@utility use-blur {
+  @apply cyan:backdrop-blur-normal cyan:translate-z-0
+}
+
+@utility use-transition {
+  @apply cyan:transition-all cyan:duration-200 cyan:ease-in-out cyan:translate-z-0
+}
+
+@utility use-enter-rtl {
+  @apply cyan:!animate-enter-rtl cyan:translate-z-0
+}
+
+@utility use-enter-ltr {
+  @apply cyan:!animate-enter-ltr cyan:translate-z-0
+}
+
+@utility use-enter-ttb {
+  @apply cyan:!animate-enter-ttb cyan:translate-z-0
+}
+
+@utility use-enter-btt {
+  @apply cyan:!animate-enter-btt cyan:translate-z-0
+}
+
+@utility use-horizontal-tab-indicator {
+  @apply cyan:!animate-horizontal-tab-indicator cyan:translate-z-0
+}
+
+@utility use-sidebar-indicator {
+  @apply cyan:!animate-sidebar-indicator cyan:translate-z-0
+}
+
+@utility use-exit-rtl {
+  @apply cyan:!animate-exit-rtl cyan:translate-z-0
+}
+
+@utility use-exit-ltr {
+  @apply cyan:!animate-exit-ltr cyan:translate-z-0
+}
+
+@utility use-exit-ttb {
+  @apply cyan:!animate-exit-ttb cyan:translate-z-0
+}

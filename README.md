@@ -2,9 +2,12 @@
 <img src="https://github.com/DaBluLite/Cyan/assets/73998678/f091e536-b63a-4ce1-a041-c4b83111f5b1"/>
 </div>
 
-# Cyan - Clean and Customizable, with custom background support
+# Cyan - Powerful UX, stunning visuals, like never before
 
 [![BetterDiscord][bd-badge]][bd-link] [![ThemeLibrary][tl-badge]][tl-link]
+
+[proj-hub-link]: https://www.dablulite.dev/cyan
+[proj-hub-badge]: FindItOnProjectHub.png
 
 [bd-link]: https://betterdiscord.app/theme/Cyan
 [bd-badge]: GetItOnBetterDiscord.png
@@ -13,5 +16,5 @@
 [tl-badge]: GetItOnThemeLibrary.png
 
 ### Screenshots:
-![image](https://github.com/DaBluLite/Cyan/assets/73998678/f3750248-52b2-4a93-966e-c945be1f2147)
-![image](https://github.com/DaBluLite/Cyan/assets/73998678/68e5edd0-edd0-44ee-b305-c6e1b2287647)
+![image](http://localhost:3000/_next/image?url=%2Fcyan3-screenshot-1.png&w=1920&q=100)
+![image](http://localhost:3000/_next/image?url=%2Fcyan3-screenshot-2.png&w=1920&q=100)

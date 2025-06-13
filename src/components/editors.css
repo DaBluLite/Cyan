@@ -1,0 +1,22 @@
+.themeEditor_cf6da1,
+.editor__2a891 {
+    @apply cyan:absolute cyan:!border-0 cyan:top-[32px] cyan:bottom-1 cyan:h-[calc(100%-32px-var(--cyan-spacing)*2)] cyan:right-2 cyan:bg-first-layer cyan:rounded-interface cyan:use-blur cyan:shadow-cyan cyan:p-3
+}
+
+.editorFooter_cf6da1,
+.editorFooter__2a891 {
+    @apply cyan:p-0
+}
+
+.footerButton_cf6da1,
+.footerButton__2a891 {
+    @apply cyan:min-h-[32px] cyan:h-[32px]
+}
+
+.appAsidePanelWrapper_a3002d:has(.themeEditor_cf6da1) .content_c48ade {
+    @apply cyan:mr-[calc(284px+var(--cyan-spacing)*2)]
+}
+
+.appAsidePanelWrapper_a3002d:has(.editor__2a891) .content_c48ade {
+    @apply cyan:mr-[calc(284px+var(--cyan-spacing)*4)]
+}

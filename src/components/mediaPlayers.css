@@ -1,0 +1,7 @@
+.mediaBarGrabber_b26b79, .mediaBarProgress_b26b79, .mediaBarProgress_b26b79:after, .mediaBarProgress_b26b79:before {
+    @apply cyan:!bg-accent-500
+}
+
+.wrapperAudio_cf09d8 .audioControls_cf09d8 {
+    @apply cyan:!no-bg
+}

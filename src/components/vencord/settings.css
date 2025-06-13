@@ -1,0 +1,3 @@
+.vc-settings-quickActions-pill {
+    @apply cyan:!transform-none cyan:!btn cyan:!rounded-medium cyan:!use-transition cyan:!shadow-none
+}

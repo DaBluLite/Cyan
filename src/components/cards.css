@@ -1,0 +1,86 @@
+.card__84e3e,
+.appContainer__5a4b6,
+.container__62119,
+.container_cec934,
+.card_b5493b,
+.shopCard_c3d04b {
+    @apply cyan:!bg-second-layer-thin cyan:hover:!bg-second-layer-thin-hover cyan:active:!bg-second-layer-thin-active cyan:!border cyan:!border-subtle cyan:!rounded-large cyan:transition-all cyan:ease-in-out cyan:duration-200
+}
+
+.avatar_f215b9,
+.avatar_efaad4,
+.svg__2338f {
+    @apply cyan:!border cyan:!border-faint cyan:!rounded-round-interface
+}
+
+.contentContainer_c6b177,
+.contentContainer_f8758b,
+.contentContainer__8f46b,
+.container_a76561,
+.wrapperAudio_cf09d8,
+.box_f8c98c {
+    @apply cyan:!border cyan:!border-subtle cyan:!bg-second-layer-thin cyan:!rounded-large
+}
+
+.card_c59071,
+.messages__1ccd1,
+.messageContainer__95796,
+.container__9271d,
+.row__0624f {
+    @apply cyan:!border cyan:!border-faint cyan:!bg-second-layer-thin cyan:!rounded-medium
+}
+
+.iconMask_c59071,
+.iconMask__4cb8a {
+    @apply cyan:p-0 cyan:!no-bg
+}
+
+.card__62119 {
+    @apply cyan:bg-second-layer-thin cyan:m-1 cyan:rounded-medium cyan:border cyan:border-faint
+}
+
+.benefits__62119 {
+    @apply cyan:no-bg
+}
+
+.container__86ab2 {
+    @apply cyan:!border cyan:!border-subtle cyan:!bg-first-layer cyan:!rounded-large cyan:use-blur
+}
+
+.darkCardBackground_c3d04b,
+.lightCardBackground_c3d04b {
+    @apply cyan:!no-bg cyan:border-t-0
+}
+
+.contentContainer__98ba8 {
+    @apply cyan:!rounded-large cyan:!border cyan:!border-subtle
+}
+
+.file__0ccae,
+.wrapper_d5f3cd {
+    @apply cyan:!raised-interface-large cyan:!rounded-large
+}
+
+.chipletContainerInner__10651 {
+    @apply cyan:!rounded-sm cyan:!btn
+}
+
+.popout__76f04 {
+    @apply cyan:!raised-interface-large cyan:!rounded-large cyan:use-blur
+}
+
+.row__76f04 {
+    @apply cyan:use-transition cyan:hover:bg-second-layer-thin-hover cyan:active:bg-second-layer-thin-active cyan:border cyan:border-transparent cyan:hover:border-faint cyan:rounded-medium
+}
+
+.stepNumber_d9914b .heading-md\/semibold_cf4812 {
+    @apply cyan:!text-accent-260
+}
+
+.list__920b8 {
+    @apply cyan:raised-interface-large cyan:rounded-large cyan:p-1
+}
+
+.accountCard__920b8 {
+    @apply cyan:rounded-medium cyan:border cyan:border-transparent cyan:hover:border-faint cyan:hover:bg-second-layer-thin cyan:use-transition;
+}

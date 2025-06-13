@@ -1,0 +1,15 @@
+.top_b3f026 {
+    @apply cyan:gap-4 cyan:!max-w-full;
+    & .item_b3f026 {
+        @apply cyan:!m-0 cyan:w-full cyan:justify-center cyan:use-transition cyan:!shrink cyan:flex;
+        &.brand_b3f026 {
+            --selected-tab-item-color: theme(--color-accent-260) !important;
+        }
+        &.selected_b3f026:after {
+            @apply cyan:use-horizontal-tab-indicator;
+        }
+        &:not(.selected_b3f026):after {
+            @apply cyan:hidden;
+        }
+    }
+}

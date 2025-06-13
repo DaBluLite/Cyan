@@ -1,0 +1,11 @@
+.popout_af3b89 {
+    @apply cyan:!rounded-large cyan:!raised-interface-large cyan:use-blur cyan:shadow-cyan
+}
+
+.vc-notification-root {
+    @apply cyan:!rounded-large cyan:!raised-interface-large cyan:use-blur cyan:shadow-cyan cyan:!h-fit cyan:!min-h-[unset]
+}
+
+.vc-notification {
+    @apply cyan:p-3
+}

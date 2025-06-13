@@ -1,0 +1,96 @@
+.wrapper_f7ecac {
+  @apply cyan:border cyan:border-subtle cyan:!bg-second-layer-thin cyan:use-blur cyan:rounded-medium cyan:p-0.5 cyan:gap-0.5
+}
+
+.mentioned__5126c {
+  background-color: hsl(var(--opacity-yellow-4-hsl) / 0.08) !important;
+  @apply cyan:border-faint;
+}
+
+.mentioned__5126c:hover {
+  background-color: hsl(var(--opacity-yellow-4-hsl) / 0.15) !important;
+}
+
+.mentioned__5126c:before {
+  transform: translateY(-50%);
+  @apply cyan:-left-1 cyan:rounded-xl cyan:w-0.75 cyan:h-[80%] cyan:!bottom-[unset] cyan:top-[50%]
+}
+
+.replying__5126c:before {
+  transform: translateY(-50%);
+  @apply cyan:-left-1 cyan:rounded-xl cyan:w-0.75 cyan:h-[80%] cyan:!bottom-[unset] cyan:top-[50%] cyan:bg-accent-500
+}
+
+.message__5126c:not(:has(.isSending_c19a55)) {
+  @apply cyan:use-enter-rtl
+}
+
+.message__5126c {
+  @apply cyan:!border cyan:!border-transparent cyan:!m-1 cyan:!rounded-medium cyan:transition cyan:duration-200
+}
+
+.message__5126c:hover,
+.message__5126c.selected__5126c {
+  @apply cyan:!bg-second-layer-thin cyan:!border-faint
+}
+
+.button__2d0ab {
+    @apply cyan:!w-7 cyan:!h-7 cyan:!rounded-small cyan:border cyan:border-transparent cyan:hover:border-faint cyan:hover:bg-second-layer-thin-hover cyan:active:bg-second-layer-thin-active cyan:box-border
+}
+
+.button__2d0ab:hover .icon_f84418 {
+    transform: none !important;
+}
+
+.hoverButtonGroup__06ab4 {
+    @apply cyan:p-0.5 cyan:gap-0.5 cyan:bg-second-layer-thin cyan:border cyan:border-faint cyan:rounded-medium cyan:use-blur
+}
+
+.hoverButton__06ab4 {
+    @apply cyan:use-transition cyan:hover:bg-second-layer-thin-hover cyan:active:bg-second-layer-thin-active cyan:border cyan:border-transparent cyan:rounded-small cyan:hover:border-faint
+}
+
+.removeMosaicItemHoverButton__6c706:hover,
+.keyboard-mode .removeMosaicItemHoverButton__6c706:focus {
+    @apply cyan:bg-(--button-danger-background)/60
+}
+
+.highlighted__5126c,
+.replying__5126c {
+  @apply cyan:bg-accent-160/16
+}
+
+.unreadPillCap__908e2 {
+  @apply cyan:hidden
+}
+
+.unreadPill__908e2 {
+  @apply cyan:rounded-large cyan:!border cyan:!border-subtle cyan:px-3 cyan:py-1
+}
+
+.group-spacing-16 .divider__5126c.beforeGroup__5126c {
+  top: 0;
+}
+
+.cardPrimary__73069,
+.cardPrimary__73069.editable__73069 {
+  @apply cyan:!bg-second-layer-thin cyan:!border cyan:!border-subtle
+}
+
+.message__5126c:not(.groupStart__5126c):has(.isSending_c19a55) .messageContent_c19a55:before {
+  content: "";
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='editorial' viewBox='25 25 50 50'%3E%3Cstyle%3E @keyframes spin %7B 100%25 %7B transform: rotate(360deg); %7D %7D @keyframes dash %7B 0%25 %7B stroke-dasharray: 1,200; stroke-dashoffset: 0; %7D 50%25 %7B stroke-dasharray: 130,200; %7D 100%25 %7B stroke-dasharray: 130,200; stroke-dashoffset: -124; %7D %7D circle %7B animation: dash 2s ease-in-out infinite; stroke: currentColor; fill: none; %7D .editorial %7B animation: spin 2s linear infinite; height: 100%25; width: 100%25; color: %23000; %7D %3C/style%3E%3Ccircle cx='50' cy='50' r='20'%3E%3C/circle%3E%3C/svg%3E");
+  -webkit-mask-size: contain;
+  @apply cyan:bg-accent-500 cyan:mr-1 cyan:inline-block cyan:w-4.75 cyan:h-4.75
+}
+
+.groupStart__5126c.message__5126c:has(.isSending_c19a55) .contents_c19a55:before {
+  content: "";
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='editorial' viewBox='25 25 50 50'%3E%3Cstyle%3E @keyframes spin %7B 100%25 %7B transform: rotate(360deg); %7D %7D @keyframes dash %7B 0%25 %7B stroke-dasharray: 1,200; stroke-dashoffset: 0; %7D 50%25 %7B stroke-dasharray: 130,200; %7D 100%25 %7B stroke-dasharray: 130,200; stroke-dashoffset: -124; %7D %7D circle %7B animation: dash 2s ease-in-out infinite; stroke: currentColor; fill: none; %7D .editorial %7B animation: spin 2s linear infinite; height: 100%25; width: 100%25; color: %23000; %7D %3C/style%3E%3Ccircle cx='50' cy='50' r='20'%3E%3C/circle%3E%3C/svg%3E");
+  -webkit-mask-size: contain;
+  @apply cyan:bg-accent-500 cyan:inline-block cyan:w-10 cyan:h-10 cyan:absolute cyan:top-0.5 cyan:left-(--custom-message-margin-horizontal) cyan:mt-[calc(4px-var(--custom-message-spacing-vertical-container-cozy))]
+}
+
+.groupStart__5126c.message__5126c:has(.isSending_c19a55) .avatar_c19a55 {
+  @apply cyan:opacity-30 cyan:use-transition
+}

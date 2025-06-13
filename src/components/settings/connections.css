@@ -1,0 +1,18 @@
+.connection_c7f964 {
+    @apply cyan:raised-interface-large cyan:rounded-large;
+    & .connectionHeader_c7f964 {
+        @apply cyan:bg-second-layer-thin;
+    }
+    & .metadataContainer_c7f964 {
+        @apply cyan:raised-interface cyan:rounded-medium cyan:p-1 cyan:pl-3;
+    }
+}
+
+.connectContainer_c7f964 {
+    @apply cyan:raised-interface-large cyan:rounded-large;
+}
+
+.accountButtonInner_c7f964,
+.accountBtnInner__750de {
+    @apply cyan:btn cyan:rounded-medium
+}

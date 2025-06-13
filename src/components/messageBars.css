@@ -1,0 +1,47 @@
+.messagesErrorBar__0f481 {
+    @apply cyan:!bg-(--notice-background-critical)/60 cyan:use-blur
+}
+
+.bottomBar__0f481 {
+    @apply cyan:!rounded-large cyan:!w-[calc(100%-var(--cyan-spacing)*4)] cyan:!border cyan:!border-faint
+}
+
+.barButtonAlt__0f481 {
+    @apply cyan:!rounded-medium
+}
+
+.newMessagesBar__0f481 {
+  @apply cyan:use-transition cyan:bg-accent-500/70 cyan:hover:bg-accent-500 cyan:!border-none cyan:py-1 cyan:px-2 cyan:rounded-medium cyan:shadow-none cyan:hover:shadow-cyan cyan:!border cyan:!border-subtle cyan:use-blur
+}
+
+.newMessagesBar__0f481 .barButtonAlt__0f481 {
+  @apply cyan:use-transition cyan:!rounded-small cyan:border cyan:border-faint cyan:bg-second-layer-thin cyan:hover:bg-second-layer-thin-hover cyan:active:bg-second-layer-thin-active
+}
+
+.jumpToPresentBar__0f481 {
+  @apply cyan:!rounded-medium cyan:!border-none cyan:!bgp-second-layer cyan:use-blur
+}
+
+.stackedBars__74017 {
+    @apply cyan:!border cyan:border-subtle cyan:!bg-second-layer-thin-active
+}
+
+.stackedBars__74017:first-child {
+    @apply cyan:!rounded-t-medium
+}
+
+.stackedBars__74017:nth-last-child(2) {
+    @apply cyan:!rounded-b-medium
+}
+
+.stackedBars__74017:first-child:nth-last-child(2) {
+    @apply cyan:!rounded-medium
+}
+
+.clipContainer__841c8 {
+    @apply cyan:pt-0
+}
+
+.content__908e2 {
+    @apply cyan:!bg-second-layer-thin cyan:use-blur cyan:!text-black cyan:dark:!text-white cyan:!font-light
+}
