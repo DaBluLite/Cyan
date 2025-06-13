@@ -1,10 +1,6 @@
-<div align='center'>
-<img src="https://github.com/DaBluLite/Cyan/assets/73998678/f091e536-b63a-4ce1-a041-c4b83111f5b1"/>
-</div>
-
 # Cyan - Powerful UX, stunning visuals, like never before
 
-[![BetterDiscord][bd-badge]][bd-link] [![ThemeLibrary][tl-badge]][tl-link]
+[![DaBluLite's Project Hub][proj-hub-badge]][proj-hub-link] [![BetterDiscord][bd-badge]][bd-link] [![ThemeLibrary][tl-badge]][tl-link]
 
 [proj-hub-link]: https://www.dablulite.dev/cyan
 [proj-hub-badge]: FindItOnProjectHub.png
