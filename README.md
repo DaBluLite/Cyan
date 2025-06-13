@@ -12,5 +12,5 @@
 [tl-badge]: GetItOnThemeLibrary.png
 
 ### Screenshots:
-![image](http://localhost:3000/_next/image?url=%2Fcyan3-screenshot-1.png&w=1920&q=100)
-![image](http://localhost:3000/_next/image?url=%2Fcyan3-screenshot-2.png&w=1920&q=100)
+![image](http://www.dablulite.dev/_next/image?url=%2Fcyan3-screenshot-1.png&w=1920&q=100)
+![image](http://www.dablulite.dev/_next/image?url=%2Fcyan3-screenshot-2.png&w=1920&q=100)
