@@ -77,7 +77,7 @@
     --animate-exit-ttb: animate-btt 0.4s ease reverse;
     --color-first-layer: var(--cyan-background-primary);
     --blur-normal: var(--cyan-blur);
-    --shadow-cyan: var(--cyan-interface-shadow);
+    --shadow-cyan: var(--cyan-interface-shadow), inset 0 1px 0 var(--border-subtle);
     --radius-xl: 20px;
     --radius-round-interface: 50px;
     --radius-interface: 24px;
@@ -99,11 +99,11 @@
 	--cyan-font: 'Montserrat', 'Open Sans';
 	--cyan-background-img: url("https://github.com/DaBluLite/Cyan/blob/next/cyan-ocean-waves.png?raw=true");
 	--cyan-accent-color: #009f88;
-	--cyan-blur: 48px;
+	--cyan-blur: 16px;
     --cyan-channelbar-width: 320px;
     --cyan-version: 25;
     --cyan-subversion: 6;
-    --cyan-patch-version: 1;
+    --cyan-patch-version: 14;
     --cyan-loading-header: "Getting up to speed...";
 }
 

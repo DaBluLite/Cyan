@@ -30,6 +30,7 @@
 @import "./components/cards.css" prefix(cyan);
 @import "./components/layers.css" prefix(cyan);
 @import "./components/poll.css" prefix(cyan);
+@import "./components/popouts.css" prefix(cyan);
 @import "./components/settings/userSettings.css" prefix(cyan);
 @import "./components/settings/sidebar.css" prefix(cyan);
 @import "./components/settings/tabBars.css" prefix(cyan);
@@ -762,4 +763,21 @@
 .lookLink__201d5.colorLink__201d5,
 .lookLink__201d5.colorPrimary__201d5 {
   @apply cyan:!text-accent-360
+}
+
+.form_f75fb0 {
+  @apply cyan:!mt-1
+}
+
+.scrollerSpacer__36d07 {
+  @apply cyan:!hidden
+}
+
+*::-webkit-scrollbar-thumb {
+  @apply cyan:!bg-second-layer-thin-active
+}
+
+.auto_d125d2::-webkit-scrollbar {
+  height: 14px !important;
+  width: 14px !important;
 }
