@@ -25,7 +25,7 @@
 
 
 .bar_c38106 .title_c38106 {
-  @apply cyan:bg-second-layer-thin cyan:use-blur cyan:rounded-xl cyan:absolute cyan:py-1 cyan:px-2 cyan:border cyan:border-faint cyan:backdrop-brightness-50 cyan:top-[calc(50%+.125rem)] cyan:left-[50%] cyan:-translate-1/2 cyan:w-fit cyan:h-fit
+  @apply cyan:bg-first-layer cyan:use-blur cyan:rounded-xl cyan:absolute cyan:py-1 cyan:px-2 cyan:border cyan:border-faint cyan:top-[calc(50%+.125rem)] cyan:left-[50%] cyan:-translate-1/2 cyan:w-fit cyan:h-fit cyan:shadow-glass
 }
 
 .toolbar__9293f .iconWrapper__9293f {

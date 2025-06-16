@@ -38,7 +38,7 @@
 }
 
 .searchBar__97492 {
-    @apply cyan:!rounded-medium cyan:!p-1 cyan:!pr-1 cyan:!use-transition cyan:!border cyan:!border-faint cyan:!bg-second-layer-thin cyan:!max-h-[unset] cyan:!h-fit cyan:items-center
+    @apply cyan:!rounded-medium cyan:!p-1 cyan:!pr-1 cyan:!use-transition cyan:!border cyan:!border-faint cyan:!bg-second-layer-thin cyan:!max-h-[unset] cyan:!h-fit cyan:items-center cyan:shadow-glass
 }
 
 .search__49676 {

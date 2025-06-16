@@ -1,0 +1,7 @@
+.input__0f084 {
+    @apply cyan:border-faint cyan:focus:!border-(--border-normal) cyan:focus:shadow-glass cyan:focus:bg-second-layer-thin-active cyan:use-transition
+}
+
+.lookFilled__3f413.select__3f413 {
+    @apply cyan:border-faint cyan:hover:!border-(--border-normal) cyan:[.open\_\_3f413]:!border-(--border-normal) cyan:hover:shadow-glass cyan:[.open\_\_3f413]:shadow-glass cyan:hover:bg-second-layer-thin-active cyan:use-transition cyan:rounded-large cyan:[.open\_\_3f413]:bg-second-layer-thin-active
+}

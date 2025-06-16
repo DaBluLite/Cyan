@@ -22,7 +22,7 @@
 }
 
 .message__5126c:not(:has(.isSending_c19a55)) {
-  @apply cyan:use-enter-rtl
+  @apply cyan:use-enter-rtl cyan:use-transition
 }
 
 .message__5126c {
@@ -31,7 +31,7 @@
 
 .message__5126c:hover,
 .message__5126c.selected__5126c {
-  @apply cyan:!bg-second-layer-thin cyan:!border-faint
+  @apply cyan:!bg-second-layer-thin cyan:!border-faint cyan:!shadow-glass
 }
 
 .button__2d0ab {

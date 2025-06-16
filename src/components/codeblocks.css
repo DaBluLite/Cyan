@@ -1,6 +1,6 @@
 .markup__75297 code,
 .newMosaicStyle__4d95d {
-    @apply cyan:!raised-interface-large cyan:!rounded-medium
+    @apply cyan:!raised-interface-large cyan:!rounded-medium cyan:shadow-glass;
 }
 
 .newMosaicStyle__4d95d .footer__4d95d,

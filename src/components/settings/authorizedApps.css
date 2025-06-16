@@ -1,7 +1,7 @@
 .authedAppV2__50a54 {
-    @apply cyan:raised-interface-large cyan:rounded-large;
+    @apply cyan:raised-interface-large cyan:rounded-large cyan:shadow-glass;
     & .headerV2__50a54 {
-        @apply cyan:bg-second-layer-thin;
+        @apply cyan:bg-second-layer-thin cyan:m-1 cyan:rounded-medium cyan:shadow-glass;
         & .actionMenuButton_d84e0f {
             @apply cyan:btn cyan:rounded-medium cyan:use-transition
         }

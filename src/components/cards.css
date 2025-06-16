@@ -9,7 +9,7 @@
 
 .avatar_f215b9,
 .avatar_efaad4,
-.svg__2338f {
+.svg__2338f:not(:has(.voiceAvatar_f910d0)) {
     @apply cyan:!border cyan:!border-faint cyan:!rounded-round-interface
 }
 
@@ -58,7 +58,7 @@
 
 .file__0ccae,
 .wrapper_d5f3cd {
-    @apply cyan:!raised-interface-large cyan:!rounded-large
+    @apply cyan:!raised-interface-large cyan:!rounded-large cyan:shadow-glass
 }
 
 .chipletContainerInner__10651 {
@@ -83,4 +83,28 @@
 
 .accountCard__920b8 {
     @apply cyan:rounded-medium cyan:border cyan:border-transparent cyan:hover:border-faint cyan:hover:bg-second-layer-thin cyan:use-transition;
+}
+
+.hero_af3b89 {
+    @apply cyan:!shadow-cyan
+}
+
+.card__39ec2 {
+  @apply cyan:bg-second-layer-thin cyan:border cyan:border-faint cyan:rounded-large cyan:shadow-glass cyan:use-transition
+}
+
+.card__5cea9 {
+    @apply cyan:raised-interface-large cyan:rounded-xl cyan:shadow-glass
+}
+
+.card__5cea9 .header__5cea9 {
+    @apply cyan:m-1 cyan:rounded-large cyan:bg-second-layer-thin cyan:shadow-glass
+}
+
+.iconContainer__5cea9 {
+    @apply cyan:shadow-glass
+}
+
+.loadMoreButton__5cea9 {
+    @apply cyan:rounded-medium cyan:btn cyan:min-h-8 cyan:mt-4
 }

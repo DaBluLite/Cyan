@@ -75,6 +75,10 @@
   @apply cyan:!animate-horizontal-tab-indicator cyan:translate-z-0
 }
 
+@utility use-user-area-container {
+  @apply cyan:!animate-user-area-container cyan:translate-z-0
+}
+
 @utility use-sidebar-indicator {
   @apply cyan:!animate-sidebar-indicator cyan:translate-z-0
 }

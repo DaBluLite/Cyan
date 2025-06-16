@@ -89,3 +89,18 @@
 		transform: translateX(20px) translateZ(0)
 	}
 }
+
+@keyframes animate-user-area-container {
+    0% {
+		opacity: 0;
+		transform: translateY(10px) translateZ(0) scale(.75);
+	}
+	75% {
+		opacity: 1;
+		transform: translateY(2px) translateZ(0) scale(1.01);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0) translateZ(0) scale(1);
+	}
+}

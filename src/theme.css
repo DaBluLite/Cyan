@@ -75,9 +75,11 @@
     --animate-exit-ltr: animate-rtl 0.4s ease reverse;
     --animate-exit-rtl: animate-ltr 0.4s ease reverse;
     --animate-exit-ttb: animate-btt 0.4s ease reverse;
+    --animate-user-area-container: animate-user-area-container 0.4s ease;
     --color-first-layer: var(--cyan-background-primary);
     --blur-normal: var(--cyan-blur);
-    --shadow-cyan: var(--cyan-interface-shadow), inset 0 1px 0 var(--border-subtle);
+    --shadow-cyan: var(--cyan-interface-shadow), inset 0 1px 0 var(--border-faint);
+    --shadow-glass: inset 0 1px 0 var(--border-faint);
     --radius-xl: 20px;
     --radius-round-interface: 50px;
     --radius-interface: 24px;
@@ -103,7 +105,7 @@
     --cyan-channelbar-width: 320px;
     --cyan-version: 25;
     --cyan-subversion: 6;
-    --cyan-patch-version: 14;
+    --cyan-patch-version: 16;
     --cyan-loading-header: "Getting up to speed...";
 }
 

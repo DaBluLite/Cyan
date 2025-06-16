@@ -1,7 +1,7 @@
 .connection_c7f964 {
-    @apply cyan:raised-interface-large cyan:rounded-large;
+    @apply cyan:raised-interface-large cyan:rounded-large cyan:shadow-glass;
     & .connectionHeader_c7f964 {
-        @apply cyan:bg-second-layer-thin;
+        @apply cyan:bg-second-layer-thin cyan:shadow-glass cyan:rounded-medium cyan:m-1;
     }
     & .metadataContainer_c7f964 {
         @apply cyan:raised-interface cyan:rounded-medium cyan:p-1 cyan:pl-3;

@@ -1,0 +1,11 @@
+.member__5d473 .childContainer__91a9d {
+  @apply cyan:border cyan:border-transparent cyan:use-transition cyan:rounded-medium
+}
+
+.member__5d473:hover .childContainer__91a9d {
+  @apply cyan:bg-second-layer-thin-hover cyan:border-faint cyan:shadow-glass
+}
+
+.member__5d473.selected__90a9d .childContainer__91a9d {
+  @apply cyan:bg-second-layer-thin-active cyan:border-faint cyan:shadow-glass
+}

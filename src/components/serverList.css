@@ -35,7 +35,7 @@
 }
 
 .item__58105 {
-  @apply cyan:bg-second-layer cyan:use-blur cyan:brightness-50;
+  @apply cyan:bg-second-layer cyan:use-blur cyan:brightness-200 cyan:dark:brightness-50 cyan:shadow-glass;
 }
 
 .folderGroup__48112.isExpanded__48112 {

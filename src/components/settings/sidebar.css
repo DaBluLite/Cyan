@@ -16,7 +16,7 @@
   & .sidebarRegion__23e6b {
     @apply cyan:!w-fit cyan:!justify-start cyan:!flex-[unset] cyan:use-enter-ltr;
     & .sidebarRegionScroller__23e6b {
-      @apply cyan:!flex-[unset];
+      @apply cyan:!flex-[unset] cyan:!raised-interface-large cyan:shadow-cyan cyan:!border-t-0 cyan:!border-b-0 cyan:!border-l-0 cyan:rounded-r-xl;
     }
     & .side_b3f026 .item_b3f026 {
       @apply cyan:border cyan:border-transparent cyan:hover:border-faint cyan:!rounded-medium cyan:hover:bg-second-layer-thin-hover cyan:active:bg-second-layer-thin-active cyan:use-transition cyan:overflow-visible;

@@ -9,3 +9,18 @@
 .vc-notification {
     @apply cyan:p-3
 }
+
+.lookFilled__3f413.popout__3f413,
+.lookFilled__3f413.popout__3f413.popoutPositionTop__3f413,
+.popout__3f413,
+.popout__3f413.popoutPositionTop__3f413 {
+    @apply cyan:raised-interface-large cyan:shadow-cyan cyan:use-blur cyan:rounded-large cyan:!p-1 cyan:gap-1
+}
+
+.selectedIcon__3f413 {
+    @apply cyan:text-accent-500
+}
+
+.option__3f413 {
+    @apply cyan:rounded-medium cyan:use-transition cyan:[[aria-selected="true"]]:shadow-glass
+}

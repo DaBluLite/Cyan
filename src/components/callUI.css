@@ -2,3 +2,19 @@
 .wrapper_f910d0.ringingOutgoing_f910d0:after {
     @apply cyan:!rounded-large
 }
+
+.wrapper__1405b {
+    @apply cyan:gap-1 cyan:p-1 cyan:rounded-large cyan:raised-interface-large cyan:shadow-glass
+}
+
+.wrapper__1405b .button__201d5 {
+    @apply cyan:w-12 cyan:h-12
+}
+
+.attachedCaretButtonContainer_f1ceac:has(> div:nth-child(2)) .button__201d5 {
+    @apply cyan:rounded-r-none
+}
+
+.contextMenuNub_f1ceac.attachedCaret_f1ceac {
+    @apply cyan:m-0 cyan:hover:shadow-glass cyan:h-12 cyan:rounded-r-medium
+}

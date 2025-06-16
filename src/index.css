@@ -31,6 +31,9 @@
 @import "./components/layers.css" prefix(cyan);
 @import "./components/poll.css" prefix(cyan);
 @import "./components/popouts.css" prefix(cyan);
+@import "./components/membersList.css" prefix(cyan);
+@import "./components/autocomplete.css" prefix(cyan);
+@import "./components/textInput.css" prefix(cyan);
 @import "./components/settings/userSettings.css" prefix(cyan);
 @import "./components/settings/sidebar.css" prefix(cyan);
 @import "./components/settings/tabBars.css" prefix(cyan);
@@ -75,7 +78,11 @@
 }
 
 .panels_c48ade {
-  @apply cyan:!rounded-large cyan:!border-none cyan:!use-blur cyan:shadow-cyan cyan:!bgp-first-layer
+  @apply cyan:!rounded-large cyan:!border-none cyan:!use-blur cyan:!shadow-cyan cyan:!bgp-first-layer cyan:p-1 cyan:flex cyan:flex-col cyan:gap-1;
+}
+
+.wrapper_e131a9:empty {
+  display: none;
 }
 
 .circleIconButton__5bc7e {
@@ -184,7 +191,7 @@
 }
 
 .container__9293f {
-  @apply cyan:!bgp-second-layer-thin cyan:m-2 cyan:rounded-large cyan:!w-[calc(100%-1rem)] cyan:border cyan:border-faint cyan:!shadow-none cyan:!pr-1
+  @apply cyan:!bgp-second-layer-thin cyan:m-2 cyan:rounded-large cyan:!w-[calc(100%-1rem)] cyan:border cyan:border-faint cyan:!pr-1 cyan:!shadow-glass
 }
 
 .children__9293f:after {
@@ -197,7 +204,7 @@
 }
 
 .lookFilled__201d5.colorBrand__201d5 {
-  @apply cyan:hover:bg-accent-560 cyan:active:bg-accent-600
+  @apply cyan:hover:bg-accent-560 cyan:active:bg-accent-600 cyan:shadow-glass
 }
 
 .container__2637a {
@@ -228,7 +235,7 @@
 }
 
 .item_c1e9c4.focused_c1e9c4 {
-  @apply cyan:border-faint cyan:bg-second-layer-thin
+  @apply cyan:border-faint cyan:bg-second-layer-thin cyan:shadow-glass
 }
 
 .iconContainer_c1e9c4 {
@@ -274,7 +281,14 @@
 }
 
 .button__201d5 {
-  @apply cyan:rounded-medium
+  @apply cyan:rounded-medium cyan:shadow-glass cyan:use-transition;
+  &.lookBlank__201d5:not(:hover) {
+    @apply cyan:shadow-none
+  }
+}
+
+.wrapper_da5890 .button__201d5:not(:hover) {
+  @apply cyan:shadow-none
 }
 
 .searchBar__35e86 {
@@ -286,7 +300,7 @@
 }
 
 .container__37e49 {
-  @apply cyan:!gap-1 cyan:!p-1
+  @apply cyan:!gap-1 cyan:!p-0
 }
 
 .container__37e49 .buttons__37e49 {
@@ -356,6 +370,10 @@
   @apply cyan:!rounded-large
 }
 
+.svg__2338f:has(.voiceAvatar_f910d0) {
+  @apply cyan:shadow-glass cyan:rounded-large
+}
+
 .border_f910d0 {
   @apply cyan:rounded-large cyan:transition cyan:duration-200
 }
@@ -369,7 +387,7 @@
 }
 
 .tooltipPrimary__382e7 {
-  @apply cyan:!bg-second-layer-thin cyan:use-blur
+  @apply cyan:!bg-second-layer-thin cyan:use-blur cyan:shadow-glass
 }
 
 .container_a2f514 {
@@ -413,7 +431,7 @@
 }
 
 .quickSelectPopoutOption_ebaca5 {
-  @apply cyan:use-transition cyan:rounded-medium cyan:border cyan:border-transparent cyan:hover:border-faint cyan:hover:bg-second-layer-thin cyan:focus:border-faint cyan:focus:bg-second-layer-thin
+  @apply cyan:use-transition cyan:rounded-medium cyan:border cyan:border-transparent cyan:hover:border-faint cyan:hover:bg-second-layer-thin cyan:focus:border-faint cyan:focus:bg-second-layer-thin cyan:focus:shadow-glass
 }
 
 .panelButtonContainer__4cd01 {
@@ -430,7 +448,7 @@
 }
 
 .container_e131a9 {
-  @apply cyan:!p-1 cyan:!m-1 cyan:!rounded-medium cyan:border cyan:border-faint
+  @apply cyan:!p-1 cyan:!m-0 cyan:!rounded-medium cyan:border cyan:border-faint
 }
 
 .container_e131a9:has(.rtcConnectionStatusConnected__06d62) {
@@ -449,16 +467,23 @@
   @apply cyan:bg-(--red-400)/30
 }
 
-.member__5d473 .childContainer__91a9d {
+.activityPanel_c48ade {
+  @apply cyan:!raised-interface cyan:!rounded-medium cyan:!border cyan:!border-faint
+}
+
+.container_e131a9:has(.connection_e131a9),
+.activityPanel_c48ade {
+  @apply cyan:use-user-area-container cyan:origin-bottom cyan:shadow-glass
+}.member__5d473 .childContainer__91a9d {
   @apply cyan:border cyan:border-transparent cyan:use-transition cyan:rounded-medium
 }
 
 .member__5d473:hover .childContainer__91a9d {
-  @apply cyan:bg-second-layer-thin-hover cyan:border-faint
+  @apply cyan:bg-second-layer-thin-hover cyan:border-faint cyan:shadow-glass
 }
 
 .member__5d473.selected__90a9d .childContainer__91a9d {
-  @apply cyan:bg-second-layer-thin-active cyan:border-faint
+  @apply cyan:bg-second-layer-thin-active cyan:border-faint cyan:shadow-glass
 }
 
 .outer_c0bea0.user-profile-popout {
@@ -512,7 +537,7 @@
 
 .outer_c0bea0.custom-user-profile-theme .inner_c0bea0 .themedBackground__74017:has(:focus) .textAreaSlate__74017,
 .outer_c0bea0.custom-user-profile-theme .inner_c0bea0 .emojiButton__04eed:is(:hover,:active) {
-  @apply cyan:backdrop-brightness-50
+  @apply cyan:backdrop-brightness-50 cyan:shadow-glass
 }
 
 .channelTextArea_f75fb0 .buttons__74017 .button__201d5 {
@@ -528,7 +553,11 @@
 }
 
 .edgeControls_bfe55a {
-  @apply cyan:!w-fit cyan:!flex-[unset] cyan:p-0.5 cyan:gap-0.5 cyan:rounded-medium cyan:border cyan:border-faint cyan:bg-second-layer-thin
+  @apply cyan:!w-fit cyan:!flex-[unset] cyan:p-0.5 cyan:gap-0.5 cyan:rounded-medium cyan:border cyan:border-faint cyan:bg-second-layer-thin cyan:empty:!no-bg cyan:empty:!border-0 cyan:shadow-glass
+}
+
+.edgeControls_bfe55a:has(> .voiceEffectsActionBar__68198:first-child:last-child) {
+  @apply cyan:!no-bg cyan:!border-0
 }
 
 .edgeControls_bfe55a .iconWrapper_cb9592,
@@ -551,7 +580,7 @@
 }
 
 .container__0f2e8 {
-  @apply cyan:!btn cyan:!rounded-medium
+  @apply cyan:!btn cyan:!rounded-medium cyan:shadow-glass
 }
 
 .embedFull__623de {
@@ -596,7 +625,7 @@
 }
 
 .container_a45028 {
-  @apply cyan:use-transition cyan:border cyan:border-transparent cyan:bg-second-layer-thin cyan:focus-within:border-subtle cyan:focus-within:bg-second-layer-thin-active
+  @apply cyan:use-transition cyan:border cyan:border-transparent cyan:bg-second-layer-thin cyan:focus-within:border-subtle cyan:focus-within:bg-second-layer-thin-active cyan:focus-within:shadow-glass
 }
 
 .searchBar_c0e32c {
@@ -698,10 +727,6 @@
   @apply cyan:bg-accent-500
 }
 
-.card__39ec2 {
-  @apply cyan:bg-second-layer-thin cyan:border cyan:border-faint cyan:rounded-large
-}
-
 .headerImage__2dea3 {
   @apply cyan:!rounded-t-large
 }
@@ -753,7 +778,7 @@
 
 .modeSelected__2ea32 .link__2ea32,
 .modeSelected__2ea32:hover .link__2ea32 {
-  @apply cyan:bg-second-layer-thin-active cyan:border-faint
+  @apply cyan:bg-second-layer-thin-active cyan:border-faint cyan:shadow-glass cyan:use-transition
 }
 
 .tutorial__73f2a {
@@ -780,4 +805,25 @@
 .auto_d125d2::-webkit-scrollbar {
   height: 14px !important;
   width: 14px !important;
+}
+
+.mini_a562c8 .barFill_a562c8,
+.slider_a562c8 .barFill_a562c8 {
+  @apply cyan:bg-accent-500
+}
+
+.radioIndicatorChecked__001a7 .refreshIconFill__001a7 {
+  @apply cyan:fill-accent-500
+}
+
+.radioIndicatorChecked__001a7 .refreshIconStroke__001a7 {
+  @apply cyan:stroke-accent-500
+}
+
+.radioBar__001a7.radioPositionLeft__001a7 {
+  @apply cyan:!border cyan:border-subtle cyan:[[style*="--radio-bar-accent-color"]]:!border-2 cyan:[[style*="--radio-bar-accent-color"]]:border-(--radio-bar-accent-color)/60 cyan:shadow-glass cyan:use-transition cyan:rounded-large cyan:hover:bg-second-layer-thin-hover
+}
+
+.item__001a7[aria-checked="true"] .radioBar__001a7.radioPositionLeft__001a7 {
+  @apply cyan:bg-second-layer-thin-active
 }
