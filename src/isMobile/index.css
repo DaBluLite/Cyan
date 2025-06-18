@@ -1,0 +1,37 @@
+.is-mobile {
+    & .container_db0ccb {
+        @apply cyan:!no-bg cyan:w-fit cyan:ml-auto;
+        & .mobileHeaderCollapsed_db0ccb {
+            @apply cyan:use-blur cyan:!w-fit cyan:!px-4;
+            & .children__9293f,
+            & .upperContainer__9293f {
+                @apply cyan:w-fit
+            }
+        }
+        &.mobileContainerExpanded_db0ccb {
+            @apply cyan:bg-first-layer cyan:use-blur cyan:backdrop-brightness-50 cyan:w-full cyan:ml-0
+        }
+    }
+    & .chat_f75fb0,
+    & .container__133bf,
+    & .applicationStore_f07d62,
+    & .container_ad5cdf,
+    & .shop__6db1d,
+    & .innerContainer_e1147e,
+    & .container_d08938,
+    & .container__955a3 {
+        @apply cyan:!m-0 cyan:!rounded-none cyan:!shadow-glass
+    }
+    & .sidebar_c48ade {
+        @apply cyan:!w-full;
+        & .sidebarList_c48ade {
+            @apply cyan:!w-[calc(100%-80px)];
+            & .channel__972a0 {
+                @apply cyan:w-[calc(100%-8px)] cyan:max-w-[unset]
+            }
+        }
+        &+ .page_c48ade {
+            @apply cyan:hidden
+        }
+    }
+}

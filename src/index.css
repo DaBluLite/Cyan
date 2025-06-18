@@ -41,6 +41,7 @@
 @import "./components/settings/connections.css" prefix(cyan);
 @import "./components/vencord/settings.css" prefix(cyan);
 @import "./components/vencord/addon.css" prefix(cyan);
+@import "./isMobile/index.css" prefix(cyan);
 @custom-variant dark (&:where(.theme-dark, .theme-dark *, .theme-dark .theme-light, .theme-dark .theme-light *));
 @custom-variant darker (&:where(.theme-darker, .theme-darker *));
 @custom-variant black (&:where(.theme-midnight, .theme-midnight *));
@@ -826,4 +827,16 @@
 
 .item__001a7[aria-checked="true"] .radioBar__001a7.radioPositionLeft__001a7 {
   @apply cyan:bg-second-layer-thin-active
+}
+
+.checkbox_f525d3.checked_f525d3 {
+  @apply cyan:bg-accent-500 cyan:border-accent-400
+}
+
+.header_f37cb1 {
+  @apply cyan:m-2 cyan:btn cyan:hover:!shadow-glass cyan:rounded-large cyan:!border-0 cyan:use-transition
+}
+
+.bannerVisible_f37cb1 .header_f37cb1 {
+  @apply cyan:invis-btn
 }

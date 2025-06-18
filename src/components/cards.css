@@ -108,3 +108,46 @@
 .loadMoreButton__5cea9 {
     @apply cyan:rounded-medium cyan:btn cyan:min-h-8 cyan:mt-4
 }
+
+.reactorsContainer_cc2dff {
+    @apply cyan:shadow-glass cyan:m-1 cyan:!rounded-large cyan:!raised-interface cyan:w-[calc(100%-8px)]
+}
+
+.reactors_cc2dff {
+    @apply cyan:!no-bg
+}
+
+.container_cc2dff {
+    @apply cyan:w-fit
+}
+
+.scroller_cc2dff:has(+.reactorsContainer_cc2dff) {
+    @apply cyan:no-bg
+}
+
+.wrapper__260e1 {
+    @apply cyan:!raised-interface cyan:!rounded-xs cyan:!shadow-glass cyan:p-0.25 cyan:h-fit;
+    & .total__260e1 {
+        @apply cyan:rounded-xs cyan:raised-interface cyan:shadow-glass;
+        &:after {
+            content: none;
+        }
+    }
+    & .users__260e1 {
+        @apply cyan:no-bg
+    }
+}
+
+.activeButtonChild_aa63ab {
+    @apply cyan:text-accent-260
+}
+
+.button_aa63ab:focus .activeButtonChild_aa63ab,
+.button_aa63ab:focus-within .activeButtonChild_aa63ab,
+.button_aa63ab:hover .activeButtonChild_aa63ab {
+    @apply cyan:!text-accent-430
+}
+
+.button_aa63ab:active .activeButtonChild_aa63ab {
+    @apply cyan:!text-accent-500
+}

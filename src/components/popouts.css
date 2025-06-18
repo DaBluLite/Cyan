@@ -24,3 +24,15 @@
 .option__3f413 {
     @apply cyan:rounded-medium cyan:use-transition cyan:[[aria-selected="true"]]:shadow-glass
 }
+
+.container_cdb3b1 {
+    @apply cyan:raised-interface-large cyan:shadow-cyan cyan:rounded-xl cyan:use-blur
+}
+
+.container_cdb3b1:after {
+    @apply cyan:border-t-second-layer-thin-active
+}
+
+.bar__7aaec {
+    @apply  cyan:!rounded-medium cyan:!btn cyan:!shadow-cyan cyan:use-blur cyan:px-4 cyan:py-2
+}
