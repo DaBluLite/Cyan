@@ -3,21 +3,21 @@
  * @description Powerful UX, stunning visuals, like never before
  * @author DaBluLite
  * @authorId 582170007505731594
- * @version 7.0.0
- * @updateUrl https://dablulite.github.io/Cyan/Cyan.theme.css
- * @source https://github.com/DaBluLite/Cyan
+ * @version 7.0.1
+ * @updateUrl https://cyandesign.github.io/Discord/Cyan.theme.css
+ * @source https://github.com/CyanDesign/Discord
  * @invite 67VRpSjzxU
  * @colorwayVar cyan-accent-color {{accent}}
  * @colorwayVar cyan-background-primary hsl({{primary-h}} calc(var(--saturation-factor, 1)*{{primary-s}}%) {{primary-l}}%/60%)
  * @colorwayVar cyan-second-layer hsl({{tertiary-h}} calc(var(--saturation-factor, 1)*{{tertiary-s}}%) min(calc({{tertiary-l}}% + 7.2%), 100%)/60%)
  */
  
-@import url("https://dablulite.github.io/Cyan/import.css");
+@import url("https://cyandesign.github.io/Discord/import.css");
 
 :root {
 	--cyan-interface-shadow: 0 4px 10px 0 rgb(0 0 0 / 40%);
 	--cyan-font: 'Montserrat', 'Open Sans';
-	--cyan-background-img: url("https://github.com/DaBluLite/Cyan/blob/next/cyan-ocean-waves.png?raw=true");
+	--cyan-background-img: url("https://github.com/CyanDesign/Discord/blob/master/cyan-ocean-waves.png?raw=true");
 	--cyan-accent-color: #009f88;
 	--cyan-blur: 16px;
     --cyan-radius-round-interface: 50px;
