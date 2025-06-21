@@ -1,101 +1,3 @@
-@theme {
-    --color-primary-50: #e7e9e9;
-    --color-primary-100: #d2d5d5;
-    --color-primary-200: #a3a8a8;
-    --color-primary-300: #777e7e;
-    --color-primary-400: #4a4f4f;
-    --color-primary-500: #202222;
-    --color-primary-600: #191a1a;
-    --color-primary-700: #141515;
-    --color-primary-800: #0c0d0d;
-    --color-primary-900: #070808;
-    --color-primary-950: #020303;
-    --color-bg-secondary: #1c1e21;
-    --color-tertiary-50: #ecedee;
-    --color-tertiary-100: #dcdde0;
-    --color-tertiary-200: #b8bbc1;
-    --color-tertiary-300: #9599a3;
-    --color-tertiary-400: #727883;
-    --color-tertiary-500: #53575f;
-    --color-tertiary-600: #323439;
-    --color-tertiary-700: #141517;
-    --color-tertiary-800: #0e0f10;
-    --color-tertiary-900: #070708;
-    --color-tertiary-950: #020203;
-    --color-accent-100: color-mix(in srgb, var(--cyan-accent-color), white 80%);
-    --color-accent-130: color-mix(in srgb, var(--cyan-accent-color), white 74%);
-    --color-accent-160: color-mix(in srgb, var(--cyan-accent-color), white 68%);
-    --color-accent-200: color-mix(in srgb, var(--cyan-accent-color), white 60%);
-    --color-accent-230: color-mix(in srgb, var(--cyan-accent-color), white 54%);
-    --color-accent-260: color-mix(in srgb, var(--cyan-accent-color), white 48%);
-    --color-accent-300: color-mix(in srgb, var(--cyan-accent-color), white 40%);
-    --color-accent-330: color-mix(in srgb, var(--cyan-accent-color), white 34%);
-    --color-accent-360: color-mix(in srgb, var(--cyan-accent-color), white 28%);
-    --color-accent-400: color-mix(in srgb, var(--cyan-accent-color), white 20%);
-    --color-accent-430: color-mix(in srgb, var(--cyan-accent-color), white 14%);
-    --color-accent-460: color-mix(in srgb, var(--cyan-accent-color), white 8%);
-    --color-accent-500: var(--cyan-accent-color);
-    --color-accent-530: color-mix(in srgb, var(--cyan-accent-color), black 8%);
-    --color-accent-560: color-mix(in srgb, var(--cyan-accent-color), black 14%);
-    --color-accent-600: color-mix(in srgb, var(--cyan-accent-color), black 20%);
-    --color-accent-630: color-mix(in srgb, var(--cyan-accent-color), black 28%);
-    --color-accent-660: color-mix(in srgb, var(--cyan-accent-color), black 34%);
-    --color-accent-700: color-mix(in srgb, var(--cyan-accent-color), black 40%);
-    --color-accent-730: color-mix(in srgb, var(--cyan-accent-color), black 48%);
-    --color-accent-760: color-mix(in srgb, var(--cyan-accent-color), black 54%);
-    --color-accent-800: color-mix(in srgb, var(--cyan-accent-color), black 60%);
-    --color-accent-830: color-mix(in srgb, var(--cyan-accent-color), black 68%);
-    --color-accent-860: color-mix(in srgb, var(--cyan-accent-color), black 74%);
-    --color-accent-900: color-mix(in srgb, var(--cyan-accent-color), black 80%);
-    --font-logo: "Edu AU VIC WA NT Hand";
-    --custom-avatar-avatar-decoration-border-position: calc((1 - var(--decoration-to-avatar-ratio)) / 2 * 100%);
-    --custom-button-button-xl-width: 148px;
-    --custom-button-button-xl-height: 50px;
-    --custom-button-button-lg-width: 130px;
-    --custom-button-button-lg-height: 44px;
-    --custom-button-button-md-width: 96px;
-    --custom-button-button-md-height: 38px;
-    --custom-button-button-sm-width: 60px;
-    --custom-button-button-sm-height: 32px;
-    --custom-button-button-tn-height: 24px;
-    --custom-button-button-tn-width: 52px;
-    --custom-button-link-underline-width: 1px;
-    --custom-button-link-underline-offset: 1px;
-    --custom-button-link-underline-stop: calc(var(--custom-button-link-underline-width) + var(--custom-button-link-underline-offset));
-    --custom-button-filled-hover: 0.1;
-    --custom-button-filled-active: 0.2;
-    --custom-button-transition-duration: 170ms;
-    --custom-modal-min-width-large: 800px;
-    --animate-enter-rtl: animate-rtl 0.4s ease;
-    --animate-enter-ltr: animate-ltr 0.4s ease;
-    --animate-enter-ttb: animate-ttb 0.4s ease;
-    --animate-enter-btt: animate-btt 0.4s ease;
-    --animate-horizontal-tab-indicator: animate-horizontal-tab-indicator 0.4s ease;
-    --animate-sidebar-indicator: animate-sidebar-indicator 0.4s ease;
-    --animate-exit-ltr: animate-rtl 0.4s ease reverse;
-    --animate-exit-rtl: animate-ltr 0.4s ease reverse;
-    --animate-exit-ttb: animate-btt 0.4s ease reverse;
-    --animate-user-area-container: animate-user-area-container 0.4s ease;
-    --color-first-layer: var(--cyan-background-primary);
-    --blur-normal: var(--cyan-blur);
-    --shadow-cyan: var(--cyan-interface-shadow), inset 0 1px 0 var(--border-faint);
-    --shadow-glass: inset 0 1px 0 var(--border-faint);
-    --radius-xl: 20px;
-    --radius-round-interface: 50px;
-    --radius-interface: 24px;
-    --radius-xl: 20px;
-    --radius-large: 16px;
-    --radius-medium: 12px;
-    --radius-small: 8px;
-    --radius-xs: 4px;
-    --color-second-layer-thin: var(--cyan-second-layer-thin);
-    --color-second-layer-thin-hover: var(--cyan-second-layer-thin-hover);
-    --color-second-layer-thin-active: var(--cyan-second-layer-thin-active);
-    --color-second-layer: var(--cyan-second-layer);
-    --color-faint: var(--border-faint);
-    --color-subtle: var(--border-subtle);
-}
-
 :root {
 	--cyan-interface-shadow: 0 4px 10px 0 rgb(0 0 0 / 40%);
 	--cyan-font: 'Montserrat', 'Open Sans';
@@ -105,44 +7,25 @@
     --cyan-channelbar-width: 320px;
     --cyan-version: 25;
     --cyan-subversion: 6;
-    --cyan-patch-version: 16;
+    --cyan-patch-version: 21;
     --cyan-loading-header: "Getting up to speed...";
 }
 
 .theme-dark,
 .theme-dark .theme-light {
-    --cyan-second-layer: rgb(0 0 0/60%);
-    --cyan-background-primary: hsla(0deg 100% 0% / 60%);
-    --cyan-bg-brightness: .7;
-    --cyan-second-layer-thin: hsl(240 4% 60.784%/0.12156862745098039);
-    --cyan-second-layer-thin-hover: hsl(240 4% 60.784%/0.2);
-    --cyan-second-layer-thin-active: hsl(234.545 6.509% 33.137%/0.3);
+    @apply cyan:use-dark-vars
 }
 
 .theme-light {
-    --cyan-second-layer: rgb(255 255 255/60%);
-    --cyan-background-primary: hsla(0deg 100% 100% / 60%);
-    --cyan-second-layer-thin: hsl(240 4% 60.784%/0.1607843137254902);
-    --cyan-second-layer-thin-hover: hsl(240 4% 60.784%/0.2784313725490196);
-    --cyan-second-layer-thin-active: hsl(233.333 3.734% 52.745%/0.08);
+    @apply cyan:use-light-vars
 }
 
 .theme-darker,
 .theme-darker .theme-light {
-    --cyan-second-layer: rgb(0 0 0/75%);
-    --cyan-background-primary: hsla(0deg 100% 0% / 75%);
-    --cyan-bg-brightness: .4;
-    --cyan-second-layer-thin: hsl(240 4% 70.784%/0.12156862745098039);
-    --cyan-second-layer-thin-hover: hsl(240 4% 70.784%/0.2);
-    --cyan-second-layer-thin-active: hsl(234.545 6.509% 45.137%/0.3);
+    @apply cyan:use-darker-vars
 }
 
 .theme-midnight,
 .theme-midnight .theme-light {
-    --cyan-second-layer: rgb(0 0 0/90%);
-    --cyan-background-primary: hsla(0deg 100% 0% / 90%);
-    --cyan-bg-brightness: .1;
-    --cyan-second-layer-thin: hsl(240 4% 70.784%/0.12156862745098039);
-    --cyan-second-layer-thin-hover: hsl(240 4% 70.784%/0.2);
-    --cyan-second-layer-thin-active: hsl(234.545 6.509% 45.137%/0.3);
+    @apply cyan:use-black-vars
 }

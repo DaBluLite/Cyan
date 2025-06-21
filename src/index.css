@@ -6,8 +6,8 @@
 @import "tailwindcss/theme.css" prefix(cyan);
 @import "./theme.css" prefix(cyan);
 @import "./no-bg.css" prefix(cyan);
-@import "./animations.css" prefix(cyan);
-@import "./utilities.css" prefix(cyan);
+@import "../cyancore/utilities.css" prefix(cyan);
+@import "../cyancore/theme.css" prefix(cyan);
 @import "./components/quickSwitcher.css" prefix(cyan);
 @import "./components/switch.css" prefix(cyan);
 @import "./components/mediaPlayers.css" prefix(cyan);

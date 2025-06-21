@@ -1,0 +1,3 @@
+[submodule "cyancore"]
+	path = cyancore
+	url = git@github.com:CyanDesign/Core.git

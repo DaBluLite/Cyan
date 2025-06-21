@@ -151,3 +151,28 @@
 .button_aa63ab:active .activeButtonChild_aa63ab {
     @apply cyan:!text-accent-500
 }
+
+.banner_da5e8d,
+.inviteSplash_d5f3cd {
+    @apply cyan:-mt-3 cyan:-ml-3 cyan:-mr-3 cyan:!rounded-large cyan:shadow-glass cyan:border cyan:border-faint
+}
+
+.banner__4cb8a {
+    @apply cyan:mt-1 cyan:ml-1 cyan:mr-1 cyan:!rounded-large cyan:shadow-glass cyan:border cyan:border-faint cyan:overflow-hidden cyan:w-[calc(100%-10px)]
+}
+
+.container_b5b7aa {
+    @apply cyan:mt-1 cyan:ml-1 cyan:mr-1 cyan:!rounded-large cyan:shadow-glass cyan:border cyan:border-faint cyan:overflow-hidden cyan:w-[calc(100%-6px)]
+}
+
+.rsvpCount_b5010b {
+    @apply cyan:raised-interface cyan:rounded-small cyan:shadow-glass
+}
+
+.eventStatusContainer__29021 > svg path {
+    @apply cyan:fill-accent-400
+}
+
+.perks__30359 {
+    @apply cyan:raised-interface-large cyan:shadow-glass cyan:rounded-xl
+}
